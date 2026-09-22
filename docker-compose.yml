@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: boxfinder
+      POSTGRES_USER: boxfinder
+      POSTGRES_PASSWORD: boxfinder
+    ports:
+      - "5432:5432"
+    volumes:
+      - boxfinder_pg:/var/lib/postgresql/data
+volumes:
+  boxfinder_pg:
