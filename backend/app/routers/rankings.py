@@ -4,6 +4,7 @@ from sqlalchemy.orm import Session
 from ..database import get_db
 from .products import list_products
 from ..services.rankings import rank_items
+from ..services.resale_rankings import STRATEGIES, rank_resale
 
 router = APIRouter(prefix="/rankings", tags=["rankings"])
 ALLOWED_MODES = {"value", "upside", "rookies", "hit_density", "balanced"}
@@ -42,4 +43,29 @@ def ranking_overview(db: Session = Depends(get_db)):
             category: rank_items([x for x in items if x.get("category", "").lower() == category.lower()], "value")[:10]
             for category in sorted({x.get("category") for x in items if x.get("category")})
         },
+    }
+
+
+@router.get("/resale")
+def resale_rankings(
+    strategy: str = Query("balanced"),
+    category: str | None = None,
+    max_price: float | None = Query(None, ge=0),
+    limit: int = Query(20, ge=1, le=100),
+    db: Session = Depends(get_db),
+):
+    strategy = strategy.lower().strip()
+    if strategy not in STRATEGIES:
+        return {"error": "unknown_strategy", "allowed_strategies": sorted(STRATEGIES)}
+    items = _items(db, category, max_price)
+    # Cross-category recommendations must be based on actual store snapshots, never demo offers.
+    items = [x for x in items if x.get("source_kind") != "demo"]
+    ranked = [x for x in rank_resale(items, strategy) if x.get("resale_score") is not None]
+    return {
+        "strategy": strategy,
+        "category": category,
+        "max_price": max_price,
+        "count": len(ranked),
+        "items": ranked[:limit],
+        "disclaimer": "Rankingen jämför säljpotential mellan alla kategorier. Den är inte en vinstgaranti. Betyg A kräver marknadsvärden och användbara odds; B och C är chase-baserade tills mer försäljningsdata finns.",
     }

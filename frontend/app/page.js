@@ -44,19 +44,20 @@ function MiniRanking({ title, subtitle, items, metric='ranking_score' }) {
 }
 
 const quickSearches = [
-  {title:'ROOKIES',text:'Boxar med starka nykomlingar',href:'/discover?category=Hockey&budget=2500&goal=rookies',tone:'acid'},
-  {title:'AUTOGRAFER',text:'Produkter med signerade kort',href:'/discover?budget=5000&goal=autographs',tone:'violet'},
-  {title:'POKÉMON',text:'Boosterboxar och collection boxes',href:'/discover?category=Pok%C3%A9mon&budget=2500&goal=jackpot',tone:'cyan'},
-  {title:'LÖSA PAKET',text:'Billiga öppningar under 250 kr',href:'/discover?category=Hockey&budget=250&goal=hits&format=single%20pack',tone:'gold'},
-  {title:'UNDER 500 KR',text:'Bäst chase inom låg budget',href:'/discover?budget=500&goal=balanced',tone:'acid'},
-  {title:'MONSTERHIT',text:'Högsta taket först',href:'/discover?budget=5000&goal=jackpot',tone:'violet'},
+  {title:'BÄST ATT ÖPPNA',text:'Alla kategorier i samma ranking',href:'/resale?strategy=balanced',tone:'acid'},
+  {title:'HÖGSTA TAK',text:'Jaga den största säljbara träffen',href:'/resale?strategy=jackpot',tone:'violet'},
+  {title:'TRÄFF OFTARE',text:'Prioritera återkommande bra hits',href:'/resale?strategy=frequent',tone:'cyan'},
+  {title:'UNDER 500 KR',text:'Säljpotential med låg insats',href:'/resale?strategy=balanced&max_price=500',tone:'gold'},
+  {title:'UNDER 1 000 KR',text:'Rankat oavsett kategori',href:'/resale?strategy=balanced&max_price=1000',tone:'acid'},
+  {title:'SÖK CHASE',text:'Spelare, rookie eller Pokémon',href:'/chase',tone:'violet'},
 ];
 
 export default async function Home({ searchParams }) {
   const rawBudget = Number(searchParams?.budget || 1000);
   const budget = [100,250,500,1000,2000].includes(rawBudget) ? rawBudget : 1000;
-  const [overview, deals, budgetData, quality, readiness, signalSummary, recentSignals] = await Promise.all([
+  const [overview, resaleData, deals, budgetData, quality, readiness, signalSummary, recentSignals] = await Promise.all([
     getJson('/rankings/overview', {value:[],upside:[],balanced:[],rookies:[],hit_density:[],under_500:[],under_1000:[],categories:{}}),
+    getJson('/rankings/resale?strategy=balanced&limit=6', {items:[],count:0,disclaimer:''}),
     getJson('/deals?days=90&min_discount=8', []),
     getJson(`/budget/recommendations?budget=${budget}&goal=balanced&limit=3`, {recommendations:[]}),
     getJson('/admin/data-quality', {}),
@@ -65,22 +66,23 @@ export default async function Home({ searchParams }) {
     getJson('/deals/signals/recent?days=7&limit=12', []),
   ]);
   const products = overview.value || [];
+  const resaleProducts = resaleData.items || [];
   const productById = Object.fromEntries(products.map(p => [String(p.id), p]));
   const fallbackDeals = products.slice(0,3);
   return (
     <main>
       <header className="nav">
         <a className="brand" href="#top"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a>
-        <nav><a href="/discover">Vad ska jag köpa?</a><a href="/chase">Chase Finder</a><a href="#ranking">Topplista</a><a href="#battle">Box Battle</a><a href="#profiles">Rankingar</a><a href="#budget">Budget</a><a href="#signals">Prisradar</a><a href="/watchlist">Bevakningar</a><a href="#deals">Fynd</a><a href="#scanner">Spelarscanner</a><a href="/admin/source-hub">Datakällor</a></nav>
-        <span className="version">v0.44.0</span>
+        <nav><a href="/resale">Bäst att öppna</a><a href="/chase">Chase Finder</a><a href="/discover">Filtrera</a><a href="#ranking">EV-ranking</a><a href="#budget">Budget</a><a href="#signals">Prisradar</a><a href="/watchlist">Bevakningar</a></nav>
+        <span className="version">v0.45.0</span>
       </header>
 
       <section className="hero" id="top">
-        <div className="heroCopy"><div className="eyebrow"><i/> BOX INTELLIGENCE · SVERIGE MVP</div><h1>HITTA BOXEN<br/><em>VÄRD ATT ÖPPNA.</em></h1><p>Pris är bara början. BoxFinder väger ihop checklista, odds, marknadsvärde, hits och risk — och låter dig välja vilken sorts box du faktiskt söker.</p><div className="heroActions"><a className="primary" href="/chase">SÖK SPELARE ELLER POKÉMON <b>→</b></a><a className="secondary" href="/discover">AVANCERAD SÖKNING</a></div><div className="heroQuick"><small>TRYCK DIREKT PÅ DET DU VILL HITTA</small><div>{quickSearches.map(x=><a className={`quick-${x.tone}`} href={x.href} key={x.title}><b>{x.title}</b><span>{x.text}</span></a>)}</div></div></div>
+        <div className="heroCopy"><div className="eyebrow"><i/> BOX INTELLIGENCE · ALLA KATEGORIER</div><h1>ÖPPNA BOXEN<br/><em>MED BÄST CHANS.</em></h1><p>Hockey, fotboll, Pokémon, One Piece, Marvel och fler möts i samma ranking. Målet är enkelt: hitta produkten med bäst dokumenterad möjlighet till en säljbar träff — utan att låtsas att chans är garanti.</p><div className="heroActions"><a className="primary" href="/resale">VISA BÄSTA BOXARNA <b>→</b></a><a className="secondary" href="/chase">SÖK ETT CHASE-KORT</a></div><div className="heroQuick"><small>TRYCK DIREKT PÅ DET DU VILL HITTA</small><div>{quickSearches.map(x=><a className={`quick-${x.tone}`} href={x.href} key={x.title}><b>{x.title}</b><span>{x.text}</span></a>)}</div></div></div>
         <div className="packStage" aria-hidden="true"><div className="glow"/><div className="pack back"><span>BOX</span><b>FINDER</b></div><div className="pack front"><small>VALUE SERIES · 09</small><span>BOX</span><b>FINDER</b><div className="burst">SMART<br/>CHASE</div><footer>PRICE · ODDS · VALUE</footer></div></div>
       </section>
 
-      <nav className="mobileQuickNav" aria-label="Snabbsökningar"><a href="/discover">HITTA BOX</a><a href="/discover?category=Hockey&goal=rookies">ROOKIES</a><a href="/discover?goal=autographs">AUTOGRAF</a><a href="/discover?category=Pok%C3%A9mon&goal=jackpot">POKÉMON</a></nav>
+      <nav className="mobileQuickNav" aria-label="Snabbsökningar"><a href="/resale">BÄST ATT ÖPPNA</a><a href="/resale?strategy=jackpot">HÖGSTA TAK</a><a href="/resale?max_price=500">UNDER 500</a><a href="/chase">SÖK CHASE</a></nav>
 
       <section className="ticker"><span>BOX VALUE SCORE</span><b>◆</b><span>UPSIDE</span><b>◆</b><span>ROOKIE STRENGTH</span><b>◆</b><span>HIT DENSITY</span><b>◆</b><span>DEAL CONFIDENCE</span></section>
 
@@ -88,9 +90,15 @@ export default async function Home({ searchParams }) {
 
       <FreshDataButton />
 
+      <section className="homeResaleSection">
+        <div className="sectionHead"><div><span className="kicker">SPORT- OCH VARUMÄRKESNEUTRAL</span><h2>Bäst möjlighet till säljbar träff</h2></div><p>{resaleData.count || 0} verifierade chase-profiler jämförs</p></div>
+        {resaleProducts.length ? <div className="homeResaleGrid">{resaleProducts.map((x,i)=><a href={`/product/${x.id}`} key={x.id}><span>#{i+1}</span><div><small>{x.category} · {x.evidence_grade}</small><h3>{x.name}</h3><p>{x.sellable_chases?.[0]?.card || 'Verifierad chase-profil'}</p></div><aside><b>{x.resale_score}</b><small>SÄLJPOTENTIAL</small><strong>{Math.round(x.price)} kr</strong></aside></a>)}</div> : <div className="chaseEmpty"><b>Ingen tvärkategoriranking ännu.</b><span>Produkter visas först när chase-innehållet är verifierat.</span></div>}
+        <a className="homeResaleCta" href="/resale">ÖPPNA HELA RANKINGEN →</a>
+      </section>
+
       <section className="discoveryHomeCta">
-        <div><small>NYTT · COLLECTOR DISCOVERY</small><h2>Jag vill öppna något. Vad ska jag köpa?</h2><p>Välj sport eller TCG, budget och om du jagar autografer, rookies, många hits eller monsterhit.</p></div>
-        <a href="/discover">HITTA MIN BOX →</a>
+        <div><small>FILTRERA OM DU VILL</small><h2>Kategorin är valfri — säljpotentialen styr.</h2><p>Begränsa först när du har en budget eller uttryckligen vill ha en viss sport, TCG eller produktform.</p></div>
+        <a href="/resale">RANKA ALLT →</a>
       </section>
 
       <section className="ranking" id="ranking"><div className="sectionHead"><div><span className="kicker">MEST PRISVÄRD JUST NU</span><h2>Mest box för pengarna</h2></div><p>{products.length} produkter visas · saknad data ger ingen låtsaspoäng</p></div>{products.length ? <div className="grid">{products.slice(0,6).map((p,i)=><ProductCard p={p} i={i} key={p.id}/>)}</div> : <div className="launchState"><div className="launchMain"><span className="launchBadge">DATA MOTOR AKTIV</span><h3>Topplistan väntar på första verifierade boxarna.</h3><p>BoxFinder är igång, men vi visar inte demodata som riktiga fynd. När butikserbjudanden, checklista, odds och kortvärden är tillräckligt bra fylls topplistan automatiskt.</p><div className="launchSteps"><span><b>01</b> Butikspris</span><i>→</i><span><b>02</b> Checklista</span><i>→</i><span><b>03</b> Odds</span><i>→</i><span><b>04</b> Marknadsvärde</span><i>→</i><span><b>05</b> Ranking</span></div></div><div className="launchStats"><div><small>PRODUKTER</small><b>{quality.products ?? 0}</b></div><div><small>VARIANTER</small><b>{quality.variants ?? 0}</b></div><div><small>BUTIKER</small><b>{quality.stores ?? 0}</b></div><div><small>REDO FÖR RANKING</small><b>{readiness.filter?.(x=>x.status==='ready').length ?? 0}</b></div></div></div>}</section>

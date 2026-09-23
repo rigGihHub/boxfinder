@@ -38,15 +38,16 @@ export default async function DiscoverPage({searchParams}){
     <header className="productNav">
       <a className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a>
       <a className="backLink" href="/">← STARTSIDAN</a>
-      <span className="version">v0.44.0</span>
+      <span className="version">v0.45.0</span>
     </header>
 
     <section className="discoverHero">
       <span className="kicker">COLLECTOR DISCOVERY</span>
       <h1>Jag vill öppna något.</h1>
-      <p>Välj vad du samlar, din budget och vad du hoppas få. BoxFinder väljer tre olika vägar istället för att låtsas att en box passar alla.</p>
+      <p>Kategori är valfri. Börja med målet och budgeten så får hockey, fotboll, Pokémon och övriga produkter konkurrera på samma villkor.</p>
 
       <div className="discoverQuick"><small>SNABBSÖKNINGAR</small><div>
+        <a href="/resale?strategy=balanced">BÄST ATT ÖPPNA</a>
         <a href="?category=Hockey&budget=2500&goal=rookies">ROOKIES</a>
         <a href="?budget=5000&goal=autographs">AUTOGRAFER</a>
         <a href="?category=Pok%C3%A9mon&budget=2500&goal=jackpot">POKÉMON</a>
