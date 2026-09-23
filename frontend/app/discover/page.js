@@ -36,7 +36,7 @@ export default async function DiscoverPage({searchParams}){
     <header className="productNav">
       <a className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a>
       <a className="backLink" href="/">← STARTSIDAN</a>
-      <span className="version">v0.39.1</span>
+      <span className="version">v0.40.0</span>
     </header>
 
     <section className="discoverHero">
@@ -74,6 +74,7 @@ export default async function DiscoverPage({searchParams}){
         {x.facts?.length ? <div className="realFacts"><small>VERIFIERAT INNEHÅLL</small>{x.facts.slice(0,4).map((f,i)=><span key={i}>✓ {f}</span>)}</div> : <div className="realFacts pending"><small>ANALYSUNDERLAG</small><span>Pris, lager och format verifierat. Hit-/EV-analys är ännu inte klar.</span></div>}
         {x.chase_ladder?.length>0&&<div className="quickExactChase"><small>EXAKTA CHASE-KORT</small>{x.chase_ladder.slice(-3).reverse().map((r,i)=><span key={i}><b>{r.tier}</b> {r.card}</span>)}</div>}
         {x.chase_profile&&<div className="quickChase"><small>BRA KORT DU KAN DRA</small>{x.chase_profile.tiers?.good?.items?.slice(0,3).map((r,i)=><span key={i}>★ {r}</span>)}{x.chase_profile.tiers?.jackpot?.items?.[0]&&<b>JACKPOT: {x.chase_profile.tiers.jackpot.items[0]}</b>}</div>}
+        {x.chase_profile?.key_names?.length ? <div className="quickSearches"><small>SÖK ETT NAMN DIREKT</small><div>{x.chase_profile.key_names.slice(0,4).map((name,i)=><a className="aboveOverlay" href={`/chase?q=${encodeURIComponent(name.replace(/\s+#.*$/,''))}`} key={i}>Sök {name} →</a>)}</div></div> : null}
         <div className="realWhy"><small>VARFÖR BRA / FYND?</small>{(x.explanation?.why_good||[]).slice(0,2).map((r,i)=><span key={i}>✓ {r}</span>)}<b>{x.explanation?.deal?.label||"Fyndstatus ej verifierad"}</b><p>{x.explanation?.deal?.reason}</p></div>
         <div className="realSource"><span>Kontrollerad {x.observed_at?new Date(x.observed_at).toLocaleDateString("sv-SE"):"—"}</span>{x.url?<a className="aboveOverlay" href={x.url} target="_blank" rel="noreferrer">ÖPPNA BUTIK →</a>:null}</div>
       </article>)}</div> : <div className="discoveryEmpty"><b>Ingen verifierad produkt matchar just detta filter.</b><p>Höj budgeten eller välj “Allt”. Riktig butikssnapshot visas här separat från testdata och analysförslag.</p></div>}

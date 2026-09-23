@@ -262,6 +262,35 @@ CHASE_PROFILES = {
  },
  "caveat":"Styrkan är många parallell- och setbyggarspår snarare än garanterade autografer. Exakta spelarchaser kräver full checklistkartläggning."
 },
+"cc-pack-2025-26-opc-hobby": {
+ "source_name":"Coolcard product information / Upper Deck product configuration",
+ "source_url":"https://www.coolcard.se/en/product/1-pack-2025-26-upper-deck-o-pee-chee-hobby",
+ "key_names":["Marquee Rookies #541–600"],
+ "headline_chases":[
+   {"card":"Marquee Rookies #541–600","tier":"BRA","odds":"High Series-rookiepool; exakt spelare och packodds ej verifierade","why":"Det konkreta rookie-spåret i ett löst O-Pee-Chee-paket."},
+   {"card":"Blue Border","tier":"BRA","odds":"1:3 hobby/fat packs","why":"Vanligaste dokumenterade parallellspåret."},
+   {"card":"Red Border","tier":"MYCKET BRA","odds":"1:18 hobby/fat packs","why":"Tydligt sällsyntare parallell."},
+   {"card":"Retro Black Border /100","tier":"MONSTER","odds":"serial /100","why":"Lågnumrerad retroparallel."},
+   {"card":"Purple Border /49","tier":"MONSTER","odds":"serial /49","why":"Mycket lågnumrerad parallel."},
+   {"card":"Red Border Blank Back 1/1","tier":"JACKPOT","odds":"1/1","why":"Unikt exemplar om rätt kort träffas."}
+ ],
+ "why_exciting":["Ett löst paket ger en konkret chans på Marquee Rookies och paralleller.","Blue Border är uppgiven till 1:3 och Red Border till 1:18 i hobby/fat packs."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":70,"items":["10 kort i paketet"]},"good":{"label":"Bra träff","score":78,"items":["Marquee Rookies #541–600","Blue Border 1:3"]},"big":{"label":"Riktigt bra","score":82,"items":["Red Border 1:18","Retro Black Border /100","Purple Border /49"]},"jackpot":{"label":"Monsterhit","score":72,"items":["Red Border Blank Back 1/1","Printing Plate 1/1"]}},
+ "caveat":"Ingen verifierad autografchans är kopplad till just detta lösa paket. Serial- och insertuppgifter är formatets chase-spår; exakta spelarnamn kräver full checklistkoppling."
+},
+"cc-pack-2025-26-mvp-hobby": {
+ "source_name":"Coolcard verified product snapshot",
+ "source_url":"https://www.coolcard.se/category/boxar-nhl-2025-26",
+ "key_names":["2025–26 MVP Silver Collection-checklistan"],
+ "headline_chases":[
+   {"card":"MVP Silver Collection – rookies och stjärnor","tier":"BRA","odds":"Checklistan verifierad på produktnivå; exakt packodds ej publicerat","why":"Det här är packets dokumenterade chase-område."},
+   {"card":"Silver-/premiumparallell","tier":"MYCKET BRA","odds":"Exakt odds ej verifierat","why":"Kan vara attraktiv, men BoxFinder visar inte en påhittad sannolikhet."},
+   {"card":"Autografkort","tier":"MONSTER","odds":"Ingen verifierad oddsuppgift för löst paket","why":"Möjligheten är inte tillräckligt källbelagd för att presenteras som en chans."}
+ ],
+ "why_exciting":["MVP-paketet har ett definierat Silver Collection-spår.","Autograf och exakta odds markeras öppet som ej verifierade tills checklistan stödjer det."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":62,"items":["8 kort i paketet"]},"good":{"label":"Bra träff","score":66,"items":["MVP Silver Collection-rookie eller stjärna"]},"big":{"label":"Riktigt bra","score":48,"items":["Premium-/silverparallel"]},"jackpot":{"label":"Monsterhit","score":35,"items":["Autograf om checklistan bekräftar formatet"]}},
+ "caveat":"Ingen verifierad autograf- eller packoddsuppgift finns i BoxFinders nuvarande underlag. Det visas därför som okänt, inte som en sannolikhet."
+},
 "cc-2025-26-series2-retail-blaster": {
  "source_name":"Coolcard / Upper Deck Series 2 product information",
  "source_url":"https://www.coolcard.se/category/boxar-nhl-2025-26",
@@ -406,7 +435,14 @@ CHASE_PROFILES = {
 "cc-pokemon-mega-zygarde-premium": {
  "source_name":"Coolcard verified product snapshot",
  "source_url":"https://www.coolcard.se/category/pokmon",
- "key_names":[],
+ "key_names":["Mega Zygarde ex","Mega Starmie ex","Mega Clefable ex","Meowth ex","Yveltal ex","Mega Skarmory ex"],
+ "headline_chases":[
+   {"card":"Mega Zygarde ex promo (vanligt + stort promo)","tier":"BRA","odds":"2 garanterade promos i Premium Collection","why":"Det säkra innehållet i själva produkten."},
+   {"card":"Mega Zygarde ex #120 / Special Illustration Rare","tier":"MYCKET BRA","odds":"Ur Mega Evolution—Perfect Order-boosterpaketen; packodds ej publicerade","why":"Setets centrala Pokémon och en tydlig chase i boosterpaketen."},
+   {"card":"Meowth ex #121 / Special Illustration Rare","tier":"MYCKET BRA","odds":"Ur Mega Evolution—Perfect Order-boosterpaketen; packodds ej publicerade","why":"En av de mest eftertraktade Pokémon-träffarna i setets högre rarity-spår."},
+   {"card":"Mega Zygarde ex #124 / Mega Hyper Rare","tier":"JACKPOT","odds":"Ur Mega Evolution—Perfect Order-boosterpaketen; packodds ej publicerade","why":"Setets högsta namngivna rarity-spår."},
+   {"card":"Mega Starmie ex #118–119 och Mega Clefable ex #119–120","tier":"MYCKET BRA","odds":"Ur Mega Evolution—Perfect Order-boosterpaketen; packodds ej publicerade","why":"Ytterligare konkreta Mega Evolution-chaser i boosterpaketen."}
+ ],
  "why_exciting":[
    "Åtta boosterpaket ger åtta separata chanser på setets chase-kort.",
    "Både stort och vanligt promo-kort ger garanterat samlarinnehåll även om boostersen missar."
@@ -417,7 +453,7 @@ CHASE_PROFILES = {
    "big":{"label":"Riktigt bra","score":58,"items":["Setets premiumillustration/chase-kort"]},
    "jackpot":{"label":"Monsterhit","score":48,"items":["Setets absoluta toppkort ur boosterpaketen"]}
  },
- "caveat":"Exakta chase-kort och pull rates för boosterpaketen är ännu inte kopplade till profilen; de ska inte gissas."
+ "caveat":"Produktens två promos är verifierade. Boosterpaketen är Mega Evolution—Perfect Order, men officiella kortspecifika pull rates är inte publicerade i underlaget och visas därför inte som odds."
 },
 "cc-pokemon-paradox-rift-18": {
  "source_name":"Coolcard verified product snapshot",

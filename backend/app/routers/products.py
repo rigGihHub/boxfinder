@@ -62,6 +62,9 @@ def list_products(category: str | None = None, max_price: float | None = Query(N
             x["ranking_readiness"] = ranking_readiness(db, v)
             x["explanation"] = explain_variant(db, v)
             top_cards, _ = chase_cards(db, v.id, 3)
+            profile = get_profile(db, v.id)
+            x["chase_profile"] = profile
+            x["chase_ladder"] = chase_ladder(profile)
             x["good_hits"] = [
                 {
                     "name": c.get("subject"),

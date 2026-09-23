@@ -76,3 +76,12 @@ def test_series1_and_opc_have_exact_chase_ladders():
         profile=seedmod.CHASE_PROFILES[slug]
         assert len(profile.get("headline_chases",[])) >= 7
         assert all(x.get("card") and x.get("tier") and x.get("odds") for x in profile["headline_chases"])
+
+def test_loose_packs_and_pokemon_expose_named_content_without_fake_odds():
+    opc = seedmod.CHASE_PROFILES["cc-pack-2025-26-opc-hobby"]
+    mvp = seedmod.CHASE_PROFILES["cc-pack-2025-26-mvp-hobby"]
+    pokemon = seedmod.CHASE_PROFILES["cc-pokemon-mega-zygarde-premium"]
+    assert any("Marquee Rookies" in x["card"] for x in opc["headline_chases"])
+    assert any("Autograf" in x["card"] and "Ingen verifierad" in x["odds"] for x in mvp["headline_chases"])
+    assert "Mega Zygarde ex" in pokemon["key_names"]
+    assert any("#124" in x["card"] for x in pokemon["headline_chases"])

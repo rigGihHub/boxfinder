@@ -17,6 +17,8 @@ function DataBadge({ kind }) {
 }
 
 function ProductCard({ p, i, label }) {
+  const names = p.chase_profile?.key_names || [];
+  const exact = p.chase_ladder || [];
   return (
     <article className={`card rarity-${(i%3)+1} clickableCard`}>
       <a className="cardClickTarget" href={`/product/${p.id}`} aria-label={`Öppna ${p.name}`}></a>
@@ -28,6 +30,8 @@ function ProductCard({ p, i, label }) {
         <div className="priceRow"><div><small>BÄSTA PRIS</small><strong>{Math.round(p.price)} kr</strong><span>{p.store}{p.offer_count > 1 ? ` · ${p.offer_count} priser` : ''}</span></div>{p.discount_pct != null && <b className="discount">−{p.discount_pct}%</b>}</div>
         <div className="metrics"><div><span>EV</span><b>{p.ev_low != null ? `${Math.round(p.ev_low)}–${Math.round(p.ev_high)} kr` : 'Saknas'}</b></div><div><span>Risk</span><b>{p.risk}</b></div><div><span>Data</span><b>{p.data_quality}/100</b></div></div>
         <div className="goodHits"><small>DET BRA DU KAN FÅ</small>{p.good_hits?.length ? <div>{p.good_hits.slice(0,3).map((h,j)=><span key={`${p.id}-hit-${j}`}>★ {h.name}{h.parallel ? ` · ${h.parallel}` : ''}{h.market_value_raw != null ? ` · ca ${Math.round(h.market_value_raw)} kr` : ''}</span>)}</div> : <p>Ingen verifierad chase-data ännu.</p>}</div>
+        {names.length ? <div className="namedChases"><small>ROOKIES / POKÉMON ATT JAGA</small><div>{names.slice(0,4).map((name,j)=><a href={`/chase?q=${encodeURIComponent(name.replace(/\s+#.*$/,''))}`} key={`${p.id}-name-${j}`}>{name} ↗</a>)}</div></div> : null}
+        {exact.length ? <div className="exactChases"><small>ODDS / BRA TRÄFFAR</small>{exact.slice(0,2).map((x,j)=><span key={`${p.id}-exact-${j}`}>★ {x.card} · {x.odds}</span>)}<a href={`/product/${p.id}#chase`}>SE ALLA CHASE-KORT →</a></div> : null}
         <div className="packInfo">{p.packs ?? '—'} packs <i/> {p.cards_per_pack ?? '—'} kort/pack <i/> {p.total_cards ?? '—'} kort</div>
         <a className="cta" href={`/product/${p.id}`}>SE HELA ANALYSEN <span>→</span></a>
       </div>
@@ -59,7 +63,7 @@ export default async function Home({ searchParams }) {
       <header className="nav">
         <a className="brand" href="#top"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a>
         <nav><a href="/discover">Vad ska jag köpa?</a><a href="/chase">Chase Finder</a><a href="#ranking">Topplista</a><a href="#battle">Box Battle</a><a href="#profiles">Rankingar</a><a href="#budget">Budget</a><a href="#signals">Prisradar</a><a href="/watchlist">Bevakningar</a><a href="#deals">Fynd</a><a href="#scanner">Spelarscanner</a><a href="/admin/source-hub">Datakällor</a></nav>
-        <span className="version">v0.39.1</span>
+        <span className="version">v0.40.0</span>
       </header>
 
       <section className="hero" id="top">
