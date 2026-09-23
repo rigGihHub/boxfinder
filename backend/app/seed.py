@@ -85,13 +85,13 @@ REAL_PACK_SNAPSHOT = [
 
 REAL_FOOTBALL_SNAPSHOT = [
     dict(slug="cc-2025-26-pitch-kings-la-liga", name="2025-26 Panini Pitch Kings La Liga International Hobby", category="Fotboll", manufacturer="Panini", year="2025-26", series="Pitch Kings La Liga", fmt="hobby box", sku="25PASPK-INT", price=1595, packs=1, cards=10, stock="in_stock",
-         facts=["10 kort per box"]),
+         facts=["10 kort per box", "1 autograf per box i snitt", "2 base-paralleller per box i snitt", "3 Rookies I-IV per box i snitt"]),
     dict(slug="cc-2026-topps-mls-chrome-value", name="2026 Topps Major League Soccer Chrome Value Box", category="Fotboll", manufacturer="Topps", year="2026", series="MLS Chrome", fmt="value box", sku="FGC007106", price=379, packs=7, cards=4, stock="in_stock",
          facts=["7 pack per box", "4 kort per pack"]),
     dict(slug="cc-2025-26-panini-prizm-fifa-choice", name="2025-26 Panini Prizm FIFA Soccer Choice", category="Fotboll", manufacturer="Panini", year="2025-26", series="Prizm FIFA", fmt="choice box", sku="PAN7891", price=2799, packs=1, cards=8, stock="in_stock",
-         facts=["8 kort per box", "1 autograf per box i snitt"]),
+         facts=["8 kort per box", "1 autograf per box i snitt", "3 numrerade Choice Prizms per box i snitt", "3 ytterligare Choice Prizms per box i snitt"]),
     dict(slug="cc-2026-futera-world-football-fx3", name="2026 Futera World Football FX Series 3", category="Fotboll", manufacturer="Futera", year="2026", series="World Football FX Series 3", fmt="hobby box", sku="FUT-FXs3-10", price=1499, packs=10, cards=5, stock="in_stock",
-         facts=["10 pack per box", "upp till 5 kort per pack"]),
+         facts=["10 pack per box", "upp till 5 kort per pack", "2 numrerade paralleller per box i snitt", "1 autograf, memorabilia eller numrerat rare insert per box i snitt"]),
     dict(slug="cc-2026-topps-argentina-team-set", name="2026 Topps Argentina Team Set", category="Fotboll", manufacturer="Topps", year="2026", series="Argentina Team Set", fmt="team set box", sku="FGC007078", price=999, packs=6, cards=5, stock="in_stock",
          facts=["6 pack per box", "5 kort per pack"]),
     dict(slug="cc-2026-topps-chrome-premier-league-hobby", name="2026 Topps Chrome Premier League Soccer Hobby", category="Fotboll", manufacturer="Topps", year="2026", series="Chrome Premier League", fmt="hobby box", sku="FGC007019-20", price=3699, packs=20, cards=4, stock="in_stock",
@@ -99,7 +99,7 @@ REAL_FOOTBALL_SNAPSHOT = [
     dict(slug="cc-2026-topps-finest-premier-league-wave2", name="2026 Topps Finest Premier League Soccer Hobby Wave 2", category="Fotboll", manufacturer="Topps", year="2026", series="Finest Premier League", fmt="hobby box", sku="FS0006415_06", price=5999, packs=6, cards=10, stock="in_stock",
          facts=["6 pack per box", "10 kort per pack"]),
     dict(slug="cc-2025-26-panini-prizm-fifa-retail", name="2025-26 Panini Prizm FIFA Soccer Retail", category="Fotboll", manufacturer="Panini", year="2025-26", series="Prizm FIFA", fmt="retail box", sku="PAN7900-24", price=1299, packs=24, cards=4, stock="in_stock",
-         facts=["24 pack per box", "4 kort per pack"]),
+         facts=["24 pack per box", "4 kort per pack", "1 numrerad Pulsar per box i snitt", "Red Pulsar Autograph i varannan box i snitt"]),
     dict(slug="cc-2025-26-topps-chrome-arsenal-hobby", name="2025-26 Topps Chrome Arsenal Soccer Hobby", category="Fotboll", manufacturer="Topps", year="2025-26", series="Chrome Arsenal", fmt="hobby box", sku="FS0006485-16", price=4499, packs=16, cards=4, stock="in_stock",
          facts=["16 pack per box", "4 kort per pack"]),
     dict(slug="cc-2025-26-topps-bayern-lineage", name="2025-26 Topps FC Bayern München Lineage Hobby", category="Fotboll", manufacturer="Topps", year="2025-26", series="FC Bayern Lineage", fmt="hobby box", sku="FS0006413", price=6499, packs=1, cards=7, stock="in_stock",
@@ -714,37 +714,85 @@ CHASE_PROFILES = {
  "tiers":{"everyday":{"label":"Vanligt men intressant","score":74,"items":["Trophy Chasers 1:2","Roots 1:3","Born Champ 1:4"]},"good":{"label":"Bra träff","score":80,"items":["Stark rookie","Holo-parallel","SP 1:527"]},"big":{"label":"Riktigt bra","score":88,"items":["Base Auto 1:112","Future Stars Auto 1:1 319"]},"jackpot":{"label":"Monsterhit","score":91,"items":["Rookie SSP 1:9 453","lågnumrerad autograf eller Foilfractor"]}},
  "caveat":"Oddsen gäller ett 35-korts hanger-pack. De gäller hela kortfamiljen, så en viss rookie eller autograf är mer sällsynt än familjeoddset."
 },
-"cc-2025-26-panini-prizm-fifa-choice": {
- "source_name":"Coolcard verified product snapshot",
- "source_url":"https://www.coolcard.se/category/boxar-paket-fotboll-endast-hobby",
- "key_names":[],
- "why_exciting":[
-   "En autograf per box i snitt gör att formatet har en tydlig signerad hit som huvudattraktion.",
-   "Bara åtta kort per box gör produkten hit-koncentrerad: få kort, men större fokus på parallels och autograf."
+"cc-2025-26-pitch-kings-la-liga": {
+ "source_name":"Panini Pitch Kings La Liga 2025/26 official product details and verified checklist",
+ "source_url":"https://www.paniniamerica.net/2025-26-panini-pitch-kings-soccer-trading-card-box-hobby-international",
+ "key_names":["Karl Etta Eyong RC #93","Carlos Macia RC #25","Pablo Garcia RC #26","Jan Virgili RC #47","Lamine Yamal","Kylian Mbappé","Jude Bellingham"],
+ "headline_chases":[
+   {"card":"Karl Etta Eyong Base Rookie #93 eller Blackout #3","tier":"MYCKET BRA","odds":"3 Rookies I-IV per box i snitt; Blackout är ultra-rare utan publicerat odds","why":"Namngiven rookie med både bas- och SSP-spår."},
+   {"card":"Lamine Yamal Le Cinque Più Belle #1","tier":"MONSTER","odds":"Ultra-rare insert; individuellt odds ej publicerat","why":"Femkorts-SSP med checklistans största namn."},
+   {"card":"Kylian Mbappé Le Cinque Più Belle #2","tier":"MONSTER","odds":"Ultra-rare insert; individuellt odds ej publicerat","why":"Namngiven premiuminsert på Real Madrid-stjärnan."},
+   {"card":"Lamine Yamal Fresh Paint Autograph #7","tier":"JACKPOT","odds":"1 autograf per box över hela autografprogrammet","why":"Verifierad Yamal-signatur i Fresh Paint."},
+   {"card":"Kylian Mbappé Legacy Portrait Signatures #9","tier":"JACKPOT","odds":"1 autograf per box; individuellt Mbappé-odds ej publicerat","why":"Legends/stars-autograf på checklistans toppnamn."},
+   {"card":"Masterpiece Parallel 1/1","tier":"JACKPOT","odds":"1/1; exakt spelare och kortserie varierar","why":"Produktens unika toppparallel."}
  ],
- "tiers":{
-   "everyday":{"label":"Vanligt men intressant","score":62,"items":["8 kort per box"]},
-   "good":{"label":"Bra träff","score":86,"items":["1 autograf per box i snitt"]},
-   "big":{"label":"Riktigt bra","score":72,"items":["Stark spelare på autograf eller premiumparallel"]},
-   "jackpot":{"label":"Monsterhit","score":65,"items":["Toppnamn på mycket sällsynt autograf/parallel"]}
- },
- "caveat":"Full FIFA-checklista och parallelodds är ännu inte kartlagda, därför rankas inte specifika spelare eller påstådda SSP-träffar."
+ "why_exciting":["Varje hobbybox ger en autograf och tre rookie-kort från Rookies I-IV i snitt.","La Liga-checklistan kombinerar Yamal, Mbappé och Bellingham med ultra-rare Blackout/Le Cinque Più Belle och 1/1-paralleller."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":92,"items":["1 autograf per box","3 Rookies I-IV","2 base-paralleller"]},"good":{"label":"Bra träff","score":89,"items":["Karl Etta Eyong eller annan namngiven rookie","numrerad parallel"]},"big":{"label":"Riktigt bra","score":95,"items":["Blackout","Le Cinque Più Belle","stjärnauto"]},"jackpot":{"label":"Monsterhit","score":98,"items":["Yamal eller Mbappé-auto","Masterpiece 1/1"]}},
+ "caveat":"Boxinnehållet anges som genomsnitt. Autografen är inte garanterat Yamal eller Mbappé, och Panini publicerar inget exakt odds för Blackout eller Le Cinque Più Belle."
+},
+"cc-2026-futera-world-football-fx3": {
+ "source_name":"Futera FX World Football Series 3 official checklist",
+ "source_url":"https://www.futera.com/checklists",
+ "key_names":["Lamine Yamal","Lionel Messi","Cristiano Ronaldo","Kylian Mbappé","Jude Bellingham","Ethan Nwaneri","Pau Cubarsí"],
+ "headline_chases":[
+   {"card":"Lamine Yamal Portrait Base FXB160 Diamond","tier":"MONSTER","odds":"Base parallel 1/1; individuellt boxodds ej publicerat","why":"Checklistans högsta basparallel på ett toppnamn."},
+   {"card":"Lionel Messi Gamechanger GC27 Diamond","tier":"MONSTER","odds":"Gamechanger Diamond 1/1; övriga paralleller /6 eller lägre","why":"Numrerat rare insert på Messi."},
+   {"card":"Messi / Cristiano Ronaldo Versus Memorabilia VS11","tier":"JACKPOT","odds":"Numrerad dual memorabilia; exakt print run/boxodds ej publicerat i checklistan","why":"Båda moderna ikonerna på samma memorabilia-kort."},
+   {"card":"Lionel Messi Modern On-Card Autograph MDA19","tier":"JACKPOT","odds":"1 autograf, memorabilia eller numrerat rare insert per box som gemensam hitgrupp","why":"Verifierad on-card Messi-signatur."},
+   {"card":"Lamine Yamal Modern On-Card Autograph MDA18","tier":"JACKPOT","odds":"Ingår i on-card-autografprogrammet; individuellt odds ej publicerat","why":"Namngiven ung superstjärna på hard-signed kort."},
+   {"card":"Yamal OFOA01 eller Messi OFOA03 Unique Auto","tier":"JACKPOT","odds":"1/1","why":"Unik on-card-autograf och produktens tydligaste toppträff."}
+ ],
+ "why_exciting":["Checklistan innehåller on-card-autografer, numrerad memorabilia och rare inserts på världsstjärnor.","Två numrerade paralleller plus en autograph/relic/rare insert per box i snitt ger flera separata chase-vägar."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":87,"items":["2 numrerade paralleller per box","1 ytterligare insert"]},"good":{"label":"Bra träff","score":90,"items":["Gamechanger/Heroes/Maestro","stjärnparallel /29 eller lägre"]},"big":{"label":"Riktigt bra","score":95,"items":["On-card autograph","numrerad memorabilia"]},"jackpot":{"label":"Monsterhit","score":99,"items":["Messi/Yamal auto","Messi–Ronaldo memorabilia","Unique Auto 1/1"]}},
+ "caveat":"Boxens huvudhit kan vara autograf, memorabilia eller ett numrerat rare insert; autograf är alltså inte garanterad. Futeras checklista verifierar namn och serienummer men publicerar inte individuella boxodds."
+},
+"cc-2025-26-panini-prizm-fifa-retail": {
+ "source_name":"Panini Prizm FIFA 2025/26 retail configuration and checklist",
+ "source_url":"https://www.collectosk.com/2025-26-panini-prizm-fifa-soccer-cards/",
+ "key_names":["Rio Ngumoha #106","Franco Mastantuono #194","Pio Esposito #78","Lamine Yamal","Lionel Messi","Kylian Mbappé","Vini Jr."],
+ "headline_chases":[
+   {"card":"Rio Ngumoha Base #106 eller Emergent #8","tier":"BRA","odds":"24 retail-pack per box; individuellt kortodds ej publicerat","why":"Namngivet ungt Liverpool-spår."},
+   {"card":"Franco Mastantuono Base #194 eller Flashback 2015 #4","tier":"BRA","odds":"Ingår i retailchecklistan; individuellt kortodds ej publicerat","why":"Namngivet Real Madrid-prospect."},
+   {"card":"Numrerad Pulsar Parallel","tier":"MYCKET BRA","odds":"1 per retailbox i snitt","why":"Garanterad numrerad chase på boxnivå i snitt."},
+   {"card":"Red Pulsar Autograph – Yamal, Messi, Mbappé eller annan signerare","tier":"MONSTER","odds":"1 Red Pulsar Autograph per 2 retailboxar i snitt; exakt spelare är mer sällsynt","why":"Retailformatets tydliga autografspår."},
+   {"card":"Lamine Yamal Manga #5 eller Color Blast #1","tier":"JACKPOT","odds":"SSP; exakt retailodds ej publicerat","why":"Två av produktens mest eftertraktade Yamal-inserts."},
+   {"card":"Lionel Messi Manga #19 eller Club Legend Signatures #1","tier":"JACKPOT","odds":"SSP/autograf; individuellt retailodds ej publicerat","why":"Namngivna Messi-toppträffar i checklistan."}
+ ],
+ "why_exciting":["Retaildisplayen har en Red Pulsar-autograf i varannan box i snitt, plus en numrerad Pulsar per box.","96 kort per box ger betydligt fler chanser på basprospects och inserts än Choice-formatets åtta kort."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":82,"items":["24 pack","2 Base Silver","6 inserts"]},"good":{"label":"Bra träff","score":86,"items":["1 numrerad Pulsar","Ngumoha/Mastantuono/Pio Esposito"]},"big":{"label":"Riktigt bra","score":92,"items":["Red Pulsar Autograph 1:2 boxar","lågnumrerad stjärnparallel"]},"jackpot":{"label":"Monsterhit","score":96,"items":["Yamal/Messi/Mbappé-autograf","Manga eller Color Blast"]}},
+ "caveat":"1:2 gäller valfri Red Pulsar Autograph per retailbox, inte en viss spelare. Choice- och hobbyexklusiva paralleller räknas inte som möjliga retailträffar."
+},
+"cc-2025-26-panini-prizm-fifa-choice": {
+ "source_name":"Panini Prizm FIFA 2025/26 checklist and Choice configuration",
+ "source_url":"https://www.collectosk.com/2025-26-panini-prizm-fifa-soccer-cards/",
+ "key_names":["Rio Ngumoha #106","Franco Mastantuono #194","Pio Esposito #78","Lamine Yamal","Lionel Messi","Kylian Mbappé","Vini Jr."],
+ "headline_chases":[
+   {"card":"Rio Ngumoha Base #106 eller Emergent #8","tier":"BRA","odds":"Ingår i 300-kortsbasen/inserts; individuellt kortodds ej publicerat","why":"Namngivet ungt Liverpool-spår."},
+   {"card":"Choice Snake Year /48 eller Choice Cherry Blossom /28","tier":"MYCKET BRA","odds":"3 numrerade Choice Prizms per box över Choice-parallellerna","why":"Formatunika, numrerade Choice-paralleller."},
+   {"card":"Lamine Yamal Sensational Signatures #1","tier":"MONSTER","odds":"1 autograf per Choice-box över hela autografprogrammet","why":"Namngiven toppstjärna i autografchecklistan."},
+   {"card":"Lionel Messi Club Legend Signatures #1","tier":"JACKPOT","odds":"1 autograf per Choice-box; individuellt Messi-odds ej publicerat","why":"En av produktens främsta signerade chaser."},
+   {"card":"Kylian Mbappé / Vini Jr. Dual Signatures #3","tier":"JACKPOT","odds":"Ingår i Dual Signatures; individuellt boxodds ej publicerat","why":"Två Real Madrid-stjärnor på samma signerade kort."},
+   {"card":"Choice Nebula 1/1","tier":"JACKPOT","odds":"1/1; exakt spelare varierar","why":"Choice-formatets unika toppparallel."}
+ ],
+ "why_exciting":["En autograf och tre numrerade Choice Prizms per box ger hög hit-koncentration.","Choice har egna paralleller ned till Nebula 1/1 och checklistan innehåller Messi, Yamal, Mbappé och flera unga spelare."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":92,"items":["1 autograf per box","3 numrerade Choice Prizms","3 övriga Choice Prizms"]},"good":{"label":"Bra träff","score":88,"items":["Ngumoha/Mastantuono/Pio Esposito","Choice /88 eller /48"]},"big":{"label":"Riktigt bra","score":95,"items":["Yamal eller Mbappé-autograf","Choice /28 eller /18"]},"jackpot":{"label":"Monsterhit","score":98,"items":["Messi-autograf","Dual Signatures","Choice Nebula 1/1"]}},
+ "caveat":"Boxgarantin gäller valfri autograf och tre numrerade Choice-paralleller, inte en viss spelare. Manga, Color Blast och andra SSP finns i checklistan men något formatunikt Choice-odds är inte publicerat."
 },
 "cc-2025-26-topps-bayern-lineage": {
- "source_name":"Coolcard verified product snapshot",
- "source_url":"https://www.coolcard.se/category/boxar-paket-fotboll-endast-hobby",
- "key_names":[],
- "why_exciting":[
-   "Tre encased Autograph, Autograph Relics eller Relics per box ger mycket hög hit-koncentration.",
-   "Sju kort totalt betyder att en stor del av boxen består av premiumhits snarare än basvolym."
+ "source_name":"Topps FC Bayern München Lineage 2025/26 official checklist",
+ "source_url":"https://uk.topps.com/pages/topps-lineage-fc-bayern-munchen",
+ "key_names":["Lennart Karl RC #17","Jonas Urbig RC #2","Momoko Tanikawa RC #18","Wisdom Mike RC #25","Harry Kane","Jamal Musiala","Thomas Müller","Franz Beckenbauer"],
+ "headline_chases":[
+   {"card":"Lennart Karl Base Rookie #17","tier":"BRA","odds":"Ingår i 45-kortsbasen; individuellt kortodds ej publicerat","why":"Checklistans centrala Bayern-rookie."},
+   {"card":"Lennart Karl Icons On-Card Autograph IA-LK","tier":"MONSTER","odds":"Ingår i on-card-autografprogrammet; individuellt odds ej publicerat","why":"Verifierad rookieautograf."},
+   {"card":"Harry Kane Meister Kane On-Card Autograph MKA-HK","tier":"JACKPOT","odds":"Individuellt odds ej publicerat","why":"Produktens uttalade Kane-toppkort."},
+   {"card":"Thomas Müller Es Müllert On-Card Autograph EMA-TM","tier":"JACKPOT","odds":"Individuellt odds ej publicerat","why":"Dedikerad on-card-signatur för klubbikonen."},
+   {"card":"Kane / Luis Díaz / Michael Olise Triple Red Autograph TRA-KDO","tier":"JACKPOT","odds":"Triple autograph; individuellt odds ej publicerat","why":"Tre offensiva stjärnor på samma signerade kort."},
+   {"card":"Davies / Musiala / Lennart Karl Triple Red Autograph TRA-DMK","tier":"JACKPOT","odds":"Triple autograph; individuellt odds ej publicerat","why":"Kopplar ihop klubbens nutid och nästa generation."}
  ],
- "tiers":{
-   "everyday":{"label":"Vanligt men intressant","score":88,"items":["7 kort per box","3 encased premiumhits per box"]},
-   "good":{"label":"Bra träff","score":92,"items":["Autograph","Autograph Relic","Relic"]},
-   "big":{"label":"Riktigt bra","score":82,"items":["Premiumsignatur eller relic på stark Bayern-spelare"]},
-   "jackpot":{"label":"Monsterhit","score":72,"items":["Mycket sällsynt toppnamn/premiumvariant"]}
- },
- "caveat":"BoxFinder har verifierat produktkonfigurationen men ännu inte full spelare-, serial- och oddsdata."
+ "why_exciting":["Tre encased autographs, autograph relics eller relics per box ger extremt hög premium-hit-täthet.","Checklistan har on-card-signaturer, dual/triple autos samt fyra tydligt markerade rookies."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":96,"items":["3 encased premiumhits per box","7 kort totalt"]},"good":{"label":"Bra träff","score":94,"items":["On-card autograph","rookieauto eller relic"]},"big":{"label":"Riktigt bra","score":97,"items":["Lennart Karl auto","Musiala/Kane premiumhit"]},"jackpot":{"label":"Monsterhit","score":99,"items":["Meister Kane","Es Müllert","Triple Red/Triple Winner Auto"]}},
+ "caveat":"Tre premiumhits per box är verifierat, men Topps publicerar inte individuella odds för Karl, Kane, Müller eller triple-autograferna. En relic kan vara en av de tre träffarna."
 },
 "cc-pokemon-mega-zygarde-premium": {
  "source_name":"Coolcard verified product snapshot",
@@ -789,6 +837,36 @@ CHASE_PROFILES = {
 
 
 CHASE_CARD_DB = [
+
+    # Pitch Kings International Hobby: box guarantees and named La Liga chases.
+    dict(slug="cc-2025-26-pitch-kings-la-liga", key="football:2025-26:pitch-kings:93:karl-etta-eyong:blackout", player="Karl Etta Eyong", card="Blackout Rookie", number="3", rookie=True, tier="MONSTER", odds="Ultra-rare; individual odds not published", source="https://www.paniniamerica.net/2025-26-panini-pitch-kings-soccer-trading-card-box-hobby-international"),
+    dict(slug="cc-2025-26-pitch-kings-la-liga", key="football:2025-26:pitch-kings:lamine-yamal:le-cinque", player="Lamine Yamal", card="Le Cinque Più Belle", number="1", rookie=False, tier="MONSTER", odds="Ultra-rare; individual odds not published", source="https://www.paniniamerica.net/2025-26-panini-pitch-kings-soccer-trading-card-box-hobby-international"),
+    dict(slug="cc-2025-26-pitch-kings-la-liga", key="football:2025-26:pitch-kings:lamine-yamal:fresh-paint-auto", player="Lamine Yamal", card="Fresh Paint Autograph", number="7", rookie=False, tier="JACKPOT", odds="1 autograph per box across autograph program", source="https://www.collectosk.com/2025-26-panini-pitch-kings-laliga-soccer-cards/"),
+    dict(slug="cc-2025-26-pitch-kings-la-liga", key="football:2025-26:pitch-kings:kylian-mbappe:legacy-auto", player="Kylian Mbappé", card="Legacy Portrait Signatures", number="9", rookie=False, tier="JACKPOT", odds="1 autograph per box; individual player odds not published", source="https://www.collectosk.com/2025-26-panini-pitch-kings-laliga-soccer-cards/"),
+
+    # Prizm FIFA Choice uses Choice-only parallels and a one-auto box average.
+    dict(slug="cc-2025-26-panini-prizm-fifa-choice", key="football:2025-26:prizm-fifa:106:rio-ngumoha:choice", player="Rio Ngumoha", card="Base Choice Parallel", number="106", rookie=True, tier="BRA", odds="3 numbered Choice Prizms per box across checklist", source="https://www.collectosk.com/2025-26-panini-prizm-fifa-soccer-cards/"),
+    dict(slug="cc-2025-26-panini-prizm-fifa-choice", key="football:2025-26:prizm-fifa:194:franco-mastantuono:choice", player="Franco Mastantuono", card="Base Choice Parallel", number="194", rookie=True, tier="MYCKET BRA", odds="3 numbered Choice Prizms per box across checklist", source="https://www.collectosk.com/2025-26-panini-prizm-fifa-soccer-cards/"),
+    dict(slug="cc-2025-26-panini-prizm-fifa-choice", key="football:2025-26:prizm-fifa:lamine-yamal:sensational-auto", player="Lamine Yamal", card="Sensational Signatures", number="1", rookie=False, tier="MONSTER", odds="1 autograph per Choice box across autograph program", source="https://www.collectosk.com/2025-26-panini-prizm-fifa-soccer-cards/"),
+    dict(slug="cc-2025-26-panini-prizm-fifa-choice", key="football:2025-26:prizm-fifa:lionel-messi:club-legend-auto", player="Lionel Messi", card="Club Legend Signatures", number="1", rookie=False, tier="JACKPOT", odds="1 autograph per Choice box; individual player odds not published", source="https://www.collectosk.com/2025-26-panini-prizm-fifa-soccer-cards/"),
+
+    # Prizm FIFA retail: retail box odds stay separate from Choice and Hobby.
+    dict(slug="cc-2025-26-panini-prizm-fifa-retail", key="football:2025-26:prizm-fifa:106:rio-ngumoha:base", player="Rio Ngumoha", card="Base", number="106", rookie=True, tier="BRA", odds="24 retail packs per box; individual card odds not published", source="https://www.collectosk.com/2025-26-panini-prizm-fifa-soccer-cards/"),
+    dict(slug="cc-2025-26-panini-prizm-fifa-retail", key="football:2025-26:prizm-fifa:194:franco-mastantuono:base", player="Franco Mastantuono", card="Base", number="194", rookie=True, tier="BRA", odds="24 retail packs per box; individual card odds not published", source="https://www.collectosk.com/2025-26-panini-prizm-fifa-soccer-cards/"),
+    dict(slug="cc-2025-26-panini-prizm-fifa-retail", key="football:2025-26:prizm-fifa:lamine-yamal:red-pulsar-auto", player="Lamine Yamal", card="Red Pulsar Autograph", number="1", rookie=False, tier="MONSTER", odds="Red Pulsar Autograph family 1:2 retail boxes; exact player is rarer", source="https://www.collectosk.com/2025-26-panini-prizm-fifa-soccer-cards/"),
+    dict(slug="cc-2025-26-panini-prizm-fifa-retail", key="football:2025-26:prizm-fifa:lionel-messi:manga", player="Lionel Messi", card="Manga", number="19", rookie=False, tier="JACKPOT", odds="SSP; exact retail odds not published", source="https://www.collectosk.com/2025-26-panini-prizm-fifa-soccer-cards/"),
+
+    # Futera FX Series 3 official checklist: serials are stated, box odds are not.
+    dict(slug="cc-2026-futera-world-football-fx3", key="football:2026:futera-fx3:160:lamine-yamal:base-diamond", player="Lamine Yamal", card="Portrait Base Diamond", number="FXB160", rookie=False, tier="MONSTER", odds="1/1", source="https://www.futera.com/checklists"),
+    dict(slug="cc-2026-futera-world-football-fx3", key="football:2026:futera-fx3:lionel-messi:modern-auto", player="Lionel Messi", card="Modern On-Card Autograph", number="MDA19", rookie=False, tier="JACKPOT", odds="Main hit is autograph, memorabilia or numbered rare insert; exact odds not published", source="https://www.futera.com/checklists"),
+    dict(slug="cc-2026-futera-world-football-fx3", key="football:2026:futera-fx3:messi-ronaldo:versus-memorabilia", player="Lionel Messi / Cristiano Ronaldo", card="Versus Dual Memorabilia", number="VS11", rookie=False, tier="JACKPOT", odds="Numbered memorabilia; exact print run and box odds not published", source="https://www.futera.com/checklists"),
+    dict(slug="cc-2026-futera-world-football-fx3", key="football:2026:futera-fx3:lamine-yamal:unique-auto", player="Lamine Yamal", card="Unique On-Card Autograph", number="OFOA01", rookie=False, tier="JACKPOT", odds="1/1", source="https://www.futera.com/checklists"),
+
+    # Bayern Lineage rookies and named on-card/triple autograph programs.
+    dict(slug="cc-2025-26-topps-bayern-lineage", key="football:2025-26:bayern-lineage:17:lennart-karl:base-rookie", player="Lennart Karl", card="Base Rookie", number="17", rookie=True, tier="BRA", odds="Part of 45-card base set; individual odds not published", source="https://uk.topps.com/pages/topps-lineage-fc-bayern-munchen"),
+    dict(slug="cc-2025-26-topps-bayern-lineage", key="football:2025-26:bayern-lineage:lennart-karl:icons-auto", player="Lennart Karl", card="Icons On-Card Autograph", number="IA-LK", rookie=True, tier="MONSTER", odds="3 encased premium hits per box; exact player not guaranteed", source="https://uk.topps.com/pages/topps-lineage-fc-bayern-munchen"),
+    dict(slug="cc-2025-26-topps-bayern-lineage", key="football:2025-26:bayern-lineage:harry-kane:meister-auto", player="Harry Kane", card="Meister Kane On-Card Autograph", number="MKA-HK", rookie=False, tier="JACKPOT", odds="Individual odds not published", source="https://uk.topps.com/pages/topps-lineage-fc-bayern-munchen"),
+    dict(slug="cc-2025-26-topps-bayern-lineage", key="football:2025-26:bayern-lineage:thomas-muller:es-muellert-auto", player="Thomas Müller", card="Es Müllert On-Card Autograph", number="EMA-TM", rookie=False, tier="JACKPOT", odds="Individual odds not published", source="https://uk.topps.com/pages/topps-lineage-fc-bayern-munchen"),
 
     # 2026 MLS Chrome Value Box: only value-format odds are used.
     dict(slug="cc-2026-topps-mls-chrome-value", key="football:2026:mls-chrome:zavier-gozo:wonderkids-25", player="Zavier Gozo", card="Wonderkids", number="WK-25", rookie=False, tier="BRA", odds="Wonderkids 1:6 value packs; exact player is rarer", source="https://www.topps.com/pages/topps-mls-chrome"),

@@ -38,7 +38,7 @@ export default async function DiscoverPage({searchParams}){
     <header className="productNav">
       <a className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a>
       <a className="backLink" href="/">← STARTSIDAN</a>
-      <span className="version">v0.43.0</span>
+      <span className="version">v0.44.0</span>
     </header>
 
     <section className="discoverHero">

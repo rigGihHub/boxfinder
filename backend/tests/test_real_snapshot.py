@@ -137,6 +137,11 @@ def test_new_products_have_searchable_named_cards():
 
 def test_researched_football_products_have_named_chases_and_sources():
     slugs=(
+        "cc-2025-26-pitch-kings-la-liga",
+        "cc-2025-26-panini-prizm-fifa-choice",
+        "cc-2025-26-panini-prizm-fifa-retail",
+        "cc-2026-futera-world-football-fx3",
+        "cc-2025-26-topps-bayern-lineage",
         "cc-2026-topps-mls-chrome-value",
         "cc-2026-topps-chrome-premier-league-hobby",
         "cc-2026-topps-finest-premier-league-wave2",
@@ -149,19 +154,27 @@ def test_researched_football_products_have_named_chases_and_sources():
         profile=seedmod.CHASE_PROFILES[slug]
         assert profile["key_names"]
         assert len(profile["headline_chases"]) >= 5
-        assert "topps.com" in profile["source_url"]
+        assert profile["source_url"].startswith("https://")
         assert all(x.get("card") and x.get("tier") and x.get("odds") for x in profile["headline_chases"])
 
 def test_football_retail_profiles_only_assert_retail_specific_odds():
     mls=seedmod.CHASE_PROFILES["cc-2026-topps-mls-chrome-value"]
     ucc=seedmod.CHASE_PROFILES["cc-2025-26-topps-ucc-flagship-hanger"]
+    prizm=seedmod.CHASE_PROFILES["cc-2025-26-panini-prizm-fifa-retail"]
     assert any("1:342 value-pack" in x["odds"] for x in mls["headline_chases"])
     assert any("1:112 hanger-pack" in x["odds"] for x in ucc["headline_chases"])
+    assert any("1 Red Pulsar Autograph per 2 retailboxar" in x["odds"] for x in prizm["headline_chases"])
     assert "Hobbyexklusiva" in mls["caveat"]
     assert "35-korts hanger-pack" in ucc["caveat"]
+    assert "Choice- och hobbyexklusiva" in prizm["caveat"]
 
 def test_football_search_cards_include_rookies_and_star_autographs():
     expected={
+        "cc-2025-26-pitch-kings-la-liga":("Karl Etta Eyong",True),
+        "cc-2025-26-panini-prizm-fifa-choice":("Lionel Messi",False),
+        "cc-2025-26-panini-prizm-fifa-retail":("Rio Ngumoha",True),
+        "cc-2026-futera-world-football-fx3":("Lionel Messi / Cristiano Ronaldo",False),
+        "cc-2025-26-topps-bayern-lineage":("Lennart Karl",True),
         "cc-2026-topps-chrome-premier-league-hobby":("Max Dowman",True),
         "cc-2026-topps-finest-premier-league-wave2":("Estêvão Willian",True),
         "cc-2025-26-topps-chrome-arsenal-hobby":("Bukayo Saka",False),
@@ -171,6 +184,22 @@ def test_football_search_cards_include_rookies_and_star_autographs():
     }
     for slug,(player,rookie) in expected.items():
         assert any(x["slug"]==slug and x["player"]==player and x["rookie"] is rookie for x in seedmod.CHASE_CARD_DB)
+
+def test_prizm_choice_and_retail_keep_format_specific_guarantees_separate():
+    choice=seedmod.CHASE_PROFILES["cc-2025-26-panini-prizm-fifa-choice"]
+    retail=seedmod.CHASE_PROFILES["cc-2025-26-panini-prizm-fifa-retail"]
+    assert "1 autograf per box" in choice["tiers"]["everyday"]["items"]
+    assert "3 numrerade Choice Prizms" in choice["tiers"]["everyday"]["items"]
+    assert not any("Choice" in item for item in retail["tiers"]["everyday"]["items"])
+    assert any("Red Pulsar Autograph 1:2 boxar" in item for item in retail["tiers"]["big"]["items"])
+
+def test_futera_and_bayern_do_not_turn_checklist_presence_into_fake_odds():
+    futera=seedmod.CHASE_PROFILES["cc-2026-futera-world-football-fx3"]
+    bayern=seedmod.CHASE_PROFILES["cc-2025-26-topps-bayern-lineage"]
+    assert "autograf är alltså inte garanterad" in futera["caveat"]
+    assert any(x["card"].startswith("Yamal OFOA01") and x["odds"]=="1/1" for x in futera["headline_chases"])
+    assert "En relic kan vara en av de tre träffarna" in bayern["caveat"]
+    assert any("Lennart Karl" in x["card"] for x in bayern["headline_chases"])
 
 def test_real_catalog_can_filter_to_loose_packs(monkeypatch):
     Session=session_factory()
