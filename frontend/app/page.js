@@ -1,15 +1,5 @@
 import FreshDataButton from "./components/FreshDataButton";
-const API = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
-
-async function getJson(path, fallback) {
-  try {
-    const res = await fetch(`${API}${path}`, { cache: 'no-store' });
-    if (!res.ok) return fallback;
-    return res.json();
-  } catch {
-    return fallback;
-  }
-}
+import {API, getJson} from "./lib/api";
 
 function DataBadge({ kind }) {
   const demo = kind === 'demo';
@@ -74,7 +64,7 @@ export default async function Home({ searchParams }) {
       <header className="nav">
         <a className="brand" href="#top"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a>
         <nav><a href="/resale">Bäst att öppna</a><a href="/chase">Chase Finder</a><a href="/discover">Filtrera</a><a href="#ranking">EV-ranking</a><a href="#budget">Budget</a><a href="#signals">Prisradar</a><a href="/watchlist">Bevakningar</a></nav>
-        <span className="version">v0.45.0</span>
+        <span className="version">v0.45.1</span>
       </header>
 
       <section className="hero" id="top">
