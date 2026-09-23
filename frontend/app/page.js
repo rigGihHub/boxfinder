@@ -64,7 +64,7 @@ export default async function Home({ searchParams }) {
       <header className="nav">
         <a className="brand" href="#top"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a>
         <nav><a href="/resale">Bäst att öppna</a><a href="/chase">Chase Finder</a><a href="/discover">Filtrera</a><a href="#ranking">EV-ranking</a><a href="#budget">Budget</a><a href="#signals">Prisradar</a><a href="/watchlist">Bevakningar</a></nav>
-        <span className="version">v0.45.1</span>
+        <span className="version">v0.46.0</span>
       </header>
 
       <section className="hero" id="top">

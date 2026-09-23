@@ -38,7 +38,7 @@ export default async function DiscoverPage({searchParams}){
     <header className="productNav">
       <a className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a>
       <a className="backLink" href="/">← STARTSIDAN</a>
-      <span className="version">v0.45.1</span>
+      <span className="version">v0.46.0</span>
     </header>
 
     <section className="discoverHero">
@@ -51,6 +51,9 @@ export default async function DiscoverPage({searchParams}){
         <a href="?category=Hockey&budget=2500&goal=rookies">ROOKIES</a>
         <a href="?budget=5000&goal=autographs">AUTOGRAFER</a>
         <a href="?category=Pok%C3%A9mon&budget=2500&goal=jackpot">POKÉMON</a>
+        <a href="?category=One%20Piece&budget=2500&goal=jackpot">ONE PIECE</a>
+        <a href="?category=Marvel&budget=5000&goal=autographs">MARVEL AUTOGRAFER</a>
+        <a href="?category=Disney&budget=1000&goal=jackpot">DISNEY</a>
         <a href="?category=Hockey&budget=250&goal=hits&format=single%20pack">LÖSA PAKET</a>
         <a href="?budget=500&goal=balanced">UNDER 500 KR</a>
         <a href="?budget=5000&goal=jackpot">MONSTERHIT</a>
@@ -58,7 +61,7 @@ export default async function DiscoverPage({searchParams}){
 
       <form className="discoverForm" method="get">
         <div><label>VAD SAMLAR DU?</label><select name="category" defaultValue={category}>
-          <option value="">Allt</option><option>Hockey</option><option>Fotboll</option><option>Basket</option><option>NFL</option><option>Baseboll</option><option>F1</option><option>Pokémon</option><option>One Piece</option><option>Magic</option><option>Lorcana</option>
+          <option value="">Allt</option><option>Hockey</option><option>Fotboll</option><option>Basket</option><option>NFL</option><option>Baseboll</option><option>F1</option><option>Pokémon</option><option>One Piece</option><option>Marvel</option><option>Disney</option><option>Magic</option><option>Lorcana</option>
         </select></div>
         <div><label>MAXBUDGET</label><select name="budget" defaultValue={String(budget)}>
           <option value="100">100 kr</option><option value="250">250 kr</option><option value="500">500 kr</option><option value="750">750 kr</option><option value="1000">1 000 kr</option><option value="1500">1 500 kr</option><option value="2500">2 500 kr</option><option value="5000">5 000 kr</option>

@@ -1,4 +1,5 @@
 import json
+import re
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 from ..models import ChaseProfile, ProductVariant
@@ -48,6 +49,25 @@ def content_summary(profile):
 
 TIER_ORDER={"BRA":1,"MYCKET BRA":2,"MONSTER":3,"JACKPOT":4}
 
+def has_actionable_odds(profile: dict | None) -> bool:
+    """True only for a published ratio, serial number or explicit guarantee.
+
+    Text that merely says odds are not published must never improve evidence grade.
+    """
+    if not profile:
+        return False
+    for card in profile.get("headline_chases",[]):
+        odds=(card.get("odds") or "").lower()
+        if not odds:
+            continue
+        if "garanter" in odds or "guaranteed" in odds:
+            return True
+        if re.search(r"\b1\s*[:/]\s*[\d ]+", odds):
+            return True
+        if re.search(r"\bserial\s*/\s*\d+", odds):
+            return True
+    return False
+
 def chase_ladder(profile: dict | None):
     if not profile: return []
     cards=profile.get("headline_chases",[])
@@ -60,7 +80,7 @@ def chase_coverage(profile: dict | None):
     return {
         "status":"card_level" if cards else "product_level",
         "headline_cards":len(cards),
-        "has_odds":any(bool(x.get("odds")) for x in cards),
+        "has_odds":has_actionable_odds(profile),
     }
 
 

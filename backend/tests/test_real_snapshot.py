@@ -45,7 +45,7 @@ def test_verified_product_facts_exist_for_supported_products(monkeypatch):
     db.close()
 
 
-def test_snapshot_includes_football_and_pokemon(monkeypatch):
+def test_snapshot_includes_cross_category_products(monkeypatch):
     Session=session_factory()
     monkeypatch.setattr(seedmod,"SessionLocal",Session)
     seedmod.seed_verified_snapshot()
@@ -54,6 +54,9 @@ def test_snapshot_includes_football_and_pokemon(monkeypatch):
     assert "Hockey" in categories
     assert "Fotboll" in categories
     assert "Pokémon" in categories
+    assert "One Piece" in categories
+    assert "Marvel" in categories
+    assert "Disney" in categories
     db.close()
 
 def test_all_chase_profiles_point_to_seeded_products(monkeypatch):
@@ -200,6 +203,50 @@ def test_futera_and_bayern_do_not_turn_checklist_presence_into_fake_odds():
     assert any(x["card"].startswith("Yamal OFOA01") and x["odds"]=="1/1" for x in futera["headline_chases"])
     assert "En relic kan vara en av de tre träffarna" in bayern["caveat"]
     assert any("Lennart Karl" in x["card"] for x in bayern["headline_chases"])
+
+def test_pokemon_one_piece_marvel_and_disney_have_named_chases():
+    expected={
+        "cc-pokemon-paradox-rift-18":"Roaring Moon ex #251",
+        "cc-pokemon-temporal-forces-18":"Raging Bolt ex #208",
+        "cc-pokemon-shrouded-fable-kingambit":"Cassiopeia #94",
+        "cc-pokemon-go-etb":"Mewtwo VSTAR #86",
+        "cc-pokemon-white-flare-jp-display":"Reshiram ex #174",
+        "cc-one-piece-op13-jp-display":"Gol.D.Roger OP09-118",
+        "cc-2025-topps-marvel-studios-chrome-hobby":"Hugh Jackman Wolverine Autograph",
+        "cc-2026-topps-disney-chrome-value":"Miley Cyrus Hannah Montana Autograph",
+    }
+    for slug,name in expected.items():
+        profile=seedmod.CHASE_PROFILES[slug]
+        assert name in profile["key_names"]
+        assert len(profile["headline_chases"]) >= 5
+
+def test_unpublished_odds_do_not_raise_evidence_grade():
+    from app.services.chase_content import has_actionable_odds
+    pokemon=seedmod.CHASE_PROFILES["cc-pokemon-paradox-rift-18"]
+    one_piece=seedmod.CHASE_PROFILES["cc-one-piece-op13-jp-display"]
+    marvel=seedmod.CHASE_PROFILES["cc-2025-topps-marvel-studios-chrome-hobby"]
+    disney=seedmod.CHASE_PROFILES["cc-2026-topps-disney-chrome-value"]
+    assert has_actionable_odds(pokemon) is False
+    assert has_actionable_odds(one_piece) is False
+    assert has_actionable_odds(marvel) is True
+    assert has_actionable_odds(disney) is True
+
+def test_facsimile_signatures_are_never_described_as_authentic():
+    disney=seedmod.CHASE_PROFILES["cc-2026-topps-disney-chrome-value"]
+    facsimiles=[x for x in disney["headline_chases"] if "Facsimile" in x["card"]]
+    assert facsimiles
+    assert all("tryckta" in x["why"] or "tryckt" in x["why"] for x in facsimiles)
+    assert "inte förväxlas med Authentic Autographs" in disney["caveat"]
+
+def test_new_entertainment_cards_are_searchable():
+    expected={
+        "cc-one-piece-op13-jp-display":"Gol.D.Roger",
+        "cc-2025-topps-marvel-studios-chrome-hobby":"Hugh Jackman / Ryan Reynolds",
+        "cc-2026-topps-disney-chrome-value":"Miley Cyrus",
+        "cc-pokemon-white-flare-jp-display":"Reshiram ex",
+    }
+    for slug,player in expected.items():
+        assert any(x["slug"]==slug and x["player"]==player for x in seedmod.CHASE_CARD_DB)
 
 def test_real_catalog_can_filter_to_loose_packs(monkeypatch):
     Session=session_factory()

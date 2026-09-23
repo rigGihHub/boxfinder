@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import math
 
-from .chase_content import content_score, pull_profile
+from .chase_content import content_score, has_actionable_odds, pull_profile
 
 
 STRATEGIES = {"balanced", "jackpot", "frequent"}
@@ -55,7 +55,7 @@ def resale_rank(item: dict, strategy: str = "balanced") -> dict:
         reverse=True,
     )
     has_exact = bool(cards)
-    has_odds = any(bool(x.get("odds")) for x in cards)
+    has_odds = has_actionable_odds(profile)
     profile_confidence = float(profile.get("confidence") or 0)
 
     if strategy == "jackpot":

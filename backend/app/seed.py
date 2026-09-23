@@ -125,7 +125,16 @@ REAL_POKEMON_SNAPSHOT = [
          facts=["20 pack per box", "7 kort per pack", "japanska kort"]),
 ]
 
-REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT
+REAL_ENTERTAINMENT_SNAPSHOT = [
+    dict(slug="cc-one-piece-op13-jp-display", name="One Piece Carrying on His Will OP-13 Japanese Booster Display", category="One Piece", manufacturer="Bandai", year="2025", series="Carrying on His Will OP-13", fmt="booster box", sku="OPCG-OP-13-24-JPN", price=2299, packs=24, cards=6, stock="in_stock",
+         facts=["24 japanska boosterpaket", "6 kort per pack", "WANTED Edition med Gol.D.Roger, Luffy, Ace och Sabo finns i setet", "officiella packodds är inte publicerade"]),
+    dict(slug="cc-2025-topps-marvel-studios-chrome-hobby", name="2025 Topps Marvel Studios Chrome Hobby", category="Marvel", manufacturer="Topps", year="2025", series="Marvel Studios Chrome", fmt="hobby box", sku="FGC006444_10", price=3499, packs=10, cards=8, stock="in_stock",
+         facts=["10 hobby-pack", "8 kort per pack", "Single Autographs 1:25 hobby-pack", "Standard Sketch Card Silver Foil 1:143 hobby-pack"]),
+    dict(slug="cc-2026-topps-disney-chrome-value", name="2026 Topps Chrome Disney Value Box", category="Disney", manufacturer="Topps", year="2026", series="Chrome Disney", fmt="value box", sku="FGC006789", price=599, packs=8, cards=4, stock="in_stock",
+         facts=["8 value-pack", "4 kort per pack", "2 exklusiva Raywave-paralleller per box", "Authentic Autographs 1:2 261 value-pack"]),
+]
+
+REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
 
 REAL_SNAPSHOT += REAL_PACK_SNAPSHOT
 
@@ -147,11 +156,17 @@ def seed_verified_snapshot():
         pack_url="https://www.coolcard.se/category/paket-nhl-2025-26"
         football_url="https://www.coolcard.se/category/boxar-paket-fotboll-endast-hobby"
         pokemon_url="https://www.coolcard.se/category/pokmon"
+        one_piece_url="https://www.coolcard.se/category/one-piece-japanska-kort"
+        marvel_url="https://www.coolcard.se/category/dc-seriefigurer"
+        disney_url="https://www.coolcard.se/en/product/sealed-value-box-2026-topps-disney-chrome-8-packs"
         fact_urls={
             "cc-2025-26-series2-hobby":"https://www.coolcard.se/product/hel-box-12-paket-2025-26-upper-deck-series-2-hobby",
             "cc-2025-26-clear-cut-hobby":"https://www.coolcard.se/product/hel-box-2025-26-upper-deck-clear-cut-hobby",
             "cc-2025-26-opc-hobby":"https://www.coolcard.se/en/product/1-pack-2025-26-upper-deck-o-pee-chee-hobby",
             "cc-2025-26-series1-hobby":"https://www.coolcard.se/category/boxar-nhl-2025-26",
+            "cc-one-piece-op13-jp-display":"https://en.onepiece-cardgame.com/products/boosters/op13/",
+            "cc-2025-topps-marvel-studios-chrome-hobby":"https://www.topps.com/pages/topps-marvel-studios-chrome",
+            "cc-2026-topps-disney-chrome-value":"https://www.topps.com/products/2026-topps-chrome%C2%AE-disney-value-box",
         }
 
         for row in REAL_SNAPSHOT:
@@ -188,6 +203,12 @@ def seed_verified_snapshot():
                 source_url=football_url
             elif row["category"]=="Pokémon":
                 source_url=pokemon_url
+            elif row["category"]=="One Piece":
+                source_url=one_piece_url
+            elif row["category"]=="Marvel":
+                source_url=marvel_url
+            elif row["category"]=="Disney":
+                source_url=disney_url
             else:
                 source_url = pack_url if row["fmt"]=="single pack" else category_url
             if offer is None:
@@ -818,20 +839,135 @@ CHASE_PROFILES = {
  "caveat":"Produktens två promos är verifierade. Boosterpaketen är Mega Evolution—Perfect Order, men officiella kortspecifika pull rates är inte publicerade i underlaget och visas därför inte som odds."
 },
 "cc-pokemon-paradox-rift-18": {
- "source_name":"Coolcard verified product snapshot",
- "source_url":"https://www.coolcard.se/category/displayer-booster-boxar",
- "key_names":[],
+ "source_name":"Official Pokémon Paradox Rift card list",
+ "source_url":"https://assets.pokemon.com/assets/cms2/pdf/trading-card-game/checklist/par_web_cardlist_en.pdf",
+ "key_names":["Roaring Moon ex #251","Iron Valiant ex #249","Groudon #199","Garchomp ex #245","Professor Sada's Vitality #256"],
+ "headline_chases":[
+   {"card":"Groudon #199 / Illustration Rare","tier":"BRA","odds":"Finns i Paradox Rift; officiella packodds ej publicerade","why":"Namngiven Illustration Rare med stark samlarefterfrågan."},
+   {"card":"Garchomp ex #245 / Special Illustration Rare","tier":"MYCKET BRA","odds":"Finns i Paradox Rift; officiella packodds ej publicerade","why":"Special Illustration Rare av en populär Pokémon."},
+   {"card":"Iron Valiant ex #249 / Special Illustration Rare","tier":"MONSTER","odds":"Finns i Paradox Rift; officiella packodds ej publicerade","why":"En av setets två centrala Paradox-chaser."},
+   {"card":"Roaring Moon ex #251 / Special Illustration Rare","tier":"JACKPOT","odds":"Finns i Paradox Rift; officiella packodds ej publicerade","why":"Setets tydligaste namngivna chase."},
+   {"card":"Roaring Moon ex #262 / Hyper Rare","tier":"MONSTER","odds":"Finns i Paradox Rift; officiella packodds ej publicerade","why":"Guldversionen av huvudkaraktären."}
+ ],
  "why_exciting":[
    "18 boosterpaket ger många separata chanser att träffa setets illustration- och rarity-chaser.",
    "Förseglad display passar bättre för ren packöppning än collection-produkter där en del av priset ligger i promos/tillbehör."
  ],
  "tiers":{
    "everyday":{"label":"Vanligt men intressant","score":78,"items":["18 boosterpaket"]},
-   "good":{"label":"Bra träff","score":70,"items":["Illustration-/rarity-hit ur setet"]},
-   "big":{"label":"Riktigt bra","score":64,"items":["Premium chase ur Paradox Rift"]},
-   "jackpot":{"label":"Monsterhit","score":55,"items":["Setets mest eftertraktade toppkort"]}
+   "good":{"label":"Bra träff","score":72,"items":["Groudon #199","Garchomp ex #245"]},
+   "big":{"label":"Riktigt bra","score":78,"items":["Iron Valiant ex #249","Roaring Moon ex #262"]},
+   "jackpot":{"label":"Monsterhit","score":84,"items":["Roaring Moon ex #251 SIR"]}
  },
- "caveat":"Full setchecklista, marknadsvärden och verifierade pull rates återstår innan BoxFinder kan namnge och sannolikhetsgradera toppkorten."
+ "caveat":"Kortens närvaro verifieras i den officiella checklistan. Pokémon publicerar inte kortspecifika packodds, så BoxFinder visar inga uppskattade odds som fakta."
+},
+"cc-pokemon-temporal-forces-18": {
+ "source_name":"Official Pokémon Temporal Forces card database",
+ "source_url":"https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/series/sv05/",
+ "key_names":["Raging Bolt ex #208","Iron Crown ex #206","Walking Wake ex #205","Iron Leaves ex #203","Morty's Conviction #211"],
+ "headline_chases":[
+   {"card":"Iron Leaves ex #203 / Special Illustration Rare","tier":"MYCKET BRA","odds":"Finns i Temporal Forces; officiella packodds ej publicerade","why":"Namngiven SIR i Future-spåret."},
+   {"card":"Walking Wake ex #205 / Special Illustration Rare","tier":"MYCKET BRA","odds":"Finns i Temporal Forces; officiella packodds ej publicerade","why":"Illustrationschase med legendarisk Paradox-Pokémon."},
+   {"card":"Iron Crown ex #206 / Special Illustration Rare","tier":"MONSTER","odds":"Finns i Temporal Forces; officiella packodds ej publicerade","why":"En av setets främsta Future-chaser."},
+   {"card":"Raging Bolt ex #208 / Special Illustration Rare","tier":"JACKPOT","odds":"Finns i Temporal Forces; officiella packodds ej publicerade","why":"En central samlar- och spelchase i setet."},
+   {"card":"Morty's Conviction #211 / Special Illustration Rare","tier":"MONSTER","odds":"Finns i Temporal Forces; officiella packodds ej publicerade","why":"Namngiven supporter-SIR med Gengar i motivet."}
+ ],
+ "why_exciting":["18 boosterpaket ger många försök på fyra namngivna Paradox-SIR och Morty's Conviction.","Displayformatet lägger hela inköpet på packinnehåll i stället för promos och tillbehör."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":78,"items":["18 boosterpaket"]},"good":{"label":"Bra träff","score":73,"items":["Iron Leaves ex #203","Walking Wake ex #205"]},"big":{"label":"Riktigt bra","score":81,"items":["Iron Crown ex #206","Morty's Conviction #211"]},"jackpot":{"label":"Monsterhit","score":87,"items":["Raging Bolt ex #208 SIR"]}},
+ "caveat":"Checklistan verifierar korten men inte hur ofta de ligger i pack. Inga internetuppskattningar presenteras som officiella Pokémon-odds."
+},
+"cc-pokemon-shrouded-fable-kingambit": {
+ "source_name":"Official Pokémon Shrouded Fable card database",
+ "source_url":"https://www.pokemon.com/us/pokemon-tcg/scarlet-violet-shrouded-fable",
+ "key_names":["Cassiopeia #94","Pecharunt ex #93","Fezandipiti ex #92","Munkidori ex #91","Persian #78"],
+ "headline_chases":[
+   {"card":"Persian #78 / Illustration Rare","tier":"BRA","odds":"Ur fyra Shrouded Fable-pack; officiella packodds ej publicerade","why":"Populär namngiven Illustration Rare."},
+   {"card":"Munkidori ex #91 / Special Illustration Rare","tier":"MYCKET BRA","odds":"Ur fyra Shrouded Fable-pack; officiella packodds ej publicerade","why":"En av Loyal Three-SIR-korten."},
+   {"card":"Fezandipiti ex #92 / Special Illustration Rare","tier":"MONSTER","odds":"Ur fyra Shrouded Fable-pack; officiella packodds ej publicerade","why":"Eftertraktad SIR och välkänd spelpjäs."},
+   {"card":"Pecharunt ex #93 / Special Illustration Rare","tier":"MONSTER","odds":"Ur fyra Shrouded Fable-pack; officiella packodds ej publicerade","why":"Setets centrala mytiska Pokémon."},
+   {"card":"Cassiopeia #94 / Special Illustration Rare","tier":"JACKPOT","odds":"Ur fyra Shrouded Fable-pack; officiella packodds ej publicerade","why":"En av setets tydligaste toppträffar."}
+ ],
+ "why_exciting":["Tre promo-kort ger säkert innehåll och fyra pack ger chans på namngivna SIR-kort.","Lägre inköpspris än full display, men bara fyra pack gör utfallet mycket variansrikt."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":66,"items":["3 promo-kort","4 boosterpaket"]},"good":{"label":"Bra träff","score":62,"items":["Persian #78","Munkidori ex #91"]},"big":{"label":"Riktigt bra","score":70,"items":["Fezandipiti ex #92","Pecharunt ex #93"]},"jackpot":{"label":"Monsterhit","score":73,"items":["Cassiopeia #94 SIR"]}},
+ "caveat":"Promokorten är garanterade men chase-korten kommer bara från de fyra slumpmässiga boostersen. Officiella packodds saknas."
+},
+"cc-pokemon-go-etb": {
+ "source_name":"Official Pokémon GO card list",
+ "source_url":"https://assets.pokemon.com/assets/cms2/pdf/trading-card-game/checklist/pgo_web_cardlist_en.pdf",
+ "key_names":["Mewtwo V #72","Mewtwo VSTAR #79","Mewtwo VSTAR #86","Radiant Charizard #11","Dragonite VSTAR #81"],
+ "headline_chases":[
+   {"card":"Radiant Charizard #11","tier":"BRA","odds":"Finns i Pokémon GO; officiella packodds ej publicerade","why":"Charizard och Radiant-rarity ger tydlig samlarchase."},
+   {"card":"Mewtwo V #72 / Ultra Rare","tier":"MYCKET BRA","odds":"Finns i Pokémon GO; officiella packodds ej publicerade","why":"Alternativ Mewtwo-bild i setets numrerade slutdel."},
+   {"card":"Dragonite VSTAR #81 / Rainbow Rare","tier":"MONSTER","odds":"Finns i Pokémon GO; officiella packodds ej publicerade","why":"Numrerad toppversion av Dragonite VSTAR."},
+   {"card":"Mewtwo VSTAR #79 / Rainbow Rare","tier":"MONSTER","odds":"Finns i Pokémon GO; officiella packodds ej publicerade","why":"Rainbow-version av setets huvudchase."},
+   {"card":"Mewtwo VSTAR #86 / Gold Rare","tier":"JACKPOT","odds":"Finns i Pokémon GO; officiella packodds ej publicerade","why":"Guldversionen av Mewtwo VSTAR."}
+ ],
+ "why_exciting":["Mewtwo, Dragonite och Radiant Charizard ger flera igenkännbara säljspår.","ETB:n är öppningsbar men priset måste vägas mot att en del av kostnaden ligger i tillbehör."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":70,"items":["Pokémon GO-pack","ETB-tillbehör"]},"good":{"label":"Bra träff","score":68,"items":["Radiant Charizard #11","Mewtwo V #72"]},"big":{"label":"Riktigt bra","score":75,"items":["Dragonite VSTAR #81","Mewtwo VSTAR #79"]},"jackpot":{"label":"Monsterhit","score":79,"items":["Mewtwo VSTAR #86 Gold"]}},
+ "caveat":"Boxens packantal behöver verifieras på den aktuella butikssidan. Pokémon publicerar inte kortspecifika pull rates."
+},
+"cc-pokemon-white-flare-jp-display": {
+ "source_name":"Pokémon Card Game White Flare set release and checklist",
+ "source_url":"https://asia.pokemon-card.com/card-search/list/?expansionCodes=SV11W",
+ "key_names":["Reshiram ex #174","Reshiram ex #168","Hilda #173","Hydreigon ex #171","Keldeo ex #169"],
+ "headline_chases":[
+   {"card":"Keldeo ex #169 / Special Art Rare","tier":"BRA","odds":"Ur japanska White Flare-pack; officiella packodds ej publicerade","why":"Namngiven SAR i setets secret-del."},
+   {"card":"Hydreigon ex #171 / Special Art Rare","tier":"MYCKET BRA","odds":"Ur japanska White Flare-pack; officiella packodds ej publicerade","why":"Populär Pokémon i premiumillustration."},
+   {"card":"Hilda #173 / Special Art Rare","tier":"MONSTER","odds":"Ur japanska White Flare-pack; officiella packodds ej publicerade","why":"Setets främsta trainer-chase."},
+   {"card":"Reshiram ex #168 / Special Art Rare","tier":"MONSTER","odds":"Ur japanska White Flare-pack; officiella packodds ej publicerade","why":"Premiumillustration av setets huvud-Pokémon."},
+   {"card":"Reshiram ex #174 / Black White Rare","tier":"JACKPOT","odds":"BWR i White Flare; officiella packodds ej publicerade","why":"Setets namngivna toppkort och högsta Reshiram-spår."}
+ ],
+ "why_exciting":["20 pack och 140 kort ger en bredare öppning än collection-boxar.","Reshiram ex finns både som SAR och exklusiv Black White Rare."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":80,"items":["20 pack","140 kort"]},"good":{"label":"Bra träff","score":72,"items":["Keldeo ex #169","Hydreigon ex #171"]},"big":{"label":"Riktigt bra","score":84,"items":["Hilda #173","Reshiram ex #168"]},"jackpot":{"label":"Monsterhit","score":94,"items":["Reshiram ex #174 BWR"]}},
+ "caveat":"Japanska boxkonfigurationer och rarity-fördelning ska inte översättas till engelska produktodds. Inga kortspecifika officiella pull rates är publicerade."
+},
+"cc-one-piece-op13-jp-display": {
+ "source_name":"Bandai official OP-13 Carrying on His Will product page",
+ "source_url":"https://en.onepiece-cardgame.com/products/boosters/op13/",
+ "key_names":["Gol.D.Roger OP09-118","Monkey.D.Luffy OP13-118","Portgas.D.Ace OP13-119","Sabo OP13-120","Divine Departure OP13-076"],
+ "headline_chases":[
+   {"card":"Divine Departure OP13-076 / Gold Foil Event Alt-Art","tier":"MYCKET BRA","odds":"Officiella packodds ej publicerade","why":"Bandai lyfter kortet som särskilt guldfolierat eventkort."},
+   {"card":"Monkey.D.Luffy OP13-118 / WANTED Edition","tier":"MONSTER","odds":"Officiella packodds ej publicerade","why":"En av fyra officiellt visade WANTED-varianter."},
+   {"card":"Portgas.D.Ace OP13-119 / WANTED Edition","tier":"MONSTER","odds":"Officiella packodds ej publicerade","why":"Namngiven WANTED-chase med stark karaktärsefterfrågan."},
+   {"card":"Sabo OP13-120 / WANTED Edition","tier":"MONSTER","odds":"Officiella packodds ej publicerade","why":"Namngiven WANTED-chase i brödratrion."},
+   {"card":"Gol.D.Roger OP09-118 / WANTED Edition","tier":"JACKPOT","odds":"Officiella packodds ej publicerade","why":"Roger är den mest ikoniska av de fyra visade WANTED-korten."}
+ ],
+ "why_exciting":["24 pack ger många öppningschanser och checklistan har fyra exakt namngivna WANTED-kort.","Gold Foil Divine Departure är ytterligare en officiellt verifierad specialfinish."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":80,"items":["24 pack","144 japanska kort"]},"good":{"label":"Bra träff","score":74,"items":["Alternate Art eller Secret Rare"]},"big":{"label":"Riktigt bra","score":88,"items":["Luffy/Ace/Sabo WANTED"]},"jackpot":{"label":"Monsterhit","score":96,"items":["Gol.D.Roger WANTED Edition"]}},
+ "caveat":"Bandai verifierar checklistans specialkort men publicerar inte numeriska packodds. Japanska och engelska boxar har olika konfiguration och jämförs inte som samma SKU."
+},
+"cc-2025-topps-marvel-studios-chrome-hobby": {
+ "source_name":"Topps official 2025 Marvel Studios Chrome checklist and hobby odds",
+ "source_url":"https://www.topps.com/pages/topps-marvel-studios-chrome",
+ "key_names":["Hugh Jackman Wolverine Autograph","Ryan Reynolds Deadpool Autograph","Chris Evans Captain America Autograph","Pedro Pascal Mister Fantastic Autograph","Elizabeth Olsen Scarlet Witch Autograph"],
+ "headline_chases":[
+   {"card":"Single Autograph – exempelvis Hugh Jackman, Ryan Reynolds eller Chris Evans","tier":"MYCKET BRA","odds":"1:25 hobby-pack för valfri Single Auto; en viss skådespelare är mycket mer sällsynt","why":"Äkta skådespelarsignaturer, inte facsimile."},
+   {"card":"Pedro Pascal / Vanessa Kirby Dual Autograph DA-PK","tier":"MONSTER","odds":"Dual Autos 1:3 305 hobby-pack över hela dual-checklistan","why":"Två Fantastic Four-huvudroller på samma kort."},
+   {"card":"Hugh Jackman / Ryan Reynolds Dual Autograph DA-JR","tier":"JACKPOT","odds":"Dual Autos 1:3 305 hobby-pack över hela dual-checklistan","why":"Wolverine och Deadpool med äkta signaturer."},
+   {"card":"Fantastic Four: First Steps Auto Version","tier":"MONSTER","odds":"1:1 520 hobby-pack över insert-autografserien","why":"Dedikerat filmspår med Pedro Pascal, Vanessa Kirby och övriga huvudroller."},
+   {"card":"Standard Sketch Card Silver Foil","tier":"MONSTER","odds":"1:143 hobby-pack","why":"Handritad sketch; motiv och artist varierar."},
+   {"card":"Trio Autograph – exempelvis Fantastic Four TA-PIK","tier":"JACKPOT","odds":"Trio Autos 1:9 500 hobby-pack över hela trio-checklistan","why":"Tre äkta signaturer på samma kort."}
+ ],
+ "why_exciting":["Officiella Topps-odds visar Single Autos i 1:25 hobby-pack och sketchkort i 1:143.","Checklistan innehåller äkta signaturer från bland andra Hugh Jackman, Ryan Reynolds, Chris Evans, Elizabeth Olsen och Pedro Pascal."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":84,"items":["10 pack","Rainbow Refractor 1:2 pack","Prism Refractor 1:6 pack"]},"good":{"label":"Bra träff","score":79,"items":["Single Auto 1:25 pack","numrerad refractor"]},"big":{"label":"Riktigt bra","score":91,"items":["Sketch 1:143 pack","Fantastic Four Auto 1:1 520"]},"jackpot":{"label":"Monsterhit","score":98,"items":["Jackman/Reynolds Dual Auto","Trio Auto","Superfractor 1/1"]}},
+ "caveat":"Oddsen gäller kortfamiljen per hobby-pack, inte en särskild skådespelare. Tio pack innebär inte en garanterad autograf."
+},
+"cc-2026-topps-disney-chrome-value": {
+ "source_name":"Topps official 2026 Chrome Disney checklist and Value Box odds",
+ "source_url":"https://www.topps.com/pages/topps-chrome-disney",
+ "key_names":["Mickey Mouse","Miley Cyrus Hannah Montana Autograph","Owen Wilson Lightning McQueen Autograph","Jodi Benson Ariel Autograph","Ming-Na Wen Mulan Autograph"],
+ "headline_chases":[
+   {"card":"Mickey Mouse, Donald Duck eller annan Base Refractor","tier":"BRA","odds":"1:4 value-pack över hela baschecklistan","why":"Officiellt formatodds och igenkännbara Disney-karaktärer."},
+   {"card":"Mickey Mouse Red and Black Refractor /28","tier":"MONSTER","odds":"1:1 761 value-pack över hela base-parallellen","why":"Lågnumrerad Mickey-specifik parallelfamilj."},
+   {"card":"Miley Cyrus / Hannah Montana Authentic Autograph DCA-MC","tier":"JACKPOT","odds":"Authentic Autographs 1:2 261 value-pack över hela autografchecklistan","why":"Äkta signerad Disney Channel-chase."},
+   {"card":"Owen Wilson / Lightning McQueen Authentic Autograph AA-OW","tier":"JACKPOT","odds":"Authentic Autographs 1:2 261 value-pack över hela autografchecklistan","why":"Äkta röstskådespelarsignatur från Cars."},
+   {"card":"Jodi Benson / Ariel eller Ming-Na Wen / Mulan Princess Autograph","tier":"JACKPOT","odds":"Authentic Autographs 1:2 261 value-pack över hela autografchecklistan","why":"Äkta Disney Princess-röstsignaturer."},
+   {"card":"Sketch Card Gold Base","tier":"MONSTER","odds":"1:2 564 value-pack","why":"Handritad originalsketch; motiv och artist varierar."},
+   {"card":"Mickey/Minnie/Goofy/Pluto Quad Facsimile Autograph QD-1","tier":"MYCKET BRA","odds":"Quad Facsimile Autographs 1:115 840 value-pack","why":"Extremt sällsynt men tryckta signaturer – inte handskrivna autografer."}
+ ],
+ "why_exciting":["Två exklusiva Raywave-paralleller per box ger garanterat boxspecifikt innehåll.","Topps publicerar separata Value Box-odds för äkta autografer, sketchkort och numrerade paralleller."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":82,"items":["2 Raywave per box","Base Refractor 1:4 pack"]},"good":{"label":"Bra träff","score":70,"items":["numrerad Disney-parallel","Mickey/Pooh/Stitch image variation"]},"big":{"label":"Riktigt bra","score":78,"items":["Authentic Auto 1:2 261 pack","Sketch 1:2 564 pack"]},"jackpot":{"label":"Monsterhit","score":93,"items":["Mickey /28","stjärnautograf","Superfractor 1/1"]}},
+ "caveat":"Oddsen är per Value Box-pack och gäller hela kortfamiljen, inte ett visst namn. Facsimile Autographs har tryckta signaturer och ska inte förväxlas med Authentic Autographs."
 }
 }
 
@@ -1008,6 +1144,39 @@ CHASE_CARD_DB = [
     dict(slug="cc-2025-26-clear-cut-hobby", key="hockey:2025-26:clear-cut:alex-ovechkin:base-auto", player="Alex Ovechkin", card="Clear Cut Base Auto", number=None, rookie=False, tier="MONSTER", odds="Checklist segment odds vary", source="https://www.beckett.com/news/2025-26-upper-deck-clear-cut-hockey-cards/"),
     dict(slug="cc-2025-26-clear-cut-hobby", key="hockey:2025-26:clear-cut:mario-lemieux:spx-starscape-auto", player="Mario Lemieux", card="SPx Starscape Auto", number=None, rookie=False, tier="JACKPOT", odds="Starscape 1:60 packs; player SSP", source="https://www.beckett.com/news/2025-26-upper-deck-clear-cut-hockey-cards/"),
     dict(slug="cc-2025-26-clear-cut-hobby", key="hockey:2025-26:clear-cut:bobby-orr:spx-starscape-auto", player="Bobby Orr", card="SPx Starscape Auto", number=None, rookie=False, tier="JACKPOT", odds="Starscape 1:60 packs; player SSP", source="https://www.beckett.com/news/2025-26-upper-deck-clear-cut-hockey-cards/"),
+
+    # Pokémon: exact checklist cards; the manufacturer does not publish pack odds.
+    dict(slug="cc-pokemon-paradox-rift-18", key="pokemon:paradox-rift:251:roaring-moon-ex:sir", player="Roaring Moon ex", card="Special Illustration Rare", number="251", rookie=False, tier="JACKPOT", odds="Official pack odds not published", source="https://assets.pokemon.com/assets/cms2/pdf/trading-card-game/checklist/par_web_cardlist_en.pdf"),
+    dict(slug="cc-pokemon-paradox-rift-18", key="pokemon:paradox-rift:249:iron-valiant-ex:sir", player="Iron Valiant ex", card="Special Illustration Rare", number="249", rookie=False, tier="MONSTER", odds="Official pack odds not published", source="https://assets.pokemon.com/assets/cms2/pdf/trading-card-game/checklist/par_web_cardlist_en.pdf"),
+    dict(slug="cc-pokemon-paradox-rift-18", key="pokemon:paradox-rift:199:groudon:ir", player="Groudon", card="Illustration Rare", number="199", rookie=False, tier="BRA", odds="Official pack odds not published", source="https://assets.pokemon.com/assets/cms2/pdf/trading-card-game/checklist/par_web_cardlist_en.pdf"),
+    dict(slug="cc-pokemon-temporal-forces-18", key="pokemon:temporal-forces:208:raging-bolt-ex:sir", player="Raging Bolt ex", card="Special Illustration Rare", number="208", rookie=False, tier="JACKPOT", odds="Official pack odds not published", source="https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/series/sv05/"),
+    dict(slug="cc-pokemon-temporal-forces-18", key="pokemon:temporal-forces:206:iron-crown-ex:sir", player="Iron Crown ex", card="Special Illustration Rare", number="206", rookie=False, tier="MONSTER", odds="Official pack odds not published", source="https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/series/sv05/"),
+    dict(slug="cc-pokemon-temporal-forces-18", key="pokemon:temporal-forces:211:mortys-conviction:sir", player="Morty's Conviction", card="Special Illustration Rare", number="211", rookie=False, tier="MONSTER", odds="Official pack odds not published", source="https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/series/sv05/"),
+    dict(slug="cc-pokemon-shrouded-fable-kingambit", key="pokemon:shrouded-fable:94:cassiopeia:sir", player="Cassiopeia", card="Special Illustration Rare", number="94", rookie=False, tier="JACKPOT", odds="Official pack odds not published", source="https://www.pokemon.com/us/pokemon-tcg/scarlet-violet-shrouded-fable"),
+    dict(slug="cc-pokemon-shrouded-fable-kingambit", key="pokemon:shrouded-fable:92:fezandipiti-ex:sir", player="Fezandipiti ex", card="Special Illustration Rare", number="92", rookie=False, tier="MONSTER", odds="Official pack odds not published", source="https://www.pokemon.com/us/pokemon-tcg/scarlet-violet-shrouded-fable"),
+    dict(slug="cc-pokemon-shrouded-fable-kingambit", key="pokemon:shrouded-fable:78:persian:ir", player="Persian", card="Illustration Rare", number="78", rookie=False, tier="BRA", odds="Official pack odds not published", source="https://www.pokemon.com/us/pokemon-tcg/scarlet-violet-shrouded-fable"),
+    dict(slug="cc-pokemon-go-etb", key="pokemon:pokemon-go:86:mewtwo-vstar:gold", player="Mewtwo VSTAR", card="Gold Rare", number="86", rookie=False, tier="JACKPOT", odds="Official pack odds not published", source="https://assets.pokemon.com/assets/cms2/pdf/trading-card-game/checklist/pgo_web_cardlist_en.pdf"),
+    dict(slug="cc-pokemon-go-etb", key="pokemon:pokemon-go:11:radiant-charizard", player="Radiant Charizard", card="Radiant Rare", number="11", rookie=False, tier="BRA", odds="Official pack odds not published", source="https://assets.pokemon.com/assets/cms2/pdf/trading-card-game/checklist/pgo_web_cardlist_en.pdf"),
+    dict(slug="cc-pokemon-white-flare-jp-display", key="pokemon:white-flare:174:reshiram-ex:bwr", player="Reshiram ex", card="Black White Rare", number="174/086", rookie=False, tier="JACKPOT", odds="Official pack odds not published", source="https://asia.pokemon-card.com/card-search/list/?expansionCodes=SV11W"),
+    dict(slug="cc-pokemon-white-flare-jp-display", key="pokemon:white-flare:173:hilda:sar", player="Hilda", card="Special Art Rare", number="173/086", rookie=False, tier="MONSTER", odds="Official pack odds not published", source="https://asia.pokemon-card.com/card-search/list/?expansionCodes=SV11W"),
+
+    # One Piece OP-13: Bandai verifies the special cards but publishes no numeric pull rates.
+    dict(slug="cc-one-piece-op13-jp-display", key="one-piece:op13:op09-118:gol-d-roger:wanted", player="Gol.D.Roger", card="WANTED Edition", number="OP09-118", rookie=False, tier="JACKPOT", odds="Official pack odds not published", source="https://en.onepiece-cardgame.com/products/boosters/op13/"),
+    dict(slug="cc-one-piece-op13-jp-display", key="one-piece:op13:118:monkey-d-luffy:wanted", player="Monkey.D.Luffy", card="WANTED Edition", number="OP13-118", rookie=False, tier="MONSTER", odds="Official pack odds not published", source="https://en.onepiece-cardgame.com/products/boosters/op13/"),
+    dict(slug="cc-one-piece-op13-jp-display", key="one-piece:op13:119:portgas-d-ace:wanted", player="Portgas.D.Ace", card="WANTED Edition", number="OP13-119", rookie=False, tier="MONSTER", odds="Official pack odds not published", source="https://en.onepiece-cardgame.com/products/boosters/op13/"),
+    dict(slug="cc-one-piece-op13-jp-display", key="one-piece:op13:120:sabo:wanted", player="Sabo", card="WANTED Edition", number="OP13-120", rookie=False, tier="MONSTER", odds="Official pack odds not published", source="https://en.onepiece-cardgame.com/products/boosters/op13/"),
+
+    # Marvel Studios Chrome: all odds are the official Hobby column, never Value/Breaker odds.
+    dict(slug="cc-2025-topps-marvel-studios-chrome-hobby", key="marvel:2025:studios-chrome:hugh-jackman:single-auto", player="Hugh Jackman", card="Wolverine Single Autograph", number="AA-HJ", rookie=False, tier="MONSTER", odds="Single Autos 1:25 hobby packs across checklist", source="https://www.topps.com/pages/topps-marvel-studios-chrome"),
+    dict(slug="cc-2025-topps-marvel-studios-chrome-hobby", key="marvel:2025:studios-chrome:ryan-reynolds:single-auto", player="Ryan Reynolds", card="Deadpool Single Autograph", number="AA-RR", rookie=False, tier="MONSTER", odds="Single Autos 1:25 hobby packs across checklist", source="https://www.topps.com/pages/topps-marvel-studios-chrome"),
+    dict(slug="cc-2025-topps-marvel-studios-chrome-hobby", key="marvel:2025:studios-chrome:jackman-reynolds:dual-auto", player="Hugh Jackman / Ryan Reynolds", card="Wolverine / Deadpool Dual Autograph", number="DA-JR", rookie=False, tier="JACKPOT", odds="Dual Autos 1:3,305 hobby packs across checklist", source="https://www.topps.com/pages/topps-marvel-studios-chrome"),
+    dict(slug="cc-2025-topps-marvel-studios-chrome-hobby", key="marvel:2025:studios-chrome:pedro-pascal:single-auto", player="Pedro Pascal", card="Mister Fantastic Single Autograph", number="AA-PP", rookie=False, tier="MONSTER", odds="Single Autos 1:25 hobby packs across checklist", source="https://www.topps.com/pages/topps-marvel-studios-chrome"),
+
+    # Disney Chrome Value Box: official Value Box odds and authentic/facsimile separation.
+    dict(slug="cc-2026-topps-disney-chrome-value", key="disney:2026:chrome:miley-cyrus:hannah-montana-auto", player="Miley Cyrus", card="Hannah Montana Authentic Autograph", number="DCA-MC", rookie=False, tier="JACKPOT", odds="Authentic Autographs 1:2,261 value packs across checklist", source="https://www.topps.com/pages/topps-chrome-disney"),
+    dict(slug="cc-2026-topps-disney-chrome-value", key="disney:2026:chrome:owen-wilson:lightning-mcqueen-auto", player="Owen Wilson", card="Lightning McQueen Authentic Autograph", number="AA-OW", rookie=False, tier="JACKPOT", odds="Authentic Autographs 1:2,261 value packs across checklist", source="https://www.topps.com/pages/topps-chrome-disney"),
+    dict(slug="cc-2026-topps-disney-chrome-value", key="disney:2026:chrome:jodi-benson:ariel-auto", player="Jodi Benson", card="Ariel Princess Autograph", number="PA-JB", rookie=False, tier="JACKPOT", odds="Authentic Autographs 1:2,261 value packs across checklist", source="https://www.topps.com/pages/topps-chrome-disney"),
+    dict(slug="cc-2026-topps-disney-chrome-value", key="disney:2026:chrome:mickey-minnie-goofy-pluto:quad-facsimile", player="Mickey Mouse / Minnie Mouse / Goofy / Pluto", card="Quad Facsimile Autograph (printed)", number="QD-1", rookie=False, tier="MYCKET BRA", odds="Quad Facsimile Autographs 1:115,840 value packs", source="https://www.topps.com/pages/topps-chrome-disney"),
 ]
 
 def seed_chase_card_db():

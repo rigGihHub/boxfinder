@@ -32,7 +32,7 @@ export default async function WatchlistPage() {
     <header className="productNav">
       <a className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a>
       <a className="backLink" href="/">← TILL STARTSIDAN</a>
-      <span className="version">v0.45.1</span>
+      <span className="version">v0.46.0</span>
     </header>
 
     <section className="watchlistHero">
