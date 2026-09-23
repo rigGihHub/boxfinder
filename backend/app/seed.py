@@ -605,6 +605,115 @@ CHASE_PROFILES = {
  "tiers":{"everyday":{"label":"Vanligt men intressant","score":86,"items":["Komplett base set","Red Parallel 1/box","Blueshirt Best 1/box"]},"good":{"label":"Bra träff","score":76,"items":["Blueshirt Best på Gretzky, Messier eller Lundqvist"]},"big":{"label":"Riktigt bra","score":88,"items":["Autograph Parallel 1:10 boxar"]},"jackpot":{"label":"Monsterhit","score":82,"items":["Messier eller Lundqvist SSP-autograf"]}},
  "caveat":"1:10 är oddset för valfri Autograph Parallel, inte för en särskild spelare. Messier och Lundqvist är SSP, så deras individuella odds är lägre."
 },
+"cc-2026-topps-mls-chrome-value": {
+ "source_name":"Topps 2026 Chrome MLS official checklist and odds",
+ "source_url":"https://www.topps.com/pages/topps-mls-chrome",
+ "key_names":["Lionel Messi","Son Heung-Min","Robert Lewandowski","Antoine Griezmann","Zavier Gozo","Mateo Silvetti RC","Julian Hall"],
+ "headline_chases":[
+   {"card":"Ray Wave Base Parallel","tier":"BRA","odds":"1:2 value-pack","why":"Value Box-exklusivt och återkommande parallelspår."},
+   {"card":"Wonderkids – Zavier Gozo och namngivna unga spelare","tier":"BRA","odds":"Wonderkids 1:6 value-pack; exakt spelare ur checklistan","why":"Konkret prospectspår med retailodds."},
+   {"card":"Lionel Messi Pearlers P-10","tier":"MYCKET BRA","odds":"Pearlers 1:2 622 value-pack; exakt Messi-kort är mer sällsynt","why":"Namngiven Messi-case-hit i checklistan."},
+   {"card":"Chrome Autograph – Messi, Son, Lewandowski eller rookie","tier":"MONSTER","odds":"Chrome Autographs Base 1:342 value-pack; paralleller har separata odds","why":"Verifierad möjlighet till autograf i Value Box-formatet."},
+   {"card":"Messi/Beckham Chrome Dual Autograph","tier":"JACKPOT","odds":"Chrome Dual Autographs 1:21 630 value-pack som kortfamilj","why":"Två globala ikoner på samma signerade kort."},
+   {"card":"Chrome Anime – Messi eller Son","tier":"JACKPOT","odds":"Chrome Anime 1:78 655 value-pack","why":"Extremt sällsynt namngiven case-hit."}
+ ],
+ "why_exciting":["Ray Wave 1:2 och Wonderkids 1:6 ger återkommande retailinnehåll.","Autografer finns faktiskt i Value Box-formatet, men basautografen ligger på 1:342 pack och är därför inte nära en boxgaranti."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":72,"items":["Ray Wave 1:2","Refractor 1:7"]},"good":{"label":"Bra träff","score":78,"items":["Wonderkids 1:6","Patriotic Passion 1:18"]},"big":{"label":"Riktigt bra","score":84,"items":["Chrome Autograph Base 1:342","Pearlers 1:2 622"]},"jackpot":{"label":"Monsterhit","score":88,"items":["Chrome Dual Auto 1:21 630","Chrome Anime 1:78 655"]}},
+ "caveat":"Oddsen gäller kortfamiljer per Value-pack, inte en viss spelare. Hobbyexklusiva Summer Clash- och National Pairings-autografer visas inte som möjliga Value Box-träffar."
+},
+"cc-2026-topps-chrome-premier-league-hobby": {
+ "source_name":"Topps 2026 Chrome Premier League official checklist and odds",
+ "source_url":"https://www.topps.com/pages/topps-chrome-premier-league",
+ "key_names":["Estêvão Willian RC #68","Rio Ngumoha RC #112","Max Dowman RC #201","Divine Mukasa RC #128","Shea Lacey RC #138","Chris Rigg RC #163"],
+ "headline_chases":[
+   {"card":"Estêvão Willian Base Rookie #68","tier":"BRA","odds":"Ingår i 200-korts basesetet; individuellt kortodds ej publicerat","why":"En av checklistans centrala rookies."},
+   {"card":"Max Dowman Hobby-Exclusive Base Rookie #201","tier":"MONSTER","odds":"1:16 257 hobby-pack","why":"Hobbyexklusivt rookie-kort med publicerat odds."},
+   {"card":"Estêvão Willian Helix HX-9","tier":"MONSTER","odds":"Helix 1:1 931 hobby-pack; exakt spelare är mer sällsynt","why":"Namngiven rookie i en premium-SSP-serie."},
+   {"card":"Chrome Autograph – Estêvão, Rio Ngumoha eller Max Dowman","tier":"MYCKET BRA","odds":"1 autograf garanterad per hobbybox; Base Chrome Autos 1:123 hobby-pack","why":"Alla tre rookies finns i autografchecklistan."},
+   {"card":"Saka/Henry Chrome Dual Autograph","tier":"JACKPOT","odds":"Chrome Dual Autographs 1:6 304 hobby-pack som kortfamilj","why":"Signerad stjärna/legend-kombination."},
+   {"card":"Chrome Anime – Saka, Haaland, Estêvão eller Rio","tier":"JACKPOT","odds":"Chrome Anime 1:1 298 hobby-pack","why":"En av produktens viktigaste case-hit-familjer."}
+ ],
+ "why_exciting":["Varje hobbybox garanterar en autograf och innehåller tio vanliga inserts.","Dowman, Estêvão och Ngumoha finns både i rookie- och autografspåren."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":88,"items":["1 autograf per box","10 vanliga inserts per box","6 refractors per box"]},"good":{"label":"Bra träff","score":89,"items":["Estêvão eller Ngumoha rookie","Chrome Autograph"]},"big":{"label":"Riktigt bra","score":94,"items":["Max Dowman #201 1:16 257","Helix 1:1 931"]},"jackpot":{"label":"Monsterhit","score":97,"items":["Chrome Anime 1:1 298","Dual/Triple Autograph","Superfractor 1/1"]}},
+ "caveat":"Boxgarantin är en autograf från produktens samlade autografprogram, inte en garanterad topprookie. Angivna insertodds gäller serien som helhet."
+},
+"cc-2026-topps-finest-premier-league-wave2": {
+ "source_name":"Topps Finest Premier League 2026 official checklist and odds",
+ "source_url":"https://www.topps.com/pages/topps-finest-premier-league",
+ "key_names":["Estêvão Willian RC","Max Dowman RC","Rio Ngumoha RC","Harry Gray RC","Shea Lacey RC","Chris Rigg RC"],
+ "headline_chases":[
+   {"card":"Estêvão Willian Finest Autograph FA-EW","tier":"MYCKET BRA","odds":"2 Chrome Autographs per box; exakt spelare ur autografchecklistan","why":"Namngiven rookieautograf."},
+   {"card":"Max Dowman Arrivals Autograph AA-MD","tier":"MONSTER","odds":"2 Chrome Autographs per box över hela autografprogrammet","why":"Särskilt rookieautografspår."},
+   {"card":"Max Dowman Polka PK-15","tier":"MONSTER","odds":"Polka 1:437 pack; exakt spelare är mer sällsynt","why":"Sällsynt namngiven rookieinsert."},
+   {"card":"Estêvão Willian Aura AU-15","tier":"MONSTER","odds":"Aura 1:437 pack; exakt spelare är mer sällsynt","why":"Premiuminsert på en central rookie."},
+   {"card":"Finest Autograph Superfractor 1/1","tier":"JACKPOT","odds":"Finest Autographs Superfractor 1:2 508 pack som kortfamilj","why":"Unik signerad toppparallel."}
+ ],
+ "why_exciting":["Två Chrome-autografer per box ger hög signerad hit density.","300-kortsbasen har Common, Uncommon och Rare tiers, så även basrookies har olika knapphet."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":94,"items":["2 autografer per box","60 kort per box"]},"good":{"label":"Bra träff","score":91,"items":["Finest Autograph på stark spelare eller rookie"]},"big":{"label":"Riktigt bra","score":95,"items":["Polka/Aura 1:437","lågnumrerad autograf"]},"jackpot":{"label":"Monsterhit","score":98,"items":["Finest Autograph Superfractor 1/1","Aura eller Polka Superfractor 1/1"]}},
+ "caveat":"Två autografer är garanterade men spelarna är inte det. Ett odds som 1:437 gäller hela insertfamiljen, inte Dowman eller Estêvão individuellt."
+},
+"cc-2025-26-topps-chrome-arsenal-hobby": {
+ "source_name":"Topps Chrome Arsenal 2025/26 official product and checklist",
+ "source_url":"https://uk.topps.com/pages/topps-chrome-arsenal",
+ "key_names":["Max Dowman RC #49/#99","Josh Nichols RC #6/#56","Andre Harriman-Annous RC #24/#74","Olivia Smith RC #33/#83","Taylor Hinds RC #27/#77","Bukayo Saka","Thierry Henry"],
+ "headline_chases":[
+   {"card":"Max Dowman Base Rookie #49 och image variation #99","tier":"BRA","odds":"Ingår i 100-kortsbasen; individuellt kortodds ej publicerat","why":"Produktens tydligaste unga herrrookie."},
+   {"card":"Max Dowman Base Card Autograph BC-MD","tier":"MYCKET BRA","odds":"2 autografer per box över hela autografprogrammet","why":"Namngiven rookieautograf."},
+   {"card":"Olivia Smith Arsenal All Stars Rookie Autograph AA-OS","tier":"MYCKET BRA","odds":"Ingår i autografprogrammet; individuellt odds ej publicerat","why":"Namngiven rookie från damlaget."},
+   {"card":"Thierry Henry Golden Title GT-7 /49","tier":"MONSTER","odds":"Golden Title /49; insertfamiljen förekommer i snitt en gång per två case","why":"Lågnumrerad Invincibles-chase."},
+   {"card":"Thierry Henry 228 & Out Autograph BB-TH","tier":"JACKPOT","odds":"Ingen individuell frekvens publicerad","why":"Specialautograf för klubbens rekordmålskytt."},
+   {"card":"Bukayo Saka The Arsenal Away Autograph 1/1","tier":"JACKPOT","odds":"1/1","why":"Unik signerad förstakortsträff."}
+ ],
+ "why_exciting":["Varje box innehåller två autografer och fem numrerade paralleller.","Checklistan täcker herrar, damer, unga spelare och Arsenal-legender."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":94,"items":["2 autografer per box","5 numrerade paralleller per box"]},"good":{"label":"Bra träff","score":91,"items":["Dowman eller Olivia Smith rookieauto"]},"big":{"label":"Riktigt bra","score":95,"items":["Golden Title /49","stjärn-/legendautograf"]},"jackpot":{"label":"Monsterhit","score":98,"items":["The Arsenal Away Auto 1/1","Thierry Henry 228 & Out Auto"]}},
+ "caveat":"Två autografer per box gäller hela checklistan. The Arsenal Away är ett 1/1-spår men en specifik spelare är extremt mycket svårare än boxgarantin."
+},
+"cc-2026-topps-argentina-team-set": {
+ "source_name":"Topps Argentina Team Set 2026 official product and checklist",
+ "source_url":"https://es.topps.com/pages/argentina-team-set",
+ "key_names":["Franco Mastantuono #8","Nico Paz #9","Lionel Messi #16","Máximo Perrone National Debut #12","Joaquín Panichelli National Debut #20"],
+ "headline_chases":[
+   {"card":"Franco Mastantuono Base #8","tier":"BRA","odds":"Ingår i 50-kortsbasen; individuellt kortodds ej publicerat","why":"En av produktens främsta unga spelare."},
+   {"card":"Rainbow Flick – Messi, Mastantuono eller Nico Paz","tier":"MYCKET BRA","odds":"1 Rainbow Flick per box; exakt spelare ur 25-kortsgruppen","why":"Garanterat insertspår med både stjärnor och unga spelare."},
+   {"card":"Franco Mastantuono Base Autograph BC-FM","tier":"MONSTER","odds":"1 autograf i varannan box över hela autografprogrammet","why":"Namngiven ung spelarautograf."},
+   {"card":"Lionel Messi Bona Fide Baller eller Golden Sun Autograph","tier":"JACKPOT","odds":"Autograf 1:2 boxar som familj; individuellt Messi-odds ej publicerat","why":"Messi finns i två verifierade autografserier."},
+   {"card":"Lionel Messi Vis10nary Autograph VI-LM","tier":"JACKPOT","odds":"Ultra-rare; exakt odds ej publicerat","why":"Exklusiv autografserie med endast Messi."}
+ ],
+ "why_exciting":["Autograf kommer i varannan box och två numrerade paralleller per box.","Messi, Mastantuono och Nico Paz finns i konkreta chase-spår."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":86,"items":["2 numrerade paralleller","1 Rainbow Flick per box","3 Halo parallels"]},"good":{"label":"Bra träff","score":84,"items":["Mastantuono/Nico Paz parallel eller Rainbow Flick"]},"big":{"label":"Riktigt bra","score":93,"items":["Autograf 1:2 boxar","Mastantuono auto"]},"jackpot":{"label":"Monsterhit","score":98,"items":["Messi Golden Sun/Bona Fide Baller Auto","Vis10nary Messi Auto"]}},
+ "caveat":"1:2 avser valfri autograf, inte Messi. Vis10nary beskrivs officiellt som ultra-rare men Topps publicerar inget exakt odds."
+},
+"cc-2025-26-topps-real-madrid-team-set": {
+ "source_name":"Topps Real Madrid Team Set 2025/26 official product and checklist",
+ "source_url":"https://uk.topps.com/pages/topps-real-madrid-2025-26-team-set",
+ "key_names":["Franco Mastantuono RC #14","Víctor Valdepeñas RC #5","Thiago Pitarch RC #9","Kylian Mbappé #17","Vini Jr. #16","Jude Bellingham #10"],
+ "headline_chases":[
+   {"card":"Franco Mastantuono Base Rookie #14","tier":"BRA","odds":"Ingår i 50-kortsbasen; individuellt kortodds ej publicerat","why":"Produktens starkaste namngivna rookie."},
+   {"card":"Rainbow Flick – Mastantuono, Mbappé, Vini eller Bellingham","tier":"MONSTER","odds":"1 Rainbow Flick per case; exakt spelare ur 25-kortsgruppen","why":"Verifierad case hit med toppnamn."},
+   {"card":"Franco Mastantuono Base Autograph BC-MA","tier":"MONSTER","odds":"1 autograf i varannan box över hela autografprogrammet","why":"Namngiven rookieautograf."},
+   {"card":"Jude Bellingham Base Autograph BC-JB","tier":"MONSTER","odds":"Autograf 1:2 boxar som familj; individuellt odds ej publicerat","why":"Signerad världsstjärna."},
+   {"card":"Vini Jr. Bona Fide Baller Autograph BB-VJ","tier":"JACKPOT","odds":"Autograf 1:2 boxar som familj; individuellt odds ej publicerat","why":"En av produktens största signerade träffar."}
+ ],
+ "why_exciting":["Autograf i varannan box, två numrerade paralleller och en Static Foil per box.","Mastantuono, Mbappé, Vini och Bellingham ger både rookie- och stjärnspår."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":84,"items":["2 numrerade paralleller","1 Static Foil","3 Halo parallels"]},"good":{"label":"Bra träff","score":84,"items":["Mastantuono rookieparallel","Mbappé/Vini/Bellingham insert"]},"big":{"label":"Riktigt bra","score":93,"items":["Autograf 1:2 boxar","Rainbow Flick case hit"]},"jackpot":{"label":"Monsterhit","score":97,"items":["Mastantuono rookieauto","Bellingham eller Vini auto"]}},
+ "caveat":"Autografoddset gäller vilken autograf som helst. Rainbow Flick är en case hit som familj och inte en garanterad viss spelare."
+},
+"cc-2025-26-topps-ucc-flagship-hanger": {
+ "source_name":"Topps 2025-26 UEFA Club Competitions official checklist and odds",
+ "source_url":"https://www.topps.com/pages/uefa-club-competitions",
+ "key_names":["Estêvão Willian RC #66","Franco Mastantuono RC #172","Rio Ngumoha RC #191","Lennart Karl RC #187","Jobe Bellingham RC #5","Konstantinos Karetsas RC #150"],
+ "headline_chases":[
+   {"card":"Estêvão Willian Base Rookie #66","tier":"BRA","odds":"Ingår i 200-kortsbasen; individuellt kortodds ej publicerat","why":"Central rookie i UCC Flagship."},
+   {"card":"Trophy Chasers","tier":"BRA","odds":"1:2 hanger-pack","why":"Vanligaste namngivna insertfamiljen i hangerformatet."},
+   {"card":"Base Card Short Print – Estêvão eller Rio Ngumoha","tier":"MYCKET BRA","odds":"Base Short Prints 1:527 hanger-pack; exakt spelare är mer sällsynt","why":"Verifierad SP-lista med namngivna rookies."},
+   {"card":"Estêvão Willian eller Rio Ngumoha Base Autograph","tier":"MONSTER","odds":"Base Autos 1:112 hanger-pack som familj","why":"Båda rookies finns i Base Auto-checklistan."},
+   {"card":"Base Card Super Short Print – Estêvão Willian","tier":"JACKPOT","odds":"Base SSP 1:9 453 hanger-pack; exakt Estêvão-kort är mer sällsynt","why":"Extremt sällsynt rookievariation."},
+   {"card":"Future Stars Autograph – Endrick, Nwaneri eller Rodrigo Mora","tier":"JACKPOT","odds":"Future Stars Autos 1:1 319 hanger-pack som familj","why":"Verifierat ungt autografspår i hangerformatet."}
+ ],
+ "why_exciting":["Hangerformatet har Base Autos 1:112 pack och flera vanliga inserts mellan 1:2 och 1:6.","Checklistan innehåller Estêvão, Mastantuono, Ngumoha, Karl och andra tydligt namngivna rookies."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":74,"items":["Trophy Chasers 1:2","Roots 1:3","Born Champ 1:4"]},"good":{"label":"Bra träff","score":80,"items":["Stark rookie","Holo-parallel","SP 1:527"]},"big":{"label":"Riktigt bra","score":88,"items":["Base Auto 1:112","Future Stars Auto 1:1 319"]},"jackpot":{"label":"Monsterhit","score":91,"items":["Rookie SSP 1:9 453","lågnumrerad autograf eller Foilfractor"]}},
+ "caveat":"Oddsen gäller ett 35-korts hanger-pack. De gäller hela kortfamiljen, så en viss rookie eller autograf är mer sällsynt än familjeoddset."
+},
 "cc-2025-26-panini-prizm-fifa-choice": {
  "source_name":"Coolcard verified product snapshot",
  "source_url":"https://www.coolcard.se/category/boxar-paket-fotboll-endast-hobby",
@@ -680,6 +789,46 @@ CHASE_PROFILES = {
 
 
 CHASE_CARD_DB = [
+
+    # 2026 MLS Chrome Value Box: only value-format odds are used.
+    dict(slug="cc-2026-topps-mls-chrome-value", key="football:2026:mls-chrome:zavier-gozo:wonderkids-25", player="Zavier Gozo", card="Wonderkids", number="WK-25", rookie=False, tier="BRA", odds="Wonderkids 1:6 value packs; exact player is rarer", source="https://www.topps.com/pages/topps-mls-chrome"),
+    dict(slug="cc-2026-topps-mls-chrome-value", key="football:2026:mls-chrome:lionel-messi:pearlers-10", player="Lionel Messi", card="Pearlers", number="P-10", rookie=False, tier="MYCKET BRA", odds="Pearlers 1:2,622 value packs; exact player is rarer", source="https://www.topps.com/pages/topps-mls-chrome"),
+    dict(slug="cc-2026-topps-mls-chrome-value", key="football:2026:mls-chrome:lionel-messi:chrome-auto", player="Lionel Messi", card="Chrome Autograph", number="CA-LM", rookie=False, tier="MONSTER", odds="Chrome Autographs Base 1:342 value packs; exact player is rarer", source="https://www.topps.com/pages/topps-mls-chrome"),
+    dict(slug="cc-2026-topps-mls-chrome-value", key="football:2026:mls-chrome:messi-beckham:dual-auto", player="Lionel Messi / David Beckham", card="Chrome Dual Autograph", number=None, rookie=False, tier="JACKPOT", odds="Chrome Dual Autographs 1:21,630 value packs; exact card is rarer", source="https://www.topps.com/pages/topps-mls-chrome"),
+
+    # 2026 Chrome Premier League Hobby rookies, autos and case hits.
+    dict(slug="cc-2026-topps-chrome-premier-league-hobby", key="football:2026:pl-chrome:68:estevao-willian:base-rookie", player="Estêvão Willian", card="Base Rookie", number="68", rookie=True, tier="BRA", odds="Part of 200-card base set; individual card odds not published", source="https://www.topps.com/pages/topps-chrome-premier-league"),
+    dict(slug="cc-2026-topps-chrome-premier-league-hobby", key="football:2026:pl-chrome:112:rio-ngumoha:base-rookie", player="Rio Ngumoha", card="Base Rookie", number="112", rookie=True, tier="BRA", odds="Part of 200-card base set; individual card odds not published", source="https://www.topps.com/pages/topps-chrome-premier-league"),
+    dict(slug="cc-2026-topps-chrome-premier-league-hobby", key="football:2026:pl-chrome:201:max-dowman:hobby-base-rookie", player="Max Dowman", card="Hobby-Exclusive Base Rookie", number="201", rookie=True, tier="MONSTER", odds="1:16,257 hobby packs", source="https://www.topps.com/pages/topps-chrome-premier-league"),
+    dict(slug="cc-2026-topps-chrome-premier-league-hobby", key="football:2026:pl-chrome:estevao-willian:chrome-auto", player="Estêvão Willian", card="Chrome Autograph", number="CA-EV", rookie=True, tier="MYCKET BRA", odds="1 autograph per hobby box across autograph program; exact player is rarer", source="https://www.topps.com/pages/topps-chrome-premier-league"),
+
+    # 2026 Finest Premier League: two autos per box, but no player guarantee.
+    dict(slug="cc-2026-topps-finest-premier-league-wave2", key="football:2026:pl-finest:estevao-willian:finest-auto", player="Estêvão Willian", card="Finest Autograph", number="FA-EW", rookie=True, tier="MYCKET BRA", odds="2 Chrome Autographs per box across autograph program", source="https://www.topps.com/pages/topps-finest-premier-league"),
+    dict(slug="cc-2026-topps-finest-premier-league-wave2", key="football:2026:pl-finest:max-dowman:arrivals-auto", player="Max Dowman", card="Arrivals Autograph", number="AA-MD", rookie=True, tier="MONSTER", odds="2 Chrome Autographs per box across autograph program", source="https://www.topps.com/pages/topps-finest-premier-league"),
+    dict(slug="cc-2026-topps-finest-premier-league-wave2", key="football:2026:pl-finest:max-dowman:polka-15", player="Max Dowman", card="Polka", number="PK-15", rookie=True, tier="MONSTER", odds="Polka 1:437 packs; exact player is rarer", source="https://www.topps.com/pages/topps-finest-premier-league"),
+
+    # Arsenal Chrome exact rookies, legends and one-of-one autograph chase.
+    dict(slug="cc-2025-26-topps-chrome-arsenal-hobby", key="football:2025-26:arsenal-chrome:49:max-dowman:base-rookie", player="Max Dowman", card="Base Rookie", number="49", rookie=True, tier="BRA", odds="Part of 100-card base set; individual card odds not published", source="https://uk.topps.com/pages/topps-chrome-arsenal"),
+    dict(slug="cc-2025-26-topps-chrome-arsenal-hobby", key="football:2025-26:arsenal-chrome:max-dowman:base-auto", player="Max Dowman", card="Base Card Autograph", number="BC-MD", rookie=True, tier="MYCKET BRA", odds="2 autographs per box across autograph program", source="https://uk.topps.com/pages/topps-chrome-arsenal"),
+    dict(slug="cc-2025-26-topps-chrome-arsenal-hobby", key="football:2025-26:arsenal-chrome:thierry-henry:228-and-out-auto", player="Thierry Henry", card="228 & Out Autograph", number="BB-TH", rookie=False, tier="JACKPOT", odds="Individual odds not published", source="https://uk.topps.com/pages/topps-chrome-arsenal"),
+    dict(slug="cc-2025-26-topps-chrome-arsenal-hobby", key="football:2025-26:arsenal-chrome:bukayo-saka:away-auto", player="Bukayo Saka", card="The Arsenal Away Autograph", number="AW-BS", rookie=False, tier="JACKPOT", odds="1/1", source="https://uk.topps.com/pages/topps-chrome-arsenal"),
+
+    # Argentina Team Set exact youth and Messi autograph paths.
+    dict(slug="cc-2026-topps-argentina-team-set", key="football:2026:argentina-team-set:8:franco-mastantuono:base", player="Franco Mastantuono", card="First Team Base", number="8", rookie=False, tier="BRA", odds="Part of 50-card base set; individual card odds not published", source="https://es.topps.com/pages/argentina-team-set"),
+    dict(slug="cc-2026-topps-argentina-team-set", key="football:2026:argentina-team-set:franco-mastantuono:base-auto", player="Franco Mastantuono", card="First Team Base Autograph", number="BC-FM", rookie=False, tier="MONSTER", odds="1 autograph every 2 boxes across autograph program", source="https://es.topps.com/pages/argentina-team-set"),
+    dict(slug="cc-2026-topps-argentina-team-set", key="football:2026:argentina-team-set:lionel-messi:vis10nary-auto", player="Lionel Messi", card="Vis10nary Autograph", number="VI-LM", rookie=False, tier="JACKPOT", odds="Ultra-rare; exact odds not published", source="https://es.topps.com/pages/argentina-team-set"),
+
+    # Real Madrid Team Set exact rookie, star and autograph chases.
+    dict(slug="cc-2025-26-topps-real-madrid-team-set", key="football:2025-26:real-madrid-team-set:14:franco-mastantuono:base-rookie", player="Franco Mastantuono", card="First Team Base Rookie", number="14", rookie=True, tier="BRA", odds="Part of 50-card base set; individual card odds not published", source="https://uk.topps.com/pages/topps-real-madrid-2025-26-team-set"),
+    dict(slug="cc-2025-26-topps-real-madrid-team-set", key="football:2025-26:real-madrid-team-set:franco-mastantuono:base-auto", player="Franco Mastantuono", card="Base Card Autograph", number="BC-MA", rookie=True, tier="MONSTER", odds="1 autograph every 2 boxes across autograph program", source="https://uk.topps.com/pages/topps-real-madrid-2025-26-team-set"),
+    dict(slug="cc-2025-26-topps-real-madrid-team-set", key="football:2025-26:real-madrid-team-set:jude-bellingham:base-auto", player="Jude Bellingham", card="Base Card Autograph", number="BC-JB", rookie=False, tier="MONSTER", odds="1 autograph every 2 boxes across autograph program", source="https://uk.topps.com/pages/topps-real-madrid-2025-26-team-set"),
+    dict(slug="cc-2025-26-topps-real-madrid-team-set", key="football:2025-26:real-madrid-team-set:vini-jr:bona-fide-auto", player="Vini Jr.", card="Bona Fide Baller Autograph", number="BB-VJ", rookie=False, tier="JACKPOT", odds="1 autograph every 2 boxes across autograph program", source="https://uk.topps.com/pages/topps-real-madrid-2025-26-team-set"),
+
+    # UCC hanger: explicit Hanger-column odds only.
+    dict(slug="cc-2025-26-topps-ucc-flagship-hanger", key="football:2025-26:ucc-flagship:66:estevao-willian:base-rookie", player="Estêvão Willian", card="Base Rookie", number="66", rookie=True, tier="BRA", odds="Part of 200-card base set; individual card odds not published", source="https://www.topps.com/pages/uefa-club-competitions"),
+    dict(slug="cc-2025-26-topps-ucc-flagship-hanger", key="football:2025-26:ucc-flagship:172:franco-mastantuono:base-rookie", player="Franco Mastantuono", card="Base Rookie", number="172", rookie=True, tier="BRA", odds="Part of 200-card base set; individual card odds not published", source="https://www.topps.com/pages/uefa-club-competitions"),
+    dict(slug="cc-2025-26-topps-ucc-flagship-hanger", key="football:2025-26:ucc-flagship:estevao-willian:base-auto", player="Estêvão Willian", card="Base Card Autograph", number="BA-EW", rookie=True, tier="MONSTER", odds="Base Autos 1:112 hanger packs; exact player is rarer", source="https://www.topps.com/pages/uefa-club-competitions"),
+    dict(slug="cc-2025-26-topps-ucc-flagship-hanger", key="football:2025-26:ucc-flagship:rio-ngumoha:base-auto", player="Rio Ngumoha", card="Base Card Autograph", number="BA-RN", rookie=True, tier="MONSTER", odds="Base Autos 1:112 hanger packs; exact player is rarer", source="https://www.topps.com/pages/uefa-club-competitions"),
 
     # Parkhurst loose pack: exact rookies plus one low-numbered autograph patch.
     dict(slug="cc-pack-2025-26-parkhurst-hobby", key="hockey:2025-26:parkhurst:236:ivan-demidov:base-rookie", player="Ivan Demidov", card="Base Rookie", number="236", rookie=True, tier="BRA", odds="Base rookies 1 per hobby pack on average", source="https://upperdeck.com/checklist/2025-26-parkhurst-checklist/"),

@@ -135,6 +135,43 @@ def test_new_products_have_searchable_named_cards():
     for slug,player in expected.items():
         assert any(x["slug"]==slug and x["player"]==player for x in seedmod.CHASE_CARD_DB)
 
+def test_researched_football_products_have_named_chases_and_sources():
+    slugs=(
+        "cc-2026-topps-mls-chrome-value",
+        "cc-2026-topps-chrome-premier-league-hobby",
+        "cc-2026-topps-finest-premier-league-wave2",
+        "cc-2025-26-topps-chrome-arsenal-hobby",
+        "cc-2026-topps-argentina-team-set",
+        "cc-2025-26-topps-real-madrid-team-set",
+        "cc-2025-26-topps-ucc-flagship-hanger",
+    )
+    for slug in slugs:
+        profile=seedmod.CHASE_PROFILES[slug]
+        assert profile["key_names"]
+        assert len(profile["headline_chases"]) >= 5
+        assert "topps.com" in profile["source_url"]
+        assert all(x.get("card") and x.get("tier") and x.get("odds") for x in profile["headline_chases"])
+
+def test_football_retail_profiles_only_assert_retail_specific_odds():
+    mls=seedmod.CHASE_PROFILES["cc-2026-topps-mls-chrome-value"]
+    ucc=seedmod.CHASE_PROFILES["cc-2025-26-topps-ucc-flagship-hanger"]
+    assert any("1:342 value-pack" in x["odds"] for x in mls["headline_chases"])
+    assert any("1:112 hanger-pack" in x["odds"] for x in ucc["headline_chases"])
+    assert "Hobbyexklusiva" in mls["caveat"]
+    assert "35-korts hanger-pack" in ucc["caveat"]
+
+def test_football_search_cards_include_rookies_and_star_autographs():
+    expected={
+        "cc-2026-topps-chrome-premier-league-hobby":("Max Dowman",True),
+        "cc-2026-topps-finest-premier-league-wave2":("Estêvão Willian",True),
+        "cc-2025-26-topps-chrome-arsenal-hobby":("Bukayo Saka",False),
+        "cc-2026-topps-argentina-team-set":("Lionel Messi",False),
+        "cc-2025-26-topps-real-madrid-team-set":("Franco Mastantuono",True),
+        "cc-2025-26-topps-ucc-flagship-hanger":("Rio Ngumoha",True),
+    }
+    for slug,(player,rookie) in expected.items():
+        assert any(x["slug"]==slug and x["player"]==player and x["rookie"] is rookie for x in seedmod.CHASE_CARD_DB)
+
 def test_real_catalog_can_filter_to_loose_packs(monkeypatch):
     Session=session_factory()
     monkeypatch.setattr(seedmod,"SessionLocal",Session)
