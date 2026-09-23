@@ -3,6 +3,7 @@ from sqlalchemy.orm import sessionmaker
 
 from app.database import Base
 from app.models import Offer, Product, ProductFact, Store
+from app.routers.discovery import real_catalog
 import app.seed as seedmod
 
 def session_factory():
@@ -82,6 +83,36 @@ def test_loose_packs_and_pokemon_expose_named_content_without_fake_odds():
     mvp = seedmod.CHASE_PROFILES["cc-pack-2025-26-mvp-hobby"]
     pokemon = seedmod.CHASE_PROFILES["cc-pokemon-mega-zygarde-premium"]
     assert any("Marquee Rookies" in x["card"] for x in opc["headline_chases"])
-    assert any("Autograf" in x["card"] and "Ingen verifierad" in x["odds"] for x in mvp["headline_chases"])
+    assert "Matthew Schaefer #275" in mvp["key_names"]
+    assert any("1:10" in x["odds"] for x in mvp["headline_chases"])
+    assert not any("Autograf" in x["card"] for x in mvp["headline_chases"])
     assert "Mega Zygarde ex" in pokemon["key_names"]
     assert any("#124" in x["card"] for x in pokemon["headline_chases"])
+
+def test_researched_hockey_products_have_named_chases_and_odds():
+    slugs=(
+        "cc-2025-26-mvp-hobby",
+        "cc-2025-26-pwhl-hobby",
+        "cc-pack-2025-26-pwhl-hobby",
+        "cc-2025-26-skybox-metal-hobby",
+        "cc-pack-2025-26-skybox-hobby",
+        "cc-2025-26-opc-platinum-retail-blaster",
+        "cc-2025-26-extended-hobby",
+    )
+    for slug in slugs:
+        profile=seedmod.CHASE_PROFILES[slug]
+        assert profile["key_names"]
+        assert profile["headline_chases"]
+        assert all(x.get("card") and x.get("odds") for x in profile["headline_chases"])
+
+def test_real_catalog_can_filter_to_loose_packs(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    result=real_catalog(category="Hockey",budget=250,format="single pack",limit=60,db=db)
+    assert result["products"]
+    assert all(x["format"]=="single pack" for x in result["products"])
+    assert all(x["price"]<=250 for x in result["products"])
+    db.close()

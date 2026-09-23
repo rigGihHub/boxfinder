@@ -21,9 +21,11 @@ export default async function DiscoverPage({searchParams}){
   const category=searchParams?.category||"";
   const budget=searchParams?.budget||"750";
   const goal=searchParams?.goal||"balanced";
+  const format=searchParams?.format||"";
   const qs=new URLSearchParams();
   if(category)qs.set("category",category);
   if(budget)qs.set("budget",budget);
+  if(format)qs.set("format",format);
   qs.set("goal",goal);
   const [data, realCatalog]=await Promise.all([
     getJson(`/discovery/recommendations?${qs.toString()}`,{recommendations:[],considered:0,rankable:0,note:""}),
@@ -36,7 +38,7 @@ export default async function DiscoverPage({searchParams}){
     <header className="productNav">
       <a className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a>
       <a className="backLink" href="/">← STARTSIDAN</a>
-      <span className="version">v0.40.0</span>
+      <span className="version">v0.41.0</span>
     </header>
 
     <section className="discoverHero">
@@ -44,12 +46,24 @@ export default async function DiscoverPage({searchParams}){
       <h1>Jag vill öppna något.</h1>
       <p>Välj vad du samlar, din budget och vad du hoppas få. BoxFinder väljer tre olika vägar istället för att låtsas att en box passar alla.</p>
 
+      <div className="discoverQuick"><small>SNABBSÖKNINGAR</small><div>
+        <a href="?category=Hockey&budget=2500&goal=rookies">ROOKIES</a>
+        <a href="?budget=5000&goal=autographs">AUTOGRAFER</a>
+        <a href="?category=Pok%C3%A9mon&budget=2500&goal=jackpot">POKÉMON</a>
+        <a href="?category=Hockey&budget=250&goal=hits&format=single%20pack">LÖSA PAKET</a>
+        <a href="?budget=500&goal=balanced">UNDER 500 KR</a>
+        <a href="?budget=5000&goal=jackpot">MONSTERHIT</a>
+      </div></div>
+
       <form className="discoverForm" method="get">
         <div><label>VAD SAMLAR DU?</label><select name="category" defaultValue={category}>
           <option value="">Allt</option><option>Hockey</option><option>Fotboll</option><option>Basket</option><option>NFL</option><option>Baseboll</option><option>F1</option><option>Pokémon</option><option>One Piece</option><option>Magic</option><option>Lorcana</option>
         </select></div>
         <div><label>MAXBUDGET</label><select name="budget" defaultValue={String(budget)}>
-          <option value="100">100 kr</option><option value="250">250 kr</option><option value="500">500 kr</option><option value="750">750 kr</option><option value="1000">1 000 kr</option><option value="1500">1 500 kr</option><option value="2500">2 500 kr</option>
+          <option value="100">100 kr</option><option value="250">250 kr</option><option value="500">500 kr</option><option value="750">750 kr</option><option value="1000">1 000 kr</option><option value="1500">1 500 kr</option><option value="2500">2 500 kr</option><option value="5000">5 000 kr</option>
+        </select></div>
+        <div><label>FORMAT</label><select name="format" defaultValue={format}>
+          <option value="">Alla format</option><option value="single pack">Lösa paket</option><option value="hobby box">Hobbybox</option><option value="blaster">Blaster</option><option value="booster box">Boosterbox</option><option value="collection box">Collection box</option>
         </select></div>
         <div className="goalField"><label>VAD JAGAR DU?</label><div className="goalChoices">{goals.map(([value,label])=><label key={value}><input type="radio" name="goal" value={value} defaultChecked={goal===value}/><span>{label}</span></label>)}</div></div>
         <button>VISA VAD JAG SKA KÖPA →</button>

@@ -279,17 +279,117 @@ CHASE_PROFILES = {
  "caveat":"Ingen verifierad autografchans är kopplad till just detta lösa paket. Serial- och insertuppgifter är formatets chase-spår; exakta spelarnamn kräver full checklistkoppling."
 },
 "cc-pack-2025-26-mvp-hobby": {
- "source_name":"Coolcard verified product snapshot",
- "source_url":"https://www.coolcard.se/category/boxar-nhl-2025-26",
- "key_names":["2025–26 MVP Silver Collection-checklistan"],
+ "source_name":"Upper Deck 2025-26 MVP Silver Collection checklist",
+ "source_url":"https://upperdeck.com/checklist/2025-26-mvp-silver-collection-hockey-checklist/",
+ "key_names":["Matthew Schaefer #275","Michael Misa #271","Zeev Buium #273","Danila Yurov #270","Sam Dickinson #267","Sam Rinzel #268"],
  "headline_chases":[
-   {"card":"MVP Silver Collection – rookies och stjärnor","tier":"BRA","odds":"Checklistan verifierad på produktnivå; exakt packodds ej publicerat","why":"Det här är packets dokumenterade chase-område."},
-   {"card":"Silver-/premiumparallell","tier":"MYCKET BRA","odds":"Exakt odds ej verifierat","why":"Kan vara attraktiv, men BoxFinder visar inte en påhittad sannolikhet."},
-   {"card":"Autografkort","tier":"MONSTER","odds":"Ingen verifierad oddsuppgift för löst paket","why":"Möjligheten är inte tillräckligt källbelagd för att presenteras som en chans."}
+   {"card":"Matthew Schaefer Copper Script Extended Rookie #275","tier":"MYCKET BRA","odds":"Copper Script Extended Rookies 1:10 pack","why":"Namngiven topprookie i den officiella checklistan."},
+   {"card":"Michael Misa Copper Script Extended Rookie #271","tier":"MYCKET BRA","odds":"Copper Script Extended Rookies 1:10 pack","why":"En konkret rookie-chase, inte bara ett generiskt rookie-spår."},
+   {"card":"Zeev Buium Copper Script Extended Rookie #273","tier":"MYCKET BRA","odds":"Copper Script Extended Rookies 1:10 pack","why":"Officiellt listad Extended Rookie."},
+   {"card":"Super Script Black Extended Rookie 1/1","tier":"JACKPOT","odds":"1/1; exakt spelare beror på checklistan","why":"Unik toppparallel på Extended Rookie-korten."}
  ],
- "why_exciting":["MVP-paketet har ett definierat Silver Collection-spår.","Autograf och exakta odds markeras öppet som ej verifierade tills checklistan stödjer det."],
- "tiers":{"everyday":{"label":"Vanligt men intressant","score":62,"items":["8 kort i paketet"]},"good":{"label":"Bra träff","score":66,"items":["MVP Silver Collection-rookie eller stjärna"]},"big":{"label":"Riktigt bra","score":48,"items":["Premium-/silverparallel"]},"jackpot":{"label":"Monsterhit","score":35,"items":["Autograf om checklistan bekräftar formatet"]}},
- "caveat":"Ingen verifierad autograf- eller packoddsuppgift finns i BoxFinders nuvarande underlag. Det visas därför som okänt, inte som en sannolikhet."
+ "why_exciting":["Copper Script Extended Rookies ligger på 1:10 paket som kortfamilj.","Schaefer, Misa, Buium, Yurov, Dickinson och Rinzel är namngivna i checklistan."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":62,"items":["8 kort i paketet"]},"good":{"label":"Bra träff","score":72,"items":["Copper Script Extended Rookie 1:10"]},"big":{"label":"Riktigt bra","score":58,"items":["Rätt topprookie i rookie-/parallelspåret"]},"jackpot":{"label":"Monsterhit","score":42,"items":["Super Script Black Extended Rookie 1/1"]}},
+ "caveat":"Den officiella Silver Collection-checklistan verifierar inget autografspår för produkten. BoxFinder visar därför inte autograf som en möjlig hit."
+},
+"cc-2025-26-mvp-hobby": {
+ "source_name":"Upper Deck 2025-26 MVP Silver Collection checklist",
+ "source_url":"https://upperdeck.com/checklist/2025-26-mvp-silver-collection-hockey-checklist/",
+ "key_names":["Matthew Schaefer #275","Michael Misa #271","Zeev Buium #273","Danila Yurov #270","Sam Dickinson #267","Sam Rinzel #268"],
+ "headline_chases":[
+   {"card":"Matthew Schaefer Copper Script Extended Rookie #275","tier":"MYCKET BRA","odds":"Copper Script Extended Rookies 1:10 pack","why":"Namngiven topprookie i officiell checklista."},
+   {"card":"Michael Misa Copper Script Extended Rookie #271","tier":"MYCKET BRA","odds":"Copper Script Extended Rookies 1:10 pack","why":"Stark rookie i samma verifierade spår."},
+   {"card":"Zeev Buium Copper Script Extended Rookie #273","tier":"MYCKET BRA","odds":"Copper Script Extended Rookies 1:10 pack","why":"Konkret rookie-chase med kortnummer."},
+   {"card":"Super Script Black Extended Rookie 1/1","tier":"JACKPOT","odds":"1/1","why":"Produktens tydligaste dokumenterade rookie-jackpot."}
+ ],
+ "why_exciting":["20 paket ger i teorin omkring två Copper Script Extended Rookies utifrån familjeoddset 1:10.","Sex namngivna rookies visas direkt i stället för en vag rookieetikett."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":74,"items":["20 paket","MVP base och Silver Collection-spår"]},"good":{"label":"Bra träff","score":78,"items":["Copper Script Extended Rookie 1:10"]},"big":{"label":"Riktigt bra","score":64,"items":["Schaefer, Misa eller Buium rookieparallel"]},"jackpot":{"label":"Monsterhit","score":48,"items":["Super Script Black Extended Rookie 1/1"]}},
+ "caveat":"Checklistan verifierar inget autografspår. Familjeodds är inte samma sak som odds på en viss spelare."
+},
+"cc-2025-26-pwhl-hobby": {
+ "source_name":"Upper Deck 2025-26 UD PWHL checklist",
+ "source_url":"https://upperdeck.com/checklist/2025-26-ud-pwhl-checklist/",
+ "key_names":["Kristyna Kaltounkova #51","Emma Gentry #52","Rory Guilday #53","Casey O'Brien #57","Kiara Zanon #58","Abby Hustler #59"],
+ "headline_chases":[
+   {"card":"Casey O'Brien Young Guns #57","tier":"BRA","odds":"Young Guns 1:4 hobby pack; exakt spelare ur 20-kortsgruppen","why":"Namngiven rookie i PWHL Young Guns-checklistan."},
+   {"card":"Kristyna Kaltounkova Young Guns #51","tier":"BRA","odds":"Young Guns 1:4 hobby pack","why":"Tydlig rookie-chase med kortnummer."},
+   {"card":"UD Canvas Young Guns","tier":"MYCKET BRA","odds":"1:48 hobby pack","why":"Sällsyntare Canvas-version av rookies."},
+   {"card":"Young Guns Outburst","tier":"MONSTER","odds":"1:36 hobby pack","why":"Premiumparallel på rookie-spåret."},
+   {"card":"Young Guns Deluxe /250, Exclusives /100 eller High Gloss /10","tier":"JACKPOT","odds":"Serienumrerad /250, /100 respektive /10","why":"De lägst numrerade Young Guns-spåren."}
+ ],
+ "why_exciting":["Young Guns kommer 1:4 hobby pack och boxen innehåller 12 paket.","Checklistan namnger 20 PWHL-rookies och visar formatsspecifika odds."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":78,"items":["Young Guns 1:4 hobby pack","UD Canvas 1:16"]},"good":{"label":"Bra träff","score":80,"items":["Kaltounkova, O'Brien eller Zanon Young Guns"]},"big":{"label":"Riktigt bra","score":76,"items":["Canvas Young Guns 1:48","Young Guns Outburst 1:36"]},"jackpot":{"label":"Monsterhit","score":66,"items":["Young Guns High Gloss /10"]}},
+ "caveat":"Oddsen gäller kortfamiljen, inte en enskild spelare. Ingen autografchans visas utan verifierat checkliststöd."
+},
+"cc-pack-2025-26-pwhl-hobby": {
+ "source_name":"Upper Deck 2025-26 UD PWHL checklist",
+ "source_url":"https://upperdeck.com/checklist/2025-26-ud-pwhl-checklist/",
+ "key_names":["Kristyna Kaltounkova #51","Casey O'Brien #57","Kiara Zanon #58","Abby Hustler #59"],
+ "headline_chases":[
+   {"card":"Young Guns – 20 namngivna PWHL-rookies","tier":"BRA","odds":"1:4 hobby pack","why":"Varje löst paket har ett tydligt, verifierat rookie-spår."},
+   {"card":"UD Canvas Young Guns","tier":"MYCKET BRA","odds":"1:48 hobby pack","why":"Sällsynt rookie-Canvas."},
+   {"card":"Young Guns Outburst","tier":"MONSTER","odds":"1:36 hobby pack","why":"Premiumparallel som faktiskt finns i hobbyformatet."},
+   {"card":"Young Guns High Gloss /10","tier":"JACKPOT","odds":"serial /10","why":"Extremt lågnumrerad rookieparallel."}
+ ],
+ "why_exciting":["Young Guns 1:4 gör rookiechansen begriplig för ett enskilt paket.","Kaltounkova, O'Brien, Zanon och Hustler är konkreta namn i checklistan."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":60,"items":["6 kort"]},"good":{"label":"Bra träff","score":78,"items":["Young Guns 1:4 hobby pack"]},"big":{"label":"Riktigt bra","score":70,"items":["Canvas Young Guns 1:48","Outburst Young Guns 1:36"]},"jackpot":{"label":"Monsterhit","score":60,"items":["Young Guns High Gloss /10"]}},
+ "caveat":"Inget autografspår presenteras eftersom det inte är verifierat för detta paket. Spelaroddset är lägre än familjeoddset 1:4."
+},
+"cc-2025-26-skybox-metal-hobby": {
+ "source_name":"Upper Deck 2025-26 Skybox Metal Universe checklist",
+ "source_url":"https://upperdeck.com/checklist/2025-2026-skybox-metal-universe-hockey-checklist/",
+ "key_names":["Ivan Demidov","Michael Misa","Zeev Buium","Ryan Leonard","Zayne Parekh","Matthew Schaefer"],
+ "headline_chases":[
+   {"card":"Ivan Demidov Platinum Portraits PP-1","tier":"JACKPOT","odds":"1:1,200 hobby pack","why":"Extremt sällsynt namngiven rookieinsert."},
+   {"card":"Ivan Demidov Planet Metal","tier":"MYCKET BRA","odds":"Planet Metal 1:60 hobby pack","why":"Premiuminsert med tydligt familjeodds."},
+   {"card":"Rookie Precious Metal Gems Green","tier":"JACKPOT","odds":"serial /10","why":"Ikonisk lågnumrerad PMG-parallel."},
+   {"card":"Precious Metal Gems Gold","tier":"JACKPOT","odds":"1/1","why":"Unik PMG-toppträff."}
+ ],
+ "why_exciting":["Metal Universe har flera namngivna rookieinsertspår med hobbyodds.","PMG Green /10 och Gold 1/1 ger ett verkligt högt tak."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":76,"items":["15 paket","flera Metal-insertfamiljer"]},"good":{"label":"Bra träff","score":78,"items":["Rookieinsert på Demidov, Misa, Buium eller Leonard"]},"big":{"label":"Riktigt bra","score":88,"items":["Planet Metal 1:60","sällsynt rookieinsert"]},"jackpot":{"label":"Monsterhit","score":94,"items":["Platinum Portraits 1:1,200","PMG Green /10","PMG Gold 1/1"]}},
+ "caveat":"Familjeodds gäller hela insertgruppen. En viss spelare är mer sällsynt än angivet familjeodds."
+},
+"cc-pack-2025-26-skybox-hobby": {
+ "source_name":"Upper Deck 2025-26 Skybox Metal Universe checklist",
+ "source_url":"https://upperdeck.com/checklist/2025-2026-skybox-metal-universe-hockey-checklist/",
+ "key_names":["Ivan Demidov","Michael Misa","Zeev Buium","Ryan Leonard"],
+ "headline_chases":[
+   {"card":"Planet Metal rookie","tier":"MYCKET BRA","odds":"1:60 hobby pack","why":"Verifierad sällsynt insertfamilj i löst hobbypaket."},
+   {"card":"Ivan Demidov Platinum Portraits PP-1","tier":"JACKPOT","odds":"1:1,200 hobby pack","why":"Namngiven extrem SSP-rookieinsert."},
+   {"card":"Precious Metal Gems Green rookie /10","tier":"JACKPOT","odds":"serial /10","why":"Mycket lågnumrerad Metal Universe-chase."}
+ ],
+ "why_exciting":["Det lösa paketet har verifierade premiuminsertspår.","Ivan Demidov är namngiven på en 1:1,200 hobbyinsert."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":58,"items":["6 kort"]},"good":{"label":"Bra träff","score":66,"items":["Rookie eller Metal-insert"]},"big":{"label":"Riktigt bra","score":80,"items":["Planet Metal 1:60"]},"jackpot":{"label":"Monsterhit","score":88,"items":["Platinum Portraits 1:1,200","PMG /10 eller 1/1"]}},
+ "caveat":"Inget garanteras i ett löst paket. Familjeodds är inte individuella spelarodds."
+},
+"cc-2025-26-opc-platinum-retail-blaster": {
+ "source_name":"Upper Deck 2025-26 O-Pee-Chee Platinum product and checklist",
+ "source_url":"https://upperdeck.com/2025-26-o-pee-chee-platinum/",
+ "key_names":["Matthew Schaefer #268","Michael Misa","Ryan Leonard","Beckett Sennecke","Ben Kindel"],
+ "headline_chases":[
+   {"card":"Matthew Schaefer Neon Yellow Surge Marquee Rookie #268","tier":"BRA","odds":"Neon Yellow Surge Marquee Rookies 1:6 blaster pack","why":"Namngiven topprookie med blasterspecifikt odds."},
+   {"card":"Marquee Rookie-paralleller","tier":"MYCKET BRA","odds":"Format varierar; exakt parallel visas bara när retail stöds","why":"Produktens centrala rookie-spår."},
+   {"card":"Golden Treasures 1/1","tier":"JACKPOT","odds":"1/1; produktspår, blastertillgänglighet ej separat bekräftad","why":"Produktlinjens högsta parallel, men inte ett påstått blasterodds."}
+ ],
+ "why_exciting":["Sex pack och ett verifierat blasterodds på Neon Yellow Surge Marquee Rookies.","Schaefer, Misa, Leonard, Sennecke och Kindel är konkreta namn att leta efter."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":66,"items":["6 paket","Chrome-liknande paralleller"]},"good":{"label":"Bra träff","score":78,"items":["Neon Yellow Surge Marquee Rookie 1:6"]},"big":{"label":"Riktigt bra","score":68,"items":["Stark rookieparallel"]},"jackpot":{"label":"Monsterhit","score":48,"items":["Extremt lågnumrerad parallel om retailformatet stöder den"]}},
+ "caveat":"Produkten har rookieautografer på produktnivå, men BoxFinder påstår inte autografchans eller odds för retailblastern utan formatsspecifikt stöd."
+},
+"cc-2025-26-extended-hobby": {
+ "source_name":"Upper Deck 2025-26 Extended Series product information",
+ "source_url":"https://upperdeck.com/2025-26-upper-deck-extended-series/",
+ "key_names":["Young Guns #701–750","1st Round Rookies","Debut Game Jersey rookies"],
+ "headline_chases":[
+   {"card":"Young Guns / 1st Round Rookies","tier":"BRA","odds":"6 per hobbybox i snitt","why":"Boxens återkommande rookieinnehåll."},
+   {"card":"Outburst Silver rookieparallel","tier":"MYCKET BRA","odds":"1 per hobbybox i snitt över Outburst-spåret","why":"Verifierad boxträff i premiumparallelspåret."},
+   {"card":"Young Guns Deluxe /250","tier":"MYCKET BRA","odds":"serial /250","why":"Numrerad rookieparallel."},
+   {"card":"Young Guns Exclusives /100 eller Outburst Red /25","tier":"MONSTER","odds":"serial /100 respektive /25","why":"Mycket lågnumrerade rookieversioner."},
+   {"card":"Young Guns High Gloss /10 eller Outburst Gold 1/1","tier":"JACKPOT","odds":"serial /10 respektive 1/1","why":"Rookieparalleller med produktens högsta knapphet."},
+   {"card":"Debut Game Jersey Hard-Signed Auto","tier":"JACKPOT","odds":"numrerad till spelarens tröjnummer; ingen boxgaranti","why":"Matchanvänt rookie-material kombinerat med hard-signed autograf."}
+ ],
+ "why_exciting":["Sex rookie-kort per hobbybox i snitt ger ett tydligt golv för rookieöppningen.","Produkten kombinerar Young Guns-paralleller med ett verifierat rookie jersey/autograf-program."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":86,"items":["6 Young Guns/1st Round Rookies per box","4 UD Canvas per box"]},"good":{"label":"Bra träff","score":84,"items":["Stark rookie","Outburst Silver"]},"big":{"label":"Riktigt bra","score":88,"items":["Deluxe /250","Exclusives /100","Outburst Red /25"]},"jackpot":{"label":"Monsterhit","score":92,"items":["High Gloss /10","Outburst Gold 1/1","Debut Game Jersey hard-signed auto"]}},
+ "caveat":"Boxsnitt gäller kortfamiljer, inte en viss rookie. Autografen är möjlig enligt produktprogrammet men inte garanterad per box."
 },
 "cc-2025-26-series2-retail-blaster": {
  "source_name":"Coolcard / Upper Deck Series 2 product information",
@@ -475,6 +575,31 @@ CHASE_PROFILES = {
 
 
 CHASE_CARD_DB = [
+
+    # MVP Silver Collection: exact Extended Rookies and verified family odds.
+    dict(slug="cc-2025-26-mvp-hobby", key="hockey:2025-26:mvp-silver:275:matthew-schaefer:copper-script", player="Matthew Schaefer", card="Copper Script Extended Rookie", number="275", rookie=True, tier="MYCKET BRA", odds="Copper Script Extended Rookies 1:10 packs", source="https://upperdeck.com/checklist/2025-26-mvp-silver-collection-hockey-checklist/"),
+    dict(slug="cc-pack-2025-26-mvp-hobby", key="hockey:2025-26:mvp-silver:275:matthew-schaefer:copper-script", player="Matthew Schaefer", card="Copper Script Extended Rookie", number="275", rookie=True, tier="MYCKET BRA", odds="Copper Script Extended Rookies 1:10 packs", source="https://upperdeck.com/checklist/2025-26-mvp-silver-collection-hockey-checklist/"),
+    dict(slug="cc-2025-26-mvp-hobby", key="hockey:2025-26:mvp-silver:271:michael-misa:copper-script", player="Michael Misa", card="Copper Script Extended Rookie", number="271", rookie=True, tier="MYCKET BRA", odds="Copper Script Extended Rookies 1:10 packs", source="https://upperdeck.com/checklist/2025-26-mvp-silver-collection-hockey-checklist/"),
+    dict(slug="cc-pack-2025-26-mvp-hobby", key="hockey:2025-26:mvp-silver:271:michael-misa:copper-script", player="Michael Misa", card="Copper Script Extended Rookie", number="271", rookie=True, tier="MYCKET BRA", odds="Copper Script Extended Rookies 1:10 packs", source="https://upperdeck.com/checklist/2025-26-mvp-silver-collection-hockey-checklist/"),
+    dict(slug="cc-2025-26-mvp-hobby", key="hockey:2025-26:mvp-silver:273:zeev-buium:copper-script", player="Zeev Buium", card="Copper Script Extended Rookie", number="273", rookie=True, tier="MYCKET BRA", odds="Copper Script Extended Rookies 1:10 packs", source="https://upperdeck.com/checklist/2025-26-mvp-silver-collection-hockey-checklist/"),
+    dict(slug="cc-pack-2025-26-mvp-hobby", key="hockey:2025-26:mvp-silver:273:zeev-buium:copper-script", player="Zeev Buium", card="Copper Script Extended Rookie", number="273", rookie=True, tier="MYCKET BRA", odds="Copper Script Extended Rookies 1:10 packs", source="https://upperdeck.com/checklist/2025-26-mvp-silver-collection-hockey-checklist/"),
+
+    # PWHL exact rookies; links are shared by hobby box and its loose hobby pack.
+    dict(slug="cc-2025-26-pwhl-hobby", key="hockey:2025-26:pwhl:51:kristyna-kaltounkova:young-guns", player="Kristyna Kaltounkova", card="Young Guns", number="51", rookie=True, tier="BRA", odds="Young Guns 1:4 hobby packs", source="https://upperdeck.com/checklist/2025-26-ud-pwhl-checklist/"),
+    dict(slug="cc-pack-2025-26-pwhl-hobby", key="hockey:2025-26:pwhl:51:kristyna-kaltounkova:young-guns", player="Kristyna Kaltounkova", card="Young Guns", number="51", rookie=True, tier="BRA", odds="Young Guns 1:4 hobby packs", source="https://upperdeck.com/checklist/2025-26-ud-pwhl-checklist/"),
+    dict(slug="cc-2025-26-pwhl-hobby", key="hockey:2025-26:pwhl:57:casey-obrien:young-guns", player="Casey O'Brien", card="Young Guns", number="57", rookie=True, tier="BRA", odds="Young Guns 1:4 hobby packs", source="https://upperdeck.com/checklist/2025-26-ud-pwhl-checklist/"),
+    dict(slug="cc-pack-2025-26-pwhl-hobby", key="hockey:2025-26:pwhl:57:casey-obrien:young-guns", player="Casey O'Brien", card="Young Guns", number="57", rookie=True, tier="BRA", odds="Young Guns 1:4 hobby packs", source="https://upperdeck.com/checklist/2025-26-ud-pwhl-checklist/"),
+    dict(slug="cc-2025-26-pwhl-hobby", key="hockey:2025-26:pwhl:58:kiara-zanon:young-guns", player="Kiara Zanon", card="Young Guns", number="58", rookie=True, tier="BRA", odds="Young Guns 1:4 hobby packs", source="https://upperdeck.com/checklist/2025-26-ud-pwhl-checklist/"),
+    dict(slug="cc-pack-2025-26-pwhl-hobby", key="hockey:2025-26:pwhl:58:kiara-zanon:young-guns", player="Kiara Zanon", card="Young Guns", number="58", rookie=True, tier="BRA", odds="Young Guns 1:4 hobby packs", source="https://upperdeck.com/checklist/2025-26-ud-pwhl-checklist/"),
+
+    # Skybox Metal Universe exact high-end rookie inserts.
+    dict(slug="cc-2025-26-skybox-metal-hobby", key="hockey:2025-26:skybox:demidov:platinum-portraits-pp1", player="Ivan Demidov", card="Platinum Portraits", number="PP-1", rookie=True, tier="JACKPOT", odds="1:1,200 hobby packs", source="https://upperdeck.com/checklist/2025-2026-skybox-metal-universe-hockey-checklist/"),
+    dict(slug="cc-pack-2025-26-skybox-hobby", key="hockey:2025-26:skybox:demidov:platinum-portraits-pp1", player="Ivan Demidov", card="Platinum Portraits", number="PP-1", rookie=True, tier="JACKPOT", odds="1:1,200 hobby packs", source="https://upperdeck.com/checklist/2025-2026-skybox-metal-universe-hockey-checklist/"),
+    dict(slug="cc-2025-26-skybox-metal-hobby", key="hockey:2025-26:skybox:buium:planet-metal-26", player="Zeev Buium", card="Planet Metal", number="26 of 40 PM", rookie=True, tier="MYCKET BRA", odds="Planet Metal 1:60 hobby packs", source="https://upperdeck.com/checklist/2025-2026-skybox-metal-universe-hockey-checklist/"),
+    dict(slug="cc-pack-2025-26-skybox-hobby", key="hockey:2025-26:skybox:buium:planet-metal-26", player="Zeev Buium", card="Planet Metal", number="26 of 40 PM", rookie=True, tier="MYCKET BRA", odds="Planet Metal 1:60 hobby packs", source="https://upperdeck.com/checklist/2025-2026-skybox-metal-universe-hockey-checklist/"),
+
+    # O-Pee-Chee Platinum retail-specific rookie hit.
+    dict(slug="cc-2025-26-opc-platinum-retail-blaster", key="hockey:2025-26:opc-platinum:268:matthew-schaefer:neon-yellow-surge", player="Matthew Schaefer", card="Neon Yellow Surge Marquee Rookie", number="268", rookie=True, tier="BRA", odds="Neon Yellow Surge Marquee Rookies 1:6 blaster packs", source="https://upperdeck.com/checklist/2025-26-o-pee-chee-platinum-hockey-checklist/"),
 
     # Additional Series 1 exact named rookie/inserts from verified checklist.
     dict(slug="cc-2025-26-series1-hobby", key="hockey:2025-26:ud-s1:demidov:rtd-1", player="Ivan Demidov", card="1994-95 Rookie Die Cuts RTD-1", number="RTD-1", rookie=True, tier="MYCKET BRA", odds="Verified checklist; insert family odds apply", source="https://www.beckett.com/news/2025-26-upper-deck-series-1-hockey-cards/"),

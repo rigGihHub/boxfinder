@@ -20,7 +20,7 @@ export default async function ProductPage({ params }) {
   const a = p.analysis || {};
   const ev = p.ev_coverage || {};
   return <main className="productPage">
-    <header className="productNav"><a className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a><a className="backLink" href="/">← TILL TOPPLISTAN</a><span className="version">v0.40.0</span></header>
+    <header className="productNav"><a className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a><a className="backLink" href="/">← TILL TOPPLISTAN</a><span className="version">v0.41.0</span></header>
 
     <section className="productHero">
       <div className="productHeroCopy"><span className="kicker">{p.category} · {p.manufacturer} · {p.format}</span><h1>{p.name}</h1><p>{p.summary}</p><div className="heroPrice"><span><small>BÄSTA PRIS</small><b>{money(p.price)}</b><em>{p.store}</em></span><span><small>BOX VALUE</small><b>{p.box_value_score ?? '—'}<i>/100</i></b><em>Data {p.data_quality}/100</em></span><span><small>RISK</small><b>{p.risk}</b><em>{p.source_kind === 'demo' ? 'Demo-underlag' : 'Verifierbart underlag'}</em></span></div></div>

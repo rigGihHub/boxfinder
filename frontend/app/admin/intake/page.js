@@ -6,7 +6,7 @@ export default function IntakePage(){
     <header className="nav sourceNav">
       <a className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a>
       <nav><a href="/admin/source-hub">Datakällor</a><a href="/admin/catalog">Produktkö</a><a href="/admin/intake">Koppla butik</a><a href="/admin/intake/batch">Batch</a><a href="/admin/activation">Aktiveringskö</a></nav>
-      <span className="version">v0.40.0</span>
+      <span className="version">v0.41.0</span>
     </header>
     <section className="intakeHero">
       <span className="kicker">STORE INTAKE PIPELINE</span>

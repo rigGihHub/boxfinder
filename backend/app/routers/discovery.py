@@ -17,15 +17,20 @@ def recommendations(
     category: str | None = None,
     budget: float | None = Query(None, ge=1),
     goal: str = Query("balanced"),
+    format: str | None = None,
     db: Session = Depends(get_db),
 ):
     goal=goal.lower().strip()
     if goal not in GOALS:
         return {"error":"unknown_goal","allowed_goals":sorted(GOALS)}
     items=list_products(category=category,max_price=budget,db=db)
+    if format:
+        wanted=format.strip().lower()
+        items=[x for x in items if wanted in (x.get("format") or "").lower()]
     result=discover(db,items,goal)
     result["category"]=category
     result["budget"]=budget
+    result["format"]=format
     return result
 
 
@@ -33,6 +38,7 @@ def recommendations(
 def real_catalog(
     category: str | None = None,
     budget: float | None = Query(None, ge=1),
+    format: str | None = None,
     limit: int = Query(60, ge=1, le=200),
     db: Session = Depends(get_db),
 ):
@@ -59,6 +65,8 @@ def real_catalog(
         if category and v.product.category.lower()!=category.lower():
             continue
         if budget is not None and best.price_sek>budget:
+            continue
+        if format and format.strip().lower() not in (v.format or "").lower():
             continue
         fact=db.scalar(select(ProductFact).where(ProductFact.variant_id==v.id))
         facts=[]
@@ -104,6 +112,7 @@ def real_catalog(
         "count":len(rows),
         "category":category,
         "budget":budget,
+        "format":format,
         "products":rows[:limit],
         "note":"Detta är verifierade svenska butikssnapshots, inte live-feed. Tidsstämpeln visas per produkt och uppdateras inte förrän källan verifieras igen.",
     }

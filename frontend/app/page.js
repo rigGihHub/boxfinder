@@ -43,6 +43,15 @@ function MiniRanking({ title, subtitle, items, metric='ranking_score' }) {
   return <div className="miniRanking"><div className="miniHead"><div><span className="kicker">{subtitle}</span><h3>{title}</h3></div></div><div className="miniRows">{items.slice(0,5).map((p,i)=><a className="miniRow" href={`/product/${p.id}`} key={`${title}-${p.id}`}><span className="miniRank">{i+1}</span><div><b>{p.name}</b><small>{Math.round(p.price)} kr · {p.category}</small></div><strong>{p[metric] ?? '—'}</strong></a>)}</div></div>
 }
 
+const quickSearches = [
+  {title:'ROOKIES',text:'Boxar med starka nykomlingar',href:'/discover?category=Hockey&budget=2500&goal=rookies',tone:'acid'},
+  {title:'AUTOGRAFER',text:'Produkter med signerade kort',href:'/discover?budget=5000&goal=autographs',tone:'violet'},
+  {title:'POKÉMON',text:'Boosterboxar och collection boxes',href:'/discover?category=Pok%C3%A9mon&budget=2500&goal=jackpot',tone:'cyan'},
+  {title:'LÖSA PAKET',text:'Billiga öppningar under 250 kr',href:'/discover?category=Hockey&budget=250&goal=hits&format=single%20pack',tone:'gold'},
+  {title:'UNDER 500 KR',text:'Bäst chase inom låg budget',href:'/discover?budget=500&goal=balanced',tone:'acid'},
+  {title:'MONSTERHIT',text:'Högsta taket först',href:'/discover?budget=5000&goal=jackpot',tone:'violet'},
+];
+
 export default async function Home({ searchParams }) {
   const rawBudget = Number(searchParams?.budget || 1000);
   const budget = [100,250,500,1000,2000].includes(rawBudget) ? rawBudget : 1000;
@@ -63,13 +72,15 @@ export default async function Home({ searchParams }) {
       <header className="nav">
         <a className="brand" href="#top"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a>
         <nav><a href="/discover">Vad ska jag köpa?</a><a href="/chase">Chase Finder</a><a href="#ranking">Topplista</a><a href="#battle">Box Battle</a><a href="#profiles">Rankingar</a><a href="#budget">Budget</a><a href="#signals">Prisradar</a><a href="/watchlist">Bevakningar</a><a href="#deals">Fynd</a><a href="#scanner">Spelarscanner</a><a href="/admin/source-hub">Datakällor</a></nav>
-        <span className="version">v0.40.0</span>
+        <span className="version">v0.41.0</span>
       </header>
 
       <section className="hero" id="top">
-        <div className="heroCopy"><div className="eyebrow"><i/> BOX INTELLIGENCE · SVERIGE MVP</div><h1>HITTA BOXEN<br/><em>VÄRD ATT ÖPPNA.</em></h1><p>Pris är bara början. BoxFinder väger ihop checklista, odds, marknadsvärde, hits och risk — och låter dig välja vilken sorts box du faktiskt söker.</p><div className="heroActions"><a className="primary" href="/chase">Vilket kort vill du dra? <b>→</b></a><a className="secondary" href="/discover">Hitta box</a></div></div>
+        <div className="heroCopy"><div className="eyebrow"><i/> BOX INTELLIGENCE · SVERIGE MVP</div><h1>HITTA BOXEN<br/><em>VÄRD ATT ÖPPNA.</em></h1><p>Pris är bara början. BoxFinder väger ihop checklista, odds, marknadsvärde, hits och risk — och låter dig välja vilken sorts box du faktiskt söker.</p><div className="heroActions"><a className="primary" href="/chase">SÖK SPELARE ELLER POKÉMON <b>→</b></a><a className="secondary" href="/discover">AVANCERAD SÖKNING</a></div><div className="heroQuick"><small>TRYCK DIREKT PÅ DET DU VILL HITTA</small><div>{quickSearches.map(x=><a className={`quick-${x.tone}`} href={x.href} key={x.title}><b>{x.title}</b><span>{x.text}</span></a>)}</div></div></div>
         <div className="packStage" aria-hidden="true"><div className="glow"/><div className="pack back"><span>BOX</span><b>FINDER</b></div><div className="pack front"><small>VALUE SERIES · 09</small><span>BOX</span><b>FINDER</b><div className="burst">SMART<br/>CHASE</div><footer>PRICE · ODDS · VALUE</footer></div></div>
       </section>
+
+      <nav className="mobileQuickNav" aria-label="Snabbsökningar"><a href="/discover">HITTA BOX</a><a href="/discover?category=Hockey&goal=rookies">ROOKIES</a><a href="/discover?goal=autographs">AUTOGRAF</a><a href="/discover?category=Pok%C3%A9mon&goal=jackpot">POKÉMON</a></nav>
 
       <section className="ticker"><span>BOX VALUE SCORE</span><b>◆</b><span>UPSIDE</span><b>◆</b><span>ROOKIE STRENGTH</span><b>◆</b><span>HIT DENSITY</span><b>◆</b><span>DEAL CONFIDENCE</span></section>
 
