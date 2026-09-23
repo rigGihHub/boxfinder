@@ -500,6 +500,111 @@ CHASE_PROFILES = {
  },
  "caveat":"En enda kortplats per box ger extrem varians: hög hit-känsla men mycket beroende av vilket namn och vilken variant du träffar."
 },
+"cc-pack-2025-26-parkhurst-hobby": {
+ "source_name":"Upper Deck 2025-26 Parkhurst checklist and product information",
+ "source_url":"https://upperdeck.com/checklist/2025-26-parkhurst-checklist/",
+ "key_names":["Matthew Schaefer #211","Michael Misa #222","Ryan Leonard #225","Gabe Perreault #232","Ivan Demidov #236","Zayne Parekh #246"],
+ "headline_chases":[
+   {"card":"Ivan Demidov Base Rookie #236","tier":"BRA","odds":"Base rookies 1 per hobby pack i snitt; exakt spelare ur rookiegruppen","why":"Namngiven topprookie i den officiella checklistan."},
+   {"card":"Matthew Schaefer Base Rookie #211","tier":"BRA","odds":"Base rookies 1 per hobby pack i snitt","why":"Konkret rookie med kortnummer."},
+   {"card":"Prominent Prospects","tier":"MYCKET BRA","odds":"1:8 hobby packs","why":"Verifierat prospect-insertspår."},
+   {"card":"Parkhurst Penworks Rookie Autograph","tier":"MONSTER","odds":"Penworks Rookie-familjen 1:40 hobby packs","why":"Möjlig rookieautograf i ett löst paket."},
+   {"card":"Est. 1951 Rookie Autograph","tier":"MONSTER","odds":"Est. 1951 Rookie Auto-familjen 1:40 hobby packs","why":"Ytterligare verifierat autografspår."},
+   {"card":"Ivan Demidov Rookie Auto Patch /25","tier":"JACKPOT","odds":"serial /25; inga individuella packodds publicerade","why":"Lågnumrerad rookieauto med memorabilia."},
+   {"card":"Base Rookie Gold Spectrum 1/1","tier":"JACKPOT","odds":"1/1","why":"Unik rookieparallel."}
+ ],
+ "why_exciting":["En rookie per hobby-pack i snitt ger ett tydligt innehållsgolv.","Penworks Rookie Auto och Est. 1951 Rookie Auto ligger båda på 1:40 hobby-pack som kortfamiljer."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":78,"items":["1 rookie per hobby-pack i snitt"]},"good":{"label":"Bra träff","score":80,"items":["Demidov, Schaefer, Misa eller Leonard rookie","Prominent Prospects 1:8"]},"big":{"label":"Riktigt bra","score":84,"items":["Penworks Rookie Auto 1:40","Est. 1951 Rookie Auto 1:40"]},"jackpot":{"label":"Monsterhit","score":79,"items":["Rookie Auto Patch /25 eller /49","Gold Spectrum 1/1"]}},
+ "caveat":"1:40 gäller hela respektive autografserie, inte en viss spelare. Ett löst paket garanterar varken autograf eller en specifik rookie."
+},
+"cc-2025-26-pwhl-retail-blaster": {
+ "source_name":"Upper Deck 2025-26 UD PWHL checklist",
+ "source_url":"https://upperdeck.com/checklist/2025-26-ud-pwhl-checklist/",
+ "key_names":["Kristyna Kaltounkova #51","Emma Gentry #52","Rory Guilday #53","Casey O'Brien #57","Kiara Zanon #58","Abby Hustler #59"],
+ "headline_chases":[
+   {"card":"Casey O'Brien Young Guns #57","tier":"BRA","odds":"Young Guns 1:3 blaster packs; exakt spelare ur 20-kortsgruppen","why":"Namngiven rookie i checklistan."},
+   {"card":"Kristyna Kaltounkova Young Guns #51","tier":"BRA","odds":"Young Guns 1:3 blaster packs","why":"Konkret rookie med retailformatets odds."},
+   {"card":"Young Guns Outburst","tier":"MONSTER","odds":"1:60 blaster packs","why":"Premiumparallel i retailformatet."},
+   {"card":"UD Canvas Young Guns","tier":"MYCKET BRA","odds":"1:48 blaster packs","why":"Sällsyntare rookie-Canvas."}
+ ],
+ "why_exciting":["Young Guns kommer 1:3 blaster-pack som kortfamilj.","Kaltounkova, O'Brien, Zanon och Hustler är namngivna rookies i den officiella checklistan."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":70,"items":["Young Guns 1:3 blaster-pack"]},"good":{"label":"Bra träff","score":79,"items":["Namngiven Young Guns-rookie"]},"big":{"label":"Riktigt bra","score":73,"items":["Canvas Young Guns 1:48"]},"jackpot":{"label":"Monsterhit","score":64,"items":["Young Guns Outburst 1:60"]}},
+ "caveat":"Familjeoddset 1:3 är inte oddset för en särskild spelare. Ingen autograf visas eftersom checklistunderlaget inte verifierar ett autografspår för blastern."
+},
+"cc-2025-26-fleer-ultra-pwhl-hobby": {
+ "source_name":"Upper Deck 2025-26 Fleer Ultra PWHL checklist",
+ "source_url":"https://upperdeck.com/checklist/2025-26-fleer-ultra-pwhl-checklist/",
+ "key_names":["Casey O'Brien","Kristyna Kaltounkova","Emma Gentry","Rory Guilday","Nicole Gosling","Natalie Spooner","Alex Carpenter"],
+ "headline_chases":[
+   {"card":"Casey O'Brien Rising Stars","tier":"BRA","odds":"Rising Stars-paralleller serial /199, /99, /49, /35, /15 och 1/1","why":"Namngiven rookie/prospect med full numreringsstege."},
+   {"card":"Fresh Ink Autograph – Natalie Spooner","tier":"MYCKET BRA","odds":"Fresh Ink 1:150 hobby/e-Pack; Spooner är SP inom serien","why":"Namngiven signerad stjärnträff."},
+   {"card":"Fresh Ink Autograph – Alex Carpenter","tier":"MYCKET BRA","odds":"Fresh Ink 1:150 hobby/e-Pack; Carpenter är SP inom serien","why":"Signerad toppspelare med SP-status."},
+   {"card":"Casey O'Brien Rising Stars Green /15","tier":"MONSTER","odds":"serial /15","why":"Mycket lågnumrerad rookie/prospect-parallel."},
+   {"card":"Casey O'Brien Rising Stars Black 1/1","tier":"JACKPOT","odds":"1/1","why":"Unikt exemplar."}
+ ],
+ "why_exciting":["Fresh Ink ger ett verifierat autografspår på 1:150 hobby-pack som kortfamilj.","Rising Stars har namngivna PWHL-talanger och paralleller ned till 1/1."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":74,"items":["Fleer Ultra rookie- och insertspår"]},"good":{"label":"Bra träff","score":80,"items":["Rising Stars på O'Brien eller annan topprookie"]},"big":{"label":"Riktigt bra","score":84,"items":["Fresh Ink 1:150","Rising Stars /35 eller lägre"]},"jackpot":{"label":"Monsterhit","score":78,"items":["Rising Stars Black 1/1"]}},
+ "caveat":"Fresh Ink 1:150 gäller hela serien och inte Natalie Spooner eller Alex Carpenter individuellt. SP-status anger relativ knapphet men inget exakt spelarodds."
+},
+"cc-2025-26-sp-authentic-hobby": {
+ "source_name":"Upper Deck 2025-26 SP Authentic product and checklist",
+ "source_url":"https://upperdeck.com/checklist/2025-26-sp-authentic-checklist/",
+ "key_names":["Ivan Demidov #149","Ryan Leonard #133","Matthew Schaefer #168","Michael Misa #169","Gabe Perreault"],
+ "headline_chases":[
+   {"card":"Ivan Demidov Future Watch Autograph #149 /999","tier":"MYCKET BRA","odds":"Minst 1 Future Watch Autograph per box i snitt; exakt spelare ur checklistan","why":"Produktens klassiska signerade rookie-kort."},
+   {"card":"Matthew Schaefer Future Watch Autograph #168 /999","tier":"MYCKET BRA","odds":"Minst 1 Future Watch Autograph per box i snitt","why":"Namngiven topprookie med kortnummer."},
+   {"card":"Future Watch Auto Patch /100","tier":"MONSTER","odds":"serial /100; ingen separat boxgaranti","why":"Signerad rookie med memorabilia."},
+   {"card":"Matthew Schaefer Sign of the Times Rookies Black /25","tier":"MONSTER","odds":"serial /25","why":"Lågnumrerad namngiven rookieautograf."},
+   {"card":"Matthew Schaefer eller Michael Misa Future Watch Auto Patch Black 1/1","tier":"JACKPOT","odds":"1/1","why":"Unik toppversion av premium-rookieautografen."}
+ ],
+ "why_exciting":["Minst en Future Watch Autograph och ytterligare en autograf per box i snitt.","Demidov, Schaefer, Misa och Leonard finns i de centrala signerade rookiespåren."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":91,"items":["2 autografer per box i snitt","10 Limited Red per box i snitt"]},"good":{"label":"Bra träff","score":92,"items":["Future Watch Autograph /999"]},"big":{"label":"Riktigt bra","score":95,"items":["Future Watch Auto Patch /100","Sign of the Times Rookie /25"]},"jackpot":{"label":"Monsterhit","score":97,"items":["Future Watch Auto Patch Black 1/1"]}},
+ "caveat":"Boxsnitten gäller autografkategorierna, inte ett visst namn. Två autografer i snitt är inte samma sak som två topprookie-autografer."
+},
+"cc-2025-26-ultimate-hobby": {
+ "source_name":"Upper Deck 2025-26 NHL Ultimate Collection checklist",
+ "source_url":"https://upperdeck.com/checklist/2025-26-nhl-ultimate-collection-checklist/",
+ "key_names":["Matthew Schaefer","Michael Misa","Ivan Demidov","Ryan Leonard","Zeev Buium","Sam Dickinson"],
+ "headline_chases":[
+   {"card":"Ultimate Rookies Autographs /299","tier":"MYCKET BRA","odds":"serial /299; exakt rookie varierar","why":"Produktens centrala signerade rookie-spår."},
+   {"card":"Matthew Schaefer Ultimate Phenoms Gold Auto /25","tier":"MONSTER","odds":"serial /25","why":"Namngiven topprookie på lågnumrerad autograf."},
+   {"card":"Matthew Schaefer eller Michael Misa Ultimate Phenoms Purple Auto /5","tier":"JACKPOT","odds":"serial /5","why":"Endast fem exemplar per kort."},
+   {"card":"Matthew Schaefer eller Michael Misa Ultimate Phenoms Black Auto 1/1","tier":"JACKPOT","odds":"1/1","why":"Unik signerad rookie-toppträff."}
+ ],
+ "why_exciting":["Checklistan är byggd kring premiumautografer, memorabilia och lågnumrerade rookies.","Schaefer och Misa har verifierade Ultimate Phenoms-autografer ned till 1/1."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":88,"items":["Premiumkort i ett pack"]},"good":{"label":"Bra träff","score":89,"items":["Ultimate Rookies Autograph /299"]},"big":{"label":"Riktigt bra","score":95,"items":["Ultimate Phenoms Gold Auto /25"]},"jackpot":{"label":"Monsterhit","score":98,"items":["Ultimate Phenoms Purple /5 eller Black 1/1"]}},
+ "caveat":"Checklistan verifierar att korten finns, men BoxFinder saknar ett officiellt publicerat individuellt boxodds för de namngivna korten och visar därför bara serienumreringen."
+},
+"cc-2025-26-premier-hobby": {
+ "source_name":"Upper Deck 2025-26 Premier checklist",
+ "source_url":"https://upperdeck.com/checklist/2025-26-premier-checklist/",
+ "key_names":["Ivan Demidov","Matthew Schaefer","Michael Misa","Ryan Leonard","Zeev Buium","Gabe Perreault"],
+ "headline_chases":[
+   {"card":"Ivan Demidov Acetate Rookie Patch Auto /99","tier":"MONSTER","odds":"serial /99","why":"Premier-seriens klassiska signerade acetate-rookie med patch."},
+   {"card":"Matthew Schaefer Premier Gear Rookies Patch /25","tier":"MONSTER","odds":"serial /25","why":"Namngiven topprookie med lågnumrerad memorabilia."},
+   {"card":"Matthew Schaefer Premier Gear Rookies Premium Patch /3","tier":"JACKPOT","odds":"serial /3","why":"Endast tre exemplar."},
+   {"card":"Matthew Schaefer Viewpoints Auto Patch Gold /5","tier":"JACKPOT","odds":"serial /5","why":"Signerad premiumträff med patch."},
+   {"card":"Michael Misa Acetate Rookie Patch Auto Platinum 1/1","tier":"JACKPOT","odds":"1/1","why":"Unik rookieauto-patch."}
+ ],
+ "why_exciting":["Premier kombinerar namngivna topprookies med autografer och patchar.","Demidov, Schaefer och Misa har verifierade premiumkort från /99 ned till 1/1."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":89,"items":["6 premiumkort i ett pack"]},"good":{"label":"Bra träff","score":91,"items":["Rookieauto eller memorabilia"]},"big":{"label":"Riktigt bra","score":96,"items":["Demidov Acetate Rookie Patch Auto /99","Schaefer Patch /25"]},"jackpot":{"label":"Monsterhit","score":99,"items":["Premium Patch /3","Auto Patch /5","Platinum 1/1"]}},
+ "caveat":"Serienumreringen är verifierad men inte ett packodds. En box innehåller ett premium-pack, men en viss spelare eller korttyp är inte garanterad."
+},
+"cc-2025-26-rangers-box-set": {
+ "source_name":"Upper Deck 2025-26 New York Rangers Centennial checklist",
+ "source_url":"https://upperdeck.com/checklist/2025-26-nhl-new-york-rangers-centennial-checklist/",
+ "key_names":["Wayne Gretzky","Mark Messier","Henrik Lundqvist","Brian Leetch","Mike Richter","Igor Shesterkin"],
+ "headline_chases":[
+   {"card":"Komplett Rangers Centennial base set","tier":"BRA","odds":"1 komplett base set per box","why":"Det garanterade samlarinnehållet."},
+   {"card":"Red Parallel","tier":"BRA","odds":"1 per box","why":"Garanterad parallell."},
+   {"card":"Blueshirt Best – Gretzky, Messier, Lundqvist eller Shesterkin","tier":"MYCKET BRA","odds":"1 Blueshirt Best per box; exakt spelare varierar","why":"Namngivna Rangers-ikoner och stjärnor."},
+   {"card":"Henrik Lundqvist Autograph Parallel","tier":"MONSTER","odds":"Autograph Parallel 1:10 boxar; Lundqvist är SSP inom serien","why":"Signerad klubbikon."},
+   {"card":"Mark Messier Autograph Parallel","tier":"JACKPOT","odds":"Autograph Parallel 1:10 boxar; Messier är SSP inom serien","why":"Signerad legend med SSP-status."}
+ ],
+ "why_exciting":["Varje box ger hela basesetet, en Red Parallel och ett Blueshirt Best-kort.","Autografparallellen ligger på 1:10 boxar och inkluderar flera namngivna Rangers-legender."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":86,"items":["Komplett base set","Red Parallel 1/box","Blueshirt Best 1/box"]},"good":{"label":"Bra träff","score":76,"items":["Blueshirt Best på Gretzky, Messier eller Lundqvist"]},"big":{"label":"Riktigt bra","score":88,"items":["Autograph Parallel 1:10 boxar"]},"jackpot":{"label":"Monsterhit","score":82,"items":["Messier eller Lundqvist SSP-autograf"]}},
+ "caveat":"1:10 är oddset för valfri Autograph Parallel, inte för en särskild spelare. Messier och Lundqvist är SSP, så deras individuella odds är lägre."
+},
 "cc-2025-26-panini-prizm-fifa-choice": {
  "source_name":"Coolcard verified product snapshot",
  "source_url":"https://www.coolcard.se/category/boxar-paket-fotboll-endast-hobby",
@@ -575,6 +680,41 @@ CHASE_PROFILES = {
 
 
 CHASE_CARD_DB = [
+
+    # Parkhurst loose pack: exact rookies plus one low-numbered autograph patch.
+    dict(slug="cc-pack-2025-26-parkhurst-hobby", key="hockey:2025-26:parkhurst:236:ivan-demidov:base-rookie", player="Ivan Demidov", card="Base Rookie", number="236", rookie=True, tier="BRA", odds="Base rookies 1 per hobby pack on average", source="https://upperdeck.com/checklist/2025-26-parkhurst-checklist/"),
+    dict(slug="cc-pack-2025-26-parkhurst-hobby", key="hockey:2025-26:parkhurst:211:matthew-schaefer:base-rookie", player="Matthew Schaefer", card="Base Rookie", number="211", rookie=True, tier="BRA", odds="Base rookies 1 per hobby pack on average", source="https://upperdeck.com/checklist/2025-26-parkhurst-checklist/"),
+    dict(slug="cc-pack-2025-26-parkhurst-hobby", key="hockey:2025-26:parkhurst:236:ivan-demidov:auto-patch", player="Ivan Demidov", card="Rookie Auto Patch", number="236", rookie=True, tier="JACKPOT", odds="Serial /25; individual pack odds not published", source="https://upperdeck.com/checklist/2025-26-parkhurst-checklist/"),
+
+    # PWHL retail uses format-specific blaster odds.
+    dict(slug="cc-2025-26-pwhl-retail-blaster", key="hockey:2025-26:pwhl:51:kristyna-kaltounkova:young-guns", player="Kristyna Kaltounkova", card="Young Guns", number="51", rookie=True, tier="BRA", odds="Young Guns 1:3 blaster packs", source="https://upperdeck.com/checklist/2025-26-ud-pwhl-checklist/"),
+    dict(slug="cc-2025-26-pwhl-retail-blaster", key="hockey:2025-26:pwhl:57:casey-obrien:young-guns", player="Casey O'Brien", card="Young Guns", number="57", rookie=True, tier="BRA", odds="Young Guns 1:3 blaster packs", source="https://upperdeck.com/checklist/2025-26-ud-pwhl-checklist/"),
+    dict(slug="cc-2025-26-pwhl-retail-blaster", key="hockey:2025-26:pwhl:58:kiara-zanon:young-guns", player="Kiara Zanon", card="Young Guns", number="58", rookie=True, tier="BRA", odds="Young Guns 1:3 blaster packs", source="https://upperdeck.com/checklist/2025-26-ud-pwhl-checklist/"),
+
+    # Fleer Ultra PWHL exact autograph and serial-number chases.
+    dict(slug="cc-2025-26-fleer-ultra-pwhl-hobby", key="hockey:2025-26:fleer-ultra-pwhl:casey-obrien:rising-stars-black", player="Casey O'Brien", card="Rising Stars Black", number=None, rookie=True, tier="JACKPOT", odds="1/1", source="https://upperdeck.com/checklist/2025-26-fleer-ultra-pwhl-checklist/"),
+    dict(slug="cc-2025-26-fleer-ultra-pwhl-hobby", key="hockey:2025-26:fleer-ultra-pwhl:natalie-spooner:fresh-ink", player="Natalie Spooner", card="Fresh Ink Autograph SP", number=None, rookie=False, tier="MYCKET BRA", odds="Fresh Ink family 1:150 hobby/e-Pack", source="https://upperdeck.com/checklist/2025-26-fleer-ultra-pwhl-checklist/"),
+
+    # SP Authentic Future Watch and Sign of the Times rookie autographs.
+    dict(slug="cc-2025-26-sp-authentic-hobby", key="hockey:2025-26:sp-authentic:149:ivan-demidov:future-watch-auto", player="Ivan Demidov", card="Future Watch Autograph /999", number="149", rookie=True, tier="MYCKET BRA", odds="At least 1 Future Watch Autograph per box on average", source="https://upperdeck.com/checklist/2025-26-sp-authentic-checklist/"),
+    dict(slug="cc-2025-26-sp-authentic-hobby", key="hockey:2025-26:sp-authentic:168:matthew-schaefer:future-watch-auto", player="Matthew Schaefer", card="Future Watch Autograph /999", number="168", rookie=True, tier="MYCKET BRA", odds="At least 1 Future Watch Autograph per box on average", source="https://upperdeck.com/checklist/2025-26-sp-authentic-checklist/"),
+    dict(slug="cc-2025-26-sp-authentic-hobby", key="hockey:2025-26:sp-authentic:matthew-schaefer:sign-of-the-times-black", player="Matthew Schaefer", card="Sign of the Times Rookies Black /25", number=None, rookie=True, tier="MONSTER", odds="Serial /25", source="https://upperdeck.com/checklist/2025-26-sp-authentic-checklist/"),
+    dict(slug="cc-2025-26-sp-authentic-hobby", key="hockey:2025-26:sp-authentic:168:matthew-schaefer:fwa-patch-black", player="Matthew Schaefer", card="Future Watch Auto Patch Black", number="168", rookie=True, tier="JACKPOT", odds="1/1", source="https://upperdeck.com/checklist/2025-26-sp-authentic-checklist/"),
+
+    # Ultimate Collection exact low-numbered rookie autographs.
+    dict(slug="cc-2025-26-ultimate-hobby", key="hockey:2025-26:ultimate:matthew-schaefer:phenoms-gold-auto", player="Matthew Schaefer", card="Ultimate Phenoms Gold Autograph", number=None, rookie=True, tier="MONSTER", odds="Serial /25", source="https://upperdeck.com/checklist/2025-26-nhl-ultimate-collection-checklist/"),
+    dict(slug="cc-2025-26-ultimate-hobby", key="hockey:2025-26:ultimate:matthew-schaefer:phenoms-purple-auto", player="Matthew Schaefer", card="Ultimate Phenoms Purple Autograph", number=None, rookie=True, tier="JACKPOT", odds="Serial /5", source="https://upperdeck.com/checklist/2025-26-nhl-ultimate-collection-checklist/"),
+    dict(slug="cc-2025-26-ultimate-hobby", key="hockey:2025-26:ultimate:michael-misa:phenoms-black-auto", player="Michael Misa", card="Ultimate Phenoms Black Autograph", number=None, rookie=True, tier="JACKPOT", odds="1/1", source="https://upperdeck.com/checklist/2025-26-nhl-ultimate-collection-checklist/"),
+
+    # Premier exact acetate rookie auto patches and premium Schaefer memorabilia.
+    dict(slug="cc-2025-26-premier-hobby", key="hockey:2025-26:premier:ivan-demidov:acetate-rpa", player="Ivan Demidov", card="Acetate Rookie Patch Autograph", number=None, rookie=True, tier="MONSTER", odds="Serial /99", source="https://upperdeck.com/checklist/2025-26-premier-checklist/"),
+    dict(slug="cc-2025-26-premier-hobby", key="hockey:2025-26:premier:matthew-schaefer:viewpoints-auto-patch-gold", player="Matthew Schaefer", card="Viewpoints Auto Patch Gold", number=None, rookie=True, tier="JACKPOT", odds="Serial /5", source="https://upperdeck.com/checklist/2025-26-premier-checklist/"),
+    dict(slug="cc-2025-26-premier-hobby", key="hockey:2025-26:premier:michael-misa:acetate-rpa-platinum", player="Michael Misa", card="Acetate Rookie Patch Autograph Platinum", number=None, rookie=True, tier="JACKPOT", odds="1/1", source="https://upperdeck.com/checklist/2025-26-premier-checklist/"),
+
+    # Rangers Centennial guaranteed inserts and autograph family odds.
+    dict(slug="cc-2025-26-rangers-box-set", key="hockey:2025-26:rangers-centennial:wayne-gretzky:blueshirt-best", player="Wayne Gretzky", card="Blueshirt Best", number=None, rookie=False, tier="MYCKET BRA", odds="1 Blueshirt Best per box; exact player varies", source="https://upperdeck.com/checklist/2025-26-nhl-new-york-rangers-centennial-checklist/"),
+    dict(slug="cc-2025-26-rangers-box-set", key="hockey:2025-26:rangers-centennial:henrik-lundqvist:auto-parallel", player="Henrik Lundqvist", card="Autograph Parallel SSP", number=None, rookie=False, tier="MONSTER", odds="Autograph Parallel family 1:10 boxes; Lundqvist is SSP", source="https://upperdeck.com/checklist/2025-26-nhl-new-york-rangers-centennial-checklist/"),
+    dict(slug="cc-2025-26-rangers-box-set", key="hockey:2025-26:rangers-centennial:mark-messier:auto-parallel", player="Mark Messier", card="Autograph Parallel SSP", number=None, rookie=False, tier="JACKPOT", odds="Autograph Parallel family 1:10 boxes; Messier is SSP", source="https://upperdeck.com/checklist/2025-26-nhl-new-york-rangers-centennial-checklist/"),
 
     # MVP Silver Collection: exact Extended Rookies and verified family odds.
     dict(slug="cc-2025-26-mvp-hobby", key="hockey:2025-26:mvp-silver:275:matthew-schaefer:copper-script", player="Matthew Schaefer", card="Copper Script Extended Rookie", number="275", rookie=True, tier="MYCKET BRA", odds="Copper Script Extended Rookies 1:10 packs", source="https://upperdeck.com/checklist/2025-26-mvp-silver-collection-hockey-checklist/"),

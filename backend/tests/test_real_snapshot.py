@@ -98,12 +98,42 @@ def test_researched_hockey_products_have_named_chases_and_odds():
         "cc-pack-2025-26-skybox-hobby",
         "cc-2025-26-opc-platinum-retail-blaster",
         "cc-2025-26-extended-hobby",
+        "cc-pack-2025-26-parkhurst-hobby",
+        "cc-2025-26-pwhl-retail-blaster",
+        "cc-2025-26-fleer-ultra-pwhl-hobby",
+        "cc-2025-26-sp-authentic-hobby",
+        "cc-2025-26-ultimate-hobby",
+        "cc-2025-26-premier-hobby",
+        "cc-2025-26-rangers-box-set",
     )
     for slug in slugs:
         profile=seedmod.CHASE_PROFILES[slug]
         assert profile["key_names"]
         assert profile["headline_chases"]
         assert all(x.get("card") and x.get("odds") for x in profile["headline_chases"])
+
+def test_new_checklist_profiles_distinguish_family_odds_from_player_odds():
+    parkhurst=seedmod.CHASE_PROFILES["cc-pack-2025-26-parkhurst-hobby"]
+    spa=seedmod.CHASE_PROFILES["cc-2025-26-sp-authentic-hobby"]
+    rangers=seedmod.CHASE_PROFILES["cc-2025-26-rangers-box-set"]
+    assert "Matthew Schaefer #211" in parkhurst["key_names"]
+    assert any("1:40" in x["odds"] and "Autograph" in x["card"] for x in parkhurst["headline_chases"])
+    assert "2 autografer per box i snitt" in spa["tiers"]["everyday"]["items"]
+    assert any("1:10 boxar" in x["odds"] for x in rangers["headline_chases"])
+    assert "inte för en särskild spelare" in rangers["caveat"]
+
+def test_new_products_have_searchable_named_cards():
+    expected={
+        "cc-pack-2025-26-parkhurst-hobby":"Ivan Demidov",
+        "cc-2025-26-pwhl-retail-blaster":"Casey O'Brien",
+        "cc-2025-26-fleer-ultra-pwhl-hobby":"Natalie Spooner",
+        "cc-2025-26-sp-authentic-hobby":"Matthew Schaefer",
+        "cc-2025-26-ultimate-hobby":"Michael Misa",
+        "cc-2025-26-premier-hobby":"Ivan Demidov",
+        "cc-2025-26-rangers-box-set":"Henrik Lundqvist",
+    }
+    for slug,player in expected.items():
+        assert any(x["slug"]==slug and x["player"]==player for x in seedmod.CHASE_CARD_DB)
 
 def test_real_catalog_can_filter_to_loose_packs(monkeypatch):
     Session=session_factory()

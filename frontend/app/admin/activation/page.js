@@ -3,7 +3,7 @@ async function getData(){try{const r=await fetch(`${API}/admin/stores/activation
 export default async function ActivationPage(){
  const d=await getData();
  return <main className="intakePage">
-  <header className="nav sourceNav"><a className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a><nav><a href="/admin/source-hub">Datakällor</a><a href="/admin/intake">Koppla butik</a><a href="/admin/intake/batch">Batch</a><a href="/admin/activation">Aktiveringskö</a></nav><span className="version">v0.41.0</span></header>
+  <header className="nav sourceNav"><a className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a><nav><a href="/admin/source-hub">Datakällor</a><a href="/admin/intake">Koppla butik</a><a href="/admin/intake/batch">Batch</a><a href="/admin/activation">Aktiveringskö</a></nav><span className="version">v0.42.0</span></header>
   <section className="intakeHero"><span className="kicker">STORE ACTIVATION QUEUE</span><h1>Vilka butiker<br/><em>ska vi få live först?</em></h1><p>Prioriteringen väger sortimentsnytta mot faktisk teknisk readiness. En viktig butik hamnar högt, men kan fortfarande vara blockerad tills feed/API och policy är verifierade.</p></section>
   <section className="batchSummary"><article><small>KÄLLOR</small><b>{d.count||0}</b></article><article><small>REDO</small><b>{d.ready||0}</b></article><article><small>POLICYBLOCKERADE</small><b>{d.blocked||0}</b></article><article><small>SETUP KVAR</small><b>{d.setup||0}</b></article></section>
   <section className="activationQueue">
