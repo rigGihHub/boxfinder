@@ -12,16 +12,29 @@ const strategies = [
 
 async function getInitialRankings(path) {
   const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+  const controller = new AbortController();
+  let timer;
   try {
-    const response = await fetch(`${API}${path}`, {
+    const request = fetch(`${API}${path}`, {
       next: {revalidate: 300},
-      // Never hold the whole page hostage while a free Render instance wakes.
-      // The client shows its last successful result and refreshes in the background.
-      signal: AbortSignal.timeout(800),
+      signal: controller.signal,
     });
+    // Next wraps server fetches and did not consistently honour AbortSignal.timeout.
+    // Race explicitly so the page shell is never blocked by a sleeping API.
+    const response = await Promise.race([
+      request,
+      new Promise(resolve => {
+        timer = setTimeout(() => {
+          controller.abort();
+          resolve(null);
+        }, 700);
+      }),
+    ]);
     if (response.ok) return await response.json();
   } catch {
     // Return the page immediately; the client recovery component wakes the API.
+  } finally {
+    if (timer) clearTimeout(timer);
   }
   return {items: [], count: 0, disclaimer: "", unavailable: true};
 }
@@ -42,7 +55,7 @@ export default async function ResalePage({searchParams}){
     <header className="productNav">
       <Link className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></Link>
       <Link className="backLink" href="/">← STARTSIDAN</Link>
-      <span className="version">v0.47.1</span>
+      <span className="version">v0.47.2</span>
     </header>
 
     <section className="resaleHero">
