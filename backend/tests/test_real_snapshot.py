@@ -324,3 +324,28 @@ def test_real_catalog_can_filter_to_loose_packs(monkeypatch):
     assert all(x["format"]=="single pack" for x in result["products"])
     assert all(x["price"]<=250 for x in result["products"])
     db.close()
+
+def test_cross_category_expansion_has_direct_buy_links_and_rankable_chases():
+    rows = {row["slug"]: row for row in seedmod.REAL_CROSS_CATEGORY_EXPANSION}
+    assert {"Basket", "Baseboll", "NFL", "WWE", "UFC", "Golf", "Racing", "Star Wars"}.issubset(
+        {row["category"] for row in rows.values()}
+    )
+    assert all(row["buy_url"].startswith("https://www.coolcard.se/") for row in rows.values())
+    for slug in (
+        "cc-2025-26-topps-chrome-update-basketball-pack",
+        "cc-2025-26-topps-nba-hoops-hobby-pack",
+        "cc-2026-topps-baseball-series2-pack",
+        "cc-2026-topps-baseball-series2-hobby",
+        "cc-2026-topps-chrome-baseball-value",
+        "cc-2026-topps-flagship-nfl-pack",
+        "cc-2026-topps-universe-wwe-pack",
+        "cc-2026-fleer-ultra-golf-pack",
+        "cc-star-wars-unlimited-shadows-pack",
+        "cc-star-wars-unlimited-shadows-display",
+        "cc-star-wars-unlimited-twilight-pack",
+        "cc-star-wars-unlimited-twilight-display",
+    ):
+        profile = seedmod.CHASE_PROFILES[slug]
+        assert profile["key_names"]
+        assert profile["headline_chases"]
+        assert profile["source_url"].startswith("https://")
