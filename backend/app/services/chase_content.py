@@ -8,6 +8,9 @@ WEIGHTS={"everyday":0.20,"good":0.28,"big":0.32,"jackpot":0.20}
 
 def get_profile(db: Session, variant_id: int):
     row=db.scalar(select(ChaseProfile).where(ChaseProfile.variant_id==variant_id))
+    return profile_from_row(row)
+
+def profile_from_row(row: ChaseProfile | None):
     if not row: return None
     try: data=json.loads(row.content_json)
     except Exception: return None

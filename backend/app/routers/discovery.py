@@ -4,11 +4,11 @@ from fastapi import APIRouter, Depends, Query
 from sqlalchemy import select
 from sqlalchemy.orm import Session, joinedload
 from ..database import get_db
-from ..models import Offer, ProductFact, ProductVariant
+from ..models import ChaseProfile, Offer, ProductFact, ProductVariant
 from .products import list_products
 from ..services.discovery import GOALS, discover
 from ..services.product_explanation import explain_variant
-from ..services.chase_content import get_profile, content_summary, chase_ladder, chase_coverage, pull_profile
+from ..services.chase_content import profile_from_row, content_summary, chase_ladder, chase_coverage, pull_profile
 
 router=APIRouter(prefix="/discovery",tags=["discovery"])
 
@@ -50,6 +50,12 @@ def real_catalog(
         )
     )
     variants=db.execute(q).unique().scalars().all()
+    variant_ids=[v.id for v in variants]
+    fact_rows_by_variant={}
+    profiles_by_variant={}
+    if variant_ids:
+        fact_rows_by_variant={f.variant_id:f for f in db.scalars(select(ProductFact).where(ProductFact.variant_id.in_(variant_ids))).all()}
+        profiles_by_variant={p.variant_id:p for p in db.scalars(select(ChaseProfile).where(ChaseProfile.variant_id.in_(variant_ids))).all()}
     rows=[]
     now=datetime.utcnow()
     for v in variants:
@@ -68,14 +74,12 @@ def real_catalog(
             continue
         if format and format.strip().lower() not in (v.format or "").lower():
             continue
-        fact=db.scalar(select(ProductFact).where(ProductFact.variant_id==v.id))
-        facts=[]
-        if fact:
-            try: facts=json.loads(fact.facts_json or "[]")
-            except Exception: facts=[]
+        fact=fact_rows_by_variant.get(v.id)
+        try: facts=[str(x) for x in json.loads(fact.facts_json or "[]") if x] if fact else []
+        except Exception: facts=[]
         age_days=max(0,(now-best.observed_at).days) if best.observed_at else None
-        explanation=explain_variant(db,v)
-        chase_profile=get_profile(db,v.id)
+        explanation=explain_variant(db,v,facts_override=facts)
+        chase_profile=profile_from_row(profiles_by_variant.get(v.id))
         content_rating=content_summary(chase_profile)
         ladder=chase_ladder(chase_profile)
         coverage=chase_coverage(chase_profile)

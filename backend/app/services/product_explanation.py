@@ -45,8 +45,8 @@ def _appeal_reasons(v: ProductVariant, facts: list[str], price: float | None) ->
         reasons.append("Produkten har verifierat förpackningsinnehåll och kan jämföras utan att BoxFinder behöver gissa.")
     return reasons[:4]
 
-def explain_variant(db: Session, v: ProductVariant) -> dict:
-    facts=_facts(db,v.id)
+def explain_variant(db: Session, v: ProductVariant, facts_override: list[str] | None = None) -> dict:
+    facts=_facts(db,v.id) if facts_override is None else facts_override
     eligible=[
         o for o in v.offers
         if o.stock_status=="in_stock" and not o.is_preorder

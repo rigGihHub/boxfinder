@@ -1,4 +1,4 @@
-from sqlalchemy import create_engine, select, func
+from sqlalchemy import create_engine, select, func, event
 from sqlalchemy.orm import sessionmaker
 
 from app.database import Base
@@ -96,6 +96,14 @@ def test_new_pokemon_and_one_piece_products_have_named_checklists(monkeypatch):
     assert len(offers)==8
     assert all("/product/" in offer.url for offer in offers)
     assert all("Japanese" in products[slug].canonical_name or products[slug].category=="One Piece" for slug in slugs)
+    statements=[]
+    bind=db.get_bind()
+    def count_query(*args): statements.append(args[2])
+    event.listen(bind,"before_cursor_execute",count_query)
+    catalog=real_catalog(category="Pokémon",budget=None,format=None,limit=100,db=db)
+    event.remove(bind,"before_cursor_execute",count_query)
+    assert any(x["slug"]=="cc-pokemon-ninja-spinner-m4-pack" and x["chase_coverage"]["status"]=="card_level" for x in catalog["products"])
+    assert len(statements)<=5, f"real catalog should batch facts and chase profiles, got {len(statements)} SQL statements"
     db.close()
 
 def test_all_chase_profiles_point_to_seeded_products(monkeypatch):
