@@ -236,6 +236,17 @@ def test_football_retail_profiles_only_assert_retail_specific_odds():
     assert "35-korts hanger-pack" in ucc["caveat"]
     assert "Choice- och hobbyexklusiva" in prizm["caveat"]
 
+def test_ucc_hanger_uses_exact_product_buy_url():
+    product = next(
+        row for row in seedmod.REAL_SNAPSHOT
+        if row["slug"] == "cc-2025-26-topps-ucc-flagship-hanger"
+    )
+    assert product["buy_url"] == (
+        "https://www.coolcard.se/en/product/"
+        "sealed-hanger-box-35-cards-2025-26-topps-ucc-flagship-soccer"
+    )
+
+
 def test_football_search_cards_include_rookies_and_star_autographs():
     expected={
         "cc-2025-26-pitch-kings-la-liga":("Karl Etta Eyong",True),
