@@ -241,10 +241,9 @@ def test_ucc_hanger_uses_exact_product_buy_url():
         row for row in seedmod.REAL_SNAPSHOT
         if row["slug"] == "cc-2025-26-topps-ucc-flagship-hanger"
     )
-    assert product["buy_url"] == (
-        "https://www.coolcard.se/en/product/"
-        "sealed-hanger-box-35-cards-2025-26-topps-ucc-flagship-soccer"
-    )
+    assert product["store_name"] == "Cardland"
+    assert product["price"] == 178
+    assert product["buy_url"] == "https://www.cardland.se/fotboll/2025-26-topps-ucc-flagship-hanger-box"
 
 
 def test_football_search_cards_include_rookies_and_star_autographs():
