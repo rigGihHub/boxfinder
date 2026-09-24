@@ -9,6 +9,7 @@ from .products import list_products
 from ..services.discovery import GOALS, discover
 from ..services.product_explanation import explain_variant
 from ..services.chase_content import profile_from_row, content_summary, chase_ladder, chase_coverage, pull_profile
+from ..services.purchase_links import is_direct_purchase_url
 
 router=APIRouter(prefix="/discovery",tags=["discovery"])
 
@@ -65,6 +66,7 @@ def real_catalog(
             if o.source_kind=="verified_snapshot"
             and o.stock_status=="in_stock"
             and not o.is_preorder
+            and is_direct_purchase_url(o.url)
         ]
         if not real:
             continue

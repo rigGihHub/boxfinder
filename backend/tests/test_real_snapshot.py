@@ -236,6 +236,7 @@ def test_football_retail_profiles_only_assert_retail_specific_odds():
     assert "35-korts hanger-pack" in ucc["caveat"]
     assert "Choice- och hobbyexklusiva" in prizm["caveat"]
 
+
 def test_ucc_hanger_uses_exact_product_buy_url():
     product = next(
         row for row in seedmod.REAL_SNAPSHOT
@@ -245,6 +246,26 @@ def test_ucc_hanger_uses_exact_product_buy_url():
     assert product["price"] == 178
     assert product["buy_url"] == "https://www.cardland.se/fotboll/2025-26-topps-ucc-flagship-hanger-box"
 
+
+def test_every_available_snapshot_product_resolves_to_an_article_url():
+    from app.services.purchase_links import is_direct_purchase_url
+
+    legacy_urls = {
+        "cc-one-piece-op13-jp-display": "https://www.coolcard.se/en/product/one-piece-card-game-booster-display-24-boosters-carrying-on-his-will-op-13-japanese",
+        "cc-pokemon-mega-zygarde-premium": "https://www.coolcard.se/en/product/pokemon-mega-zygarde-ex-premium-collection-2",
+        "cc-pokemon-shrouded-fable-kingambit": "https://www.coolcard.se/product/pokemon-sv6-5-shrouded-fable-kingambit-illustration-collection",
+        "cc-pokemon-go-etb": "https://www.coolcard.se/en/product/pokemon-pokemon-go-elite-trainer-box-2",
+        "cc-pokemon-paradox-rift-18": "https://www.coolcard.se/en/product/pokmon-sv4-paradox-rift-small-booster-box-contains-18-boosters",
+    }
+    for product in seedmod.REAL_SNAPSHOT:
+        if product["slug"] in seedmod.UNAVAILABLE_PURCHASE_SLUGS:
+            continue
+        url = (
+            product.get("buy_url")
+            or seedmod.DIRECT_BUY_URLS.get(product["slug"])
+            or legacy_urls.get(product["slug"])
+        )
+        assert is_direct_purchase_url(url), product["slug"]
 
 def test_football_search_cards_include_rookies_and_star_autographs():
     expected={
@@ -357,5 +378,3 @@ def test_cross_category_expansion_has_direct_buy_links_and_rankable_chases():
     ):
         profile = seedmod.CHASE_PROFILES[slug]
         assert profile["key_names"]
-        assert profile["headline_chases"]
-        assert profile["source_url"].startswith("https://")

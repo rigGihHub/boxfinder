@@ -12,12 +12,17 @@ from ..services.price_compare import comparison_for_variant
 from ..services.price_signals import recent_signals
 from ..services.product_explanation import explain_variant
 from ..services.chase_content import get_profile, profile_from_row, content_summary, chase_ladder, chase_coverage, pull_profile
+from ..services.purchase_links import is_direct_purchase_url
 
 router = APIRouter(prefix="/products", tags=["products"])
 
 def serialize_variant(v: ProductVariant):
-    in_stock = [o for o in v.offers if o.stock_status == "in_stock" and not o.is_preorder]
-    offers = in_stock or [o for o in v.offers if not o.is_preorder]
+    offers = [
+        o for o in v.offers
+        if o.stock_status == "in_stock"
+        and not o.is_preorder
+        and is_direct_purchase_url(o.url)
+    ]
     if not offers:
         return None
     best = min(offers, key=lambda o: o.price_sek)

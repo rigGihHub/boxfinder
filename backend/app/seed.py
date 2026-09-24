@@ -191,6 +191,52 @@ REAL_SNAPSHOT += REAL_PACK_SNAPSHOT
 REAL_SNAPSHOT += REAL_NONSPORT_EXPANSION
 REAL_SNAPSHOT += REAL_CROSS_CATEGORY_EXPANSION
 
+DIRECT_BUY_URLS = {
+    "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",
+    "cc-2025-26-extended-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-upper-deck-extended-series-retail-4-paket",
+    "cc-2025-26-opc-platinum-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-upper-deck-o-pee-chee-platinum-retail",
+    "cc-2025-26-pwhl-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-upper-deck-pwhl-professional-womens-hockey-league-retail-5-packs",
+    "cc-2025-26-series2-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-upper-deck-series-2-retail-4-paket",
+    "cc-2025-26-rangers-box-set": "https://www.coolcard.se/product/hel-box-2025-26-upper-deck-new-york-rangers-centennial-box-set",
+    "cc-2025-26-opc-hobby": "https://www.coolcard.se/product/hel-box-2025-26-upper-deck-o-pee-chee-hobby-18-packs",
+    "cc-2025-26-pwhl-hobby": "https://www.coolcard.se/product/hel-box-2025-26-upper-deck-pwhl-professional-womens-hockey-league-hobby",
+    "cc-2025-26-mvp-hobby": "https://www.coolcard.se/product/hel-box-2025-26-upper-deck-mvp-hobby-silver-collection-cdd-20-paket",
+    "cc-2025-26-series1-hobby": "https://www.coolcard.se/product/hel-box-12-paket-2025-26-upper-deck-series-1-hobby",
+    "cc-2025-26-skybox-metal-hobby": "https://www.coolcard.se/product/hel-box-15-paket-2025-26-upper-deck-nhl-skybox-metal-universe-hobby-20018",
+    "cc-2025-26-extended-hobby": "https://www.coolcard.se/product/hel-box-12-paket-2025-26-upper-deck-extended-series-hobby",
+    "cc-2025-26-series2-hobby": "https://www.coolcard.se/product/hel-box-12-paket-2025-26-upper-deck-series-2-hobby",
+    "cc-2025-26-fleer-ultra-pwhl-hobby": "https://www.coolcard.se/product/hel-box-2025-2026-fleer-ultra-pwhl-hobby",
+    "cc-2025-26-sp-authentic-hobby": "https://www.coolcard.se/product/hel-box-2025-26-upper-deck-sp-authentic-hobby",
+    "cc-2025-26-ultimate-hobby": "https://www.coolcard.se/product/hel-box-2025-26-upper-deck-ultimate-hobby",
+    "cc-pack-2025-26-opc-hobby": "https://www.coolcard.se/product/1st-paket-2025-26-upper-deck-o-pee-chee-hobby",
+    "cc-pack-2025-26-mvp-hobby": "https://www.coolcard.se/product/1st-paket-2025-26-upper-deck-mvp-hobby-silver-collection-cdd-8-cards",
+    "cc-pack-2025-26-pwhl-hobby": "https://www.coolcard.se/product/1st-paket-2025-26-upper-deck-pwhl-professional-womens-hockey-league-hobby",
+    "cc-pack-2025-26-parkhurst-hobby": "https://www.coolcard.se/product/1st-paket-2025-26-upper-deck-parkhurst-hobby",
+    "cc-pack-2025-26-skybox-hobby": "https://www.coolcard.se/product/1st-paket-2025-26-upper-deck-nhl-skybox-metal-universe-hobby",
+    "cc-pack-2025-26-series1-hobby": "https://www.coolcard.se/product/1st-paket-2025-26-upper-deck-series-1-hobby",
+    "cc-2025-26-pitch-kings-la-liga": "https://www.coolcard.se/product/hel-box-2025-26-panini-pitch-kings-la-liga-international-hobby",
+    "cc-2026-topps-mls-chrome-value": "https://www.coolcard.se/product/hel-value-box-2026-topps-major-league-soccer-chrome-soccer-mls",
+    "cc-2025-26-panini-prizm-fifa-choice": "https://www.coolcard.se/product/hel-box-2025-26-panini-prizm-fifa-soccer-choice-8-cards-per-box",
+    "cc-2026-topps-chrome-premier-league-hobby": "https://www.coolcard.se/product/hel-box-2026-topps-chrome-premier-league-soccer-trading-cards-hobby-20-paket",
+    "cc-2026-topps-finest-premier-league-wave2": "https://www.coolcard.se/product/hel-box-2026-topps-finest-premier-league-soccer-hobby",
+    "cc-2025-26-panini-prizm-fifa-retail": "https://www.coolcard.se/product/hel-box-2025-26-panini-prizm-fifa-soccer-retail-24-packs",
+    "cc-2025-26-topps-chrome-arsenal-hobby": "https://www.coolcard.se/product/hel-box-2025-26-topps-chrome-arsenal-soccer-hobby",
+    "cc-2025-26-topps-bayern-lineage": "https://www.coolcard.se/product/hel-box-2025-26-topps-fc-bayern-munchen-lineage-hobby",
+    "cc-pokemon-white-flare-jp-display": "https://www.coolcard.se/product/pokmon-white-flare-sv11w-booster-display-30-paket-japansk",
+    "cc-pokemon-temporal-forces-18": "https://www.coolcard.se/product/pokmon-sv5-temporal-forces-liten-booster-box-innehaller-18-boosters",
+}
+
+UNAVAILABLE_PURCHASE_SLUGS = {
+    "cc-2025-26-clear-cut-hobby",
+    "cc-2025-26-premier-hobby",
+    "cc-2026-futera-world-football-fx3",
+    "cc-2026-topps-argentina-team-set",
+    "cc-2025-26-topps-real-madrid-team-set",
+    "cc-2025-topps-marvel-studios-chrome-hobby",
+    "cc-2026-topps-disney-chrome-value",
+    "cc-marvel-2025-deadpool-value",
+}
+
 def seed_verified_snapshot():
     db = SessionLocal()
     try:
@@ -225,7 +271,7 @@ def seed_verified_snapshot():
             "cc-one-piece-op13-jp-display":"https://www.coolcard.se/en/product/one-piece-card-game-booster-display-24-boosters-carrying-on-his-will-op-13-japanese",
             "cc-2026-topps-disney-chrome-value":"https://www.coolcard.se/en/product/sealed-value-box-2026-topps-disney-chrome-8-packs",
             "cc-pokemon-mega-zygarde-premium":"https://www.coolcard.se/en/product/pokemon-mega-zygarde-ex-premium-collection-2",
-            "cc-pokemon-shrouded-fable-kingambit":"https://www.coolcard.se/en/product/pokemon-sv6-5-shrouded-fable-illustration-collection-kingambit",
+            "cc-pokemon-shrouded-fable-kingambit":"https://www.coolcard.se/product/pokemon-sv6-5-shrouded-fable-kingambit-illustration-collection",
             "cc-pokemon-go-etb":"https://www.coolcard.se/en/product/pokemon-pokemon-go-elite-trainer-box-2",
             "cc-pokemon-paradox-rift-18":"https://www.coolcard.se/en/product/pokmon-sv4-paradox-rift-small-booster-box-contains-18-boosters",
             "cc-pokemon-black-bolt-jp-display":"https://www.coolcard.se/en/product/pokmon-black-bolt-sv11b-booster-box-30-paket-japanese",
@@ -289,13 +335,14 @@ def seed_verified_snapshot():
                 source_url=disney_url
             else:
                 source_url = pack_url if row["fmt"]=="single pack" else category_url
-            source_url = row.get("buy_url") or buy_urls.get(row["slug"]) or source_url
+            source_url = row.get("buy_url") or DIRECT_BUY_URLS.get(row["slug"]) or buy_urls.get(row["slug"]) or source_url
+            stock_status = "out_of_stock" if row["slug"] in UNAVAILABLE_PURCHASE_SLUGS else row.get("stock", "in_stock")
             observed_at = row.get("observed_at", REAL_EXPANSION_OBSERVED_AT if row in REAL_NONSPORT_EXPANSION else REAL_SNAPSHOT_OBSERVED_AT)
             if offer is None:
                 offer = Offer(
                     store_id=row_store.id, variant_id=variant.id,
                     external_id=row["sku"], source_title=row["name"],
-                    price_sek=row["price"], stock_status=row.get("stock","in_stock"),
+                    price_sek=row["price"], stock_status=stock_status,
                     source_kind="verified_snapshot", source_confidence=100,
                     match_confidence=1.0, match_status="manual_matched",
                     observed_at=observed_at, url=source_url,
@@ -304,13 +351,13 @@ def seed_verified_snapshot():
                 db.add(offer); db.flush()
                 db.add(PriceHistory(
                     offer_id=offer.id, price_sek=row["price"],
-                    stock_status=row.get("stock","in_stock"),
+                    stock_status=stock_status,
                     observed_at=observed_at,
                 ))
             else:
                 offer.variant_id=variant.id
                 offer.price_sek=row["price"]
-                offer.stock_status=row.get("stock","in_stock")
+                offer.stock_status=stock_status
                 offer.source_kind="verified_snapshot"
                 offer.source_confidence=100
                 offer.match_confidence=1.0
