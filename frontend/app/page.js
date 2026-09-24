@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 5103)
-Total output lines: 146
-
 import FreshDataButton from "./components/FreshDataButton";
 import {API, getJson} from "./lib/api";
 
@@ -82,7 +79,31 @@ export default async function Home({ searchParams }) {
 
       <section className="ticker"><span>BOX VALUE SCORE</span><b>◆</b><span>UPSIDE</span><b>◆</b><span>ROOKIE STRENGTH</span><b>◆</b><span>HIT DENSITY</span><b>◆</b><span>DEAL CONFIDENCE</span></section>
 
-      <section className="intelStrip"><article><span>01</span><small>PRIS</small><b>Är boxen billig just nu?</b><p>Jämför butik, historik och marknadsnivå.</p></article><article><span>02</span><small>INNEHÅLL</small><b>Vad finns faktiskt i boxen?</b><p>Rookies, inserts, autos, parallels och chase cards.</p></article><article><span>03</span><small>ODDS</small><b>Hur sannolikt är det?</b><p>Officiella o…1103 tokens truncated… title="Balanserad" subtitle="VÄRDE + GOLV + HITS" items={overview.balanced || []}/>
+      <section className="intelStrip"><article><span>01</span><small>PRIS</small><b>Är boxen billig just nu?</b><p>Jämför butik, historik och marknadsnivå.</p></article><article><span>02</span><small>INNEHÅLL</small><b>Vad finns faktiskt i boxen?</b><p>Rookies, inserts, autos, parallels och chase cards.</p></article><article><span>03</span><small>ODDS</small><b>Hur sannolikt är det?</b><p>Officiella och härledda odds hålls isär.</p></article><article><span>04</span><small>VÄRDE</small><b>Vad är korten värda?</b><p>Sålda raw-kort väger tyngre än annonser.</p></article></section>
+
+      <FreshDataButton />
+
+      <section className="homeResaleSection">
+        <div className="sectionHead"><div><span className="kicker">SPORT- OCH VARUMÄRKESNEUTRAL</span><h2>Bäst möjlighet till säljbar träff</h2></div><p>{resaleData.count || 0} verifierade chase-profiler jämförs</p></div>
+        {resaleProducts.length ? <div className="homeResaleGrid">{resaleProducts.map((x,i)=><a href={`/product/${x.id}`} key={x.id}><span>#{i+1}</span><div><small>{x.category} · {x.evidence_grade}</small><h3>{x.name}</h3><p>{x.sellable_chases?.[0]?.card || 'Verifierad chase-profil'}</p></div><aside><b>{x.resale_score}</b><small>SÄLJPOTENTIAL</small><strong>{Math.round(x.price)} kr</strong></aside></a>)}</div> : <div className="chaseEmpty"><b>Ingen tvärkategoriranking ännu.</b><span>Produkter visas först när chase-innehållet är verifierat.</span></div>}
+        <a className="homeResaleCta" href="/resale">ÖPPNA HELA RANKINGEN →</a>
+      </section>
+
+      <section className="discoveryHomeCta">
+        <div><small>FILTRERA OM DU VILL</small><h2>Kategorin är valfri — säljpotentialen styr.</h2><p>Begränsa först när du har en budget eller uttryckligen vill ha en viss sport, TCG eller produktform.</p></div>
+        <a href="/resale">RANKA ALLT →</a>
+      </section>
+
+      <section className="ranking" id="ranking"><div className="sectionHead"><div><span className="kicker">MEST PRISVÄRD JUST NU</span><h2>Mest box för pengarna</h2></div><p>{products.length} produkter visas · saknad data ger ingen låtsaspoäng</p></div>{products.length ? <div className="grid">{products.slice(0,6).map((p,i)=><ProductCard p={p} i={i} key={p.id}/>)}</div> : <div className="launchState"><div className="launchMain"><span className="launchBadge">DATA MOTOR AKTIV</span><h3>Topplistan väntar på första verifierade boxarna.</h3><p>BoxFinder är igång, men vi visar inte demodata som riktiga fynd. När butikserbjudanden, checklista, odds och kortvärden är tillräckligt bra fylls topplistan automatiskt.</p><div className="launchSteps"><span><b>01</b> Butikspris</span><i>→</i><span><b>02</b> Checklista</span><i>→</i><span><b>03</b> Odds</span><i>→</i><span><b>04</b> Marknadsvärde</span><i>→</i><span><b>05</b> Ranking</span></div></div><div className="launchStats"><div><small>PRODUKTER</small><b>{quality.products ?? 0}</b></div><div><small>VARIANTER</small><b>{quality.variants ?? 0}</b></div><div><small>BUTIKER</small><b>{quality.stores ?? 0}</b></div><div><small>REDO FÖR RANKING</small><b>{readiness.filter?.(x=>x.status==='ready').length ?? 0}</b></div></div></div>}</section>
+
+
+      <section className="battleSection" id="battle"><div className="sectionHead"><div><span className="kicker">BOX BATTLE</span><h2>Ställ 2–4 boxar mot varandra</h2></div><p>Vinnare per kategori — men bara när datan räcker.</p></div><div className="battleGrid">{products.length ? products.slice(0,4).map((p,i)=><a className="battlePick" href={`/product/${p.id}`} key={`battle-${p.id}`}><span>0{i+1}</span><div><small>{p.category} · {p.format}</small><h3>{p.name}</h3><p>{Math.round(p.price)} kr · Value {p.box_value_score ?? '—'}</p></div></a>) : ['Värde','Monsterhit','Rookies','Risk'].map((x,i)=><article className="battlePick battleGhost" key={x}><span>0{i+1}</span><div><small>BOX BATTLE</small><h3>{x}</h3><p>Vinnare visas när minst två verifierade produkter finns.</p></div></article>)}</div>{products.length >= 2 && <a className="battleCta" href={`${API}/compare?ids=${products.slice(0,4).map(p=>p.id).join(',')}`}>JÄMFÖR TOPPBOXARNA →</a>}<p className="battleNote">Box Battle jämför pris, EV/pris, rookies, hit density, upside, golv, risk, datakvalitet och Box Value. Saknas tillräckligt underlag lämnas kategorin utan vinnare.</p></section>
+
+      <section className="profiles" id="profiles">
+        <div className="sectionHead"><div><span className="kicker">OLIKA SÄTT ATT VINNA RANKINGEN</span><h2>Välj vad du faktiskt jagar</h2></div><p>En jackpotbox och en bra allroundbox är inte samma sak.</p></div>
+        <div className="profileGrid">
+          <MiniRanking title="Monsterhit" subtitle="HÖGST UPSIDE" items={overview.upside || []}/>
+          <MiniRanking title="Balanserad" subtitle="VÄRDE + GOLV + HITS" items={overview.balanced || []}/>
           <MiniRanking title="Rookies" subtitle="STARKAST ROOKIEKLASS" items={overview.rookies || []}/>
           <MiniRanking title="Mest action" subtitle="HIT DENSITY" items={overview.hit_density || []}/>
           <MiniRanking title="Under 500 kr" subtitle="LÅG BUDGET" items={overview.under_500 || []}/>
