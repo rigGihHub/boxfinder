@@ -134,6 +134,48 @@ def test_all_chase_profiles_point_to_seeded_products(monkeypatch):
     assert found==slugs
     db.close()
 
+def test_latest_box_and_pack_expansion_has_direct_links_and_profiles(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    db=Session()
+    slugs={
+        "cc-2026-topps-universe-wwe-value",
+        "cc-2026-topps-universe-wwe-hobby",
+        "cc-2026-topps-baseball-series2-value",
+        "cc-2026-topps-chrome-ufc-value",
+        "cc-2026-topps-stadium-club-ufc-pack",
+        "cc-2026-topps-stadium-club-ufc-hobby",
+        "cc-2025-26-spx-hobby-pack",
+        "cc-2025-26-spx-hobby",
+        "cc-2025-topps-disney-wonder-pack",
+        "cc-2025-topps-chrome-deadpool-hobby",
+    }
+    rows=db.execute(
+        select(Product, Offer)
+        .join(ProductVariant, ProductVariant.product_id==Product.id)
+        .join(Offer, Offer.variant_id==ProductVariant.id)
+        .where(Product.slug.in_(slugs))
+    ).all()
+    assert {product.slug for product,_ in rows}==slugs
+    assert all("/product/" in offer.url for _,offer in rows)
+    assert all(slug in seedmod.CHASE_PROFILES for slug in slugs)
+    assert all(seedmod.CHASE_PROFILES[slug]["key_names"] for slug in slugs)
+    assert all(seedmod.CHASE_PROFILES[slug]["headline_chases"] for slug in slugs)
+    db.close()
+
+def test_retail_and_loose_pack_profiles_do_not_claim_hobby_box_guarantees():
+    retail_slugs={
+        "cc-2026-topps-universe-wwe-value",
+        "cc-2026-topps-baseball-series2-value",
+        "cc-2026-topps-chrome-ufc-value",
+    }
+    for slug in retail_slugs:
+        caveat=seedmod.CHASE_PROFILES[slug]["caveat"].lower()
+        assert "inte" in caveat and ("garanti" in caveat or "garanter" in caveat)
+    for slug in ("cc-2026-topps-stadium-club-ufc-pack","cc-2025-26-spx-hobby-pack","cc-2025-topps-disney-wonder-pack"):
+        assert "löst pack" in seedmod.CHASE_PROFILES[slug]["caveat"].lower()
+
 def test_series2_and_clearcut_have_card_level_chases():
     for slug in ("cc-2025-26-series2-hobby","cc-2025-26-clear-cut-hobby"):
         profile=seedmod.CHASE_PROFILES[slug]
@@ -378,3 +420,5 @@ def test_cross_category_expansion_has_direct_buy_links_and_rankable_chases():
     ):
         profile = seedmod.CHASE_PROFILES[slug]
         assert profile["key_names"]
+        assert profile["headline_chases"]
+        assert profile["source_url"].startswith("https://")

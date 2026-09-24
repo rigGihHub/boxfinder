@@ -183,6 +183,16 @@ REAL_CROSS_CATEGORY_EXPANSION = [
     dict(slug="cc-star-wars-unlimited-shadows-display", name="Star Wars Unlimited Shadows of the Galaxy Booster Display", category="Star Wars", manufacturer="Fantasy Flight Games", year="2024", series="Shadows of the Galaxy", fmt="booster box", sku="SWU105813-24", price=1099, packs=24, cards=16, stock="in_stock", facts=["24 boosterpaket, 16 kort per pack", "Varje pack har rare/legendary-plats och foil-plats", "Showcase-ledare är extremt sällsynta och inte garanterade"], buy_url="https://www.coolcard.se/product/star-wars-unlimited-shadows-of-the-galaxy-booster-display"),
     dict(slug="cc-star-wars-unlimited-twilight-pack", name="Star Wars Unlimited Twilight of the Republic Booster Pack", category="Star Wars", manufacturer="Fantasy Flight Games", year="2024", series="Twilight of the Republic", fmt="single pack", sku="FSWH0301-1", price=69, packs=1, cards=16, stock="in_stock", facts=["16 kort: 9 common, 3 uncommon, 1 rare/legendary, 1 leader, 1 base/token och 1 foil", "Set med över 250 kort och Clone Wars-tema", "Showcase och parallelvariant är inte garanterad"], buy_url="https://www.coolcard.se/product/star-wars-unlimited-twilight-of-the-republic-booster"),
     dict(slug="cc-star-wars-unlimited-twilight-display", name="Star Wars Unlimited Twilight of the Republic Booster Display", category="Star Wars", manufacturer="Fantasy Flight Games", year="2024", series="Twilight of the Republic", fmt="booster box", sku="FSWH0301-24", price=1199, packs=24, cards=16, stock="in_stock", facts=["24 boosterpaket, 16 kort per pack", "Över 250 kort med Clone Wars-karaktärer", "Varje pack har rare/legendary-plats och foil-plats"], buy_url="https://www.coolcard.se/product/star-wars-unlimited-twilight-of-the-republic-booster-display"),
+    dict(slug="cc-2026-topps-universe-wwe-value", name="2026 Topps Universe WWE Wrestling Value Box", category="WWE", manufacturer="Topps", year="2026", series="Topps Universe WWE", fmt="value box", sku="FGC007165", price=329, packs=6, cards=6, stock="in_stock", facts=["6 value-pack, 6 kort per pack", "Autografer, relics, numrerade paralleller och short prints kan dras", "Ingen autograf eller relic är garanterad i value-formatet"], buy_url="https://www.coolcard.se/product/hel-value-box-2026-topps-universe-wwe-wrestling-6-paket"),
+    dict(slug="cc-2026-topps-universe-wwe-hobby", name="2026 Topps Universe WWE Wrestling Hobby Box", category="WWE", manufacturer="Topps", year="2026", series="Topps Universe WWE", fmt="hobby box", sku="FGC007161-10", price=1899, packs=10, cards=12, stock="in_stock", facts=["10 hobby-pack, 12 kort per pack", "2 autografer och 1 relic per box", "Numrerade paralleller, autograph relics och short prints finns"], buy_url="https://www.coolcard.se/product/hel-box-2026-topps-universe-wwe-wrestling-hobby-10-paket"),
+    dict(slug="cc-2026-topps-baseball-series2-value", name="2026 Topps Baseball MLB Series 2 Value Box", category="Baseboll", manufacturer="Topps", year="2026", series="Topps Baseball Series 2", fmt="value box", sku="FGC006608", price=329, packs=6, cards=12, stock="in_stock", facts=["6 value-pack, 12 kort per pack", "Varje pack har 11 base och 1 Stars of MLB/Titans-insert", "Holiday-varianter är value-exklusiva", "Autografer och relics kan dras men är inte garanterade"], buy_url="https://www.coolcard.se/product/hel-value-box-2026-topps-baseball-series-2-6-paket"),
+    dict(slug="cc-2026-topps-chrome-ufc-value", name="2026 Topps Chrome UFC Fighting Value Box", category="UFC", manufacturer="Topps", year="2026", series="Topps Chrome UFC", fmt="value box", sku="FGC007136", price=349, packs=6, cards=4, stock="in_stock", facts=["6 value-pack, 4 kort per pack", "2 Base Refractors och 3 UFC Glove Refractors per box", "Autografer och case hits finns men är inte garanterade"], buy_url="https://www.coolcard.se/en/product/sealed-value-box-2026-topps-chrome-ufc"),
+    dict(slug="cc-2026-topps-stadium-club-ufc-pack", name="2026 Topps Stadium Club UFC Fighting Hobby Pack", category="UFC", manufacturer="Topps", year="2026", series="Topps Stadium Club UFC", fmt="single pack", sku="FGC007305_01", price=99, packs=1, cards=8, stock="in_stock", facts=["8 kort per hobby-pack", "Hobbyboxen har 2 autografer i snitt; ett löst pack har ingen garanti", "Fight Motion Autos, Dual Autos, Beam Team och Triumvirates finns"], buy_url="https://www.coolcard.se/product/1st-paket-2026-topps-stadium-club-ufc-fighting-hobby"),
+    dict(slug="cc-2026-topps-stadium-club-ufc-hobby", name="2026 Topps Stadium Club UFC Fighting Hobby Box", category="UFC", manufacturer="Topps", year="2026", series="Topps Stadium Club UFC", fmt="hobby box", sku="FGC007305_16", price=1399, packs=16, cards=8, stock="in_stock", facts=["16 hobby-pack, 8 kort per pack", "2 autografer per box i snitt", "On-card autos, Gold Minted Chrome, Members Only, Beam Team och Triumvirates finns"], buy_url="https://www.coolcard.se/product/hel-box-2025-26-topps-stadium-club-ufc-fighting-hobby"),
+    dict(slug="cc-2025-26-spx-hobby-pack", name="2025-26 Upper Deck SPx Hockey Hobby Pack", category="Hockey", manufacturer="Upper Deck", year="2025-26", series="SPx", fmt="single pack", sku="UD18576", price=199, packs=1, cards=3, stock="in_stock", facts=["3 kort per hobby-pack", "Rookie SuperScripts ligger 1:120 hobby-pack över checklistan", "Rookie Holograms ligger 1:86 hobby-pack", "Ett löst pack har ingen boxgaranti"], buy_url="https://www.coolcard.se/en/product/1-pack-2025-26-upper-deck-spx-hobby"),
+    dict(slug="cc-2025-26-spx-hobby", name="2025-26 Upper Deck SPx Hockey Hobby Box", category="Hockey", manufacturer="Upper Deck", year="2025-26", series="SPx", fmt="hobby box", sku="UD18575", price=1395, packs=8, cards=3, stock="in_stock", facts=["8 hobby-pack, 3 kort per pack", "4 base rookies, 3 Silver och 1 Gold parallel per box i snitt", "Rookie Holograms faller cirka 2 per case", "Autografer och 1/1-paralleller finns men är inte boxgaranterade"], buy_url="https://www.coolcard.se/product/hel-box-2025-26-upper-deck-spx-hobby-8-paket"),
+    dict(slug="cc-2025-topps-disney-wonder-pack", name="2025 Topps Disney Wonder Hobby Pack", category="Disney", manufacturer="Topps", year="2025", series="Disney Wonder", fmt="single pack", sku="FGC006414-01", price=99, packs=1, cards=6, stock="in_stock", facts=["6 kort per hobby-pack", "Tier 2-kort 1 per pack", "Enchanted Autographs, Princess Sketch Cards och 1/1 PrincessFractors finns", "Ett löst pack garanterar ingen autograf eller sketch"], buy_url="https://www.coolcard.se/product/topps-disney-wonder-hobby-paket-6-kort"),
+    dict(slug="cc-2025-topps-chrome-deadpool-hobby", name="2025 Topps Chrome Marvel Deadpool Hobby Box", category="Marvel", manufacturer="Topps", year="2025", series="Marvel Deadpool Chrome", fmt="hobby box", sku="FGC006433-10", price=3699, packs=10, cards=8, stock="in_stock", facts=["10 hobby-pack, 8 kort per pack", "Ryan Reynolds- och Hugh Jackman-autografer finns", "Sketch cards, case hits och SuperFractors 1/1 finns", "Autograf eller sketch är inte uttryckligen boxgaranterad"], buy_url="https://www.coolcard.se/product/hel-box-2025-topps-chrome-marvel-deadpool-hobby"),
 ]
 
 REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
@@ -1267,6 +1277,151 @@ CHASE_PROFILES.update({
  "why_exciting":["Över 250 Clone Wars-kort och 24 rare/legendary-platser per display.","Ahsoka, Grievous, Anakin, Dooku och Maul ger flera tydliga karaktärsjakter."],
  "tiers":{"everyday":{"label":"Vanligt men intressant","score":82,"items":["24 rare/legendary-platser","24 foil-platser"]},"good":{"label":"Bra träff","score":73,"items":["Anakin/Ahsoka parallel"]},"big":{"label":"Riktigt bra","score":85,"items":["Legendary hyperspace foil"]},"jackpot":{"label":"Monsterhit","score":94,"items":["Ahsoka eller Grievous Showcase"]}},
  "caveat":"Ett Showcase-kort är inte en displaygaranti. Namnen verifieras i officiellt setmaterial, men individuella packodds är inte publicerade."
+}
+})
+
+CHASE_PROFILES.update({
+"cc-2026-topps-universe-wwe-hobby": {
+ "source_name":"Topps official 2026 Universe WWE checklist and hobby configuration",
+ "source_url":"https://www.topps.com/pages/topps-universe-wwe",
+ "key_names":["Roman Reigns Superstar Relic Signature","Rhea Ripley Echoes","Seth Rollins Alias","WWE Authentics","Ringside Relics"],
+ "headline_chases":[
+  {"card":"Roman Reigns Superstar Relic Signature","tier":"JACKPOT","odds":"Autograph-relic-program; exakt kortodds ej publicerat","why":"Signatur och memorabilia av en av checklistans största stjärnor."},
+  {"card":"Tag Team Dual Autograph Relic","tier":"JACKPOT","odds":"Extremt sällsynt; exakt odds ej publicerat","why":"Två signaturer och flera memorabilia-bitar på samma kort."},
+  {"card":"Rhea Ripley Echoes eller Seth Rollins Alias parallel","tier":"MYCKET BRA","odds":"Case-hit/parallel-spår; exakt variantodds varierar","why":"Två officiellt visade stjärnkort."},
+  {"card":"WWE Authentics eller Ringside Relic","tier":"MONSTER","odds":"1 relic per hobbybox över hela relic-programmet","why":"Superstar-använt eller matchanvänt material."}
+ ],
+ "why_exciting":["Två autografer och en relic per box ger tre tydliga premiumträffar.","Checklistan kombinerar legender, mästare och nya namn med case hits och 1/1-paralleller."],
+ "tiers":{"everyday":{"label":"Stabil box","score":90,"items":["120 kort","2 autografer","1 relic"]},"good":{"label":"Bra träff","score":80,"items":["numrerad stjärnparallel"]},"big":{"label":"Riktigt bra","score":91,"items":["stjärnautograf eller matchanvänd relic"]},"jackpot":{"label":"Monsterhit","score":98,"items":["Roman Reigns Relic Auto eller dual auto"]}},
+ "caveat":"Boxen garanterar två autografer och en relic, men inte en viss wrestler eller ett autograph-relic-kort."
+},
+"cc-2026-topps-universe-wwe-value": {
+ "source_name":"Topps official 2026 Universe WWE value-box page",
+ "source_url":"https://www.topps.com/pages/topps-universe-wwe",
+ "key_names":["Roman Reigns Superstar Relic Signature","Rhea Ripley Echoes","Seth Rollins Alias","WWE Authentics","Ringside Relics"],
+ "headline_chases":[
+  {"card":"Roman Reigns Superstar Relic Signature","tier":"JACKPOT","odds":"Kan dras; exakt value-pack-odds ej publicerat","why":"Produktens tydligaste namngivna premiumträff."},
+  {"card":"Alias, Echoes, Flashpoint eller Slammed short print","tier":"MONSTER","odds":"Short print; exakt value-odds ej publicerat","why":"Fyra verifierade sällsynta insertspår."},
+  {"card":"Numrerad stjärnparallel eller autograph","tier":"MYCKET BRA","odds":"Finns i value-formatet men är inte garanterad","why":"Lågt inköpspris med tillgång till produktens premiumspår."}
+ ],
+ "why_exciting":["Sex pack ger en billigare väg in i samma checklistuniversum.","Value-formatet kan innehålla autografer, relics, numrerade kort och short prints."],
+ "tiers":{"everyday":{"label":"Öppningsinnehåll","score":76,"items":["36 kort","value-exklusiva paralleller"]},"good":{"label":"Bra träff","score":71,"items":["numrerad stjärnparallel"]},"big":{"label":"Riktigt bra","score":85,"items":["short print eller autograph"]},"jackpot":{"label":"Monsterhit","score":96,"items":["Roman Reigns Relic Auto"]}},
+ "caveat":"Value Box har ingen garanti på autograf eller relic; hobbyboxens två autografer och en relic gäller inte här."
+},
+"cc-2026-topps-baseball-series2-value": {
+ "source_name":"Topps official 2026 Series 2 checklist and Coolcard value configuration",
+ "source_url":"https://www.topps.com/pages/series-2",
+ "key_names":["Roman Anthony Rookie","Trey Yesavage Rookie","Tatsuya Imai Rookie","Shohei Ohtani Autograph","Aaron Judge Autograph"],
+ "headline_chases":[
+  {"card":"Roman Anthony rookie parallel eller autograph","tier":"MYCKET BRA","odds":"Finns i Series 2; specifikt value-odds varierar","why":"Officiellt framlyft rookie-namn."},
+  {"card":"Shohei Ohtani eller Aaron Judge autograph/parallel","tier":"MONSTER","odds":"Kan dras; ingen autografgaranti i value-formatet","why":"Två av checklistans största aktiva namn."},
+  {"card":"Home Field eller Heavy Lumber","tier":"MYCKET BRA","odds":"Sällsynt insert; exakt value-odds ej angivet","why":"Två populära och verifierade insertfamiljer."},
+  {"card":"Flagship Autograph Patch eller 1/1 In the Name relic","tier":"JACKPOT","odds":"Extremt sällsynt; inte boxgaranti","why":"Produktens högsta signerade och memorabilia-baserade tak."}
+ ],
+ "why_exciting":["72 kort och sex insertplatser till låg kostnad.","Holiday-varianter är exklusiva för value-formatet samtidigt som stora autograf- och relicspår finns."],
+ "tiers":{"everyday":{"label":"Öppningsinnehåll","score":79,"items":["72 kort","6 Stars of MLB/Titans-platser"]},"good":{"label":"Bra träff","score":73,"items":["Holiday-variation eller rookieparallel"]},"big":{"label":"Riktigt bra","score":86,"items":["Home Field eller stjärnautograf"]},"jackpot":{"label":"Monsterhit","score":97,"items":["1/1 relic eller topprookie-auto"]}},
+ "caveat":"Hobbyboxens autograf-eller-relic-garanti gäller inte denna Value Box."
+},
+"cc-2026-topps-chrome-ufc-value": {
+ "source_name":"Topps official 2026 Chrome UFC checklist and value configuration",
+ "source_url":"https://www.topps.com/pages/topps-chrome-ufc",
+ "key_names":["Jon Jones In Your Face","Conor McGregor Kings and Queens","Amanda Nunes Kings and Queens","Octagon Legends Autographs","Radiating Rookies"],
+ "headline_chases":[
+  {"card":"Let's Go case hit – UFC-stjärna","tier":"MONSTER","odds":"Case hit; exakt value-odds ej publicerat","why":"Femkortsfamilj med SuperFractor 1/1-parallell."},
+  {"card":"Conor McGregor eller Amanda Nunes Kings and Queens","tier":"MYCKET BRA","odds":"20-korts insertfamilj; exakt value-odds ej publicerat","why":"Två verifierade toppnamn i ett namngivet chase-spår."},
+  {"card":"Jon Jones In Your Face SuperFractor 1/1","tier":"JACKPOT","odds":"1/1; sannolikhet att dra kortet ej publicerad","why":"Unikt kort av en av sportens största profiler."},
+  {"card":"Octagon Legends Autograph","tier":"MONSTER","odds":"Autografer finns men är inte garanterade i value-formatet","why":"Signerade legender är produktens tydliga premiumspår."}
+ ],
+ "why_exciting":["Två Base Refractors och tre UFC Glove Refractors per box ger återkommande parallelträffar.","Checklistan har case hits, autografer, legender och rookies."],
+ "tiers":{"everyday":{"label":"Stabilt öppningsinnehåll","score":81,"items":["24 kort","5 garanterade refractor-typer"]},"good":{"label":"Bra träff","score":74,"items":["numrerad fighterparallel"]},"big":{"label":"Riktigt bra","score":87,"items":["case hit eller autograf"]},"jackpot":{"label":"Monsterhit","score":98,"items":["Jon Jones SuperFractor 1/1"]}},
+ "caveat":"De fem refractor-träffarna gäller parallellfamiljer, inte en viss fighter. Autograf och case hit är inte garanterade."
+},
+"cc-2026-topps-stadium-club-ufc-hobby": {
+ "source_name":"Topps official 2026 Stadium Club UFC checklist and collector guide",
+ "source_url":"https://www.topps.com/pages/topps-stadium-club-ufc",
+ "key_names":["Jon Jones Beam Team","Conor McGregor Triumvirates Nicknames","Alex Pereira","Islam Makhachev","Ateba Gautier Rookie"],
+ "headline_chases":[
+  {"card":"Conor McGregor, Jon Jones eller Charles Oliveira autograph","tier":"JACKPOT","odds":"2 autografer per hobbybox över hela autograph-programmet","why":"Officiellt framlyfta stjärnnamn i boxens signerade spår."},
+  {"card":"Fight Motion eller Abstract Autograph","tier":"MONSTER","odds":"On-card autograph-familj; exakt fighterodds ej publicerat","why":"Premiumdesign med on-card-signatur."},
+  {"card":"Eight-card Dual Autograph Gold Rainbow Foilboard 1/1","tier":"JACKPOT","odds":"1/1; individuellt boxodds ej publicerat","why":"Två fighters och produktens lägsta parallellnivå."},
+  {"card":"Jon Jones Beam Team eller Conor McGregor Triumvirates Nicknames","tier":"MYCKET BRA","odds":"Insert/parallel; exakt odds varierar","why":"Två konkreta stjärnjakter i fan-favoritspåren."},
+  {"card":"Ateba Gautier eller Quillan Salkilld rookie parallel","tier":"BRA","odds":"Rookie/parallel; exakt odds varierar","why":"Två officiellt framlyfta rookies."}
+ ],
+ "why_exciting":["Två autografer per box i snitt och on-card-autografer.","Checklistan täcker McGregor, Jones, Pereira, Makhachev samt namngivna rookies."],
+ "tiers":{"everyday":{"label":"Stabil hobbybox","score":91,"items":["128 kort","2 autografer i snitt"]},"good":{"label":"Bra träff","score":79,"items":["rookieparallel eller Gold Minted"]},"big":{"label":"Riktigt bra","score":91,"items":["stjärnautograf eller Beam Team"]},"jackpot":{"label":"Monsterhit","score":99,"items":["McGregor/Jones auto eller Dual Auto 1/1"]}},
+ "caveat":"Två autografer anges per box i snitt; en viss fighter, insert eller parallel är aldrig garanterad."
+},
+"cc-2026-topps-stadium-club-ufc-pack": {
+ "source_name":"Topps official 2026 Stadium Club UFC checklist",
+ "source_url":"https://www.topps.com/pages/topps-stadium-club-ufc",
+ "key_names":["Jon Jones Beam Team","Conor McGregor Triumvirates Nicknames","Alex Pereira","Islam Makhachev","Ateba Gautier Rookie"],
+ "headline_chases":[
+  {"card":"Conor McGregor, Jon Jones eller Charles Oliveira autograph","tier":"JACKPOT","odds":"Hobbyboxen har 2 autografer i snitt; löst pack saknar garanti","why":"Tre officiellt framlyfta stjärnnamn i autograph-programmet."},
+  {"card":"Jon Jones Beam Team eller Conor McGregor Triumvirates Nicknames","tier":"MONSTER","odds":"Insert/parallel; exakt packodds varierar","why":"Tydliga namngivna stjärnjakter."},
+  {"card":"Ateba Gautier eller Quillan Salkilld rookie parallel","tier":"BRA","odds":"Rookie/parallel; exakt packodds varierar","why":"Två verifierade rookies i checklistan."}
+ ],
+ "why_exciting":["Löst hobby-pack under 100 kr med tillgång till on-card-autografer och stjärninserts.","Full-bleed-foto och en stark mix av legender, mästare och rookies."],
+ "tiers":{"everyday":{"label":"Låg insats","score":65,"items":["8 kort"]},"good":{"label":"Bra träff","score":72,"items":["rookie- eller stjärnparallel"]},"big":{"label":"Riktigt bra","score":86,"items":["Beam Team eller autograph"]},"jackpot":{"label":"Monsterhit","score":98,"items":["stjärnauto eller Dual Auto 1/1"]}},
+ "caveat":"Boxens två autografer i snitt gäller inte ett löst pack; en boxhit kan redan ha dragits ur ursprungsboxen."
+},
+"cc-2025-26-spx-hobby": {
+ "source_name":"Upper Deck official 2025-26 SPx checklist",
+ "source_url":"https://upperdeck.com/checklist/2025-2026-spx-checklist/",
+ "key_names":["Matthew Schaefer Rookie #109","Matthew Schaefer Rookie SuperScripts","Connor McDavid SuperScripts Gold /10","Wayne Gretzky Salute Auto /25","Sidney Crosby Salute Auto /25"],
+ "headline_chases":[
+  {"card":"Matthew Schaefer Black Rookie Auto 1/1","tier":"JACKPOT","odds":"1/1; slumpmässigt infogat","why":"Unik rookieautograf av checklistans främsta rookie-namn."},
+  {"card":"Connor McDavid SuperScripts Gold Auto /10","tier":"JACKPOT","odds":"/10; slumpmässigt infogat","why":"Lågnumrerad autograf av checklistans största aktiva namn."},
+  {"card":"Wayne Gretzky eller Sidney Crosby Salute Auto /25","tier":"MONSTER","odds":"/25; slumpmässigt infogat","why":"Två ikoniska namn i verifierade signerade spår."},
+  {"card":"Matthew Schaefer Rookie SuperScripts","tier":"MONSTER","odds":"Rookie SuperScripts 1:120 hobby-pack över checklistan","why":"Namngiven rookieauto med publicerat familjeodds."},
+  {"card":"Matthew Schaefer Rookie Hologram","tier":"MYCKET BRA","odds":"Rookie Holograms 1:86 hobby-pack","why":"Topprookie i produktens hologramspår."}
+ ],
+ "why_exciting":["Officiell checklist visar McDavid-, Gretzky- och Crosby-autografer samt starka rookieautos.","Boxen ger i snitt fyra rookies, tre Silver och en Gold parallel."],
+ "tiers":{"everyday":{"label":"Koncentrerad box","score":87,"items":["24 kort","4 rookies","3 Silver + 1 Gold"]},"good":{"label":"Bra träff","score":78,"items":["stark rookieparallel"]},"big":{"label":"Riktigt bra","score":90,"items":["Rookie SuperScripts eller stjärnauto"]},"jackpot":{"label":"Monsterhit","score":99,"items":["Schaefer 1/1 eller McDavid /10 auto"]}},
+ "caveat":"Boxens rookie- och parallelltal är genomsnitt. Autograf, Hologram Rookie eller ett visst namn är inte garanterat."
+},
+"cc-2025-26-spx-hobby-pack": {
+ "source_name":"Upper Deck official 2025-26 SPx checklist",
+ "source_url":"https://upperdeck.com/checklist/2025-2026-spx-checklist/",
+ "key_names":["Matthew Schaefer Rookie #109","Matthew Schaefer Rookie SuperScripts","Connor McDavid SuperScripts Gold /10","Wayne Gretzky Salute Auto /25","Sidney Crosby Salute Auto /25"],
+ "headline_chases":[
+  {"card":"Matthew Schaefer Black Rookie Auto 1/1","tier":"JACKPOT","odds":"1/1; individuellt packodds ej publicerat","why":"Produktens unika topprookieauto."},
+  {"card":"Connor McDavid SuperScripts Gold Auto /10","tier":"JACKPOT","odds":"/10; slumpmässigt infogat","why":"Lågnumrerad McDavid-autograf."},
+  {"card":"Matthew Schaefer Rookie SuperScripts","tier":"MONSTER","odds":"Rookie SuperScripts 1:120 hobby-pack över checklistan","why":"Namngiven rookieauto med användbart familjeodds."},
+  {"card":"Matthew Schaefer Rookie Hologram","tier":"MYCKET BRA","odds":"Rookie Holograms 1:86 hobby-pack","why":"Sällsynt rookieinsert av ett verifierat toppnamn."}
+ ],
+ "why_exciting":["Tre kort men mycket högt tak med signerade stjärnor och rookies.","Upper Deck publicerar checklist- och familjeodds för flera centrala chase-spår."],
+ "tiers":{"everyday":{"label":"Tunn pack","score":55,"items":["3 kort"]},"good":{"label":"Bra träff","score":72,"items":["rookie eller numrerad parallel"]},"big":{"label":"Riktigt bra","score":89,"items":["Rookie SuperScripts"]},"jackpot":{"label":"Monsterhit","score":99,"items":["Schaefer 1/1 eller McDavid /10 auto"]}},
+ "caveat":"Ett löst pack har ingen boxgaranti och kan komma från en box där de bästa träffarna redan dragits."
+},
+"cc-2025-topps-disney-wonder-pack": {
+ "source_name":"Topps official 2025 Disney Wonder checklist and odds",
+ "source_url":"https://www.topps.com/pages/topps-disney-wonder",
+ "key_names":["PrincessFractor 1/1","Cinderella Glass Slipper /75","Enchanted Autographs","Princess Sketch Cards","SHINY SuperFractor 1/1"],
+ "headline_chases":[
+  {"card":"Disney Princess PrincessFractor 1/1","tier":"JACKPOT","odds":"1/1; individuellt packodds ej publicerat","why":"Unikt kort ur produktens främsta prinsesspår."},
+  {"card":"Enchanted Autograph SuperFractor 1/1","tier":"JACKPOT","odds":"1/1; autograffamiljen är extremt sällsynt","why":"Signatur och produktens lägsta parallellnivå."},
+  {"card":"Princess eller Build a Snowman Sketch Card","tier":"MONSTER","odds":"Original sketch; exakt packodds varierar","why":"Ett handgjort originalkort snarare än en massproducerad parallel."},
+  {"card":"Cinderella Glass Slipper Chrome /75","tier":"MYCKET BRA","odds":"/75; individuellt packodds ej publicerat","why":"Namngiven jubileums-chase med låg upplaga."},
+  {"card":"Tapestries eller Cinderella 75th Anniversary","tier":"BRA","odds":"1:9 hobby-pack per insertfamilj","why":"Officiellt publicerade och återkommande Disney-inserts."}
+ ],
+ "why_exciting":["Ett Tier 2-kort per pack och flera publicerade insertodds.","Autografer, originalskisser och 1/1-prinsesskort ger ett mycket högt tak för ett 99-kronorspaket."],
+ "tiers":{"everyday":{"label":"Något samlarbart","score":68,"items":["6 kort","1 Tier 2"]},"good":{"label":"Bra träff","score":74,"items":["Tapestries/Cinderella insert"]},"big":{"label":"Riktigt bra","score":90,"items":["sketch eller Enchanted Auto"]},"jackpot":{"label":"Monsterhit","score":99,"items":["PrincessFractor eller autograph 1/1"]}},
+ "caveat":"Ett löst pack garanterar bara kortkonfigurationen; autograf, sketch, numrerat kort eller specifik Disneyfigur är inte garanterad."
+},
+"cc-2025-topps-chrome-deadpool-hobby": {
+ "source_name":"Topps official 2025 Chrome Deadpool checklist and odds",
+ "source_url":"https://www.topps.com/pages/deadpool-chrome",
+ "key_names":["Ryan Reynolds Autograph","Hugh Jackman Autograph","Deadpool SuperFractor 1/1","Wolverine SuperFractor 1/1","Original Sketch Card"],
+ "headline_chases":[
+  {"card":"Ryan Reynolds Deadpool Autograph","tier":"JACKPOT","odds":"Autograph-program; exakt signer-odds varierar","why":"Autentisk signatur från filmens huvudroll."},
+  {"card":"Hugh Jackman Wolverine Autograph","tier":"JACKPOT","odds":"Autograph-program; exakt signer-odds varierar","why":"Autentisk Wolverine-signatur i samma produkt."},
+  {"card":"Deadpool eller Wolverine SuperFractor 1/1","tier":"JACKPOT","odds":"1/1; individuellt boxodds ej publicerat","why":"Unik Chrome-parallel av produktens två största karaktärer."},
+  {"card":"Original Sketch Card","tier":"MONSTER","odds":"Sketch-program; exakt boxodds varierar","why":"Unikt originalverk snarare än ett vanligt tryckt kort."},
+  {"card":"The Void Shadowbox eller Comic Book Gold","tier":"MYCKET BRA","odds":"Case-hit/insert-spår; exakt odds varierar","why":"Två officiellt namngivna visuella chase-familjer."}
+ ],
+ "why_exciting":["Ryan Reynolds- och Hugh Jackman-autografer är verifierade i checklistmaterialet.","Originalskisser, case hits och 1/1-SuperFractors ger flera vägar till ett riktigt stort kort."],
+ "tiers":{"everyday":{"label":"Mycket öppningsinnehåll","score":86,"items":["80 Chrome-kort"]},"good":{"label":"Bra träff","score":76,"items":["numrerad karaktärsparallel"]},"big":{"label":"Riktigt bra","score":91,"items":["sketch eller case hit"]},"jackpot":{"label":"Monsterhit","score":100,"items":["Reynolds/Jackman auto eller SuperFractor 1/1"]}},
+ "caveat":"Butiken och Topps bekräftar att autografer och sketches finns, men anger ingen garanti för en per hobbybox."
 }
 })
 
