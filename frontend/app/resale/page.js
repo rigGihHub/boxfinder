@@ -15,7 +15,9 @@ async function getInitialRankings(path) {
   try {
     const response = await fetch(`${API}${path}`, {
       next: {revalidate: 300},
-      signal: AbortSignal.timeout(8000),
+      // Never hold the whole page hostage while a free Render instance wakes.
+      // The client shows its last successful result and refreshes in the background.
+      signal: AbortSignal.timeout(800),
     });
     if (response.ok) return await response.json();
   } catch {
@@ -40,7 +42,7 @@ export default async function ResalePage({searchParams}){
     <header className="productNav">
       <Link className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></Link>
       <Link className="backLink" href="/">← STARTSIDAN</Link>
-      <span className="version">v0.47.0</span>
+      <span className="version">v0.47.1</span>
     </header>
 
     <section className="resaleHero">
