@@ -77,6 +77,27 @@ def test_nonsport_additions_have_direct_store_links_and_pack_formats(monkeypatch
     assert japanese.language=="Japanese"
     db.close()
 
+def test_new_pokemon_and_one_piece_products_have_named_checklists(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    slugs={
+        "cc-pokemon-ninja-spinner-m4-display", "cc-pokemon-ninja-spinner-m4-pack",
+        "cc-pokemon-storm-emeralda-m6-display", "cc-pokemon-storm-emeralda-m6-pack",
+        "cc-one-piece-op14-jp-display", "cc-one-piece-op14-jp-pack",
+        "cc-one-piece-op16-jp-display", "cc-one-piece-op16-jp-pack",
+    }
+    products={p.slug:p for p in db.scalars(select(Product).where(Product.slug.in_(slugs))).all()}
+    assert set(products)==slugs
+    assert all(seedmod.CHASE_PROFILES[slug]["headline_chases"] for slug in slugs)
+    offers=db.scalars(select(Offer).join(ProductVariant).join(Product).where(Product.slug.in_(slugs))).all()
+    assert len(offers)==8
+    assert all("/product/" in offer.url for offer in offers)
+    assert all("Japanese" in products[slug].canonical_name or products[slug].category=="One Piece" for slug in slugs)
+    db.close()
+
 def test_all_chase_profiles_point_to_seeded_products(monkeypatch):
     Session=session_factory()
     monkeypatch.setattr(seedmod,"SessionLocal",Session)

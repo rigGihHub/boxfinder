@@ -154,6 +154,14 @@ REAL_NONSPORT_EXPANSION = [
     dict(slug="cc-lorcana-azurite-pack", name="Disney Lorcana Azurite Sea Booster Pack", category="Disney", manufacturer="Ravensburger", year="2024", series="Azurite Sea", fmt="single pack", sku="Lorcana-Set6-Booster", price=79, packs=1, cards=12, stock="in_stock", facts=["12 kort: 6 common, 3 uncommon, 2 rare eller högre och 1 foil med slumpad rarity"], buy_url="https://www.coolcard.se/en/product/lorcana-azurite-sea-booster-4"),
     dict(slug="cc-mtg-marvel-superheroes-play-display", name="Magic Marvel Super Heroes Play Booster Display", category="Magic", manufacturer="Wizards of the Coast", year="2026", series="Marvel Super Heroes", fmt="booster box", sku="MAGD5356-30", price=1899, packs=30, cards=14, stock="in_stock", facts=["30 Play Boosters, 14 kort per paket", "Marvel crossover-set; exakta chase-korts odds inte publicerade på butikssidan"], buy_url="https://www.coolcard.se/en/product/magic-the-gatheringmarvel-super-heroes-play-booster-display-2"),
     dict(slug="cc-mtg-marvel-superheroes-jumpstart-display", name="Magic Marvel Super Heroes Jumpstart Booster Display", category="Magic", manufacturer="Wizards of the Coast", year="2026", series="Marvel Super Heroes Jumpstart", fmt="booster box", sku="MAGD5363-24", price=1499, packs=24, cards=20, stock="in_stock", facts=["24 Jumpstart Boosters, 20 kort per paket", "Kortpaketen kombineras för spel; individuella chase odds inte publicerade"], buy_url="https://www.coolcard.se/en/product/magic-the-gatheringmarvel-super-heroes-jumpstart-booster-display-2"),
+    dict(slug="cc-pokemon-ninja-spinner-m4-display", name="Pokémon Mega: Ninja Spinner M4 Booster Display Japanese", category="Pokémon", manufacturer="Pokémon Company Japan", year="2026", series="Ninja Spinner M4", fmt="booster box", sku="POKM4-30", price=1299, packs=30, cards=5, stock="in_stock", language="Japanese", facts=["30 japanska boosterpaket, 5 kort per paket", "Checklistan innehåller Mega Greninja ex MUR #120/083 och flera SAR/AR", "Officiella kortspecifika packodds publiceras inte"], buy_url="https://www.coolcard.se/product/pokmon-mega-ninja-spinner-m4-booster-display-30-paket-japansk"),
+    dict(slug="cc-pokemon-ninja-spinner-m4-pack", name="Pokémon Mega: Ninja Spinner M4 Booster Pack Japanese", category="Pokémon", manufacturer="Pokémon Company Japan", year="2026", series="Ninja Spinner M4", fmt="single pack", sku="POKM4-01", price=49, packs=1, cards=5, stock="in_stock", language="Japanese", facts=["5 japanska kort per paket", "Mega Greninja ex MUR finns i setets checklist", "En enstaka pack har inga publicerade kortspecifika odds"], buy_url="https://www.coolcard.se/en/product/pokmon-mega-ninja-spinner-m4-booster-5-kort-japanese"),
+    dict(slug="cc-pokemon-storm-emeralda-m6-display", name="Pokémon Mega: Storm Emeralda M6 Booster Display Japanese", category="Pokémon", manufacturer="Pokémon Company Japan", year="2026", series="Storm Emeralda M6", fmt="booster box", sku="POKM6-30", price=1499, packs=30, cards=5, stock="in_stock", language="Japanese", facts=["30 japanska boosterpaket, 5 kort per paket", "Checklistan innehåller Mega Rayquaza ex MUR #113/076 och flera SAR/AR", "Officiella kortspecifika packodds publiceras inte"], buy_url="https://www.coolcard.se/product/pokmon-mega-storm-emeralda-m6-booster-display-30-paket-japansk"),
+    dict(slug="cc-pokemon-storm-emeralda-m6-pack", name="Pokémon Mega: Storm Emeralda M6 Booster Pack Japanese", category="Pokémon", manufacturer="Pokémon Company Japan", year="2026", series="Storm Emeralda M6", fmt="single pack", sku="POKM6-01", price=79, packs=1, cards=5, stock="in_stock", language="Japanese", facts=["5 japanska kort per paket", "Mega Rayquaza ex MUR finns i setets checklist", "En enstaka pack har inga publicerade kortspecifika odds"], buy_url="https://www.coolcard.se/en/product/pokmon-mega-storm-emeralda-m6-booster-5-cards-japanese"),
+    dict(slug="cc-one-piece-op14-jp-pack", name="One Piece The Azure Sea's Seven OP-14 Booster Pack Japanese", category="One Piece", manufacturer="Bandai", year="2026", series="The Azure Sea's Seven OP-14", fmt="single pack", sku="OPCG-OP-14-01-JPN", price=79, packs=1, cards=6, stock="in_stock", language="Japanese", facts=["6 japanska kort per paket", "Officiell kortlista innehåller bland annat Boa Hancock OP14-112 och flera SP-varianter", "Bandai publicerar inte kortspecifika packodds"], buy_url="https://www.coolcard.se/product/one-piece-card-game-booster-6-kort-the-azure-seas-seven-op-14-japansk"),
+    dict(slug="cc-one-piece-op14-jp-display", name="One Piece The Azure Sea's Seven OP-14 Booster Display Japanese", category="One Piece", manufacturer="Bandai", year="2026", series="The Azure Sea's Seven OP-14", fmt="booster box", sku="OPCG-OP-14-24-JPN", price=1699, packs=24, cards=6, stock="in_stock", language="Japanese", facts=["24 japanska boosterpaket, 6 kort per paket", "Officiell kortlista innehåller bland annat Boa Hancock OP14-112 och flera SP-varianter", "Bandai publicerar inte kortspecifika packodds"], buy_url="https://www.coolcard.se/en/product/one-piece-card-game-booster-display-24-boosters-the-azure-seas-seven-op-14-japanese"),
+    dict(slug="cc-one-piece-op16-jp-pack", name="One Piece The Time of Battle OP-16 Booster Pack Japanese", category="One Piece", manufacturer="Bandai", year="2026", series="The Time of Battle OP-16", fmt="single pack", sku="OPCG-OP-16-01-JPN", price=79, packs=1, cards=6, stock="in_stock", language="Japanese", facts=["6 japanska kort per paket", "Marineford/Paramount War-tema; setet innehåller Ace, Luffy, Buggy, Sengoku, Yamato och Teach", "Bandai publicerar inte kortspecifika packodds"], buy_url="https://www.coolcard.se/product/one-piece-card-game-booster-6-kort-the-time-of-battle-op-16-japansk"),
+    dict(slug="cc-one-piece-op16-jp-display", name="One Piece The Time of Battle OP-16 Booster Display Japanese", category="One Piece", manufacturer="Bandai", year="2026", series="The Time of Battle OP-16", fmt="booster box", sku="OPCG-OP-16-24-JPN", price=1599, packs=24, cards=6, stock="in_stock", language="Japanese", facts=["24 japanska boosterpaket, 6 kort per paket", "Marineford/Paramount War-tema med sex officiellt namngivna leaders", "Bandai publicerar inte kortspecifika packodds"], buy_url="https://www.coolcard.se/en/product/one-piece-card-game-booster-display-24-boosters-the-time-of-battle-op-16-japanese"),
 ]
 
 REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
@@ -1009,8 +1017,72 @@ CHASE_PROFILES = {
  "why_exciting":["Två exklusiva Raywave-paralleller per box ger garanterat boxspecifikt innehåll.","Topps publicerar separata Value Box-odds för äkta autografer, sketchkort och numrerade paralleller."],
  "tiers":{"everyday":{"label":"Vanligt men intressant","score":82,"items":["2 Raywave per box","Base Refractor 1:4 pack"]},"good":{"label":"Bra träff","score":70,"items":["numrerad Disney-parallel","Mickey/Pooh/Stitch image variation"]},"big":{"label":"Riktigt bra","score":78,"items":["Authentic Auto 1:2 261 pack","Sketch 1:2 564 pack"]},"jackpot":{"label":"Monsterhit","score":93,"items":["Mickey /28","stjärnautograf","Superfractor 1/1"]}},
  "caveat":"Oddsen är per Value Box-pack och gäller hela kortfamiljen, inte ett visst namn. Facsimile Autographs har tryckta signaturer och ska inte förväxlas med Authentic Autographs."
+},
+"cc-pokemon-ninja-spinner-m4-display": {
+ "source_name":"Ninja Spinner M4 card checklist",
+ "source_url":"https://www.serebii.net/card/ninjaspinner/",
+ "key_names":["Mega Greninja ex MUR #120/083","Mega Greninja ex SAR","Emma SAR","Roxie's Performance SAR","Mega Pyroar ex"],
+ "headline_chases":[
+  {"card":"Mega Greninja ex MUR #120/083","tier":"JACKPOT","odds":"MUR rarity; officiella packodds ej publicerade","why":"Setets toppspår och omslags-Pokémon i särskild MUR-rarity."},
+  {"card":"Mega Greninja ex Special Art Rare","tier":"MONSTER","odds":"SAR; officiella packodds ej publicerade","why":"Alternativ illustration av setets huvudchase."},
+  {"card":"Emma Special Art Rare","tier":"MONSTER","odds":"SAR; officiella packodds ej publicerade","why":"Namngivet tränarkort i den verifierade setlistan."},
+  {"card":"Roxie's Performance Special Art Rare","tier":"MYCKET BRA","odds":"SAR; officiella packodds ej publicerade","why":"Tränarvariant med stark karaktärsigenkänning."},
+  {"card":"Mega Pyroar ex Special Art Rare","tier":"MYCKET BRA","odds":"SAR; officiella packodds ej publicerade","why":"Ytterligare Mega-evolution i setets höga rarity-spår."}
+ ],
+ "why_exciting":["30-pack-displayen ger fler försök än ett löst paket.","Checklistan har ett tydligt toppkort i Mega Greninja ex MUR och flera separata SAR-jakter."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":68,"items":["5 kort per pack","Mega ex och illustration rares i setet"]},"good":{"label":"Bra träff","score":73,"items":["AR eller vanlig SAR"]},"big":{"label":"Riktigt bra","score":83,"items":["Mega Greninja ex SAR","Emma SAR"]},"jackpot":{"label":"Monsterhit","score":94,"items":["Mega Greninja ex MUR #120/083"]}},
+ "caveat":"Checklistan och rariteterna är kartlagda; Pokémon anger inte officiella kortspecifika pull rates. Betygen beskriver chase-tak, inte garanterat värde eller träffchans."
+},
+"cc-pokemon-storm-emeralda-m6-display": {
+ "source_name":"Storm Emeralda M6 card checklist",
+ "source_url":"https://www.fujicardshop.com/card-lists/storm-emeralda/",
+ "key_names":["Mega Rayquaza ex MUR #113/076","Mega Rayquaza ex SAR","Mega Golisopod ex SAR","Wishiwashi ex SAR","Groudon AR"],
+ "headline_chases":[
+  {"card":"Mega Rayquaza ex MUR #113/076","tier":"JACKPOT","odds":"MUR rarity; officiella packodds ej publicerade","why":"Setets högsta namngivna rarity-spår och huvud-Pokémon."},
+  {"card":"Mega Rayquaza ex Special Art Rare","tier":"MONSTER","odds":"SAR; officiella packodds ej publicerade","why":"Alternativ illustration av den centrala chase-Pokémon."},
+  {"card":"Mega Golisopod ex Special Art Rare","tier":"MYCKET BRA","odds":"SAR; officiella packodds ej publicerade","why":"Namngiven Mega-chase från setets SAR-del."},
+  {"card":"Wishiwashi ex Special Art Rare","tier":"MYCKET BRA","odds":"SAR; officiella packodds ej publicerade","why":"Separat SAR-spår utöver Rayquaza."},
+  {"card":"Groudon Art Rare","tier":"BRA","odds":"AR; officiella packodds ej publicerade","why":"Legendarisk Pokémon i setets illustrerade rarity-spår."}
+ ],
+ "why_exciting":["Displayen innehåller 30 japanska pack.","Mega Rayquaza finns i flera höga rarity-versioner, med MUR som tydligt toppkort."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":67,"items":["5 kort per pack","AR-spår i setet"]},"good":{"label":"Bra träff","score":73,"items":["Groudon AR eller annan AR"]},"big":{"label":"Riktigt bra","score":84,"items":["Mega Golisopod ex eller Wishiwashi ex SAR"]},"jackpot":{"label":"Monsterhit","score":96,"items":["Mega Rayquaza ex MUR #113/076"]}},
+ "caveat":"Setlistan verifierar kort och rarity, men inga officiella kortspecifika pull rates är publicerade. Värdet varierar mellan språk, skick och marknad."
+},
+"cc-one-piece-op14-jp-display": {
+ "source_name":"Bandai official OP14-EB04 card list",
+ "source_url":"https://en.onepiece-cardgame.com/cardlist/?series=569114",
+ "key_names":["Boa Hancock OP14-112","Dracule Mihawk OP14-119","Trafalgar Law OP14-001","Boa Hancock SP card","Buggy SP card"],
+ "headline_chases":[
+  {"card":"Boa Hancock OP14-112 / SP variant","tier":"JACKPOT","odds":"SP/parallel; Bandai publicerar inte packodds","why":"Officiellt listad karaktär och specialvariant i setlistan."},
+  {"card":"Dracule Mihawk OP14-119 / parallel","tier":"MONSTER","odds":"Parallel; Bandai publicerar inte packodds","why":"Namngiven karaktär från setets Seven Warlords-tema."},
+  {"card":"Trafalgar Law OP14-001 Leader parallel","tier":"MYCKET BRA","odds":"Leader parallel; Bandai publicerar inte packodds","why":"Leader-kort med separat parallelvariant."},
+  {"card":"Buggy OP09-051 SP variant","tier":"MYCKET BRA","odds":"SP; Bandai publicerar inte packodds","why":"SP-kort som förekommer i den officiella OP14-EB04 listan."}
+ ],
+ "why_exciting":["24-packdisplay ger 24 öppningar; ett löst paket är en mindre, separat chans.","Officiella checklistan visar namngivna leaders, karaktärer och SP/parallel-varianter."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":63,"items":["6 kort per japanskt paket","Leader- och character-kort"]},"good":{"label":"Bra träff","score":70,"items":["Leader parallel eller stark SR"]},"big":{"label":"Riktigt bra","score":81,"items":["Mihawk eller Law parallel"]},"jackpot":{"label":"Monsterhit","score":90,"items":["Boa Hancock SP/parallel"]}},
+ "caveat":"Checklistan verifieras av Bandai. Korten ovan är chase-kandidater, inte en värderingsgaranti; exakta packodds publiceras inte. Japansk boxkonfiguration ska inte blandas med engelska utgåvor."
+},
+"cc-one-piece-op16-jp-display": {
+ "source_name":"Bandai official The Time of Battle OP16 product and card list",
+ "source_url":"https://en.onepiece-cardgame.com/products/op16.html",
+ "key_names":["Portgas.D.Ace OP16-001","Monkey.D.Luffy OP16-022","Yamato OP16-079","Portgas.D.Ace OP16-118 SEC","Vista Treasure Rare"],
+ "headline_chases":[
+  {"card":"Portgas.D.Ace OP16-118 Secret Rare","tier":"JACKPOT","odds":"Secret Rare; Bandai publicerar inte packodds","why":"Centralt namn i Paramount War-temat och en av setets Secret Rare-jakter."},
+  {"card":"Yamato OP16-079 Leader/parallel","tier":"MONSTER","odds":"Parallel; Bandai publicerar inte packodds","why":"Namngiven leader i produktens officiella presentation."},
+  {"card":"Monkey.D.Luffy OP16-022 Leader/parallel","tier":"MONSTER","odds":"Parallel; Bandai publicerar inte packodds","why":"En av setets officiellt presenterade leaders."},
+  {"card":"Portgas.D.Ace ST15-005 SP parallel","tier":"MYCKET BRA","odds":"SP; Bandai publicerar inte packodds","why":"Ace-temat knyter in ett SP-kort i listan."},
+  {"card":"Vista special rarity variant","tier":"MONSTER","odds":"Special rarity; Bandai publicerar inte packodds","why":"Ytterligare en separat variant att hålla utkik efter i OP-16 checklistan."}
+ ],
+ "why_exciting":["24 japanska pack per display och sex kort per pack.","Paramount War-temat samlar Ace, Luffy, Buggy, Sengoku, Yamato och Teach; checklistan har Secret Rare, paralleller och Treasure Rare-spår."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":62,"items":["6 kort per japanskt paket","Nytt Paramount War-tema"]},"good":{"label":"Bra träff","score":70,"items":["Leader parallel eller SR parallel"]},"big":{"label":"Riktigt bra","score":81,"items":["Ace SEC eller en namngiven SP-variant"]},"jackpot":{"label":"Monsterhit","score":88,"items":["Sällsynt parallellvariant av populär huvudkaraktär"]}},
+ "caveat":"Bandai bekräftar temat och leader-namn men publicerar inte packodds. Kontrollera språk och kortnummer; produktprofilen avser japansk OP-16."
 }
 }
+
+CHASE_PROFILES["cc-pokemon-ninja-spinner-m4-pack"] = CHASE_PROFILES["cc-pokemon-ninja-spinner-m4-display"]
+CHASE_PROFILES["cc-pokemon-storm-emeralda-m6-pack"] = CHASE_PROFILES["cc-pokemon-storm-emeralda-m6-display"]
+CHASE_PROFILES["cc-one-piece-op14-jp-pack"] = CHASE_PROFILES["cc-one-piece-op14-jp-display"]
+CHASE_PROFILES["cc-one-piece-op16-jp-pack"] = CHASE_PROFILES["cc-one-piece-op16-jp-display"]
 
 
 CHASE_CARD_DB = [
@@ -1259,7 +1331,12 @@ def seed_chase_profiles():
             row.content_json=json.dumps({k:v for k,v in data.items() if k not in ("source_name","source_url")},ensure_ascii=False)
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
-            row.verified_at=REAL_SNAPSHOT_OBSERVED_AT
+            row.verified_at=REAL_EXPANSION_OBSERVED_AT if slug in {
+                "cc-pokemon-ninja-spinner-m4-display", "cc-pokemon-ninja-spinner-m4-pack",
+                "cc-pokemon-storm-emeralda-m6-display", "cc-pokemon-storm-emeralda-m6-pack",
+                "cc-one-piece-op14-jp-display", "cc-one-piece-op14-jp-pack",
+                "cc-one-piece-op16-jp-display", "cc-one-piece-op16-jp-pack",
+            } else REAL_SNAPSHOT_OBSERVED_AT
             row.confidence=95
         db.commit()
     finally:
