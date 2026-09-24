@@ -24,7 +24,7 @@ export default async function CatalogAdmin() {
     <header className="nav sourceNav">
       <a className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a>
       <nav><a href="/">Startsida</a><a href="/admin/source-hub">Datakällor</a><a href="/admin/catalog">Produktkö</a><a href="/admin/intake">Koppla butik</a><a href="/admin/intake/batch">Batch</a></nav>
-      <span className="version">v0.46.0</span>
+      <span className="version">v0.46.1</span>
     </header>
 
     <section className="catalogHero">

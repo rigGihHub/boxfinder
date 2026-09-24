@@ -1,5 +1,6 @@
 import Link from "next/link";
 import {getJson} from "../lib/api";
+import ResaleApiRecovery from "../components/ResaleApiRecovery";
 
 const money = value => value == null ? "—" : `${Math.round(value).toLocaleString("sv-SE")} kr`;
 
@@ -25,7 +26,7 @@ export default async function ResalePage({searchParams}){
     <header className="productNav">
       <Link className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></Link>
       <Link className="backLink" href="/">← STARTSIDAN</Link>
-      <span className="version">v0.46.0</span>
+      <span className="version">v0.46.1</span>
     </header>
 
     <section className="resaleHero">
@@ -51,7 +52,7 @@ export default async function ResalePage({searchParams}){
         <div className="resaleReasons">{x.resale_reasons?.map((r,j)=><span key={j}>✓ {r}</span>)}</div>
         <p className="resaleWarning">{x.resale_warning}</p>
         <div className="resaleActions"><Link href={`/product/${x.id}`}>SE HELA ANALYSEN →</Link>{x.chase_profile?.key_names?.[0]&&<Link href={`/chase?q=${encodeURIComponent(x.chase_profile.key_names[0].replace(/\s+#.*$/, ""))}`}>SÖK {x.chase_profile.key_names[0]} →</Link>}</div>
-      </article>)}</div> : data.unavailable ? <div className="chaseEmpty apiUnavailable"><b>BoxFinder kunde inte nå analysmotorn.</b><span>API:t håller troligen på att starta. Försök igen — sidan gör automatiskt flera försök innan detta meddelande visas.</span><a href={`?${qs.toString()}`}>FÖRSÖK IGEN →</a></div> : <div className="chaseEmpty"><b>Ingen produkt kan rankas med de här filtren.</b><span>Ta bort kategori eller höj maxpriset. BoxFinder visar inte produkter utan verifierad chase-profil.</span></div>}
+      </article>)}</div> : data.unavailable ? <ResaleApiRecovery query={qs.toString()}/> : <div className="chaseEmpty"><b>Ingen produkt kan rankas med de här filtren.</b><span>Ta bort kategori eller höj maxpriset. BoxFinder visar inte produkter utan verifierad chase-profil.</span></div>}
       <p className="resaleDisclaimer">{data.disclaimer}</p>
     </section>
   </main>
