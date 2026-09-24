@@ -107,7 +107,7 @@ REAL_FOOTBALL_SNAPSHOT = [
          facts=["1 pack per box", "7 kort per pack", "3 encased Autograph, Autograph Relics eller Relics per box"]),
     dict(slug="cc-2025-26-topps-real-madrid-team-set", name="2025-26 Topps Real Madrid Team Set", category="Fotboll", manufacturer="Topps", year="2025-26", series="Real Madrid Team Set", fmt="team set box", sku="FS0006419", price=1299, packs=6, cards=5, stock="in_stock",
          facts=["6 pack per box", "5 kort per pack"]),
-    dict(slug="cc-2025-26-topps-ucc-flagship-hanger", name="2025-26 Topps UCC Flagship Hanger Box", category="Fotboll", manufacturer="Topps", year="2025-26", series="UCC Flagship", fmt="hanger", sku="FGC007008", price=239, packs=1, cards=35, stock="in_stock",
+    dict(slug="cc-2025-26-topps-ucc-flagship-hanger", name="2025-26 Topps UCC Flagship Hanger Box", category="Fotboll", manufacturer="Topps", year="2025-26", series="UCC Flagship", fmt="hanger", sku="FGC007008", price=239, packs=1, cards=35, stock="in_stock", buy_url="https://www.coolcard.se/en/product/sealed-hanger-box-35-cards-2025-26-topps-ucc-flagship-soccer",
          facts=["35 kort per box", "2 Diamante Foil parallels per box", "2 insert-kort per box"]),
 ]
 
