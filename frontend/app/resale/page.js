@@ -1,9 +1,8 @@
 import Link from "next/link";
 import ResaleApiRecovery from "../components/ResaleApiRecovery";
-import ResaleResultCards from "../components/ResaleResultCards";
+import ResaleResults from "../components/ResaleResults";
 
 const money = value => value == null ? "—" : `${Math.round(value).toLocaleString("sv-SE")} kr`;
-const searched = value => value ? new Intl.DateTimeFormat("sv-SE", {dateStyle:"medium", timeStyle:"short", timeZone:"Europe/Stockholm"}).format(new Date(value)) : null;
 
 const strategies = [
   ["balanced", "Bäst helhet"],
@@ -15,8 +14,8 @@ async function getInitialRankings(path) {
   const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
   try {
     const response = await fetch(`${API}${path}`, {
-      cache: "no-store",
-      signal: AbortSignal.timeout(5000),
+      next: {revalidate: 300},
+      signal: AbortSignal.timeout(8000),
     });
     if (response.ok) return await response.json();
   } catch {
@@ -41,7 +40,7 @@ export default async function ResalePage({searchParams}){
     <header className="productNav">
       <Link className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></Link>
       <Link className="backLink" href="/">← STARTSIDAN</Link>
-      <span className="version">v0.46.1</span>
+      <span className="version">v0.47.0</span>
     </header>
 
     <section className="resaleHero">
@@ -59,8 +58,7 @@ export default async function ResalePage({searchParams}){
 
     <section className="resaleRanking">
       <div className="sectionHead"><div><span className="kicker">ÖPPNINGSRANKING</span><h2>Bäst säljpotential just nu</h2></div><p>{data.count || 0} produkter med verifierad chase-profil</p></div>
-      {data.searched_at&&<p className="searchFreshness">Sökning genomförd {searched(data.searched_at)}</p>}
-      {items.length ? <ResaleResultCards items={items}/> : data.unavailable ? <ResaleApiRecovery query={qs.toString()}/> : <div className="chaseEmpty"><b>Ingen produkt kan rankas med de här filtren.</b><span>Ta bort kategori eller höj maxpriset. BoxFinder visar inte produkter utan verifierad chase-profil.</span></div>}
+      {items.length ? <ResaleResults query={qs.toString()} data={data}/> : data.unavailable ? <ResaleApiRecovery query={qs.toString()}/> : <div className="chaseEmpty"><b>Ingen produkt kan rankas med de här filtren.</b><span>Ta bort kategori eller höj maxpriset. BoxFinder visar inte produkter utan verifierad chase-profil.</span></div>}
       <p className="resaleDisclaimer">{data.disclaimer}</p>
     </section>
   </main>

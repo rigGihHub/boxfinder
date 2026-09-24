@@ -1,16 +1,18 @@
 "use client";
 
 import {useEffect, useRef, useState} from "react";
-import ResaleResultCards from "./ResaleResultCards";
+import ResaleResults, {loadResaleResult, saveResaleResult} from "./ResaleResults";
 
 export default function ResaleApiRecovery({query}) {
   const [message, setMessage] = useState("Väcker analysmotorn…");
   const [result, setResult] = useState(null);
+  const [cachedResult, setCachedResult] = useState(null);
   const stopped = useRef(false);
   const attempt = useRef(0);
 
   useEffect(() => {
     stopped.current = false;
+    setCachedResult(loadResaleResult(query));
     let timer;
 
     async function recover() {
@@ -21,7 +23,11 @@ export default function ResaleApiRecovery({query}) {
         const response = await fetch(`/api/resale-recovery?${query}`, {cache: "no-store"});
         if (response.ok) {
           const data = await response.json();
-          if (Array.isArray(data.items)) { setResult(data); return; }
+          if (Array.isArray(data.items)) {
+            saveResaleResult(query, data);
+            setResult(data);
+            return;
+          }
         }
       } catch {
         // A sleeping Render service is expected to fail during its first wake-up.
@@ -36,11 +42,11 @@ export default function ResaleApiRecovery({query}) {
     };
   }, [query]);
 
-  const searchedAt = result?.searched_at ? new Intl.DateTimeFormat("sv-SE", {dateStyle:"medium", timeStyle:"short", timeZone:"Europe/Stockholm"}).format(new Date(result.searched_at)) : null;
-  if (result) return <>
-    <p className="searchFreshness">Sökning genomförd {searchedAt || "nyss"} · {result.count ?? result.items.length} rankade produkter</p>
-    {result.items.length ? <ResaleResultCards items={result.items}/> : <div className="chaseEmpty"><b>Inga produkter matchar sökningen.</b><span>Ta bort kategori eller höj maxpriset.</span></div>}
-  </>;
+  if (result) return <ResaleResults query={query} data={result}/>;
+
+  if (cachedResult) return <div aria-live="polite">
+    <ResaleResults query={query} data={cachedResult.data} cached/>
+  </div>;
 
   return <div className="chaseEmpty apiUnavailable" aria-live="polite">
     <b>BoxFinder startar analysmotorn.</b>
