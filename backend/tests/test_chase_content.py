@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from app.database import Base
 from app.models import Product,ProductVariant,ChaseProfile
-from app.services.chase_content import get_profile,content_score,content_summary,chase_ladder,chase_coverage,pull_profile
+from app.services.chase_content import get_profile,content_score,content_summary,chase_ladder,chase_coverage,pull_profile,has_actionable_odds
 
 def test_content_score_rewards_depth_without_claiming_ev():
     p={"key_names":["A","B","C"],"tiers":{"everyday":{"score":80},"good":{"score":80},"big":{"score":90},"jackpot":{"score":95}}}
@@ -47,6 +47,28 @@ def test_exact_chase_ladder_orders_by_pull_tier():
 def test_product_level_profile_is_not_mislabeled_card_level():
     p={"tiers":{"good":{"score":80}}}
     assert chase_coverage(p)["status"]=="product_level"
+
+def test_serial_number_is_not_mislabeled_as_pull_odds():
+    serial_only={"headline_chases":[
+        {"card":"Unique card","tier":"JACKPOT","odds":"1/1; individuellt packodds ej publicerat"},
+        {"card":"Low numbered card","tier":"MONSTER","odds":"serial /25"},
+    ]}
+    assert has_actionable_odds(serial_only) is False
+    assert chase_coverage(serial_only)["has_odds"] is False
+
+def test_ratio_or_explicit_guarantee_counts_as_actionable_odds():
+    ratio={"headline_chases":[{"card":"Insert","tier":"BRA","odds":"1:60 hobby-pack"}]}
+    guarantee={"headline_chases":[{"card":"Auto family","tier":"BRA","odds":"1 autograph guaranteed per box"}]}
+    assert has_actionable_odds(ratio) is True
+    assert has_actionable_odds(guarantee) is True
+
+def test_negated_guarantee_does_not_count_as_actionable_odds():
+    profiles=(
+        {"headline_chases":[{"card":"Auto","tier":"MONSTER","odds":"Autograf finns men är inte garanterad"}]},
+        {"headline_chases":[{"card":"Auto","tier":"MONSTER","odds":"Specific player not guaranteed"}]},
+        {"headline_chases":[{"card":"Auto","tier":"MONSTER","odds":"Löst pack saknar garanti"}]},
+    )
+    assert all(has_actionable_odds(profile) is False for profile in profiles)
 
 def test_pull_profile_separates_repeatable_fun_and_ceiling():
     p={"tiers":{"everyday":{"score":90},"good":{"score":85},"big":{"score":70},"jackpot":{"score":60}}}

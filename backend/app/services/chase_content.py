@@ -63,11 +63,15 @@ def has_actionable_odds(profile: dict | None) -> bool:
         odds=(card.get("odds") or "").lower()
         if not odds:
             continue
-        if "garanter" in odds or "guaranteed" in odds:
+        negated_guarantee = any(phrase in odds for phrase in (
+            "inte garanter", "ej garanter", "not guaranteed", "no guarantee", "saknar garanti",
+        ))
+        if not negated_guarantee and ("garanter" in odds or "guaranteed" in odds):
             return True
-        if re.search(r"\b1\s*[:/]\s*[\d ]+", odds):
-            return True
-        if re.search(r"\bserial\s*/\s*\d+", odds):
+        # A serial number such as 1/1 or /25 describes card scarcity, not the
+        # probability of pulling it. Only explicit ratio notation (1:120) is
+        # actionable evidence for the ranking grade.
+        if re.search(r"\b1\s*:\s*[\d ]+", odds):
             return True
     return False
 

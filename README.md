@@ -1,4 +1,11 @@
-# BoxFinder v0.39.1
+# BoxFinder v0.47.0
+
+## v0.47.0 – Format-safe catalog expansion
+- Added verified Basket, NFL, Yu-Gi-Oh and Racing products with exact Swedish purchase links.
+- Added format-specific chase profiles for hobby boxes, retail boxes, hangers and loose packs.
+- Serial numbers such as `1/1` and negated guarantees no longer count as published pull odds.
+- Replaced shared display/loose-pack profiles with explicit pack-safe variants.
+
 ## v0.39.1 – Release hardening
 - Fixed clean-database startup failure in chase-profile seeding.
 - Fixed frontend build blockers in Source Hub and Chase Finder.

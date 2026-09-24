@@ -1,3 +1,4 @@
+import copy
 import json
 from datetime import datetime
 from sqlalchemy import select
@@ -195,11 +196,26 @@ REAL_CROSS_CATEGORY_EXPANSION = [
     dict(slug="cc-2025-topps-chrome-deadpool-hobby", name="2025 Topps Chrome Marvel Deadpool Hobby Box", category="Marvel", manufacturer="Topps", year="2025", series="Marvel Deadpool Chrome", fmt="hobby box", sku="FGC006433-10", price=3699, packs=10, cards=8, stock="in_stock", facts=["10 hobby-pack, 8 kort per pack", "Ryan Reynolds- och Hugh Jackman-autografer finns", "Sketch cards, case hits och SuperFractors 1/1 finns", "Autograf eller sketch är inte uttryckligen boxgaranterad"], buy_url="https://www.coolcard.se/product/hel-box-2025-topps-chrome-marvel-deadpool-hobby"),
 ]
 
+# Manually verified against the exact Coolcard article pages on 2026-09-24.
+# Format facts below are deliberately product-specific; hobby guarantees must
+# never leak into retail boxes or loose packs from the same set.
+REAL_RESEARCH_OBSERVED_AT = datetime(2026, 9, 24, 20, 51, 0)
+REAL_RESEARCH_EXPANSION = [
+    dict(slug="cc-2025-26-topps-nba-hoops-value", name="2025-26 Topps NBA Hoops Basketball Value Box", category="Basket", manufacturer="Topps", year="2025-26", series="NBA Hoops", fmt="value box", sku="FGC006700", price=429, packs=7, cards=8, stock="in_stock", observed_at=REAL_RESEARCH_OBSERVED_AT, facts=["7 retail-pack, 8 kort per pack", "Green Hoops-paralleller är exklusiva för Value Box", "Retail-autografer och Block by Block/Boom Shaka Laka case hits kan dras", "Ingen autograf eller case hit är garanterad"], buy_url="https://www.coolcard.se/product/hel-value-box-2025-26-topps-nba-hoops-basketball"),
+    dict(slug="cc-2025-26-topps-nba-hoops-hanger", name="2025-26 Topps NBA Hoops Basketball Hanger Box", category="Basket", manufacturer="Topps", year="2025-26", series="NBA Hoops", fmt="hanger", sku="FGC006694", price=329, packs=1, cards=25, stock="in_stock", observed_at=REAL_RESEARCH_OBSERVED_AT, facts=["1 retail-pack med 25 kort", "Orange Hoops-paralleller är exklusiva för Hanger Box", "Retail-autografer och Block by Block/Boom Shaka Laka case hits kan dras", "Ingen autograf eller case hit är garanterad"], buy_url="https://www.coolcard.se/product/hel-hanger-box-2025-26-topps-nba-hoops-basketball-25-kort"),
+    dict(slug="cc-2026-topps-flagship-nfl-hobby", name="2026 Topps Flagship NFL Football Hobby Box", category="NFL", manufacturer="Topps", year="2026", series="Topps Flagship Football", fmt="hobby box", sku="FGC006854-20", price=2199, packs=20, cards=12, stock="in_stock", observed_at=REAL_RESEARCH_OBSERVED_AT, facts=["20 hobby-pack, 12 kort per pack", "Aqua Rainbow och numrerade paralleller, autografer, relics och SSP finns", "1957 Rookie Variations, All Kings och Golden Mirror Image Variations finns", "Butikssidan anger ingen garanterad autograf eller relic per box"], buy_url="https://www.coolcard.se/product/hel-box-2026-topps-flagship-nfl-football-hobby"),
+    dict(slug="cc-2026-topps-flagship-nfl-mega", name="2026 Topps Flagship NFL Football Mega Box", category="NFL", manufacturer="Topps", year="2026", series="Topps Flagship Football", fmt="mega box", sku="FGC006856", price=699, packs=12, cards=15, stock="in_stock", observed_at=REAL_RESEARCH_OBSERVED_AT, facts=["12 retail-pack, 15 kort per pack", "Aqua Holo, numrerade och 1991 Topps Football Crackle-paralleller finns", "Retailformatet ger 180 kort men butikssidan lovar ingen autograf eller relic", "Hobbyformatets innehåll får inte användas som Mega Box-garanti"], buy_url="https://www.coolcard.se/product/hel-mega-box-2026-topps-flagship-nfl-football"),
+    dict(slug="cc-2026-topps-flagship-nfl-fat-pack", name="2026 Topps Flagship NFL Football Fat Pack", category="NFL", manufacturer="Topps", year="2026", series="Topps Flagship Football", fmt="single pack", sku="FGC006850", price=99, packs=1, cards=36, stock="in_stock", observed_at=REAL_RESEARCH_OBSERVED_AT, facts=["36 kort per retail-pack", "Aqua Holo, numrerade paralleller, retail-exklusiva inserts och Team Color Border finns", "Ingen autograf, relic eller SSP är garanterad", "Löst retail-pack ska inte ärva hobbyboxens konfiguration"], buy_url="https://www.coolcard.se/product/1st-fat-pack-2026-topps-flagship-nfl-football"),
+    dict(slug="cc-yugioh-phantom-revenge-display", name="Yu-Gi-Oh! Phantom Revenge Booster Display", category="Yu-Gi-Oh", manufacturer="Konami", year="2025", series="Phantom Revenge", fmt="booster box", sku="YGO-PRV-EN-24", price=779, packs=24, cards=7, stock="in_stock", observed_at=REAL_RESEARCH_OBSERVED_AT, facts=["24 engelska boosterpaket, 7 kort per pack", "60-kortsset med 10 Ultra Rare, 10 Super Rare och 40 Rare", "15 kort finns som Collector's Rare och 10 som Starlight Rare", "Konami publicerar rarity-listan men inga kortspecifika packodds"], buy_url="https://www.coolcard.se/product/yu-gi-oh-phantom-revenge-booster-display"),
+    dict(slug="cc-2023-panini-chronicles-racing-hobby", name="2023 Panini Chronicles NASCAR Racing Hobby Box", category="Racing", manufacturer="Panini", year="2023", series="Chronicles NASCAR", fmt="hobby box", sku="23-Chr-Rac-H", price=1695, packs=6, cards=8, stock="in_stock", observed_at=REAL_RESEARCH_OBSERVED_AT, facts=["6 hobby-pack, 8 kort per pack", "3 autografer och 1 memorabilia per box i snitt", "2 Immaculate-kort per box", "Checklistan omfattar bland annat Jimmie Johnson, Dale Earnhardt Jr., Jeff Gordon, Chase Elliott och Kyle Busch"], buy_url="https://www.coolcard.se/product/hel-box-2023-panini-chronicles-racing-hobby-nascar"),
+]
+
 REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
 
 REAL_SNAPSHOT += REAL_PACK_SNAPSHOT
 REAL_SNAPSHOT += REAL_NONSPORT_EXPANSION
 REAL_SNAPSHOT += REAL_CROSS_CATEGORY_EXPANSION
+REAL_SNAPSHOT += REAL_RESEARCH_EXPANSION
 
 DIRECT_BUY_URLS = {
     "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",
@@ -347,7 +363,7 @@ def seed_verified_snapshot():
                 source_url = pack_url if row["fmt"]=="single pack" else category_url
             source_url = row.get("buy_url") or DIRECT_BUY_URLS.get(row["slug"]) or buy_urls.get(row["slug"]) or source_url
             stock_status = "out_of_stock" if row["slug"] in UNAVAILABLE_PURCHASE_SLUGS else row.get("stock", "in_stock")
-            is_expansion = row in REAL_NONSPORT_EXPANSION or row in REAL_CROSS_CATEGORY_EXPANSION
+            is_expansion = row in REAL_NONSPORT_EXPANSION or row in REAL_CROSS_CATEGORY_EXPANSION or row in REAL_RESEARCH_EXPANSION
             observed_at = row.get("observed_at", REAL_EXPANSION_OBSERVED_AT if is_expansion else REAL_SNAPSHOT_OBSERVED_AT)
             if offer is None:
                 offer = Offer(
@@ -386,7 +402,7 @@ def seed_verified_snapshot():
                 pf.facts_json=json.dumps(facts,ensure_ascii=False)
                 pf.source_name="Coolcard / tillverkarinformation på produktsidan"
                 pf.source_url=fact_urls.get(row["slug"],source_url)
-                pf.verified_at=REAL_SNAPSHOT_OBSERVED_AT
+                pf.verified_at=observed_at
                 pf.confidence=100
 
         db.commit()
@@ -1442,14 +1458,131 @@ CHASE_PROFILES["cc-2026-fleer-ultra-golf-pack"] = {
  "caveat":"1:60 och 1:188 gäller hela kortfamiljen, inte en viss golfare. Ett löst pack har ingen garanterad autograf."
 }
 
-CHASE_PROFILES["cc-2026-topps-baseball-series2-pack"] = CHASE_PROFILES["cc-2026-topps-baseball-series2-hobby"]
-CHASE_PROFILES["cc-star-wars-unlimited-shadows-pack"] = CHASE_PROFILES["cc-star-wars-unlimited-shadows-display"]
-CHASE_PROFILES["cc-star-wars-unlimited-twilight-pack"] = CHASE_PROFILES["cc-star-wars-unlimited-twilight-display"]
+_nba_retail_profile = {
+ "source_name":"Topps official 2025-26 NBA Hoops checklist and retail format guide",
+ "source_url":"https://www.topps.com/pages/topps-hoops-basketball",
+ "key_names":["Cooper Flagg Hoops Rookie First Signs","Dylan Harper Hoops Rookie First Signs","Victor Wembanyama","LeBron James","Block by Block case hit"],
+ "headline_chases":[
+  {"card":"Cooper Flagg Hoops Rookie First Signs","tier":"JACKPOT","odds":"Retail-autograf; kortspecifikt odds ej publicerat","why":"Verifierad topprookie i retailformatets signerade spår."},
+  {"card":"Dylan Harper Hoops Rookie First Signs","tier":"MONSTER","odds":"Retail-autograf; kortspecifikt odds ej publicerat","why":"Namngiven topprookie i retail-autografprogrammet."},
+  {"card":"Block by Block eller Boom Shaka Laka case hit","tier":"MONSTER","odds":"Retail-only case hit; exakt formatodds ej publicerat","why":"Två case-hit-familjer som Topps uttryckligen avgränsar till retail."},
+  {"card":"Victor Wembanyama eller LeBron James retail parallel","tier":"MYCKET BRA","odds":"Parallelfamilj; kortspecifikt odds ej publicerat","why":"Två av checklistans mest etablerade stjärnnamn."}
+ ],
+ "why_exciting":["Retailformatet har egna case hits och signerade kort, inte hobbyformatets innehållskonfiguration.","Cooper Flagg och Dylan Harper ger tydliga namngivna rookie-jakter."],
+ "tiers":{"everyday":{"label":"Retailöppning","score":72,"items":["retailparalleller och inserts"]},"good":{"label":"Bra träff","score":72,"items":["stjärn- eller rookieparallel"]},"big":{"label":"Riktigt bra","score":84,"items":["retail case hit eller autograph"]},"jackpot":{"label":"Monsterhit","score":94,"items":["Cooper Flagg retail-autograf"]}},
+ "caveat":"Topps publicerar inget löfte om autograf eller case hit per Value/Hanger Box. Hobbyboxens autografinnehåll gäller inte retailformaten."
+}
+CHASE_PROFILES["cc-2025-26-topps-nba-hoops-value"] = copy.deepcopy(_nba_retail_profile)
+CHASE_PROFILES["cc-2025-26-topps-nba-hoops-value"]["tiers"]["everyday"]["items"] = ["56 kort", "Green Hoops-paralleller"]
+CHASE_PROFILES["cc-2025-26-topps-nba-hoops-value"]["why_exciting"][0] = "Sju pack och Green Hoops-paralleller ger fler retailförsök än en Hanger Box."
+CHASE_PROFILES["cc-2025-26-topps-nba-hoops-hanger"] = copy.deepcopy(_nba_retail_profile)
+CHASE_PROFILES["cc-2025-26-topps-nba-hoops-hanger"]["tiers"]["everyday"] = {"label":"Kort retailöppning","score":63,"items":["25 kort", "Orange Hoops-paralleller"]}
+CHASE_PROFILES["cc-2025-26-topps-nba-hoops-hanger"]["why_exciting"][0] = "Ett 25-kortspack och Orange Hoops-paralleller ger en billigare retailöppning."
 
-CHASE_PROFILES["cc-pokemon-ninja-spinner-m4-pack"] = CHASE_PROFILES["cc-pokemon-ninja-spinner-m4-display"]
-CHASE_PROFILES["cc-pokemon-storm-emeralda-m6-pack"] = CHASE_PROFILES["cc-pokemon-storm-emeralda-m6-display"]
-CHASE_PROFILES["cc-one-piece-op14-jp-pack"] = CHASE_PROFILES["cc-one-piece-op14-jp-display"]
-CHASE_PROFILES["cc-one-piece-op16-jp-pack"] = CHASE_PROFILES["cc-one-piece-op16-jp-display"]
+_nfl_family_chases = copy.deepcopy(CHASE_PROFILES["cc-2026-topps-flagship-nfl-pack"])
+CHASE_PROFILES["cc-2026-topps-flagship-nfl-hobby"] = copy.deepcopy(_nfl_family_chases)
+CHASE_PROFILES["cc-2026-topps-flagship-nfl-hobby"].update({
+ "source_name":"Topps official 2026 Flagship Football checklist and hobby format guide",
+ "why_exciting":["20 hobby-pack och 240 kort ger bred tillgång till rookies, paralleller, autografer och memorabilia.","Fernando Mendoza, Jeremiyah Love, Carnell Tate, Mahomes och Brady är verifierade checklistnamn."],
+ "tiers":{"everyday":{"label":"Bred hobbyöppning","score":86,"items":["240 kort", "Aqua Rainbow och inserts"]},"good":{"label":"Bra träff","score":78,"items":["numrerad rookie- eller stjärnparallel"]},"big":{"label":"Riktigt bra","score":88,"items":["1957 Rookie Variation, SSP eller autograph"]},"jackpot":{"label":"Monsterhit","score":98,"items":["Mahomes/Brady auto eller Patch Auto"]}},
+ "caveat":"Butikssidan anger ingen garanterad autograf eller relic per hobbybox. Ett specifikt namn, SSP eller premiumkort är inte garanterat."
+})
+CHASE_PROFILES["cc-2026-topps-flagship-nfl-mega"] = copy.deepcopy(_nfl_family_chases)
+CHASE_PROFILES["cc-2026-topps-flagship-nfl-mega"].update({
+ "source_name":"Topps official 2026 Flagship Football checklist and Coolcard Mega configuration",
+ "why_exciting":["12 retail-pack och 180 kort med Aqua Holo och 1991 Crackle-paralleller.","Den breda checklistan ger många rookie- och stjärnchanser utan att påstå en hobbygaranti."],
+ "tiers":{"everyday":{"label":"Stor retailöppning","score":83,"items":["180 kort", "Aqua Holo och Crackle-paralleller"]},"good":{"label":"Bra träff","score":76,"items":["numrerad rookie- eller stjärnparallel"]},"big":{"label":"Riktigt bra","score":82,"items":["sällsynt variation eller premiumparallel"]},"jackpot":{"label":"Monsterhit","score":91,"items":["extremt sällsynt toppnamnsträff"]}},
+ "caveat":"Mega Box-sidan lovar ingen autograf, relic eller SSP. Hobbyformatets eventuella hitfördelning får inte överföras till retail."
+})
+CHASE_PROFILES["cc-2026-topps-flagship-nfl-fat-pack"] = copy.deepcopy(_nfl_family_chases)
+CHASE_PROFILES["cc-2026-topps-flagship-nfl-fat-pack"].update({
+ "source_name":"Topps official 2026 Flagship Football checklist and Coolcard Fat Pack configuration",
+ "why_exciting":["36 kort under 100 kr med retail-exklusiva inserts och paralleller.","Ett billigt format för rookiejakt, men mycket lägre träfftäthet än en hel box."],
+ "tiers":{"everyday":{"label":"Låg insats","score":68,"items":["36 kort", "retail-exklusiva inserts"]},"good":{"label":"Bra träff","score":68,"items":["rookie- eller stjärnparallel"]},"big":{"label":"Riktigt bra","score":76,"items":["numrerad topprookie"]},"jackpot":{"label":"Monsterhit","score":88,"items":["extremt sällsynt premiumträff"]}},
+ "caveat":"Ett löst Fat Pack garanterar inte autograf, relic, SSP eller ett visst rookiekort. Hobbyboxens konfiguration gäller inte detta pack."
+})
+
+CHASE_PROFILES["cc-yugioh-phantom-revenge-display"] = {
+ "source_name":"Konami official Phantom Revenge product page and card database",
+ "source_url":"https://www.yugioh-card.com/eu/product/phantom-revenge/",
+ "key_names":["Hecahands Ibtel Starlight Rare","Hecahands Jauzah Starlight Rare","Enneacraft - Atori.MAR Starlight Rare","Kewl Tune Mix Starlight Rare","Kewl Tune Synchro Starlight Rare"],
+ "headline_chases":[
+  {"card":"Hecahands Ibtel Starlight Rare","tier":"JACKPOT","odds":"Starlight Rare; Konami publicerar inte kortspecifikt packodds","why":"Officiella kortdatabasen bekräftar Starlight- och Collector's Rare-versioner."},
+  {"card":"Hecahands Jauzah Starlight Rare","tier":"MONSTER","odds":"Starlight Rare; exakt packodds ej publicerat","why":"Fusionkort i setets centrala Hecahands-tema."},
+  {"card":"Enneacraft - Atori.MAR Starlight Rare","tier":"MONSTER","odds":"Starlight Rare; exakt packodds ej publicerat","why":"Officiellt verifierad Starlight-uppgradering."},
+  {"card":"Kewl Tune Mix eller Kewl Tune Synchro Starlight Rare","tier":"MONSTER","odds":"Starlight Rare; exakt packodds ej publicerat","why":"Två namngivna premiumvarianter från Kewl Tune-temat."}
+ ],
+ "why_exciting":["24 engelska pack ger flera försök på ett kompakt 60-kortsset.","Konami bekräftar 15 Collector's Rare- och 10 Starlight Rare-uppgraderingar."],
+ "tiers":{"everyday":{"label":"Full display","score":79,"items":["168 kort", "24 pack"]},"good":{"label":"Bra träff","score":70,"items":["Ultra Rare eller stark Super Rare"]},"big":{"label":"Riktigt bra","score":82,"items":["Collector's Rare"]},"jackpot":{"label":"Monsterhit","score":91,"items":["namngiven Starlight Rare"]}},
+ "caveat":"Konami publicerar rarity-fördelningen men inga kortspecifika pack- eller displayodds. Starlight Rare är en rarity, inte en garanti per display."
+}
+
+CHASE_PROFILES["cc-2023-panini-chronicles-racing-hobby"] = {
+ "source_name":"Panini official checklist, Coolcard box configuration and published checklist index",
+ "source_url":"https://www.paniniamerica.net/2023-chronicles-racing-nascar-trading-cards-hobby.html",
+ "key_names":["Jimmie Johnson Immaculate Auto Relic","Dale Earnhardt Jr. Spectra Color Blast","Jeff Gordon Lightning Autograph","Chase Elliott Contenders Optic Autograph","Kyle Busch Cornerstones Materials Auto"],
+ "headline_chases":[
+  {"card":"Jimmie Johnson Immaculate Auto Relic","tier":"JACKPOT","odds":"3 autografer och 1 memorabilia per box över hela checklistan; specifikt kort ej garanterat","why":"Verifierat toppnamn i produktens premium auto/relic-spår."},
+  {"card":"Dale Earnhardt Jr. Spectra Color Blast","tier":"MONSTER","odds":"SSP; exakt boxodds ej publicerat","why":"Namngiven sällsynt Spectra-variant av en NASCAR-ikon."},
+  {"card":"Jeff Gordon Lightning Autograph","tier":"MONSTER","odds":"Autografprogram; specifik förare ej garanterad","why":"Legendnamn i ett separat signerat spår."},
+  {"card":"Chase Elliott Contenders Optic Autograph","tier":"MYCKET BRA","odds":"Autografprogram; specifik förare ej garanterad","why":"En av checklistans största aktiva förare."},
+  {"card":"Kyle Busch Cornerstones Materials Auto","tier":"MONSTER","odds":"Auto/memorabilia-program; specifikt kort ej garanterat","why":"Kombinerar signatur och racingmemorabilia."}
+ ],
+ "why_exciting":["Tre autografer och en memorabilia per box i snitt ger hög dokumenterad hit density.","Sex pack blandar Chronicles, Immaculate, Spectra, Contenders Optic och flera andra varumärken."],
+ "tiers":{"everyday":{"label":"Hit-koncentrerad hobbybox","score":93,"items":["3 autografer i snitt", "1 memorabilia i snitt", "2 Immaculate-kort"]},"good":{"label":"Bra träff","score":84,"items":["numrerad förare eller stark auto"]},"big":{"label":"Riktigt bra","score":93,"items":["legendauto, Color Blast eller auto/relic"]},"jackpot":{"label":"Monsterhit","score":97,"items":["lågnumrerad legend-auto/relic"]}},
+ "caveat":"Boxinnehållet är genomsnitt över produktionen. Ingen viss förare, kortfamilj eller numrering är garanterad; andrahandsvärden ingår inte i profilen."
+}
+
+def _loose_pack_profile(base_slug, *, everyday_items, why, caveat):
+    """Copy checklist content while replacing display/box opening claims."""
+    profile = copy.deepcopy(CHASE_PROFILES[base_slug])
+    profile["why_exciting"] = why
+    profile["tiers"]["everyday"] = {"label":"Ett löst paket","score":50,"items":everyday_items}
+    profile["caveat"] = caveat
+    return profile
+
+CHASE_PROFILES["cc-2026-topps-baseball-series2-pack"] = _loose_pack_profile(
+    "cc-2026-topps-baseball-series2-hobby",
+    everyday_items=["12 kort"],
+    why=["Ett 12-kortspack ger en billig chans på Series 2-rookies och inserts.","Checklistans tak finns kvar, men hobbyboxens autograf/relic-löfte gör det inte."],
+    caveat="Ett löst pack saknar hobbyboxens autograf-eller-relic-garanti och kan komma från en box där boxhiten redan dragits.",
+)
+CHASE_PROFILES["cc-star-wars-unlimited-shadows-pack"] = _loose_pack_profile(
+    "cc-star-wars-unlimited-shadows-display",
+    everyday_items=["1 rare/legendary-plats", "1 foil-plats"],
+    why=["Ett pack har en rare/legendary-plats och en foil-plats.","Showcase-ledare kan finnas men är extremt sällsynta."],
+    caveat="Detta är ett löst pack, inte en 24-packdisplay. Showcase eller en viss karaktär är inte garanterad.",
+)
+CHASE_PROFILES["cc-star-wars-unlimited-twilight-pack"] = _loose_pack_profile(
+    "cc-star-wars-unlimited-twilight-display",
+    everyday_items=["1 rare/legendary-plats", "1 foil-plats"],
+    why=["Ett pack ger en liten Clone Wars-öppning med rare/legendary- och foilplats.","Ahsoka, Grievous och Anakin finns i setet men inte som garanti."],
+    caveat="Detta är ett löst pack, inte en 24-packdisplay. Showcase eller en viss karaktär är inte garanterad.",
+)
+CHASE_PROFILES["cc-pokemon-ninja-spinner-m4-pack"] = _loose_pack_profile(
+    "cc-pokemon-ninja-spinner-m4-display",
+    everyday_items=["5 kort"],
+    why=["Ett japanskt femkortspack ger en enstaka chans på Mega Greninja-spåren.","Ingen rarity eller ett visst kort är garanterat."],
+    caveat="Detta är ett löst femkortspack, inte en 30-packdisplay. Pokémon publicerar inga kortspecifika pull rates.",
+)
+CHASE_PROFILES["cc-pokemon-storm-emeralda-m6-pack"] = _loose_pack_profile(
+    "cc-pokemon-storm-emeralda-m6-display",
+    everyday_items=["5 kort"],
+    why=["Ett japanskt femkortspack ger en enstaka chans på Mega Rayquaza-spåren.","Ingen rarity eller ett visst kort är garanterat."],
+    caveat="Detta är ett löst femkortspack, inte en 30-packdisplay. Pokémon publicerar inga kortspecifika pull rates.",
+)
+CHASE_PROFILES["cc-one-piece-op14-jp-pack"] = _loose_pack_profile(
+    "cc-one-piece-op14-jp-display",
+    everyday_items=["6 japanska kort"],
+    why=["Ett japanskt sexkortspack ger en enstaka chans på OP-14:s paralleller.","Boa Hancock, Mihawk och Law finns i setet men är inte garanterade."],
+    caveat="Detta är ett löst japanskt pack, inte en 24-packdisplay. Bandai publicerar inte kortspecifika packodds.",
+)
+CHASE_PROFILES["cc-one-piece-op16-jp-pack"] = _loose_pack_profile(
+    "cc-one-piece-op16-jp-display",
+    everyday_items=["6 japanska kort"],
+    why=["Ett japanskt sexkortspack ger en enstaka chans på OP-16:s paralleller.","Ace, Luffy och Yamato finns i setet men är inte garanterade."],
+    caveat="Detta är ett löst japanskt pack, inte en 24-packdisplay. Bandai publicerar inte kortspecifika packodds.",
+)
 
 
 CHASE_CARD_DB = [
@@ -1698,8 +1831,9 @@ def seed_chase_profiles():
             row.content_json=json.dumps({k:v for k,v in data.items() if k not in ("source_name","source_url")},ensure_ascii=False)
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
+            research_slugs={x["slug"] for x in REAL_RESEARCH_EXPANSION}
             expansion_slugs={x["slug"] for x in REAL_NONSPORT_EXPANSION + REAL_CROSS_CATEGORY_EXPANSION}
-            row.verified_at=REAL_EXPANSION_OBSERVED_AT if slug in expansion_slugs else REAL_SNAPSHOT_OBSERVED_AT
+            row.verified_at=REAL_RESEARCH_OBSERVED_AT if slug in research_slugs else REAL_EXPANSION_OBSERVED_AT if slug in expansion_slugs else REAL_SNAPSHOT_OBSERVED_AT
             row.confidence=95
         db.commit()
     finally:

@@ -164,6 +164,51 @@ def test_latest_box_and_pack_expansion_has_direct_links_and_profiles(monkeypatch
     assert all(seedmod.CHASE_PROFILES[slug]["headline_chases"] for slug in slugs)
     db.close()
 
+def test_research_expansion_covers_thin_categories_with_exact_links(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    db=Session()
+    slugs={x["slug"] for x in seedmod.REAL_RESEARCH_EXPANSION}
+    rows=db.execute(
+        select(Product, ProductVariant, Offer)
+        .join(ProductVariant, ProductVariant.product_id==Product.id)
+        .join(Offer, Offer.variant_id==ProductVariant.id)
+        .where(Product.slug.in_(slugs))
+    ).all()
+    assert {product.slug for product,_,_ in rows}==slugs
+    assert {product.category for product,_,_ in rows} >= {"Basket","NFL","Yu-Gi-Oh","Racing"}
+    assert all("/product/" in offer.url for _,_,offer in rows)
+    assert all(offer.stock_status=="in_stock" and not offer.is_preorder for _,_,offer in rows)
+    assert all(slug in seedmod.CHASE_PROFILES for slug in slugs)
+    assert all(seedmod.CHASE_PROFILES[slug]["headline_chases"] for slug in slugs)
+    db.close()
+
+def test_research_expansion_preserves_verified_format_counts():
+    by_slug={x["slug"]:x for x in seedmod.REAL_RESEARCH_EXPANSION}
+    assert (by_slug["cc-2025-26-topps-nba-hoops-value"]["packs"],by_slug["cc-2025-26-topps-nba-hoops-value"]["cards"])==(7,8)
+    assert (by_slug["cc-2025-26-topps-nba-hoops-hanger"]["packs"],by_slug["cc-2025-26-topps-nba-hoops-hanger"]["cards"])==(1,25)
+    assert (by_slug["cc-2026-topps-flagship-nfl-hobby"]["packs"],by_slug["cc-2026-topps-flagship-nfl-hobby"]["cards"])==(20,12)
+    assert (by_slug["cc-2026-topps-flagship-nfl-mega"]["packs"],by_slug["cc-2026-topps-flagship-nfl-mega"]["cards"])==(12,15)
+    assert (by_slug["cc-2026-topps-flagship-nfl-fat-pack"]["packs"],by_slug["cc-2026-topps-flagship-nfl-fat-pack"]["cards"])==(1,36)
+
+def test_loose_pack_profiles_are_not_shared_display_profiles():
+    pairs=(
+        ("cc-star-wars-unlimited-shadows-pack","cc-star-wars-unlimited-shadows-display"),
+        ("cc-star-wars-unlimited-twilight-pack","cc-star-wars-unlimited-twilight-display"),
+        ("cc-pokemon-ninja-spinner-m4-pack","cc-pokemon-ninja-spinner-m4-display"),
+        ("cc-pokemon-storm-emeralda-m6-pack","cc-pokemon-storm-emeralda-m6-display"),
+        ("cc-one-piece-op14-jp-pack","cc-one-piece-op14-jp-display"),
+        ("cc-one-piece-op16-jp-pack","cc-one-piece-op16-jp-display"),
+        ("cc-2026-topps-baseball-series2-pack","cc-2026-topps-baseball-series2-hobby"),
+    )
+    for pack_slug,box_slug in pairs:
+        pack=seedmod.CHASE_PROFILES[pack_slug]
+        box=seedmod.CHASE_PROFILES[box_slug]
+        assert pack is not box
+        assert "löst" in pack["caveat"].lower()
+        assert pack["tiers"]["everyday"]["score"] < box["tiers"]["everyday"]["score"]
+
 def test_retail_and_loose_pack_profiles_do_not_claim_hobby_box_guarantees():
     retail_slugs={
         "cc-2026-topps-universe-wwe-value",
