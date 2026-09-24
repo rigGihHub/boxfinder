@@ -14,6 +14,7 @@ REAL_STORES = [
     dict(name="Terratide", homepage_url="https://terratide.se/", source_url="https://terratide.se/sv-se/samlarkort", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="TCG Deals Sverige", homepage_url="https://tcgdeals.se/", source_url="https://tcgdeals.se/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Coolcard", homepage_url="https://www.coolcard.se/", source_url="https://www.coolcard.se/", collection_method="public_html", adapter_key="public_html_catalog", policy_status="review_required"),
+    dict(name="Cardland", homepage_url="https://www.cardland.se/", source_url="https://www.cardland.se/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Samlarhobby", homepage_url="https://www.samlarhobby.se/", source_url="https://www.samlarhobby.se/", collection_method="public_html", adapter_key="public_html_catalog", policy_status="review_required"),
     dict(name="Bangerpack", homepage_url="https://bangerpack.se/", source_url="https://bangerpack.se/", collection_method="public_html", adapter_key="public_html_catalog", policy_status="review_required"),
     dict(name="Kortlagret", homepage_url="https://kortlagret.se/", source_url="https://kortlagret.se/", collection_method="public_html", adapter_key="public_html_catalog", policy_status="review_required"),
@@ -107,7 +108,7 @@ REAL_FOOTBALL_SNAPSHOT = [
          facts=["1 pack per box", "7 kort per pack", "3 encased Autograph, Autograph Relics eller Relics per box"]),
     dict(slug="cc-2025-26-topps-real-madrid-team-set", name="2025-26 Topps Real Madrid Team Set", category="Fotboll", manufacturer="Topps", year="2025-26", series="Real Madrid Team Set", fmt="team set box", sku="FS0006419", price=1299, packs=6, cards=5, stock="in_stock",
          facts=["6 pack per box", "5 kort per pack"]),
-    dict(slug="cc-2025-26-topps-ucc-flagship-hanger", name="2025-26 Topps UCC Flagship Hanger Box", category="Fotboll", manufacturer="Topps", year="2025-26", series="UCC Flagship", fmt="hanger", sku="FGC007008", price=239, packs=1, cards=35, stock="in_stock", buy_url="https://www.coolcard.se/en/product/sealed-hanger-box-35-cards-2025-26-topps-ucc-flagship-soccer",
+    dict(slug="cc-2025-26-topps-ucc-flagship-hanger", name="2025-26 Topps UCC Flagship Hanger Box", category="Fotboll", manufacturer="Topps", year="2025-26", series="UCC Flagship", fmt="hanger", sku="52022", price=178, packs=1, cards=35, stock="in_stock", store_name="Cardland", buy_url="https://www.cardland.se/fotboll/2025-26-topps-ucc-flagship-hanger-box", observed_at=REAL_EXPANSION_OBSERVED_AT,
          facts=["35 kort per box", "2 Diamante Foil parallels per box", "2 insert-kort per box"]),
 ]
 
@@ -234,6 +235,15 @@ def seed_verified_snapshot():
         }
 
         for row in REAL_SNAPSHOT:
+            row_store = coolcard
+            if row.get("store_name") and row["store_name"] != coolcard.name:
+                row_store = db.scalar(select(Store).where(Store.name == row["store_name"]))
+                if row_store is None:
+                    store_info = next(x for x in REAL_STORES if x["name"] == row["store_name"])
+                    row_store = Store(
+                        country="SE", active=True, min_interval_seconds=120, **store_info
+                    )
+                    db.add(row_store); db.flush()
             product = db.scalar(select(Product).where(Product.slug == row["slug"]))
             if product is None:
                 product = Product(
@@ -263,7 +273,7 @@ def seed_verified_snapshot():
 
             offer = db.scalar(
                 select(Offer).where(
-                    Offer.store_id == coolcard.id,
+                    Offer.store_id == row_store.id,
                     Offer.external_id == row["sku"],
                 )
             )
@@ -283,7 +293,7 @@ def seed_verified_snapshot():
             observed_at = row.get("observed_at", REAL_EXPANSION_OBSERVED_AT if row in REAL_NONSPORT_EXPANSION else REAL_SNAPSHOT_OBSERVED_AT)
             if offer is None:
                 offer = Offer(
-                    store_id=coolcard.id, variant_id=variant.id,
+                    store_id=row_store.id, variant_id=variant.id,
                     external_id=row["sku"], source_title=row["name"],
                     price_sek=row["price"], stock_status=row.get("stock","in_stock"),
                     source_kind="verified_snapshot", source_confidence=100,
