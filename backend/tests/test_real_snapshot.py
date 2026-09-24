@@ -4,6 +4,7 @@ from sqlalchemy.orm import sessionmaker
 from app.database import Base
 from app.models import Offer, Product, ProductFact, ProductVariant, Store
 from app.routers.discovery import real_catalog
+from app.routers.products import list_products
 import app.seed as seedmod
 
 def session_factory():
@@ -104,6 +105,23 @@ def test_new_pokemon_and_one_piece_products_have_named_checklists(monkeypatch):
     event.remove(bind,"before_cursor_execute",count_query)
     assert any(x["slug"]=="cc-pokemon-ninja-spinner-m4-pack" and x["chase_coverage"]["status"]=="card_level" for x in catalog["products"])
     assert len(statements)<=5, f"real catalog should batch facts and chase profiles, got {len(statements)} SQL statements"
+    db.close()
+
+def test_ranking_product_list_uses_one_bulk_chase_profile_query(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    statements=[]
+    bind=db.get_bind()
+    def count_query(*args): statements.append(args[2])
+    event.listen(bind,"before_cursor_execute",count_query)
+    items=list_products(max_price=None,db=db,include_details=False)
+    event.remove(bind,"before_cursor_execute",count_query)
+    assert items
+    assert any(x["chase_profile"] and x["chase_ladder"] for x in items)
+    assert len(statements)<=2, f"ranking list should load products and profiles in bulk, got {len(statements)} SQL statements"
     db.close()
 
 def test_all_chase_profiles_point_to_seeded_products(monkeypatch):

@@ -11,7 +11,7 @@ ALLOWED_MODES = {"value", "upside", "rookies", "hit_density", "balanced"}
 
 
 def _items(db: Session, category: str | None, max_price: float | None):
-    return list_products(category=category, max_price=max_price, db=db)
+    return list_products(category=category, max_price=max_price, db=db, include_details=False)
 
 
 @router.get("")
