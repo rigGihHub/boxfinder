@@ -1,6 +1,3 @@
-Warning: truncated output (original token count: 53746)
-Total output lines: 1533
-
 import json
 from datetime import datetime
 from sqlalchemy import select
@@ -763,7 +760,110 @@ CHASE_PROFILES = {
  "caveat":"Två autografer per box gäller hela checklistan. The Arsenal Away är ett 1/1-spår men en specifik spelare är extremt mycket svårare än boxgarantin."
 },
 "cc-2026-topps-argentina-team-set": {
- "source_name":"Topps Argentina Team Set 2026 official p…3746 tokens truncated…er":"JACKPOT","odds":"1/1; exakt spelare varierar","why":"Choice-formatets unika toppparallel."}
+ "source_name":"Topps Argentina Team Set 2026 official product and checklist",
+ "source_url":"https://es.topps.com/pages/argentina-team-set",
+ "key_names":["Franco Mastantuono #8","Nico Paz #9","Lionel Messi #16","Máximo Perrone National Debut #12","Joaquín Panichelli National Debut #20"],
+ "headline_chases":[
+   {"card":"Franco Mastantuono Base #8","tier":"BRA","odds":"Ingår i 50-kortsbasen; individuellt kortodds ej publicerat","why":"En av produktens främsta unga spelare."},
+   {"card":"Rainbow Flick – Messi, Mastantuono eller Nico Paz","tier":"MYCKET BRA","odds":"1 Rainbow Flick per box; exakt spelare ur 25-kortsgruppen","why":"Garanterat insertspår med både stjärnor och unga spelare."},
+   {"card":"Franco Mastantuono Base Autograph BC-FM","tier":"MONSTER","odds":"1 autograf i varannan box över hela autografprogrammet","why":"Namngiven ung spelarautograf."},
+   {"card":"Lionel Messi Bona Fide Baller eller Golden Sun Autograph","tier":"JACKPOT","odds":"Autograf 1:2 boxar som familj; individuellt Messi-odds ej publicerat","why":"Messi finns i två verifierade autografserier."},
+   {"card":"Lionel Messi Vis10nary Autograph VI-LM","tier":"JACKPOT","odds":"Ultra-rare; exakt odds ej publicerat","why":"Exklusiv autografserie med endast Messi."}
+ ],
+ "why_exciting":["Autograf kommer i varannan box och två numrerade paralleller per box.","Messi, Mastantuono och Nico Paz finns i konkreta chase-spår."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":86,"items":["2 numrerade paralleller","1 Rainbow Flick per box","3 Halo parallels"]},"good":{"label":"Bra träff","score":84,"items":["Mastantuono/Nico Paz parallel eller Rainbow Flick"]},"big":{"label":"Riktigt bra","score":93,"items":["Autograf 1:2 boxar","Mastantuono auto"]},"jackpot":{"label":"Monsterhit","score":98,"items":["Messi Golden Sun/Bona Fide Baller Auto","Vis10nary Messi Auto"]}},
+ "caveat":"1:2 avser valfri autograf, inte Messi. Vis10nary beskrivs officiellt som ultra-rare men Topps publicerar inget exakt odds."
+},
+"cc-2025-26-topps-real-madrid-team-set": {
+ "source_name":"Topps Real Madrid Team Set 2025/26 official product and checklist",
+ "source_url":"https://uk.topps.com/pages/topps-real-madrid-2025-26-team-set",
+ "key_names":["Franco Mastantuono RC #14","Víctor Valdepeñas RC #5","Thiago Pitarch RC #9","Kylian Mbappé #17","Vini Jr. #16","Jude Bellingham #10"],
+ "headline_chases":[
+   {"card":"Franco Mastantuono Base Rookie #14","tier":"BRA","odds":"Ingår i 50-kortsbasen; individuellt kortodds ej publicerat","why":"Produktens starkaste namngivna rookie."},
+   {"card":"Rainbow Flick – Mastantuono, Mbappé, Vini eller Bellingham","tier":"MONSTER","odds":"1 Rainbow Flick per case; exakt spelare ur 25-kortsgruppen","why":"Verifierad case hit med toppnamn."},
+   {"card":"Franco Mastantuono Base Autograph BC-MA","tier":"MONSTER","odds":"1 autograf i varannan box över hela autografprogrammet","why":"Namngiven rookieautograf."},
+   {"card":"Jude Bellingham Base Autograph BC-JB","tier":"MONSTER","odds":"Autograf 1:2 boxar som familj; individuellt odds ej publicerat","why":"Signerad världsstjärna."},
+   {"card":"Vini Jr. Bona Fide Baller Autograph BB-VJ","tier":"JACKPOT","odds":"Autograf 1:2 boxar som familj; individuellt odds ej publicerat","why":"En av produktens största signerade träffar."}
+ ],
+ "why_exciting":["Autograf i varannan box, två numrerade paralleller och en Static Foil per box.","Mastantuono, Mbappé, Vini och Bellingham ger både rookie- och stjärnspår."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":84,"items":["2 numrerade paralleller","1 Static Foil","3 Halo parallels"]},"good":{"label":"Bra träff","score":84,"items":["Mastantuono rookieparallel","Mbappé/Vini/Bellingham insert"]},"big":{"label":"Riktigt bra","score":93,"items":["Autograf 1:2 boxar","Rainbow Flick case hit"]},"jackpot":{"label":"Monsterhit","score":97,"items":["Mastantuono rookieauto","Bellingham eller Vini auto"]}},
+ "caveat":"Autografoddset gäller vilken autograf som helst. Rainbow Flick är en case hit som familj och inte en garanterad viss spelare."
+},
+"cc-2025-26-topps-ucc-flagship-hanger": {
+ "source_name":"Topps 2025-26 UEFA Club Competitions official checklist and odds",
+ "source_url":"https://www.topps.com/pages/uefa-club-competitions",
+ "key_names":["Estêvão Willian RC #66","Franco Mastantuono RC #172","Rio Ngumoha RC #191","Lennart Karl RC #187","Jobe Bellingham RC #5","Konstantinos Karetsas RC #150"],
+ "headline_chases":[
+   {"card":"Estêvão Willian Base Rookie #66","tier":"BRA","odds":"Ingår i 200-kortsbasen; individuellt kortodds ej publicerat","why":"Central rookie i UCC Flagship."},
+   {"card":"Trophy Chasers","tier":"BRA","odds":"1:2 hanger-pack","why":"Vanligaste namngivna insertfamiljen i hangerformatet."},
+   {"card":"Base Card Short Print – Estêvão eller Rio Ngumoha","tier":"MYCKET BRA","odds":"Base Short Prints 1:527 hanger-pack; exakt spelare är mer sällsynt","why":"Verifierad SP-lista med namngivna rookies."},
+   {"card":"Estêvão Willian eller Rio Ngumoha Base Autograph","tier":"MONSTER","odds":"Base Autos 1:112 hanger-pack som familj","why":"Båda rookies finns i Base Auto-checklistan."},
+   {"card":"Base Card Super Short Print – Estêvão Willian","tier":"JACKPOT","odds":"Base SSP 1:9 453 hanger-pack; exakt Estêvão-kort är mer sällsynt","why":"Extremt sällsynt rookievariation."},
+   {"card":"Future Stars Autograph – Endrick, Nwaneri eller Rodrigo Mora","tier":"JACKPOT","odds":"Future Stars Autos 1:1 319 hanger-pack som familj","why":"Verifierat ungt autografspår i hangerformatet."}
+ ],
+ "why_exciting":["Hangerformatet har Base Autos 1:112 pack och flera vanliga inserts mellan 1:2 och 1:6.","Checklistan innehåller Estêvão, Mastantuono, Ngumoha, Karl och andra tydligt namngivna rookies."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":74,"items":["Trophy Chasers 1:2","Roots 1:3","Born Champ 1:4"]},"good":{"label":"Bra träff","score":80,"items":["Stark rookie","Holo-parallel","SP 1:527"]},"big":{"label":"Riktigt bra","score":88,"items":["Base Auto 1:112","Future Stars Auto 1:1 319"]},"jackpot":{"label":"Monsterhit","score":91,"items":["Rookie SSP 1:9 453","lågnumrerad autograf eller Foilfractor"]}},
+ "caveat":"Oddsen gäller ett 35-korts hanger-pack. De gäller hela kortfamiljen, så en viss rookie eller autograf är mer sällsynt än familjeoddset."
+},
+"cc-2025-26-pitch-kings-la-liga": {
+ "source_name":"Panini Pitch Kings La Liga 2025/26 official product details and verified checklist",
+ "source_url":"https://www.paniniamerica.net/2025-26-panini-pitch-kings-soccer-trading-card-box-hobby-international",
+ "key_names":["Karl Etta Eyong RC #93","Carlos Macia RC #25","Pablo Garcia RC #26","Jan Virgili RC #47","Lamine Yamal","Kylian Mbappé","Jude Bellingham"],
+ "headline_chases":[
+   {"card":"Karl Etta Eyong Base Rookie #93 eller Blackout #3","tier":"MYCKET BRA","odds":"3 Rookies I-IV per box i snitt; Blackout är ultra-rare utan publicerat odds","why":"Namngiven rookie med både bas- och SSP-spår."},
+   {"card":"Lamine Yamal Le Cinque Più Belle #1","tier":"MONSTER","odds":"Ultra-rare insert; individuellt odds ej publicerat","why":"Femkorts-SSP med checklistans största namn."},
+   {"card":"Kylian Mbappé Le Cinque Più Belle #2","tier":"MONSTER","odds":"Ultra-rare insert; individuellt odds ej publicerat","why":"Namngiven premiuminsert på Real Madrid-stjärnan."},
+   {"card":"Lamine Yamal Fresh Paint Autograph #7","tier":"JACKPOT","odds":"1 autograf per box över hela autografprogrammet","why":"Verifierad Yamal-signatur i Fresh Paint."},
+   {"card":"Kylian Mbappé Legacy Portrait Signatures #9","tier":"JACKPOT","odds":"1 autograf per box; individuellt Mbappé-odds ej publicerat","why":"Legends/stars-autograf på checklistans toppnamn."},
+   {"card":"Masterpiece Parallel 1/1","tier":"JACKPOT","odds":"1/1; exakt spelare och kortserie varierar","why":"Produktens unika toppparallel."}
+ ],
+ "why_exciting":["Varje hobbybox ger en autograf och tre rookie-kort från Rookies I-IV i snitt.","La Liga-checklistan kombinerar Yamal, Mbappé och Bellingham med ultra-rare Blackout/Le Cinque Più Belle och 1/1-paralleller."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":92,"items":["1 autograf per box","3 Rookies I-IV","2 base-paralleller"]},"good":{"label":"Bra träff","score":89,"items":["Karl Etta Eyong eller annan namngiven rookie","numrerad parallel"]},"big":{"label":"Riktigt bra","score":95,"items":["Blackout","Le Cinque Più Belle","stjärnauto"]},"jackpot":{"label":"Monsterhit","score":98,"items":["Yamal eller Mbappé-auto","Masterpiece 1/1"]}},
+ "caveat":"Boxinnehållet anges som genomsnitt. Autografen är inte garanterat Yamal eller Mbappé, och Panini publicerar inget exakt odds för Blackout eller Le Cinque Più Belle."
+},
+"cc-2026-futera-world-football-fx3": {
+ "source_name":"Futera FX World Football Series 3 official checklist",
+ "source_url":"https://www.futera.com/checklists",
+ "key_names":["Lamine Yamal","Lionel Messi","Cristiano Ronaldo","Kylian Mbappé","Jude Bellingham","Ethan Nwaneri","Pau Cubarsí"],
+ "headline_chases":[
+   {"card":"Lamine Yamal Portrait Base FXB160 Diamond","tier":"MONSTER","odds":"Base parallel 1/1; individuellt boxodds ej publicerat","why":"Checklistans högsta basparallel på ett toppnamn."},
+   {"card":"Lionel Messi Gamechanger GC27 Diamond","tier":"MONSTER","odds":"Gamechanger Diamond 1/1; övriga paralleller /6 eller lägre","why":"Numrerat rare insert på Messi."},
+   {"card":"Messi / Cristiano Ronaldo Versus Memorabilia VS11","tier":"JACKPOT","odds":"Numrerad dual memorabilia; exakt print run/boxodds ej publicerat i checklistan","why":"Båda moderna ikonerna på samma memorabilia-kort."},
+   {"card":"Lionel Messi Modern On-Card Autograph MDA19","tier":"JACKPOT","odds":"1 autograf, memorabilia eller numrerat rare insert per box som gemensam hitgrupp","why":"Verifierad on-card Messi-signatur."},
+   {"card":"Lamine Yamal Modern On-Card Autograph MDA18","tier":"JACKPOT","odds":"Ingår i on-card-autografprogrammet; individuellt odds ej publicerat","why":"Namngiven ung superstjärna på hard-signed kort."},
+   {"card":"Yamal OFOA01 eller Messi OFOA03 Unique Auto","tier":"JACKPOT","odds":"1/1","why":"Unik on-card-autograf och produktens tydligaste toppträff."}
+ ],
+ "why_exciting":["Checklistan innehåller on-card-autografer, numrerad memorabilia och rare inserts på världsstjärnor.","Två numrerade paralleller plus en autograph/relic/rare insert per box i snitt ger flera separata chase-vägar."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":87,"items":["2 numrerade paralleller per box","1 ytterligare insert"]},"good":{"label":"Bra träff","score":90,"items":["Gamechanger/Heroes/Maestro","stjärnparallel /29 eller lägre"]},"big":{"label":"Riktigt bra","score":95,"items":["On-card autograph","numrerad memorabilia"]},"jackpot":{"label":"Monsterhit","score":99,"items":["Messi/Yamal auto","Messi–Ronaldo memorabilia","Unique Auto 1/1"]}},
+ "caveat":"Boxens huvudhit kan vara autograf, memorabilia eller ett numrerat rare insert; autograf är alltså inte garanterad. Futeras checklista verifierar namn och serienummer men publicerar inte individuella boxodds."
+},
+"cc-2025-26-panini-prizm-fifa-retail": {
+ "source_name":"Panini Prizm FIFA 2025/26 retail configuration and checklist",
+ "source_url":"https://www.collectosk.com/2025-26-panini-prizm-fifa-soccer-cards/",
+ "key_names":["Rio Ngumoha #106","Franco Mastantuono #194","Pio Esposito #78","Lamine Yamal","Lionel Messi","Kylian Mbappé","Vini Jr."],
+ "headline_chases":[
+   {"card":"Rio Ngumoha Base #106 eller Emergent #8","tier":"BRA","odds":"24 retail-pack per box; individuellt kortodds ej publicerat","why":"Namngivet ungt Liverpool-spår."},
+   {"card":"Franco Mastantuono Base #194 eller Flashback 2015 #4","tier":"BRA","odds":"Ingår i retailchecklistan; individuellt kortodds ej publicerat","why":"Namngivet Real Madrid-prospect."},
+   {"card":"Numrerad Pulsar Parallel","tier":"MYCKET BRA","odds":"1 per retailbox i snitt","why":"Garanterad numrerad chase på boxnivå i snitt."},
+   {"card":"Red Pulsar Autograph – Yamal, Messi, Mbappé eller annan signerare","tier":"MONSTER","odds":"1 Red Pulsar Autograph per 2 retailboxar i snitt; exakt spelare är mer sällsynt","why":"Retailformatets tydliga autografspår."},
+   {"card":"Lamine Yamal Manga #5 eller Color Blast #1","tier":"JACKPOT","odds":"SSP; exakt retailodds ej publicerat","why":"Två av produktens mest eftertraktade Yamal-inserts."},
+   {"card":"Lionel Messi Manga #19 eller Club Legend Signatures #1","tier":"JACKPOT","odds":"SSP/autograf; individuellt retailodds ej publicerat","why":"Namngivna Messi-toppträffar i checklistan."}
+ ],
+ "why_exciting":["Retaildisplayen har en Red Pulsar-autograf i varannan box i snitt, plus en numrerad Pulsar per box.","96 kort per box ger betydligt fler chanser på basprospects och inserts än Choice-formatets åtta kort."],
+ "tiers":{"everyday":{"label":"Vanligt men intressant","score":82,"items":["24 pack","2 Base Silver","6 inserts"]},"good":{"label":"Bra träff","score":86,"items":["1 numrerad Pulsar","Ngumoha/Mastantuono/Pio Esposito"]},"big":{"label":"Riktigt bra","score":92,"items":["Red Pulsar Autograph 1:2 boxar","lågnumrerad stjärnparallel"]},"jackpot":{"label":"Monsterhit","score":96,"items":["Yamal/Messi/Mbappé-autograf","Manga eller Color Blast"]}},
+ "caveat":"1:2 gäller valfri Red Pulsar Autograph per retailbox, inte en viss spelare. Choice- och hobbyexklusiva paralleller räknas inte som möjliga retailträffar."
+},
+"cc-2025-26-panini-prizm-fifa-choice": {
+ "source_name":"Panini Prizm FIFA 2025/26 checklist and Choice configuration",
+ "source_url":"https://www.collectosk.com/2025-26-panini-prizm-fifa-soccer-cards/",
+ "key_names":["Rio Ngumoha #106","Franco Mastantuono #194","Pio Esposito #78","Lamine Yamal","Lionel Messi","Kylian Mbappé","Vini Jr."],
+ "headline_chases":[
+   {"card":"Rio Ngumoha Base #106 eller Emergent #8","tier":"BRA","odds":"Ingår i 300-kortsbasen/inserts; individuellt kortodds ej publicerat","why":"Namngivet ungt Liverpool-spår."},
+   {"card":"Choice Snake Year /48 eller Choice Cherry Blossom /28","tier":"MYCKET BRA","odds":"3 numrerade Choice Prizms per box över Choice-parallellerna","why":"Formatunika, numrerade Choice-paralleller."},
+   {"card":"Lamine Yamal Sensational Signatures #1","tier":"MONSTER","odds":"1 autograf per Choice-box över hela autografprogrammet","why":"Namngiven toppstjärna i autografchecklistan."},
+   {"card":"Lionel Messi Club Legend Signatures #1","tier":"JACKPOT","odds":"1 autograf per Choice-box; individuellt Messi-odds ej publicerat","why":"En av produktens främsta signerade chaser."},
+   {"card":"Kylian Mbappé / Vini Jr. Dual Signatures #3","tier":"JACKPOT","odds":"Ingår i Dual Signatures; individuellt boxodds ej publicerat","why":"Två Real Madrid-stjärnor på samma signerade kort."},
+   {"card":"Choice Nebula 1/1","tier":"JACKPOT","odds":"1/1; exakt spelare varierar","why":"Choice-formatets unika toppparallel."}
  ],
  "why_exciting":["En autograf och tre numrerade Choice Prizms per box ger hög hit-koncentration.","Choice har egna paralleller ned till Nebula 1/1 och checklistan innehåller Messi, Yamal, Mbappé och flera unga spelare."],
  "tiers":{"everyday":{"label":"Vanligt men intressant","score":92,"items":["1 autograf per box","3 numrerade Choice Prizms","3 övriga Choice Prizms"]},"good":{"label":"Bra träff","score":88,"items":["Ngumoha/Mastantuono/Pio Esposito","Choice /88 eller /48"]},"big":{"label":"Riktigt bra","score":95,"items":["Yamal eller Mbappé-autograf","Choice /28 eller /18"]},"jackpot":{"label":"Monsterhit","score":98,"items":["Messi-autograf","Dual Signatures","Choice Nebula 1/1"]}},
