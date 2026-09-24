@@ -347,7 +347,8 @@ def seed_verified_snapshot():
                 source_url = pack_url if row["fmt"]=="single pack" else category_url
             source_url = row.get("buy_url") or DIRECT_BUY_URLS.get(row["slug"]) or buy_urls.get(row["slug"]) or source_url
             stock_status = "out_of_stock" if row["slug"] in UNAVAILABLE_PURCHASE_SLUGS else row.get("stock", "in_stock")
-            observed_at = row.get("observed_at", REAL_EXPANSION_OBSERVED_AT if row in REAL_NONSPORT_EXPANSION else REAL_SNAPSHOT_OBSERVED_AT)
+            is_expansion = row in REAL_NONSPORT_EXPANSION or row in REAL_CROSS_CATEGORY_EXPANSION
+            observed_at = row.get("observed_at", REAL_EXPANSION_OBSERVED_AT if is_expansion else REAL_SNAPSHOT_OBSERVED_AT)
             if offer is None:
                 offer = Offer(
                     store_id=row_store.id, variant_id=variant.id,
@@ -1697,12 +1698,8 @@ def seed_chase_profiles():
             row.content_json=json.dumps({k:v for k,v in data.items() if k not in ("source_name","source_url")},ensure_ascii=False)
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
-            row.verified_at=REAL_EXPANSION_OBSERVED_AT if slug in {
-                "cc-pokemon-ninja-spinner-m4-display", "cc-pokemon-ninja-spinner-m4-pack",
-                "cc-pokemon-storm-emeralda-m6-display", "cc-pokemon-storm-emeralda-m6-pack",
-                "cc-one-piece-op14-jp-display", "cc-one-piece-op14-jp-pack",
-                "cc-one-piece-op16-jp-display", "cc-one-piece-op16-jp-pack",
-            } else REAL_SNAPSHOT_OBSERVED_AT
+            expansion_slugs={x["slug"] for x in REAL_NONSPORT_EXPANSION + REAL_CROSS_CATEGORY_EXPANSION}
+            row.verified_at=REAL_EXPANSION_OBSERVED_AT if slug in expansion_slugs else REAL_SNAPSHOT_OBSERVED_AT
             row.confidence=95
         db.commit()
     finally:
