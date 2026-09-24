@@ -9,7 +9,7 @@ export async function GET(request) {
   try {
     const response = await fetch(`${API}/rankings/resale${url.search}`, {
       cache: "no-store",
-      signal: AbortSignal.timeout(20000),
+      signal: AbortSignal.timeout(8000),
     });
     if (!response.ok) {
       return NextResponse.json({ready: false}, {status: 503});

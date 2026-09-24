@@ -28,7 +28,7 @@ export default function ResaleApiRecovery({query}) {
       } catch {
         // A sleeping Render service is expected to fail during its first wake-up.
       }
-      if (!stopped.current) timer = window.setTimeout(recover, 3000);
+      if (!stopped.current) timer = window.setTimeout(recover, 2000);
     }
 
     recover();

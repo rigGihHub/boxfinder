@@ -1,5 +1,4 @@
 import Link from "next/link";
-import {getJson} from "../lib/api";
 import ResaleApiRecovery from "../components/ResaleApiRecovery";
 
 const money = value => value == null ? "—" : `${Math.round(value).toLocaleString("sv-SE")} kr`;
@@ -10,6 +9,20 @@ const strategies = [
   ["frequent", "Bra träff oftare"],
 ];
 
+async function getInitialRankings(path) {
+  const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+  try {
+    const response = await fetch(`${API}${path}`, {
+      cache: "no-store",
+      signal: AbortSignal.timeout(5000),
+    });
+    if (response.ok) return await response.json();
+  } catch {
+    // Return the page immediately; the client recovery component wakes the API.
+  }
+  return {items: [], count: 0, disclaimer: "", unavailable: true};
+}
+
 export default async function ResalePage({searchParams}){
   const sp = await searchParams;
   const strategy = sp?.strategy || "balanced";
@@ -19,7 +32,7 @@ export default async function ResalePage({searchParams}){
   if(category) qs.set("category", category);
   if(maxPrice) qs.set("max_price", maxPrice);
   qs.set("limit", "40");
-  const data = await getJson(`/rankings/resale?${qs.toString()}`, {items:[], count:0, disclaimer:"", unavailable:true});
+  const data = await getInitialRankings(`/rankings/resale?${qs.toString()}`);
   const items = data.items || [];
 
   return <main className="resalePage">
