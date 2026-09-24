@@ -1,5 +1,5 @@
 import json
-from datetime import datetime
+from datetime import datetime, timezone
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy import select
 from sqlalchemy.orm import Session, joinedload
@@ -31,6 +31,7 @@ def recommendations(
     result["category"]=category
     result["budget"]=budget
     result["format"]=format
+    result["searched_at"]=datetime.now(timezone.utc).isoformat()
     return result
 
 
@@ -113,6 +114,7 @@ def real_catalog(
         })
     rows.sort(key=lambda x:(0 if x["chase_coverage"]["status"]=="card_level" else 1 if x["chase_coverage"]["status"]=="product_level" else 2,-(x["content_rating"]["score"] or -1),x["price"],x["name"]))
     return {
+        "searched_at":datetime.now(timezone.utc).isoformat(),
         "count":len(rows),
         "category":category,
         "budget":budget,

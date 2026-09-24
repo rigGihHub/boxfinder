@@ -3,6 +3,7 @@
 import Link from "next/link";
 
 const money = value => value == null ? "—" : `${Math.round(value).toLocaleString("sv-SE")} kr`;
+const checked = value => value ? new Intl.DateTimeFormat("sv-SE", {dateStyle:"short", timeStyle:"short", timeZone:"Europe/Stockholm"}).format(new Date(value)) : "tid saknas";
 
 export default function ResaleResultCards({items}) {
   return <div className="resaleGrid">{items.map((x,i)=><article className={`resaleCard ${i===0?"resaleWinner":""}`} key={x.id}>
@@ -12,6 +13,7 @@ export default function ResaleResultCards({items}) {
     <div className="resaleChases"><small>DET HÄR KAN DU SÄLJA VID TRÄFF</small>{x.sellable_chases?.slice(0,4).map((c,j)=><span key={j}><b>{c.tier}</b>{c.card}<em>{c.odds || "Exakt odds saknas"}</em></span>)}</div>
     <div className="resaleReasons">{x.resale_reasons?.map((r,j)=><span key={j}>✓ {r}</span>)}</div>
     <p className="resaleWarning">{x.resale_warning}</p>
-    <div className="resaleActions"><Link href={`/product/${x.id}`}>SE HELA ANALYSEN →</Link>{x.chase_profile?.key_names?.[0]&&<Link href={`/chase?q=${encodeURIComponent(x.chase_profile.key_names[0].replace(/\s+#.*$/, ""))}`}>SÖK {x.chase_profile.key_names[0]} →</Link>}</div>
+    <p className="resultFreshness">Butiksuppgift kontrollerad {checked(x.observed_at)}</p>
+    <div className="resaleActions">{x.url&&<a className="buyDirect" href={x.url} target="_blank" rel="noreferrer">KÖP HOS {x.store?.toUpperCase()} ↗</a>}<Link href={`/product/${x.id}`}>SE HELA ANALYSEN →</Link>{x.chase_profile?.key_names?.[0]&&<Link href={`/chase?q=${encodeURIComponent(x.chase_profile.key_names[0].replace(/\s+#.*$/, ""))}`}>SÖK {x.chase_profile.key_names[0]} →</Link>}</div>
   </article>)}</div>;
 }

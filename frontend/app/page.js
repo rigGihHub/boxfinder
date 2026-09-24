@@ -23,6 +23,7 @@ function ProductCard({ p, i, label }) {
         {names.length ? <div className="namedChases"><small>ROOKIES / POKÉMON ATT JAGA</small><div>{names.slice(0,4).map((name,j)=><a href={`/chase?q=${encodeURIComponent(name.replace(/\s+#.*$/,''))}`} key={`${p.id}-name-${j}`}>{name} ↗</a>)}</div></div> : null}
         {exact.length ? <div className="exactChases"><small>ODDS / BRA TRÄFFAR</small>{exact.slice(0,2).map((x,j)=><span key={`${p.id}-exact-${j}`}>★ {x.card} · {x.odds}</span>)}<a href={`/product/${p.id}#chase`}>SE ALLA CHASE-KORT →</a></div> : null}
         <div className="packInfo">{p.packs ?? '—'} packs <i/> {p.cards_per_pack ?? '—'} kort/pack <i/> {p.total_cards ?? '—'} kort</div>
+        {p.url&&<a className="cta buyDirect" href={p.url} target="_blank" rel="noreferrer">KÖP HOS {p.store?.toUpperCase()} <span>↗</span></a>}
         <a className="cta" href={`/product/${p.id}`}>SE HELA ANALYSEN <span>→</span></a>
       </div>
     </article>
@@ -37,6 +38,7 @@ const quickSearches = [
   {title:'BÄST ATT ÖPPNA',text:'Alla kategorier i samma ranking',href:'/resale?strategy=balanced',tone:'acid'},
   {title:'HÖGSTA TAK',text:'Jaga den största säljbara träffen',href:'/resale?strategy=jackpot',tone:'violet'},
   {title:'TRÄFF OFTARE',text:'Prioritera återkommande bra hits',href:'/resale?strategy=frequent',tone:'cyan'},
+  {title:'UNDER 100 KR',text:'Lösa paket och billiga öppningar',href:'/resale?strategy=balanced&max_price=100',tone:'cyan'},
   {title:'UNDER 500 KR',text:'Säljpotential med låg insats',href:'/resale?strategy=balanced&max_price=500',tone:'gold'},
   {title:'UNDER 1 000 KR',text:'Rankat oavsett kategori',href:'/resale?strategy=balanced&max_price=1000',tone:'acid'},
   {title:'SÖK CHASE',text:'Spelare, rookie eller Pokémon',href:'/chase',tone:'violet'},
@@ -75,7 +77,7 @@ export default async function Home({ searchParams }) {
         <div className="packStage" aria-hidden="true"><div className="glow"/><div className="pack back"><span>BOX</span><b>FINDER</b></div><div className="pack front"><small>VALUE SERIES · 09</small><span>BOX</span><b>FINDER</b><div className="burst">SMART<br/>CHASE</div><footer>PRICE · ODDS · VALUE</footer></div></div>
       </section>
 
-      <nav className="mobileQuickNav" aria-label="Snabbsökningar"><a href="/resale">BÄST ATT ÖPPNA</a><a href="/resale?strategy=jackpot">HÖGSTA TAK</a><a href="/resale?max_price=500">UNDER 500</a><a href="/chase">SÖK CHASE</a></nav>
+      <nav className="mobileQuickNav" aria-label="Snabbsökningar"><a href="/resale">BÄST ATT ÖPPNA</a><a href="/resale?strategy=jackpot">HÖGSTA TAK</a><a href="/resale?max_price=100">UNDER 100</a><a href="/resale?max_price=500">UNDER 500</a><a href="/chase">SÖK CHASE</a></nav>
 
       <section className="ticker"><span>BOX VALUE SCORE</span><b>◆</b><span>UPSIDE</span><b>◆</b><span>ROOKIE STRENGTH</span><b>◆</b><span>HIT DENSITY</span><b>◆</b><span>DEAL CONFIDENCE</span></section>
 

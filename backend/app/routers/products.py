@@ -38,6 +38,7 @@ def serialize_variant(v: ProductVariant):
         "id": v.id, "slug": v.product.slug, "name": f"{v.product.canonical_name} {v.format}",
         "category": v.product.category, "manufacturer": v.product.manufacturer, "format": v.format,
         "price": best.price_sek, "market_median": market_median, "store": best.store.name,
+        "url": best.url, "observed_at": best.observed_at.isoformat() if best.observed_at else None,
         "packs": v.packs, "cards_per_pack": v.cards_per_pack,
         "total_cards": v.packs*v.cards_per_pack if v.packs and v.cards_per_pack else None,
         "ev_low": a.ev_low if a else None, "ev_high": a.ev_high if a else None,

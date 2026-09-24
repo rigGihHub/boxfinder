@@ -16,6 +16,8 @@ const goals=[
 
 function metric(v){return v==null?"—":`${v}/10`}
 function money(v){return v==null?"—":`${Math.round(v).toLocaleString("sv-SE")} kr`}
+function searched(v){return v?new Intl.DateTimeFormat("sv-SE",{dateStyle:"medium",timeStyle:"short",timeZone:"Europe/Stockholm"}).format(new Date(v)):null}
+function checked(v){return v?new Intl.DateTimeFormat("sv-SE",{dateStyle:"short",timeStyle:"short",timeZone:"Europe/Stockholm"}).format(new Date(v)):"—"}
 
 export default async function DiscoverPage({searchParams}){
   const category=searchParams?.category||"";
@@ -55,6 +57,7 @@ export default async function DiscoverPage({searchParams}){
         <a href="?category=Marvel&budget=5000&goal=autographs">MARVEL AUTOGRAFER</a>
         <a href="?category=Disney&budget=1000&goal=jackpot">DISNEY</a>
         <a href="?category=Hockey&budget=250&goal=hits&format=single%20pack">LÖSA PAKET</a>
+        <a href="?budget=100&goal=balanced">UNDER 100 KR</a>
         <a href="?budget=500&goal=balanced">UNDER 500 KR</a>
         <a href="?budget=5000&goal=jackpot">MONSTERHIT</a>
       </div></div>
@@ -78,6 +81,7 @@ export default async function DiscoverPage({searchParams}){
 
     <section className="realCatalogSection">
       <div className="sectionHead"><div><span className="kicker">RIKTIG SVENSK BUTIKSDATA</span><h2>Vilken box har bäst innehåll?</h2></div><p>{realCatalog.count||0} verifierade produkter matchar filtret · chase-data rankas först.</p></div>
+      {realCatalog.searched_at&&<p className="searchFreshness">Sökning genomförd {searched(realCatalog.searched_at)}</p>}
       {realProducts.length ? <div className="realCatalogGrid">{realProducts.map(x=><article className="realProductCard clickableCard" key={x.id}>
         <a className="cardClickTarget" href={`/product/${x.id}`} aria-label={`Öppna ${x.name}`}></a>
         <div className="realProductTop"><span>VERIFIERAD SNAPSHOT</span><small>{x.store}</small></div>
@@ -94,13 +98,14 @@ export default async function DiscoverPage({searchParams}){
         {x.chase_profile&&<div className="quickChase"><small>BRA KORT DU KAN DRA</small>{x.chase_profile.tiers?.good?.items?.slice(0,3).map((r,i)=><span key={i}>★ {r}</span>)}{x.chase_profile.tiers?.jackpot?.items?.[0]&&<b>JACKPOT: {x.chase_profile.tiers.jackpot.items[0]}</b>}</div>}
         {x.chase_profile?.key_names?.length ? <div className="quickSearches"><small>SÖK ETT NAMN DIREKT</small><div>{x.chase_profile.key_names.slice(0,4).map((name,i)=><a className="aboveOverlay" href={`/chase?q=${encodeURIComponent(name.replace(/\s+#.*$/,''))}`} key={i}>Sök {name} →</a>)}</div></div> : null}
         <div className="realWhy"><small>VARFÖR BRA / FYND?</small>{(x.explanation?.why_good||[]).slice(0,2).map((r,i)=><span key={i}>✓ {r}</span>)}<b>{x.explanation?.deal?.label||"Fyndstatus ej verifierad"}</b><p>{x.explanation?.deal?.reason}</p></div>
-        <div className="realSource"><span>Kontrollerad {x.observed_at?new Date(x.observed_at).toLocaleDateString("sv-SE"):"—"}</span>{x.url?<a className="aboveOverlay" href={x.url} target="_blank" rel="noreferrer">ÖPPNA BUTIK →</a>:null}</div>
+        <div className="realSource"><span>Butiksuppgift kontrollerad {checked(x.observed_at)}</span>{x.url?<a className="aboveOverlay buyDirect" href={x.url} target="_blank" rel="noreferrer">KÖP HOS {x.store?.toUpperCase()} ↗</a>:null}</div>
       </article>)}</div> : <div className="discoveryEmpty"><b>Ingen verifierad produkt matchar just detta filter.</b><p>Höj budgeten eller välj “Allt”. Riktig butikssnapshot visas här separat från testdata och analysförslag.</p></div>}
       <p className="discoveryDisclaimer">{realCatalog.note}</p>
     </section>
 
     <section className="discoverResults">
       <div className="sectionHead"><div><span className="kicker">3 VÄGAR</span><h2>BoxFinders val</h2></div><p>{data.rankable||0} av {data.considered||0} produkter hade tillräckligt med data för den här sökningen.</p></div>
+      {data.searched_at&&<p className="searchFreshness">Sökning genomförd {searched(data.searched_at)}</p>}
       {recs.length ? <div className="discoveryGrid">{recs.map((r,i)=><article className={`discoveryCard discovery-${i} clickableCard`} key={r.id}>
         <a className="cardClickTarget" href={`/product/${r.id}`} aria-label={`Öppna ${r.name}`}></a>
         <div className="discoveryBadgeRow"><div className="discoveryRole">{r.recommendation_role}</div>{r.source_kind==="demo"&&<span className="testDataBadge">TESTDATA · EJ BUTIKSPRIS</span>}</div>
@@ -121,7 +126,7 @@ export default async function DiscoverPage({searchParams}){
 
         <div className="discoveryChases"><small>CHASE-KORT</small>{r.chase_cards?.length?r.chase_cards.slice(0,3).map((c,j)=><div key={j}><b>{c.name}</b><span>{c.parallel||c.outcome||"Verifierad checklistträff"}{c.market_value_raw!=null?` · ca ${money(c.market_value_raw)}`:""}</span></div>):<p>Verifierad chase-data saknas ännu.</p>}</div>
 
-        <div className="discoveryFoot"><span>Datasäkerhet {r.discovery_confidence}/100</span><a href={`/product/${r.id}`}>SE BOXEN →</a></div>
+        <div className="discoveryFoot"><span>Datasäkerhet {r.discovery_confidence}/100</span>{r.url&&<a className="buyDirect" href={r.url} target="_blank" rel="noreferrer">KÖP HOS {r.store?.toUpperCase()} ↗</a>}<a href={`/product/${r.id}`}>SE BOXEN →</a></div>
       </article>)}</div>:<div className="discoveryEmpty"><b>Inte tillräckligt med verifierad data ännu.</b><p>BoxFinder fick inget användbart svar från backend. Kontrollera DATASTATUS ovan. Om frontend och backend har olika version behöver backend startas om.</p></div>}
       <p className="discoveryDisclaimer">{data.note}</p>
     </section>

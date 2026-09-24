@@ -1,3 +1,4 @@
+from datetime import datetime, timezone
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 
@@ -25,13 +26,14 @@ def rankings(
         return {"error": "unknown_ranking_mode", "allowed_modes": sorted(ALLOWED_MODES)}
     items = _items(db, category, max_price)
     ranked = rank_items(items, mode)[:limit]
-    return {"mode": mode, "category": category, "max_price": max_price, "count": len(ranked), "items": ranked}
+    return {"mode": mode, "category": category, "max_price": max_price, "count": len(ranked), "items": ranked, "searched_at": datetime.now(timezone.utc).isoformat()}
 
 
 @router.get("/overview")
 def ranking_overview(db: Session = Depends(get_db)):
     items = _items(db, None, None)
     return {
+        "searched_at": datetime.now(timezone.utc).isoformat(),
         "value": rank_items(items, "value")[:10],
         "upside": rank_items(items, "upside")[:10],
         "balanced": rank_items(items, "balanced")[:10],
@@ -62,6 +64,7 @@ def resale_rankings(
     items = [x for x in items if x.get("source_kind") != "demo"]
     ranked = [x for x in rank_resale(items, strategy) if x.get("resale_score") is not None]
     return {
+        "searched_at": datetime.now(timezone.utc).isoformat(),
         "strategy": strategy,
         "category": category,
         "max_price": max_price,

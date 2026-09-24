@@ -36,8 +36,9 @@ export default function ResaleApiRecovery({query}) {
     };
   }, [query]);
 
+  const searchedAt = result?.searched_at ? new Intl.DateTimeFormat("sv-SE", {dateStyle:"medium", timeStyle:"short", timeZone:"Europe/Stockholm"}).format(new Date(result.searched_at)) : null;
   if (result) return <>
-    <p className="resaleDisclaimer">Analysen är klar · {result.count ?? result.items.length} rankade produkter</p>
+    <p className="searchFreshness">Sökning genomförd {searchedAt || "nyss"} · {result.count ?? result.items.length} rankade produkter</p>
     {result.items.length ? <ResaleResultCards items={result.items}/> : <div className="chaseEmpty"><b>Inga produkter matchar sökningen.</b><span>Ta bort kategori eller höj maxpriset.</span></div>}
   </>;
 
