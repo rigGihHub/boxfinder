@@ -1,4 +1,11 @@
-# BoxFinder v0.47.1
+# BoxFinder v0.47.2
+
+## v0.47.2 – CardSurfer catalog and UWCL odds
+
+- Added verified CardSurfer offers for Prizm Basketball, Chrome UWCL, WWE, O-Pee-Chee and PWHL.
+- Added format-safe chase profiles for the Prizm retail blaster and Chrome UWCL hobby box.
+- Recorded official Topps UWCL checklist names and hobby-family odds without presenting family odds as player odds.
+- Rejected unavailable NordicBreaks personals, inconsistent sold-out DrakenDavids listings and Marvel preorders.
 
 ## v0.47.1 – Magic/Marvel multi-store expansion
 - Added four in-stock Dragon's Lair products: Marvel Super Heroes Play Booster and Bundle plus Spider-Man Play Booster and Display.

@@ -37,7 +37,8 @@ REAL_STORES = [
     dict(name="RA Card", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="SpelOchSånt", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="NordicSportsCards", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
-    dict(name="DrakenDavids", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="DrakenDavids", homepage_url="https://www.drakendavids.se/", source_url="https://www.drakendavids.se/collections/alla-samlarkort-tillbehor", collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="CardSurfer", homepage_url="https://cardsurferbreak.com/", source_url="https://cardsurferbreak.com/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Poketalk", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Samlartorget", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="EllieCollectables", homepage_url="https://elliecollectables.se/", source_url="https://elliecollectables.se/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
@@ -222,6 +223,20 @@ REAL_STORE_EXPANSION = [
     dict(slug="dl-mtg-spiderman-play-display", name="Magic Marvel's Spider-Man Play Booster Display", category="Magic", manufacturer="Wizards of the Coast", year="2025", series="Marvel's Spider-Man", fmt="booster box", sku="157245", price=1469, packs=30, cards=14, stock="in_stock", store_name="Dragons Lair", observed_at=REAL_STORE_EXPANSION_OBSERVED_AT, facts=["30 engelska Play Boosters, 14 kort per paket", "Minst 1 rare/mythic och 1 traditional foil per paket", "Source Material-familjen förekommer i 1 av 24 Play Boosters", "Play Booster-formatet innehåller inte Collector Booster-exklusiva Cosmic Foil-, Gauntlet- eller Classic Comic-kort"], buy_url="https://dragonslair.se/en/products/marvels-spider-man-play-booster-display-magic-the-gathering"),
 ]
 
+# CardSurfer products verified against exact Shopify article pages on
+# 2026-09-25. Repeated slugs intentionally create alternate store offers for
+# an existing format. NordicBreaks personals were unavailable and DrakenDavids
+# candidates were either sold out or preorders, so neither supplies an offer in
+# this snapshot.
+RETAILER_EXPANSION_OBSERVED_AT = datetime(2026, 9, 25, 5, 35, 0)
+RETAILER_EXPANSION = [
+    dict(slug="cs-2025-26-panini-prizm-basketball-blaster", name="2025-26 Panini Prizm Basketball Blaster Box", category="Basket", manufacturer="Panini", year="2025-26", series="Prizm Basketball", fmt="blaster", sku="CS-PRIZM-NBA-2526-BLASTER", price=499, packs=6, cards=5, stock="in_stock", store_name="CardSurfer", observed_at=RETAILER_EXPANSION_OBSERVED_AT, facts=["6 retail-pack, 5 kort per pack", "3 Blaster-exklusiva Purple Wave Prizms per box i snitt", "Uptown och Black Color Blast är retail-exklusiva SSP-spår", "Autografer kan dras men är inte garanterade"], buy_url="https://cardsurferbreak.com/products/2025-26-panini-prizm-basketball-blaster-box"),
+    dict(slug="cs-2025-26-topps-chrome-uwcl-hobby", name="2025-26 Topps Chrome UEFA Women's Champions League Hobby Box", category="Fotboll", manufacturer="Topps", year="2025-26", series="Chrome UWCL", fmt="hobby box", sku="TOPPS-UWCL-2526-HBY", price=1590, packs=20, cards=4, stock="in_stock", store_name="CardSurfer", observed_at=RETAILER_EXPANSION_OBSERVED_AT, facts=["20 hobby-pack, 4 kort per pack", "2 autografer per hobbybox", "Refractor 1:3 hobby-pack och Pulsar Refractor 1:6 hobby-pack", "Dual-, triple- och autograph-relic-kort finns enligt officiell checklista"], buy_url="https://cardsurferbreak.com/products/2025-26-topps-chrome-uefa-womens-champions-league-hobby-box"),
+    dict(slug="cc-2026-topps-universe-wwe-value", name="2026 Topps Universe WWE Wrestling Value Box", category="WWE", manufacturer="Topps", year="2026", series="Topps Universe WWE", fmt="value box", sku="TOPPS-WWE-UNI-2026-VALUE", price=399, packs=6, cards=6, stock="in_stock", store_name="CardSurfer", observed_at=RETAILER_EXPANSION_OBSERVED_AT, facts=["6 value-pack, 6 kort per pack", "Galaxy-paralleller är exklusiva för Value Box", "Autografer, relics och numrerade paralleller kan dras", "Ingen autograf eller relic är garanterad i value-formatet"], buy_url="https://cardsurferbreak.com/products/2026-topps-universe-wwe-value-box"),
+    dict(slug="cc-2025-26-opc-hobby", name="2025-26 Upper Deck O-Pee-Chee Hobby", category="Hockey", manufacturer="Upper Deck", year="2025-26", series="O-Pee-Chee", fmt="hobby box", sku="2526-UD-OPC-HOBBY", price=899, packs=18, cards=10, stock="in_stock", store_name="CardSurfer", observed_at=RETAILER_EXPANSION_OBSERVED_AT, facts=["18 hobby-pack, 10 kort per pack", "1 Red Border och 6 Blue Border-paralleller per box i snitt", "Minst 3 numrerade paralleller eller Printing Plates per box i snitt", "4 hobby-exklusiva O-Pee-Chee Playing Cards per box i snitt"], buy_url="https://cardsurferbreak.com/products/2025-26-o-pee-chee-hockey-hobby-box"),
+    dict(slug="cc-2025-26-pwhl-hobby", name="2025-26 Upper Deck PWHL Hobby", category="Hockey", manufacturer="Upper Deck", year="2025-26", series="PWHL", fmt="hobby box", sku="CS-2526-UD-PWHL-HOBBY", price=1095, packs=12, cards=6, stock="in_stock", store_name="CardSurfer", observed_at=RETAILER_EXPANSION_OBSERVED_AT, facts=["12 hobby-pack, 6 kort per pack", "Young Guns, UD Canvas, Dazzlers och Outburst-paralleller finns", "Namngivna Young Guns-odds gäller hobbyformatet", "Ingen viss spelare är garanterad"], buy_url="https://cardsurferbreak.com/products/2025-26-upper-deck-pwhl-hockey-hobby-box"),
+]
+
 REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
 
 REAL_SNAPSHOT += REAL_PACK_SNAPSHOT
@@ -229,6 +244,7 @@ REAL_SNAPSHOT += REAL_NONSPORT_EXPANSION
 REAL_SNAPSHOT += REAL_CROSS_CATEGORY_EXPANSION
 REAL_SNAPSHOT += REAL_RESEARCH_EXPANSION
 REAL_SNAPSHOT += REAL_STORE_EXPANSION
+REAL_SNAPSHOT += RETAILER_EXPANSION
 
 DIRECT_BUY_URLS = {
     "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",
@@ -376,7 +392,7 @@ def seed_verified_snapshot():
                 source_url = pack_url if row["fmt"]=="single pack" else category_url
             source_url = row.get("buy_url") or DIRECT_BUY_URLS.get(row["slug"]) or buy_urls.get(row["slug"]) or source_url
             stock_status = "out_of_stock" if row["slug"] in UNAVAILABLE_PURCHASE_SLUGS else row.get("stock", "in_stock")
-            is_expansion = row in REAL_NONSPORT_EXPANSION or row in REAL_CROSS_CATEGORY_EXPANSION or row in REAL_RESEARCH_EXPANSION or row in REAL_STORE_EXPANSION
+            is_expansion = row in REAL_NONSPORT_EXPANSION or row in REAL_CROSS_CATEGORY_EXPANSION or row in REAL_RESEARCH_EXPANSION or row in REAL_STORE_EXPANSION or row in RETAILER_EXPANSION
             observed_at = row.get("observed_at", REAL_EXPANSION_OBSERVED_AT if is_expansion else REAL_SNAPSHOT_OBSERVED_AT)
             if offer is None:
                 offer = Offer(
@@ -1311,6 +1327,37 @@ CHASE_PROFILES.update({
 })
 
 CHASE_PROFILES.update({
+"cs-2025-26-panini-prizm-basketball-blaster": {
+ "source_name":"Beckett 2025-26 Prizm checklist, cross-checked with Panini product family",
+ "source_url":"https://www.beckett.com/news/2025-26-panini-prizm-basketball-cards/",
+ "key_names":["Cooper Flagg Rookie","Dylan Harper Rookie","Kon Knueppel Rookie","Uptown SSP","Black Color Blast SSP"],
+ "headline_chases":[
+  {"card":"Cooper Flagg Rookie Purple Wave Prizm","tier":"MONSTER","odds":"Purple Wave-familjen: 3 per blaster i snitt; spelaroddset är okänt","why":"Toppnamn i rookieklassen kombinerat med blaster-exklusiv parallel."},
+  {"card":"Dylan Harper eller Kon Knueppel Rookie Prizm","tier":"MYCKET BRA","odds":"Kan dras i retail; exakt spelaroddset är inte publicerat","why":"Två namngivna rookies i den verifierade checklistan."},
+  {"card":"Uptown SSP – stjärna eller rookie","tier":"MONSTER","odds":"Retail-exklusiv SSP; exakt packodds ej publicerat","why":"Ett av retailformatets tydligaste sällsynta insertspår."},
+  {"card":"Black Color Blast SSP – stjärna eller rookie","tier":"JACKPOT","odds":"Retail-exklusiv SSP; exakt packodds ej publicerat","why":"Extremt sällsynt korttak i ett billigt retailformat."},
+  {"card":"Rookie autograph","tier":"MONSTER","odds":"Autografer kan dras men är inte garanterade","why":"Signatur av topprookie är boxens starkaste autograph-utfall."}
+ ],
+ "why_exciting":["Tre Purple Wave Prizms per box i snitt ger återkommande parallelträffar.","Cooper Flagg, Dylan Harper och Kon Knueppel ger ett starkt rookie-tak, samtidigt som Uptown och Black Color Blast finns i retail."],
+ "tiers":{"everyday":{"label":"Retailgolv","score":75,"items":["30 kort","3 Purple Wave i snitt"]},"good":{"label":"Bra träff","score":76,"items":["topp-rookie Prizm"]},"big":{"label":"Riktigt bra","score":88,"items":["numrerad rookie eller autograf"]},"jackpot":{"label":"Monsterhit","score":96,"items":["Black Color Blast SSP"]}},
+ "caveat":"Blastern garanterar inte autograf, numrerat kort eller SSP. Purple Wave-siffran gäller hela parallelfamiljen, inte Cooper Flagg eller någon annan viss spelare; hobbyboxens garantier gäller inte retailformatet."
+},
+"cs-2025-26-topps-chrome-uwcl-hobby": {
+ "source_name":"Topps official 2025-26 Chrome UWCL checklist and hobby odds",
+ "source_url":"https://it-next.topps.com/products/topps-chrome%C2%AE-uefa-womens-champions-league-2025-26-hobby-box",
+ "key_names":["Aitana Bonmatí Autograph","Alexia Putellas Autograph","Sam Kerr Autograph","Bonmatí / Putellas / Guijarro Triple Autograph","UWCL Chrome Trophy"],
+ "headline_chases":[
+  {"card":"Aitana Bonmatí / Alexia Putellas / Patri Guijarro Triple Autograph","tier":"JACKPOT","odds":"Triple Autograph Black 1:11,020, Red 1:22,420 och SuperFractor 1:108,360 hobby-pack över familjen","why":"Tre Barcelona-stjärnor på samma officiellt listade kort."},
+  {"card":"Aitana Bonmatí eller Alexia Putellas Chrome Autograph","tier":"MONSTER","odds":"Veterans and Rookies Autograph-familjen 1:57 hobby-pack; inte spelarodds","why":"Två av checklistans största namn i det garanterade autograph-programmet."},
+  {"card":"Sam Kerr Chrome Autograph","tier":"MONSTER","odds":"Veterans and Rookies Autograph-familjen 1:57 hobby-pack; inte spelarodds","why":"Namngiven stjärnsignatur i officiella checklistan."},
+  {"card":"Aitana Bonmatí Chrome Premium Autograph Relic","tier":"JACKPOT","odds":"Premium Autograph Relic-paralleller: 1:584 till 1:28,268 hobby-pack beroende på färg, över hela familjen","why":"Autograf och spelar-/matchanvänt memorabilia i samma kortfamilj."},
+  {"card":"UWCL Chrome Trophy","tier":"JACKPOT","odds":"1:650,160 hobby-pack","why":"Produktens mest extrema publicerade insertodds."},
+  {"card":"Olivia Smith Rookie Helix","tier":"MYCKET BRA","odds":"Helix-familjen 1:1,364 hobby-pack; inte spelaroddset","why":"Namngiven rookie i ett ultra-sällsynt insertspår."}
+ ],
+ "why_exciting":["Två autografer per box och en checklista med Bonmatí, Putellas, Kerr och starka rookies ger både träfffrekvens och korttak.","Topps publicerar formatsspecifika hobbyodds för refractors, inserts, duals, triples och autograph relics."],
+ "tiers":{"everyday":{"label":"Stark hobbybox","score":91,"items":["80 kort","2 autografer","Refractor 1:3 pack"]},"good":{"label":"Bra träff","score":82,"items":["numrerad stjärnparallel"]},"big":{"label":"Riktigt bra","score":93,"items":["toppnamnsautograf eller Helix"]},"jackpot":{"label":"Monsterhit","score":99,"items":["triple auto, auto relic eller Trophy"]}},
+ "caveat":"Två autografer per box gäller hobbyformatet, men ingen viss spelare eller autograph-familj garanteras. Publicerade odds gäller familjer över produktionen, inte en särskild spelare."
+},
 "cc-2026-topps-universe-wwe-hobby": {
  "source_name":"Topps official 2026 Universe WWE checklist and hobby configuration",
  "source_url":"https://www.topps.com/pages/topps-universe-wwe",
@@ -1884,6 +1931,7 @@ def seed_chase_profiles():
     try:
         research_slugs={x["slug"] for x in REAL_RESEARCH_EXPANSION}
         store_expansion_slugs={x["slug"] for x in REAL_STORE_EXPANSION}
+        retailer_expansion_slugs={x["slug"] for x in RETAILER_EXPANSION}
         expansion_slugs={x["slug"] for x in REAL_NONSPORT_EXPANSION + REAL_CROSS_CATEGORY_EXPANSION}
         for slug,data in CHASE_PROFILES.items():
             product=db.scalar(select(Product).where(Product.slug==slug))
@@ -1898,7 +1946,8 @@ def seed_chase_profiles():
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
             row.verified_at=(
-                REAL_STORE_EXPANSION_OBSERVED_AT if slug in store_expansion_slugs
+                RETAILER_EXPANSION_OBSERVED_AT if slug in retailer_expansion_slugs
+                else REAL_STORE_EXPANSION_OBSERVED_AT if slug in store_expansion_slugs
                 else REAL_RESEARCH_OBSERVED_AT if slug in research_slugs
                 else REAL_EXPANSION_OBSERVED_AT if slug in expansion_slugs
                 else REAL_SNAPSHOT_OBSERVED_AT

@@ -158,7 +158,7 @@ def test_latest_box_and_pack_expansion_has_direct_links_and_profiles(monkeypatch
         .where(Product.slug.in_(slugs))
     ).all()
     assert {product.slug for product,_ in rows}==slugs
-    assert all("/product/" in offer.url for _,offer in rows)
+    assert all("/product/" in offer.url or "/products/" in offer.url for _,offer in rows)
     assert all(slug in seedmod.CHASE_PROFILES for slug in slugs)
     assert all(seedmod.CHASE_PROFILES[slug]["key_names"] for slug in slugs)
     assert all(seedmod.CHASE_PROFILES[slug]["headline_chases"] for slug in slugs)
@@ -276,6 +276,47 @@ def test_store_expansion_chase_profiles_use_current_verification_time(monkeypatc
     assert {slug for slug,_ in rows}==slugs
     assert all(verified_at==seedmod.REAL_STORE_EXPANSION_OBSERVED_AT for _,verified_at in rows)
     db.close()
+
+def test_cardsurfer_expansion_adds_two_products_and_three_alternate_offers(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    rows=db.execute(
+        select(Product, ProductVariant, Offer, Store)
+        .join(ProductVariant, ProductVariant.product_id==Product.id)
+        .join(Offer, Offer.variant_id==ProductVariant.id)
+        .join(Store, Store.id==Offer.store_id)
+        .where(Store.name=="CardSurfer")
+    ).all()
+    assert len(rows)==5
+    assert {product.slug for product,_,_,_ in rows}=={
+        "cs-2025-26-panini-prizm-basketball-blaster",
+        "cs-2025-26-topps-chrome-uwcl-hobby",
+        "cc-2026-topps-universe-wwe-value",
+        "cc-2025-26-opc-hobby",
+        "cc-2025-26-pwhl-hobby",
+    }
+    assert all("cardsurferbreak.com/products/" in offer.url for _,_,offer,_ in rows)
+    assert all(offer.stock_status=="in_stock" and not offer.is_preorder for _,_,offer,_ in rows)
+    assert all(offer.observed_at==seedmod.RETAILER_EXPANSION_OBSERVED_AT for _,_,offer,_ in rows)
+    prizm=next(variant for product,variant,_,_ in rows if product.slug=="cs-2025-26-panini-prizm-basketball-blaster")
+    uwcl=next(variant for product,variant,_,_ in rows if product.slug=="cs-2025-26-topps-chrome-uwcl-hobby")
+    assert (prizm.packs,prizm.cards_per_pack)==(6,5)
+    assert (uwcl.packs,uwcl.cards_per_pack)==(20,4)
+    assert seedmod.CHASE_PROFILES["cs-2025-26-panini-prizm-basketball-blaster"]["headline_chases"]
+    assert seedmod.CHASE_PROFILES["cs-2025-26-topps-chrome-uwcl-hobby"]["headline_chases"]
+    db.close()
+
+def test_cardsurfer_profiles_preserve_retail_and_family_odds_distinctions():
+    prizm=seedmod.CHASE_PROFILES["cs-2025-26-panini-prizm-basketball-blaster"]
+    uwcl=seedmod.CHASE_PROFILES["cs-2025-26-topps-chrome-uwcl-hobby"]
+    assert "hobbyboxens garantier gäller inte" in prizm["caveat"].lower()
+    assert "inte cooper flagg" in prizm["caveat"].lower()
+    assert "2 autografer" in uwcl["tiers"]["everyday"]["items"]
+    assert "inte en särskild spelare" in uwcl["caveat"].lower()
+    assert any("1:650,160" in item["odds"] for item in uwcl["headline_chases"])
 
 def test_retail_and_loose_pack_profiles_do_not_claim_hobby_box_guarantees():
     retail_slugs={
