@@ -35,7 +35,7 @@ export default function ScopeWatchForm() {
 
   return <form className="scopeWatchForm" onSubmit={submit}>
     <div><label>KATEGORI</label><select value={category} onChange={e=>setCategory(e.target.value)}>
-      <option value="">Alla</option><option>Hockey</option><option>Fotboll</option><option>Basket</option><option>NFL</option><option>Baseboll</option><option>F1</option><option>Pokémon</option><option>One Piece</option><option>Magic</option><option>Lorcana</option>
+      <option value="">Alla</option><option>Hockey</option><option>Fotboll</option><option>Basket</option><option>NFL</option><option>Baseboll</option><option>F1</option><option>Pokémon</option><option>One Piece</option><option>Magic</option><option>Lorcana</option><option>Yu-Gi-Oh</option>
     </select></div>
     <div><label>FORMAT</label><select value={format} onChange={e=>setFormat(e.target.value)}>
       <option value="">Alla</option><option value="hobby box">Hobby box</option><option value="retail box">Retail box</option><option value="blaster">Blaster</option><option value="booster box">Booster box</option><option value="booster bundle">Booster bundle</option><option value="elite trainer box">Elite Trainer Box</option><option value="tin">Tin</option><option value="single pack">Single pack</option>

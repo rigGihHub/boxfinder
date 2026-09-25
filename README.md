@@ -1,4 +1,8 @@
-# BoxFinder v0.50.0
+# BoxFinder v0.50.1
+
+## v0.50.1 – Yu-Gi-Oh filter visibility
+
+- Added Yu-Gi-Oh to the resale, discovery, and watch category selectors after live interaction testing exposed the missing frontend option.
 
 ## v0.50.0 – Yu-Gi-Oh and Lorcana market expansion
 

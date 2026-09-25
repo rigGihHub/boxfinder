@@ -64,7 +64,7 @@ export default async function DiscoverPage({searchParams}){
 
       <form className="discoverForm" method="get">
         <div><label>VAD SAMLAR DU?</label><select name="category" defaultValue={category}>
-          <option value="">Allt</option><option>Hockey</option><option>Fotboll</option><option>Basket</option><option>NFL</option><option>Baseboll</option><option>F1</option><option>Racing</option><option>Golf</option><option>UFC</option><option>WWE</option><option>Pokémon</option><option>One Piece</option><option>Magic</option><option>Disney</option><option>Marvel</option><option>Star Wars</option>
+          <option value="">Allt</option><option>Hockey</option><option>Fotboll</option><option>Basket</option><option>NFL</option><option>Baseboll</option><option>F1</option><option>Racing</option><option>Golf</option><option>UFC</option><option>WWE</option><option>Pokémon</option><option>One Piece</option><option>Magic</option><option>Disney</option><option>Marvel</option><option>Star Wars</option><option>Yu-Gi-Oh</option>
         </select></div>
         <div><label>MAXBUDGET</label><select name="budget" defaultValue={String(budget)}>
           <option value="100">100 kr</option><option value="250">250 kr</option><option value="500">500 kr</option><option value="750">750 kr</option><option value="1000">1 000 kr</option><option value="1500">1 500 kr</option><option value="2500">2 500 kr</option><option value="5000">5 000 kr</option>
