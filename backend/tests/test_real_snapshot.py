@@ -318,6 +318,57 @@ def test_new_loose_pokemon_packs_do_not_claim_published_odds():
         assert "kortspecifika packodds" in profile["caveat"].lower()
         assert all("garanterat" not in item["odds"].lower() for item in profile["headline_chases"])
 
+def test_one_piece_market_scan_uses_exact_in_stock_article_links(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    slugs={x["slug"] for x in seedmod.ONE_PIECE_MARKET_EXPANSION}
+    rows=db.execute(
+        select(Product, ProductVariant, Offer, Store)
+        .join(ProductVariant, ProductVariant.product_id==Product.id)
+        .join(Offer, Offer.variant_id==ProductVariant.id)
+        .join(Store, Store.id==Offer.store_id)
+        .where(Product.slug.in_(slugs))
+    ).all()
+    assert len(slugs)==7
+    assert len(rows)==10
+    assert {store.name for _,_,_,store in rows}=={
+        "Kantovault","AlphaSpel","Aquitaz","Bangerpack","Kortlagret"
+    }
+    assert all(offer.stock_status=="in_stock" and not offer.is_preorder for _,_,offer,_ in rows)
+    assert all(offer.url.startswith("https://") and offer.url.count("/")>=4 for _,_,offer,_ in rows)
+    assert all(slug in seedmod.CHASE_PROFILES for slug in slugs)
+    profile_dates=db.scalars(
+        select(ChaseProfile.verified_at).join(ProductVariant).join(Product).where(Product.slug.in_(slugs))
+    ).all()
+    assert profile_dates and all(value==seedmod.ONE_PIECE_MARKET_OBSERVED_AT for value in profile_dates)
+
+    op14=[(offer,store) for product,_,offer,store in rows if product.slug=="as-one-piece-op14-en-pack"]
+    assert {offer.price_sek for offer,_ in op14}=={79,89,99}
+    assert min(op14,key=lambda row: row[0].price_sek)[1].name=="AlphaSpel"
+    op17=[(offer,store) for product,_,offer,store in rows if product.slug=="kl-one-piece-op17-en-pack"]
+    assert {offer.price_sek for offer,_ in op17}=={189,199}
+    assert min(op17,key=lambda row: row[0].price_sek)[1].name=="Kortlagret"
+    db.close()
+
+def test_one_piece_market_profiles_keep_pack_and_display_claims_separate():
+    pack_slugs={
+        "kv-one-piece-op10-jp-pack",
+        "as-one-piece-op14-en-pack",
+        "aq-one-piece-op15-eb04-en-pack",
+        "kl-one-piece-eb03-en-pack",
+        "kl-one-piece-op17-en-pack",
+    }
+    for slug in pack_slugs:
+        caveat=seedmod.CHASE_PROFILES[slug]["caveat"].lower()
+        assert "löst" in caveat
+        assert ("inte" in caveat or "ingen" in caveat) and "garanter" in caveat
+    display=seedmod.CHASE_PROFILES["bp-one-piece-op17-en-display"]
+    assert "4 299 kr" in display["caveat"]
+    assert "inte beskrivas som verifierad ekonomisk avkastning" in display["caveat"]
+
 def test_cardsurfer_expansion_adds_two_products_and_three_alternate_offers(monkeypatch):
     Session=session_factory()
     monkeypatch.setattr(seedmod,"SessionLocal",Session)

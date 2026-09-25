@@ -48,6 +48,7 @@ REAL_STORES = [
     dict(name="Mana Land", homepage_url="https://manaland.se/", source_url="https://manaland.se/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Playoteket", homepage_url="https://playoteket.com/", source_url="https://playoteket.com/80-pokemon", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Amazon.se", homepage_url="https://www.amazon.se/", source_url="https://www.amazon.se/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="Kantovault", homepage_url="https://kantovault.se/", source_url="https://kantovault.se/collections/japanska-one-piece-booster-pack", collection_method="manual", adapter_key="manual", policy_status="review_required"),
 ]
 
 
@@ -256,6 +257,22 @@ ADDITIONAL_STORE_EXPANSION = [
     dict(slug="sos-pokemon-journey-together-pack", name="Pokémon Scarlet & Violet: Journey Together Booster Pack", category="Pokémon", manufacturer="The Pokémon Company", year="2025", series="Journey Together", fmt="single pack", sku="56046", price=99, packs=1, cards=10, stock="in_stock", store_name="SpelOchSånt", observed_at=ADDITIONAL_STORE_OBSERVED_AT, facts=["1 engelskt boosterpaket med 10 kort och 1 Basic Energy", "N's Zoroark ex, Lillie's Clefairy ex, Iono's Bellibolt ex och Hop's Zacian ex är officiellt namngivna", "Över 30 Pokémon- och Trainer-kort med specialillustrationer finns i setet", "Officiella kortspecifika packodds publiceras inte"], buy_url="https://www.spelochsant.se/produkt/pokemonkort/losaboosters/pokemontcgscarletvioletjourneytogetherboosterpackmax6perhushall"),
 ]
 
+# One Piece market scan: exact, shippable article pages checked 2026-09-25.
+# Repeated slugs are verified competing offers for the same language/format.
+ONE_PIECE_MARKET_OBSERVED_AT = datetime(2026, 9, 25, 17, 18, 0)
+ONE_PIECE_MARKET_EXPANSION = [
+    dict(slug="kv-one-piece-op10-jp-pack", name="One Piece Royal Blood OP-10 Booster Pack Japanese", category="One Piece", manufacturer="Bandai", year="2025", series="Royal Blood OP-10", fmt="single pack", sku="KV-OP10-JP-PACK", price=35, packs=1, cards=6, stock="in_stock", language="Japanese", store_name="Kantovault", observed_at=ONE_PIECE_MARKET_OBSERVED_AT, facts=["1 japanskt boosterpaket med 6 kort", "Officiella setet innehåller 2 Secret Rares, 6 Special Cards och 1 Treasure Rare", "Bandai publicerar inte kortspecifika packodds"], buy_url="https://kantovault.se/products/one-piece-op-10-royal-blood-booster-pack-japansk"),
+    dict(slug="kv-one-piece-op10-jp-box", name="One Piece Royal Blood OP-10 Booster Box Japanese", category="One Piece", manufacturer="Bandai", year="2025", series="Royal Blood OP-10", fmt="booster box", sku="KV-OP10-JP-BOX", price=999, packs=24, cards=6, stock="in_stock", language="Japanese", store_name="Kantovault", observed_at=ONE_PIECE_MARKET_OBSERVED_AT, facts=["24 japanska boosterpaket med 6 kort per paket", "Royal Blood har Punk Hazard-, Supernovas-, Dressrosa- och Donquixote-spår", "Ingen viss rarity eller karaktär är garanterad"], buy_url="https://kantovault.se/products/one-piece-op-10-royal-blood-booster-box-japansk"),
+    dict(slug="as-one-piece-op14-en-pack", name="One Piece The Azure Sea's Seven OP-14 Booster Pack English", category="One Piece", manufacturer="Bandai", year="2026", series="The Azure Sea's Seven OP-14", fmt="single pack", sku="BAN-2821706-OP14-B", price=79, packs=1, cards=12, stock="in_stock", language="English", store_name="AlphaSpel", observed_at=ONE_PIECE_MARKET_OBSERVED_AT, facts=["1 engelskt boosterpaket med 12 kort", "Setet har 2 Secret Rares, 6 Special Cards, 2 anniversary-specialkort och 1 Treasure Rare", "Bandai publicerar inte kortspecifika packodds"], buy_url="https://main.alphaspel.se/4544-star-wars-unlimited-ccg/346520-one-piece-card-game-op14-the-azure-seas-seven-booster-pack"),
+    dict(slug="as-one-piece-op14-en-pack", name="One Piece The Azure Sea's Seven OP-14 Booster Pack English", category="One Piece", manufacturer="Bandai", year="2026", series="The Azure Sea's Seven OP-14", fmt="single pack", sku="AQ-OP14-EN-PACK", price=89, packs=1, cards=12, stock="in_stock", language="English", store_name="Aquitaz", observed_at=ONE_PIECE_MARKET_OBSERVED_AT, facts=["1 engelskt boosterpaket med 12 kort", "Namngivna huvudspår omfattar Trafalgar Law, Dracule Mihawk, Boa Hancock och Buggy", "Ingen träff är garanterad i ett löst paket"], buy_url="https://aquitaz.se/en/products/one-piece-op-14-the-azure-seas-seven-booster-pack-12-kort-eng"),
+    dict(slug="as-one-piece-op14-en-pack", name="One Piece The Azure Sea's Seven OP-14 Booster Pack English", category="One Piece", manufacturer="Bandai", year="2026", series="The Azure Sea's Seven OP-14", fmt="single pack", sku="BP-OP14-EN-PACK", price=99, packs=1, cards=12, stock="in_stock", language="English", store_name="Bangerpack", observed_at=ONE_PIECE_MARKET_OBSERVED_AT, facts=["1 engelskt boosterpaket med 12 kort", "Mihawk och Crocodile är Secret Rares; Mihawk har ett Super Alternate Art-spår", "Bandai publicerar inte kortspecifika packodds"], buy_url="https://bangerpack.se/tcg-samlarkort/one-piece/one-piece-op-14-the-azure-seas-seven-booster"),
+    dict(slug="aq-one-piece-op15-eb04-en-pack", name="One Piece Adventure on KAMI's Island OP15-EB04 Booster Pack English", category="One Piece", manufacturer="Bandai", year="2026", series="Adventure on KAMI's Island OP15-EB04", fmt="single pack", sku="AQ-OP15-EB04-EN-PACK", price=99, packs=1, cards=12, stock="in_stock", language="English", store_name="Aquitaz", observed_at=ONE_PIECE_MARKET_OBSERVED_AT, facts=["1 engelskt boosterpaket med 12 kort", "Bandai namnger Secret Rare Monkey.D.Luffy och Enel samt Enel Super Alternate Art", "Bandai publicerar inte kortspecifika packodds"], buy_url="https://aquitaz.se/en/products/one-piece-op-15-eb-04-adventure-on-kamis-island-booster-pack-12-kort-eng"),
+    dict(slug="kl-one-piece-eb03-en-pack", name="One Piece Heroines Edition EB-03 Booster Pack English", category="One Piece", manufacturer="Bandai", year="2026", series="Heroines Edition EB-03", fmt="single pack", sku="KL-EB03-EN-PACK", price=199, packs=1, cards=12, stock="in_stock", language="English", store_name="Kortlagret", observed_at=ONE_PIECE_MARKET_OBSERVED_AT, facts=["1 engelskt boosterpaket med 12 kort", "Nefeltari Vivi debuterar som Leader och setet innehåller 9 SP-kort", "Fyra DON!!-motiv finns även som alternate art"], buy_url="https://kortlagret.se/produkter/eb03-heroines-edition-booster-pack"),
+    dict(slug="kl-one-piece-op17-en-pack", name="One Piece The World's Strongest Warriors OP-17 Booster Pack English", category="One Piece", manufacturer="Bandai", year="2026", series="The World's Strongest Warriors OP-17", fmt="single pack", sku="KL-OP17-EN-PACK", price=189, packs=1, cards=12, stock="in_stock", language="English", store_name="Kortlagret", observed_at=ONE_PIECE_MARKET_OBSERVED_AT, facts=["1 engelskt boosterpaket med 12 kort", "OP17 har Super Leader Alt-Art Monkey.D.Luffy, Rocks.D.Xebec och Four Emperors-specialspår", "Ingen specifik rarity är garanterad"], buy_url="https://kortlagret.se/produkter/op17-the-worlds-strongest-warriors-booster-pack"),
+    dict(slug="kl-one-piece-op17-en-pack", name="One Piece The World's Strongest Warriors OP-17 Booster Pack English", category="One Piece", manufacturer="Bandai", year="2026", series="The World's Strongest Warriors OP-17", fmt="single pack", sku="BP-OP17-EN-PACK", price=199, packs=1, cards=12, stock="in_stock", language="English", store_name="Bangerpack", observed_at=ONE_PIECE_MARKET_OBSERVED_AT, facts=["1 engelskt boosterpaket med 12 kort", "Bandais fjärde jubileumsset med alternativa illustrationer och specialkort", "Bandai publicerar inte kortspecifika packodds"], buy_url="https://bangerpack.se/tcg-samlarkort/one-piece/one-piece-card-game-booster-pack-the-worlds-strongest-warriors-op-17"),
+    dict(slug="bp-one-piece-op17-en-display", name="One Piece The World's Strongest Warriors OP-17 Booster Display English", category="One Piece", manufacturer="Bandai", year="2026", series="The World's Strongest Warriors OP-17", fmt="booster box", sku="BP-OP17-EN-DISPLAY", price=4299, packs=24, cards=12, stock="in_stock", language="English", store_name="Bangerpack", observed_at=ONE_PIECE_MARKET_OBSERVED_AT, facts=["24 engelska boosterpaket med 12 kort per paket", "Setet innehåller Super Leader Alt-Art, Secret Rares, Treasure Rare och flera specialkort", "Det höga svenska marknadspriset ska vägas mot 24 öppningsförsök; boxen saknar kortspecifik garanti"], buy_url="https://bangerpack.se/tcg-samlarkort/one-piece/booster-box-display-op-17"),
+]
+
 REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
 
 REAL_SNAPSHOT += REAL_PACK_SNAPSHOT
@@ -265,6 +282,7 @@ REAL_SNAPSHOT += REAL_RESEARCH_EXPANSION
 REAL_SNAPSHOT += REAL_STORE_EXPANSION
 REAL_SNAPSHOT += RETAILER_EXPANSION
 REAL_SNAPSHOT += ADDITIONAL_STORE_EXPANSION
+REAL_SNAPSHOT += ONE_PIECE_MARKET_EXPANSION
 
 DIRECT_BUY_URLS = {
     "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",
@@ -1759,6 +1777,85 @@ CHASE_PROFILES["cc-one-piece-op16-jp-pack"] = _loose_pack_profile(
     caveat="Detta är ett löst japanskt pack, inte en 24-packdisplay. Bandai publicerar inte kortspecifika packodds.",
 )
 
+CHASE_PROFILES["kv-one-piece-op10-jp-box"] = {
+ "source_name":"Bandai official Royal Blood OP-10 product page and card list",
+ "source_url":"https://en.onepiece-cardgame.com/products/boosters/op10.php",
+ "key_names":["Trafalgar Law OP10-119","Donquixote Doflamingo","Caesar Clown","Charlotte Pudding","Usopp"],
+ "headline_chases":[
+  {"card":"Trafalgar Law OP10-119 Secret Rare / parallel","tier":"JACKPOT","odds":"Secret Rare/parallel; Bandai publicerar inte packodds","why":"Officiell OP-10 Secret Rare med ett av seriens starkaste samlarnamn."},
+  {"card":"Donquixote Doflamingo Leader parallel","tier":"MONSTER","odds":"Leader parallel; exakt packodds ej publicerat","why":"Royal Blood återvänder till Dressrosa och Donquixote Pirates."},
+  {"card":"Charlotte Pudding Special Card","tier":"MYCKET BRA","odds":"Special Card; exakt packodds ej publicerat","why":"Namngiven populär karaktär i setets specialkortsspår."},
+  {"card":"Treasure Rare","tier":"MONSTER","odds":"1 Treasure Rare-design finns i setet; packodds ej publicerat","why":"Separat officiell premiumrarity utöver Secret Rares och Special Cards."}
+ ],
+ "why_exciting":["24 japanska pack ger fler försök än ett löst sexkortspack.","Setet har två Secret Rares, sex Special Cards och en Treasure Rare enligt Bandai."],
+ "tiers":{"everyday":{"label":"Japansk display","score":71,"items":["24 pack","144 kort"]},"good":{"label":"Bra träff","score":70,"items":["SR eller parallel"]},"big":{"label":"Riktigt bra","score":82,"items":["Leader parallel eller Special Card"]},"jackpot":{"label":"Setets toppspår","score":91,"items":["Trafalgar Law SEC/parallel eller Treasure Rare"]}},
+ "caveat":"Detta är den japanska boxkonfigurationen med 6 kort per pack. Bandai publicerar inte kortspecifika packodds och ingen viss rarity eller karaktär är garanterad."
+}
+CHASE_PROFILES["kv-one-piece-op10-jp-pack"] = _loose_pack_profile(
+    "kv-one-piece-op10-jp-box",
+    everyday_items=["6 japanska kort"],
+    why=["35 kr ger en billig enstaka chans på Royal Blood-spåren.","Ett löst paket ska inte bedömas som en hel 24-packbox."],
+    caveat="Detta är ett löst japanskt sexkortspack. Secret Rare, Treasure Rare, Special Card eller viss karaktär är inte garanterad; Bandai publicerar inte kortspecifika packodds.",
+)
+
+CHASE_PROFILES["as-one-piece-op14-en-pack"] = _loose_pack_profile(
+    "cc-one-piece-op14-jp-display",
+    everyday_items=["12 engelska kort"],
+    why=["Det engelska paketet ger 12 kort och kostar från 79 kr hos verifierade svenska butiker.","Mihawk, Crocodile, Boa Hancock och Trafalgar Law är namngivna chase-spår, men ett löst pack ger bara ett försök."],
+    caveat="Detta är ett löst engelskt 12-kortspack, inte den japanska 24-packdisplay som basprofilen ursprungligen kartlades från. Ingen viss rarity eller karaktär är garanterad; språkformatens boxkonfiguration får inte blandas och Bandai publicerar inga kortspecifika packodds.",
+)
+
+CHASE_PROFILES["aq-one-piece-op15-eb04-en-pack"] = {
+ "source_name":"Bandai official Adventure on KAMI's Island OP15-EB04 product page",
+ "source_url":"https://en.onepiece-cardgame.com/products/boosters/op15-eb04.php",
+ "key_names":["Monkey.D.Luffy Secret Rare","Enel Secret Rare","Enel Super Alternate Art","Krieg","Lucy","Rebecca"],
+ "headline_chases":[
+  {"card":"Enel Super Alternate Art","tier":"JACKPOT","odds":"Super Alternate Art; Bandai publicerar inte packodds","why":"Bandai pekar uttryckligen ut Enel som släppets Super Alternate Art."},
+  {"card":"Monkey.D.Luffy Secret Rare","tier":"MONSTER","odds":"Secret Rare; exakt packodds ej publicerat","why":"Officiellt namngiven Secret Rare och setets mest kända huvudkaraktär."},
+  {"card":"Enel Secret Rare","tier":"MONSTER","odds":"Secret Rare; exakt packodds ej publicerat","why":"Skypiea-setets andra officiellt namngivna Secret Rare."},
+  {"card":"Alternate-art Event Card","tier":"MYCKET BRA","odds":"Två Event-kort har alternate art; familjeodds ej publicerat","why":"Separat illustrationsspår bekräftat av Bandai."}
+ ],
+ "why_exciting":["Skypiea-duellen Luffy mot Enel ger checklistan två tydliga Secret Rare-spår.","Enel Super Alternate Art ger ett konkret högt korttak även om sannolikheten är okänd."],
+ "tiers":{"everyday":{"label":"Ett löst engelskt pack","score":53,"items":["12 kort"]},"good":{"label":"Bra träff","score":69,"items":["SR eller parallel"]},"big":{"label":"Riktigt bra","score":82,"items":["Luffy/Enel Secret Rare"]},"jackpot":{"label":"Setets toppspår","score":94,"items":["Enel Super Alternate Art"]}},
+ "caveat":"Detta är ett löst engelskt 12-kortspack. Ingen Secret Rare, alternate art eller viss karaktär är garanterad och Bandai publicerar inte kortspecifika packodds."
+}
+
+CHASE_PROFILES["kl-one-piece-eb03-en-pack"] = {
+ "source_name":"Bandai official One Piece Heroines Edition EB-03 product page and card list",
+ "source_url":"https://en.onepiece-cardgame.com/products/boosters/eb03.php",
+ "key_names":["Nefeltari Vivi","Uta","Nami","Nico Robin","Boa Hancock","Charlotte Linlin"],
+ "headline_chases":[
+  {"card":"Nefeltari Vivi Leader alternate art","tier":"MONSTER","odds":"Leader alternate art; packodds ej publicerat","why":"Vivi debuterar officiellt som setets nya Leader."},
+  {"card":"Heroines SP Card – exempelvis Uta, Nami eller Boa Hancock","tier":"JACKPOT","odds":"9 SP-kort finns; inget familje- eller kortspecifikt packodds publicerat","why":"Bandai bekräftar nio separat designade SP-kort."},
+  {"card":"Alternate-art DON!! Card","tier":"MYCKET BRA","odds":"Fyra motiv med alternate-art-versioner; packodds ej publicerat","why":"Officiellt bekräftat specialspår utöver vanliga DON!!-kort."},
+  {"card":"Secret Rare heroine","tier":"MONSTER","odds":"Secret Rare finns i raritylistan; exakt kort- och packodds ej publicerat","why":"Setets högsta normala rarity-spår."}
+ ],
+ "why_exciting":["Fokuserad karaktärschecklista med Vivi, Uta, Nami, Robin och Boa Hancock.","Nio SP-kort och fyra DON!!-motiv med alternate art ger flera premiumspår."],
+ "tiers":{"everyday":{"label":"Ett löst engelskt pack","score":52,"items":["12 kort"]},"good":{"label":"Bra träff","score":68,"items":["SR eller alternate-art DON!!"]},"big":{"label":"Riktigt bra","score":81,"items":["Leader alternate art eller Secret Rare"]},"jackpot":{"label":"Setets toppspår","score":92,"items":["Namngiven heroine SP"]}},
+ "caveat":"Detta är ett löst engelskt 12-kortspack. Nio SP-kort i checklistan betyder inte att ett SP-kort är garanterat; Bandai publicerar inga kortspecifika packodds."
+}
+
+CHASE_PROFILES["bp-one-piece-op17-en-display"] = {
+ "source_name":"Bandai official The World's Strongest Warriors OP-17 product page",
+ "source_url":"https://en.onepiece-cardgame.com/products/boosters/op17/",
+ "key_names":["Monkey.D.Luffy OP17-079 Super Leader Alt-Art","Rocks.D.Xebec OP17-118","Shanks","Kaido","Edward.Newgate","Charlotte Linlin"],
+ "headline_chases":[
+  {"card":"Monkey.D.Luffy OP17-079 Super Leader Alt-Art","tier":"JACKPOT","odds":"Super Leader Alt-Art; Bandai publicerar inte packodds","why":"Bandai visar Luffys mangaillustrerade premium-Leader som ett centralt toppspår."},
+  {"card":"Rocks.D.Xebec OP17-118 high-rarity variant","tier":"MONSTER","odds":"Rarity/parallel varierar; kortspecifikt packodds ej publicerat","why":"Nyckelkaraktär och officiellt namngiven central chase i Rocks Pirates-spåret."},
+  {"card":"Four Emperors Special Card – Shanks, Kaido, Edward.Newgate eller Charlotte Linlin","tier":"MONSTER","odds":"Special Card-familj; exakt familje- och kortodds ej publicerat","why":"Fyra officiellt presenterade ikoniska kejsarspår."},
+  {"card":"Color of the Supreme King Haki SP","tier":"MYCKET BRA","odds":"Special Card-familj; packodds ej publicerat","why":"Ett separat jubileumsfinish-spår som Bandai lyfter i produktpresentationen."}
+ ],
+ "why_exciting":["24 engelska 12-kortspack ger 288 kort och fler försök på jubileumsspåren.","Luffy Super Leader Alt-Art, Rocks.D.Xebec och Four Emperors ger checklistan flera namngivna toppteman."],
+ "tiers":{"everyday":{"label":"Engelsk display","score":78,"items":["24 pack","288 kort"]},"good":{"label":"Bra träff","score":72,"items":["SR eller parallel"]},"big":{"label":"Riktigt bra","score":86,"items":["Special Card eller hög Rocks-variant"]},"jackpot":{"label":"Setets toppspår","score":97,"items":["Luffy Super Leader Alt-Art"]}},
+ "caveat":"Bandai publicerar rarityfamiljer men inga kortspecifika pack- eller boxodds. Displayen garanterar inte Luffy, Rocks.D.Xebec eller en viss Special Card. Priset 4 299 kr är högt och ska inte beskrivas som verifierad ekonomisk avkastning."
+}
+CHASE_PROFILES["kl-one-piece-op17-en-pack"] = _loose_pack_profile(
+    "bp-one-piece-op17-en-display",
+    everyday_items=["12 engelska kort"],
+    why=["Ett löst pack ger en enstaka chans på OP-17:s jubileums- och alt-artspår.","Det lägre inköpspriset innebär också bara ett öppningsförsök."],
+    caveat="Detta är ett löst engelskt 12-kortspack, inte en 24-packdisplay. Ingen Luffy Super Leader Alt-Art, Special Card eller annan rarity är garanterad; Bandai publicerar inte kortspecifika packodds.",
+)
+
 
 CHASE_CARD_DB = [
 
@@ -1998,6 +2095,7 @@ def seed_chase_profiles():
         store_expansion_slugs={x["slug"] for x in REAL_STORE_EXPANSION}
         retailer_expansion_slugs={x["slug"] for x in RETAILER_EXPANSION}
         additional_store_slugs={x["slug"] for x in ADDITIONAL_STORE_EXPANSION}
+        one_piece_market_slugs={x["slug"] for x in ONE_PIECE_MARKET_EXPANSION}
         expansion_slugs={x["slug"] for x in REAL_NONSPORT_EXPANSION + REAL_CROSS_CATEGORY_EXPANSION}
         for slug,data in CHASE_PROFILES.items():
             product=db.scalar(select(Product).where(Product.slug==slug))
@@ -2012,7 +2110,8 @@ def seed_chase_profiles():
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
             row.verified_at=(
-                ADDITIONAL_STORE_OBSERVED_AT if slug in additional_store_slugs
+                ONE_PIECE_MARKET_OBSERVED_AT if slug in one_piece_market_slugs
+                else ADDITIONAL_STORE_OBSERVED_AT if slug in additional_store_slugs
                 else RETAILER_EXPANSION_OBSERVED_AT if slug in retailer_expansion_slugs
                 else REAL_STORE_EXPANSION_OBSERVED_AT if slug in store_expansion_slugs
                 else REAL_RESEARCH_OBSERVED_AT if slug in research_slugs

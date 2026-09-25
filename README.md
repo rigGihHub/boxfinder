@@ -1,4 +1,11 @@
-# BoxFinder v0.48.0
+# BoxFinder v0.49.0
+
+## v0.49.0 – One Piece market scan
+
+- Added seven verified One Piece products across ten live offers from Kantovault, AlphaSpel, Aquitaz, Bangerpack and Kortlagret.
+- Added English OP-14, OP15-EB04, EB-03 and OP-17 packs plus Japanese OP-10 pack and box, each with a format-safe Bandai-sourced chase profile.
+- Kept English and Japanese pack/box configurations separate and never inferred card-specific pull odds.
+- Excluded sold-out displays and preorders; the available OP-17 display remains visible with an explicit warning that its 4,299 kr price is high and not evidence of positive return.
 
 ## v0.48.0 – Swedish retailer expansion
 
