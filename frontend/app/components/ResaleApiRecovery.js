@@ -3,7 +3,10 @@
 import {useEffect, useRef, useState} from "react";
 import ResaleResults, {loadResaleResult, saveResaleResult} from "./ResaleResults";
 
-const MAX_ATTEMPTS = 2;
+// Render's free service can need close to a minute to wake. Keep the verified
+// local result visible while retrying long enough for a real cold start.
+const MAX_ATTEMPTS = 6;
+const RETRY_DELAY_MS = 1500;
 
 export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChange}) {
   const [message, setMessage] = useState("Väcker analysmotorn…");
@@ -26,7 +29,9 @@ export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChang
     async function recover() {
       const nextAttempt = attempt.current + 1;
       attempt.current = nextAttempt;
-      setMessage(nextAttempt === 1 ? "Väcker analysmotorn…" : `Söker igen · försök ${nextAttempt}`);
+      setMessage(nextAttempt === 1
+        ? "Väcker analysmotorn…"
+        : `Söker igen · försök ${nextAttempt} av ${MAX_ATTEMPTS}`);
       try {
         const response = await fetch(`/api/resale-recovery?${query}`, {cache: "no-store"});
         if (response.ok) {
@@ -42,7 +47,7 @@ export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChang
         // A sleeping Render service is expected to fail during its first wake-up.
       }
       if (!stopped.current && nextAttempt < MAX_ATTEMPTS) {
-        timer = window.setTimeout(recover, 2500);
+        timer = window.setTimeout(recover, RETRY_DELAY_MS);
       } else if (!stopped.current) {
         setFailed(true);
         setMessage("API:t svarar inte just nu. Senast sparade ranking visas om den finns.");
@@ -60,15 +65,18 @@ export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChang
   if (result) return <ResaleResults query={query} data={result}/>;
 
   if (cachedResult) return <div aria-live="polite">
+    <div className={`rankingRetry${failed ? " rankingRetryFailed" : ""}`}>
+      <span>{failed ? message : `Hämtar en färsk ranking i bakgrunden · ${message}`}</span>
+      {failed && <button onClick={() => setRetryKey(value => value + 1)}>FÖRSÖK IGEN</button>}
+    </div>
     <ResaleResults query={query} data={cachedResult.data} cached/>
-    {failed && <div className="rankingRetry"><span>{message}</span><button onClick={() => setRetryKey(value => value + 1)}>FÖRSÖK IGEN</button></div>}
   </div>;
 
   return <div className="chaseEmpty apiUnavailable" aria-live="polite">
     <b>BoxFinder startar analysmotorn.</b>
     <span>{message}</span>
     <div className="apiWakeProgress"><i/></div>
-    <span>{failed ? "Den senast verifierade katalogen påverkas inte." : "Sökningen gör högst två försök innan du får ett tydligt felmeddelande."}</span>
+    <span>{failed ? "Den senast verifierade katalogen påverkas inte." : "En helt avstängd tjänst kan behöva upp till ungefär en minut för att starta."}</span>
     {failed && <button onClick={() => setRetryKey(value => value + 1)}>FÖRSÖK IGEN</button>}
   </div>;
 }

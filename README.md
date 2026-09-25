@@ -1,4 +1,10 @@
-# BoxFinder v0.47.4
+# BoxFinder v0.47.5
+
+## v0.47.5 – Cold-start ranking recovery
+
+- Keeps the verified cached ranking visible while retrying through a full Render cold start.
+- Shows the active wake-up attempt above cached results instead of silently leaving an old timestamp on screen.
+- Places the manual retry action above the cards when the API remains unavailable.
 
 ## v0.47.4 – Reliable rank-all action
 
