@@ -1,4 +1,10 @@
-# BoxFinder v0.47.3
+# BoxFinder v0.47.4
+
+## v0.47.4 – Reliable rank-all action
+
+- Made `RANKA ALLT` trigger a new ranking even when the filters have not changed.
+- Added immediate busy feedback, automatic scrolling to the ranking and a bounded retry state.
+- Aligned the visible frontend and backend version indicators.
 
 ## v0.47.3 – Live catalog connection hardening
 
