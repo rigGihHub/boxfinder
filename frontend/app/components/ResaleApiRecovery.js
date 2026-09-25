@@ -3,10 +3,12 @@
 import {useEffect, useRef, useState} from "react";
 import ResaleResults, {loadResaleResult, saveResaleResult} from "./ResaleResults";
 
-// Render's free service can need close to a minute to wake. Keep the verified
-// local result visible while retrying long enough for a real cold start.
-const MAX_ATTEMPTS = 6;
-const RETRY_DELAY_MS = 1500;
+const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+
+// Both Render services can sleep. The browser must wake the API directly;
+// proxy retries alone may return 503 without starting the sleeping API.
+const MAX_ATTEMPTS = 12;
+const RETRY_DELAY_MS = 2000;
 
 export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChange}) {
   const [message, setMessage] = useState("Väcker analysmotorn…");
@@ -25,6 +27,13 @@ export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChang
     setCachedResult(loadResaleResult(query));
     onLoadingChange?.(true);
     let timer;
+
+    // This cross-origin no-cors request is intentionally fire-and-forget. Its
+    // only job is to reach Render's public API hostname and start the service.
+    void fetch(`${API}/health?wake=${Date.now()}`, {
+      cache: "no-store",
+      mode: "no-cors",
+    }).catch(() => {});
 
     async function recover() {
       const nextAttempt = attempt.current + 1;
@@ -69,14 +78,14 @@ export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChang
       <span>{failed ? message : `Hämtar en färsk ranking i bakgrunden · ${message}`}</span>
       {failed && <button onClick={() => setRetryKey(value => value + 1)}>FÖRSÖK IGEN</button>}
     </div>
-    <ResaleResults query={query} data={cachedResult.data} cached/>
+    <ResaleResults query={query} data={cachedResult.data} cached updating={!failed}/>
   </div>;
 
   return <div className="chaseEmpty apiUnavailable" aria-live="polite">
     <b>BoxFinder startar analysmotorn.</b>
     <span>{message}</span>
     <div className="apiWakeProgress"><i/></div>
-    <span>{failed ? "Den senast verifierade katalogen påverkas inte." : "En helt avstängd tjänst kan behöva upp till ungefär en minut för att starta."}</span>
+    <span>{failed ? "Den senast verifierade katalogen påverkas inte." : "En helt avstängd tjänst kan behöva drygt en minut för att starta."}</span>
     {failed && <button onClick={() => setRetryKey(value => value + 1)}>FÖRSÖK IGEN</button>}
   </div>;
 }

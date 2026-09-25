@@ -28,7 +28,7 @@ export function loadResaleResult(query) {
   return null;
 }
 
-export default function ResaleResults({query, data, cached = false}) {
+export default function ResaleResults({query, data, cached = false, updating = false}) {
   useEffect(() => {
     if (!cached) saveResaleResult(query, data);
   }, [cached, data, query]);
@@ -37,7 +37,9 @@ export default function ResaleResults({query, data, cached = false}) {
     <p className="searchFreshness">
       {cached ? "Visar senast sparade sökning från " : "Sökning genomförd "}
       {formatTime(data.searched_at)}
-      {cached ? " · uppdaterar i bakgrunden" : ` · ${data.count ?? data.items.length} rankade produkter`}
+      {cached
+        ? (updating ? " · uppdaterar i bakgrunden" : " · uppdateringen misslyckades")
+        : ` · ${data.count ?? data.items.length} rankade produkter`}
     </p>
     {data.items.length
       ? <ResaleResultCards items={data.items}/>

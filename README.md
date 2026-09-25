@@ -1,4 +1,10 @@
-# BoxFinder v0.47.5
+# BoxFinder v0.47.6
+
+## v0.47.6 – Direct API wake-up
+
+- Wakes the sleeping API directly from the browser instead of relying on proxy requests that may return 503 without starting it.
+- Keeps checking for more than a minute, covering the measured 60-second Render cold start.
+- Stops claiming that an update is still running after all recovery attempts have failed.
 
 ## v0.47.5 – Cold-start ranking recovery
 
