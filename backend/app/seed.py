@@ -1882,6 +1882,9 @@ def seed_chase_card_db():
 def seed_chase_profiles():
     db=SessionLocal()
     try:
+        research_slugs={x["slug"] for x in REAL_RESEARCH_EXPANSION}
+        store_expansion_slugs={x["slug"] for x in REAL_STORE_EXPANSION}
+        expansion_slugs={x["slug"] for x in REAL_NONSPORT_EXPANSION + REAL_CROSS_CATEGORY_EXPANSION}
         for slug,data in CHASE_PROFILES.items():
             product=db.scalar(select(Product).where(Product.slug==slug))
             if not product: continue
@@ -1894,9 +1897,12 @@ def seed_chase_profiles():
             row.content_json=json.dumps({k:v for k,v in data.items() if k not in ("source_name","source_url")},ensure_ascii=False)
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
-            research_slugs={x["slug"] for x in REAL_RESEARCH_EXPANSION}
-            expansion_slugs={x["slug"] for x in REAL_NONSPORT_EXPANSION + REAL_CROSS_CATEGORY_EXPANSION}
-            row.verified_at=REAL_RESEARCH_OBSERVED_AT if slug in research_slugs else REAL_EXPANSION_OBSERVED_AT if slug in expansion_slugs else REAL_SNAPSHOT_OBSERVED_AT
+            row.verified_at=(
+                REAL_STORE_EXPANSION_OBSERVED_AT if slug in store_expansion_slugs
+                else REAL_RESEARCH_OBSERVED_AT if slug in research_slugs
+                else REAL_EXPANSION_OBSERVED_AT if slug in expansion_slugs
+                else REAL_SNAPSHOT_OBSERVED_AT
+            )
             row.confidence=95
         db.commit()
     finally:

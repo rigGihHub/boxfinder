@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, select, func, event
 from sqlalchemy.orm import sessionmaker
 
 from app.database import Base
-from app.models import Offer, Product, ProductFact, ProductVariant, Store
+from app.models import ChaseProfile, Offer, Product, ProductFact, ProductVariant, Store
 from app.routers.discovery import real_catalog
 from app.routers.products import list_products
 import app.seed as seedmod
@@ -259,6 +259,23 @@ def test_magic_play_booster_profiles_exclude_collector_only_headliners():
         assert "gauntlet" not in headlines
         assert profile["headline_chases"]
         assert "collector booster" in profile["caveat"].lower()
+
+def test_store_expansion_chase_profiles_use_current_verification_time(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    slugs={x["slug"] for x in seedmod.REAL_STORE_EXPANSION}
+    rows=db.execute(
+        select(Product.slug, ChaseProfile.verified_at)
+        .join(ProductVariant, ProductVariant.product_id==Product.id)
+        .join(ChaseProfile, ChaseProfile.variant_id==ProductVariant.id)
+        .where(Product.slug.in_(slugs))
+    ).all()
+    assert {slug for slug,_ in rows}==slugs
+    assert all(verified_at==seedmod.REAL_STORE_EXPANSION_OBSERVED_AT for _,verified_at in rows)
+    db.close()
 
 def test_retail_and_loose_pack_profiles_do_not_claim_hobby_box_guarantees():
     retail_slugs={
