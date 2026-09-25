@@ -1,4 +1,11 @@
-# BoxFinder v0.49.0
+# BoxFinder v0.50.0
+
+## v0.50.0 – Yu-Gi-Oh and Lorcana market expansion
+
+- Added five newly rankable products: Phantom Revenge loose pack, Maze of Muertos pack and display, Blazing Dominion pack, and Azurite Sea display.
+- Added verified AlphaSpel and Dragon's Lair backup/price-comparison offers for two existing products.
+- Added format-specific chase profiles with named Starlight, Collector's Rare and Enchanted cards without inventing pull odds.
+- Kept loose-pack expectations separate from display configurations and left an undocumented cards-per-pack value explicitly unknown.
 
 ## v0.49.0 – One Piece market scan
 

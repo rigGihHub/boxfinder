@@ -13,7 +13,7 @@ SOURCE_PROFILES = {
     "NordicSportsCards": {"priority":1,"coverage":["Hockey","Fotboll","Övrig sport"],"strength":"Sportkortsspecialist","recommended_ingest":"Kartlägg feed/API och importera komplett sealed-sortiment"},
     "TCGPoke": {"priority":2,"coverage":["Pokémon"],"strength":"Svensk sealed Pokémon-källa","recommended_ingest":"Manuell CSV tills feed/API är verifierad"},
     "TCGbutik": {"priority":2,"coverage":["Pokémon","One Piece","Lorcana","Riftbound","Magic","Yu-Gi-Oh!"],"strength":"Kurerad svensk TCG-katalog med sealed products","recommended_ingest":"Manuell import; tillgänglighet bekräftas manuellt hos butiken"},
-    "AlphaSpel": {"priority":2,"coverage":["Pokémon","Magic","One Piece","Lorcana","Övrig TCG"],"strength":"Stor svensk spelbutik med TCG-sortiment","recommended_ingest":"Kartlägg sealed-kategorier och feed/API"},
+    "AlphaSpel": {"priority":2,"coverage":["Pokémon","Magic","One Piece","Lorcana","Yu-Gi-Oh!","Övrig TCG"],"strength":"Stor svensk spelbutik med TCG-sortiment","recommended_ingest":"Kartlägg sealed-kategorier och feed/API"},
     "Dragons Lair": {"priority":2,"coverage":["Pokémon","Magic","Övrig TCG"],"strength":"Etablerad svensk spelbutik","recommended_ingest":"Kartlägg sealed-kategorier och feed/API"},
     "Röda Goblinen": {"priority":2,"coverage":["Pokémon","Magic","Lorcana","Star Wars Unlimited","Yu-Gi-Oh!"],"strength":"Brett TCG-sortiment","recommended_ingest":"Kartlägg sealed-kategorier och feed/API"},
     "ManaTorsk": {"priority":2,"coverage":["Pokémon","Magic","Lorcana","Star Wars Unlimited","Yu-Gi-Oh!"],"strength":"Svensk TCG-butik","recommended_ingest":"Kartlägg sealed-kategorier och feed/API"},

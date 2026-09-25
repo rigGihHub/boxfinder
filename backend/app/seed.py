@@ -273,6 +273,20 @@ ONE_PIECE_MARKET_EXPANSION = [
     dict(slug="bp-one-piece-op17-en-display", name="One Piece The World's Strongest Warriors OP-17 Booster Display English", category="One Piece", manufacturer="Bandai", year="2026", series="The World's Strongest Warriors OP-17", fmt="booster box", sku="BP-OP17-EN-DISPLAY", price=4299, packs=24, cards=12, stock="in_stock", language="English", store_name="Bangerpack", observed_at=ONE_PIECE_MARKET_OBSERVED_AT, facts=["24 engelska boosterpaket med 12 kort per paket", "Setet innehåller Super Leader Alt-Art, Secret Rares, Treasure Rare och flera specialkort", "Det höga svenska marknadspriset ska vägas mot 24 öppningsförsök; boxen saknar kortspecifik garanti"], buy_url="https://bangerpack.se/tcg-samlarkort/one-piece/booster-box-display-op-17"),
 ]
 
+# Thin-category market scan verified against exact Swedish article pages on
+# 2026-09-25. Duplicate slugs are intentional backup/price-comparison offers
+# for an already modelled product; format-specific products keep separate slugs.
+TCG_MARKET_OBSERVED_AT = datetime(2026, 9, 25, 19, 4, 0)
+TCG_MARKET_EXPANSION = [
+    dict(slug="as-yugioh-phantom-revenge-pack", name="Yu-Gi-Oh! Phantom Revenge Booster Pack", category="Yu-Gi-Oh", manufacturer="Konami", year="2025", series="Phantom Revenge", fmt="single pack", sku="YGO834-6-p", price=59, packs=1, cards=7, stock="in_stock", language="English", store_name="AlphaSpel", observed_at=TCG_MARKET_OBSERVED_AT, facts=["1 engelskt boosterpaket med 7 kort", "1 foil och 6 Rare per paket", "15 kort finns som Collector's Rare och 10 som Starlight Rare", "Ingen Collector's Rare eller Starlight Rare är garanterad"], buy_url="https://alphaspel.se/1763-yu-gi-oh/340639-yu-gi-oh-tcg-phantom-revenge-booster-pack"),
+    dict(slug="cc-yugioh-phantom-revenge-display", name="Yu-Gi-Oh! Phantom Revenge Booster Display", category="Yu-Gi-Oh", manufacturer="Konami", year="2025", series="Phantom Revenge", fmt="booster box", sku="YGO834-6", price=949, packs=24, cards=7, stock="in_stock", language="English", store_name="AlphaSpel", observed_at=TCG_MARKET_OBSERVED_AT, facts=["24 engelska boosterpaket med 7 kort per paket", "1 foil och 6 Rare per paket", "Backup-erbjudande; ingen hög rarity är garanterad per display"], buy_url="https://alphaspel.se/1763-yu-gi-oh/306138-yu-gi-oh-tcg-phantom-revenge-booster-display-24"),
+    dict(slug="as-yugioh-maze-muertos-pack", name="Yu-Gi-Oh! Maze of Muertos Booster Pack", category="Yu-Gi-Oh", manufacturer="Konami", year="2026", series="Maze of Muertos", fmt="single pack", sku="YGO409-6-b", price=49, packs=1, cards=7, stock="in_stock", language="English", store_name="AlphaSpel", observed_at=TCG_MARKET_OBSERVED_AT, facts=["1 engelskt boosterpaket med 7 kort", "1 foil och 6 Rare per paket", "Starlight-, Collector's-, Secret-, Ultra- och Super Rare finns i checklistan", "Ingen viss rarity eller namngiven träff är garanterad"], buy_url="https://www.alphaspel.se/1763-yu-gi-oh/345247-yu-gi-oh-tcg-maze-of-muertos-booster-pack"),
+    dict(slug="as-yugioh-maze-muertos-display", name="Yu-Gi-Oh! Maze of Muertos Booster Display", category="Yu-Gi-Oh", manufacturer="Konami", year="2026", series="Maze of Muertos", fmt="booster box", sku="YGO409-6", price=949, packs=24, cards=7, stock="in_stock", language="English", store_name="AlphaSpel", observed_at=TCG_MARKET_OBSERVED_AT, facts=["24 engelska boosterpaket med 7 kort per paket", "Varje paket innehåller 1 foil och 6 Rare", "Konami publicerar checklistans rarities men ingen displaygaranti för Starlight eller Collector's Rare"], buy_url="https://www.alphaspel.se/1763-yu-gi-oh/337424-yu-gi-oh-tcg-maze-of-muertos-booster-display-24"),
+    dict(slug="as-yugioh-blazing-dominion-pack", name="Yu-Gi-Oh! Blazing Dominion Booster Pack", category="Yu-Gi-Oh", manufacturer="Konami", year="2026", series="Blazing Dominion", fmt="single pack", sku="YGO934-3-b", price=49, packs=1, cards=None, stock="in_stock", language="English", store_name="AlphaSpel", observed_at=TCG_MARKET_OBSERVED_AT, facts=["1 engelskt boosterpaket; butikssidan anger inte antal kort", "101-kortschecklista med 10 Secret, 14 Ultra, 26 Super och 50 Common", "25 kort finns som Starlight Rare", "Starlight Rare beskriver kortversionen, inte dragchansen"], buy_url="https://www.main.alphaspel.se/1763-yu-gi-oh/342862-yu-gi-oh-tcg-blazing-dominion-booster-pack"),
+    dict(slug="cc-lorcana-azurite-pack", name="Disney Lorcana Azurite Sea Booster Pack", category="Disney", manufacturer="Ravensburger", year="2024", series="Azurite Sea", fmt="single pack", sku="DL-AZURITE-SEA-PACK", price=70, packs=1, cards=12, stock="in_stock", language="English", store_name="Dragons Lair", observed_at=TCG_MARKET_OBSERVED_AT, facts=["1 engelskt boosterpaket med 12 slumpade kort", "Alternativt butikserbjudande till samma verifierade produkt", "Ravensburger publicerar inte kortspecifika packodds"], buy_url="https://dragonslair.se/products/disney-lorcana-tcg-azurite-sea-booster-pack-disney-lorcana"),
+    dict(slug="dl-lorcana-azurite-display", name="Disney Lorcana Azurite Sea Booster Display", category="Disney", manufacturer="Ravensburger", year="2024", series="Azurite Sea", fmt="booster box", sku="DL-AZURITE-SEA-DISPLAY", price=1549, packs=24, cards=12, stock="in_stock", language="English", store_name="Dragons Lair", observed_at=TCG_MARKET_OBSERVED_AT, facts=["24 engelska boosterpaket med 12 slumpade kort per paket", "Checklistan har 204 baskort och 18 Enchanted-kort", "Ingen Enchanted eller annan specifik rarity är garanterad per display"], buy_url="https://dragonslair.se/products/disney-lorcana-tcg-azurite-sea-booster-pack-display-24-boosters-disney-lorcana"),
+]
+
 REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
 
 REAL_SNAPSHOT += REAL_PACK_SNAPSHOT
@@ -283,6 +297,7 @@ REAL_SNAPSHOT += REAL_STORE_EXPANSION
 REAL_SNAPSHOT += RETAILER_EXPANSION
 REAL_SNAPSHOT += ADDITIONAL_STORE_EXPANSION
 REAL_SNAPSHOT += ONE_PIECE_MARKET_EXPANSION
+REAL_SNAPSHOT += TCG_MARKET_EXPANSION
 
 DIRECT_BUY_URLS = {
     "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",
@@ -1615,6 +1630,77 @@ CHASE_PROFILES["cc-yugioh-phantom-revenge-display"] = {
  "caveat":"Konami publicerar rarity-fördelningen men inga kortspecifika pack- eller displayodds. Starlight Rare är en rarity, inte en garanti per display."
 }
 
+CHASE_PROFILES["as-yugioh-phantom-revenge-pack"] = copy.deepcopy(
+    CHASE_PROFILES["cc-yugioh-phantom-revenge-display"]
+)
+CHASE_PROFILES["as-yugioh-phantom-revenge-pack"].update({
+ "why_exciting":["Ett billigt engelskt löspaket med en verifierad foilplats.","Collector's Rare- och Starlight Rare-versioner finns i checklistan, men är mycket sällsynta och saknar publicerade odds."],
+ "tiers":{"everyday":{"label":"Ett löst paket","score":48,"items":["7 kort","1 foil och 6 Rare"]},"good":{"label":"Bra träff","score":57,"items":["Ultra Rare eller stark Super Rare"]},"big":{"label":"Riktigt bra","score":70,"items":["Collector's Rare"]},"jackpot":{"label":"Monsterhit","score":84,"items":["namngiven Starlight Rare"]}},
+ "caveat":"Detta är ett löst paket, inte en förseglad display. Den enda verifierade packkonfigurationen är 1 foil och 6 Rare; Collector's Rare, Starlight Rare och ett visst kort saknar publicerade odds och är inte garanterade."
+})
+
+_maze_muertos_profile = {
+ "source_name":"Konami official Maze of Muertos product page and card database",
+ "source_url":"https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=1&pid=2000001596000&request_locale=en&rp=99999",
+ "key_names":["Uria, Lord of Searing Flames Starlight Rare","Dark Magician of Destruction Collector's Rare","Pumpking the King of Grave Ghosts Collector's Rare","Darkuriboh Collector's Rare","Albion the Sanctifire Dragon Starlight Rare"],
+ "headline_chases":[
+  {"card":"Uria, Lord of Searing Flames Starlight Rare","tier":"JACKPOT","odds":"Starlight Rare; exakt packodds ej publicerat","why":"Officiella kortdatabasen bekräftar den namngivna Starlight-versionen."},
+  {"card":"Albion the Sanctifire Dragon Starlight Rare","tier":"MONSTER","odds":"Starlight Rare; exakt packodds ej publicerat","why":"Verifierad premiumversion av ett etablerat fusionkort."},
+  {"card":"Dark Magician of Destruction Collector's Rare","tier":"MONSTER","odds":"Collector's Rare; exakt packodds ej publicerat","why":"Namngiven premiumversion i Dark Magician-spåret."},
+  {"card":"Pumpking the King of Grave Ghosts Collector's Rare","tier":"MYCKET BRA","odds":"Collector's Rare; exakt packodds ej publicerat","why":"Setets officiellt profilerade huvudkaraktär i premiumrarity."},
+  {"card":"Darkuriboh Collector's Rare","tier":"MYCKET BRA","odds":"Collector's Rare; exakt packodds ej publicerat","why":"Animebaserad, namngiven Collector's Rare enligt Konamis databas."}
+ ],
+ "why_exciting":["Checklistan har verifierade Starlight-, Collector's- och Secret Rare-spår med välkända Yu-Gi-Oh-namn.","Varje paket innehåller en foil och sex Rare, vilket ger ett tydligt innehållsgolv utan att lova hög rarity."],
+ "tiers":{"everyday":{"label":"Full display","score":80,"items":["24 pack","168 kort","24 foilplatser"]},"good":{"label":"Bra träff","score":71,"items":["stark foil eller Secret Rare"]},"big":{"label":"Riktigt bra","score":83,"items":["Collector's Rare"]},"jackpot":{"label":"Monsterhit","score":92,"items":["namngiven Starlight Rare"]}},
+ "caveat":"Konami verifierar 1 foil och 6 Rare per paket samt checklistans rarities, men publicerar inte exakta Starlight-, Collector's- eller kortspecifika odds. Ingen premiumrarity är garanterad per display."
+}
+CHASE_PROFILES["as-yugioh-maze-muertos-display"] = copy.deepcopy(_maze_muertos_profile)
+CHASE_PROFILES["as-yugioh-maze-muertos-pack"] = copy.deepcopy(_maze_muertos_profile)
+CHASE_PROFILES["as-yugioh-maze-muertos-pack"].update({
+ "why_exciting":["Ett engelskt sjukortspaket under 50 kr med en verifierad foilplats.","Starlight- och Collector's Rare-spåren ger högt korttak, men utfallet i ett löst paket är mycket variansrikt."],
+ "tiers":{"everyday":{"label":"Ett löst paket","score":47,"items":["7 kort","1 foil och 6 Rare"]},"good":{"label":"Bra träff","score":56,"items":["stark foil eller Secret Rare"]},"big":{"label":"Riktigt bra","score":69,"items":["Collector's Rare"]},"jackpot":{"label":"Monsterhit","score":84,"items":["namngiven Starlight Rare"]}},
+ "caveat":"Detta är ett löst paket. 1 foil och 6 Rare är verifierat, men inga premiumrarities eller namngivna kort är garanterade och Konami publicerar inte kortspecifika odds."
+})
+
+CHASE_PROFILES["as-yugioh-blazing-dominion-pack"] = {
+ "source_name":"Konami official Blazing Dominion product page and card database",
+ "source_url":"https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=1&pid=2000001614000&request_locale=en&rp=99999",
+ "key_names":["The Crimson King Starlight Rare","Power Vice Dragon Starlight Rare","Superdreadnought Rail Cannon Gustav Rocket Starlight Rare","Superdreadnought Rail Cannon Flying Launcher Starlight Rare","Dominus Spark Starlight Rare"],
+ "headline_chases":[
+  {"card":"The Crimson King Starlight Rare","tier":"JACKPOT","odds":"Starlight Rare; exakt packodds ej publicerat","why":"Officiellt verifierad Starlight-version av setets Red Dragon Archfiend-huvudkort."},
+  {"card":"Power Vice Dragon Starlight Rare","tier":"MONSTER","odds":"Starlight Rare; exakt packodds ej publicerat","why":"Secret Rare som också finns i en verifierad Starlight-version."},
+  {"card":"Superdreadnought Rail Cannon Gustav Rocket Starlight Rare","tier":"MONSTER","odds":"Starlight Rare; exakt packodds ej publicerat","why":"Namngivet Rank 10-tågkort i premiumrarity."},
+  {"card":"Superdreadnought Rail Cannon Flying Launcher Starlight Rare","tier":"MONSTER","odds":"Starlight Rare; exakt packodds ej publicerat","why":"Ytterligare officiellt verifierad Rank 10 Starlight-chase."},
+  {"card":"Dominus Spark Starlight Rare","tier":"MYCKET BRA","odds":"Starlight Rare; exakt packodds ej publicerat","why":"Verifierad premiumversion i setets 25-korts Starlight-spår."}
+ ],
+ "why_exciting":["Den officiella 101-kortslistan har 25 kort som Starlight Rare och flera exakt namngivna premiumträffar.","Paketet kostar under 50 kr, men butikssidan anger inte antalet kort och inget högrarity-kort är garanterat."],
+ "tiers":{"everyday":{"label":"Ett löst paket","score":43,"items":["1 engelskt boosterpaket"]},"good":{"label":"Bra träff","score":54,"items":["Super, Ultra eller Secret Rare"]},"big":{"label":"Riktigt bra","score":67,"items":["stark Secret Rare"]},"jackpot":{"label":"Monsterhit","score":83,"items":["namngiven Starlight Rare"]}},
+ "caveat":"Starlight Rare är en kortversion, inte en dragchans. Konami publicerar inga kortspecifika odds och den aktuella butikssidan anger inte antal kort i paketet, så BoxFinder lämnar den uppgiften okänd."
+}
+
+_azurite_sea_profile = {
+ "source_name":"Ravensburger official Azurite Sea product page and published complete card list",
+ "source_url":"https://www.disneylorcana.com/en-US/product/azurite-sea",
+ "key_names":["Tigger - In the Crow's Nest #215 Enchanted","Baymax - Personal Healthcare Companion #218 Enchanted","You Came Back #213 Enchanted","Tiana - Restaurant Owner #206 Enchanted","Chip 'n' Dale - Recovery Rangers #205 Enchanted"],
+ "headline_chases":[
+  {"card":"Tigger - In the Crow's Nest #215 Enchanted","tier":"JACKPOT","odds":"Enchanted; officiellt kortspecifikt packodds ej publicerat","why":"Namngiven Enchanted i den kompletta Azurite Sea-listan."},
+  {"card":"Baymax - Personal Healthcare Companion #218 Enchanted","tier":"JACKPOT","odds":"Enchanted; officiellt kortspecifikt packodds ej publicerat","why":"Big Hero 6-huvudkaraktär i setets premiumrarity."},
+  {"card":"You Came Back #213 Enchanted","tier":"MONSTER","odds":"Enchanted; officiellt kortspecifikt packodds ej publicerat","why":"Namngivet Enchanted action-kort."},
+  {"card":"Tiana - Restaurant Owner #206 Enchanted","tier":"MONSTER","odds":"Enchanted; officiellt kortspecifikt packodds ej publicerat","why":"Namngiven prinsesskaraktär i Enchanted-rarity."},
+  {"card":"Chip 'n' Dale - Recovery Rangers #205 Enchanted","tier":"MONSTER","odds":"Enchanted; officiellt kortspecifikt packodds ej publicerat","why":"Setets första numrerade Enchanted och centralt Rescue Rangers-spår."}
+ ],
+ "why_exciting":["Azurite Sea har 18 namngivna Enchanted-kort utöver 204-kortsbasen.","Ravensburger verifierar 12 slumpade kort per paket och 24 paket per display."],
+ "tiers":{"everyday":{"label":"Full display","score":82,"items":["24 pack","288 kort"]},"good":{"label":"Bra träff","score":70,"items":["Legendary eller stark foil"]},"big":{"label":"Riktigt bra","score":80,"items":["namngiven Enchanted"]},"jackpot":{"label":"Monsterhit","score":89,"items":["Tigger eller Baymax Enchanted"]}},
+ "caveat":"Ravensburger publicerar ingen Enchanted-garanti per display och inga kortspecifika packodds. Namngivna Enchanted-kort kommer från en publicerad komplett checklista; BoxFinder påstår inte verifierad ekonomisk avkastning."
+}
+CHASE_PROFILES["dl-lorcana-azurite-display"] = copy.deepcopy(_azurite_sea_profile)
+CHASE_PROFILES["cc-lorcana-azurite-pack"] = copy.deepcopy(_azurite_sea_profile)
+CHASE_PROFILES["cc-lorcana-azurite-pack"].update({
+ "why_exciting":["Ett tolkkortspaket ger en billig chans på 18 namngivna Enchanted-kort.","Den verifierade foilplatsen kan ha slumpad rarity, men inget visst kort är garanterat."],
+ "tiers":{"everyday":{"label":"Ett löst paket","score":49,"items":["12 kort","1 foil med slumpad rarity"]},"good":{"label":"Bra träff","score":57,"items":["Legendary eller stark foil"]},"big":{"label":"Riktigt bra","score":69,"items":["namngiven Enchanted"]},"jackpot":{"label":"Monsterhit","score":82,"items":["Tigger eller Baymax Enchanted"]}},
+ "caveat":"Detta är ett löst paket, inte en display. Ravensburger publicerar inga kortspecifika packodds och ingen Enchanted är garanterad."
+})
+
 CHASE_PROFILES["cc-2023-panini-chronicles-racing-hobby"] = {
  "source_name":"Panini official checklist, Coolcard box configuration and published checklist index",
  "source_url":"https://www.paniniamerica.net/2023-chronicles-racing-nascar-trading-cards-hobby.html",
@@ -2096,6 +2182,7 @@ def seed_chase_profiles():
         retailer_expansion_slugs={x["slug"] for x in RETAILER_EXPANSION}
         additional_store_slugs={x["slug"] for x in ADDITIONAL_STORE_EXPANSION}
         one_piece_market_slugs={x["slug"] for x in ONE_PIECE_MARKET_EXPANSION}
+        tcg_market_slugs={x["slug"] for x in TCG_MARKET_EXPANSION}
         expansion_slugs={x["slug"] for x in REAL_NONSPORT_EXPANSION + REAL_CROSS_CATEGORY_EXPANSION}
         for slug,data in CHASE_PROFILES.items():
             product=db.scalar(select(Product).where(Product.slug==slug))
@@ -2110,7 +2197,8 @@ def seed_chase_profiles():
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
             row.verified_at=(
-                ONE_PIECE_MARKET_OBSERVED_AT if slug in one_piece_market_slugs
+                TCG_MARKET_OBSERVED_AT if slug in tcg_market_slugs
+                else ONE_PIECE_MARKET_OBSERVED_AT if slug in one_piece_market_slugs
                 else ADDITIONAL_STORE_OBSERVED_AT if slug in additional_store_slugs
                 else RETAILER_EXPANSION_OBSERVED_AT if slug in retailer_expansion_slugs
                 else REAL_STORE_EXPANSION_OBSERVED_AT if slug in store_expansion_slugs

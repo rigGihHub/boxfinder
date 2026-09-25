@@ -109,6 +109,57 @@ def test_new_pokemon_and_one_piece_products_have_named_checklists(monkeypatch):
     assert len(statements)<=5, f"real catalog should batch facts and chase profiles, got {len(statements)} SQL statements"
     db.close()
 
+def test_tcg_market_expansion_keeps_formats_and_offers_distinct(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    new_slugs={
+        "as-yugioh-phantom-revenge-pack",
+        "as-yugioh-maze-muertos-pack",
+        "as-yugioh-maze-muertos-display",
+        "as-yugioh-blazing-dominion-pack",
+        "dl-lorcana-azurite-display",
+    }
+    products={p.slug:p for p in db.scalars(select(Product).where(Product.slug.in_(new_slugs))).all()}
+    assert set(products)==new_slugs
+    variants={
+        p.slug:db.scalar(select(ProductVariant).where(ProductVariant.product_id==p.id))
+        for p in products.values()
+    }
+    assert variants["as-yugioh-maze-muertos-pack"].packs==1
+    assert variants["as-yugioh-maze-muertos-display"].packs==24
+    assert variants["as-yugioh-maze-muertos-pack"].cards_per_pack==7
+    assert variants["as-yugioh-maze-muertos-display"].cards_per_pack==7
+    assert variants["as-yugioh-blazing-dominion-pack"].cards_per_pack is None
+    assert all(seedmod.CHASE_PROFILES[slug]["headline_chases"] for slug in new_slugs)
+
+    phantom=db.scalar(select(Product).where(Product.slug=="cc-yugioh-phantom-revenge-display"))
+    phantom_offers=db.scalars(select(Offer).join(ProductVariant).where(ProductVariant.product_id==phantom.id)).all()
+    assert {offer.store.name for offer in phantom_offers}=={"Coolcard","AlphaSpel"}
+    assert min(offer.price_sek for offer in phantom_offers)==779
+
+    azurite=db.scalar(select(Product).where(Product.slug=="cc-lorcana-azurite-pack"))
+    azurite_offers=db.scalars(select(Offer).join(ProductVariant).where(ProductVariant.product_id==azurite.id)).all()
+    assert {offer.store.name for offer in azurite_offers}=={"Coolcard","Dragons Lair"}
+    assert min(offer.price_sek for offer in azurite_offers)==70
+    db.close()
+
+def test_tcg_profiles_do_not_turn_rarity_into_pull_odds():
+    from app.services.chase_content import has_actionable_odds
+    for slug in (
+        "as-yugioh-phantom-revenge-pack",
+        "as-yugioh-maze-muertos-pack",
+        "as-yugioh-maze-muertos-display",
+        "as-yugioh-blazing-dominion-pack",
+        "cc-lorcana-azurite-pack",
+        "dl-lorcana-azurite-display",
+    ):
+        profile=seedmod.CHASE_PROFILES[slug]
+        assert has_actionable_odds(profile) is False
+        assert "1/1" not in profile["caveat"]
+
 def test_ranking_product_list_uses_one_bulk_chase_profile_query(monkeypatch):
     Session=session_factory()
     monkeypatch.setattr(seedmod,"SessionLocal",Session)
@@ -180,7 +231,7 @@ def test_research_expansion_covers_thin_categories_with_exact_links(monkeypatch)
     ).all()
     assert {product.slug for product,_,_ in rows}==slugs
     assert {product.category for product,_,_ in rows} >= {"Basket","NFL","Yu-Gi-Oh","Racing"}
-    assert all("/product/" in offer.url for _,_,offer in rows)
+    assert all(offer.url.startswith("https://") and offer.url.count("/") >= 4 for _,_,offer in rows)
     assert all(offer.stock_status=="in_stock" and not offer.is_preorder for _,_,offer in rows)
     assert all(slug in seedmod.CHASE_PROFILES for slug in slugs)
     assert all(seedmod.CHASE_PROFILES[slug]["headline_chases"] for slug in slugs)

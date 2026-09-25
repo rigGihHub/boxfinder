@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
 const API=process.env.NEXT_PUBLIC_API_URL||"http://localhost:8000";
-const FRONTEND_VERSION="0.49.0";
+const FRONTEND_VERSION="0.50.0";
 export default function FreshDataButton(){
   const [status,setStatus]=useState(null),[health,setHealth]=useState(null),[diagnostics,setDiagnostics]=useState(null),[busy,setBusy]=useState(false),[message,setMessage]=useState("");
   async function load(){setMessage("");try{const hr=await fetch(`${API}/health`,{cache:"no-store"});if(!hr.ok)throw new Error(`Backend svarar med ${hr.status}`);const h=await hr.json();setHealth(h);if(h.version!==FRONTEND_VERSION){setMessage(`VERSIONERNA MATCHAR INTE: frontend v${FRONTEND_VERSION}, backend v${h.version}. Starta om backend från v${FRONTEND_VERSION}.`);setStatus(null);setDiagnostics(null);return;}const [sr,dr]=await Promise.all([fetch(`${API}/admin/update-manager/status`,{cache:"no-store"}),fetch(`${API}/system/diagnostics`,{cache:"no-store"})]);if(!sr.ok)throw new Error(`Update Manager saknas (${sr.status}). Starta om backend.`);setStatus(await sr.json());if(dr.ok)setDiagnostics(await dr.json());}catch(e){setMessage(`BACKENDPROBLEM: ${e.message||"kunde inte nå backend"}`)}}
