@@ -1,4 +1,9 @@
-# BoxFinder v0.47.2
+# BoxFinder v0.47.3
+
+## v0.47.3 – Live catalog connection hardening
+
+- Replaced SQLite's bounded connection queue with request-scoped connections to prevent catalog bursts from stalling for 30 seconds on Render.
+- Added a regression test for the deployed SQLite pool configuration.
 
 ## v0.47.2 – CardSurfer catalog and UWCL odds
 
