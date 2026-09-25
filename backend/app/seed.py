@@ -42,6 +42,12 @@ REAL_STORES = [
     dict(name="Poketalk", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Samlartorget", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="EllieCollectables", homepage_url="https://elliecollectables.se/", source_url="https://elliecollectables.se/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="MaxGaming", homepage_url="https://www.maxgaming.se/", source_url="https://www.maxgaming.se/sv/hem-fritid/samlarkortsspel", collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="Arcade Dreams", homepage_url="https://arcadedreams.se/", source_url="https://arcadedreams.se/shop/tcg", collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="Spelexperten", homepage_url="https://www.spelexperten.com/", source_url="https://www.spelexperten.com/sallskapsspel/pokemon/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="Mana Land", homepage_url="https://manaland.se/", source_url="https://manaland.se/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="Playoteket", homepage_url="https://playoteket.com/", source_url="https://playoteket.com/80-pokemon", collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="Amazon.se", homepage_url="https://www.amazon.se/", source_url="https://www.amazon.se/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
 ]
 
 
@@ -237,6 +243,19 @@ RETAILER_EXPANSION = [
     dict(slug="cc-2025-26-pwhl-hobby", name="2025-26 Upper Deck PWHL Hobby", category="Hockey", manufacturer="Upper Deck", year="2025-26", series="PWHL", fmt="hobby box", sku="CS-2526-UD-PWHL-HOBBY", price=1095, packs=12, cards=6, stock="in_stock", store_name="CardSurfer", observed_at=RETAILER_EXPANSION_OBSERVED_AT, facts=["12 hobby-pack, 6 kort per pack", "Young Guns, UD Canvas, Dazzlers och Outburst-paralleller finns", "Namngivna Young Guns-odds gäller hobbyformatet", "Ingen viss spelare är garanterad"], buy_url="https://cardsurferbreak.com/products/2025-26-upper-deck-pwhl-hockey-hobby-box"),
 ]
 
+# Additional Swedish retailer checks performed against exact article pages on
+# 2026-09-25. Repeated slugs are deliberate alternate offers for an already
+# researched format. Stores without a stable, shippable in-stock article stay
+# in the source map but do not receive catalog offers.
+ADDITIONAL_STORE_OBSERVED_AT = datetime(2026, 9, 25, 16, 36, 0)
+ADDITIONAL_STORE_EXPANSION = [
+    dict(slug="cc-pokemon-storm-emeralda-m6-display", name="Pokémon Mega: Storm Emeralda M6 Booster Display Japanese", category="Pokémon", manufacturer="Pokémon Company Japan", year="2026", series="Storm Emeralda M6", fmt="booster box", sku="40625", price=1549, packs=30, cards=5, stock="in_stock", language="Japanese", store_name="MaxGaming", observed_at=ADDITIONAL_STORE_OBSERVED_AT, facts=["30 japanska boosterpaket, 5 kort per paket", "Checklistan innehåller Mega Rayquaza ex MUR #113/076 och flera SAR/AR", "Officiella kortspecifika packodds publiceras inte"], buy_url="https://www.maxgaming.se/sv/pokemon/pokemon-storm-emeralda-booster-box-japanese"),
+    dict(slug="cc-pokemon-ninja-spinner-m4-display", name="Pokémon Mega: Ninja Spinner M4 Booster Display Japanese", category="Pokémon", manufacturer="Pokémon Company Japan", year="2026", series="Ninja Spinner M4", fmt="booster box", sku="MAX-NINJA-SPINNER-M4", price=1090, packs=30, cards=5, stock="in_stock", language="Japanese", store_name="MaxGaming", observed_at=ADDITIONAL_STORE_OBSERVED_AT, facts=["30 japanska boosterpaket, 5 kort per paket", "Checklistan innehåller Mega Greninja ex MUR #120/083 och flera SAR/AR", "Officiella kortspecifika packodds publiceras inte"], buy_url="https://www.maxgaming.se/sv/pokemon/pokemon-ninja-spinner-booster-box-japansk"),
+    dict(slug="ad-pokemon-abyss-eye-m5-display", name="Pokémon Mega: Abyss Eye M5 Booster Box Japanese", category="Pokémon", manufacturer="Pokémon Company Japan", year="2026", series="Abyss Eye M5", fmt="booster box", sku="37250", price=1199, packs=30, cards=5, stock="in_stock", language="Japanese", store_name="Arcade Dreams", observed_at=ADDITIONAL_STORE_OBSERVED_AT, facts=["30 japanska boosterpaket, 5 kort per paket", "Officiella setpresentationen namnger Mega Darkrai ex, Mega Zeraora ex och Mega Chandelure ex", "Mega Chandelure ex och Muku visas officiellt som SAR", "Pokémon publicerar inga kortspecifika packodds"], buy_url="https://arcadedreams.se/shop/tcg/pokemon-abyss-eye-booster-box-jp-m5"),
+    dict(slug="tcgs-pokemon-destined-rivals-pack", name="Pokémon Scarlet & Violet: Destined Rivals Booster Pack", category="Pokémon", manufacturer="The Pokémon Company", year="2025", series="Destined Rivals", fmt="single pack", sku="TCGS-SV10-PACK", price=159, packs=1, cards=10, stock="in_stock", store_name="TCGStore", observed_at=ADDITIONAL_STORE_OBSERVED_AT, facts=["1 engelskt boosterpaket med 10 kort och 1 Basic Energy", "Officiella galleriet namnger Team Rocket's Mewtwo ex, Cynthia's Garchomp ex, Ethan's Ho-Oh ex och Team Rocket's Crobat ex", "Officiella kortspecifika packodds publiceras inte"], buy_url="https://tcgstore.se/products/pokemon-scarlet-violet-10-destined-rivals-booster-pack"),
+    dict(slug="sos-pokemon-journey-together-pack", name="Pokémon Scarlet & Violet: Journey Together Booster Pack", category="Pokémon", manufacturer="The Pokémon Company", year="2025", series="Journey Together", fmt="single pack", sku="56046", price=99, packs=1, cards=10, stock="in_stock", store_name="SpelOchSånt", observed_at=ADDITIONAL_STORE_OBSERVED_AT, facts=["1 engelskt boosterpaket med 10 kort och 1 Basic Energy", "N's Zoroark ex, Lillie's Clefairy ex, Iono's Bellibolt ex och Hop's Zacian ex är officiellt namngivna", "Över 30 Pokémon- och Trainer-kort med specialillustrationer finns i setet", "Officiella kortspecifika packodds publiceras inte"], buy_url="https://www.spelochsant.se/produkt/pokemonkort/losaboosters/pokemontcgscarletvioletjourneytogetherboosterpackmax6perhushall"),
+]
+
 REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
 
 REAL_SNAPSHOT += REAL_PACK_SNAPSHOT
@@ -245,6 +264,7 @@ REAL_SNAPSHOT += REAL_CROSS_CATEGORY_EXPANSION
 REAL_SNAPSHOT += REAL_RESEARCH_EXPANSION
 REAL_SNAPSHOT += REAL_STORE_EXPANSION
 REAL_SNAPSHOT += RETAILER_EXPANSION
+REAL_SNAPSHOT += ADDITIONAL_STORE_EXPANSION
 
 DIRECT_BUY_URLS = {
     "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",
@@ -1643,6 +1663,51 @@ CHASE_PROFILES["dl-mtg-spiderman-play-pack"]["why_exciting"] = ["Ett engelskt 14
 CHASE_PROFILES["dl-mtg-spiderman-play-pack"]["tiers"]["everyday"] = {"label":"Ett löst Play Booster","score":52,"items":["14 kort","minst 1 rare/mythic","1 traditional foil"]}
 CHASE_PROFILES["dl-mtg-spiderman-play-pack"]["caveat"] = "Detta är ett löst Play Booster. 1:24 gäller hela Source Material-familjen; Cosmic Foil-, Gauntlet-, Classic Comic- och textured Costume Change-kort är Collector Booster-exklusiva och kan inte dras."
 
+CHASE_PROFILES["ad-pokemon-abyss-eye-m5-display"] = {
+ "source_name":"Pokémon Card Game Japan official Abyss Eye product page and card list",
+ "source_url":"https://www.pokemon-card.com/ex/m5/",
+ "key_names":["Mega Darkrai ex","Mega Zeraora ex","Mega Chandelure ex SAR","Muku SAR","Malamar","Zarude"],
+ "headline_chases":[
+  {"card":"Mega Chandelure ex SAR","tier":"JACKPOT","odds":"Officiellt visad SAR; kortspecifikt packodds ej publicerat","why":"En av de två SAR-träffar som lyfts på Pokémons officiella setpresentation."},
+  {"card":"Muku SAR","tier":"MONSTER","odds":"Officiellt visad SAR; kortspecifikt packodds ej publicerat","why":"Den andra officiellt namngivna SAR-träffen i setpresentationen."},
+  {"card":"Mega Darkrai ex","tier":"MYCKET BRA","odds":"Finns i setet; exakt rarity- och kortspecifikt packodds ej angivet här","why":"Setets huvud-Pokémon och namngivna Mega Evolution ex."},
+  {"card":"Mega Zeraora ex","tier":"MYCKET BRA","odds":"Finns i setet; kortspecifikt packodds ej publicerat","why":"Officiellt framlyft Mega Evolution ex i checklistan."}
+ ],
+ "why_exciting":["30 japanska pack ger många öppningsförsök på setets Mega Evolution- och SAR-spår.","Pokémons officiella presentation bekräftar både namngivna huvudkort och två SAR-kort."],
+ "tiers":{"everyday":{"label":"Japansk display","score":78,"items":["30 pack","150 kort"]},"good":{"label":"Bra träff","score":70,"items":["Mega Evolution ex eller illustration rare"]},"big":{"label":"Riktigt bra","score":82,"items":["namngiven hög rarity"]},"jackpot":{"label":"Setets toppspår","score":91,"items":["Mega Chandelure ex SAR eller Muku SAR"]}},
+ "caveat":"Pokémon anger 5 slumpmässiga kort per pack men publicerar inga kortspecifika pack- eller boxodds. En hel display garanterar inte ett visst SAR-kort."
+}
+
+CHASE_PROFILES["tcgs-pokemon-destined-rivals-pack"] = {
+ "source_name":"The Pokémon Company official Scarlet & Violet—Destined Rivals expansion gallery",
+ "source_url":"https://tcg.pokemon.com/en-us/expansions/destined-rivals/",
+ "key_names":["Team Rocket's Mewtwo ex","Cynthia's Garchomp ex","Ethan's Ho-Oh ex","Team Rocket's Crobat ex"],
+ "headline_chases":[
+  {"card":"Team Rocket's Mewtwo ex","tier":"JACKPOT","odds":"Finns i det officiella setgalleriet; kortspecifikt packodds ej publicerat","why":"Setets centrala Team Rocket- och Mewtwo-träff."},
+  {"card":"Cynthia's Garchomp ex","tier":"MONSTER","odds":"Finns i det officiella setgalleriet; kortspecifikt packodds ej publicerat","why":"Namngiven Champion/Pokémon-kombination."},
+  {"card":"Ethan's Ho-Oh ex","tier":"MYCKET BRA","odds":"Finns i det officiella setgalleriet; kortspecifikt packodds ej publicerat","why":"Officiellt namngivet Trainer's Pokémon ex."},
+  {"card":"Team Rocket's Crobat ex","tier":"MYCKET BRA","odds":"Finns i det officiella setgalleriet; kortspecifikt packodds ej publicerat","why":"Ytterligare konkret Team Rocket-chase."}
+ ],
+ "why_exciting":["Stark namngiven checklista med Team Rocket, Mewtwo, Cynthia och Ho-Oh.","Ett engelskt pack ger billigare tillgång till setet än en box men bara ett öppningsförsök."],
+ "tiers":{"everyday":{"label":"Ett löst boosterpaket","score":48,"items":["10 kort","1 Basic Energy"]},"good":{"label":"Bra träff","score":65,"items":["Trainer's Pokémon ex eller illustration rare"]},"big":{"label":"Riktigt bra","score":76,"items":["namngiven specialillustration"]},"jackpot":{"label":"Setets toppnamn","score":88,"items":["Team Rocket's Mewtwo ex i hög rarity"]}},
+ "caveat":"Detta är ett löst engelskt boosterpaket. Pokémon publicerar inga kortspecifika packodds, och inget namngivet ex- eller specialillustrationskort är garanterat."
+}
+
+CHASE_PROFILES["sos-pokemon-journey-together-pack"] = {
+ "source_name":"The Pokémon Company official Scarlet & Violet—Journey Together expansion page",
+ "source_url":"https://www.pokemon.com/us/pokemon-tcg/scarlet-violet-journey-together",
+ "key_names":["N's Zoroark ex","Lillie's Clefairy ex","Iono's Bellibolt ex","Hop's Zacian ex"],
+ "headline_chases":[
+  {"card":"N's Zoroark ex","tier":"JACKPOT","odds":"Finns i setet; kortspecifikt packodds ej publicerat","why":"Ett av expansionens fyra officiellt framlyfta Trainer's Pokémon ex."},
+  {"card":"Lillie's Clefairy ex","tier":"MONSTER","odds":"Finns i setet; kortspecifikt packodds ej publicerat","why":"Namngiven Lillie-chase i Trainer's Pokémon-temat."},
+  {"card":"Iono's Bellibolt ex","tier":"MYCKET BRA","odds":"Finns i setet; kortspecifikt packodds ej publicerat","why":"Officiellt framlyft Trainer's Pokémon ex."},
+  {"card":"Hop's Zacian ex","tier":"MYCKET BRA","odds":"Finns i setet; kortspecifikt packodds ej publicerat","why":"Officiellt framlyft legendariskt Trainer's Pokémon ex."}
+ ],
+ "why_exciting":["Över 40 Trainer's Pokémon och över 30 specialillustrationer ger checklistan flera tydliga karaktärsspår.","Priset ligger under 100 kr, men ett löst pack innebär låg hit density."],
+ "tiers":{"everyday":{"label":"Ett löst boosterpaket","score":47,"items":["10 kort","1 Basic Energy"]},"good":{"label":"Bra träff","score":64,"items":["Trainer's Pokémon ex eller illustration rare"]},"big":{"label":"Riktigt bra","score":75,"items":["namngiven specialillustration"]},"jackpot":{"label":"Setets toppnamn","score":87,"items":["N eller Lillie i hög rarity"]}},
+ "caveat":"Detta är ett löst engelskt boosterpaket. Inga specifika Trainer's Pokémon, specialillustrationer eller ex-kort är garanterade, och officiella kortspecifika packodds saknas."
+}
+
 def _loose_pack_profile(base_slug, *, everyday_items, why, caveat):
     """Copy checklist content while replacing display/box opening claims."""
     profile = copy.deepcopy(CHASE_PROFILES[base_slug])
@@ -1932,6 +1997,7 @@ def seed_chase_profiles():
         research_slugs={x["slug"] for x in REAL_RESEARCH_EXPANSION}
         store_expansion_slugs={x["slug"] for x in REAL_STORE_EXPANSION}
         retailer_expansion_slugs={x["slug"] for x in RETAILER_EXPANSION}
+        additional_store_slugs={x["slug"] for x in ADDITIONAL_STORE_EXPANSION}
         expansion_slugs={x["slug"] for x in REAL_NONSPORT_EXPANSION + REAL_CROSS_CATEGORY_EXPANSION}
         for slug,data in CHASE_PROFILES.items():
             product=db.scalar(select(Product).where(Product.slug==slug))
@@ -1946,7 +2012,8 @@ def seed_chase_profiles():
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
             row.verified_at=(
-                RETAILER_EXPANSION_OBSERVED_AT if slug in retailer_expansion_slugs
+                ADDITIONAL_STORE_OBSERVED_AT if slug in additional_store_slugs
+                else RETAILER_EXPANSION_OBSERVED_AT if slug in retailer_expansion_slugs
                 else REAL_STORE_EXPANSION_OBSERVED_AT if slug in store_expansion_slugs
                 else REAL_RESEARCH_OBSERVED_AT if slug in research_slugs
                 else REAL_EXPANSION_OBSERVED_AT if slug in expansion_slugs

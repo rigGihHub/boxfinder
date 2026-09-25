@@ -94,8 +94,10 @@ def test_new_pokemon_and_one_piece_products_have_named_checklists(monkeypatch):
     assert set(products)==slugs
     assert all(seedmod.CHASE_PROFILES[slug]["headline_chases"] for slug in slugs)
     offers=db.scalars(select(Offer).join(ProductVariant).join(Product).where(Product.slug.in_(slugs))).all()
-    assert len(offers)==8
-    assert all("/product/" in offer.url for offer in offers)
+    # Storm Emeralda and Ninja Spinner each have a second verified MaxGaming
+    # offer in addition to their original Coolcard offer.
+    assert len(offers)==10
+    assert all(offer.url.startswith("https://") and offer.url.count("/") >= 4 for offer in offers)
     assert all("Japanese" in products[slug].canonical_name or products[slug].category=="One Piece" for slug in slugs)
     statements=[]
     bind=db.get_bind()
@@ -276,6 +278,45 @@ def test_store_expansion_chase_profiles_use_current_verification_time(monkeypatc
     assert {slug for slug,_ in rows}==slugs
     assert all(verified_at==seedmod.REAL_STORE_EXPANSION_OBSERVED_AT for _,verified_at in rows)
     db.close()
+
+def test_additional_store_expansion_uses_exact_in_stock_article_links(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    slugs={x["slug"] for x in seedmod.ADDITIONAL_STORE_EXPANSION}
+    rows=db.execute(
+        select(Product, ProductVariant, Offer, Store)
+        .join(ProductVariant, ProductVariant.product_id==Product.id)
+        .join(Offer, Offer.variant_id==ProductVariant.id)
+        .join(Store, Store.id==Offer.store_id)
+        .where(Product.slug.in_(slugs))
+    ).all()
+    assert {product.slug for product,_,_,_ in rows}==slugs
+    assert {store.name for _,_,_,store in rows}=={"MaxGaming","Arcade Dreams","TCGStore","SpelOchSånt","Coolcard"}
+    assert all(offer.stock_status=="in_stock" and not offer.is_preorder for _,_,offer,_ in rows)
+    assert all("/" in offer.url.removeprefix("https://").split("/",1)[-1] for _,_,offer,_ in rows)
+    assert all(slug in seedmod.CHASE_PROFILES for slug in slugs)
+    profile_dates=db.scalars(
+        select(ChaseProfile.verified_at).join(ProductVariant).join(Product).where(Product.slug.in_(slugs))
+    ).all()
+    assert profile_dates and all(value==seedmod.ADDITIONAL_STORE_OBSERVED_AT for value in profile_dates)
+
+    storm=db.scalar(select(Product).where(Product.slug=="cc-pokemon-storm-emeralda-m6-display"))
+    storm_offers=db.execute(
+        select(Offer,Store).join(Store,Store.id==Offer.store_id).join(ProductVariant).where(ProductVariant.product_id==storm.id)
+    ).all()
+    assert {store.name for _,store in storm_offers}=={"Coolcard","MaxGaming"}
+    assert {offer.price_sek for offer,_ in storm_offers}=={1499,1549}
+    db.close()
+
+def test_new_loose_pokemon_packs_do_not_claim_published_odds():
+    for slug in {"tcgs-pokemon-destined-rivals-pack","sos-pokemon-journey-together-pack"}:
+        profile=seedmod.CHASE_PROFILES[slug]
+        assert "löst" in profile["caveat"].lower()
+        assert "kortspecifika packodds" in profile["caveat"].lower()
+        assert all("garanterat" not in item["odds"].lower() for item in profile["headline_chases"])
 
 def test_cardsurfer_expansion_adds_two_products_and_three_alternate_offers(monkeypatch):
     Session=session_factory()

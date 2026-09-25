@@ -1,4 +1,11 @@
-# BoxFinder v0.47.6
+# BoxFinder v0.48.0
+
+## v0.48.0 – Swedish retailer expansion
+
+- Added verified direct offers from MaxGaming, Arcade Dreams, TCGStore and Spel & Sånt.
+- Added Abyss Eye, Destined Rivals and Journey Together with format-safe chase profiles and official Pokémon checklist sources.
+- Added MaxGaming as a second store for Storm Emeralda and Ninja Spinner displays.
+- Mapped Spelexperten, Mana Land, Playoteket and Amazon.se as guarded candidates without exposing unavailable, store-only or marketplace-unstable listings.
 
 ## v0.47.6 – Direct API wake-up
 

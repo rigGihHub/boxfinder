@@ -27,6 +27,12 @@ SOURCE_PROFILES = {
     "Pardon My Kicks": {"priority":2,"coverage":["Fotboll","Topps"],"strength":"Kompletterande källa för fotboll","recommended_ingest":"Manuell CSV tills feed/API är verifierad"},
     "MajkiPoké": {"priority":2,"coverage":["Pokémon"],"strength":"Kompletterande svensk Pokémon-källa","recommended_ingest":"Manuell CSV tills feed/API är verifierad"},
     "Hatstore": {"priority":1,"coverage":["Samlarkort"],"strength":"Sekundär källa","recommended_ingest":"Manuell import vid behov"},
+    "MaxGaming": {"priority":1,"coverage":["Pokémon","Magic","One Piece","Yu-Gi-Oh!"],"strength":"Stor svensk butik med tydliga artikeladresser och numeriskt lagersaldo","recommended_ingest":"Manuell verifiering eller feed/API; HTML först efter policygranskning"},
+    "Arcade Dreams": {"priority":2,"coverage":["Pokémon","Lorcana","Riftbound","Övrig TCG"],"strength":"Direkta artikelsidor med synligt pris och lagerstatus","recommended_ingest":"Manuell import tills stabil feed eller API har verifierats"},
+    "Spelexperten": {"priority":2,"coverage":["Pokémon","Yu-Gi-Oh!","Star Wars Unlimited","Övrig TCG"],"strength":"Brett spelutbud men många samlarkortsartiklar växlar mellan köp och bevakning","recommended_ingest":"Manuell lagerverifiering; bevakningsartiklar ska aldrig markeras köpbara"},
+    "Mana Land": {"priority":3,"coverage":["Korttillbehör"],"strength":"Relevant för tillbehör men ingen verifierad sealed-katalog i aktuell kontroll","recommended_ingest":"Behåll som kandidat; skapa inga sealed-erbjudanden utan exakt köpbar artikel"},
+    "Playoteket": {"priority":3,"coverage":["Pokémon","Magic","Övrig TCG"],"strength":"Fysiskt butikslager finns men webbstatus kan vara slutsåld eller endast butik","recommended_ingest":"Kräv separat webblager och leveransbar köpknapp före import"},
+    "Amazon.se": {"priority":3,"coverage":["Pokémon","Magic","Övrig TCG"],"strength":"Brett marknadsplatsutbud men säljare, pris och lager kan ändras snabbt","recommended_ingest":"Ingen katalogimport utan stabilt Amazon-sålt erbjudande och verifierad säljare"},
 }
 
 def source_hub_row(store) -> dict:
