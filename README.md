@@ -1,4 +1,10 @@
-# BoxFinder v0.47.0
+# BoxFinder v0.47.1
+
+## v0.47.1 – Magic/Marvel multi-store expansion
+- Added four in-stock Dragon's Lair products: Marvel Super Heroes Play Booster and Bundle plus Spider-Man Play Booster and Display.
+- Added Dragon's Lair as a second verified offer for the existing Marvel Super Heroes Play Booster Display.
+- Added official Wizards slot odds and named Play Booster chases without leaking Collector Booster-exclusive headliners.
+- Product fact provenance now names the actual store instead of always saying Coolcard.
 
 ## v0.47.0 – Format-safe catalog expansion
 - Added verified Basket, NFL, Yu-Gi-Oh and Racing products with exact Swedish purchase links.

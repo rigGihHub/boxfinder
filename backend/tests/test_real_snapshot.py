@@ -70,8 +70,8 @@ def test_nonsport_additions_have_direct_store_links_and_pack_formats(monkeypatch
         "cc-marvel-2026-chrome-hobby-pack", "cc-lorcana-azurite-pack",
         "cc-mtg-marvel-superheroes-play-display",
     }))).all()
-    assert len(rows)==5
-    assert all("/product/" in offer.url for _, offer in rows)
+    assert len({product.slug for product,_ in rows})==5
+    assert all("/product/" in offer.url or "/products/" in offer.url for _, offer in rows)
     assert any(product.category=="Pokémon" and product.slug.endswith("pack") for product,_ in rows)
     assert any(product.category=="One Piece" and product.slug.endswith("pack") for product,_ in rows)
     japanese=db.scalar(select(ProductVariant).join(Product).where(Product.slug=="cc-pokemon-black-bolt-jp-pack"))
@@ -201,6 +201,8 @@ def test_loose_pack_profiles_are_not_shared_display_profiles():
         ("cc-one-piece-op14-jp-pack","cc-one-piece-op14-jp-display"),
         ("cc-one-piece-op16-jp-pack","cc-one-piece-op16-jp-display"),
         ("cc-2026-topps-baseball-series2-pack","cc-2026-topps-baseball-series2-hobby"),
+        ("dl-mtg-marvel-superheroes-play-pack","cc-mtg-marvel-superheroes-play-display"),
+        ("dl-mtg-spiderman-play-pack","dl-mtg-spiderman-play-display"),
     )
     for pack_slug,box_slug in pairs:
         pack=seedmod.CHASE_PROFILES[pack_slug]
@@ -208,6 +210,55 @@ def test_loose_pack_profiles_are_not_shared_display_profiles():
         assert pack is not box
         assert "löst" in pack["caveat"].lower()
         assert pack["tiers"]["everyday"]["score"] < box["tiers"]["everyday"]["score"]
+
+def test_dragons_lair_magic_expansion_has_live_format_safe_offers(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    db=Session()
+    new_slugs={
+        "dl-mtg-marvel-superheroes-play-pack",
+        "dl-mtg-marvel-superheroes-bundle",
+        "dl-mtg-spiderman-play-pack",
+        "dl-mtg-spiderman-play-display",
+    }
+    rows=db.execute(
+        select(Product, ProductVariant, Offer, Store)
+        .join(ProductVariant, ProductVariant.product_id==Product.id)
+        .join(Offer, Offer.variant_id==ProductVariant.id)
+        .join(Store, Store.id==Offer.store_id)
+        .where(Product.slug.in_(new_slugs))
+    ).all()
+    assert {product.slug for product,_,_,_ in rows}==new_slugs
+    assert all(store.name=="Dragons Lair" for _,_,_,store in rows)
+    assert all("dragonslair.se/en/products/" in offer.url for _,_,offer,_ in rows)
+    assert all(offer.stock_status=="in_stock" and not offer.is_preorder for _,_,offer,_ in rows)
+    assert {(variant.packs,variant.cards_per_pack) for _,variant,_,_ in rows} >= {(1,14),(9,14),(30,14)}
+
+    display=db.scalar(select(Product).where(Product.slug=="cc-mtg-marvel-superheroes-play-display"))
+    display_offers=db.scalars(
+        select(Offer).join(ProductVariant).where(ProductVariant.product_id==display.id)
+    ).all()
+    assert len(display_offers)==2
+    assert {offer.price_sek for offer in display_offers}=={1899,2099}
+    db.close()
+
+def test_magic_play_booster_profiles_exclude_collector_only_headliners():
+    slugs={
+        "cc-mtg-marvel-superheroes-play-display",
+        "dl-mtg-marvel-superheroes-play-pack",
+        "dl-mtg-marvel-superheroes-bundle",
+        "dl-mtg-spiderman-play-pack",
+        "dl-mtg-spiderman-play-display",
+    }
+    for slug in slugs:
+        profile=seedmod.CHASE_PROFILES[slug]
+        headlines=" ".join(item["card"] for item in profile["headline_chases"]).lower()
+        assert "cosmic foil" not in headlines
+        assert "classic comic" not in headlines
+        assert "gauntlet" not in headlines
+        assert profile["headline_chases"]
+        assert "collector booster" in profile["caveat"].lower()
 
 def test_retail_and_loose_pack_profiles_do_not_claim_hobby_box_guarantees():
     retail_slugs={

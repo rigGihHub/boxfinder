@@ -210,12 +210,25 @@ REAL_RESEARCH_EXPANSION = [
     dict(slug="cc-2023-panini-chronicles-racing-hobby", name="2023 Panini Chronicles NASCAR Racing Hobby Box", category="Racing", manufacturer="Panini", year="2023", series="Chronicles NASCAR", fmt="hobby box", sku="23-Chr-Rac-H", price=1695, packs=6, cards=8, stock="in_stock", observed_at=REAL_RESEARCH_OBSERVED_AT, facts=["6 hobby-pack, 8 kort per pack", "3 autografer och 1 memorabilia per box i snitt", "2 Immaculate-kort per box", "Checklistan omfattar bland annat Jimmie Johnson, Dale Earnhardt Jr., Jeff Gordon, Chase Elliott och Kyle Busch"], buy_url="https://www.coolcard.se/product/hel-box-2023-panini-chronicles-racing-hobby-nascar"),
 ]
 
+# Verified against exact Dragon's Lair article pages on 2026-09-25.  The
+# repeated Marvel Super Heroes display slug intentionally adds a second store
+# offer to the existing product/variant instead of creating a duplicate item.
+REAL_STORE_EXPANSION_OBSERVED_AT = datetime(2026, 9, 25, 4, 55, 0)
+REAL_STORE_EXPANSION = [
+    dict(slug="cc-mtg-marvel-superheroes-play-display", name="Magic Marvel Super Heroes Play Booster Display", category="Magic", manufacturer="Wizards of the Coast", year="2026", series="Marvel Super Heroes", fmt="booster box", sku="165211", price=2099, packs=30, cards=14, stock="in_stock", store_name="Dragons Lair", observed_at=REAL_STORE_EXPANSION_OBSERVED_AT, facts=["30 engelska Play Boosters, 14 kort per paket", "Varje paket innehåller 1–4 rare/mythic och 1 traditional foil", "En non-foil Source Material-träff förekommer i 1 av 24 Play Boosters", "Collector Booster-exklusiva Cosmic Foil-, Gauntlet- och Classic Comic-kort kan inte dras"], buy_url="https://dragonslair.se/en/products/magic-the-gathering-marvel-super-heroes-play-booster-display-30-magic-the-gathering"),
+    dict(slug="dl-mtg-marvel-superheroes-play-pack", name="Magic Marvel Super Heroes Play Booster", category="Magic", manufacturer="Wizards of the Coast", year="2026", series="Marvel Super Heroes", fmt="single pack", sku="165210", price=79, packs=1, cards=14, stock="in_stock", store_name="Dragons Lair", observed_at=REAL_STORE_EXPANSION_OBSERVED_AT, facts=["1 engelskt Play Booster med 14 kort", "1–4 rare/mythic och 1 traditional foil per paket", "Source Material-familjen förekommer i 1 av 24 Play Boosters", "Collector Booster-exklusiva toppbehandlingar ingår inte"], buy_url="https://dragonslair.se/en/products/magic-the-gathering-marvel-super-heroes-play-booster-magic-the-gathering"),
+    dict(slug="dl-mtg-marvel-superheroes-bundle", name="Magic Marvel Super Heroes Bundle", category="Magic", manufacturer="Wizards of the Coast", year="2026", series="Marvel Super Heroes", fmt="bundle", sku="165215", price=829, packs=9, cards=14, stock="in_stock", store_name="Dragons Lair", observed_at=REAL_STORE_EXPANSION_OBSERVED_AT, facts=["9 engelska Play Boosters med 14 kort vardera", "Traditional foil The Scarlet Witch promo ingår", "30 basic lands, varav 15 foil och 10 full-art city chaos", "Cosmic Foil Mind Stone finns endast i Collector Boosters och är inte möjlig här"], buy_url="https://dragonslair.se/en/products/magic-the-gathering-marvel-super-heroes-bundle-magic-the-gathering"),
+    dict(slug="dl-mtg-spiderman-play-pack", name="Magic Marvel's Spider-Man Play Booster", category="Magic", manufacturer="Wizards of the Coast", year="2025", series="Marvel's Spider-Man", fmt="single pack", sku="157246", price=59, packs=1, cards=14, stock="in_stock", store_name="Dragons Lair", observed_at=REAL_STORE_EXPANSION_OBSERVED_AT, facts=["1 engelskt Play Booster med 14 kort", "Minst 1 rare/mythic och 1 traditional foil per paket", "En non-foil Source Material-träff förekommer i 1 av 24 Play Boosters", "Cosmic Foil Soul Stone och Classic Comic-kort finns endast i Collector Boosters"], buy_url="https://dragonslair.se/en/products/marvels-spider-man-play-booster-magic-the-gathering"),
+    dict(slug="dl-mtg-spiderman-play-display", name="Magic Marvel's Spider-Man Play Booster Display", category="Magic", manufacturer="Wizards of the Coast", year="2025", series="Marvel's Spider-Man", fmt="booster box", sku="157245", price=1469, packs=30, cards=14, stock="in_stock", store_name="Dragons Lair", observed_at=REAL_STORE_EXPANSION_OBSERVED_AT, facts=["30 engelska Play Boosters, 14 kort per paket", "Minst 1 rare/mythic och 1 traditional foil per paket", "Source Material-familjen förekommer i 1 av 24 Play Boosters", "Play Booster-formatet innehåller inte Collector Booster-exklusiva Cosmic Foil-, Gauntlet- eller Classic Comic-kort"], buy_url="https://dragonslair.se/en/products/marvels-spider-man-play-booster-display-magic-the-gathering"),
+]
+
 REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
 
 REAL_SNAPSHOT += REAL_PACK_SNAPSHOT
 REAL_SNAPSHOT += REAL_NONSPORT_EXPANSION
 REAL_SNAPSHOT += REAL_CROSS_CATEGORY_EXPANSION
 REAL_SNAPSHOT += REAL_RESEARCH_EXPANSION
+REAL_SNAPSHOT += REAL_STORE_EXPANSION
 
 DIRECT_BUY_URLS = {
     "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",
@@ -363,7 +376,7 @@ def seed_verified_snapshot():
                 source_url = pack_url if row["fmt"]=="single pack" else category_url
             source_url = row.get("buy_url") or DIRECT_BUY_URLS.get(row["slug"]) or buy_urls.get(row["slug"]) or source_url
             stock_status = "out_of_stock" if row["slug"] in UNAVAILABLE_PURCHASE_SLUGS else row.get("stock", "in_stock")
-            is_expansion = row in REAL_NONSPORT_EXPANSION or row in REAL_CROSS_CATEGORY_EXPANSION or row in REAL_RESEARCH_EXPANSION
+            is_expansion = row in REAL_NONSPORT_EXPANSION or row in REAL_CROSS_CATEGORY_EXPANSION or row in REAL_RESEARCH_EXPANSION or row in REAL_STORE_EXPANSION
             observed_at = row.get("observed_at", REAL_EXPANSION_OBSERVED_AT if is_expansion else REAL_SNAPSHOT_OBSERVED_AT)
             if offer is None:
                 offer = Offer(
@@ -400,7 +413,7 @@ def seed_verified_snapshot():
                     pf=ProductFact(variant_id=variant.id)
                     db.add(pf)
                 pf.facts_json=json.dumps(facts,ensure_ascii=False)
-                pf.source_name="Coolcard / tillverkarinformation på produktsidan"
+                pf.source_name=f"{row_store.name} / tillverkarinformation på produktsidan"
                 pf.source_url=fact_urls.get(row["slug"],source_url)
                 pf.verified_at=observed_at
                 pf.confidence=100
@@ -1532,6 +1545,56 @@ CHASE_PROFILES["cc-2023-panini-chronicles-racing-hobby"] = {
  "tiers":{"everyday":{"label":"Hit-koncentrerad hobbybox","score":93,"items":["3 autografer i snitt", "1 memorabilia i snitt", "2 Immaculate-kort"]},"good":{"label":"Bra träff","score":84,"items":["numrerad förare eller stark auto"]},"big":{"label":"Riktigt bra","score":93,"items":["legendauto, Color Blast eller auto/relic"]},"jackpot":{"label":"Monsterhit","score":97,"items":["lågnumrerad legend-auto/relic"]}},
  "caveat":"Boxinnehållet är genomsnitt över produktionen. Ingen viss förare, kortfamilj eller numrering är garanterad; andrahandsvärden ingår inte i profilen."
 }
+
+_msh_play_profile = {
+ "source_name":"Wizards official Collecting Magic: The Gathering | Marvel Super Heroes guide",
+ "source_url":"https://magic.wizards.com/en/news/feature/collecting-marvel-super-heroes",
+ "key_names":["The Mind Stone","Iron Man, Titan of Innovation","Mjölnir, Hammer of Thor","Captain America, Super-Soldier","Thor, God of Thunder","Black Panther, Vanguard"],
+ "headline_chases":[
+  {"card":"The Mind Stone – main-set version","tier":"MYCKET BRA","odds":"Kan dras non-foil eller traditional foil i Play Boosters; kortspecifikt odds ej publicerat","why":"Det verifierade Infinity Stone-spåret som faktiskt finns i Play Booster-formatet."},
+  {"card":"Iron Man, Titan of Innovation – Source Material","tier":"MONSTER","odds":"Source Material-familjen 1:24 Play Boosters; detta är 1 av 60 likafrekventa kort","why":"Namngiven Marvel/Magic-chase med officiellt familjeodds."},
+  {"card":"Mjölnir, Hammer of Thor – Showcase Panel","tier":"MYCKET BRA","odds":"Panel rare/mythic kan förekomma i Play Booster-slots; specifikt kortodds ej publicerat","why":"Namngivet premiumutförande tillgängligt i rätt format."},
+  {"card":"Captain America, Super-Soldier – Borderless Scene","tier":"MYCKET BRA","odds":"Scene rare/mythic kan förekomma i Play Boosters; specifikt kortodds ej publicerat","why":"En officiellt namngiven scen-chase."},
+  {"card":"Thor, God of Thunder – Borderless Scene","tier":"MYCKET BRA","odds":"Scene rare/mythic kan förekomma i Play Boosters; specifikt kortodds ej publicerat","why":"Namngiven Thor-träff från Play Booster-poolen."}
+ ],
+ "why_exciting":["Play Boosters har en garanterad rare/mythic-plats och en traditional foil-plats.","Officiella slotodds och 1:24 för Source Material gör formatet mer transparent än de flesta TCG-produkter."],
+ "tiers":{"everyday":{"label":"Full Play Booster-display","score":86,"items":["30 pack","30+ rare/mythic","30 traditional foils"]},"good":{"label":"Bra träff","score":75,"items":["rare/mythic Marvel-kort","foil rare eller mythic"]},"big":{"label":"Riktigt bra","score":83,"items":["Source Material","scene-, logo- eller panel-mythic"]},"jackpot":{"label":"Play Booster-toppträff","score":88,"items":["The Mind Stone premiumutförande","namngiven mythic Booster Fun"]}},
+ "caveat":"Cosmic Foil Mind Stone, Gauntlet Mind Stone och Classic Comic-korten är Collector Booster-exklusiva och ingår inte här. 1:24 gäller hela Source Material-familjen, inte Iron Man specifikt."
+}
+CHASE_PROFILES["cc-mtg-marvel-superheroes-play-display"] = copy.deepcopy(_msh_play_profile)
+
+CHASE_PROFILES["dl-mtg-marvel-superheroes-play-pack"] = copy.deepcopy(_msh_play_profile)
+CHASE_PROFILES["dl-mtg-marvel-superheroes-play-pack"]["why_exciting"] = ["Ett 14-kortspack under 100 kr ger minst en rare/mythic och en traditional foil.","Source Material, scene, logo och panel kan dras, men premiumutförandena är sällsynta."]
+CHASE_PROFILES["dl-mtg-marvel-superheroes-play-pack"]["tiers"]["everyday"] = {"label":"Ett löst Play Booster","score":53,"items":["14 kort","1–4 rare/mythic","1 traditional foil"]}
+CHASE_PROFILES["dl-mtg-marvel-superheroes-play-pack"]["caveat"] = "Detta är ett löst Play Booster. Source Material 1:24 gäller familjen över produktionen; Cosmic Foil-, Gauntlet- och Classic Comic-kort är Collector Booster-exklusiva."
+
+CHASE_PROFILES["dl-mtg-marvel-superheroes-bundle"] = copy.deepcopy(_msh_play_profile)
+CHASE_PROFILES["dl-mtg-marvel-superheroes-bundle"]["headline_chases"].insert(0, {"card":"The Scarlet Witch – alternate-art traditional foil promo","tier":"BRA","odds":"1 garanterad promo per Bundle","why":"Verifierat fast innehåll som ger ett tydligt golv."})
+CHASE_PROFILES["dl-mtg-marvel-superheroes-bundle"]["why_exciting"] = ["Nio Play Boosters ger nio chanser på setets tillåtna Booster Fun-spår.","Scarlet Witch-promon och 30 basic lands är garanterade, men en del av priset går till tillbehör."]
+CHASE_PROFILES["dl-mtg-marvel-superheroes-bundle"]["tiers"]["everyday"] = {"label":"Bundle-innehåll","score":70,"items":["9 Play Boosters","Scarlet Witch foil promo","30 basic lands"]}
+CHASE_PROFILES["dl-mtg-marvel-superheroes-bundle"]["caveat"] = "Bundle ger färre öppningsförsök per krona än en display och innehåller tillbehör. Cosmic Foil Mind Stone och övriga Collector Booster-exklusiva behandlingar kan inte dras."
+
+_spiderman_play_profile = {
+ "source_name":"Wizards official Collecting Magic: The Gathering | Marvel's Spider-Man guide",
+ "source_url":"https://magic.wizards.com/en/news/feature/collecting-marvels-spider-man",
+ "key_names":["The Soul Stone","Peter Parker","Miles Morales","Gwen Stacy","Venom, Deadly Devourer","Spectacular Spider-Man","Spider-Punk"],
+ "headline_chases":[
+  {"card":"The Soul Stone – main-set version","tier":"MYCKET BRA","odds":"Kan dras non-foil eller traditional foil i Play Boosters; kortspecifikt odds ej publicerat","why":"Infinity Stone-versionen som faktiskt finns i Play Booster-formatet."},
+  {"card":"Peter Parker – Borderless Web-Slinger","tier":"MONSTER","odds":"Rare Web-Slinger 1,2% i rare/mythic-platsen; specifikt Peter Parker-odds lägre","why":"Namngiven alternativ behandling av huvudkaraktären."},
+  {"card":"Miles Morales – Borderless Scene","tier":"MONSTER","odds":"Scene rare 1% eller mythic <1% i rare/mythic-platsen över familjen","why":"Namngiven scen-chase på en central Spider-Man-karaktär."},
+  {"card":"Gwen Stacy – Borderless Scene","tier":"MYCKET BRA","odds":"Scene-familj; specifikt kortodds ej publicerat","why":"Officiellt verifierad Play Booster-träff."},
+  {"card":"Spectacular Spider-Man – borderless main-set version","tier":"MYCKET BRA","odds":"Finns non-foil och traditional foil i Play Boosters; specifikt odds ej publicerat","why":"Rätt Play Booster-version av Costume Change-spåret."},
+  {"card":"Borderless Source Material – en av 40","tier":"MYCKET BRA","odds":"1:24 Play Boosters för Source Material-familjen","why":"Officiellt publicerad familjefrekvens."}
+ ],
+ "why_exciting":["Play Boosters har minst en rare/mythic och en traditional foil per paket.","Wizards publicerar slotfördelning och 1:24 för Source Material-familjen."],
+ "tiers":{"everyday":{"label":"Full Play Booster-display","score":85,"items":["30 pack","30+ rare/mythic","30 traditional foils"]},"good":{"label":"Bra träff","score":74,"items":["rare/mythic Spider-Man-kort","foil rare eller mythic"]},"big":{"label":"Riktigt bra","score":82,"items":["Source Material","Web-Slinger, Panel eller Scene mythic"]},"jackpot":{"label":"Play Booster-toppträff","score":87,"items":["The Soul Stone premiumutförande","Peter Parker eller Miles Morales Booster Fun"]}},
+ "caveat":"Cosmic Foil Soul Stone, Gauntlet Soul Stone, Classic Comic, textured Costume Change och extended-art är Collector Booster-exklusiva. Familjeodds är inte odds för en viss karaktär."
+}
+CHASE_PROFILES["dl-mtg-spiderman-play-display"] = copy.deepcopy(_spiderman_play_profile)
+CHASE_PROFILES["dl-mtg-spiderman-play-pack"] = copy.deepcopy(_spiderman_play_profile)
+CHASE_PROFILES["dl-mtg-spiderman-play-pack"]["why_exciting"] = ["Ett engelskt 14-kortspack under 100 kr ger minst en rare/mythic och en foil.","Web-Slinger, Panel, Scene och Source Material kan dras i Play Booster-formatet."]
+CHASE_PROFILES["dl-mtg-spiderman-play-pack"]["tiers"]["everyday"] = {"label":"Ett löst Play Booster","score":52,"items":["14 kort","minst 1 rare/mythic","1 traditional foil"]}
+CHASE_PROFILES["dl-mtg-spiderman-play-pack"]["caveat"] = "Detta är ett löst Play Booster. 1:24 gäller hela Source Material-familjen; Cosmic Foil-, Gauntlet-, Classic Comic- och textured Costume Change-kort är Collector Booster-exklusiva och kan inte dras."
 
 def _loose_pack_profile(base_slug, *, everyday_items, why, caveat):
     """Copy checklist content while replacing display/box opening claims."""
