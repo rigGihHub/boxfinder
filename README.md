@@ -1,4 +1,12 @@
-# BoxFinder v0.51.0
+# BoxFinder v0.51.1
+
+## v0.51.1 – Snabb ranking efter uppstart
+
+- API:t förberäknar de tre rankningsstrategierna vid uppstart och levererar
+  filter från en två minuter gammal eller färsk snapshot. Utgången cache
+  uppdateras i bakgrunden utan att låsa knapptryckningar.
+- Webbens återställning har tidsgräns och går tillbaka till senast sparat
+  resultat om API:t tillfälligt inte svarar.
 
 ## v0.51.0 – Formatmedveten öppningsranking
 

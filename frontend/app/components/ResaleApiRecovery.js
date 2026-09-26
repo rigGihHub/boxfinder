@@ -7,7 +7,7 @@ const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 // Both Render services can sleep. The browser must wake the API directly;
 // proxy retries alone may return 503 without starting the sleeping API.
-const MAX_ATTEMPTS = 12;
+const MAX_ATTEMPTS = 3;
 const RETRY_DELAY_MS = 2000;
 
 export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChange}) {
@@ -42,7 +42,10 @@ export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChang
         ? "Väcker analysmotorn…"
         : `Söker igen · försök ${nextAttempt} av ${MAX_ATTEMPTS}`);
       try {
-        const response = await fetch(`/api/resale-recovery?${query}`, {cache: "no-store"});
+        const response = await fetch(`/api/resale-recovery?${query}`, {
+          cache: "no-store",
+          signal: AbortSignal.timeout(12000),
+        });
         if (response.ok) {
           const data = await response.json();
           if (Array.isArray(data.items)) {

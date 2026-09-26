@@ -2,7 +2,7 @@ import asyncio
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .config import settings
-from .database import Base, engine
+from .database import Base, engine, SessionLocal
 from .seed import seed_demo_data, seed_verified_snapshot, seed_chase_profiles, seed_chase_card_db
 from .routers import products, matching, admin, deals, checklists, market, players, rankings, budget, compare, watchlist, discovery, system, chase_search
 from .services.update_manager import scheduler_loop
@@ -17,6 +17,8 @@ def startup():
     seed_verified_snapshot()
     seed_chase_profiles()
     seed_chase_card_db()
+    with SessionLocal() as db:
+        rankings.prime_resale_rankings(db)
     app.state.update_scheduler_task = asyncio.create_task(scheduler_loop())
 
 @app.get("/health")
