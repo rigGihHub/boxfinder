@@ -1942,6 +1942,35 @@ CHASE_PROFILES["kl-one-piece-op17-en-pack"] = _loose_pack_profile(
     caveat="Detta är ett löst engelskt 12-kortspack, inte en 24-packdisplay. Ingen Luffy Super Leader Alt-Art, Special Card eller annan rarity är garanterad; Bandai publicerar inte kortspecifika packodds.",
 )
 
+# Only the exact verified format gets these source-backed family-level box hits.
+# "average" is a production average, never a guarantee for a named card or loose pack.
+FORMAT_HITS = {
+    "cc-2025-26-series1-hobby": [("hobby box", "Young Guns", 6, "average", "collectible")],
+    "cc-2025-26-series2-hobby": [("hobby box", "Young Guns", 6, "average", "collectible")],
+    "cc-2025-26-pitch-kings-la-liga": [("hobby box", "autograf", 1, "average", "premium")],
+    "cc-2025-26-sp-authentic-hobby": [("hobby box", "autografer", 2, "average", "premium")],
+    "cc-2025-26-panini-prizm-fifa-choice": [("choice box", "autograf", 1, "average", "premium")],
+    "cc-2025-26-topps-chrome-arsenal-hobby": [("hobby box", "autografer", 2, "average", "premium")],
+    "cc-2026-topps-chrome-premier-league-hobby": [("hobby box", "autograf", 1, "average", "premium")],
+    "cc-2026-topps-finest-premier-league-wave2": [("hobby box", "autografer", 2, "average", "premium")],
+    "cs-2025-26-topps-chrome-uwcl-hobby": [("hobby box", "autografer", 2, "average", "premium")],
+    "cc-2025-26-topps-bayern-lineage": [("hobby box", "encased auto/relic-träffar", 3, "average", "premium")],
+    "cc-2025-26-spx-hobby": [("hobby box", "base rookies", 4, "average", "collectible")],
+    "cc-2026-topps-stadium-club-ufc-hobby": [("hobby box", "autografer", 2, "average", "premium")],
+    "cc-2026-topps-universe-wwe-hobby": [("hobby box", "autografer", 2, "guaranteed", "premium"), ("hobby box", "relic", 1, "guaranteed", "collectible")],
+    "cc-2023-panini-chronicles-racing-hobby": [("hobby box", "autografer", 3, "average", "premium"), ("hobby box", "memorabilia", 1, "average", "collectible")],
+    "dl-mtg-spiderman-play-display": [("booster box", "rare/mythic", 30, "guaranteed", "base")],
+    "dl-mtg-spiderman-play-pack": [("single pack", "rare/mythic", 1, "guaranteed", "base")],
+    "cc-mtg-marvel-superheroes-play-display": [("booster box", "rare/mythic", 30, "guaranteed", "base")],
+    "dl-mtg-marvel-superheroes-play-pack": [("single pack", "rare/mythic", 1, "guaranteed", "base")],
+    "dl-mtg-marvel-superheroes-bundle": [("bundle", "rare/mythic", 9, "guaranteed", "base")],
+}
+for _slug, _hits in FORMAT_HITS.items():
+    CHASE_PROFILES[_slug]["format_hits"] = [
+        {"format": fmt, "family": family, "count": count, "basis": basis, "quality": quality}
+        for fmt, family, count, basis, quality in _hits
+    ]
+
 
 CHASE_CARD_DB = [
 

@@ -39,7 +39,7 @@ const quickSearches = [
   {title:'HÖGSTA TAK',text:'Jaga den största säljbara träffen',href:'/resale?strategy=jackpot',tone:'violet'},
   {title:'TRÄFF OFTARE',text:'Prioritera återkommande bra hits',href:'/resale?strategy=frequent',tone:'cyan'},
   {title:'UNDER 100 KR',text:'Lösa paket och billiga öppningar',href:'/resale?strategy=balanced&max_price=100',tone:'cyan'},
-  {title:'UNDER 500 KR',text:'Säljpotential med låg insats',href:'/resale?strategy=balanced&max_price=500',tone:'gold'},
+  {title:'UNDER 500 KR',text:'Chase med låg insats',href:'/resale?strategy=balanced&max_price=500',tone:'gold'},
   {title:'UNDER 1 000 KR',text:'Rankat oavsett kategori',href:'/resale?strategy=balanced&max_price=1000',tone:'acid'},
   {title:'SÖK CHASE',text:'Spelare, rookie eller Pokémon',href:'/chase',tone:'violet'},
 ];
@@ -87,12 +87,12 @@ export default async function Home({ searchParams }) {
 
       <section className="homeResaleSection">
         <div className="sectionHead"><div><span className="kicker">SPORT- OCH VARUMÄRKESNEUTRAL</span><h2>Bäst möjlighet till säljbar träff</h2></div><p>{resaleData.count || 0} verifierade chase-profiler jämförs</p></div>
-        {resaleProducts.length ? <div className="homeResaleGrid">{resaleProducts.map((x,i)=><a href={`/product/${x.id}`} key={x.id}><span>#{i+1}</span><div><small>{x.category} · {x.evidence_grade}</small><h3>{x.name}</h3><p>{x.sellable_chases?.[0]?.card || 'Verifierad chase-profil'}</p></div><aside><b>{x.resale_score}</b><small>SÄLJPOTENTIAL</small><strong>{Math.round(x.price)} kr</strong></aside></a>)}</div> : <div className="chaseEmpty"><b>Ingen tvärkategoriranking ännu.</b><span>Produkter visas först när chase-innehållet är verifierat.</span></div>}
+        {resaleProducts.length ? <div className="homeResaleGrid">{resaleProducts.map((x,i)=><a href={`/product/${x.id}`} key={x.id}><span>#{i+1}</span><div><small>{x.category} · {x.evidence_grade}</small><h3>{x.name}</h3><p>{x.sellable_chases?.[0]?.card || 'Verifierad chase-profil'}</p></div><aside><b>{x.resale_score}</b><small>ÖPPNINGSPOTENTIAL</small><strong>{Math.round(x.price)} kr</strong></aside></a>)}</div> : <div className="chaseEmpty"><b>Ingen tvärkategoriranking ännu.</b><span>Produkter visas först när chase-innehållet är verifierat.</span></div>}
         <a className="homeResaleCta" href="/resale">ÖPPNA HELA RANKINGEN →</a>
       </section>
 
       <section className="discoveryHomeCta">
-        <div><small>FILTRERA OM DU VILL</small><h2>Kategorin är valfri — säljpotentialen styr.</h2><p>Begränsa först när du har en budget eller uttryckligen vill ha en viss sport, TCG eller produktform.</p></div>
+        <div><small>FILTRERA OM DU VILL</small><h2>Kategorin är valfri — innehållet styr.</h2><p>Begränsa först när du har en budget eller uttryckligen vill ha en viss sport, TCG eller produktform.</p></div>
         <a href="/resale">RANKA ALLT →</a>
       </section>
 

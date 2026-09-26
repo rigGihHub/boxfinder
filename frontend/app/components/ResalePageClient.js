@@ -50,13 +50,13 @@ export default function ResalePageClient() {
     <header className="productNav">
       <Link className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></Link>
       <Link className="backLink" href="/">← STARTSIDAN</Link>
-      <span className="version">v0.50.1</span>
+      <span className="version">v0.51.0</span>
     </header>
 
     <section className="resaleHero">
       <span className="kicker">ALLA KATEGORIER · SAMMA MÅL</span>
-      <h1>Bästa boxen att öppna<br/><em>för säljbar träff.</em></h1>
-      <p>Hockey, fotboll, Pokémon, One Piece, Marvel och andra kategorier tävlar på samma lista. BoxFinder väger dokumenterade chase-kort, träfffrekvens, tak, pris och bevisstyrka.</p>
+      <h1>Bästa produkten att öppna<br/><em>för en riktigt bra träff.</em></h1>
+      <p>Hockey, fotboll, Pokémon, One Piece, Marvel och andra kategorier tävlar på samma lista. BoxFinder väger dokumenterat korttak, chase-bredd, träfffrekvens, formatträffar och pris. Poängen är inte en vinstprognos.</p>
       <div className="resaleModes">{strategies.map(([value,label])=><Link className={strategy===value?"active":""} href={`?strategy=${value}${category?`&category=${encodeURIComponent(category)}`:""}${maxPrice?`&max_price=${maxPrice}`:""}`} key={value}>{label}</Link>)}</div>
       <form className="resaleFilters" onSubmit={runRanking} aria-busy={ranking}>
         <input type="hidden" name="strategy" value={strategy}/>
@@ -67,7 +67,7 @@ export default function ResalePageClient() {
     </section>
 
     <section className="resaleRanking" id="resale-ranking">
-      <div className="sectionHead"><div><span className="kicker">ÖPPNINGSRANKING</span><h2>Bäst säljpotential just nu</h2></div><p>Senaste resultat visas direkt och uppdateras i bakgrunden</p></div>
+      <div className="sectionHead"><div><span className="kicker">ÖPPNINGSRANKING</span><h2>Bäst öppningspotential just nu</h2></div><p>Senaste resultat visas direkt och uppdateras i bakgrunden</p></div>
       <ResaleApiRecovery query={query} refreshKey={refreshKey} onLoadingChange={setRanking}/>
     </section>
   </main>;

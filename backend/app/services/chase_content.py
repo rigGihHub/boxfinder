@@ -53,7 +53,7 @@ def content_summary(profile):
 TIER_ORDER={"BRA":1,"MYCKET BRA":2,"MONSTER":3,"JACKPOT":4}
 
 def has_actionable_odds(profile: dict | None) -> bool:
-    """True only for a published ratio, serial number or explicit guarantee.
+    """True only for a published ratio or explicit guarantee.
 
     Text that merely says odds are not published must never improve evidence grade.
     """
@@ -74,6 +74,24 @@ def has_actionable_odds(profile: dict | None) -> bool:
         if re.search(r"\b1\s*:\s*[\d ]+", odds):
             return True
     return False
+
+def format_hits(profile: dict | None, product_format: str | None) -> list[dict]:
+    """Return only source-checked, explicitly scoped format observations.
+
+    An average box hit is not a card-specific probability or a pack guarantee.
+    Legacy prose in headline cards is deliberately not parsed into guarantees.
+    """
+    if not profile or not product_format:
+        return []
+    return [fact for fact in profile.get("format_hits", [])
+            if isinstance(fact, dict)
+            and fact.get("format") == product_format
+            and fact.get("basis") in {"guaranteed", "average"}
+            and fact.get("quality") in {"premium", "collectible", "base"}
+            and isinstance(fact.get("count"), (int, float))
+            and not isinstance(fact.get("count"), bool)
+            and fact["count"] > 0
+            and fact.get("family")]
 
 def chase_ladder(profile: dict | None):
     if not profile: return []

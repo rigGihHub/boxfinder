@@ -70,5 +70,5 @@ def resale_rankings(
         "max_price": max_price,
         "count": len(ranked),
         "items": ranked[:limit],
-        "disclaimer": "Rankingen jämför säljpotential mellan alla kategorier. Den är inte en vinstgaranti. Betyg A kräver marknadsvärden och användbara odds; B och C är chase-baserade tills mer försäljningsdata finns.",
+        "disclaimer": "Rankingen jämför öppningspotential mellan kategorier, inte förväntad vinst. Betyg A kräver verifierade marknadsvärden och användbara odds. B kan bygga på familjeodds eller formatträffar; inget av dem är odds för ett namngivet kort. C bygger på verifierad chase-profil utan tillräckliga odds.",
     }

@@ -4,7 +4,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from app.database import Base
 from app.models import Product,ProductVariant,ChaseProfile
-from app.services.chase_content import get_profile,content_score,content_summary,chase_ladder,chase_coverage,pull_profile,has_actionable_odds
+from app.services.chase_content import get_profile,content_score,content_summary,chase_ladder,chase_coverage,pull_profile,has_actionable_odds,format_hits
 
 def test_content_score_rewards_depth_without_claiming_ev():
     p={"key_names":["A","B","C"],"tiers":{"everyday":{"score":80},"good":{"score":80},"big":{"score":90},"jackpot":{"score":95}}}
@@ -69,6 +69,13 @@ def test_negated_guarantee_does_not_count_as_actionable_odds():
         {"headline_chases":[{"card":"Auto","tier":"MONSTER","odds":"Löst pack saknar garanti"}]},
     )
     assert all(has_actionable_odds(profile) is False for profile in profiles)
+
+def test_structured_format_hits_are_scoped_and_not_specific_card_odds():
+    profile={"headline_chases":[{"card":"Rookie auto 1/1", "tier":"JACKPOT", "odds":"1/1"}],
+             "format_hits":[{"format":"hobby box", "family":"autografer", "count":2, "basis":"average", "quality":"premium"}]}
+    assert has_actionable_odds(profile) is False
+    assert format_hits(profile, "single pack") == []
+    assert len(format_hits(profile, "hobby box")) == 1
 
 def test_pull_profile_separates_repeatable_fun_and_ceiling():
     p={"tiers":{"everyday":{"score":90},"good":{"score":85},"big":{"score":70},"jackpot":{"score":60}}}

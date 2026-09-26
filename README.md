@@ -1,4 +1,13 @@
-# BoxFinder v0.50.1
+# BoxFinder v0.51.0
+
+## v0.51.0 – Formatmedveten öppningsranking
+
+- Rankar på oavrundad poäng; korttak, chase-bredd, återkommande träffar,
+  verifierade formatträffar, antal försök och pris hålls isär.
+- Strukturerade formatfakta skiljer snitt från garantier och premiumhits från
+  basrariteter. Boxuppgifter förs aldrig över till lösa paket.
+- Ensamma 1/1-spår och lösa paket får en försiktig riskjustering utan påhittade odds.
+- Gränssnittet beskriver öppningspotential, inte ekonomisk avkastning.
 
 ## v0.50.1 – Yu-Gi-Oh filter visibility
 
