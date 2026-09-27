@@ -1,4 +1,9 @@
-# BoxFinder v0.51.1
+# BoxFinder v0.51.2
+
+## v0.51.2 – Engelska Pokémon-expansioner
+
+- Pitch Black ETB, Chaos Rising Checklane Blister och Ascended Heroes First Partners Deluxe Pin Collection har separata verifierade butiksartiklar och chase-profiler.
+- Promokort skiljs från slumpmässiga boosterträffar; kortspecifika odds antas inte.
 
 ## v0.51.1 – Snabb ranking efter uppstart
 

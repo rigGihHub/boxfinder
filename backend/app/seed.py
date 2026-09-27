@@ -49,6 +49,7 @@ REAL_STORES = [
     dict(name="Playoteket", homepage_url="https://playoteket.com/", source_url="https://playoteket.com/80-pokemon", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Amazon.se", homepage_url="https://www.amazon.se/", source_url="https://www.amazon.se/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Kantovault", homepage_url="https://kantovault.se/", source_url="https://kantovault.se/collections/japanska-one-piece-booster-pack", collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="CardHaven", homepage_url="https://cardhaven.se/", source_url="https://cardhaven.se/shop/pokemon", collection_method="manual", adapter_key="manual", policy_status="review_required"),
 ]
 
 
@@ -287,6 +288,15 @@ TCG_MARKET_EXPANSION = [
     dict(slug="dl-lorcana-azurite-display", name="Disney Lorcana Azurite Sea Booster Display", category="Disney", manufacturer="Ravensburger", year="2024", series="Azurite Sea", fmt="booster box", sku="DL-AZURITE-SEA-DISPLAY", price=1549, packs=24, cards=12, stock="in_stock", language="English", store_name="Dragons Lair", observed_at=TCG_MARKET_OBSERVED_AT, facts=["24 engelska boosterpaket med 12 slumpade kort per paket", "Checklistan har 204 baskort och 18 Enchanted-kort", "Ingen Enchanted eller annan specifik rarity är garanterad per display"], buy_url="https://dragonslair.se/products/disney-lorcana-tcg-azurite-sea-booster-pack-display-24-boosters-disney-lorcana"),
 ]
 
+# Exact English-language articles and stock checked on 2026-09-27. Inventory
+# is a dated observation, not a promise of availability after that time.
+POKEMON_ENGLISH_OBSERVED_AT = datetime(2026, 9, 27, 5, 17, 0)
+POKEMON_ENGLISH_EXPANSION = [
+    dict(slug="ch-pokemon-pitch-black-etb", name="Pokémon Mega Evolution: Pitch Black Elite Trainer Box", category="Pokémon", manufacturer="The Pokémon Company", year="2026", series="Pitch Black", fmt="elite trainer box", sku="CH-ME05-ETB", price=999, packs=9, cards=10, stock="in_stock", language="English", store_name="CardHaven", observed_at=POKEMON_ENGLISH_OBSERVED_AT, facts=["9 engelska boosterpaket med 10 kort och 1 Basic Energy per paket", "Zarude full-art foil promo och speltillbehör ingår; ingen chase i boostersen är garanterad", "Mega Darkrai ex #120/83 Mega Hyper Rare finns i den officiella checklistan; kortspecifika packodds saknas"], buy_url="https://cardhaven.se/shop/pokemon/pokemon-mega-evolution-pitch-black-elite-trainer-box"),
+    dict(slug="ch-pokemon-chaos-rising-checklane", name="Pokémon Mega Evolution: Chaos Rising Checklane Blister Toxel", category="Pokémon", manufacturer="The Pokémon Company", year="2026", series="Chaos Rising", fmt="blister", sku="CH-ME04-TOXEL", price=99, packs=1, cards=10, stock="in_stock", language="English", store_name="CardHaven", observed_at=POKEMON_ENGLISH_OBSERVED_AT, facts=["1 engelskt boosterpaket med 10 kort och 1 Basic Energy", "Toxel foil promo och mynt ingår; Mega Greninja ex i boostern är inte garanterad", "Mega Greninja ex #116/122 Special Illustration Rare och #122/122 Mega Hyper Rare finns i checklistan; kortspecifika packodds saknas"], buy_url="https://cardhaven.se/shop/pokemon/pokemon-mega-evolution-chaos-rising-checklane-blister"),
+    dict(slug="dl-pokemon-ascended-heroes-pin", name="Pokémon Mega Evolution: Ascended Heroes First Partners Deluxe Pin Collection", category="Pokémon", manufacturer="The Pokémon Company", year="2026", series="Ascended Heroes", fmt="collection box", sku="166520", price=895, packs=5, cards=10, stock="in_stock", language="English", store_name="Dragons Lair", observed_at=POKEMON_ENGLISH_OBSERVED_AT, facts=["5 engelska Ascended Heroes boosterpaket med 10 kort och 1 Basic Energy per paket", "Chikorita, Tepig och Totodile foil promo samt pin ingår", "Mega Dragonite ex #295/217 Mega Hyper Rare finns i checklistan; ingen sådan träff garanteras"], buy_url="https://dragonslair.se/products/pokemon-tcg-ascended-heroes-first-partners-deluxe-pin-collection-pokemon"),
+]
+
 REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
 
 REAL_SNAPSHOT += REAL_PACK_SNAPSHOT
@@ -298,6 +308,7 @@ REAL_SNAPSHOT += RETAILER_EXPANSION
 REAL_SNAPSHOT += ADDITIONAL_STORE_EXPANSION
 REAL_SNAPSHOT += ONE_PIECE_MARKET_EXPANSION
 REAL_SNAPSHOT += TCG_MARKET_EXPANSION
+REAL_SNAPSHOT += POKEMON_ENGLISH_EXPANSION
 
 DIRECT_BUY_URLS = {
     "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",
@@ -2203,6 +2214,45 @@ def seed_chase_card_db():
     finally:
         db.close()
 
+def _english_pokemon_profile(*, source, names, chases, packs, promos, big, jackpot, caveat):
+    return {
+        "source_name":"The Pokémon Company official expansion card database and product contents",
+        "source_url":source, "key_names":names, "headline_chases":chases,
+        "why_exciting":[f"{packs} engelska boosterpaket ger {packs} öppningsförsök på setets checklista.", f"{promos} ingår separat från de slumpmässiga boosterträffarna."],
+        "tiers":{"everyday":{"label":"Produktformatet","score":55+min(packs*2,18),"items":[f"{packs} boosterpaket",promos]},"good":{"label":"Bra träff","score":62,"items":["Mega Evolution ex eller illustration rare"]},"big":{"label":"Riktigt bra","score":77,"items":[big]},"jackpot":{"label":"Setets toppspår","score":88,"items":[jackpot]}},
+        "caveat":caveat,
+    }
+
+CHASE_PROFILES["ch-pokemon-pitch-black-etb"] = _english_pokemon_profile(
+    source="https://www.pokemon.com/us/pokemon-tcg/mega-evolution-pitch-black",
+    names=["Mega Darkrai ex #120/83","Mega Chandelure ex","Gladion's Final Battle #118/83","Zarude promo"],
+    chases=[
+        {"card":"Mega Darkrai ex #120/83 Mega Hyper Rare","tier":"JACKPOT","odds":"Kortspecifikt packodds ej publicerat","why":"Officiellt verifierat högsta Darkrai-spår."},
+        {"card":"Gladion's Final Battle #118/83 Special Illustration Rare","tier":"MONSTER","odds":"Kortspecifikt packodds ej publicerat","why":"Verifierad specialillustration i setet."},
+        {"card":"Mega Chandelure ex","tier":"BRA","odds":"Kortspecifikt packodds ej publicerat","why":"Ytterligare namngivet Mega Evolution ex."},
+        {"card":"Zarude full-art foil promo","tier":"GARANTERAD PROMO","odds":"1 promo i denna Elite Trainer Box","why":"Separat promo, inte en boosterträff."}],
+    packs=9, promos="Zarude-promo", big="Gladion's Final Battle Special Illustration Rare", jackpot="Mega Darkrai ex Mega Hyper Rare",
+    caveat="Zarude-promon ingår. Nio pack garanterar varken Mega Darkrai eller viss rarity; Pokémon publicerar inga kortspecifika packodds.")
+CHASE_PROFILES["ch-pokemon-chaos-rising-checklane"] = _english_pokemon_profile(
+    source="https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/series/me04/116/",
+    names=["Mega Greninja ex #116/122","Mega Greninja ex #122/122","Mega Floette ex","Toxel promo"],
+    chases=[
+        {"card":"Mega Greninja ex #122/122 Mega Hyper Rare","tier":"JACKPOT","odds":"Kortspecifikt packodds ej publicerat","why":"Verifierat högsta Greninja-spår."},
+        {"card":"Mega Greninja ex #116/122 Special Illustration Rare","tier":"MONSTER","odds":"Kortspecifikt packodds ej publicerat","why":"Verifierad Greninja-specialillustration."},
+        {"card":"Mega Floette ex","tier":"BRA","odds":"Kortspecifikt packodds ej publicerat","why":"Officiellt namngivet Mega Evolution ex."},
+        {"card":"Toxel foil promo","tier":"GARANTERAD PROMO","odds":"1 promo i denna Checklane Blister","why":"Separat promo, inte en boosterträff."}],
+    packs=1, promos="Toxel-promo och mynt", big="Mega Greninja ex Special Illustration Rare", jackpot="Mega Greninja ex Mega Hyper Rare",
+    caveat="Ett enda slumpmässigt boosterpaket ingår. Toxel-promo ingår; Greninja och hög rarity garanteras inte. Pokémon publicerar inga kortspecifika packodds.")
+CHASE_PROFILES["dl-pokemon-ascended-heroes-pin"] = _english_pokemon_profile(
+    source="https://www.pokemon.com/us/pokemon-tcg/mega-evolution-ascended-heroes",
+    names=["Mega Dragonite ex #295/217","Chikorita promo","Tepig promo","Totodile promo"],
+    chases=[
+        {"card":"Mega Dragonite ex #295/217 Mega Hyper Rare","tier":"JACKPOT","odds":"Kortspecifikt packodds ej publicerat","why":"Verifierat Mega Hyper Rare i expansionen."},
+        {"card":"Mega Dragonite ex","tier":"MYCKET BRA","odds":"Kortspecifikt packodds ej publicerat","why":"Officiellt framlyft huvud-Pokémon i setet."},
+        {"card":"Chikorita, Tepig och Totodile foil promo","tier":"GARANTERAD PROMO","odds":"3 promos i denna Deluxe Pin Collection","why":"Separata promokort, inte boosterträffar."}],
+    packs=5, promos="Tre First Partners-promos och pin", big="Mega Dragonite ex i hög rarity", jackpot="Mega Dragonite ex Mega Hyper Rare",
+    caveat="Tre promokort ingår; ingen boosterträff eller Mega Dragonite-variant garanteras. Pokémon publicerar inga kortspecifika packodds.")
+
 def seed_chase_profiles():
     db=SessionLocal()
     try:
@@ -2212,6 +2262,7 @@ def seed_chase_profiles():
         additional_store_slugs={x["slug"] for x in ADDITIONAL_STORE_EXPANSION}
         one_piece_market_slugs={x["slug"] for x in ONE_PIECE_MARKET_EXPANSION}
         tcg_market_slugs={x["slug"] for x in TCG_MARKET_EXPANSION}
+        pokemon_english_slugs={x["slug"] for x in POKEMON_ENGLISH_EXPANSION}
         expansion_slugs={x["slug"] for x in REAL_NONSPORT_EXPANSION + REAL_CROSS_CATEGORY_EXPANSION}
         for slug,data in CHASE_PROFILES.items():
             product=db.scalar(select(Product).where(Product.slug==slug))
@@ -2226,7 +2277,8 @@ def seed_chase_profiles():
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
             row.verified_at=(
-                TCG_MARKET_OBSERVED_AT if slug in tcg_market_slugs
+                POKEMON_ENGLISH_OBSERVED_AT if slug in pokemon_english_slugs
+                else TCG_MARKET_OBSERVED_AT if slug in tcg_market_slugs
                 else ONE_PIECE_MARKET_OBSERVED_AT if slug in one_piece_market_slugs
                 else ADDITIONAL_STORE_OBSERVED_AT if slug in additional_store_slugs
                 else RETAILER_EXPANSION_OBSERVED_AT if slug in retailer_expansion_slugs

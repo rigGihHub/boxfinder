@@ -160,6 +160,25 @@ def test_tcg_profiles_do_not_turn_rarity_into_pull_odds():
         assert has_actionable_odds(profile) is False
         assert "1/1" not in profile["caveat"]
 
+def test_new_english_pokemon_sets_have_separate_buyable_formats(monkeypatch):
+    from app.services.chase_content import has_actionable_odds
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    formats={"ch-pokemon-pitch-black-etb":9,"ch-pokemon-chaos-rising-checklane":1,"dl-pokemon-ascended-heroes-pin":5}
+    for slug,packs in formats.items():
+        product=db.scalar(select(Product).where(Product.slug==slug))
+        assert product is not None
+        variant=db.scalar(select(ProductVariant).where(ProductVariant.product_id==product.id))
+        assert variant.packs==packs
+        offer=db.scalar(select(Offer).where(Offer.variant_id==variant.id))
+        assert offer.stock_status=="in_stock" and offer.url.startswith("https://")
+        assert seedmod.CHASE_PROFILES[slug]["headline_chases"]
+        assert has_actionable_odds(seedmod.CHASE_PROFILES[slug]) is False
+    db.close()
+
 def test_ranking_product_list_uses_one_bulk_chase_profile_query(monkeypatch):
     Session=session_factory()
     monkeypatch.setattr(seedmod,"SessionLocal",Session)
