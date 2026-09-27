@@ -179,6 +179,30 @@ def test_new_english_pokemon_sets_have_separate_buyable_formats(monkeypatch):
         assert has_actionable_odds(seedmod.CHASE_PROFILES[slug]) is False
     db.close()
 
+def test_retail_scan_keeps_play_booster_and_loose_pack_profiles_separate(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    for slug,category,price in (
+        ("tcgs-pokemon-pitch-black-pack","Pokémon",89),
+        ("tcgs-mtg-bloomburrow-play-pack","Magic",69),
+    ):
+        product=db.scalar(select(Product).where(Product.slug==slug))
+        assert product.category==category
+        variant=db.scalar(select(ProductVariant).where(ProductVariant.product_id==product.id))
+        assert variant.packs==1
+        offer=db.scalar(select(Offer).where(Offer.variant_id==variant.id))
+        assert offer.price_sek==price and offer.stock_status=="in_stock"
+        assert offer.url.startswith("https://tcgstore.se/products/")
+        profile=db.scalar(select(ChaseProfile).where(ChaseProfile.variant_id==variant.id))
+        assert profile.source_url.startswith("https://")
+        assert profile.verified_at==seedmod.RETAIL_SCAN_OBSERVED_AT
+    assert "raised foil" in seedmod.CHASE_PROFILES["tcgs-mtg-bloomburrow-play-pack"]["caveat"].lower()
+    assert "Zarude-promo" in seedmod.CHASE_PROFILES["tcgs-pokemon-pitch-black-pack"]["caveat"]
+    db.close()
+
 def test_ranking_product_list_uses_one_bulk_chase_profile_query(monkeypatch):
     Session=session_factory()
     monkeypatch.setattr(seedmod,"SessionLocal",Session)

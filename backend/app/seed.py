@@ -297,6 +297,14 @@ POKEMON_ENGLISH_EXPANSION = [
     dict(slug="dl-pokemon-ascended-heroes-pin", name="Pokémon Mega Evolution: Ascended Heroes First Partners Deluxe Pin Collection", category="Pokémon", manufacturer="The Pokémon Company", year="2026", series="Ascended Heroes", fmt="collection box", sku="166520", price=895, packs=5, cards=10, stock="in_stock", language="English", store_name="Dragons Lair", observed_at=POKEMON_ENGLISH_OBSERVED_AT, facts=["5 engelska Ascended Heroes boosterpaket med 10 kort och 1 Basic Energy per paket", "Chikorita, Tepig och Totodile foil promo samt pin ingår", "Mega Dragonite ex #295/217 Mega Hyper Rare finns i checklistan; ingen sådan träff garanteras"], buy_url="https://dragonslair.se/products/pokemon-tcg-ascended-heroes-first-partners-deluxe-pin-collection-pokemon"),
 ]
 
+# Exact Swedish article pages checked 2026-09-27. Keep Play Booster and
+# Collector Booster exclusives separate even when they share a checklist.
+RETAIL_SCAN_OBSERVED_AT = datetime(2026, 9, 27, 5, 40, 0)
+RETAIL_SCAN_EXPANSION = [
+    dict(slug="tcgs-pokemon-pitch-black-pack", name="Pokémon Mega Evolution: Pitch Black Booster Pack", category="Pokémon", manufacturer="The Pokémon Company", year="2026", series="Pitch Black", fmt="single pack", sku="TCGS-ME05-PACK", price=89, packs=1, cards=10, stock="in_stock", language="English", store_name="TCGStore", observed_at=RETAIL_SCAN_OBSERVED_AT, facts=["1 engelskt boosterpaket med 10 slumpade kort", "Mega Darkrai ex #120/83 finns i officiella checklistan, men ingen viss träff garanteras", "Kortspecificerade packodds saknas; ett löst paket har ingen boxgaranti"], buy_url="https://tcgstore.se/products/pokemon-mega-evolution-pitch-black-booster-pack"),
+    dict(slug="tcgs-mtg-bloomburrow-play-pack", name="Magic: The Gathering Bloomburrow Play Booster Pack", category="Magic", manufacturer="Wizards of the Coast", year="2024", series="Bloomburrow", fmt="single pack", sku="TCGS-BLB-PLAY-PACK", price=69, packs=1, cards=14, stock="in_stock", language="English", store_name="TCGStore", observed_at=RETAIL_SCAN_OBSERVED_AT, facts=["1 engelskt Play Booster med 14 kort enligt butikens specifikation", "Wizards publicerar 1,5 % chans för ett Special Guests-kort som grupp i Play Boosters; detta är inte odds för ett namngivet kort", "Raised foil anime och extended-art varianter är Collector Booster-exklusiva"], buy_url="https://tcgstore.se/products/magic-the-gathering-bloomburrow-play-booster-pack"),
+]
+
 REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
 
 REAL_SNAPSHOT += REAL_PACK_SNAPSHOT
@@ -309,6 +317,7 @@ REAL_SNAPSHOT += ADDITIONAL_STORE_EXPANSION
 REAL_SNAPSHOT += ONE_PIECE_MARKET_EXPANSION
 REAL_SNAPSHOT += TCG_MARKET_EXPANSION
 REAL_SNAPSHOT += POKEMON_ENGLISH_EXPANSION
+REAL_SNAPSHOT += RETAIL_SCAN_EXPANSION
 
 DIRECT_BUY_URLS = {
     "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",
@@ -2253,6 +2262,29 @@ CHASE_PROFILES["dl-pokemon-ascended-heroes-pin"] = _english_pokemon_profile(
     packs=5, promos="Tre First Partners-promos och pin", big="Mega Dragonite ex i hög rarity", jackpot="Mega Dragonite ex Mega Hyper Rare",
     caveat="Tre promokort ingår; ingen boosterträff eller Mega Dragonite-variant garanteras. Pokémon publicerar inga kortspecifika packodds.")
 
+CHASE_PROFILES["tcgs-pokemon-pitch-black-pack"] = {
+    "source_name":"The Pokémon Company official Pitch Black card database",
+    "source_url":"https://www.pokemon.com/us/pokemon-tcg/mega-evolution-pitch-black",
+    "key_names":["Mega Darkrai ex #120/83","Gladion's Final Battle #118/83","Mega Chandelure ex"],
+    "headline_chases":[
+        {"card":"Mega Darkrai ex #120/83 Mega Hyper Rare","tier":"JACKPOT","odds":"Kortspecifikt packodds ej publicerat","why":"Officiell checklista; ett löst pack garanterar inte kortet."},
+        {"card":"Gladion's Final Battle #118/83 Special Illustration Rare","tier":"MONSTER","odds":"Kortspecifikt packodds ej publicerat","why":"Verifierat setkort, inte en packgaranti."},
+        {"card":"Mega Chandelure ex","tier":"BRA","odds":"Kortspecifikt packodds ej publicerat","why":"Namngivet Mega Evolution ex i expansionen."}],
+    "why_exciting":["Ett engelskt boosterpaket ger ett öppningsförsök på Pitch Blacks checklista.","Mega Darkrai finns i setet, men kortspecifikt packodds saknas."],
+    "tiers":{"everyday":{"label":"Produktformatet","score":53,"items":["Ett slumpat boosterpaket med 10 kort"]},"good":{"label":"Bra träff","score":62,"items":["Mega Chandelure ex"]},"big":{"label":"Riktigt bra","score":77,"items":["Gladion's Final Battle Special Illustration Rare"]},"jackpot":{"label":"Setets toppspår","score":88,"items":["Mega Darkrai ex Mega Hyper Rare"]}},
+    "caveat":"Ett löst paket har ingen boxgaranti eller Zarude-promo från Elite Trainer Box. Inga kortspecifika packodds har publicerats."}
+CHASE_PROFILES["tcgs-mtg-bloomburrow-play-pack"] = {
+    "source_name":"Wizards of the Coast, Collecting Bloomburrow: Play Booster contents and card treatments",
+    "source_url":"https://magic.wizards.com/en/news/feature/collecting-bloomburrow",
+    "key_names":["Lumra, Bellow of the Woods","Three Tree City","Maha, Its Feathers Night","Ygra, Eater of All"],
+    "headline_chases":[
+        {"card":"Lumra, Bellow of the Woods, Mitsuhiro Arita borderless (non-foil eller traditional foil)","tier":"JACKPOT","odds":"Kortspecifikt Play Booster-odds ej publicerat","why":"Wizards bekräftar att denna borderless-version finns i Play Boosters; raised foil är Collector Booster-exklusiv."},
+        {"card":"Three Tree City, borderless säsongsillustration","tier":"MONSTER","odds":"Kortspecifikt Play Booster-odds ej publicerat","why":"Fyra namngivna säsongsversioner finns som non-foil eller traditional foil i Play Boosters."},
+        {"card":"Maha, Its Feathers Night, Borderless Field Notes","tier":"MYCKET BRA","odds":"Kortspecifikt Play Booster-odds ej publicerat","why":"Verifierad Field Notes-version i detta format."}],
+    "why_exciting":["Ett Play Booster ger ett rare eller mythic rare och ett traditional foil-kort av slumpmässig rarity enligt Wizards.","Special Guests-kort som familj ersätter ett common i 1,5 % av Bloomburrow Play Boosters."],
+    "tiers":{"everyday":{"label":"Play Booster-innehåll","score":64,"items":["Ett rare eller mythic rare","Ett traditional foil-kort av valfri rarity"]},"good":{"label":"Bra träff","score":67,"items":["Ygra, Eater of All"]},"big":{"label":"Riktigt bra","score":76,"items":["Maha Field Notes","Three Tree City borderless"]},"jackpot":{"label":"Formatets toppspår","score":84,"items":["Lumra borderless av Mitsuhiro Arita (ej raised foil)"]}},
+    "caveat":"1,5 % avser hela Special Guests-familjen, inte ett särskilt kort. Raised foil anime och extended-art finns inte i Play Boosters; namngivna kort saknar publicerade kortspecifika odds."}
+
 def seed_chase_profiles():
     db=SessionLocal()
     try:
@@ -2263,6 +2295,7 @@ def seed_chase_profiles():
         one_piece_market_slugs={x["slug"] for x in ONE_PIECE_MARKET_EXPANSION}
         tcg_market_slugs={x["slug"] for x in TCG_MARKET_EXPANSION}
         pokemon_english_slugs={x["slug"] for x in POKEMON_ENGLISH_EXPANSION}
+        retail_scan_slugs={x["slug"] for x in RETAIL_SCAN_EXPANSION}
         expansion_slugs={x["slug"] for x in REAL_NONSPORT_EXPANSION + REAL_CROSS_CATEGORY_EXPANSION}
         for slug,data in CHASE_PROFILES.items():
             product=db.scalar(select(Product).where(Product.slug==slug))
@@ -2277,7 +2310,8 @@ def seed_chase_profiles():
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
             row.verified_at=(
-                POKEMON_ENGLISH_OBSERVED_AT if slug in pokemon_english_slugs
+                RETAIL_SCAN_OBSERVED_AT if slug in retail_scan_slugs
+                else POKEMON_ENGLISH_OBSERVED_AT if slug in pokemon_english_slugs
                 else TCG_MARKET_OBSERVED_AT if slug in tcg_market_slugs
                 else ONE_PIECE_MARKET_OBSERVED_AT if slug in one_piece_market_slugs
                 else ADDITIONAL_STORE_OBSERVED_AT if slug in additional_store_slugs
