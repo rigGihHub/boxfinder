@@ -305,6 +305,14 @@ RETAIL_SCAN_EXPANSION = [
     dict(slug="tcgs-mtg-bloomburrow-play-pack", name="Magic: The Gathering Bloomburrow Play Booster Pack", category="Magic", manufacturer="Wizards of the Coast", year="2024", series="Bloomburrow", fmt="single pack", sku="TCGS-BLB-PLAY-PACK", price=69, packs=1, cards=14, stock="in_stock", language="English", store_name="TCGStore", observed_at=RETAIL_SCAN_OBSERVED_AT, facts=["1 engelskt Play Booster med 14 kort enligt butikens specifikation", "Wizards publicerar 1,5 % chans för ett Special Guests-kort som grupp i Play Boosters; detta är inte odds för ett namngivet kort", "Raised foil anime och extended-art varianter är Collector Booster-exklusiva"], buy_url="https://tcgstore.se/products/magic-the-gathering-bloomburrow-play-booster-pack"),
 ]
 
+# Exact purchasable article pages checked 2026-09-28. The English OP-14
+# display and Japanese display have different card counts and profiles.
+SEPTEMBER_28_OBSERVED_AT = datetime(2026, 9, 28, 4, 49, 0)
+SEPTEMBER_28_EXPANSION = [
+    dict(slug="ch-one-piece-op14-en-display", name="One Piece The Azure Sea's Seven OP-14 Booster Display English", category="One Piece", manufacturer="Bandai", year="2026", series="The Azure Sea's Seven OP-14", fmt="booster box", sku="CH-OP14-EB04-EN-DISPLAY", price=2399, packs=24, cards=12, stock="in_stock", language="English", store_name="CardHaven", observed_at=SEPTEMBER_28_OBSERVED_AT, facts=["24 engelska boosterpaket med 12 slumpmässiga kort per paket", "Bandais officiella OP14-EB04-kortlista omfattar Boa Hancock, Dracule Mihawk och Trafalgar Law", "Ingen namngiven Secret Rare, Special Card eller parallel garanteras i displayen; kortspecifika packodds saknas"], buy_url="https://cardhaven.se/shop/onepiece/one-piece-card-game-op14-eb04-the-azure-seas-seven-booster-display"),
+    dict(slug="cs-2025-26-signature-series-basketball-hobby", name="2025-26 Panini Signature Series Basketball Hobby Box", category="Basket", manufacturer="Panini", year="2025-26", series="Signature Series Basketball", fmt="hobby box", sku="CS-PANINI-SIGNATURE-BASKET-2526", price=2499, packs=1, cards=5, stock="in_stock", language="English", store_name="CardSurfer", observed_at=SEPTEMBER_28_OBSERVED_AT, facts=["1 hobby-pack med 5 kort", "Panini anger 1 slabbed autograph numrerad /49 eller lägre per hobbybox, plus 2 base parallels, 1 base och 1 insert", "Namngivna möjliga autografer omfattar VJ Edgecombe, Carter Bryant, Magic Johnson och Allen Iverson", "Kaboom SSP finns med Gold /10 och Black 1/1; ingen viss spelare eller Kaboom är garanterad"], buy_url="https://cardsurferbreak.com/sv-se/products/2025-26-panini-signature-series-basketball-hobby-box"),
+]
+
 REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
 
 REAL_SNAPSHOT += REAL_PACK_SNAPSHOT
@@ -318,6 +326,7 @@ REAL_SNAPSHOT += ONE_PIECE_MARKET_EXPANSION
 REAL_SNAPSHOT += TCG_MARKET_EXPANSION
 REAL_SNAPSHOT += POKEMON_ENGLISH_EXPANSION
 REAL_SNAPSHOT += RETAIL_SCAN_EXPANSION
+REAL_SNAPSHOT += SEPTEMBER_28_EXPANSION
 
 DIRECT_BUY_URLS = {
     "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",
@@ -2285,6 +2294,29 @@ CHASE_PROFILES["tcgs-mtg-bloomburrow-play-pack"] = {
     "tiers":{"everyday":{"label":"Play Booster-innehåll","score":64,"items":["Ett rare eller mythic rare","Ett traditional foil-kort av valfri rarity"]},"good":{"label":"Bra träff","score":67,"items":["Ygra, Eater of All"]},"big":{"label":"Riktigt bra","score":76,"items":["Maha Field Notes","Three Tree City borderless"]},"jackpot":{"label":"Formatets toppspår","score":84,"items":["Lumra borderless av Mitsuhiro Arita (ej raised foil)"]}},
     "caveat":"1,5 % avser hela Special Guests-familjen, inte ett särskilt kort. Raised foil anime och extended-art finns inte i Play Boosters; namngivna kort saknar publicerade kortspecifika odds."}
 
+CHASE_PROFILES["ch-one-piece-op14-en-display"] = {
+    "source_name":"Bandai official OP14-EB04 card list and English product information",
+    "source_url":"https://en.onepiece-cardgame.com/cardlist/?series=569114",
+    "key_names":["Boa Hancock OP14-112","Dracule Mihawk OP14-119","Trafalgar Law OP14-001","Buggy OP09-051"],
+    "headline_chases":[
+        {"card":"Boa Hancock OP14-112 / SP variant","tier":"JACKPOT","odds":"Kortspecifikt packodds ej publicerat","why":"Namngiven Seven Warlords-karaktär med specialvariant i Bandais kortlista."},
+        {"card":"Dracule Mihawk OP14-119 / parallel","tier":"MONSTER","odds":"Kortspecifikt packodds ej publicerat","why":"Verifierad Secret Rare och parallelspår i engelska OP14-EB04."},
+        {"card":"Trafalgar Law OP14-001 Leader parallel","tier":"MYCKET BRA","odds":"Kortspecifikt packodds ej publicerat","why":"Verifierad Leader med alternativ illustration."}],
+    "why_exciting":["24 engelska 12-kortspaket ger 24 öppningsförsök på OP14-EB04.","Bandais officiella lista ger flera namngivna Leader-, Secret Rare- och specialkortsspår."],
+    "tiers":{"everyday":{"label":"Engelsk display","score":69,"items":["24 pack med 12 kort per pack","288 slumpmässiga kort"]},"good":{"label":"Bra träff","score":69,"items":["SR eller Leader parallel"]},"big":{"label":"Riktigt bra","score":79,"items":["Dracule Mihawk parallel","Trafalgar Law Leader parallel"]},"jackpot":{"label":"Setets toppspår","score":88,"items":["Boa Hancock SP/parallel"]}},
+    "caveat":"Engelsk 24-packdisplay med 12 kort per paket. Den japanska utgåvans 6 kort per paket gäller inte här. Ingen Secret Rare, SP eller namngiven karaktär är garanterad; Bandai publicerar inte kortspecifika packodds."}
+CHASE_PROFILES["cs-2025-26-signature-series-basketball-hobby"] = {
+    "source_name":"Panini America, Seek the Slab inside 2025-26 Panini Signature Series Basketball",
+    "source_url":"https://blog.paniniamerica.net/seek-the-slab-inside-2025-26-panini-signature-series-basketball/",
+    "key_names":["VJ Edgecombe","Carter Bryant","Cade Cunningham","Damian Lillard","Magic Johnson","Allen Iverson"],
+    "headline_chases":[
+        {"card":"VJ Edgecombe slabbed autograph /49 eller lägre","tier":"JACKPOT","odds":"En slabbed auto /49 eller lägre per hobbybox; VJ Edgecombe-odds ej publicerat","why":"Panini namnger rookieautografen i checklistan, men inte sannolikheten för just honom."},
+        {"card":"Magic Johnson eller Allen Iverson slabbed autograph /49 eller lägre","tier":"MONSTER","odds":"Namnspecifikt boxodds ej publicerat","why":"Panini bekräftar båda legendarerna som signers."},
+        {"card":"Kaboom Gold /10 eller Black 1/1","tier":"JACKPOT","odds":"Kaboom- eller kortspecifikt boxodds ej publicerat","why":"Panini bekräftar SSP-serien och dess numrerade versioner; 1/1 anger upplaga, inte dragchans."}],
+    "why_exciting":["Varje hobbybox innehåller ett inkapslat autografkort numrerat till /49 eller lägre enligt Panini.","Checklistan har både rookies, etablerade spelare och legendarer; Kaboom är ett separat sällsynt insertspår."],
+    "tiers":{"everyday":{"label":"Verifierat hobbyinnehåll","score":78,"items":["1 slabbed autograph /49 eller lägre","2 base parallels, 1 base och 1 insert"]},"good":{"label":"Bra träff","score":77,"items":["Numrerad autograf av namngiven signer"]},"big":{"label":"Riktigt bra","score":85,"items":["VJ Edgecombe eller Magic Johnson auto","Kaboom SSP"]},"jackpot":{"label":"Produktens toppspår","score":91,"items":["Kaboom Black 1/1 eller toppsigner i låg upplaga"]}},
+    "caveat":"Garantin gäller en hel hobbybox med ett pack, inte lösa paket. Vilken signer som finns i boxen är okänt; Panini publicerar inte odds för en viss spelare eller Kaboom. Produktens få kort och höga pris begränsar antalet försök."}
+
 def seed_chase_profiles():
     db=SessionLocal()
     try:
@@ -2296,6 +2328,7 @@ def seed_chase_profiles():
         tcg_market_slugs={x["slug"] for x in TCG_MARKET_EXPANSION}
         pokemon_english_slugs={x["slug"] for x in POKEMON_ENGLISH_EXPANSION}
         retail_scan_slugs={x["slug"] for x in RETAIL_SCAN_EXPANSION}
+        september_28_slugs={x["slug"] for x in SEPTEMBER_28_EXPANSION}
         expansion_slugs={x["slug"] for x in REAL_NONSPORT_EXPANSION + REAL_CROSS_CATEGORY_EXPANSION}
         for slug,data in CHASE_PROFILES.items():
             product=db.scalar(select(Product).where(Product.slug==slug))
@@ -2310,7 +2343,8 @@ def seed_chase_profiles():
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
             row.verified_at=(
-                RETAIL_SCAN_OBSERVED_AT if slug in retail_scan_slugs
+                SEPTEMBER_28_OBSERVED_AT if slug in september_28_slugs
+                else RETAIL_SCAN_OBSERVED_AT if slug in retail_scan_slugs
                 else POKEMON_ENGLISH_OBSERVED_AT if slug in pokemon_english_slugs
                 else TCG_MARKET_OBSERVED_AT if slug in tcg_market_slugs
                 else ONE_PIECE_MARKET_OBSERVED_AT if slug in one_piece_market_slugs

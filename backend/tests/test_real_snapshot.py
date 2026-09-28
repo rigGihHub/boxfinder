@@ -203,6 +203,30 @@ def test_retail_scan_keeps_play_booster_and_loose_pack_profiles_separate(monkeyp
     assert "Zarude-promo" in seedmod.CHASE_PROFILES["tcgs-pokemon-pitch-black-pack"]["caveat"]
     db.close()
 
+def test_english_op14_display_and_signature_hobby_have_own_format_profiles(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    formats={
+        "ch-one-piece-op14-en-display":("English",24,12,2399),
+        "cs-2025-26-signature-series-basketball-hobby":("English",1,5,2499),
+    }
+    for slug,(language,packs,cards,price) in formats.items():
+        product=db.scalar(select(Product).where(Product.slug==slug))
+        variant=db.scalar(select(ProductVariant).where(ProductVariant.product_id==product.id))
+        offer=db.scalar(select(Offer).where(Offer.variant_id==variant.id))
+        profile=db.scalar(select(ChaseProfile).where(ChaseProfile.variant_id==variant.id))
+        assert (variant.language,variant.packs,variant.cards_per_pack)==(language,packs,cards)
+        assert offer.price_sek==price and offer.stock_status=="in_stock"
+        assert "/products/" in offer.url or "/shop/onepiece/" in offer.url
+        assert profile.verified_at==seedmod.SEPTEMBER_28_OBSERVED_AT
+        assert seedmod.CHASE_PROFILES[slug]["headline_chases"]
+    assert "japanska utgåvans 6 kort" in seedmod.CHASE_PROFILES["ch-one-piece-op14-en-display"]["caveat"]
+    assert "hel hobbybox" in seedmod.CHASE_PROFILES["cs-2025-26-signature-series-basketball-hobby"]["caveat"]
+    db.close()
+
 def test_ranking_product_list_uses_one_bulk_chase_profile_query(monkeypatch):
     Session=session_factory()
     monkeypatch.setattr(seedmod,"SessionLocal",Session)
@@ -474,7 +498,13 @@ def test_cardsurfer_expansion_adds_two_products_and_three_alternate_offers(monke
         .join(ProductVariant, ProductVariant.product_id==Product.id)
         .join(Offer, Offer.variant_id==ProductVariant.id)
         .join(Store, Store.id==Offer.store_id)
-        .where(Store.name=="CardSurfer")
+        .where(Store.name=="CardSurfer", Product.slug.in_({
+            "cs-2025-26-panini-prizm-basketball-blaster",
+            "cs-2025-26-topps-chrome-uwcl-hobby",
+            "cc-2026-topps-universe-wwe-value",
+            "cc-2025-26-opc-hobby",
+            "cc-2025-26-pwhl-hobby",
+        }))
     ).all()
     assert len(rows)==5
     assert {product.slug for product,_,_,_ in rows}=={
