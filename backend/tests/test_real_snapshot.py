@@ -477,7 +477,8 @@ def test_one_piece_market_scan_uses_exact_in_stock_article_links(monkeypatch):
     assert {store.name for _,_,_,store in rows}=={
         "Kantovault","AlphaSpel","Aquitaz","Bangerpack","Kortlagret"
     }
-    assert all(offer.stock_status=="in_stock" and not offer.is_preorder for _,_,offer,_ in rows)
+    assert all(not offer.is_preorder for _,_,offer,_ in rows)
+    assert {store.name for _,_,offer,store in rows if offer.stock_status!="in_stock"}=={"AlphaSpel"}
     assert all(offer.url.startswith("https://") and offer.url.count("/")>=4 for _,_,offer,_ in rows)
     assert all(slug in seedmod.CHASE_PROFILES for slug in slugs)
     profile_dates=db.scalars(
@@ -487,7 +488,7 @@ def test_one_piece_market_scan_uses_exact_in_stock_article_links(monkeypatch):
 
     op14=[(offer,store) for product,_,offer,store in rows if product.slug=="as-one-piece-op14-en-pack"]
     assert {offer.price_sek for offer,_ in op14}=={79,99,109}
-    assert min(op14,key=lambda row: row[0].price_sek)[1].name=="AlphaSpel"
+    assert min((row for row in op14 if row[0].stock_status=="in_stock"),key=lambda row: row[0].price_sek)[1].name=="Bangerpack"
     aquitaz_op14=next(offer for offer,store in op14 if store.name=="Aquitaz")
     assert aquitaz_op14.observed_at==seedmod.ONE_PIECE_AQUITAZ_RECHECKED_AT
     op15=next(offer for product,_,offer,store in rows if product.slug=="aq-one-piece-op15-eb04-en-pack" and store.name=="Aquitaz")
@@ -496,6 +497,28 @@ def test_one_piece_market_scan_uses_exact_in_stock_article_links(monkeypatch):
     op17=[(offer,store) for product,_,offer,store in rows if product.slug=="kl-one-piece-op17-en-pack"]
     assert {offer.price_sek for offer,_ in op17}=={189,199}
     assert min(op17,key=lambda row: row[0].price_sek)[1].name=="Kortlagret"
+    catalog=real_catalog(category="One Piece",budget=None,format=None,limit=200,db=db)
+    visible=next(row for row in catalog["products"] if row["slug"]=="as-one-piece-op14-en-pack")
+    assert (visible["store"],visible["price"])==("Bangerpack",99)
+    db.close()
+
+def test_ufc_value_box_uses_working_cardsurfer_article(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    offers=db.execute(select(Offer,Store).join(Store).join(ProductVariant).join(Product).where(Product.slug=="cc-2026-topps-chrome-ufc-value")).all()
+    assert len(offers)==2
+    by_store={store.name:offer for offer,store in offers}
+    assert by_store["Coolcard"].stock_status=="out_of_stock"
+    backup=by_store["CardSurfer"]
+    assert (backup.stock_status,backup.price_sek,backup.observed_at)==("in_stock",349,seedmod.LINK_AUDIT_OBSERVED_AT)
+    assert backup.url=="https://cardsurferbreak.com/en-se/products/2026-topps-chrome-ufc-value-box"
+    catalog=real_catalog(category="UFC",budget=None,format=None,limit=200,db=db)
+    row=next(row for row in catalog["products"] if row["slug"]=="cc-2026-topps-chrome-ufc-value")
+    assert (row["store"],row["price"],row["url"])==("CardSurfer",349,backup.url)
+    assert (row["packs"],row["cards_per_pack"],row["total_cards"])==(6,4,24)
     db.close()
 
 def test_one_piece_market_profiles_keep_pack_and_display_claims_separate():
