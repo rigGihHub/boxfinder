@@ -227,6 +227,28 @@ def test_english_op14_display_and_signature_hobby_have_own_format_profiles(monke
     assert "hel hobbybox" in seedmod.CHASE_PROFILES["cs-2025-26-signature-series-basketball-hobby"]["caveat"]
     db.close()
 
+def test_disney_value_box_backup_offer_keeps_sold_out_coolcard_hidden(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    slug="cc-2026-topps-disney-chrome-value"
+    offers=db.execute(select(Offer,Store).join(Store).join(ProductVariant).join(Product).where(Product.slug==slug)).all()
+    assert len(offers)==2
+    by_store={store.name:offer for offer,store in offers}
+    assert by_store["Coolcard"].stock_status=="out_of_stock"
+    backup=by_store["DrakenDavids"]
+    assert backup.stock_status=="in_stock" and backup.price_sek==449
+    assert backup.observed_at==seedmod.DISNEY_BACKUP_OBSERVED_AT
+    assert backup.url=="https://www.drakendavids.se/en/products/topps-disney-chrome-2026-value-box"
+    catalog=real_catalog(category=None,budget=None,format=None,limit=200,db=db)
+    row=next(p for p in catalog["products"] if p["slug"]==slug)
+    assert (row["store"],row["price"],row["url"])==("DrakenDavids",449,backup.url)
+    assert (row["packs"],row["cards_per_pack"],row["total_cards"])==(8,4,32)
+    assert row["chase_coverage"]["status"]=="card_level"
+    db.close()
+
 def test_ranking_product_list_uses_one_bulk_chase_profile_query(monkeypatch):
     Session=session_factory()
     monkeypatch.setattr(seedmod,"SessionLocal",Session)

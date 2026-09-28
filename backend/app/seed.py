@@ -313,6 +313,14 @@ SEPTEMBER_28_EXPANSION = [
     dict(slug="cs-2025-26-signature-series-basketball-hobby", name="2025-26 Panini Signature Series Basketball Hobby Box", category="Basket", manufacturer="Panini", year="2025-26", series="Signature Series Basketball", fmt="hobby box", sku="CS-PANINI-SIGNATURE-BASKET-2526", price=2499, packs=1, cards=5, stock="in_stock", language="English", store_name="CardSurfer", observed_at=SEPTEMBER_28_OBSERVED_AT, facts=["1 hobby-pack med 5 kort", "Panini anger 1 slabbed autograph numrerad /49 eller lägre per hobbybox, plus 2 base parallels, 1 base och 1 insert", "Namngivna möjliga autografer omfattar VJ Edgecombe, Carter Bryant, Magic Johnson och Allen Iverson", "Kaboom SSP finns med Gold /10 och Black 1/1; ingen viss spelare eller Kaboom är garanterad"], buy_url="https://cardsurferbreak.com/sv-se/products/2025-26-panini-signature-series-basketball-hobby-box"),
 ]
 
+# The Coolcard offer for this value box is sold out, but the exact same
+# English value box was available at DrakenDavids on 2026-09-28. Keep both
+# offers attached to one product so the catalog selects the buyable article.
+DISNEY_BACKUP_OBSERVED_AT = datetime(2026, 9, 28, 4, 55, 0)
+DISNEY_BACKUP_OFFERS = [
+    dict(slug="cc-2026-topps-disney-chrome-value", name="2026 Topps Chrome Disney Value Box", category="Disney", manufacturer="Topps", year="2026", series="Chrome Disney", fmt="value box", sku="DD-16263951352157", price=449, packs=8, cards=4, stock="in_stock", language="English", store_name="DrakenDavids", observed_at=DISNEY_BACKUP_OBSERVED_AT, facts=["8 value-pack med 4 kort per pack", "2 Raywave-paralleller per box enligt tillverkarens formatinformation", "Authentic Autographs 1:2 261 value-pack för hela autograffamiljen, inte en namngiven signatur"], buy_url="https://www.drakendavids.se/en/products/topps-disney-chrome-2026-value-box"),
+]
+
 REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
 
 REAL_SNAPSHOT += REAL_PACK_SNAPSHOT
@@ -327,6 +335,7 @@ REAL_SNAPSHOT += TCG_MARKET_EXPANSION
 REAL_SNAPSHOT += POKEMON_ENGLISH_EXPANSION
 REAL_SNAPSHOT += RETAIL_SCAN_EXPANSION
 REAL_SNAPSHOT += SEPTEMBER_28_EXPANSION
+REAL_SNAPSHOT += DISNEY_BACKUP_OFFERS
 
 DIRECT_BUY_URLS = {
     "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",
@@ -473,7 +482,7 @@ def seed_verified_snapshot():
             else:
                 source_url = pack_url if row["fmt"]=="single pack" else category_url
             source_url = row.get("buy_url") or DIRECT_BUY_URLS.get(row["slug"]) or buy_urls.get(row["slug"]) or source_url
-            stock_status = "out_of_stock" if row["slug"] in UNAVAILABLE_PURCHASE_SLUGS else row.get("stock", "in_stock")
+            stock_status = "out_of_stock" if row["slug"] in UNAVAILABLE_PURCHASE_SLUGS and row_store.id == coolcard.id else row.get("stock", "in_stock")
             is_expansion = row in REAL_NONSPORT_EXPANSION or row in REAL_CROSS_CATEGORY_EXPANSION or row in REAL_RESEARCH_EXPANSION or row in REAL_STORE_EXPANSION or row in RETAILER_EXPANSION
             observed_at = row.get("observed_at", REAL_EXPANSION_OBSERVED_AT if is_expansion else REAL_SNAPSHOT_OBSERVED_AT)
             if offer is None:
