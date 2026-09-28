@@ -486,8 +486,13 @@ def test_one_piece_market_scan_uses_exact_in_stock_article_links(monkeypatch):
     assert profile_dates and all(value==seedmod.ONE_PIECE_MARKET_OBSERVED_AT for value in profile_dates)
 
     op14=[(offer,store) for product,_,offer,store in rows if product.slug=="as-one-piece-op14-en-pack"]
-    assert {offer.price_sek for offer,_ in op14}=={79,89,99}
+    assert {offer.price_sek for offer,_ in op14}=={79,99,109}
     assert min(op14,key=lambda row: row[0].price_sek)[1].name=="AlphaSpel"
+    aquitaz_op14=next(offer for offer,store in op14 if store.name=="Aquitaz")
+    assert aquitaz_op14.observed_at==seedmod.ONE_PIECE_AQUITAZ_RECHECKED_AT
+    op15=next(offer for product,_,offer,store in rows if product.slug=="aq-one-piece-op15-eb04-en-pack" and store.name=="Aquitaz")
+    assert op15.url=="https://aquitaz.se/en/products/one-piece-op-15-eb04-adventure-on-kamis-island-booster-pack-12-kort-eng"
+    assert (op15.price_sek,op15.stock_status,op15.observed_at)==(109,"in_stock",seedmod.ONE_PIECE_AQUITAZ_RECHECKED_AT)
     op17=[(offer,store) for product,_,offer,store in rows if product.slug=="kl-one-piece-op17-en-pack"]
     assert {offer.price_sek for offer,_ in op17}=={189,199}
     assert min(op17,key=lambda row: row[0].price_sek)[1].name=="Kortlagret"
