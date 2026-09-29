@@ -339,6 +339,16 @@ SEPTEMBER_29_EXPANSION = [
     dict(slug="dd-2025-26-topps-chrome-black-basketball-hobby", name="2025-26 Topps Chrome Black Basketball Hobby Box", category="Basket", manufacturer="Topps", year="2025-26", series="Chrome Black Basketball", fmt="hobby box", sku="DD-2025-26-CHROME-BLACK-BASKET-HOBBY", price=6499, packs=2, cards=6, stock="in_stock", language="English", store_name="DrakenDavids", observed_at=SEPTEMBER_29_OBSERVED_AT, facts=["2 hobby-pack med 6 kort var (12 packkort) samt 1 separat inkapslad autograf: totalt 13 kort enligt Topps", "1 inkapslad autograf per hel hobbybox; ingen namngiven signer garanteras", "Home Court som insertfamilj 1:395 hobby-pack och Rookie Autographs Base som familj 1:50 autograftoppers", "Butikspris 6 499 kr; två pack och en separat topper ger få öppningsförsök"], buy_url="https://www.drakendavids.se/products/topps-chrome-black-basketball-25-26-hobby-box"),
 ]
 
+# A second scan distinguishes Shopify's available flag from explicit preorder
+# text on the article. Nordic's 2026 Football Mega is available=True but marked
+# "Förbeställ" and "restbeställd", so it is deliberately absent here.
+SEPTEMBER_29_SECOND_SCAN_AT = datetime(2026, 9, 29, 18, 58, 0)
+SEPTEMBER_29_SECOND_SCAN = [
+    dict(slug="dd-2025-26-topps-hoops-basketball-value", name="2025-26 Topps Hoops Basketball Value Box", category="Basket", manufacturer="Topps", year="2025-26", series="Topps Hoops Basketball", fmt="value box", sku="DD-2025-26-HOOPS-BASKET-VALUE", price=449, packs=7, cards=8, stock="in_stock", language="English", store_name="DrakenDavids", observed_at=SEPTEMBER_29_SECOND_SCAN_AT, facts=["7 value-pack med 8 kort per paket, totalt 56 kort", "Topps Value Box-odds per pack: Block by Block 1:351; Hoops Rookie First Signs 1:207; familjeodds, inte odds för Flagg", "Retail-exklusiva autografer kan dras, men är inte garanterade i en box", "Hobby-exklusiva Oasis och Checkmate hör inte till value-formatet"], buy_url="https://www.drakendavids.se/products/topps-hoops-basketball-25-26-value-box"),
+    dict(slug="nsc-2025-topps-chrome-football-value", name="2025 Topps Chrome Football Value Box", category="NFL", manufacturer="Topps", year="2025", series="Chrome Football", fmt="value box", sku="NSC-2025-CHROME-FOOTBALL-VALUE", price=499, packs=7, cards=4, stock="in_stock", language="English", store_name="NordicSportsCards", observed_at=SEPTEMBER_29_SECOND_SCAN_AT, facts=["7 value-pack med 4 kort per paket, totalt 28 kort", "Value Box SE-odds per pack: Rookie Ray Wave Refractor 1:14, Fanatical 1:1 828 och Ultra Violet 1:2 742 för respektive kortfamilj", "Butikens text beskriver också produktseriens patch-autografer; denna profil lovar inte att hobbyspåren finns i value box", "Ingen autograf eller namngiven rookie garanteras"], buy_url="https://nordicsportscards.se/products/2025-topps-chrome-football-value-box"),
+    dict(slug="nsc-2026-topps-football-value", name="2026 Topps Flagship Football Value Box", category="NFL", manufacturer="Topps", year="2026", series="Flagship Football", fmt="value box", sku="CS-2026-FOOTBALL-VALUE-BACKUP", price=399, packs=6, cards=12, stock="in_stock", language="English", store_name="CardSurfer", observed_at=SEPTEMBER_29_SECOND_SCAN_AT, buy_url="https://cardsurferbreak.com/products/2026-topps-flagship-football-value-box"),
+]
+
 REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
 
 REAL_SNAPSHOT += REAL_PACK_SNAPSHOT
@@ -356,6 +366,7 @@ REAL_SNAPSHOT += SEPTEMBER_28_EXPANSION
 REAL_SNAPSHOT += DISNEY_BACKUP_OFFERS
 REAL_SNAPSHOT += LINK_AUDIT_BACKUP_OFFERS
 REAL_SNAPSHOT += SEPTEMBER_29_EXPANSION
+REAL_SNAPSHOT += SEPTEMBER_29_SECOND_SCAN
 
 DIRECT_BUY_URLS = {
     "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",
@@ -2393,6 +2404,29 @@ CHASE_PROFILES["dd-2025-26-topps-chrome-black-basketball-hobby"] = {
     "tiers":{"everyday":{"label":"Verifierat hobbyinnehåll","score":75,"items":["12 packkort plus 1 inkapslad autograf","2 hobby-pack, 1 separat topper"]},"good":{"label":"Namngiven rookie","score":72,"items":["Cooper Flagg rookie","Dylan Harper rookie"]},"big":{"label":"Stjärnsignatur eller Home Court","score":85,"items":["Wembanyama eller LeBron signerad","Cooper Flagg Home Court"]},"jackpot":{"label":"Toppautograf","score":93,"items":["Cooper Flagg Rookie Autograph"]}},
     "caveat":"En inkapslad autograf garanteras endast per hel hobbybox, inte per löst pack. Topps 1:50 för Rookie Autographs Base gäller hela familjen per separat autograftopper; 1:395 för Home Court gäller hela familjen per hobby-pack. Spelarspecifika odds saknas; se Topps odds-PDF: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Chrome_Black_Odds.pdf?v=1788295188. Pris 6 499 kr och bara två vanliga pack begränsar öppningsförsöken."}
 
+CHASE_PROFILES["dd-2025-26-topps-hoops-basketball-value"] = {
+    "source_name":"Topps, 2025-26 Hoops Basketball official checklist and Value Box odds",
+    "source_url":"https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2025-26_Topps_Hoops_Basketball_Checklist.pdf?v=1776110447",
+    "key_names":["Cooper Flagg","Dylan Harper","Kon Knueppel","Victor Wembanyama","LeBron James"],
+    "headline_chases":[
+        {"card":"Cooper Flagg Hoops Rookie First Signs HFS-CF","tier":"JACKPOT","odds":"First Signs-familjen 1:207 Value Box-pack; Flagg-specifikt odds saknas","why":"Topps namnger Flagg i den retailtillåtna rookieautografserien."},
+        {"card":"Cooper Flagg Block by Block BYB-1","tier":"MONSTER","odds":"Block by Block-familjen 1:351 Value Box-pack; Flagg-specifikt odds saknas","why":"Retail-case-hit-spår med Flagg i officiell checklista."},
+        {"card":"Dylan Harper Hoops Rookie First Signs HFS-DH","tier":"MYCKET BRA","odds":"First Signs-familjen 1:207 Value Box-pack; Harper-specifikt odds saknas","why":"Namngiven möjlig rookieautograf i retailformat."}],
+    "why_exciting":["Sju retailpack ger 56 kort för 449 kr, med rookies och egna retailträffar.","Topps publicerar separata Value Box-odds för autografer och Block by Block."],
+    "tiers":{"everyday":{"label":"Retailinnehåll","score":61,"items":["7 pack, 56 kort","Ingen autograf garanterad"]},"good":{"label":"Rookie och retailparallel","score":68,"items":["Cooper Flagg","Dylan Harper","Kon Knueppel"]},"big":{"label":"Retailträff","score":79,"items":["Hoops Rookie First Signs","Block by Block"]},"jackpot":{"label":"Namngiven retailchase","score":87,"items":["Cooper Flagg HFS-CF","Cooper Flagg BYB-1"]}},
+    "caveat":"Topps Value Box-odds 1:207 (First Signs) och 1:351 (Block by Block) gäller familjen per pack, inte en namngiven spelare; se officiell odds-PDF: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2025-26_Topps_Hoops_Basketball_Odds.pdf?v=1777298833. Hobby-exklusiva Oasis, Joy, Checkmate och Hoopnotic hör inte hit. Ingen signatur garanteras i boxen."}
+CHASE_PROFILES["nsc-2025-topps-chrome-football-value"] = {
+    "source_name":"Topps, 2025 Chrome Football official checklist and Value Box SE odds",
+    "source_url":"https://cdn.shopify.com/s/files/1/0739/2015/1805/files/2025_Chrome_Football_Checklist.pdf?v=1787941543",
+    "key_names":["Jaxson Dart","Cam Ward","Ashton Jeanty","Tetairoa McMillan","Josh Allen"],
+    "headline_chases":[
+        {"card":"Jaxson Dart Ultra Violet UV-1","tier":"JACKPOT","odds":"Ultra Violet-familjen 1:2 742 Value Box SE-pack; Dart-specifikt odds saknas","why":"Topps checklista namnger Jaxson Dart UV-1 och Value Box-odds bekräftar formatet."},
+        {"card":"Jaxson Dart Fanatical FF-5","tier":"MONSTER","odds":"Fanatical-familjen 1:1 828 Value Box SE-pack; Dart-specifikt odds saknas","why":"Retailtillåtet insert med namngiven rookie."},
+        {"card":"Cam Ward eller Ashton Jeanty Rookie Ray Wave Refractor","tier":"MYCKET BRA","odds":"Rookie Ray Wave-familjen 1:14 Value Box SE-pack; spelarspecifika odds saknas","why":"Rookieparallell som publiceras i Value Box SE-kolumnen."}],
+    "why_exciting":["Sju Chrome-retailpack ger 28 kort och retail-exklusiva rookieparalleller.","Jaxson Dart och andra namngivna rookies finns i officiell checklista, men de stora insertfamiljerna är sällsynta."],
+    "tiers":{"everyday":{"label":"Value Box-format","score":62,"items":["7 pack, 28 kort","Ingen autografgaranti"]},"good":{"label":"Rookieparallel","score":68,"items":["Cam Ward eller Ashton Jeanty Ray Wave"]},"big":{"label":"Sällsynt retailinsert","score":78,"items":["Fanatical rookie"]},"jackpot":{"label":"Ultra Violet","score":86,"items":["Jaxson Dart UV-1"]}},
+    "caveat":"Topps Value Box SE-odds per pack gäller hela familjer: Ray Wave rookie 1:14, Fanatical 1:1 828 och Ultra Violet 1:2 742; se officiell odds-PDF: https://cdn.shopify.com/s/files/1/0739/2015/1805/files/2025_Topps_Chrome_Football_Odds.pdf?v=1787942744. Inga spelarspecifika odds eller autografgarantier. Butikens allmänna text nämner PREM1ERE Patch, men profilen räknar inte hobbyspår som value-träffar."}
+
 def seed_chase_profiles():
     db=SessionLocal()
     try:
@@ -2406,6 +2440,7 @@ def seed_chase_profiles():
         retail_scan_slugs={x["slug"] for x in RETAIL_SCAN_EXPANSION}
         september_28_slugs={x["slug"] for x in SEPTEMBER_28_EXPANSION}
         september_29_slugs={x["slug"] for x in SEPTEMBER_29_EXPANSION}
+        september_29_second_slugs={x["slug"] for x in SEPTEMBER_29_SECOND_SCAN}
         expansion_slugs={x["slug"] for x in REAL_NONSPORT_EXPANSION + REAL_CROSS_CATEGORY_EXPANSION}
         for slug,data in CHASE_PROFILES.items():
             product=db.scalar(select(Product).where(Product.slug==slug))
@@ -2420,7 +2455,8 @@ def seed_chase_profiles():
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
             row.verified_at=(
-                SEPTEMBER_29_OBSERVED_AT if slug in september_29_slugs
+                SEPTEMBER_29_SECOND_SCAN_AT if slug in september_29_second_slugs
+                else SEPTEMBER_29_OBSERVED_AT if slug in september_29_slugs
                 else SEPTEMBER_28_OBSERVED_AT if slug in september_28_slugs
                 else RETAIL_SCAN_OBSERVED_AT if slug in retail_scan_slugs
                 else POKEMON_ENGLISH_OBSERVED_AT if slug in pokemon_english_slugs

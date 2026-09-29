@@ -53,7 +53,8 @@ def test_nordic_nfl_formats_and_chrome_black_hobby_have_distinct_verified_profil
         assert offer.stock_status=="in_stock" and offer.price_sek==row["price"]
         assert offer.url==row["buy_url"] and "/products/" in offer.url
         profile=db.scalar(select(ChaseProfile).where(ChaseProfile.variant_id==variant.id))
-        assert profile and profile.verified_at==seedmod.SEPTEMBER_29_OBSERVED_AT
+        expected=seedmod.SEPTEMBER_29_SECOND_SCAN_AT if slug=="nsc-2026-topps-football-value" else seedmod.SEPTEMBER_29_OBSERVED_AT
+        assert profile and profile.verified_at==expected
         assert seedmod.CHASE_PROFILES[slug]["headline_chases"]
     fat=seedmod.CHASE_PROFILES["nsc-2026-topps-football-fat-pack"]
     value=seedmod.CHASE_PROFILES["nsc-2026-topps-football-value"]
@@ -70,6 +71,39 @@ def test_nordic_nfl_formats_and_chrome_black_hobby_have_distinct_verified_profil
     assert total_sealed_cards(basket_variant)==13
     catalog=real_catalog(category="NFL",budget=100,format=None,limit=200,db=db)
     assert any(item["slug"]=="nsc-2026-topps-football-fat-pack" for item in catalog["products"])
+    db.close()
+
+def test_second_retail_scan_excludes_preorders_and_keeps_value_odds_distinct(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    new={"dd-2025-26-topps-hoops-basketball-value","nsc-2025-topps-chrome-football-value"}
+    for slug in new:
+        product=db.scalar(select(Product).where(Product.slug==slug))
+        assert product is not None
+        variant=db.scalar(select(ProductVariant).where(ProductVariant.product_id==product.id))
+        offer=db.scalar(select(Offer).where(Offer.variant_id==variant.id))
+        assert offer.stock_status=="in_stock" and offer.url.endswith("value-box")
+        profile=db.scalar(select(ChaseProfile).where(ChaseProfile.variant_id==variant.id))
+        assert profile.verified_at==seedmod.SEPTEMBER_29_SECOND_SCAN_AT
+    hoops=seedmod.CHASE_PROFILES["dd-2025-26-topps-hoops-basketball-value"]
+    chrome=seedmod.CHASE_PROFILES["nsc-2025-topps-chrome-football-value"]
+    assert "1:207 Value Box-pack" in hoops["headline_chases"][0]["odds"]
+    assert "Oasis" not in str(hoops["headline_chases"])
+    assert "PREM1ERE Patch" not in str(chrome["headline_chases"])
+    assert "1:2 742 Value Box SE-pack" in chrome["headline_chases"][0]["odds"]
+    assert not any("mega" in row["slug"] and "2026-topps-football" in row["slug"] for row in seedmod.REAL_SNAPSHOT)
+    flagship=db.scalar(select(Product).where(Product.slug=="nsc-2026-topps-football-value"))
+    offers=db.scalars(select(Offer).join(ProductVariant).where(ProductVariant.product_id==flagship.id)).all()
+    assert {offer.store.name for offer in offers}=={"NordicSportsCards","CardSurfer"}
+    assert all(offer.price_sek==399 and offer.stock_status=="in_stock" for offer in offers)
+    flagship_variant=db.scalar(select(ProductVariant).where(ProductVariant.product_id==flagship.id))
+    facts=db.scalar(select(ProductFact).where(ProductFact.variant_id==flagship_variant.id))
+    assert "1:4 133" in facts.facts_json
+    catalog=real_catalog(category="Basket",budget=500,format="value box",limit=200,db=db)
+    assert any(row["slug"]=="dd-2025-26-topps-hoops-basketball-value" for row in catalog["products"])
     db.close()
 
 def test_verified_product_facts_exist_for_supported_products(monkeypatch):
