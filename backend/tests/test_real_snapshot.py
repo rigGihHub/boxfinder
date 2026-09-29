@@ -35,6 +35,28 @@ def test_verified_snapshot_is_idempotent(monkeypatch):
     assert count == len(seedmod.REAL_SNAPSHOT)
     db.close()
 
+def test_jollyroom_pitch_black_etb_is_a_distinct_backup_offer(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    product=db.scalar(select(Product).where(Product.slug=="ch-pokemon-pitch-black-etb"))
+    variant=db.scalar(select(ProductVariant).where(ProductVariant.product_id==product.id))
+    offers=db.scalars(select(Offer).where(Offer.variant_id==variant.id)).all()
+    assert {offer.store.name for offer in offers}=={"CardHaven","Jollyroom"}
+    jollyroom=next(offer for offer in offers if offer.store.name=="Jollyroom")
+    assert jollyroom.price_sek==1099 and jollyroom.stock_status=="in_stock"
+    assert not jollyroom.is_preorder
+    assert jollyroom.url.endswith("/pokemon-mega-evolution-5-elite-trainer-box")
+    assert (variant.packs,variant.cards_per_pack)==(9,10)
+    assert list_products(category="Pokémon",max_price=1000,db=db,include_details=False)
+    catalog=real_catalog(category="Pokémon",budget=1200,format="elite trainer box",limit=200,db=db)
+    pitch=next(row for row in catalog["products"] if row["slug"]==product.slug)
+    assert pitch["price"]==999 and pitch["store"]=="CardHaven"
+    assert pitch["chase_profile"]["headline_chases"][0]["card"].startswith("Mega Darkrai ex")
+    db.close()
+
 def test_nordic_nfl_formats_and_chrome_black_hobby_have_distinct_verified_profiles(monkeypatch):
     Session=session_factory()
     monkeypatch.setattr(seedmod,"SessionLocal",Session)

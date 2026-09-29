@@ -39,6 +39,7 @@ REAL_STORES = [
     dict(name="NordicSportsCards", homepage_url="https://nordicsportscards.se/", source_url="https://nordicsportscards.se/collections/amerikansk-fotboll", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="DrakenDavids", homepage_url="https://www.drakendavids.se/", source_url="https://www.drakendavids.se/collections/alla-samlarkort-tillbehor", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="CardSurfer", homepage_url="https://cardsurferbreak.com/", source_url="https://cardsurferbreak.com/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="Jollyroom", homepage_url="https://www.jollyroom.se/", source_url="https://www.jollyroom.se/leksaker/spel-pussel/kortspel-memory", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Poketalk", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Samlartorget", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="EllieCollectables", homepage_url="https://elliecollectables.se/", source_url="https://elliecollectables.se/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
@@ -349,6 +350,11 @@ SEPTEMBER_29_SECOND_SCAN = [
     dict(slug="nsc-2026-topps-football-value", name="2026 Topps Flagship Football Value Box", category="NFL", manufacturer="Topps", year="2026", series="Flagship Football", fmt="value box", sku="CS-2026-FOOTBALL-VALUE-BACKUP", price=399, packs=6, cards=12, stock="in_stock", language="English", store_name="CardSurfer", observed_at=SEPTEMBER_29_SECOND_SCAN_AT, buy_url="https://cardsurferbreak.com/products/2026-topps-flagship-football-value-box"),
 ]
 
+SEPTEMBER_29_JOLLYROOM_AT = datetime(2026, 9, 29, 19, 20, 0)
+SEPTEMBER_29_JOLLYROOM_OFFERS = [
+    dict(slug="ch-pokemon-pitch-black-etb", name="Pokémon Mega Evolution: Pitch Black Elite Trainer Box", category="Pokémon", manufacturer="The Pokémon Company", year="2026", series="Pitch Black", fmt="elite trainer box", sku="JOLLYROOM-10341683", price=1099, packs=9, cards=10, stock="in_stock", language="English", store_name="Jollyroom", observed_at=SEPTEMBER_29_JOLLYROOM_AT, buy_url="https://www.jollyroom.se/leksaker/spel-pussel/kortspel-memory/pokemon-mega-evolution-5-elite-trainer-box"),
+]
+
 REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
 
 REAL_SNAPSHOT += REAL_PACK_SNAPSHOT
@@ -367,6 +373,7 @@ REAL_SNAPSHOT += DISNEY_BACKUP_OFFERS
 REAL_SNAPSHOT += LINK_AUDIT_BACKUP_OFFERS
 REAL_SNAPSHOT += SEPTEMBER_29_EXPANSION
 REAL_SNAPSHOT += SEPTEMBER_29_SECOND_SCAN
+REAL_SNAPSHOT += SEPTEMBER_29_JOLLYROOM_OFFERS
 
 DIRECT_BUY_URLS = {
     "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",
