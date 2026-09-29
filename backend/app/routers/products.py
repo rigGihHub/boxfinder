@@ -13,6 +13,7 @@ from ..services.price_signals import recent_signals
 from ..services.product_explanation import explain_variant
 from ..services.chase_content import get_profile, profile_from_row, content_summary, chase_ladder, chase_coverage, pull_profile
 from ..services.purchase_links import is_direct_purchase_url
+from ..services.product_format import total_sealed_cards
 
 router = APIRouter(prefix="/products", tags=["products"])
 
@@ -45,7 +46,7 @@ def serialize_variant(v: ProductVariant):
         "price": best.price_sek, "market_median": market_median, "store": best.store.name,
         "url": best.url, "observed_at": best.observed_at.isoformat() if best.observed_at else None,
         "packs": v.packs, "cards_per_pack": v.cards_per_pack,
-        "total_cards": v.packs*v.cards_per_pack if v.packs and v.cards_per_pack else None,
+        "total_cards": total_sealed_cards(v),
         "ev_low": a.ev_low if a else None, "ev_high": a.ev_high if a else None,
         "box_value_score": score, "data_quality": a.data_quality if a else 0,
         "checklist_strength": a.checklist_strength if a else None,

@@ -35,6 +35,43 @@ def test_verified_snapshot_is_idempotent(monkeypatch):
     assert count == len(seedmod.REAL_SNAPSHOT)
     db.close()
 
+def test_nordic_nfl_formats_and_chrome_black_hobby_have_distinct_verified_profiles(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    additions={row["slug"]:row for row in seedmod.SEPTEMBER_29_EXPANSION}
+    assert len(additions)==4
+    for slug,row in additions.items():
+        product=db.scalar(select(Product).where(Product.slug==slug))
+        assert product and product.category==row["category"]
+        variant=db.scalar(select(ProductVariant).where(ProductVariant.product_id==product.id))
+        assert (variant.packs,variant.cards_per_pack)==(row["packs"],row["cards"])
+        offer=db.scalar(select(Offer).where(Offer.variant_id==variant.id))
+        assert offer.store.name==row["store_name"]
+        assert offer.stock_status=="in_stock" and offer.price_sek==row["price"]
+        assert offer.url==row["buy_url"] and "/products/" in offer.url
+        profile=db.scalar(select(ChaseProfile).where(ChaseProfile.variant_id==variant.id))
+        assert profile and profile.verified_at==seedmod.SEPTEMBER_29_OBSERVED_AT
+        assert seedmod.CHASE_PROFILES[slug]["headline_chases"]
+    fat=seedmod.CHASE_PROFILES["nsc-2026-topps-football-fat-pack"]
+    value=seedmod.CHASE_PROFILES["nsc-2026-topps-football-value"]
+    signature=seedmod.CHASE_PROFILES["nsc-2025-signature-class-football-value"]
+    basket=seedmod.CHASE_PROFILES["dd-2025-26-topps-chrome-black-basketball-hobby"]
+    assert "1:214 Fat Packs" in fat["headline_chases"][1]["odds"]
+    assert "1:245 Value Box-pack" in value["headline_chases"][1]["odds"]
+    assert "Monarchs" not in str(signature["headline_chases"])
+    assert "Monarchs" in signature["caveat"] and "ingen autograf" in signature["caveat"].lower()
+    assert "topper" in basket["headline_chases"][0]["odds"]
+    assert "13 kort" in basket["why_exciting"][0]
+    from app.services.product_format import total_sealed_cards
+    basket_variant=db.scalar(select(ProductVariant).join(Product).where(Product.slug=="dd-2025-26-topps-chrome-black-basketball-hobby"))
+    assert total_sealed_cards(basket_variant)==13
+    catalog=real_catalog(category="NFL",budget=100,format=None,limit=200,db=db)
+    assert any(item["slug"]=="nsc-2026-topps-football-fat-pack" for item in catalog["products"])
+    db.close()
+
 def test_verified_product_facts_exist_for_supported_products(monkeypatch):
     Session=session_factory()
     monkeypatch.setattr(seedmod,"SessionLocal",Session)

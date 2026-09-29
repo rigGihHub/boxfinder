@@ -10,6 +10,7 @@ from ..services.discovery import GOALS, discover
 from ..services.product_explanation import explain_variant
 from ..services.chase_content import profile_from_row, content_summary, chase_ladder, chase_coverage, pull_profile
 from ..services.purchase_links import is_direct_purchase_url
+from ..services.product_format import total_sealed_cards
 
 router=APIRouter(prefix="/discovery",tags=["discovery"])
 
@@ -99,7 +100,7 @@ def real_catalog(
             "url":best.url,
             "packs":v.packs,
             "cards_per_pack":v.cards_per_pack,
-            "total_cards":v.packs*v.cards_per_pack if v.packs and v.cards_per_pack else None,
+            "total_cards":total_sealed_cards(v),
             "observed_at":best.observed_at.isoformat() if best.observed_at else None,
             "age_days":age_days,
             "freshness":"fresh" if age_days is not None and age_days<=14 else "stale",

@@ -36,7 +36,7 @@ REAL_STORES = [
     dict(name="Webhallen", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="RA Card", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="SpelOchSånt", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
-    dict(name="NordicSportsCards", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="NordicSportsCards", homepage_url="https://nordicsportscards.se/", source_url="https://nordicsportscards.se/collections/amerikansk-fotboll", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="DrakenDavids", homepage_url="https://www.drakendavids.se/", source_url="https://www.drakendavids.se/collections/alla-samlarkort-tillbehor", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="CardSurfer", homepage_url="https://cardsurferbreak.com/", source_url="https://cardsurferbreak.com/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Poketalk", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
@@ -329,6 +329,16 @@ LINK_AUDIT_BACKUP_OFFERS = [
     dict(slug="cc-2026-topps-chrome-ufc-value", name="2026 Topps Chrome UFC Fighting Value Box", category="UFC", manufacturer="Topps", year="2026", series="Topps Chrome UFC", fmt="value box", sku="TOPPS-CHROME-UFC-VALUE-2026", price=349, packs=6, cards=4, stock="in_stock", store_name="CardSurfer", observed_at=LINK_AUDIT_OBSERVED_AT, facts=["6 value-pack med 4 kort per paket", "UFC Glove Refractors är Value Box-exklusiva", "Autografer och case hits kan dras men är inte garanterade i en box"], buy_url="https://cardsurferbreak.com/en-se/products/2026-topps-chrome-ufc-value-box"),
 ]
 
+# Direct Shopify article and variant availability rechecked 2026-09-29.
+# Topps' separate Fat Pack, Value Box and Hobby odds columns govern the profiles.
+SEPTEMBER_29_OBSERVED_AT = datetime(2026, 9, 29, 17, 53, 0)
+SEPTEMBER_29_EXPANSION = [
+    dict(slug="nsc-2026-topps-football-fat-pack", name="2026 Topps Flagship Football Fat Pack", category="NFL", manufacturer="Topps", year="2026", series="Flagship Football", fmt="single pack", sku="NSC-2026-FOOTBALL-FAT-PACK", price=99, packs=1, cards=36, stock="in_stock", language="English", store_name="NordicSportsCards", observed_at=SEPTEMBER_29_OBSERVED_AT, facts=["1 fat pack med 36 kort", "Topps checklista namnger rookies Fernando Mendoza, Jeremiyah Love och Carnell Tate", "Topps Fat Pack-odds: Golden Mirror Image 1:4 133 pack för hela insertfamiljen; ingen särskild spelare garanteras", "Ett löst retailpaket saknar hobbyboxens autograf/relic-garanti"], buy_url="https://nordicsportscards.se/products/2026-topps-flagship-football-fat-pack"),
+    dict(slug="nsc-2026-topps-football-value", name="2026 Topps Flagship Football Value Box", category="NFL", manufacturer="Topps", year="2026", series="Flagship Football", fmt="value box", sku="NSC-2026-FOOTBALL-VALUE", price=399, packs=6, cards=12, stock="in_stock", language="English", store_name="NordicSportsCards", observed_at=SEPTEMBER_29_OBSERVED_AT, facts=["6 value-pack med 12 kort per paket, totalt 72 kort", "Topps Value Box-odds: Golden Mirror Image 1:4 133 pack för hela insertfamiljen", "Autografer och relics kan förekomma men är inte garanterade i value box; hobbyboxens garanti gäller inte"], buy_url="https://nordicsportscards.se/products/2026-topps-flagship-football-value-box"),
+    dict(slug="nsc-2025-signature-class-football-value", name="2025 Topps Signature Class Football Value Box", category="NFL", manufacturer="Topps", year="2025", series="Signature Class Football", fmt="value box", sku="NSC-2025-SIGNATURE-FOOTBALL-VALUE", price=499, packs=6, cards=7, stock="in_stock", language="English", store_name="NordicSportsCards", observed_at=SEPTEMBER_29_OBSERVED_AT, facts=["6 value-pack med 7 kort per paket, totalt 42 kort", "Topps Value Box SE-odds: Rookie Class Autograph 1:88 pack och Odyssey 1:696 pack, båda odds för hela kortfamiljen", "Monarchs, Leviathans, Chrome- och Crystal Clear-autografer har streck i Topps Value Box-kolumn och hör inte till detta format", "Ingen namngiven rookie eller autograf garanteras"], buy_url="https://nordicsportscards.se/products/2025-topps-signature-class-football-value-box"),
+    dict(slug="dd-2025-26-topps-chrome-black-basketball-hobby", name="2025-26 Topps Chrome Black Basketball Hobby Box", category="Basket", manufacturer="Topps", year="2025-26", series="Chrome Black Basketball", fmt="hobby box", sku="DD-2025-26-CHROME-BLACK-BASKET-HOBBY", price=6499, packs=2, cards=6, stock="in_stock", language="English", store_name="DrakenDavids", observed_at=SEPTEMBER_29_OBSERVED_AT, facts=["2 hobby-pack med 6 kort var (12 packkort) samt 1 separat inkapslad autograf: totalt 13 kort enligt Topps", "1 inkapslad autograf per hel hobbybox; ingen namngiven signer garanteras", "Home Court som insertfamilj 1:395 hobby-pack och Rookie Autographs Base som familj 1:50 autograftoppers", "Butikspris 6 499 kr; två pack och en separat topper ger få öppningsförsök"], buy_url="https://www.drakendavids.se/products/topps-chrome-black-basketball-25-26-hobby-box"),
+]
+
 REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
 
 REAL_SNAPSHOT += REAL_PACK_SNAPSHOT
@@ -345,6 +355,7 @@ REAL_SNAPSHOT += RETAIL_SCAN_EXPANSION
 REAL_SNAPSHOT += SEPTEMBER_28_EXPANSION
 REAL_SNAPSHOT += DISNEY_BACKUP_OFFERS
 REAL_SNAPSHOT += LINK_AUDIT_BACKUP_OFFERS
+REAL_SNAPSHOT += SEPTEMBER_29_EXPANSION
 
 DIRECT_BUY_URLS = {
     "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",
@@ -2335,6 +2346,53 @@ CHASE_PROFILES["cs-2025-26-signature-series-basketball-hobby"] = {
     "tiers":{"everyday":{"label":"Verifierat hobbyinnehåll","score":78,"items":["1 slabbed autograph /49 eller lägre","2 base parallels, 1 base och 1 insert"]},"good":{"label":"Bra träff","score":77,"items":["Numrerad autograf av namngiven signer"]},"big":{"label":"Riktigt bra","score":85,"items":["VJ Edgecombe eller Magic Johnson auto","Kaboom SSP"]},"jackpot":{"label":"Produktens toppspår","score":91,"items":["Kaboom Black 1/1 eller toppsigner i låg upplaga"]}},
     "caveat":"Garantin gäller en hel hobbybox med ett pack, inte lösa paket. Vilken signer som finns i boxen är okänt; Panini publicerar inte odds för en viss spelare eller Kaboom. Produktens få kort och höga pris begränsar antalet försök."}
 
+_flagship_football_checklist = "https://cdn.shopify.com/s/files/1/0662/9749/5709/files/CheckList_26TFOB_VERSION5_1.pdf?v=1786730315"
+_flagship_football_odds = "https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Football_Odds.pdf?v=1789491381"
+CHASE_PROFILES["nsc-2026-topps-football-fat-pack"] = {
+    "source_name":"Topps, 2026 Flagship Football official checklist and format odds PDF",
+    "source_url":_flagship_football_checklist,
+    "key_names":["Fernando Mendoza","Jeremiyah Love","Carnell Tate","Patrick Mahomes II","Josh Allen"],
+    "headline_chases":[
+        {"card":"Fernando Mendoza Golden Mirror Image variation","tier":"JACKPOT","odds":"Golden Mirror Image-familjen 1:4 133 Fat Packs; spelarspecifikt odds saknas","why":"Topps checklistar rookien och den sällsynta bildvariationsfamiljen; ingen viss spelare garanteras i varianten."},
+        {"card":"Fernando Mendoza eller Jeremiyah Love rookieparallel Gold","tier":"MONSTER","odds":"Base Gold-familjen 1:214 Fat Packs; spelarspecifikt odds saknas","why":"Namngivna rookies i Topps checklista; parallellen avser hela basfamiljen."},
+        {"card":"Carnell Tate rookie","tier":"BRA","odds":"Kortspecifikt Fat Pack-odds saknas","why":"Namngiven rookie i Topps officiella checklista."}],
+    "why_exciting":["36 kort i ett Fat Pack för 99 kr ger ett tillgängligt NFL-försök.","Golden Mirror och lågnumrerade rookies finns i formatets oddslista, men är sällsynta."],
+    "tiers":{"everyday":{"label":"Ett Fat Pack","score":56,"items":["36 slumpmässiga kort","Ingen autograf- eller relicgaranti"]},"good":{"label":"Rookie eller parallel","score":64,"items":["Fernando Mendoza","Jeremiyah Love","Carnell Tate"]},"big":{"label":"Sällsynt parallel","score":78,"items":["Gold rookieparallel"]},"jackpot":{"label":"Sällsynt bildvariation","score":86,"items":["Golden Mirror Image av namngiven rookie"]}},
+    "caveat":"Ett löst Fat Pack. Topps odds för Golden Mirror Image 1:4 133 och Base Gold 1:214 gäller hela familjer per Fat Pack, inte Fernando Mendoza eller någon annan spelare; se Topps officiella odds-PDF: " + _flagship_football_odds + ". Hobbyboxens autograf/relic-garanti gäller inte."}
+CHASE_PROFILES["nsc-2026-topps-football-value"] = {
+    "source_name":"Topps, 2026 Flagship Football official checklist and Value Box odds PDF",
+    "source_url":_flagship_football_checklist,
+    "key_names":["Fernando Mendoza","Jeremiyah Love","Carnell Tate","Patrick Mahomes II","Josh Allen"],
+    "headline_chases":[
+        {"card":"Fernando Mendoza Golden Mirror Image variation","tier":"JACKPOT","odds":"Golden Mirror Image-familjen 1:4 133 Value Box-pack; spelarspecifikt odds saknas","why":"Topps listar rookien och publicerar Value Box-odds för insertfamiljen."},
+        {"card":"Jeremiyah Love eller Carnell Tate rookieparallel Gold","tier":"MONSTER","odds":"Base Gold-familjen 1:245 Value Box-pack; spelarspecifikt odds saknas","why":"Rookies i officiell checklista med möjligt retailparallellspår."},
+        {"card":"Fernando Mendoza rookie","tier":"BRA","odds":"Kortspecifikt Value Box-odds saknas","why":"Namngiven rookie i officiella checklistan."}],
+    "why_exciting":["Sex Value Box-pack med tolv kort var ger 72 slumpmässiga kort.","Retailparalleller och Golden Mirror är möjliga, men en särskild toppträff är osannolik."],
+    "tiers":{"everyday":{"label":"Value Box-format","score":64,"items":["6 pack, 72 kort","Ingen autograf- eller relicgaranti"]},"good":{"label":"Bra rookie","score":67,"items":["Fernando Mendoza","Jeremiyah Love"]},"big":{"label":"Gold parallel","score":78,"items":["Rookie Gold parallel"]},"jackpot":{"label":"Golden Mirror","score":86,"items":["Golden Mirror Image-rookie"]}},
+    "caveat":"Value Box-odds 1:4 133 för Golden Mirror Image och 1:245 för Base Gold är per paket och gäller kortfamiljer, inte namngivna spelare; se Topps odds-PDF: " + _flagship_football_odds + ". Hobbyboxens hitgaranti gäller inte value box."}
+CHASE_PROFILES["nsc-2025-signature-class-football-value"] = {
+    "source_name":"Topps, 2025 Signature Class Football official checklist and Value Box SE odds PDF",
+    "source_url":"https://cdn.shopify.com/s/files/1/0662/9749/5709/files/Checklist_25CSFB_VERSION2.pdf?v=1777921828",
+    "key_names":["Jaxson Dart","Cam Ward","Ashton Jeanty","Tetairoa McMillan","Josh Allen"],
+    "headline_chases":[
+        {"card":"Jaxson Dart Rookie Class Autograph variation","tier":"JACKPOT","odds":"Rookie Class Autograph-familjen 1:88 Value Box SE-pack; Dart-specifikt odds saknas","why":"Dart finns i Topps officiella Rookie Class Autograph-checklista och familjen förekommer i retail."},
+        {"card":"Josh Allen Odyssey OD-2","tier":"MONSTER","odds":"Odyssey-familjen 1:696 Value Box SE-pack; Allen-specifikt odds saknas","why":"Namngivet kort i Topps Odyssey-checklista, som har publicerade value-odds."},
+        {"card":"Cam Ward eller Ashton Jeanty Rookie Class Autograph variation","tier":"MYCKET BRA","odds":"Rookie Class Autograph-familjen 1:88 Value Box SE-pack; spelarspecifikt odds saknas","why":"Båda finns i den officiella rookieautografchecklistan."}],
+    "why_exciting":["Sex value-pack ger 42 kort och möjlighet till namngivna rookieautografer.","Topps publicerar separata retailodds för Rookie Class Autograph och Odyssey."],
+    "tiers":{"everyday":{"label":"Value Box-format","score":61,"items":["6 pack, 42 kort","Ingen autografgaranti"]},"good":{"label":"Rookie","score":66,"items":["Jaxson Dart","Cam Ward","Ashton Jeanty"]},"big":{"label":"Retailautograf","score":80,"items":["Rookie Class Autograph variation"]},"jackpot":{"label":"Namngivet toppkort","score":88,"items":["Jaxson Dart rookieautograf","Josh Allen Odyssey"]}},
+    "caveat":"Topps Value Box SE-odds 1:88 (Rookie Class Autograph) och 1:696 (Odyssey) är familjeodds per pack, inte odds för Dart eller Allen; se Topps odds-PDF: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2025_Signature_Class_Football_Odds.pdf?v=1781876271. Monarchs, Leviathans, Chrome Autographs och Crystal Clear Autographs är hobby/jumbo och saknas i value-formatets oddslista. Ingen autograf garanteras."}
+CHASE_PROFILES["dd-2025-26-topps-chrome-black-basketball-hobby"] = {
+    "source_name":"Topps, 2025-26 Chrome Black Basketball official checklist, hobby configuration and odds",
+    "source_url":"https://cdn.shopify.com/s/files/1/0662/9749/5709/files/Cheklist_chrome_black.pdf?v=1785244468",
+    "key_names":["Cooper Flagg","Dylan Harper","Kon Knueppel","Victor Wembanyama","LeBron James","Stephen Curry"],
+    "headline_chases":[
+        {"card":"Cooper Flagg Rookie Autograph RA-CF","tier":"JACKPOT","odds":"Rookie Autographs Base 1:50 inkapslade autograftoppers för hela familjen; Flagg-odds saknas","why":"Verifierad namngiven rookieautograf, möjlig som boxens inkapslade signerade kort."},
+        {"card":"LeBron James Autograph AU-LJ eller Victor Wembanyama AU-VW","tier":"MONSTER","odds":"Namnspecifikt topperodds saknas","why":"Båda finns i Topps officiella autografchecklista."},
+        {"card":"Cooper Flagg Home Court HC-8","tier":"MONSTER","odds":"Home Court-familjen 1:395 hobby-pack; Flagg-specifikt odds saknas","why":"Namngivet sällsynt insert från de två vanliga packen, inte från den inkapslade toppern."}],
+    "why_exciting":["En hel hobbybox ger två pack med sex kort var plus en separat inkapslad autograf, totalt 13 kort.","Checklistan kombinerar Flagg, Harper och Knueppel med Wembanyama, LeBron och Curry."],
+    "tiers":{"everyday":{"label":"Verifierat hobbyinnehåll","score":75,"items":["12 packkort plus 1 inkapslad autograf","2 hobby-pack, 1 separat topper"]},"good":{"label":"Namngiven rookie","score":72,"items":["Cooper Flagg rookie","Dylan Harper rookie"]},"big":{"label":"Stjärnsignatur eller Home Court","score":85,"items":["Wembanyama eller LeBron signerad","Cooper Flagg Home Court"]},"jackpot":{"label":"Toppautograf","score":93,"items":["Cooper Flagg Rookie Autograph"]}},
+    "caveat":"En inkapslad autograf garanteras endast per hel hobbybox, inte per löst pack. Topps 1:50 för Rookie Autographs Base gäller hela familjen per separat autograftopper; 1:395 för Home Court gäller hela familjen per hobby-pack. Spelarspecifika odds saknas; se Topps odds-PDF: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Chrome_Black_Odds.pdf?v=1788295188. Pris 6 499 kr och bara två vanliga pack begränsar öppningsförsöken."}
+
 def seed_chase_profiles():
     db=SessionLocal()
     try:
@@ -2347,6 +2405,7 @@ def seed_chase_profiles():
         pokemon_english_slugs={x["slug"] for x in POKEMON_ENGLISH_EXPANSION}
         retail_scan_slugs={x["slug"] for x in RETAIL_SCAN_EXPANSION}
         september_28_slugs={x["slug"] for x in SEPTEMBER_28_EXPANSION}
+        september_29_slugs={x["slug"] for x in SEPTEMBER_29_EXPANSION}
         expansion_slugs={x["slug"] for x in REAL_NONSPORT_EXPANSION + REAL_CROSS_CATEGORY_EXPANSION}
         for slug,data in CHASE_PROFILES.items():
             product=db.scalar(select(Product).where(Product.slug==slug))
@@ -2361,7 +2420,8 @@ def seed_chase_profiles():
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
             row.verified_at=(
-                SEPTEMBER_28_OBSERVED_AT if slug in september_28_slugs
+                SEPTEMBER_29_OBSERVED_AT if slug in september_29_slugs
+                else SEPTEMBER_28_OBSERVED_AT if slug in september_28_slugs
                 else RETAIL_SCAN_OBSERVED_AT if slug in retail_scan_slugs
                 else POKEMON_ENGLISH_OBSERVED_AT if slug in pokemon_english_slugs
                 else TCG_MARKET_OBSERVED_AT if slug in tcg_market_slugs
