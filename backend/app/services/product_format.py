@@ -1,8 +1,11 @@
-"""Count sealed cards that are supplied outside the listed packs."""
+"""Account for format-specific cards beyond the pack-count baseline."""
 
 SEPARATE_BOX_CARDS = {
     # Topps: two six-card packs plus a separate encased autograph topper.
     "dd-2025-26-topps-chrome-black-basketball-hobby": 1,
+    # Nine 14-card Play Boosters plus one 15-card Collector Booster.
+    # The two promo cards and lands are described separately from booster cards.
+    "ad-mtg-tmnt-pizza-bundle": 1,
 }
 
 

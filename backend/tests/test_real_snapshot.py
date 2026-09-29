@@ -57,6 +57,38 @@ def test_jollyroom_pitch_black_etb_is_a_distinct_backup_offer(monkeypatch):
     assert pitch["chase_profile"]["headline_chases"][0]["card"].startswith("Mega Darkrai ex")
     db.close()
 
+def test_arcade_dreams_second_scan_has_format_specific_chases(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    assert len(seedmod.ARCADE_DREAMS_SECOND_SCAN)==3
+    for row in seedmod.ARCADE_DREAMS_SECOND_SCAN:
+        product=db.scalar(select(Product).where(Product.slug==row["slug"]))
+        assert product and product.category==row["category"]
+        variant=db.scalar(select(ProductVariant).where(ProductVariant.product_id==product.id))
+        offer=db.scalar(select(Offer).where(Offer.variant_id==variant.id))
+        assert offer.store.name=="Arcade Dreams"
+        assert offer.price_sek==row["price"] and offer.stock_status=="in_stock"
+        assert not offer.is_preorder and offer.url==row["buy_url"]
+        profile=db.scalar(select(ChaseProfile).where(ChaseProfile.variant_id==variant.id))
+        assert profile and profile.verified_at==seedmod.ARCADE_DREAMS_SECOND_SCAN_AT
+    pizza=seedmod.CHASE_PROFILES["ad-mtg-tmnt-pizza-bundle"]
+    assert "endast i den enda Collector Boostern" in pizza["caveat"]
+    assert "garanteras" in pizza["caveat"]
+    avatar=seedmod.CHASE_PROFILES["ad-mtg-avatar-collector-display"]
+    assert "Färre än 1 %" in avatar["headline_chases"][0]["odds"]
+    yugioh=seedmod.CHASE_PROFILES["ad-yugioh-glorious-gallery-pack"]
+    assert "enskilt löst paket" in yugioh["caveat"]
+    catalog=real_catalog(category="Magic",budget=6000,format=None,limit=200,db=db)
+    by_slug={x["slug"]:x for x in catalog["products"]}
+    assert by_slug["ad-mtg-tmnt-pizza-bundle"]["total_cards"]==141
+    assert by_slug["ad-mtg-avatar-collector-display"]["total_cards"]==180
+    under_100=real_catalog(category="Yu-Gi-Oh",budget=100,format="single pack",limit=200,db=db)
+    assert any(x["slug"]=="ad-yugioh-glorious-gallery-pack" for x in under_100["products"])
+    db.close()
+
 def test_nordic_nfl_formats_and_chrome_black_hobby_have_distinct_verified_profiles(monkeypatch):
     Session=session_factory()
     monkeypatch.setattr(seedmod,"SessionLocal",Session)

@@ -355,6 +355,13 @@ SEPTEMBER_29_JOLLYROOM_OFFERS = [
     dict(slug="ch-pokemon-pitch-black-etb", name="Pokémon Mega Evolution: Pitch Black Elite Trainer Box", category="Pokémon", manufacturer="The Pokémon Company", year="2026", series="Pitch Black", fmt="elite trainer box", sku="JOLLYROOM-10341683", price=1099, packs=9, cards=10, stock="in_stock", language="English", store_name="Jollyroom", observed_at=SEPTEMBER_29_JOLLYROOM_AT, buy_url="https://www.jollyroom.se/leksaker/spel-pussel/kortspel-memory/pokemon-mega-evolution-5-elite-trainer-box"),
 ]
 
+ARCADE_DREAMS_SECOND_SCAN_AT = datetime(2026, 9, 29, 21, 4, 0)
+ARCADE_DREAMS_SECOND_SCAN = [
+    dict(slug="ad-mtg-tmnt-pizza-bundle", name="Magic: The Gathering Teenage Mutant Ninja Turtles Pizza Bundle", category="Magic", manufacturer="Wizards of the Coast", year="2026", series="Teenage Mutant Ninja Turtles", fmt="bundle", sku="AD-35750", price=1049, packs=10, cards=14, stock="in_stock", language="English", store_name="Arcade Dreams", observed_at=ARCADE_DREAMS_SECOND_SCAN_AT, facts=["9 Play Boosters med 14 kort och 1 Collector Booster med 15 kort: 141 boosterkort; dessutom 2 av 6 slumpmässiga promo och 30 lands", "Kevin Eastman-headliners finns endast i Collector Booster, inte i de nio Play Boosters", "Wizards publicerar slotinformation men inget kortspecifikt odds för en Turtle; en headliner är inte garanterad"], buy_url="https://arcadedreams.se/shop/nyheter/magic-the-gathering-teenage-mutant-ninja-turtles-pizza-bundle"),
+    dict(slug="ad-yugioh-glorious-gallery-pack", name="Yu-Gi-Oh! Battles of Legend: Glorious Gallery Booster Pack", category="Yu-Gi-Oh", manufacturer="Konami", year="2026", series="Battles of Legend: Glorious Gallery", fmt="single pack", sku="AD-37242", price=49, packs=1, cards=5, stock="in_stock", language="English", store_name="Arcade Dreams", observed_at=ARCADE_DREAMS_SECOND_SCAN_AT, facts=["Ett löst femkortspaket med 1 Secret Rare och 4 Ultra Rares enligt Konami", "Dragon Master Magia, Red Supernova Dragon och Dominus Impulse har Ultra Rare- och Starlight Rare-versioner", "Inget namngivet kort eller Starlight Rare garanteras; kortspecifika odds saknas"], buy_url="https://arcadedreams.se/shop/nyheter/yu-gi-oh-battle-of-legend-glorious-gallery-booster-pack-1"),
+    dict(slug="ad-mtg-avatar-collector-display", name="Magic: The Gathering Avatar: The Last Airbender Collector Booster Display", category="Magic", manufacturer="Wizards of the Coast", year="2025", series="Avatar: The Last Airbender", fmt="collector booster box", sku="AD-33412", price=5249, packs=12, cards=15, stock="in_stock", language="English", store_name="Arcade Dreams", observed_at=ARCADE_DREAMS_SECOND_SCAN_AT, facts=["12 Collector Boosters med 15 kort vardera, totalt 180 boosterkort", "Raised foil Avatar Aang kan bara dras i Collector Boosters och förekommer i färre än 1 % av sådana paket enligt Wizards", "Neon ink battle pose är Collector Booster-exklusiv; ingen namngiven träff garanteras"], buy_url="https://arcadedreams.se/shop/tcg/magic-the-gathering-avatar-the-last-airbender-collector-booster-display-12"),
+]
+
 REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
 
 REAL_SNAPSHOT += REAL_PACK_SNAPSHOT
@@ -374,6 +381,7 @@ REAL_SNAPSHOT += LINK_AUDIT_BACKUP_OFFERS
 REAL_SNAPSHOT += SEPTEMBER_29_EXPANSION
 REAL_SNAPSHOT += SEPTEMBER_29_SECOND_SCAN
 REAL_SNAPSHOT += SEPTEMBER_29_JOLLYROOM_OFFERS
+REAL_SNAPSHOT += ARCADE_DREAMS_SECOND_SCAN
 
 DIRECT_BUY_URLS = {
     "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",
@@ -2434,6 +2442,46 @@ CHASE_PROFILES["nsc-2025-topps-chrome-football-value"] = {
     "tiers":{"everyday":{"label":"Value Box-format","score":62,"items":["7 pack, 28 kort","Ingen autografgaranti"]},"good":{"label":"Rookieparallel","score":68,"items":["Cam Ward eller Ashton Jeanty Ray Wave"]},"big":{"label":"Sällsynt retailinsert","score":78,"items":["Fanatical rookie"]},"jackpot":{"label":"Ultra Violet","score":86,"items":["Jaxson Dart UV-1"]}},
     "caveat":"Topps Value Box SE-odds per pack gäller hela familjer: Ray Wave rookie 1:14, Fanatical 1:1 828 och Ultra Violet 1:2 742; se officiell odds-PDF: https://cdn.shopify.com/s/files/1/0739/2015/1805/files/2025_Topps_Chrome_Football_Odds.pdf?v=1787942744. Inga spelarspecifika odds eller autografgarantier. Butikens allmänna text nämner PREM1ERE Patch, men profilen räknar inte hobbyspår som value-träffar."}
 
+CHASE_PROFILES["ad-mtg-tmnt-pizza-bundle"] = {
+ "source_name":"Wizards of the Coast, Collecting Teenage Mutant Ninja Turtles (Pizza Bundle and booster slots)",
+ "source_url":"https://magic.wizards.com/en/news/feature/collecting-teenage-mutant-ninja-turtles",
+ "key_names":["Leonardo, Sewer Samurai","Donatello, Mutant Mechanic","Raphael, Ninja Destroyer","Michelangelo, Improviser","Dark Ritual","Food Chain"],
+ "headline_chases":[
+  {"card":"Leonardo, Sewer Samurai – Kevin Eastman signature headliner","tier":"JACKPOT","odds":"Endast Collector Booster; låg frekvens enligt Wizards, spelarspecifikt odds saknas","why":"En av fyra officiella Eastman-headliners, möjlig i boxens enda Collector Booster."},
+  {"card":"Donatello, Mutant Mechanic – Kevin Eastman signature headliner","tier":"MONSTER","odds":"Endast Collector Booster; exakt odds saknas","why":"Namngiven officiell headliner; de nio Play Boosters kan inte innehålla denna behandling."},
+  {"card":"Food Chain eller Dark Ritual – Pizza Bundle promo","tier":"BRA","odds":"Två av sex promo ingår, ingen av de två namngivna garanteras","why":"Två foilpromo ur en verifierad pool ingår utöver boostrarna."}
+ ],
+ "why_exciting":["Nio Play Boosters och en Collector Booster ger två tydligt skilda chase-spår.","Den enda Collector Boostern kan innehålla Kevin Eastman-headliners; två Pizza Bundle-promo ingår separat."],
+ "tiers":{"everyday":{"label":"Bekräftat innehåll","score":77,"items":["9 Play Boosters","1 Collector Booster","2 slumpmässiga foilpromo"]},"good":{"label":"Bra träff","score":72,"items":["Pizza Bundle-promo","Play Booster rare/mythic"]},"big":{"label":"Collector-träff","score":83,"items":["fracture foil Japan Showcase från Collector Boostern"]},"jackpot":{"label":"Eastman-headliner","score":91,"items":["Leonardo eller annan Kevin Eastman signature headliner"]}},
+ "caveat":"Eastman-headliners finns endast i den enda Collector Boostern, inte i nio Play Boosters. Wizards anger låg frekvens men inget odds för ett visst kort. De två av sex promo är slumpmässiga; varken Dark Ritual eller Food Chain garanteras. Totalt 141 boosterkort plus promo och lands."
+}
+CHASE_PROFILES["ad-yugioh-glorious-gallery-pack"] = {
+ "source_name":"Konami, Battles of Legend: Glorious Gallery product page and card database",
+ "source_url":"https://www.yugioh-card.com/eu/product/battles-of-legend-glorious-gallery/",
+ "key_names":["Dragon Master Magia","Red Supernova Dragon","Dominus Impulse","Dark Magician Girl","Exodia the Forbidden One"],
+ "headline_chases":[
+  {"card":"Dragon Master Magia – Starlight Rare extended art","tier":"JACKPOT","odds":"Kortspecifikt packodds ej publicerat","why":"Konami bekräftar extended-art Starlight-versionen i produkten."},
+  {"card":"Red Supernova Dragon – Starlight Rare extended art","tier":"MONSTER","odds":"Kortspecifikt packodds ej publicerat","why":"En andra namngiven Starlight-behandling."},
+  {"card":"Dominus Impulse – Ultra Rare extended art","tier":"BRA","odds":"Kortspecifikt packodds ej publicerat","why":"Konami bekräftar denna extended-art-version."}
+ ],
+ "why_exciting":["Löst paket under 100 kr med en Secret Rare och fyra Ultra Rares enligt Konami.","Starlight-behandlingar finns i checklistan men inget visst kort garanteras."],
+ "tiers":{"everyday":{"label":"Paketinnehåll","score":68,"items":["1 Secret Rare","4 Ultra Rares"]},"good":{"label":"Bra träff","score":65,"items":["namngiven extended-art Ultra Rare"]},"big":{"label":"Sällsynt behandling","score":75,"items":["Starlight Rare"]},"jackpot":{"label":"Toppkort","score":82,"items":["Dragon Master Magia Starlight Rare"]}},
+ "caveat":"Detta är ett enskilt löst paket. En Secret Rare och fyra Ultra Rares är garanterade rariteter, inte Dragon Master Magia, en Starlight eller någon viss spelbar hit. Konami publicerar inte kortspecifika packodds."
+}
+CHASE_PROFILES["ad-mtg-avatar-collector-display"] = {
+ "source_name":"Wizards of the Coast, Collecting Avatar: The Last Airbender (Collector Booster slots)",
+ "source_url":"https://magic.wizards.com/en/news/feature/collecting-avatar-the-last-airbender",
+ "key_names":["Avatar Aang","Fire Lord Zuko","Katara, the Fearless","Fire Lord Azula","Mystic Remora","Dark Depths"],
+ "headline_chases":[
+  {"card":"Avatar Aang – borderless raised foil","tier":"JACKPOT","odds":"Färre än 1 % per Collector Booster; ingen garanti i 12-packdisplayen","why":"Wizards namnger detta som Collector Booster-exklusiv headliner."},
+  {"card":"Fire Lord Zuko – textless neon ink battle pose","tier":"MONSTER","odds":"Collector Booster-exklusiv behandling; kortspecifikt odds saknas","why":"Officiellt namngivet premiumspår."},
+  {"card":"Katara, the Fearless – textless neon ink battle pose","tier":"MYCKET BRA","odds":"Collector Booster-exklusiv behandling; kortspecifikt odds saknas","why":"Ytterligare namngiven premiumvariant."}
+ ],
+ "why_exciting":["Tolv Collector Boosters ger 180 kort och flera premiumslots per paket.","Raised foil Avatar Aang och neon ink battle pose hör uttryckligen till Collector-formatet."],
+ "tiers":{"everyday":{"label":"Collector-innehåll","score":83,"items":["12 pack","180 kort","rare/mythic och foils i varje pack"]},"good":{"label":"Premiumkort","score":79,"items":["foil rare/mythic","source material"]},"big":{"label":"Collector-behandling","score":89,"items":["neon ink Fire Lord Zuko eller Katara"]},"jackpot":{"label":"Headliner","score":95,"items":["Avatar Aang raised foil"]}},
+ "caveat":"Färre än 1 % gäller Avatar Aang raised foil per enskild Collector Booster, inte sannolikheten i denna display. Tolv pack ger ingen garanti för Aang. Inga marknadsvärden eller fullständigt EV är verifierade."
+}
+
 def seed_chase_profiles():
     db=SessionLocal()
     try:
@@ -2448,6 +2496,7 @@ def seed_chase_profiles():
         september_28_slugs={x["slug"] for x in SEPTEMBER_28_EXPANSION}
         september_29_slugs={x["slug"] for x in SEPTEMBER_29_EXPANSION}
         september_29_second_slugs={x["slug"] for x in SEPTEMBER_29_SECOND_SCAN}
+        arcade_second_slugs={x["slug"] for x in ARCADE_DREAMS_SECOND_SCAN}
         expansion_slugs={x["slug"] for x in REAL_NONSPORT_EXPANSION + REAL_CROSS_CATEGORY_EXPANSION}
         for slug,data in CHASE_PROFILES.items():
             product=db.scalar(select(Product).where(Product.slug==slug))
@@ -2462,7 +2511,8 @@ def seed_chase_profiles():
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
             row.verified_at=(
-                SEPTEMBER_29_SECOND_SCAN_AT if slug in september_29_second_slugs
+                ARCADE_DREAMS_SECOND_SCAN_AT if slug in arcade_second_slugs
+                else SEPTEMBER_29_SECOND_SCAN_AT if slug in september_29_second_slugs
                 else SEPTEMBER_29_OBSERVED_AT if slug in september_29_slugs
                 else SEPTEMBER_28_OBSERVED_AT if slug in september_28_slugs
                 else RETAIL_SCAN_OBSERVED_AT if slug in retail_scan_slugs
