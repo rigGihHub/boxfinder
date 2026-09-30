@@ -1,9 +1,11 @@
 import copy
 import json
 from datetime import datetime
+from pathlib import Path
 from sqlalchemy import select
 from .database import SessionLocal
-from .models import BoxAnalysis, Offer, PriceHistory, Product, ProductVariant, Store, ProductFact, ChaseCard, VariantChaseCard, ChaseProfile
+from .models import BoxAnalysis, Offer, PriceHistory, Product, ProductVariant, Store, ProductFact, ChaseCard, VariantChaseCard, ChaseProfile, CatalogCandidate
+from .services.matching import normalize_title
 
 SEED = [
     ("2025-26 Upper Deck Series 1", "Hockey", "Upper Deck", "2025-26", "Series 1", "Hobby Box", 799, [560,780,86,80,84,48,92,78,82,72,"Medel-hög"]),
@@ -32,7 +34,7 @@ REAL_STORES = [
     dict(name="Dragons Lair", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Röda Goblinen", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="ManaTorsk", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
-    dict(name="Speltrollet", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="Speltrollet", homepage_url="https://speltrollet.se/", source_url="https://speltrollet.se/collections/samlarkort", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Webhallen", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="RA Card", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="SpelOchSånt", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
@@ -390,6 +392,58 @@ REAL_SNAPSHOT += SEPTEMBER_29_SECOND_SCAN
 REAL_SNAPSHOT += SEPTEMBER_29_JOLLYROOM_OFFERS
 REAL_SNAPSHOT += ARCADE_DREAMS_SECOND_SCAN
 REAL_SNAPSHOT += SEPTEMBER_30_EXPANSION
+
+# Individually checked product pages and available variants, 2026-09-30.
+# These are alternate offers for existing, format-specific chase profiles.
+SPELTROLLET_VERIFIED_AT = datetime(2026, 9, 30, 9, 29, 32)
+SPELTROLLET_BACKUP_OFFERS = [
+    dict(slug="cc-star-wars-unlimited-twilight-display", name="Star Wars Unlimited Twilight of the Republic Booster Display", category="Star Wars", manufacturer="Fantasy Flight Games", year="2024", series="Twilight of the Republic", fmt="booster box", sku="SP-9257696330054", price=1090, packs=24, cards=16, stock="in_stock", store_name="Speltrollet", observed_at=SPELTROLLET_VERIFIED_AT, buy_url="https://speltrollet.se/products/star-wars-unlimited-twilight-of-the-republic-booster-display-24-boosters"),
+    dict(slug="cc-pokemon-black-bolt-jp-display", name="Pokémon Black Bolt sv11B Booster Box Japanese", category="Pokémon", manufacturer="Pokémon Company Japan", year="2025", series="Black Bolt sv11B", fmt="booster box", sku="SP-15105175454022", price=2490, packs=20, cards=7, stock="in_stock", language="Japanese", store_name="Speltrollet", observed_at=SPELTROLLET_VERIFIED_AT, buy_url="https://speltrollet.se/products/pokemon-black-bolt-booster-box-display-japansk"),
+    dict(slug="cc-pokemon-nihil-zero-jp-display", name="Pokémon Mega Nihil Zero M3 Booster Display Japanese", category="Pokémon", manufacturer="Pokémon Company Japan", year="2026", series="Mega Nihil Zero M3", fmt="booster box", sku="SP-15372620104006", price=990, packs=30, cards=5, stock="in_stock", language="Japanese", store_name="Speltrollet", observed_at=SPELTROLLET_VERIFIED_AT, buy_url="https://speltrollet.se/products/pokemon-mega-nihil-zero-booster-box-m3japansk"),
+    dict(slug="ad-yugioh-glorious-gallery-pack", name="Yu-Gi-Oh! Battles of Legend: Glorious Gallery Booster Pack", category="Yu-Gi-Oh", manufacturer="Konami", year="2026", series="Battles of Legend: Glorious Gallery", fmt="single pack", sku="SP-15597839548742", price=49, packs=1, cards=5, stock="in_stock", language="English", store_name="Speltrollet", observed_at=SPELTROLLET_VERIFIED_AT, buy_url="https://speltrollet.se/products/yu-gi-oh-tcg-battles-of-legend-glorious-gallery-booster"),
+]
+REAL_SNAPSHOT += SPELTROLLET_BACKUP_OFFERS
+
+
+def seed_speltrollet_inventory():
+    """Stage every observed collection item for review; no item becomes buyable here."""
+    snapshot = json.loads((Path(__file__).parent / "snapshots" / "speltrollet_2026_09_30.json").read_text())
+    observed_at = datetime.fromisoformat(snapshot["observed_at"].replace("Z", "+00:00")).replace(tzinfo=None)
+    db = SessionLocal()
+    try:
+        store = db.scalar(select(Store).where(Store.name == "Speltrollet"))
+        if store is None:
+            store = Store(name="Speltrollet", country="SE", active=True, collection_method="manual", adapter_key="manual", policy_status="review_required", min_interval_seconds=120)
+            db.add(store)
+            db.flush()
+        store.homepage_url = "https://speltrollet.se/"
+        store.source_url = "https://speltrollet.se/collections/samlarkort"
+        existing = {c.external_id: c for c in db.scalars(select(CatalogCandidate).where(CatalogCandidate.store_id == store.id))}
+        for row in snapshot["products"]:
+            candidate = existing.get(row["id"])
+            if candidate and candidate.last_seen_at >= observed_at:
+                continue
+            if candidate is None:
+                candidate = CatalogCandidate(store_id=store.id, external_id=row["id"], source_title=row["title"], first_seen_at=observed_at)
+                db.add(candidate)
+            n = normalize_title(row["title"])
+            non_cards = row["type"].lower() in {"samlarkort tillbehör", "sällskapsspel", "biljett"}
+            candidate.source_title = row["title"]
+            candidate.url = "https://speltrollet.se/products/" + row["handle"]
+            candidate.price_sek = row["price_sek"]
+            # Shopify availability alone does not establish release or on-hand stock.
+            candidate.stock_status = "unknown" if row["preorder"] else ("in_stock" if row["available"] else "out_of_stock")
+            candidate.detected_format = n.format
+            candidate.category_hint = n.category_hint
+            candidate.language_hint = n.language
+            candidate.year_season_hint = n.year_season
+            candidate.sealed_candidate = n.sealed_candidate and not non_cards
+            candidate.randomized = n.randomized and not non_cards
+            candidate.exclusion_reason = "outside_card_scope" if non_cards else n.exclusion_reason
+            candidate.last_seen_at = observed_at
+        db.commit()
+    finally:
+        db.close()
 
 DIRECT_BUY_URLS = {
     "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",

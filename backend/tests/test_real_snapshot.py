@@ -2,7 +2,7 @@ from sqlalchemy import create_engine, select, func, event
 from sqlalchemy.orm import sessionmaker
 
 from app.database import Base
-from app.models import ChaseProfile, Offer, Product, ProductFact, ProductVariant, Store
+from app.models import CatalogCandidate, ChaseProfile, Offer, Product, ProductFact, ProductVariant, Store
 from app.routers.discovery import real_catalog
 from app.routers.products import list_products
 import app.seed as seedmod
@@ -33,6 +33,34 @@ def test_verified_snapshot_is_idempotent(monkeypatch):
     db=Session()
     count=db.scalar(select(func.count()).select_from(Offer).where(Offer.source_kind=="verified_snapshot"))
     assert count == len(seedmod.REAL_SNAPSHOT)
+    db.close()
+
+
+def test_speltrollet_inventory_stays_in_review_and_verified_links_are_format_specific(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    seedmod.seed_speltrollet_inventory()
+    seedmod.seed_speltrollet_inventory()
+    db=Session()
+    store=db.scalar(select(Store).where(Store.name=="Speltrollet"))
+    candidates=db.scalars(select(CatalogCandidate).where(CatalogCandidate.store_id==store.id)).all()
+    assert len(candidates)==378
+    assert len({c.external_id for c in candidates})==378
+    assert all(c.url.startswith("https://speltrollet.se/products/") for c in candidates)
+    assert any(c.exclusion_reason=="outside_card_scope" for c in candidates)
+    assert all(c.review_status=="new" for c in candidates)
+    offers=db.scalars(select(Offer).where(Offer.store_id==store.id)).all()
+    assert len(offers)==len(seedmod.SPELTROLLET_BACKUP_OFFERS)==4
+    assert all(o.source_kind=="verified_snapshot" and o.stock_status=="in_stock" and not o.is_preorder for o in offers)
+    assert all(o.variant for o in offers)
+    for slug in ("cc-star-wars-unlimited-twilight-display", "ad-yugioh-glorious-gallery-pack"):
+        offer=next(o for o in offers if o.variant.product.slug==slug)
+        assert db.scalar(select(ChaseProfile).where(ChaseProfile.variant_id==offer.variant_id))
+    rows=real_catalog(category="Yu-Gi-Oh",budget=100,format="single pack",limit=200,db=db)
+    assert any(r["slug"]=="ad-yugioh-glorious-gallery-pack" and r["price"]==49 for r in rows["products"])
+    assert all(r["slug"]!="yu-gi-oh-tcg-battles-of-legend-glorious-gallery-booster-display-24-pack" for r in rows["products"])
     db.close()
 
 def test_jollyroom_pitch_black_etb_is_a_distinct_backup_offer(monkeypatch):
