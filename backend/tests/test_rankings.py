@@ -93,6 +93,20 @@ def test_lone_one_of_one_does_not_beat_broad_premium_chase():
     assert rank_resale([lone, premium], "jackpot")[0]["id"] == 2
 
 
+def test_one_off_parallel_roster_does_not_count_as_deep_chase():
+    base = resale_item()["chase_profile"]
+    unique = {**base, "key_names": [f"Star {n}" for n in range(6)],
+              "headline_chases": [{"tier": "JACKPOT", "card": f"Star {n} 1/1",
+                                   "odds": "1/1; packodds ej publicerat"} for n in range(5)]}
+    deep = {**base, "key_names": [f"Star {n}" for n in range(6)],
+            "headline_chases": [{"tier": "MONSTER", "card": f"Star {n} auto /99",
+                                 "odds": "packodds ej publicerat"} for n in range(5)]}
+    rare = resale_rank(resale_item(chase_profile=unique), "jackpot")
+    broad = resale_rank(resale_item(chase_profile=deep), "jackpot")
+    assert broad["ranking_factors"]["breadth"] > rare["ranking_factors"]["breadth"]
+    assert broad["resale_score_precise"] > rare["resale_score_precise"]
+
+
 def test_format_hits_do_not_leak_to_loose_pack():
     profile = resale_item()["chase_profile"]
     profile["headline_chases"] = [{"tier": "MONSTER", "card": "Star auto", "odds": "okänt"}]

@@ -362,6 +362,13 @@ ARCADE_DREAMS_SECOND_SCAN = [
     dict(slug="ad-mtg-avatar-collector-display", name="Magic: The Gathering Avatar: The Last Airbender Collector Booster Display", category="Magic", manufacturer="Wizards of the Coast", year="2025", series="Avatar: The Last Airbender", fmt="collector booster box", sku="AD-33412", price=5249, packs=12, cards=15, stock="in_stock", language="English", store_name="Arcade Dreams", observed_at=ARCADE_DREAMS_SECOND_SCAN_AT, facts=["12 Collector Boosters med 15 kort vardera, totalt 180 boosterkort", "Raised foil Avatar Aang kan bara dras i Collector Boosters och förekommer i färre än 1 % av sådana paket enligt Wizards", "Neon ink battle pose är Collector Booster-exklusiv; ingen namngiven träff garanteras"], buy_url="https://arcadedreams.se/shop/tcg/magic-the-gathering-avatar-the-last-airbender-collector-booster-display-12"),
 ]
 
+# Direct Shopify article and variant checked on release day; the product page
+# showed three boxes available and no preorder notice.
+SEPTEMBER_30_OBSERVED_AT = datetime(2026, 9, 30, 4, 27, 0)
+SEPTEMBER_30_EXPANSION = [
+    dict(slug="cs-2026-topps-chrome-tennis-hobby", name="2026 Topps Chrome Tennis Hobby Box", category="Tennis", manufacturer="Topps", year="2026", series="Chrome Tennis", fmt="hobby box", sku="FGC007121", price=1499, packs=12, cards=8, stock="in_stock", language="English", store_name="CardSurfer", observed_at=SEPTEMBER_30_OBSERVED_AT, facts=["12 hobby-pack med 8 kort per paket, totalt 96 kort", "Topps och butiken anger två Chrome-autografer per hel hobbybox; ingen särskild signer garanteras", "Topps publicerar separata hobby-, breaker- och value-odds. Aces 1:192 hobby-pack, Solus 1:768, Helix 1:2 880 och Clay Court Masters Autographs 1:12 185 för hela respektive kortfamilj", "Boxen har en verifierad direktlänk och tre kvar hos CardSurfer vid kontrollen"], buy_url="https://cardsurferbreak.com/products/2026-topps-chrome-tennis-hobby-box"),
+]
+
 REAL_SNAPSHOT += REAL_FOOTBALL_SNAPSHOT + REAL_POKEMON_SNAPSHOT + REAL_ENTERTAINMENT_SNAPSHOT
 
 REAL_SNAPSHOT += REAL_PACK_SNAPSHOT
@@ -382,6 +389,7 @@ REAL_SNAPSHOT += SEPTEMBER_29_EXPANSION
 REAL_SNAPSHOT += SEPTEMBER_29_SECOND_SCAN
 REAL_SNAPSHOT += SEPTEMBER_29_JOLLYROOM_OFFERS
 REAL_SNAPSHOT += ARCADE_DREAMS_SECOND_SCAN
+REAL_SNAPSHOT += SEPTEMBER_30_EXPANSION
 
 DIRECT_BUY_URLS = {
     "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",
@@ -2482,6 +2490,26 @@ CHASE_PROFILES["ad-mtg-avatar-collector-display"] = {
  "caveat":"Färre än 1 % gäller Avatar Aang raised foil per enskild Collector Booster, inte sannolikheten i denna display. Tolv pack ger ingen garanti för Aang. Inga marknadsvärden eller fullständigt EV är verifierade."
 }
 
+CHASE_PROFILES["cs-2026-topps-chrome-tennis-hobby"] = {
+    "source_name":"Topps, 2026 Chrome Tennis official checklist V2 and published format odds",
+    "source_url":"https://cdn.shopify.com/s/files/1/0662/9749/5709/files/26TCTN_-_2026_Topps_Chrome_Tennis_Checklist_V2.xls?v=1790700549",
+    "key_names":["Carlos Alcaraz","Novak Djokovic","Coco Gauff","Mirra Andreeva","Ben Shelton"],
+    "headline_chases":[
+        {"card":"Carlos Alcaraz Clay Court Masters Autograph CC-CA","tier":"JACKPOT","odds":"Clay Court Masters Autographs 1:12 185 hobby-pack som familj; Alcaraz-specifikt odds saknas","why":"Namngiven i Topps officiella autografchecklista; mycket sällsynt familj."},
+        {"card":"Carlos Alcaraz Helix HL-CA","tier":"MONSTER","odds":"Helix-familjen 1:2 880 hobby-pack; Alcaraz-specifikt odds saknas","why":"Verifierat namngivet case-hit-kort på officiella checklistan."},
+        {"card":"Coco Gauff Solus SO-CG","tier":"MONSTER","odds":"Solus-familjen 1:768 hobby-pack; Gauff-specifikt odds saknas","why":"Verifierat SSP-insert i hobbyformatet."},
+        {"card":"Novak Djokovic Aces AC-1","tier":"MYCKET BRA","odds":"Aces-familjen 1:192 hobby-pack; Djokovic-specifikt odds saknas","why":"Namngivet Aces-insert i den officiella checklistan."},
+        {"card":"Mirra Andreeva Autograph AO-MAA","tier":"MYCKET BRA","odds":"Autographs I/II-familjerna har olika hobbyodds; kortspecifikt odds saknas","why":"Topps namnger Andreeva som signer; en namngiven autograf är aldrig garanterad."},
+    ],
+    "why_exciting":["Två Chrome-autografer per hel hobbybox och 96 kort över tolv pack.","Flera namngivna autograf- och SSP-spår med separata publicerade hobbyodds."],
+    "tiers":{"everyday":{"label":"Verifierat hobbyinnehåll","score":88,"items":["2 Chrome-autografer per box","12 hobby-pack med 8 kort"]},"good":{"label":"Bra träff","score":82,"items":["Namngiven signer","nummerparallel"]},"big":{"label":"Sällsynt insert","score":89,"items":["Djokovic Aces","Gauff Solus"]},"jackpot":{"label":"Tennisens toppkort","score":95,"items":["Alcaraz Clay Court Masters Autograph","Alcaraz Helix"]}},
+    "caveat":"Två Chrome-autografer garanteras per hel hobbybox, aldrig en viss spelare. Topps odds är per hobby-pack och gäller hela kortfamiljer, inte Alcaraz, Gauff eller Djokovic; se officiell odds-PDF: https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Topps_Chrome_Tennis_Odds.pdf?v=1790602639. Hobbykolumnen skiljer sig kraftigt från Breaker och Value. Exakta spelarkortsodds och sålda marknadspriser saknas."
+}
+FORMAT_HITS["cs-2026-topps-chrome-tennis-hobby"] = [("hobby box", "Chrome-autografer", 2, "guaranteed", "premium")]
+CHASE_PROFILES["cs-2026-topps-chrome-tennis-hobby"]["format_hits"] = [
+    {"format":"hobby box", "family":"Chrome-autografer", "count":2, "basis":"guaranteed", "quality":"premium"}
+]
+
 def seed_chase_profiles():
     db=SessionLocal()
     try:
@@ -2497,6 +2525,7 @@ def seed_chase_profiles():
         september_29_slugs={x["slug"] for x in SEPTEMBER_29_EXPANSION}
         september_29_second_slugs={x["slug"] for x in SEPTEMBER_29_SECOND_SCAN}
         arcade_second_slugs={x["slug"] for x in ARCADE_DREAMS_SECOND_SCAN}
+        september_30_slugs={x["slug"] for x in SEPTEMBER_30_EXPANSION}
         expansion_slugs={x["slug"] for x in REAL_NONSPORT_EXPANSION + REAL_CROSS_CATEGORY_EXPANSION}
         for slug,data in CHASE_PROFILES.items():
             product=db.scalar(select(Product).where(Product.slug==slug))
@@ -2511,7 +2540,8 @@ def seed_chase_profiles():
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
             row.verified_at=(
-                ARCADE_DREAMS_SECOND_SCAN_AT if slug in arcade_second_slugs
+                SEPTEMBER_30_OBSERVED_AT if slug in september_30_slugs
+                else ARCADE_DREAMS_SECOND_SCAN_AT if slug in arcade_second_slugs
                 else SEPTEMBER_29_SECOND_SCAN_AT if slug in september_29_second_slugs
                 else SEPTEMBER_29_OBSERVED_AT if slug in september_29_slugs
                 else SEPTEMBER_28_OBSERVED_AT if slug in september_28_slugs

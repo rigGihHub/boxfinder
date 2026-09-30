@@ -89,6 +89,31 @@ def test_arcade_dreams_second_scan_has_format_specific_chases(monkeypatch):
     assert any(x["slug"]=="ad-yugioh-glorious-gallery-pack" for x in under_100["products"])
     db.close()
 
+
+def test_tennis_hobby_has_direct_buy_link_and_hobby_only_odds(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    slug="cs-2026-topps-chrome-tennis-hobby"
+    product=db.scalar(select(Product).where(Product.slug==slug))
+    variant=db.scalar(select(ProductVariant).where(ProductVariant.product_id==product.id))
+    offer=db.scalar(select(Offer).where(Offer.variant_id==variant.id))
+    chase=db.scalar(select(ChaseProfile).where(ChaseProfile.variant_id==variant.id))
+    assert product.category=="Tennis" and (variant.packs,variant.cards_per_pack)==(12,8)
+    assert offer.store.name=="CardSurfer" and offer.price_sek==1499
+    assert offer.stock_status=="in_stock" and not offer.is_preorder
+    assert offer.url=="https://cardsurferbreak.com/products/2026-topps-chrome-tennis-hobby-box"
+    assert chase.verified_at==seedmod.SEPTEMBER_30_OBSERVED_AT
+    profile=seedmod.CHASE_PROFILES[slug]
+    assert "1:12 185 hobby-pack" in profile["headline_chases"][0]["odds"]
+    assert profile["format_hits"][0]["basis"]=="guaranteed"
+    assert profile["format_hits"][0]["format"]=="hobby box"
+    rows=real_catalog(category="Tennis",budget=1500,format="hobby box",limit=200,db=db)
+    assert any(row["slug"]==slug and row["total_cards"]==96 for row in rows["products"])
+    db.close()
+
 def test_nordic_nfl_formats_and_chrome_black_hobby_have_distinct_verified_profiles(monkeypatch):
     Session=session_factory()
     monkeypatch.setattr(seedmod,"SessionLocal",Session)

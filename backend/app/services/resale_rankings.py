@@ -30,11 +30,14 @@ def _breadth(profile: dict) -> tuple[float, bool]:
     """Count distinct named routes, not the size of a serial-numbered print run."""
     names = {str(name).strip().casefold() for name in profile.get("key_names", []) if str(name).strip()}
     high = [c for c in profile.get("headline_chases", []) if _tier_rank(c.get("tier")) >= 3]
-    distinct = {str(c.get("card", "")).strip().casefold() for c in high if c.get("card")}
     non_unique = [c for c in high if not ("1/1" in str(c.get("card", "")) or "1/1" in str(c.get("odds", "")))]
-    breadth = clamp(36 + min(6, len(names)) * 6 + min(5, len(distinct)) * 4)
+    distinct_routes = {str(c.get("card", "")).strip().casefold() for c in non_unique if c.get("card")}
     # A list consisting mostly of unique 1/1s is a high ceiling, not a deep hit pool.
     concentrated = len(high) >= 1 and len(non_unique) <= 1 and len(high) - len(non_unique) >= 1
+    # A long roster and several one-off parallels cannot stand in for distinct
+    # repeatable ways to pull a strong card. Keep their ceiling score separate.
+    breadth = clamp(36 + min(2 if concentrated else 6, len(names)) * 6
+                    + min(5, len(distinct_routes)) * 4)
     return breadth, concentrated
 
 
