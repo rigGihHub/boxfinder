@@ -59,7 +59,10 @@ async def scheduler_loop():
     await asyncio.sleep(5)
     while True:
         try:
-            await run_all_sources()
+            # Store adapters can spend a long time in synchronous matching and
+            # database writes. Keep that work off the ASGI event loop so
+            # health checks and catalog requests remain responsive.
+            await asyncio.to_thread(lambda: asyncio.run(run_all_sources()))
         except Exception as exc:
             _state["last_summary"] = {"status":"scheduler_error","error":str(exc)}
             _state["running"] = False
