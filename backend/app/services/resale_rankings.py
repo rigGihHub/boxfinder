@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import math
+import re
 
 from .chase_content import format_hits, has_actionable_odds, pull_profile
 
@@ -20,10 +21,26 @@ def _price_access(price: float | None) -> float:
 
 
 def _opportunities(packs: int | None) -> float:
-    # More packs mean more attempts, but never multiply a single-card jackpot's odds.
+    # More packs mean more attempts, not a measured chance of a valuable card.
     if not isinstance(packs, (int, float)) or packs < 1:
         return 42
-    return clamp(42 + 11 * math.log2(packs), 42, 80)
+    return clamp(42 + 7 * math.log2(packs), 42, 70)
+
+
+def _repeatable_evidence(profile: dict, hits: list[dict]) -> bool:
+    """A format hit or published common-family odds support a frequency claim.
+
+    Odds for a jackpot card do not establish how often attractive cards appear.
+    Published family odds are still not odds for a named card.
+    """
+    if any(hit["quality"] in {"premium", "collectible"} for hit in hits):
+        return True
+    for tier in ("everyday", "good"):
+        for item in profile.get("tiers", {}).get(tier, {}).get("items", []):
+            for denominator in re.findall(r"\b1\s*:\s*(\d[\d ]*)", str(item)):
+                if int(denominator.replace(" ", "")) <= 24:
+                    return True
+    return False
 
 
 def _breadth(profile: dict) -> tuple[float, bool]:
@@ -87,6 +104,12 @@ def resale_rank(item: dict, strategy: str = "balanced") -> dict:
     has_exact = bool(cards)
     has_odds = has_actionable_odds(profile)
     hits = format_hits(profile, item.get("format"))
+    documented_frequency = _repeatable_evidence(profile, hits)
+    # Curated tier scores describe the checklist. Without relevant odds or
+    # format hits they must not be presented as measured hit frequency.
+    if not documented_frequency:
+        repeatable = min(repeatable, 74)
+    pull = {**pull, "repeatable": round(repeatable)}
     # An average is weaker than a guaranteed family hit; neither guarantees a named card.
     quality = {"premium": (86, 73), "collectible": (72, 65), "base": (58, 54)}
     format_strength = max((quality[h["quality"]][0 if h["basis"] == "guaranteed" else 1]
@@ -125,8 +148,10 @@ def resale_rank(item: dict, strategy: str = "balanced") -> dict:
         basis = "Verifierat innehåll och pris; fullständiga odds eller försäljningsvärden saknas"
 
     reasons = []
-    if repeatable >= 78:
+    if documented_frequency and repeatable >= 78:
         reasons.append("Många dokumenterade chanser till attraktiva träffar")
+    elif not documented_frequency and float(profile.get("tiers", {}).get("everyday", {}).get("score", 0)) >= 78:
+        reasons.append("Starkt återkommande innehåll i checklistan; frekvens för bra träffar är okänd")
     if ceiling >= 85:
         reasons.append("Mycket högt tak med namngivna toppkort")
     if has_odds:
@@ -157,6 +182,7 @@ def resale_rank(item: dict, strategy: str = "balanced") -> dict:
         "resale_warning": warning,
         "has_market_ev": bool(has_market_ev),
         "opening_profile": pull,
+        "frequency_basis": "Publicerade familjeodds eller verifierade formatträffar" if documented_frequency else "Bedömd checklista; odds för bra träffar saknas",
         "ranking_factors": {key: round(value, 1) for key, value in signals.items()},
         "format_hits": hits,
         "strategy": strategy,

@@ -137,6 +137,44 @@ def test_more_packs_help_sublinearly_without_becoming_hit_odds():
     assert display["has_market_ev"] is False
 
 
+def test_jackpot_odds_do_not_certify_frequent_hits():
+    item = resale_item(format="single pack", packs=1)
+    item["chase_profile"]["tiers"]["everyday"]["score"] = 96
+    item["chase_profile"]["tiers"]["good"]["score"] = 94
+    ranked = resale_rank(item, "frequent")
+    assert ranked["opening_profile"]["repeatable"] == 74
+    assert ranked["frequency_basis"] == "Bedömd checklista; odds för bra träffar saknas"
+    assert not any("Många dokumenterade chanser" in reason for reason in ranked["resale_reasons"])
+
+
+def test_published_common_family_odds_support_repeatability():
+    item = resale_item(format="hobby box", packs=12)
+    item["chase_profile"]["tiers"]["everyday"] = {"score": 90, "items": ["Young Guns 1:4 hobby-pack"]}
+    ranked = resale_rank(item, "frequent")
+    assert ranked["opening_profile"]["repeatable"] > 74
+    assert ranked["frequency_basis"].startswith("Publicerade familjeodds")
+
+
+def test_format_guarantee_is_not_carried_over_to_loose_pack_frequency():
+    profile = resale_item()["chase_profile"]
+    profile["tiers"]["everyday"]["score"] = 95
+    profile["tiers"]["good"]["score"] = 90
+    profile["format_hits"] = [{"format": "hobby box", "family": "autografer", "count": 2,
+                               "basis": "guaranteed", "quality": "premium"}]
+    box = resale_rank(resale_item(format="hobby box", packs=10, chase_profile=profile), "frequent")
+    pack = resale_rank(resale_item(format="single pack", packs=1, chase_profile=profile), "frequent")
+    assert box["opening_profile"]["repeatable"] > 74
+    assert pack["opening_profile"]["repeatable"] == 74
+    assert box["resale_score"] > pack["resale_score"]
+
+
+def test_more_packs_cannot_claim_measured_frequency():
+    one = resale_rank(resale_item(format="booster box", packs=1), "frequent")
+    many = resale_rank(resale_item(format="booster box", packs=36), "frequent")
+    assert many["opening_profile"]["repeatable"] == one["opening_profile"]["repeatable"]
+    assert many["ranking_factors"]["access"] > one["ranking_factors"]["access"]
+
+
 def test_jackpot_price_does_not_outweigh_much_better_ceiling():
     cheap = resale_item(id=1, price=49, format="single pack", packs=1)
     expensive = resale_item(id=2, price=2200, format="hobby box", packs=10)
