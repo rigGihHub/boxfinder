@@ -63,6 +63,36 @@ def test_speltrollet_inventory_stays_in_review_and_verified_links_are_format_spe
     assert all(r["slug"]!="yu-gi-oh-tcg-battles-of-legend-glorious-gallery-booster-display-24-pack" for r in rows["products"])
     db.close()
 
+
+def test_cardland_listing_queue_is_not_a_buyable_offer(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    seedmod.seed_cardland_inventory()
+    seedmod.seed_cardland_inventory()
+    db=Session()
+    store=db.scalar(select(Store).where(Store.name=="Cardland"))
+    candidates=db.scalars(select(CatalogCandidate).where(CatalogCandidate.store_id==store.id)).all()
+    assert len(candidates)==695
+    assert len({c.external_id for c in candidates})==695
+    assert all(c.stock_status=="unknown" and c.review_status=="new" for c in candidates)
+    assert all(c.url.startswith("https://www.cardland.se/") for c in candidates)
+    offers=db.scalars(select(Offer).where(Offer.store_id==store.id)).all()
+    assert len(offers)==1+len(seedmod.CARDLAND_BACKUP_OFFERS)
+    assert all(o.source_kind=="verified_snapshot" and not o.is_preorder for o in offers)
+    assert all(o.variant and db.scalar(select(ChaseProfile).where(ChaseProfile.variant_id==o.variant_id)) for o in offers)
+    assert not any("resurgence-football-blaster" in o.url for o in offers)
+    for row in seedmod.CARDLAND_BACKUP_OFFERS:
+        offer=next(o for o in offers if o.external_id==row["sku"])
+        assert (offer.price_sek,offer.stock_status,offer.url)==(row["price"],"in_stock",row["buy_url"])
+        assert (offer.variant.format,offer.variant.packs,offer.variant.cards_per_pack)==(row["fmt"],row["packs"],row["cards"])
+    etb=real_catalog(category="Pokémon",budget=900,format="elite trainer box",limit=200,db=db)
+    assert any(p["slug"]=="ch-pokemon-pitch-black-etb" and p["price"]==848 and p["store"]=="Cardland" for p in etb["products"])
+    pack=real_catalog(category="Pokémon",budget=100,format="single pack",limit=200,db=db)
+    assert any(p["slug"]=="tcgs-pokemon-pitch-black-pack" and p["price"]==85 and p["store"]=="Cardland" for p in pack["products"])
+    db.close()
+
 def test_jollyroom_pitch_black_etb_is_a_distinct_backup_offer(monkeypatch):
     Session=session_factory()
     monkeypatch.setattr(seedmod,"SessionLocal",Session)
@@ -72,7 +102,7 @@ def test_jollyroom_pitch_black_etb_is_a_distinct_backup_offer(monkeypatch):
     product=db.scalar(select(Product).where(Product.slug=="ch-pokemon-pitch-black-etb"))
     variant=db.scalar(select(ProductVariant).where(ProductVariant.product_id==product.id))
     offers=db.scalars(select(Offer).where(Offer.variant_id==variant.id)).all()
-    assert {offer.store.name for offer in offers}=={"CardHaven","Jollyroom"}
+    assert {offer.store.name for offer in offers}=={"CardHaven","Jollyroom","Cardland"}
     jollyroom=next(offer for offer in offers if offer.store.name=="Jollyroom")
     assert jollyroom.price_sek==1099 and jollyroom.stock_status=="in_stock"
     assert not jollyroom.is_preorder
@@ -81,7 +111,7 @@ def test_jollyroom_pitch_black_etb_is_a_distinct_backup_offer(monkeypatch):
     assert list_products(category="Pokémon",max_price=1000,db=db,include_details=False)
     catalog=real_catalog(category="Pokémon",budget=1200,format="elite trainer box",limit=200,db=db)
     pitch=next(row for row in catalog["products"] if row["slug"]==product.slug)
-    assert pitch["price"]==999 and pitch["store"]=="CardHaven"
+    assert pitch["price"]==848 and pitch["store"]=="Cardland"
     assert pitch["chase_profile"]["headline_chases"][0]["card"].startswith("Mega Darkrai ex")
     db.close()
 
@@ -204,8 +234,9 @@ def test_second_retail_scan_excludes_preorders_and_keeps_value_odds_distinct(mon
     assert not any("mega" in row["slug"] and "2026-topps-football" in row["slug"] for row in seedmod.REAL_SNAPSHOT)
     flagship=db.scalar(select(Product).where(Product.slug=="nsc-2026-topps-football-value"))
     offers=db.scalars(select(Offer).join(ProductVariant).where(ProductVariant.product_id==flagship.id)).all()
-    assert {offer.store.name for offer in offers}=={"NordicSportsCards","CardSurfer"}
-    assert all(offer.price_sek==399 and offer.stock_status=="in_stock" for offer in offers)
+    assert {offer.store.name for offer in offers}=={"NordicSportsCards","CardSurfer","Cardland"}
+    assert {offer.store.name:offer.price_sek for offer in offers}=={"NordicSportsCards":399,"CardSurfer":399,"Cardland":379}
+    assert all(offer.stock_status=="in_stock" for offer in offers)
     flagship_variant=db.scalar(select(ProductVariant).where(ProductVariant.product_id==flagship.id))
     facts=db.scalar(select(ProductFact).where(ProductFact.variant_id==flagship_variant.id))
     assert "1:4 133" in facts.facts_json

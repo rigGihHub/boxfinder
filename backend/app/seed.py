@@ -404,6 +404,56 @@ SPELTROLLET_BACKUP_OFFERS = [
 ]
 REAL_SNAPSHOT += SPELTROLLET_BACKUP_OFFERS
 
+# Exact Cardland article pages, price and on-hand stock checked 2026-10-02 09:27 UTC.
+# These offers reuse existing format-specific chase profiles; the category-page
+# inventory below is only a review queue and never creates buyable offers.
+CARDLAND_VERIFIED_AT = datetime(2026, 10, 2, 9, 27, 0)
+CARDLAND_BACKUP_OFFERS = [
+    dict(slug="nsc-2026-topps-football-value", name="2026 Topps Flagship Football Value Box", category="NFL", manufacturer="Topps", year="2026", series="Flagship Football", fmt="value box", sku="CARDLAND-56826", price=379, packs=6, cards=12, stock="in_stock", language="English", store_name="Cardland", observed_at=CARDLAND_VERIFIED_AT, buy_url="https://www.cardland.se/amerikansk-fotboll/2026-topps-flagship-football-value-box"),
+    dict(slug="cc-2026-topps-flagship-nfl-hobby", name="2026 Topps Flagship NFL Football Hobby Box", category="NFL", manufacturer="Topps", year="2026", series="Topps Flagship Football", fmt="hobby box", sku="CARDLAND-56754", price=2195, packs=20, cards=12, stock="in_stock", language="English", store_name="Cardland", observed_at=CARDLAND_VERIFIED_AT, buy_url="https://www.cardland.se/amerikansk-fotboll/2026-topps-nfl-flagship-football-hobby-box"),
+    dict(slug="cs-2025-26-panini-prizm-basketball-blaster", name="2025-26 Panini Prizm Basketball Blaster Box", category="Basket", manufacturer="Panini", year="2025-26", series="Prizm Basketball", fmt="blaster", sku="CARDLAND-56939", price=499, packs=6, cards=5, stock="in_stock", language="English", store_name="Cardland", observed_at=CARDLAND_VERIFIED_AT, buy_url="https://www.cardland.se/basket/basket-2025-26/2025-26-panini-prizm-basketball-blaster-box"),
+    dict(slug="tcgs-pokemon-pitch-black-pack", name="Pokémon Mega Evolution: Pitch Black Booster Pack", category="Pokémon", manufacturer="The Pokémon Company", year="2026", series="Pitch Black", fmt="single pack", sku="CARDLAND-56805", price=85, packs=1, cards=10, stock="in_stock", language="English", store_name="Cardland", observed_at=CARDLAND_VERIFIED_AT, buy_url="https://www.cardland.se/ovriga-boxar/pokmon-tcg-mega-evolution-pitch-black-booster-pack"),
+    dict(slug="ch-pokemon-pitch-black-etb", name="Pokémon Mega Evolution: Pitch Black Elite Trainer Box", category="Pokémon", manufacturer="The Pokémon Company", year="2026", series="Pitch Black", fmt="elite trainer box", sku="CARDLAND-56804", price=848, packs=9, cards=10, stock="in_stock", language="English", store_name="Cardland", observed_at=CARDLAND_VERIFIED_AT, buy_url="https://www.cardland.se/ovriga-boxar/pokemon-tcg-mega-evolution-pitch-black-elite-trainer-box"),
+]
+REAL_SNAPSHOT += CARDLAND_BACKUP_OFFERS
+
+
+def seed_cardland_inventory():
+    """Stage category listings for manual review; listing stock is untrusted."""
+    snapshot = json.loads((Path(__file__).parent / "snapshots" / "cardland_2026_10_02.json").read_text())
+    observed_at = datetime.fromisoformat(snapshot["observed_at"].replace("Z", "+00:00")).replace(tzinfo=None)
+    db = SessionLocal()
+    try:
+        store = db.scalar(select(Store).where(Store.name == "Cardland"))
+        if store is None:
+            store = Store(country="SE", active=True, min_interval_seconds=120, **next(s for s in REAL_STORES if s["name"] == "Cardland"))
+            db.add(store)
+            db.flush()
+        existing = {c.external_id: c for c in db.scalars(select(CatalogCandidate).where(CatalogCandidate.store_id == store.id))}
+        for row in snapshot["products"]:
+            candidate = existing.get(row["id"])
+            if candidate and candidate.last_seen_at >= observed_at:
+                continue
+            if candidate is None:
+                candidate = CatalogCandidate(store_id=store.id, external_id=row["id"], source_title=row["title"], first_seen_at=observed_at)
+                db.add(candidate)
+            normalized = normalize_title(row["title"])
+            candidate.source_title = row["title"]
+            candidate.url = row["url"]
+            candidate.price_sek = row["price_sek"]
+            candidate.stock_status = "unknown"  # Category labels can disagree with the article page.
+            candidate.detected_format = normalized.format
+            candidate.category_hint = normalized.category_hint or (row["category"] if row["category"] != "Övriga boxar" else None)
+            candidate.language_hint = normalized.language
+            candidate.year_season_hint = normalized.year_season
+            candidate.sealed_candidate = normalized.sealed_candidate
+            candidate.randomized = normalized.randomized
+            candidate.exclusion_reason = normalized.exclusion_reason
+            candidate.last_seen_at = observed_at
+        db.commit()
+    finally:
+        db.close()
+
 
 def seed_speltrollet_inventory():
     """Stage every observed collection item for review; no item becomes buyable here."""
