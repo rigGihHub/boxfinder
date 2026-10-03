@@ -1,4 +1,18 @@
-# BoxFinder v0.52.0
+# BoxFinder v0.52.2
+
+## v0.52.2 – Jämför kostnaden inklusive frakt
+
+- Val mellan varupris och pris inklusive verifierad standardfrakt inom Sverige. Totalprisläget väljer rätt butik, omrankar och budgetfiltrerar på hela kostnaden för en produkt. Okänd frakt gissas inte.
+- AlphaSpels fraktregel är manuellt kontrollerad mot butikens villkor 3 oktober 2026: 59 kr till DHL-ombud, fraktfritt från 1 000 kr. Fraktregler blir inaktuella efter 14 dagar; en omstart ändrar inte kontrolltiden.
+- Varje resultatruta visar fraktstatus och källa när frakten är känd.
+- Återhämtningen väntar genom en längre kallstart och behandlar reservresultat som gamla tills API:t faktiskt svarar.
+
+
+## v0.52.1 – Sök per butik
+
+- Butiksfilter kan kombineras med kategori, maxpris och alla rankningslägen.
+- Den valda butikens aktuella pris och direktlänk används innan budgetfilter och omrankning, även om en annan butik är billigare.
+- Butikslistan hämtas från aktuella rankbara erbjudanden. Föråldrade söksvar kan inte ersätta en senare sökning.
 
 ## v0.52.0 – Mest för pengarna
 

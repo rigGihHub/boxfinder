@@ -1,6 +1,7 @@
 from datetime import datetime, timezone
 from threading import Lock, Thread
 from time import monotonic
+from typing import Literal
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy.orm import Session
 
@@ -46,7 +47,7 @@ def _refresh_resale_rankings():
             _resale_cache["refreshing"] = False
 
 
-def _resale_items(db: Session, strategy: str, category: str | None, max_price: float | None):
+def _resale_items(db: Session, strategy: str, category: str | None, max_price: float | None, store_id: int | None = None, cost_basis: str = "item"):
     if _resale_cache["ranked"] is None:
         prime_resale_rankings(db)
     elif monotonic() >= _resale_cache["until"]:
@@ -54,11 +55,28 @@ def _resale_items(db: Session, strategy: str, category: str | None, max_price: f
             if not _resale_cache["refreshing"]:
                 _resale_cache["refreshing"] = True
                 Thread(target=_refresh_resale_rankings, daemon=True).start()
-    items = [x for x in _resale_cache["ranked"][strategy] if is_recent_observation(x.get("observed_at"))]
+    items = _resale_cache["ranked"][strategy]
+    if store_id is not None or cost_basis == "total":
+        # Select the store offer BEFORE price filtering and scoring. A product
+        # must not disappear just because a different store is cheaper.
+        selected = []
+        for item in items:
+            offers = [offer for offer in item.get("store_offers", [])
+                      if (store_id is None or offer["store_id"] == store_id)
+                      and is_recent_observation(offer.get("observed_at"))
+                      and (cost_basis != "total" or (offer.get("total_price_sek") is not None
+                           and is_recent_observation(offer.get("shipping_checked_at"))))]
+            if offers:
+                key = "total_price_sek" if cost_basis == "total" else "price"
+                offer = min(offers, key=lambda o: o[key])
+                selected.append({**item, **offer, "cost_basis": cost_basis,
+                                 "ranking_price": offer[key]})
+        items = rank_resale(selected, strategy)
+    items = [x for x in items if is_recent_observation(x.get("observed_at"))]
     if category:
         items = [x for x in items if x["category"].lower() == category.lower()]
     if max_price is not None:
-        items = [x for x in items if x["price"] <= max_price]
+        items = [x for x in items if x.get("ranking_price", x["price"]) <= max_price]
     return items
 
 
@@ -102,18 +120,26 @@ def resale_rankings(
     max_price: float | None = Query(None, ge=0),
     limit: int = Query(20, ge=1, le=100),
     db: Session = Depends(get_db),
+    store_id: int | None = Query(None, ge=1),
+    cost_basis: Literal["item", "total"] = "item",
 ):
     strategy = strategy.lower().strip()
     if strategy not in STRATEGIES:
         return {"error": "unknown_strategy", "allowed_strategies": sorted(STRATEGIES)}
-    ranked = _resale_items(db, strategy, category, max_price)
+    ranked = _resale_items(db, strategy, category, max_price, store_id, cost_basis)
+    stores = {o["store_id"]: o["store"]
+              for item in _resale_cache["ranked"][strategy]
+              for o in item.get("store_offers", []) if is_recent_observation(o.get("observed_at"))}
     return {
         "searched_at": datetime.now(timezone.utc).isoformat(),
         "strategy": strategy,
+        "store_id": store_id,
+        "cost_basis": cost_basis,
+        "available_stores": [{"id": key, "name": value} for key, value in sorted(stores.items(), key=lambda pair: pair[1].casefold())],
         "category": category,
         "max_price": max_price,
         "count": len(ranked),
         "items": ranked[:limit],
         "max_offer_age_days": MAX_OFFER_AGE_DAYS,
-        "disclaimer": "Mest för pengarna jämför bedömt innehåll med varupriset, inte förväntad vinst. Frakt ingår inte. Övriga lägen jämför öppningspotential. Betyg A kräver verifierade marknadsvärden och användbara odds. B kan bygga på familjeodds eller formatträffar; inget av dem är odds för ett namngivet kort. C bygger på verifierad chase-profil utan tillräckliga odds.",
+        "disclaimer": "Betyget jämför bedömt innehåll med vald priskostnad, inte förväntad vinst. Totalpris gäller köp av en produkt med standardfrakt inom Sverige och visas bara med verifierad fraktregel. Betalavgifter och samfrakt beräknas inte. B kan bygga på familjeodds eller formatträffar; inget av dem är odds för ett namngivet kort.",
     }

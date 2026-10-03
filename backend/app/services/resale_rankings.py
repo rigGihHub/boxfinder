@@ -102,12 +102,12 @@ def resale_rank(item: dict, strategy: str = "balanced") -> dict:
     repeatable = float(pull.get("repeatable") or 0)
     ceiling = float(pull.get("ceiling") or 0)
     breadth, concentrated = _breadth(profile)
-    price_access = _price_access(item.get("price"))
+    price = item.get("ranking_price", item.get("price"))
+    price_access = _price_access(price)
     access = price_access * .75 + _opportunities(item.get("packs")) * .25
     data_quality = float(item.get("data_quality") or 0)
     ev_low = item.get("ev_low")
     ev_high = item.get("ev_high")
-    price = item.get("price")
 
     cards = sorted(
         profile.get("headline_chases", []),
@@ -196,6 +196,9 @@ def resale_rank(item: dict, strategy: str = "balanced") -> dict:
             reason for reason in reasons if reason != "Relativt låg insats för den kartlagda chasen"
         ]
         warning = "Bedömd bang for the buck, inte förväntad vinst eller uppmätt träffsannolikhet. Sålda kortvärden och fullständiga odds saknas; jämförelsen använder varupriser utan frakt."
+    if item.get("cost_basis") == "total":
+        basis += " Prisdelen och budgeten inkluderar verifierad frakt för köp av en produkt inom Sverige."
+        warning = warning.replace("jämförelsen använder varupriser utan frakt", "jämförelsen inkluderar verifierad frakt för en produkt inom Sverige")
     return {
         **item,
         "resale_score": round(clamp(score)),

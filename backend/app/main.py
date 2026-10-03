@@ -6,6 +6,7 @@ from .database import Base, engine, SessionLocal
 from .seed import seed_demo_data, seed_verified_snapshot, seed_chase_profiles, seed_chase_card_db, seed_speltrollet_inventory, seed_cardland_inventory
 from .routers import products, matching, admin, deals, checklists, market, players, rankings, budget, compare, watchlist, discovery, system, chase_search
 from .services.update_manager import scheduler_loop
+from .services.shipping_snapshot import seed_shipping_policies
 
 app = FastAPI(title=settings.app_name, version=settings.version)
 app.add_middleware(CORSMiddleware, allow_origins=settings.cors_origin_list, allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
@@ -17,6 +18,7 @@ def startup():
     seed_verified_snapshot()
     seed_speltrollet_inventory()
     seed_cardland_inventory()
+    seed_shipping_policies()
     seed_chase_profiles()
     seed_chase_card_db()
     with SessionLocal() as db:

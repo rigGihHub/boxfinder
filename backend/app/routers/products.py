@@ -3,12 +3,12 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import select
 from sqlalchemy.orm import Session, joinedload
 from ..database import get_db
-from ..models import ChaseProfile, ProductVariant, Offer
+from ..models import ChaseProfile, ProductVariant, Offer, ShippingPolicy
 from ..services.ev import calculate_variant_ev
 from ..services.product_detail import chase_cards, make_summary, outcome_groups, price_history_summary
 from ..services.scoring import calculate_box_value_score
 from ..services.readiness import ranking_readiness
-from ..services.price_compare import comparison_for_variant
+from ..services.price_compare import comparison_for_variant, shipping_for
 from ..services.price_signals import recent_signals
 from ..services.product_explanation import explain_variant
 from ..services.chase_content import get_profile, profile_from_row, content_summary, chase_ladder, chase_coverage, pull_profile
@@ -18,7 +18,7 @@ from ..services.offer_freshness import is_current_real_offer
 
 router = APIRouter(prefix="/products", tags=["products"])
 
-def serialize_variant(v: ProductVariant, current_offers_only: bool = False):
+def serialize_variant(v: ProductVariant, current_offers_only: bool = False, shipping_policies: dict | None = None):
     offers = [
         o for o in v.offers
         if o.stock_status == "in_stock"
@@ -29,6 +29,13 @@ def serialize_variant(v: ProductVariant, current_offers_only: bool = False):
     if not offers:
         return None
     best = min(offers, key=lambda o: o.price_sek)
+    def costs(offer):
+        policy = (shipping_policies or {}).get(offer.store_id)
+        shipping, status = shipping_for(policy, offer.price_sek)
+        return dict(shipping_sek=shipping, shipping_status=status,
+                    total_price_sek=round(offer.price_sek + shipping, 2) if shipping is not None else None,
+                    shipping_checked_at=policy.updated_at.isoformat() if policy and policy.updated_at else None,
+                    shipping_source_url=policy.source_url if policy else None)
     prices = [o.price_sek for o in offers]
     market_median = median(prices) if len(prices) >= 2 else None
     a = v.analysis
@@ -58,12 +65,19 @@ def serialize_variant(v: ProductVariant, current_offers_only: bool = False):
         "risk": a.risk if a else "Okänd", "source_kind": best.source_kind,
         "discount_pct": discount, "match_status": best.match_status,
         "offer_count": len(offers),
+        "store_id": best.store_id,
+        **costs(best),
+        "store_offers": [dict(store_id=o.store_id, store=o.store.name, price=o.price_sek,
+                              url=o.url, observed_at=o.observed_at.isoformat() if o.observed_at else None,
+                              source_kind=o.source_kind, match_status=o.match_status, **costs(o))
+                         for o in sorted(offers, key=lambda o: o.price_sek)],
     }
 
 @router.get("")
 def list_products(category: str | None = None, max_price: float | None = Query(None, ge=0), db: Session = Depends(get_db), include_details: bool = True, current_offers_only: bool = False):
     q = select(ProductVariant).options(joinedload(ProductVariant.product), joinedload(ProductVariant.offers).joinedload(Offer.store), joinedload(ProductVariant.analysis))
     variants = db.execute(q).unique().scalars().all()
+    shipping_policies = {p.store_id: p for p in db.scalars(select(ShippingPolicy)).all()}
     items = []
     profiles_by_variant = {}
     if not include_details and variants:
@@ -73,7 +87,7 @@ def list_products(category: str | None = None, max_price: float | None = Query(N
             for row in db.scalars(select(ChaseProfile).where(ChaseProfile.variant_id.in_(ids))).all()
         }
     for v in variants:
-        x = serialize_variant(v, current_offers_only=current_offers_only)
+        x = serialize_variant(v, current_offers_only=current_offers_only, shipping_policies=shipping_policies)
         if x:
             if include_details:
                 x["ranking_readiness"] = ranking_readiness(db, v)

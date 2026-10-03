@@ -7,24 +7,27 @@ const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 // Both Render services can sleep. The browser must wake the API directly;
 // proxy retries alone may return 503 without starting the sleeping API.
-const MAX_ATTEMPTS = 3;
-const RETRY_DELAY_MS = 2000;
+const MAX_ATTEMPTS = 30;
+const MAX_RECOVERY_MS = 90000;
+const RETRY_DELAY_MS = 3000;
 
-export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChange}) {
+export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChange, onStoresChange}) {
   const [message, setMessage] = useState("Väcker analysmotorn…");
   const [result, setResult] = useState(null);
   const [cachedResult, setCachedResult] = useState(null);
   const [failed, setFailed] = useState(false);
   const [retryKey, setRetryKey] = useState(0);
-  const stopped = useRef(false);
   const attempt = useRef(0);
 
   useEffect(() => {
-    stopped.current = false;
+    let cancelled = false;
+    const startedAt = Date.now();
     attempt.current = 0;
     setResult(null);
     setFailed(false);
-    setCachedResult(loadResaleResult(query));
+    const cached = loadResaleResult(query);
+    setCachedResult(cached);
+    if (cached?.data?.available_stores) onStoresChange?.(cached.data.available_stores);
     onLoadingChange?.(true);
     let timer;
 
@@ -40,7 +43,7 @@ export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChang
       attempt.current = nextAttempt;
       setMessage(nextAttempt === 1
         ? "Väcker analysmotorn…"
-        : `Söker igen · försök ${nextAttempt} av ${MAX_ATTEMPTS}`);
+        : `Söker igen · ${Math.round((Date.now() - startedAt) / 1000)} sekunder`);
       try {
         const response = await fetch(`/api/resale-recovery?${query}`, {
           cache: "no-store",
@@ -48,19 +51,24 @@ export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChang
         });
         if (response.ok) {
           const data = await response.json();
-          if (Array.isArray(data.items)) {
+          if (cancelled) return;
+          if (Array.isArray(data.items) && !data.stale) {
+            if (data.available_stores) onStoresChange?.(data.available_stores);
             saveResaleResult(query, data);
             setResult(data);
             onLoadingChange?.(false);
             return;
           }
+          if (Array.isArray(data.items) && data.stale) {
+            setCachedResult({data});
+          }
         }
       } catch {
         // A sleeping Render service is expected to fail during its first wake-up.
       }
-      if (!stopped.current && nextAttempt < MAX_ATTEMPTS) {
+      if (!cancelled && nextAttempt < MAX_ATTEMPTS && Date.now() - startedAt < MAX_RECOVERY_MS) {
         timer = window.setTimeout(recover, RETRY_DELAY_MS);
-      } else if (!stopped.current) {
+      } else if (!cancelled) {
         setFailed(true);
         setMessage("API:t svarar inte just nu. Senast sparade ranking visas om den finns.");
         onLoadingChange?.(false);
@@ -69,10 +77,10 @@ export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChang
 
     recover();
     return () => {
-      stopped.current = true;
+      cancelled = true;
       if (timer) window.clearTimeout(timer);
     };
-  }, [query, refreshKey, retryKey, onLoadingChange]);
+  }, [query, refreshKey, retryKey, onLoadingChange, onStoresChange]);
 
   if (result) return <ResaleResults query={query} data={result}/>;
 

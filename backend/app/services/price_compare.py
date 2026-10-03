@@ -4,6 +4,7 @@ from statistics import median
 from sqlalchemy import select
 from sqlalchemy.orm import Session
 from ..models import ProductVariant, ShippingPolicy
+from .offer_freshness import is_recent_observation
 
 TRUSTED_MATCH_STATUSES = {"auto_matched", "manual_matched"}
 MAX_OFFER_AGE_DAYS = 14
@@ -13,6 +14,8 @@ def shipping_for(policy: ShippingPolicy | None, item_price: float) -> tuple[floa
         return None, "unknown"
     if policy.verification_status not in {"verified", "manual_verified"}:
         return None, "unverified"
+    if policy.updated_at is not None and not is_recent_observation(policy.updated_at):
+        return None, "expired"
     if policy.free_shipping_threshold_sek is not None and item_price >= policy.free_shipping_threshold_sek:
         return 0.0, "verified"
     if policy.base_shipping_sek is None:

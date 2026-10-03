@@ -472,7 +472,7 @@ def test_ranking_product_list_uses_one_bulk_chase_profile_query(monkeypatch):
     event.remove(bind,"before_cursor_execute",count_query)
     assert items
     assert any(x["chase_profile"] and x["chase_ladder"] for x in items)
-    assert len(statements)<=2, f"ranking list should load products and profiles in bulk, got {len(statements)} SQL statements"
+    assert len(statements)<=3, f"ranking list should load products, profiles and shipping in bulk, got {len(statements)} SQL statements"
     db.close()
 
 def test_all_chase_profiles_point_to_seeded_products(monkeypatch):
