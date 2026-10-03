@@ -14,15 +14,17 @@ from ..services.product_explanation import explain_variant
 from ..services.chase_content import get_profile, profile_from_row, content_summary, chase_ladder, chase_coverage, pull_profile
 from ..services.purchase_links import is_direct_purchase_url
 from ..services.product_format import total_sealed_cards
+from ..services.offer_freshness import is_current_real_offer
 
 router = APIRouter(prefix="/products", tags=["products"])
 
-def serialize_variant(v: ProductVariant):
+def serialize_variant(v: ProductVariant, current_offers_only: bool = False):
     offers = [
         o for o in v.offers
         if o.stock_status == "in_stock"
         and not o.is_preorder
         and is_direct_purchase_url(o.url)
+        and (not current_offers_only or is_current_real_offer(o))
     ]
     if not offers:
         return None
@@ -59,7 +61,7 @@ def serialize_variant(v: ProductVariant):
     }
 
 @router.get("")
-def list_products(category: str | None = None, max_price: float | None = Query(None, ge=0), db: Session = Depends(get_db), include_details: bool = True):
+def list_products(category: str | None = None, max_price: float | None = Query(None, ge=0), db: Session = Depends(get_db), include_details: bool = True, current_offers_only: bool = False):
     q = select(ProductVariant).options(joinedload(ProductVariant.product), joinedload(ProductVariant.offers).joinedload(Offer.store), joinedload(ProductVariant.analysis))
     variants = db.execute(q).unique().scalars().all()
     items = []
@@ -71,7 +73,7 @@ def list_products(category: str | None = None, max_price: float | None = Query(N
             for row in db.scalars(select(ChaseProfile).where(ChaseProfile.variant_id.in_(ids))).all()
         }
     for v in variants:
-        x = serialize_variant(v)
+        x = serialize_variant(v, current_offers_only=current_offers_only)
         if x:
             if include_details:
                 x["ranking_readiness"] = ranking_readiness(db, v)

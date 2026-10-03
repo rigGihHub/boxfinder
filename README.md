@@ -1,4 +1,11 @@
-# BoxFinder v0.51.2
+# BoxFinder v0.52.0
+
+## v0.52.0 – Mest för pengarna
+
+- Nytt standardläge: bedömt innehåll för pengarna. Inköpspriset dominerar prisdelen på 35 %, återkommande innehåll 30 %, dokumenterade formatträffar 20 %, chase-bredd 10 % och toppkortens tak 5 %.
+- Extra paket ger högst 1,05 poäng av 100 i totalbetyget, inte en påhittad träffsannolikhet. Löspaket får en riskjustering.
+- Avsaknad av relevanta odds eller formatfakta begränsar betyget; gammalt EV och familjeodds används inte som verifierad avkastning. Poängen bygger på varupriser utan frakt och är en heuristik, inte monetärt EV.
+- Rankningen kräver godkänd produktmatchning, lagerstatus, direktlänk och butiksuppgifter högst 14 dagar gamla. Gammal browser-cache ersätts.
 
 ## v0.51.2 – Engelska Pokémon-expansioner
 

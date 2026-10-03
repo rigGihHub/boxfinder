@@ -8,6 +8,7 @@ from ..database import get_db, SessionLocal
 from .products import list_products
 from ..services.rankings import rank_items
 from ..services.resale_rankings import STRATEGIES, rank_resale
+from ..services.offer_freshness import is_recent_observation, MAX_OFFER_AGE_DAYS
 
 router = APIRouter(prefix="/rankings", tags=["rankings"])
 ALLOWED_MODES = {"value", "upside", "rookies", "hit_density", "balanced"}
@@ -16,7 +17,7 @@ _resale_cache: dict = {"until": 0, "ranked": None, "refreshing": False}
 
 
 def _items(db: Session, category: str | None, max_price: float | None):
-    return list_products(category=category, max_price=max_price, db=db, include_details=False)
+    return list_products(category=category, max_price=max_price, db=db, include_details=False, current_offers_only=True)
 
 
 def prime_resale_rankings(db: Session):
@@ -53,7 +54,7 @@ def _resale_items(db: Session, strategy: str, category: str | None, max_price: f
             if not _resale_cache["refreshing"]:
                 _resale_cache["refreshing"] = True
                 Thread(target=_refresh_resale_rankings, daemon=True).start()
-    items = _resale_cache["ranked"][strategy]
+    items = [x for x in _resale_cache["ranked"][strategy] if is_recent_observation(x.get("observed_at"))]
     if category:
         items = [x for x in items if x["category"].lower() == category.lower()]
     if max_price is not None:
@@ -96,7 +97,7 @@ def ranking_overview(db: Session = Depends(get_db)):
 
 @router.get("/resale")
 def resale_rankings(
-    strategy: str = Query("balanced"),
+    strategy: str = Query("value"),
     category: str | None = None,
     max_price: float | None = Query(None, ge=0),
     limit: int = Query(20, ge=1, le=100),
@@ -113,5 +114,6 @@ def resale_rankings(
         "max_price": max_price,
         "count": len(ranked),
         "items": ranked[:limit],
-        "disclaimer": "Rankingen jämför öppningspotential mellan kategorier, inte förväntad vinst. Betyg A kräver verifierade marknadsvärden och användbara odds. B kan bygga på familjeodds eller formatträffar; inget av dem är odds för ett namngivet kort. C bygger på verifierad chase-profil utan tillräckliga odds.",
+        "max_offer_age_days": MAX_OFFER_AGE_DAYS,
+        "disclaimer": "Mest för pengarna jämför bedömt innehåll med varupriset, inte förväntad vinst. Frakt ingår inte. Övriga lägen jämför öppningspotential. Betyg A kräver verifierade marknadsvärden och användbara odds. B kan bygga på familjeodds eller formatträffar; inget av dem är odds för ett namngivet kort. C bygger på verifierad chase-profil utan tillräckliga odds.",
     }

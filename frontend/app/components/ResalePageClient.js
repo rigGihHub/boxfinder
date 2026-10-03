@@ -6,7 +6,8 @@ import {useState} from "react";
 import ResaleApiRecovery from "./ResaleApiRecovery";
 
 const strategies = [
-  ["balanced", "Bäst helhet"],
+  ["value", "Mest för pengarna"],
+  ["balanced", "Öppningspotential"],
   ["jackpot", "Högsta möjliga träff"],
   ["frequent", "Bra träff oftare"],
 ];
@@ -16,7 +17,7 @@ export default function ResalePageClient() {
   const searchParams = useSearchParams();
   const [refreshKey, setRefreshKey] = useState(0);
   const [ranking, setRanking] = useState(false);
-  const strategy = searchParams.get("strategy") || "balanced";
+  const strategy = searchParams.get("strategy") || "value";
   const category = searchParams.get("category") || "";
   const maxPrice = searchParams.get("max_price") || "";
   const qs = new URLSearchParams({strategy});
@@ -28,7 +29,7 @@ export default function ResalePageClient() {
   function runRanking(event) {
     event.preventDefault();
     const form = new FormData(event.currentTarget);
-    const next = new URLSearchParams({strategy: String(form.get("strategy") || "balanced")});
+    const next = new URLSearchParams({strategy: String(form.get("strategy") || "value")});
     const nextCategory = String(form.get("category") || "");
     const nextMaxPrice = String(form.get("max_price") || "");
     if (nextCategory) next.set("category", nextCategory);
@@ -50,13 +51,13 @@ export default function ResalePageClient() {
     <header className="productNav">
       <Link className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></Link>
       <Link className="backLink" href="/">← STARTSIDAN</Link>
-      <span className="version">v0.51.2</span>
+      <span className="version">v0.52.0</span>
     </header>
 
     <section className="resaleHero">
       <span className="kicker">ALLA KATEGORIER · SAMMA MÅL</span>
-      <h1>Bästa produkten att öppna<br/><em>för en riktigt bra träff.</em></h1>
-      <p>Hockey, fotboll, Pokémon, One Piece, Marvel och andra kategorier tävlar på samma lista. BoxFinder väger dokumenterat korttak, chase-bredd, träfffrekvens, formatträffar och pris. Poängen är inte en vinstprognos.</p>
+      <h1>Mest för pengarna<br/><em>när du öppnar kort.</em></h1>
+      <p>BoxFinder prioriterar bra kortinnehåll till låg inköpskostnad: återkommande intressant innehåll, dokumenterade formatträffar och bredd av attraktiva kort. Extra paket ger bara en liten bonus. Toppkortens tak får liten vikt i ”Mest för pengarna”. Betyget är en bedömning av innehåll för pengarna, inte en vinstprognos.</p>
       <div className="resaleModes">{strategies.map(([value,label])=><Link className={strategy===value?"active":""} href={`?strategy=${value}${category?`&category=${encodeURIComponent(category)}`:""}${maxPrice?`&max_price=${maxPrice}`:""}`} key={value}>{label}</Link>)}</div>
       <form className="resaleFilters" onSubmit={runRanking} aria-busy={ranking}>
         <input type="hidden" name="strategy" value={strategy}/>
@@ -67,7 +68,7 @@ export default function ResalePageClient() {
     </section>
 
     <section className="resaleRanking" id="resale-ranking">
-      <div className="sectionHead"><div><span className="kicker">ÖPPNINGSRANKING</span><h2>Bäst öppningspotential just nu</h2></div><p>Senaste resultat visas direkt och uppdateras i bakgrunden</p></div>
+      <div className="sectionHead"><div><span className="kicker">BOXFINDERS RANKING</span><h2>{strategy === "value" ? "Mest innehåll för pengarna" : "Bäst öppningspotential just nu"}</h2></div><p>Senaste resultat visas direkt och uppdateras i bakgrunden</p></div>
       <ResaleApiRecovery query={query} refreshKey={refreshKey} onLoadingChange={setRanking}/>
     </section>
   </main>;

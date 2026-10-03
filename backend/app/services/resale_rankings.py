@@ -6,7 +6,7 @@ import re
 from .chase_content import format_hits, has_actionable_odds, pull_profile
 
 
-STRATEGIES = {"balanced", "jackpot", "frequent"}
+STRATEGIES = {"value", "balanced", "jackpot", "frequent"}
 
 
 def clamp(value: float, low: float = 0.0, high: float = 100.0) -> float:
@@ -59,10 +59,23 @@ def _breadth(profile: dict) -> tuple[float, bool]:
 
 
 WEIGHTS = {
+    "value": {"ceiling": .05, "breadth": .10, "repeatable": .30, "format": .20, "access": .35, "evidence": .00},
     "balanced": {"ceiling": .30, "breadth": .18, "repeatable": .22, "format": .12, "access": .10, "evidence": .08},
     "jackpot": {"ceiling": .50, "breadth": .20, "repeatable": .08, "format": .05, "access": .12, "evidence": .05},
     "frequent": {"ceiling": .05, "breadth": .10, "repeatable": .45, "format": .25, "access": .10, "evidence": .05},
 }
+
+
+def _value_access(price: float | None, packs: int | None) -> float:
+    """A bounded cost/quantity heuristic, never an expected-return estimate.
+
+    Price dominates this signal. Extra packs add at most 1.05 final points; they
+    cannot multiply checklist quality or invent a chance of valuable hits.
+    """
+    if not isinstance(price, (int, float)) or not math.isfinite(price) or price <= 0:
+        return 0
+    quantity = min(3, .75 * math.log2(max(1, packs or 1)))
+    return clamp(100 - 20 * math.log2(1 + price / 250) + quantity)
 
 
 def _tier_rank(tier: str | None) -> int:
@@ -108,12 +121,16 @@ def resale_rank(item: dict, strategy: str = "balanced") -> dict:
     # Curated tier scores describe the checklist. Without relevant odds or
     # format hits they must not be presented as measured hit frequency.
     if not documented_frequency:
-        repeatable = min(repeatable, 74)
+        repeatable = min(repeatable, 50 if strategy == "value" else 74)
     pull = {**pull, "repeatable": round(repeatable)}
     # An average is weaker than a guaranteed family hit; neither guarantees a named card.
     quality = {"premium": (86, 73), "collectible": (72, 65), "base": (58, 54)}
     format_strength = max((quality[h["quality"]][0 if h["basis"] == "guaranteed" else 1]
                            + min(2, h["count"] - 1) * 3) for h in hits) if hits else 55
+    if strategy == "value":
+        access = _value_access(price, item.get("packs"))
+        if not hits:
+            format_strength = 35
     profile_confidence = float(profile.get("confidence") or 0)
 
     evidence = clamp(55 + profile_confidence * .30 + (10 if has_odds else 0) + (5 if hits else 0))
@@ -124,9 +141,11 @@ def resale_rank(item: dict, strategy: str = "balanced") -> dict:
         score -= 4 if strategy == "jackpot" else 2
     loose_pack = item.get("format") == "single pack"
     if loose_pack:
-        score -= {"balanced": 3, "jackpot": 2, "frequent": 5}[strategy]
+        score -= {"value": 8, "balanced": 3, "jackpot": 2, "frequent": 5}[strategy]
 
-    has_market_ev = ev_low is not None and ev_high is not None and price and price > 0 and has_odds
+    # Family odds and a cached EV are insufficient to claim financial return.
+    # The value mode remains an explicit content-for-money estimate.
+    has_market_ev = strategy != "value" and ev_low is not None and ev_high is not None and price and price > 0 and has_odds
     if has_market_ev:
         ev_ratio = ((float(ev_low) + float(ev_high)) / 2) / float(price)
         ev_signal = clamp(ev_ratio / 1.25 * 100)
@@ -170,6 +189,13 @@ def resale_rank(item: dict, strategy: str = "balanced") -> dict:
         if has_market_ev
         else "Öppningspotential, inte förväntad vinst: fullständiga sålda priser och kortspecifika odds saknas."
     )
+    if strategy == "value":
+        basis = "Bedömt innehåll för pengarna: inköpspris och dokumenterade formatträffar; antal paket ger en liten bonus. Ingen beräknad avkastning."
+        grade = "Innehåll/pris · bedömning"
+        reasons = ["Inköpspriset dominerar prisdelen på 35 %; extra paket ger högst 1,05 poäng av 100"] + [
+            reason for reason in reasons if reason != "Relativt låg insats för den kartlagda chasen"
+        ]
+        warning = "Bedömd bang for the buck, inte förväntad vinst eller uppmätt träffsannolikhet. Sålda kortvärden och fullständiga odds saknas; jämförelsen använder varupriser utan frakt."
     return {
         **item,
         "resale_score": round(clamp(score)),
@@ -186,6 +212,7 @@ def resale_rank(item: dict, strategy: str = "balanced") -> dict:
         "ranking_factors": {key: round(value, 1) for key, value in signals.items()},
         "format_hits": hits,
         "strategy": strategy,
+        "score_label": "INNEHÅLL FÖR PENGARNA" if strategy == "value" else "ÖPPNINGSPOTENTIAL",
     }
 
 

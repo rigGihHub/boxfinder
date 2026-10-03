@@ -192,11 +192,14 @@ def test_curated_format_facts_match_chase_profiles():
 
 
 def test_primed_ranking_filters_without_requerying_database(monkeypatch):
+    from datetime import datetime, timezone
     from app.routers import rankings
     monkeypatch.setattr(rankings, "_resale_cache", {"until": 0, "ranked": None, "refreshing": False})
     items = [resale_item(id=1, price=80, category="Magic", source_kind="verified_snapshot"),
              resale_item(id=2, price=500, category="Hockey", source_kind="verified_snapshot"),
              resale_item(id=3, price=50, category="Magic", source_kind="demo")]
+    for item in items:
+        item["observed_at"] = datetime.now(timezone.utc).isoformat()
     monkeypatch.setattr(rankings, "_items", lambda db, category, max_price: items)
     rankings.prime_resale_rankings(None)
     assert [x["id"] for x in rankings._resale_items(None, "balanced", "Magic", 100)] == [1]
