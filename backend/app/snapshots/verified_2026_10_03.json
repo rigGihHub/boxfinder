@@ -1,0 +1,152 @@
+{
+  "observed_at": "2026-10-03T21:40:00Z",
+  "method": "One-time direct product-page and exact public Shopify variant verification; no scheduled crawl. Category and comparison search results are discovery leads only.",
+  "checks": [
+    {
+      "url": "https://dragonslair.se/products/magic-the-gathering-teenage-mutant-ninja-turtles-play-booster-magic-the-gathering",
+      "title": "Magic The Gathering: Teenage Mutant Ninja Turtles Play Booster",
+      "price": 59.0,
+      "available": true,
+      "variants": [
+        {
+          "id": 57444329783644,
+          "sku": "161826",
+          "title": "Default Title",
+          "price": 5900,
+          "available": true
+        }
+      ]
+    },
+    {
+      "url": "https://dragonslair.se/products/magic-the-gathering-teenage-mutant-ninja-turtles-collector-booster-magic-the-gathering",
+      "title": "Magic The Gathering: Teenage Mutant Ninja Turtles Collector Booster",
+      "price": 549.0,
+      "available": true,
+      "variants": [
+        {
+          "id": 57444329881948,
+          "sku": "161827",
+          "title": "Default Title",
+          "price": 54900,
+          "available": true
+        }
+      ]
+    },
+    {
+      "url": "https://hobbykort.se/products/magic-the-gathering-teenage-mutant-ninja-turtles-booster-box",
+      "title": "Magic The Gathering: Teenage Mutant Ninja Turtles Play Booster Box",
+      "price": 1695.0,
+      "available": true,
+      "variants": [
+        {
+          "id": 55316966867278,
+          "sku": "WOCD51630001",
+          "title": "Default Title",
+          "price": 169500,
+          "available": true
+        }
+      ]
+    },
+    {
+      "url": "https://tcgstore.se/products/magic-the-gathering-teenage-mutant-ninja-turtles-play-booster-box",
+      "title": "Magic the Gathering - Teenage Mutant Ninja Turtles Play Booster Box",
+      "price": 1299.0,
+      "available": false,
+      "variants": [
+        {
+          "id": 53332431176007,
+          "sku": "MAGTGTM",
+          "title": "Default Title",
+          "price": 129900,
+          "available": false
+        }
+      ]
+    },
+    {
+      "url": "https://www.alaragames.se/products/magic-the-gathering-teenage-mutant-ninja-turtles-play-booster",
+      "title": "Magic the Gathering: Teenage Mutant Ninja Turtles Play Booster",
+      "price": 85.0,
+      "available": true,
+      "variants": [
+        {
+          "id": 56577061454168,
+          "sku": "MAGD5163",
+          "title": "Default Title",
+          "price": 8500,
+          "available": true
+        }
+      ]
+    },
+    {
+      "url": "https://www.alaragames.se/products/magic-the-gathering-marvels-spider-man-play-booster",
+      "title": "Magic the Gathering: Marvel's Spider-Man Play Booster",
+      "price": 85.0,
+      "available": true,
+      "variants": [
+        {
+          "id": 55544150589784,
+          "sku": "MAGD4524",
+          "title": "Default Title",
+          "price": 8500,
+          "available": true
+        }
+      ]
+    },
+    {
+      "url": "https://www.alaragames.se/products/magic-the-gathering-marvel-super-heroes-play-booster",
+      "title": "Magic the Gathering: Marvel Super Heroes Play Booster",
+      "price": 85.0,
+      "available": true,
+      "variants": [
+        {
+          "id": 57395376980312,
+          "sku": "MAGD5356",
+          "title": "Default Title",
+          "price": 8500,
+          "available": true
+        }
+      ]
+    },
+    {
+      "url": "https://moxgames.se/products/booster-boxes/magic-the-gathering-teenage-mutant-ninja-turtles-play-booster-box",
+      "title": "Magic the Gathering: Teenage Mutant Ninja Turtles Play Booster Box",
+      "price": 1995,
+      "available": true,
+      "stock_evidence": "I lager. Lägg i korgen",
+      "packs": 30,
+      "language_evidence": "English Play Booster packaging shown in product images",
+      "external_id_note": "MOX-tmnt-play-booster-box is a local stable identifier; no retailer SKU was published."
+    },
+    {
+      "url": "https://www.coolcard.se/product/1st-paket-2026-topps-tennis-chrome-hobby",
+      "title": "1st Paket 2026 Topps Tennis Chrome Hobby (8 cards)",
+      "price": 149,
+      "available": true,
+      "sku": "FGC007121-01",
+      "stock_evidence": "12 st i lager",
+      "packs": 1,
+      "cards_per_pack": 8
+    },
+    {
+      "url": "https://nordicsportscards.se/products/2026-topps-chrome-tennis-hobby-box",
+      "price": 1490,
+      "available": false,
+      "variant_id": 54193572512072,
+      "decision": "Excluded: exact Shopify variant unavailable despite a search result showing stock."
+    },
+    {
+      "url": "https://www.sfbok.se/sv/spel/samlarkortspel-tcg-ccg/magic-the-gathering/742865/mtg-teenage-mutant-ninja-turtles-play-booster",
+      "price": 99,
+      "available": false,
+      "decision": "Excluded: no online stock; description mixes display and single-pack content."
+    },
+    {
+      "url": "https://sweetnerds.se/sv/brand/cyberpunk-tcg",
+      "decision": "No buyable offers added: booster packs and boxes marked out of stock; event tickets are outside card scope."
+    }
+  ],
+  "manufacturer_sources": [
+    "https://magic.wizards.com/en/news/feature/collecting-teenage-mutant-ninja-turtles",
+    "https://cdn.shopify.com/s/files/1/0662/9749/5709/files/26TCTN_-_2026_Topps_Chrome_Tennis_Checklist_V2.xls?v=1790700549"
+  ]
+}

@@ -578,7 +578,7 @@ def test_dragons_lair_magic_expansion_has_live_format_safe_offers(monkeypatch):
         .join(ProductVariant, ProductVariant.product_id==Product.id)
         .join(Offer, Offer.variant_id==ProductVariant.id)
         .join(Store, Store.id==Offer.store_id)
-        .where(Product.slug.in_(new_slugs))
+        .where(Product.slug.in_(new_slugs), Store.name=="Dragons Lair")
     ).all()
     assert {product.slug for product,_,_,_ in rows}==new_slugs
     assert all(store.name=="Dragons Lair" for _,_,_,store in rows)

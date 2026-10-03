@@ -14,6 +14,8 @@ SEED = [
 ]
 
 REAL_STORES = [
+    dict(name="Mox Games", homepage_url="https://moxgames.se/", source_url="https://moxgames.se/products/booster-boxes", collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="Alara Games", homepage_url="https://www.alaragames.se/", source_url="https://www.alaragames.se/collections/mtg-boosters", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Terratide", homepage_url="https://terratide.se/", source_url="https://terratide.se/sv-se/samlarkort", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="TCG Deals Sverige", homepage_url="https://tcgdeals.se/", source_url="https://tcgdeals.se/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Coolcard", homepage_url="https://www.coolcard.se/", source_url="https://www.coolcard.se/", collection_method="public_html", adapter_key="public_html_catalog", policy_status="review_required"),
@@ -416,6 +418,21 @@ CARDLAND_BACKUP_OFFERS = [
     dict(slug="ch-pokemon-pitch-black-etb", name="Pokémon Mega Evolution: Pitch Black Elite Trainer Box", category="Pokémon", manufacturer="The Pokémon Company", year="2026", series="Pitch Black", fmt="elite trainer box", sku="CARDLAND-56804", price=848, packs=9, cards=10, stock="in_stock", language="English", store_name="Cardland", observed_at=CARDLAND_VERIFIED_AT, buy_url="https://www.cardland.se/ovriga-boxar/pokemon-tcg-mega-evolution-pitch-black-elite-trainer-box"),
 ]
 REAL_SNAPSHOT += CARDLAND_BACKUP_OFFERS
+
+# Direct article pages and exact Shopify variants checked together. Search and
+# comparison listings were discovery leads only; unavailable offers were rejected.
+OCTOBER_03_OBSERVED_AT = datetime(2026, 10, 3, 21, 40, 0)
+OCTOBER_03_EXPANSION = [
+    dict(slug="dl-mtg-tmnt-play-pack", name="Magic Teenage Mutant Ninja Turtles Play Booster", category="Magic", manufacturer="Wizards of the Coast", year="2026", series="Teenage Mutant Ninja Turtles", fmt="single pack", sku="161826", price=59, packs=1, cards=14, stock="in_stock", language="English", store_name="Dragons Lair", observed_at=OCTOBER_03_OBSERVED_AT, facts=["1 Play Booster med 14 kort, minst 1 rare/mythic, 1 legendary Turtle av valfri raritet och 1 traditional foil", "Non-foil Source Material-familjen förekommer i 1 av 28 Play Boosters; inget odds för ett särskilt kort", "Eastman-headliners, foil Source Material och Japan Showcase kan inte dras ur Play Boosters"], buy_url="https://dragonslair.se/products/magic-the-gathering-teenage-mutant-ninja-turtles-play-booster-magic-the-gathering"),
+    dict(slug="hk-mtg-tmnt-play-display", name="Magic Teenage Mutant Ninja Turtles Play Booster Display", category="Magic", manufacturer="Wizards of the Coast", year="2026", series="Teenage Mutant Ninja Turtles", fmt="booster box", sku="WOCD51630001", price=1695, packs=30, cards=14, stock="in_stock", language="English", store_name="Hobbykort", observed_at=OCTOBER_03_OBSERVED_AT, facts=["30 Play Boosters med 14 kort: totalt 420 boosterkort", "Minst 1 rare/mythic och 1 traditional foil per paket; ingen viss Turtle eller Source Material-träff garanteras per box", "Collector Booster-exklusiva Eastman-headliners och Japan Showcase ingår inte"], buy_url="https://hobbykort.se/products/magic-the-gathering-teenage-mutant-ninja-turtles-booster-box"),
+    dict(slug="hk-mtg-tmnt-play-display", name="Magic Teenage Mutant Ninja Turtles Play Booster Display", category="Magic", manufacturer="Wizards of the Coast", year="2026", series="Teenage Mutant Ninja Turtles", fmt="booster box", sku="MOX-tmnt-play-booster-box", price=1995, packs=30, cards=14, stock="in_stock", language="English", store_name="Mox Games", observed_at=OCTOBER_03_OBSERVED_AT, buy_url="https://moxgames.se/products/booster-boxes/magic-the-gathering-teenage-mutant-ninja-turtles-play-booster-box"),
+    dict(slug="dl-mtg-tmnt-collector-pack", name="Magic Teenage Mutant Ninja Turtles Collector Booster", category="Magic", manufacturer="Wizards of the Coast", year="2026", series="Teenage Mutant Ninja Turtles", fmt="single pack", sku="161827", price=549, packs=1, cards=15, stock="in_stock", language="English", store_name="Dragons Lair", observed_at=OCTOBER_03_OBSERVED_AT, facts=["1 Collector Booster med 15 kort", "1 non-foil eller traditional foil Source Material-kort per paket; foil i denna slot är 25 %", "Eastman signature-headliners och fracture foil Japan Showcase är möjliga, aldrig garanterade", "Tryckt Eastman-signaturstämpel är inte en handskriven autograf"], buy_url="https://dragonslair.se/products/magic-the-gathering-teenage-mutant-ninja-turtles-collector-booster-magic-the-gathering"),
+    dict(slug="cc-2026-topps-chrome-tennis-pack", name="2026 Topps Chrome Tennis Hobby Pack", category="Tennis", manufacturer="Topps", year="2026", series="Chrome Tennis", fmt="single pack", sku="FGC007121-01", price=149, packs=1, cards=8, stock="in_stock", language="English", store_name="Coolcard", observed_at=OCTOBER_03_OBSERVED_AT, facts=["1 löst hobby-pack med 8 kort", "Autografer, numrerade refractors och hobbyinserts är möjliga", "Hel hobbybox har två autografer; ett löst paket har ingen autografgaranti", "Topps hobbyodds gäller kortfamiljer per pack, inte en särskild spelare"], buy_url="https://www.coolcard.se/product/1st-paket-2026-topps-tennis-chrome-hobby"),
+    dict(slug="dl-mtg-tmnt-play-pack", name="Magic Teenage Mutant Ninja Turtles Play Booster", category="Magic", manufacturer="Wizards of the Coast", year="2026", series="Teenage Mutant Ninja Turtles", fmt="single pack", sku="MAGD5163", price=85, packs=1, cards=14, stock="in_stock", language="English", store_name="Alara Games", observed_at=OCTOBER_03_OBSERVED_AT, buy_url="https://www.alaragames.se/products/magic-the-gathering-teenage-mutant-ninja-turtles-play-booster"),
+    dict(slug="dl-mtg-spiderman-play-pack", name="Magic Marvel's Spider-Man Play Booster", category="Magic", manufacturer="Wizards of the Coast", year="2025", series="Marvel's Spider-Man", fmt="single pack", sku="MAGD4524", price=85, packs=1, cards=14, stock="in_stock", language="English", store_name="Alara Games", observed_at=OCTOBER_03_OBSERVED_AT, buy_url="https://www.alaragames.se/products/magic-the-gathering-marvels-spider-man-play-booster"),
+    dict(slug="dl-mtg-marvel-superheroes-play-pack", name="Magic Marvel Super Heroes Play Booster", category="Magic", manufacturer="Wizards of the Coast", year="2026", series="Marvel Super Heroes", fmt="single pack", sku="MAGD5356", price=85, packs=1, cards=14, stock="in_stock", language="English", store_name="Alara Games", observed_at=OCTOBER_03_OBSERVED_AT, buy_url="https://www.alaragames.se/products/magic-the-gathering-marvel-super-heroes-play-booster"),
+]
+REAL_SNAPSHOT += OCTOBER_03_EXPANSION
 
 
 def seed_cardland_inventory():
@@ -2614,6 +2631,50 @@ CHASE_PROFILES["cs-2026-topps-chrome-tennis-hobby"]["format_hits"] = [
     {"format":"hobby box", "family":"Chrome-autografer", "count":2, "basis":"guaranteed", "quality":"premium"}
 ]
 
+_TMNT_PLAY_PROFILE = {
+    "source_name":"Wizards of the Coast, Teenage Mutant Ninja Turtles Play Booster slots",
+    "source_url":"https://magic.wizards.com/en/news/feature/collecting-teenage-mutant-ninja-turtles",
+    "key_names":["Brainstorm", "Doubling Season", "Donatello, Mutant Mechanic", "Raphael, Ninja Destroyer"],
+    "headline_chases":[
+        {"card":"Doubling Season – non-foil Source Material", "tier":"MONSTER", "odds":"Source Material-familjen 1:28 Play Boosters; kortspecifikt odds saknas", "why":"Wizards bekräftar non-foil Source Material i Play Boosters."},
+        {"card":"Brainstorm – non-foil Source Material", "tier":"BRA", "odds":"Source Material-familjen 1:28 Play Boosters; kortspecifikt odds saknas", "why":"Namngivet kort i Wizards officiella Source Material-presentation."},
+        {"card":"Donatello eller Raphael – foil borderless silhouette", "tier":"MYCKET BRA", "odds":"Kortspecifikt packodds saknas", "why":"Traditional foil silhouette är möjlig i Play Boosters; ingen viss Turtle garanteras."},
+    ],
+    "why_exciting":["Minst en rare/mythic, en legendary Turtle av valfri raritet och en traditional foil per Play Booster.", "Non-foil Source Material ger ett separat chase-spår med publicerad familjefrekvens."],
+    "tiers":{"everyday":{"label":"Play Booster-innehåll", "score":58, "items":["Rare/mythic och traditional foil", "Legendary Turtle kan vara common"]}, "good":{"label":"Bra träff", "score":68, "items":["Turtle rare/mythic", "Non-foil Source Material"]}, "big":{"label":"Specialbehandling", "score":79, "items":["Foil silhouette Turtle"]}, "jackpot":{"label":"Play Booster-tak", "score":84, "items":["Doubling Season Source Material"]}},
+    "caveat":"1:28 gäller hela non-foil Source Material-familjen per Play Booster, inte Doubling Season eller Brainstorm. Ingen särskild Turtle eller Source Material-träff garanteras per box. Eastman-headliners, foil Source Material och Japan Showcase är Collector Booster-exklusiva och kan inte dras här. Sålda kortpriser saknas."
+}
+for _slug, _fmt, _count in [("dl-mtg-tmnt-play-pack", "single pack", 1), ("hk-mtg-tmnt-play-display", "booster box", 30)]:
+    CHASE_PROFILES[_slug] = copy.deepcopy(_TMNT_PLAY_PROFILE)
+    CHASE_PROFILES[_slug]["format_hits"] = [{"format":_fmt, "family":"rare/mythic", "count":_count, "basis":"guaranteed", "quality":"base"}]
+
+CHASE_PROFILES["dl-mtg-tmnt-collector-pack"] = {
+    "source_name":"Wizards of the Coast, Teenage Mutant Ninja Turtles Collector Booster slots",
+    "source_url":"https://magic.wizards.com/en/news/feature/collecting-teenage-mutant-ninja-turtles",
+    "key_names":["Leonardo, Sewer Samurai", "Donatello, Mutant Mechanic", "Raphael, Ninja Destroyer", "Michelangelo, Improviser", "Doubling Season"],
+    "headline_chases":[
+        {"card":"Leonardo, Sewer Samurai – Kevin Eastman signature headliner", "tier":"JACKPOT", "odds":"Låg frekvens enligt Wizards; kortspecifikt odds saknas", "why":"Collector Booster-exklusiv headliner med tryckt signaturstämpel."},
+        {"card":"Japan Showcase – fracture foil", "tier":"MONSTER", "odds":"Under 1 % i Collector Boosterns foil Booster Fun-slot; inget odds för ett särskilt kort", "why":"Wizards bekräftar behandlingen och slotfrekvensen."},
+        {"card":"Doubling Season – foil Source Material", "tier":"MYCKET BRA", "odds":"Source Material-slot är foil i 25 % av Collector Boosters; kortspecifikt odds saknas", "why":"Varje Collector Booster har ett Source Material-kort, men inte en viss titel."},
+    ],
+    "why_exciting":["Ett Source Material-kort per Collector Booster och flera rare/mythic-spår.", "Collectorformatet kan innehålla Eastman-headliners och Japan Showcase."],
+    "tiers":{"everyday":{"label":"Collector-innehåll", "score":69, "items":["15 kort", "1 slumpmässigt Source Material-kort"]}, "good":{"label":"Bra träff", "score":77, "items":["Foil Source Material", "Booster Fun rare/mythic"]}, "big":{"label":"Sällsynt behandling", "score":88, "items":["Fracture foil Japan Showcase"]}, "jackpot":{"label":"Eastman-headliner", "score":93, "items":["En av fyra Turtle-headliners"]}},
+    "format_hits":[{"format":"single pack", "family":"Source Material-kort", "count":1, "basis":"guaranteed", "quality":"collectible"}],
+    "caveat":"Ett löst Collector Booster med 15 kort. Source Material-kortet är slumpmässigt; 25 % gäller foilbehandlingen i sloten, inte Doubling Season. Fracture foil är under 1 % i foil Booster Fun-slot. Eastman-headliners saknar exakt odds och bär tryckt signaturstämpel, inte handskriven autograf. Ingen toppträff eller ekonomisk avkastning garanteras."
+}
+
+# Hobby pack odds remain valid; box guarantees and repeatable box content do not.
+CHASE_PROFILES["cc-2026-topps-chrome-tennis-pack"] = copy.deepcopy(CHASE_PROFILES["cs-2026-topps-chrome-tennis-hobby"])
+CHASE_PROFILES["cc-2026-topps-chrome-tennis-pack"].update({
+    "format_hits":[],
+    "why_exciting":["Ett hobby-pack med åtta Chrome-kort ger billigare tillgång till hobbyformatets chase-spår.", "Namngivna tennisstjärnor finns på checklistan; ingen autograf eller särskild spelare garanteras."],
+    "caveat":"Två Chrome-autografer gäller en hel hobbybox, aldrig ett löst hobby-pack. Topps publicerade hobbyodds gäller hela familjer per pack; kortspecifika odds saknas. Paketet kan komma från en redan öppnad display. Sålda kortpriser saknas.",
+})
+CHASE_PROFILES["cc-2026-topps-chrome-tennis-pack"]["tiers"]["everyday"] = {"label":"Löst hobby-pack", "score":45, "items":["8 Chrome-kort", "Ingen autografgaranti"]}
+CHASE_PROFILES["cc-2026-topps-chrome-tennis-pack"]["tiers"]["good"]["score"] = 70
+
+OCTOBER_03_NEW_PROFILE_SLUGS = {"dl-mtg-tmnt-play-pack", "hk-mtg-tmnt-play-display", "dl-mtg-tmnt-collector-pack", "cc-2026-topps-chrome-tennis-pack"}
+
 def seed_chase_profiles():
     db=SessionLocal()
     try:
@@ -2644,7 +2705,8 @@ def seed_chase_profiles():
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
             row.verified_at=(
-                SEPTEMBER_30_OBSERVED_AT if slug in september_30_slugs
+                OCTOBER_03_OBSERVED_AT if slug in OCTOBER_03_NEW_PROFILE_SLUGS
+                else SEPTEMBER_30_OBSERVED_AT if slug in september_30_slugs
                 else ARCADE_DREAMS_SECOND_SCAN_AT if slug in arcade_second_slugs
                 else SEPTEMBER_29_SECOND_SCAN_AT if slug in september_29_second_slugs
                 else SEPTEMBER_29_OBSERVED_AT if slug in september_29_slugs

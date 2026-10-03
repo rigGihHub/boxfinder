@@ -1,4 +1,10 @@
-# BoxFinder v0.52.2
+# BoxFinder v0.53.0
+
+## v0.53.0 – Fler produkter och återförsäljare
+
+- Fyra nya rankbara format: TMNT Play Booster, Play Booster Display och Collector Booster samt Topps Chrome Tennis Hobby Pack. Åtta direkta butikserbjudanden kontrollerade 3 oktober 2026.
+- Mox Games och Alara Games tillkommer i butiksfiltret. Samma produkt och språk jämförs som en variant med flera butikserbjudanden.
+- Separata profiler för Play och Collector; Collector-exklusiva kort hamnar inte i Play-profilen. Lösa tennispack ärver aldrig hobbyboxens autografgaranti. Kontrolltider ändras inte vid omstart.
 
 ## v0.52.2 – Jämför kostnaden inklusive frakt
 
