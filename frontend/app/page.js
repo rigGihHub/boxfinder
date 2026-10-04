@@ -1,6 +1,9 @@
 import FreshDataButton from "./components/FreshDataButton";
 import {API, getJson} from "./lib/api";
 
+// Read live catalogue data on page requests, never during deployment builds.
+export const dynamic = "force-dynamic";
+
 function DataBadge({ kind }) {
   const demo = kind === 'demo';
   return <span className={demo ? 'dataBadge demo' : 'dataBadge live'}>{demo ? 'DEMO' : 'VERIFIERAD DATA'}</span>
