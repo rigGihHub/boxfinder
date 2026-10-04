@@ -22,6 +22,6 @@ export default function ResaleResultCards({items}) {
     <div className="resaleReasons">{x.resale_reasons?.map((r,j)=><span key={j}>✓ {r}</span>)}</div>
     <p className="resaleWarning">{x.resale_warning}</p>
     <p className="resultFreshness">Butiksuppgift kontrollerad {checked(x.observed_at)}</p>
-    <div className="resaleActions">{x.url&&<a className="buyDirect" href={x.url} target="_blank" rel="noreferrer">KÖP HOS {x.store?.toUpperCase()} ↗</a>}<Link href={`/product/${x.id}`}>SE HELA ANALYSEN →</Link>{x.chase_profile?.evidence_scope !== "retailer_product_families" && x.chase_profile?.key_names?.[0]&&<Link href={`/chase?q=${encodeURIComponent(x.chase_profile.key_names[0].replace(/\s+#.*$/, ""))}`}>SÖK {x.chase_profile.key_names[0]} →</Link>}</div>
+    <div className="resaleActions">{x.url&&<a className="buyDirect" href={x.url} target="_blank" rel="noreferrer">KÖP HOS {x.store?.toUpperCase()} ↗</a>}<Link href={`/product/${x.id}`} prefetch={false}>SE HELA ANALYSEN →</Link>{x.chase_profile?.evidence_scope !== "retailer_product_families" && x.chase_profile?.key_names?.[0]&&<Link href={`/chase?q=${encodeURIComponent(x.chase_profile.key_names[0].replace(/\s+#.*$/, ""))}`} prefetch={false}>SÖK {x.chase_profile.key_names[0]} →</Link>}</div>
   </article>)}</div>;
 }

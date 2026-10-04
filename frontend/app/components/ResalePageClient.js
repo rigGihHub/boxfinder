@@ -62,8 +62,8 @@ export default function ResalePageClient() {
 
   return <main className="resalePage">
     <header className="productNav">
-      <Link className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></Link>
-      <Link className="backLink" href="/">← STARTSIDAN</Link>
+      <Link className="brand" href="/" prefetch={false}><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></Link>
+      <Link className="backLink" href="/" prefetch={false}>← STARTSIDAN</Link>
       <span className="version">v0.59.0</span>
     </header>
 
