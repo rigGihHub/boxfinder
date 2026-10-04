@@ -1,0 +1,2820 @@
+{
+  "sp-mtg-aetherdrift-bundle": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-aetherdrift",
+    "key_names": [
+      "Chrome Mox – non-foil Special Guests",
+      "Chandra, Spark Hunter – borderless"
+    ],
+    "headline_chases": [
+      {
+        "card": "Chrome Mox – non-foil Special Guests",
+        "tier": "MYCKET BRA",
+        "odds": "Special Guests-familjen ersätter en common i 1,5 % av Play Boosters; inget Chrome Mox-specifikt odds.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Chandra, Spark Hunter – borderless",
+        "tier": "MYCKET BRA",
+        "odds": "Special Guests-familjen ersätter en common i 1,5 % av Play Boosters; inget Chrome Mox-specifikt odds.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 68,
+        "items": [
+          "9 Play Boosters med 14 kort",
+          "9+ rare/mythic och 9 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Chrome Mox – non-foil Special Guests",
+          "Chandra, Spark Hunter – borderless"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Chrome Mox – non-foil Special Guests",
+          "Chandra, Spark Hunter – borderless"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Chrome Mox – non-foil Special Guests"
+        ]
+      }
+    },
+    "why_exciting": [
+      "9 Play Boosters med 14 kort",
+      "9+ rare/mythic och 9 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Serialized The Aetherspark och Japan Showcase finns endast i Collector Boosters. Special Guests-familjen ersätter en common i 1,5 % av Play Boosters; inget Chrome Mox-specifikt odds. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. First-place foil Box Topper följer endast förseglade displayer och Finish Line Bundle; ingår inte i denna produkt.",
+    "format_hits": [
+      {
+        "format": "bundle",
+        "family": "rare/mythic",
+        "count": 9,
+        "basis": "guaranteed",
+        "quality": "base"
+      }
+    ]
+  },
+  "sp-mtg-aetherdrift-display": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-aetherdrift",
+    "key_names": [
+      "Chrome Mox – non-foil Special Guests",
+      "Chandra, Spark Hunter – borderless"
+    ],
+    "headline_chases": [
+      {
+        "card": "Chrome Mox – non-foil Special Guests",
+        "tier": "MYCKET BRA",
+        "odds": "Special Guests-familjen ersätter en common i 1,5 % av Play Boosters; inget Chrome Mox-specifikt odds.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Chandra, Spark Hunter – borderless",
+        "tier": "MYCKET BRA",
+        "odds": "Special Guests-familjen ersätter en common i 1,5 % av Play Boosters; inget Chrome Mox-specifikt odds.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "30 Play Boosters med 14 kort",
+          "30+ rare/mythic och 30 traditional foil-kort av slumpmässig raritet",
+          "2 first-place foil Box Topper-kort: ett basic land och en slumpmässig rare/mythic"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Chrome Mox – non-foil Special Guests",
+          "Chandra, Spark Hunter – borderless"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Chrome Mox – non-foil Special Guests",
+          "Chandra, Spark Hunter – borderless"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Chrome Mox – non-foil Special Guests"
+        ]
+      }
+    },
+    "why_exciting": [
+      "30 Play Boosters med 14 kort",
+      "30+ rare/mythic och 30 traditional foil-kort av slumpmässig raritet",
+      "2 first-place foil Box Topper-kort: ett basic land och en slumpmässig rare/mythic"
+    ],
+    "caveat": "Serialized The Aetherspark och Japan Showcase finns endast i Collector Boosters. Special Guests-familjen ersätter en common i 1,5 % av Play Boosters; inget Chrome Mox-specifikt odds. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas.",
+    "format_hits": [
+      {
+        "format": "booster box",
+        "family": "rare/mythic",
+        "count": 30,
+        "basis": "guaranteed",
+        "quality": "base"
+      },
+      {
+        "format": "booster box",
+        "family": "first-place foil Box Topper-kort",
+        "count": 2,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ]
+  },
+  "sp-mtg-aetherdrift-pack": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-aetherdrift",
+    "key_names": [
+      "Chrome Mox – non-foil Special Guests",
+      "Chandra, Spark Hunter – borderless"
+    ],
+    "headline_chases": [
+      {
+        "card": "Chrome Mox – non-foil Special Guests",
+        "tier": "MYCKET BRA",
+        "odds": "Special Guests-familjen ersätter en common i 1,5 % av Play Boosters; inget Chrome Mox-specifikt odds.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Chandra, Spark Hunter – borderless",
+        "tier": "MYCKET BRA",
+        "odds": "Special Guests-familjen ersätter en common i 1,5 % av Play Boosters; inget Chrome Mox-specifikt odds.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 42,
+        "items": [
+          "1 Play Boosters med 14 kort",
+          "1+ rare/mythic och 1 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Chrome Mox – non-foil Special Guests",
+          "Chandra, Spark Hunter – borderless"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Chrome Mox – non-foil Special Guests",
+          "Chandra, Spark Hunter – borderless"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Chrome Mox – non-foil Special Guests"
+        ]
+      }
+    },
+    "why_exciting": [
+      "1 Play Boosters med 14 kort",
+      "1+ rare/mythic och 1 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Serialized The Aetherspark och Japan Showcase finns endast i Collector Boosters. Special Guests-familjen ersätter en common i 1,5 % av Play Boosters; inget Chrome Mox-specifikt odds. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. First-place foil Box Topper följer endast förseglade displayer och Finish Line Bundle; ingår inte i denna produkt. Löst paket från en display; boxbonus och displaygarantier ingår inte.",
+    "format_hits": [
+      {
+        "format": "single pack",
+        "family": "rare/mythic",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "base"
+      }
+    ]
+  },
+  "sp-mtg-tarkir-display": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-tarkir-dragonstorm",
+    "key_names": [
+      "Scalding Tarn – non-foil Special Guests",
+      "Elspeth, Storm Slayer – borderless"
+    ],
+    "headline_chases": [
+      {
+        "card": "Scalding Tarn – non-foil Special Guests",
+        "tier": "MYCKET BRA",
+        "odds": "Special Guests-familjen förekommer i 1,5 % av Play Boosters; inte odds för Scalding Tarn.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Elspeth, Storm Slayer – borderless",
+        "tier": "MYCKET BRA",
+        "odds": "Special Guests-familjen förekommer i 1,5 % av Play Boosters; inte odds för Scalding Tarn.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "30 Play Boosters med 14 kort",
+          "30+ rare/mythic och 30 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Scalding Tarn – non-foil Special Guests",
+          "Elspeth, Storm Slayer – borderless"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Scalding Tarn – non-foil Special Guests",
+          "Elspeth, Storm Slayer – borderless"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Scalding Tarn – non-foil Special Guests"
+        ]
+      }
+    },
+    "why_exciting": [
+      "30 Play Boosters med 14 kort",
+      "30+ rare/mythic och 30 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Serialized Mox Jasper och dragonscale foil är Collector Booster-exklusiva. Special Guests-familjen förekommer i 1,5 % av Play Boosters; inte odds för Scalding Tarn. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas.",
+    "format_hits": [
+      {
+        "format": "booster box",
+        "family": "rare/mythic",
+        "count": 30,
+        "basis": "guaranteed",
+        "quality": "base"
+      }
+    ]
+  },
+  "sp-mtg-tarkir-pack": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-tarkir-dragonstorm",
+    "key_names": [
+      "Scalding Tarn – non-foil Special Guests",
+      "Elspeth, Storm Slayer – borderless"
+    ],
+    "headline_chases": [
+      {
+        "card": "Scalding Tarn – non-foil Special Guests",
+        "tier": "MYCKET BRA",
+        "odds": "Special Guests-familjen förekommer i 1,5 % av Play Boosters; inte odds för Scalding Tarn.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Elspeth, Storm Slayer – borderless",
+        "tier": "MYCKET BRA",
+        "odds": "Special Guests-familjen förekommer i 1,5 % av Play Boosters; inte odds för Scalding Tarn.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 42,
+        "items": [
+          "1 Play Boosters med 14 kort",
+          "1+ rare/mythic och 1 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Scalding Tarn – non-foil Special Guests",
+          "Elspeth, Storm Slayer – borderless"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Scalding Tarn – non-foil Special Guests",
+          "Elspeth, Storm Slayer – borderless"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Scalding Tarn – non-foil Special Guests"
+        ]
+      }
+    },
+    "why_exciting": [
+      "1 Play Boosters med 14 kort",
+      "1+ rare/mythic och 1 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Serialized Mox Jasper och dragonscale foil är Collector Booster-exklusiva. Special Guests-familjen förekommer i 1,5 % av Play Boosters; inte odds för Scalding Tarn. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Löst paket från en display; boxbonus och displaygarantier ingår inte.",
+    "format_hits": [
+      {
+        "format": "single pack",
+        "family": "rare/mythic",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "base"
+      }
+    ]
+  },
+  "sp-mtg-karlov-display": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-murders-at-karlov-manor",
+    "key_names": [
+      "Show and Tell – non-foil Special Guests",
+      "Hedge Maze – borderless"
+    ],
+    "headline_chases": [
+      {
+        "card": "Show and Tell – non-foil Special Guests",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Hedge Maze – borderless",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "36 Play Boosters med 14 kort",
+          "36+ rare/mythic och 36 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Show and Tell – non-foil Special Guests",
+          "Hedge Maze – borderless"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Show and Tell – non-foil Special Guests",
+          "Hedge Maze – borderless"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Show and Tell – non-foil Special Guests"
+        ]
+      }
+    },
+    "why_exciting": [
+      "36 Play Boosters med 14 kort",
+      "36+ rare/mythic och 36 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Invisible ink och serialized Ravnica City-kort är Collector Booster-exklusiva. Kortspecifika odds saknas. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas.",
+    "format_hits": [
+      {
+        "format": "booster box",
+        "family": "rare/mythic",
+        "count": 36,
+        "basis": "guaranteed",
+        "quality": "base"
+      }
+    ]
+  },
+  "sp-mtg-karlov-pack": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-murders-at-karlov-manor",
+    "key_names": [
+      "Show and Tell – non-foil Special Guests",
+      "Hedge Maze – borderless"
+    ],
+    "headline_chases": [
+      {
+        "card": "Show and Tell – non-foil Special Guests",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Hedge Maze – borderless",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 42,
+        "items": [
+          "1 Play Boosters med 14 kort",
+          "1+ rare/mythic och 1 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Show and Tell – non-foil Special Guests",
+          "Hedge Maze – borderless"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Show and Tell – non-foil Special Guests",
+          "Hedge Maze – borderless"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Show and Tell – non-foil Special Guests"
+        ]
+      }
+    },
+    "why_exciting": [
+      "1 Play Boosters med 14 kort",
+      "1+ rare/mythic och 1 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Invisible ink och serialized Ravnica City-kort är Collector Booster-exklusiva. Kortspecifika odds saknas. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Löst paket från en display; boxbonus och displaygarantier ingår inte.",
+    "format_hits": [
+      {
+        "format": "single pack",
+        "family": "rare/mythic",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "base"
+      }
+    ]
+  },
+  "sp-mtg-foundations-display": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-foundations",
+    "key_names": [
+      "Niv-Mizzet, Visionary – borderless",
+      "Temporal Manipulation – non-foil Special Guests"
+    ],
+    "headline_chases": [
+      {
+        "card": "Niv-Mizzet, Visionary – borderless",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Temporal Manipulation – non-foil Special Guests",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "36 Play Boosters med 14 kort",
+          "36+ rare/mythic och 36 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Niv-Mizzet, Visionary – borderless",
+          "Temporal Manipulation – non-foil Special Guests"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Niv-Mizzet, Visionary – borderless",
+          "Temporal Manipulation – non-foil Special Guests"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Niv-Mizzet, Visionary – borderless"
+        ]
+      }
+    },
+    "why_exciting": [
+      "36 Play Boosters med 14 kort",
+      "36+ rare/mythic och 36 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Mana foil och Japan Showcase är Collector Booster-exklusiva. Kortspecifika odds saknas. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas.",
+    "format_hits": [
+      {
+        "format": "booster box",
+        "family": "rare/mythic",
+        "count": 36,
+        "basis": "guaranteed",
+        "quality": "base"
+      }
+    ]
+  },
+  "sp-mtg-foundations-pack": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-foundations",
+    "key_names": [
+      "Niv-Mizzet, Visionary – borderless",
+      "Temporal Manipulation – non-foil Special Guests"
+    ],
+    "headline_chases": [
+      {
+        "card": "Niv-Mizzet, Visionary – borderless",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Temporal Manipulation – non-foil Special Guests",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 42,
+        "items": [
+          "1 Play Boosters med 14 kort",
+          "1+ rare/mythic och 1 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Niv-Mizzet, Visionary – borderless",
+          "Temporal Manipulation – non-foil Special Guests"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Niv-Mizzet, Visionary – borderless",
+          "Temporal Manipulation – non-foil Special Guests"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Niv-Mizzet, Visionary – borderless"
+        ]
+      }
+    },
+    "why_exciting": [
+      "1 Play Boosters med 14 kort",
+      "1+ rare/mythic och 1 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Mana foil och Japan Showcase är Collector Booster-exklusiva. Kortspecifika odds saknas. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Löst paket från en display; boxbonus och displaygarantier ingår inte.",
+    "format_hits": [
+      {
+        "format": "single pack",
+        "family": "rare/mythic",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "base"
+      }
+    ]
+  },
+  "sp-mtg-avatar-display": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-avatar-the-last-airbender",
+    "key_names": [
+      "Force of Negation – non-foil Source Material",
+      "Badgermole Cub – standard/foil"
+    ],
+    "headline_chases": [
+      {
+        "card": "Force of Negation – non-foil Source Material",
+        "tier": "MYCKET BRA",
+        "odds": "Source Material-familjen förekommer i 1:26 Play Boosters; inte odds för Force of Negation.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Badgermole Cub – standard/foil",
+        "tier": "MYCKET BRA",
+        "odds": "Source Material-familjen förekommer i 1:26 Play Boosters; inte odds för Force of Negation.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "30 Play Boosters med 14 kort",
+          "30+ rare/mythic och 30 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Force of Negation – non-foil Source Material",
+          "Badgermole Cub – standard/foil"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Force of Negation – non-foil Source Material",
+          "Badgermole Cub – standard/foil"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Force of Negation – non-foil Source Material"
+        ]
+      }
+    },
+    "why_exciting": [
+      "30 Play Boosters med 14 kort",
+      "30+ rare/mythic och 30 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Neon ink foil battle pose, raised foil Avatar Aang och foil Source Material är Collector Booster-exklusiva. Source Material-familjen förekommer i 1:26 Play Boosters; inte odds för Force of Negation. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas.",
+    "format_hits": [
+      {
+        "format": "booster box",
+        "family": "rare/mythic",
+        "count": 30,
+        "basis": "guaranteed",
+        "quality": "base"
+      }
+    ]
+  },
+  "sp-mtg-avatar-pack": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-avatar-the-last-airbender",
+    "key_names": [
+      "Force of Negation – non-foil Source Material",
+      "Badgermole Cub – standard/foil"
+    ],
+    "headline_chases": [
+      {
+        "card": "Force of Negation – non-foil Source Material",
+        "tier": "MYCKET BRA",
+        "odds": "Source Material-familjen förekommer i 1:26 Play Boosters; inte odds för Force of Negation.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Badgermole Cub – standard/foil",
+        "tier": "MYCKET BRA",
+        "odds": "Source Material-familjen förekommer i 1:26 Play Boosters; inte odds för Force of Negation.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 42,
+        "items": [
+          "1 Play Boosters med 14 kort",
+          "1+ rare/mythic och 1 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Force of Negation – non-foil Source Material",
+          "Badgermole Cub – standard/foil"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Force of Negation – non-foil Source Material",
+          "Badgermole Cub – standard/foil"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Force of Negation – non-foil Source Material"
+        ]
+      }
+    },
+    "why_exciting": [
+      "1 Play Boosters med 14 kort",
+      "1+ rare/mythic och 1 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Neon ink foil battle pose, raised foil Avatar Aang och foil Source Material är Collector Booster-exklusiva. Source Material-familjen förekommer i 1:26 Play Boosters; inte odds för Force of Negation. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Löst paket från en display; boxbonus och displaygarantier ingår inte.",
+    "format_hits": [
+      {
+        "format": "single pack",
+        "family": "rare/mythic",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "base"
+      }
+    ]
+  },
+  "sp-mtg-duskmourn-display": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-duskmourn",
+    "key_names": [
+      "Valgavoth, Terror Eater – borderless",
+      "Overlord of the Hauntwoods – standard/foil"
+    ],
+    "headline_chases": [
+      {
+        "card": "Valgavoth, Terror Eater – borderless",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Overlord of the Hauntwoods – standard/foil",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "36 Play Boosters med 14 kort",
+          "36+ rare/mythic och 36 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Valgavoth, Terror Eater – borderless",
+          "Overlord of the Hauntwoods – standard/foil"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Valgavoth, Terror Eater – borderless",
+          "Overlord of the Hauntwoods – standard/foil"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Valgavoth, Terror Eater – borderless"
+        ]
+      }
+    },
+    "why_exciting": [
+      "36 Play Boosters med 14 kort",
+      "36+ rare/mythic och 36 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Japan Showcase, fracture foil och textured foil double exposure är Collector Booster-exklusiva. Kortspecifika odds saknas. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas.",
+    "format_hits": [
+      {
+        "format": "booster box",
+        "family": "rare/mythic",
+        "count": 36,
+        "basis": "guaranteed",
+        "quality": "base"
+      }
+    ]
+  },
+  "sp-mtg-mh3-display": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-modern-horizons-3",
+    "key_names": [
+      "Flooded Strand – borderless",
+      "Solitude – non-foil Special Guests"
+    ],
+    "headline_chases": [
+      {
+        "card": "Flooded Strand – borderless",
+        "tier": "MYCKET BRA",
+        "odds": "Special Guests-familjen förekommer i 1:64 Play Boosters; inte odds för Solitude.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Solitude – non-foil Special Guests",
+        "tier": "MYCKET BRA",
+        "odds": "Special Guests-familjen förekommer i 1:64 Play Boosters; inte odds för Solitude.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "36 Play Boosters med 14 kort",
+          "36+ rare/mythic och 36 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Flooded Strand – borderless",
+          "Solitude – non-foil Special Guests"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Flooded Strand – borderless",
+          "Solitude – non-foil Special Guests"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Flooded Strand – borderless"
+        ]
+      }
+    },
+    "why_exciting": [
+      "36 Play Boosters med 14 kort",
+      "36+ rare/mythic och 36 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Serialized Eldrazi och textured foil Special Guests är Collector Booster-exklusiva. Special Guests-familjen förekommer i 1:64 Play Boosters; inte odds för Solitude. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas.",
+    "format_hits": [
+      {
+        "format": "booster box",
+        "family": "rare/mythic",
+        "count": 36,
+        "basis": "guaranteed",
+        "quality": "base"
+      }
+    ]
+  },
+  "sp-mtg-mh3-pack": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-modern-horizons-3",
+    "key_names": [
+      "Flooded Strand – borderless",
+      "Solitude – non-foil Special Guests"
+    ],
+    "headline_chases": [
+      {
+        "card": "Flooded Strand – borderless",
+        "tier": "MYCKET BRA",
+        "odds": "Special Guests-familjen förekommer i 1:64 Play Boosters; inte odds för Solitude.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Solitude – non-foil Special Guests",
+        "tier": "MYCKET BRA",
+        "odds": "Special Guests-familjen förekommer i 1:64 Play Boosters; inte odds för Solitude.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 42,
+        "items": [
+          "1 Play Boosters med 14 kort",
+          "1+ rare/mythic och 1 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Flooded Strand – borderless",
+          "Solitude – non-foil Special Guests"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Flooded Strand – borderless",
+          "Solitude – non-foil Special Guests"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Flooded Strand – borderless"
+        ]
+      }
+    },
+    "why_exciting": [
+      "1 Play Boosters med 14 kort",
+      "1+ rare/mythic och 1 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Serialized Eldrazi och textured foil Special Guests är Collector Booster-exklusiva. Special Guests-familjen förekommer i 1:64 Play Boosters; inte odds för Solitude. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Löst paket från en display; boxbonus och displaygarantier ingår inte.",
+    "format_hits": [
+      {
+        "format": "single pack",
+        "family": "rare/mythic",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "base"
+      }
+    ]
+  },
+  "sp-mtg-spiderman-collector-display": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-marvels-spider-man",
+    "key_names": [
+      "The Soul Stone – cosmic foil, textless",
+      "The Soul Stone – borderless Gauntlet"
+    ],
+    "headline_chases": [
+      {
+        "card": "The Soul Stone – cosmic foil, textless",
+        "tier": "JACKPOT",
+        "odds": "Extremt låg mängd enligt Wizards; exakt kortodds saknas.",
+        "why": "Collector Booster-exklusiv cosmic foil, alltid på engelska."
+      },
+      {
+        "card": "The Soul Stone – borderless Gauntlet",
+        "tier": "MONSTER",
+        "odds": "Under 1 % i Collector Boosterns foil Booster Fun-slot; inget boxodds.",
+        "why": "Collector Booster-exklusiv Gauntlet-behandling."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "12 Collector Boosters med 15 kort",
+          "Minst 60 slumpmässiga rare/mythic"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "The Soul Stone – cosmic foil, textless",
+          "The Soul Stone – borderless Gauntlet"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "The Soul Stone – cosmic foil, textless",
+          "The Soul Stone – borderless Gauntlet"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 88,
+        "items": [
+          "The Soul Stone – cosmic foil, textless"
+        ]
+      }
+    },
+    "why_exciting": [
+      "12 Collector Boosters med 15 kort",
+      "Minst 60 slumpmässiga rare/mythic"
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Ingen Infinity Stone garanteras. Packfrekvensen räknas inte om till sannolikhet per box.",
+    "format_hits": [
+      {
+        "format": "collector booster box",
+        "family": "rare/mythic",
+        "count": 60,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ]
+  },
+  "sp-mtg-spiderman-prerelease": {
+    "source_name": "Wizards official Collecting Magic: The Gathering | Marvel's Spider-Man guide",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-marvels-spider-man",
+    "key_names": [
+      "The Soul Stone",
+      "Peter Parker",
+      "Miles Morales",
+      "Gwen Stacy",
+      "Venom, Deadly Devourer",
+      "Spectacular Spider-Man",
+      "Spider-Punk"
+    ],
+    "headline_chases": [
+      {
+        "card": "The Soul Stone – main-set version",
+        "tier": "MYCKET BRA",
+        "odds": "Kan dras non-foil eller traditional foil i Play Boosters; kortspecifikt odds ej publicerat",
+        "why": "Infinity Stone-versionen som faktiskt finns i Play Booster-formatet."
+      },
+      {
+        "card": "Peter Parker – Borderless Web-Slinger",
+        "tier": "MONSTER",
+        "odds": "Rare Web-Slinger 1,2% i rare/mythic-platsen; specifikt Peter Parker-odds lägre",
+        "why": "Namngiven alternativ behandling av huvudkaraktären."
+      },
+      {
+        "card": "Miles Morales – Borderless Scene",
+        "tier": "MONSTER",
+        "odds": "Scene rare 1% eller mythic <1% i rare/mythic-platsen över familjen",
+        "why": "Namngiven scen-chase på en central Spider-Man-karaktär."
+      },
+      {
+        "card": "Gwen Stacy – Borderless Scene",
+        "tier": "MYCKET BRA",
+        "odds": "Scene-familj; specifikt kortodds ej publicerat",
+        "why": "Officiellt verifierad Play Booster-träff."
+      },
+      {
+        "card": "Spectacular Spider-Man – borderless main-set version",
+        "tier": "MYCKET BRA",
+        "odds": "Finns non-foil och traditional foil i Play Boosters; specifikt odds ej publicerat",
+        "why": "Rätt Play Booster-version av Costume Change-spåret."
+      },
+      {
+        "card": "Borderless Source Material – en av 40",
+        "tier": "MYCKET BRA",
+        "odds": "1:24 Play Boosters för Source Material-familjen",
+        "why": "Officiellt publicerad familjefrekvens."
+      }
+    ],
+    "why_exciting": [
+      "6 Play Boosters med 14 kort",
+      "1 slumpmässig foil rare/mythic med årsstämpel"
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Verifierat formatinnehåll",
+        "score": 68,
+        "items": [
+          "6 Play Boosters med 14 kort",
+          "1 slumpmässig foil rare/mythic med årsstämpel"
+        ]
+      },
+      "good": {
+        "label": "Bra träff",
+        "score": 74,
+        "items": [
+          "rare/mythic Spider-Man-kort",
+          "foil rare eller mythic"
+        ]
+      },
+      "big": {
+        "label": "Riktigt bra",
+        "score": 82,
+        "items": [
+          "Source Material",
+          "Web-Slinger, Panel eller Scene mythic"
+        ]
+      },
+      "jackpot": {
+        "label": "Play Booster-toppträff",
+        "score": 87,
+        "items": [
+          "The Soul Stone premiumutförande",
+          "Peter Parker eller Miles Morales Booster Fun"
+        ]
+      }
+    },
+    "caveat": "Cosmic Foil Soul Stone, Gauntlet Soul Stone, Classic Comic, textured Costume Change och extended-art är Collector Booster-exklusiva. Familjeodds är inte odds för en viss karaktär. Sex Play Boosters och en slumpmässig promo, inte en display. Ingen viss promo garanteras.",
+    "format_hits": [
+      {
+        "format": "prerelease kit",
+        "family": "rare/mythic",
+        "count": 6,
+        "basis": "guaranteed",
+        "quality": "base"
+      },
+      {
+        "format": "prerelease kit",
+        "family": "year-stamped foil rare/mythic promo",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ]
+  },
+  "sp-mtg-thunder-display": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-outlaws-of-thunder-junction",
+    "key_names": [
+      "Mana Drain – Breaking News",
+      "Oko, Thief of Crowns – Breaking News"
+    ],
+    "headline_chases": [
+      {
+        "card": "Mana Drain – Breaking News",
+        "tier": "MYCKET BRA",
+        "odds": "Ett slumpmässigt Breaking News-kort per Play Booster; namngivna odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Oko, Thief of Crowns – Breaking News",
+        "tier": "MYCKET BRA",
+        "odds": "Ett slumpmässigt Breaking News-kort per Play Booster; namngivna odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "36 Play Boosters med 14 kort",
+          "36+ rare/mythic och 36 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Mana Drain – Breaking News",
+          "Oko, Thief of Crowns – Breaking News"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Mana Drain – Breaking News",
+          "Oko, Thief of Crowns – Breaking News"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Mana Drain – Breaking News"
+        ]
+      }
+    },
+    "why_exciting": [
+      "36 Play Boosters med 14 kort",
+      "36+ rare/mythic och 36 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Textured foil Breaking News och raised foil vault frame är Collector Booster-exklusiva. Ett slumpmässigt Breaking News-kort per Play Booster; namngivna odds saknas. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas.",
+    "format_hits": [
+      {
+        "format": "booster box",
+        "family": "rare/mythic",
+        "count": 36,
+        "basis": "guaranteed",
+        "quality": "base"
+      },
+      {
+        "format": "booster box",
+        "family": "Breaking News-kort",
+        "count": 36,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ]
+  },
+  "sp-mtg-strx-bundle": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-secrets-of-strixhaven",
+    "key_names": [
+      "Force of Will – Mystical Archive",
+      "Vampiric Tutor – Mystical Archive"
+    ],
+    "headline_chases": [
+      {
+        "card": "Force of Will – Mystical Archive",
+        "tier": "MYCKET BRA",
+        "odds": "Minst ett slumpmässigt Mystical Archive-kort per Play Booster; kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Vampiric Tutor – Mystical Archive",
+        "tier": "MYCKET BRA",
+        "odds": "Minst ett slumpmässigt Mystical Archive-kort per Play Booster; kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 68,
+        "items": [
+          "9 Play Boosters med 14 kort",
+          "9+ rare/mythic och 9 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Force of Will – Mystical Archive",
+          "Vampiric Tutor – Mystical Archive"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Force of Will – Mystical Archive",
+          "Vampiric Tutor – Mystical Archive"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Force of Will – Mystical Archive"
+        ]
+      }
+    },
+    "why_exciting": [
+      "9 Play Boosters med 14 kort",
+      "9+ rare/mythic och 9 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Serialized Emeritus of Ideation och silver scroll foil saknas i Play. Japanese Mystical Archive finns inte i dessa engelska Play Boosters. Minst ett slumpmässigt Mystical Archive-kort per Play Booster; kortspecifika odds saknas. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas.",
+    "format_hits": [
+      {
+        "format": "bundle",
+        "family": "rare/mythic",
+        "count": 9,
+        "basis": "guaranteed",
+        "quality": "base"
+      },
+      {
+        "format": "bundle",
+        "family": "Mystical Archive-kort",
+        "count": 9,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ]
+  },
+  "sp-mtg-strx-display": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-secrets-of-strixhaven",
+    "key_names": [
+      "Force of Will – Mystical Archive",
+      "Vampiric Tutor – Mystical Archive"
+    ],
+    "headline_chases": [
+      {
+        "card": "Force of Will – Mystical Archive",
+        "tier": "MYCKET BRA",
+        "odds": "Minst ett slumpmässigt Mystical Archive-kort per Play Booster; kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Vampiric Tutor – Mystical Archive",
+        "tier": "MYCKET BRA",
+        "odds": "Minst ett slumpmässigt Mystical Archive-kort per Play Booster; kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "30 Play Boosters med 14 kort",
+          "30+ rare/mythic och 30 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Force of Will – Mystical Archive",
+          "Vampiric Tutor – Mystical Archive"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Force of Will – Mystical Archive",
+          "Vampiric Tutor – Mystical Archive"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Force of Will – Mystical Archive"
+        ]
+      }
+    },
+    "why_exciting": [
+      "30 Play Boosters med 14 kort",
+      "30+ rare/mythic och 30 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Serialized Emeritus of Ideation och silver scroll foil saknas i Play. Japanese Mystical Archive finns inte i dessa engelska Play Boosters. Minst ett slumpmässigt Mystical Archive-kort per Play Booster; kortspecifika odds saknas. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas.",
+    "format_hits": [
+      {
+        "format": "booster box",
+        "family": "rare/mythic",
+        "count": 30,
+        "basis": "guaranteed",
+        "quality": "base"
+      },
+      {
+        "format": "booster box",
+        "family": "Mystical Archive-kort",
+        "count": 30,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ]
+  },
+  "sp-mtg-strx-pack": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-secrets-of-strixhaven",
+    "key_names": [
+      "Force of Will – Mystical Archive",
+      "Vampiric Tutor – Mystical Archive"
+    ],
+    "headline_chases": [
+      {
+        "card": "Force of Will – Mystical Archive",
+        "tier": "MYCKET BRA",
+        "odds": "Minst ett slumpmässigt Mystical Archive-kort per Play Booster; kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Vampiric Tutor – Mystical Archive",
+        "tier": "MYCKET BRA",
+        "odds": "Minst ett slumpmässigt Mystical Archive-kort per Play Booster; kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 42,
+        "items": [
+          "1 Play Boosters med 14 kort",
+          "1+ rare/mythic och 1 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Force of Will – Mystical Archive",
+          "Vampiric Tutor – Mystical Archive"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Force of Will – Mystical Archive",
+          "Vampiric Tutor – Mystical Archive"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Force of Will – Mystical Archive"
+        ]
+      }
+    },
+    "why_exciting": [
+      "1 Play Boosters med 14 kort",
+      "1+ rare/mythic och 1 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Serialized Emeritus of Ideation och silver scroll foil saknas i Play. Japanese Mystical Archive finns inte i dessa engelska Play Boosters. Minst ett slumpmässigt Mystical Archive-kort per Play Booster; kortspecifika odds saknas. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Löst paket från en display; boxbonus och displaygarantier ingår inte.",
+    "format_hits": [
+      {
+        "format": "single pack",
+        "family": "rare/mythic",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "base"
+      },
+      {
+        "format": "single pack",
+        "family": "Mystical Archive-kort",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ]
+  },
+  "sp-mtg-marvel-collector-display": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-marvel-super-heroes",
+    "key_names": [
+      "The Mind Stone – cosmic foil, textless",
+      "The Mind Stone – borderless Gauntlet"
+    ],
+    "headline_chases": [
+      {
+        "card": "The Mind Stone – cosmic foil, textless",
+        "tier": "JACKPOT",
+        "odds": "Extremt låg mängd enligt Wizards; exakt kortodds saknas.",
+        "why": "Collector Booster-exklusiv cosmic foil, alltid på engelska."
+      },
+      {
+        "card": "The Mind Stone – borderless Gauntlet",
+        "tier": "MONSTER",
+        "odds": "Under 1 % i Collector Boosterns foil Booster Fun-slot; inget boxodds.",
+        "why": "Collector Booster-exklusiv Gauntlet-behandling."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "12 Collector Boosters med 15 kort",
+          "Minst 60 slumpmässiga rare/mythic"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "The Mind Stone – cosmic foil, textless",
+          "The Mind Stone – borderless Gauntlet"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "The Mind Stone – cosmic foil, textless",
+          "The Mind Stone – borderless Gauntlet"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 88,
+        "items": [
+          "The Mind Stone – cosmic foil, textless"
+        ]
+      }
+    },
+    "why_exciting": [
+      "12 Collector Boosters med 15 kort",
+      "Minst 60 slumpmässiga rare/mythic"
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Ingen Infinity Stone garanteras. Packfrekvensen räknas inte om till sannolikhet per box.",
+    "format_hits": [
+      {
+        "format": "collector booster box",
+        "family": "rare/mythic",
+        "count": 60,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ]
+  },
+  "sp-mtg-reality-bundle": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-reality-fracture",
+    "key_names": [
+      "The Theorist, Jace Beleren – standard/foil",
+      "Necrodominance – non-foil Special Guests"
+    ],
+    "headline_chases": [
+      {
+        "card": "The Theorist, Jace Beleren – standard/foil",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Necrodominance – non-foil Special Guests",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 68,
+        "items": [
+          "9 Play Boosters med 14 kort",
+          "9+ rare/mythic och 9 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "The Theorist, Jace Beleren – standard/foil",
+          "Necrodominance – non-foil Special Guests"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "The Theorist, Jace Beleren – standard/foil",
+          "Necrodominance – non-foil Special Guests"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "The Theorist, Jace Beleren – standard/foil"
+        ]
+      }
+    },
+    "why_exciting": [
+      "9 Play Boosters med 14 kort",
+      "9+ rare/mythic och 9 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Japan Showcase och fracture foil är Collector Booster-exklusiva. Kortspecifika odds saknas. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas.",
+    "format_hits": [
+      {
+        "format": "bundle",
+        "family": "rare/mythic",
+        "count": 9,
+        "basis": "guaranteed",
+        "quality": "base"
+      }
+    ]
+  },
+  "sp-mtg-reality-display": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-reality-fracture",
+    "key_names": [
+      "The Theorist, Jace Beleren – standard/foil",
+      "Necrodominance – non-foil Special Guests"
+    ],
+    "headline_chases": [
+      {
+        "card": "The Theorist, Jace Beleren – standard/foil",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Necrodominance – non-foil Special Guests",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "30 Play Boosters med 14 kort",
+          "30+ rare/mythic och 30 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "The Theorist, Jace Beleren – standard/foil",
+          "Necrodominance – non-foil Special Guests"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "The Theorist, Jace Beleren – standard/foil",
+          "Necrodominance – non-foil Special Guests"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "The Theorist, Jace Beleren – standard/foil"
+        ]
+      }
+    },
+    "why_exciting": [
+      "30 Play Boosters med 14 kort",
+      "30+ rare/mythic och 30 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Japan Showcase och fracture foil är Collector Booster-exklusiva. Kortspecifika odds saknas. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas.",
+    "format_hits": [
+      {
+        "format": "booster box",
+        "family": "rare/mythic",
+        "count": 30,
+        "basis": "guaranteed",
+        "quality": "base"
+      }
+    ]
+  },
+  "sp-mtg-hobbit-bundle": {
+    "source_name": "Wizards of the Coast, format- och kortinnehåll",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-the-hobbit",
+    "key_names": [
+      "Thorin Oakenshield – borderless scene",
+      "Sting, Bilbo's Sword – Dragon hoard"
+    ],
+    "headline_chases": [
+      {
+        "card": "Thorin Oakenshield – borderless scene",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      },
+      {
+        "card": "Sting, Bilbo's Sword – Dragon hoard",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 68,
+        "items": [
+          "9 Play Boosters med 14 kort",
+          "9+ rare/mythic och 9 traditional foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Thorin Oakenshield – borderless scene",
+          "Sting, Bilbo's Sword – Dragon hoard"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Thorin Oakenshield – borderless scene",
+          "Sting, Bilbo's Sword – Dragon hoard"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Thorin Oakenshield – borderless scene"
+        ]
+      }
+    },
+    "why_exciting": [
+      "9 Play Boosters med 14 kort",
+      "9+ rare/mythic och 9 traditional foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Serialized Smaug the Magnificent, Dwarvish Mox Amber och surge foil Dragon hoard är Collector Booster-exklusiva. Smaug the Impenetrable är ett separat Scene Box-kort, inte en Play-chase. Kortspecifika odds saknas. Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas.",
+    "format_hits": [
+      {
+        "format": "bundle",
+        "family": "rare/mythic",
+        "count": 9,
+        "basis": "guaranteed",
+        "quality": "base"
+      }
+    ]
+  },
+  "sp-lorcana-azurite-trove": {
+    "source_name": "Ravensburger official Azurite Sea product page and published complete card list",
+    "source_url": "https://www.disneylorcana.com/en-US/product/azurite-sea",
+    "key_names": [
+      "Tigger - In the Crow's Nest #215 Enchanted",
+      "Baymax - Personal Healthcare Companion #218 Enchanted",
+      "You Came Back #213 Enchanted",
+      "Tiana - Restaurant Owner #206 Enchanted",
+      "Chip 'n' Dale - Recovery Rangers #205 Enchanted"
+    ],
+    "headline_chases": [
+      {
+        "card": "Tigger - In the Crow's Nest #215 Enchanted",
+        "tier": "JACKPOT",
+        "odds": "Enchanted; officiellt kortspecifikt packodds ej publicerat",
+        "why": "Namngiven Enchanted i den kompletta Azurite Sea-listan."
+      },
+      {
+        "card": "Baymax - Personal Healthcare Companion #218 Enchanted",
+        "tier": "JACKPOT",
+        "odds": "Enchanted; officiellt kortspecifikt packodds ej publicerat",
+        "why": "Big Hero 6-huvudkaraktär i setets premiumrarity."
+      },
+      {
+        "card": "You Came Back #213 Enchanted",
+        "tier": "MONSTER",
+        "odds": "Enchanted; officiellt kortspecifikt packodds ej publicerat",
+        "why": "Namngivet Enchanted action-kort."
+      },
+      {
+        "card": "Tiana - Restaurant Owner #206 Enchanted",
+        "tier": "MONSTER",
+        "odds": "Enchanted; officiellt kortspecifikt packodds ej publicerat",
+        "why": "Namngiven prinsesskaraktär i Enchanted-rarity."
+      },
+      {
+        "card": "Chip 'n' Dale - Recovery Rangers #205 Enchanted",
+        "tier": "MONSTER",
+        "odds": "Enchanted; officiellt kortspecifikt packodds ej publicerat",
+        "why": "Setets första numrerade Enchanted och centralt Rescue Rangers-spår."
+      }
+    ],
+    "why_exciting": [
+      "8 boosterpaket med 12 kort",
+      "16 slumpmässiga kort i familjen rare/super rare/legendary"
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Verifierat formatinnehåll",
+        "score": 68,
+        "items": [
+          "8 boosterpaket med 12 kort",
+          "16 slumpmässiga kort i familjen rare/super rare/legendary"
+        ]
+      },
+      "good": {
+        "label": "Bra träff",
+        "score": 57,
+        "items": [
+          "Legendary eller stark foil"
+        ]
+      },
+      "big": {
+        "label": "Riktigt bra",
+        "score": 69,
+        "items": [
+          "namngiven Enchanted"
+        ]
+      },
+      "jackpot": {
+        "label": "Monsterhit",
+        "score": 82,
+        "items": [
+          "Tigger eller Baymax Enchanted"
+        ]
+      }
+    },
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Tillverkarens raritetsgarantier gäller slumpmässiga kort; inga Enchanted eller Starlight garanteras.",
+    "format_hits": [
+      {
+        "format": "illumineers trove",
+        "family": "rare/super rare/legendary",
+        "count": 16,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ]
+  },
+  "sp-lorcana-jafar-display": {
+    "source_name": "Ravensburger, produktinnehåll och officiellt kortgalleri",
+    "source_url": "https://www.disneylorcana.com/en-US/product/reign-of-jafar",
+    "key_names": [
+      "Stitch – Experiment 626 Enchanted"
+    ],
+    "headline_chases": [
+      {
+        "card": "Stitch – Experiment 626 Enchanted",
+        "tier": "MONSTER",
+        "odds": "Ravensburger publicerar inte kortspecifika packodds.",
+        "why": "Kortets set och Enchanted-raritet bekräftas i officiella kortgalleriet."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "24 boosterpaket med 12 kort",
+          "48 rare/super rare/legendary och 24 foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Stitch – Experiment 626 Enchanted"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Stitch – Experiment 626 Enchanted"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 88,
+        "items": [
+          "Stitch – Experiment 626 Enchanted"
+        ]
+      }
+    },
+    "why_exciting": [
+      "24 boosterpaket med 12 kort",
+      "48 rare/super rare/legendary och 24 foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Enchanted saknar garanti per trove eller box. Kortgalleri: https://cards.disneylorcana.com/en-US/?cardId=1884.",
+    "format_hits": [
+      {
+        "format": "booster box",
+        "family": "rare/super rare/legendary",
+        "count": 48,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ]
+  },
+  "sp-lorcana-first-display": {
+    "source_name": "Ravensburger, produktinnehåll och officiellt kortgalleri",
+    "source_url": "https://www.disneylorcana.com/en-US/product/the-first-chapter",
+    "key_names": [
+      "Elsa – Spirit of Winter #207 Enchanted",
+      "Tinker Bell – Giant Fairy #216 Enchanted"
+    ],
+    "headline_chases": [
+      {
+        "card": "Elsa – Spirit of Winter #207 Enchanted",
+        "tier": "MONSTER",
+        "odds": "Ravensburger publicerar inte kortspecifika packodds.",
+        "why": "Kortets set och Enchanted-raritet bekräftas i officiella kortgalleriet."
+      },
+      {
+        "card": "Tinker Bell – Giant Fairy #216 Enchanted",
+        "tier": "MONSTER",
+        "odds": "Ravensburger publicerar inte kortspecifika packodds.",
+        "why": "Kortets set och Enchanted-raritet bekräftas i officiella kortgalleriet."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "24 boosterpaket med 12 kort",
+          "48 rare/super rare/legendary och 24 foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Elsa – Spirit of Winter #207 Enchanted",
+          "Tinker Bell – Giant Fairy #216 Enchanted"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Elsa – Spirit of Winter #207 Enchanted",
+          "Tinker Bell – Giant Fairy #216 Enchanted"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 88,
+        "items": [
+          "Elsa – Spirit of Winter #207 Enchanted"
+        ]
+      }
+    },
+    "why_exciting": [
+      "24 boosterpaket med 12 kort",
+      "48 rare/super rare/legendary och 24 foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Enchanted saknar garanti per trove eller box. Butiken uppger att First Chapter-displayen inte levereras i plast; tillverkaren levererade denna box utan plastfolie. Upplaga/tryckomgång verifieras inte. Kortgalleri: https://cards.disneylorcana.com/en-US/?cardId=207 och https://cards.disneylorcana.com/en-US/?cardId=216.",
+    "format_hits": [
+      {
+        "format": "booster box",
+        "family": "rare/super rare/legendary",
+        "count": 48,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ]
+  },
+  "sp-lorcana-ursula-trove": {
+    "source_name": "Ravensburger, produktinnehåll och officiellt kortgalleri",
+    "source_url": "https://www.disneylorcana.com/en-US/product/ursulas-return",
+    "key_names": [
+      "Ursula – Sea Witch Queen #208 Enchanted",
+      "Yen Sid – Powerful Sorcerer #209 Enchanted"
+    ],
+    "headline_chases": [
+      {
+        "card": "Ursula – Sea Witch Queen #208 Enchanted",
+        "tier": "MONSTER",
+        "odds": "Ravensburger publicerar inte kortspecifika packodds.",
+        "why": "Kortets set och Enchanted-raritet bekräftas i officiella kortgalleriet."
+      },
+      {
+        "card": "Yen Sid – Powerful Sorcerer #209 Enchanted",
+        "tier": "MONSTER",
+        "odds": "Ravensburger publicerar inte kortspecifika packodds.",
+        "why": "Kortets set och Enchanted-raritet bekräftas i officiella kortgalleriet."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 68,
+        "items": [
+          "8 boosterpaket med 12 kort",
+          "16 rare/super rare/legendary och 8 foil-kort av slumpmässig raritet"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Ursula – Sea Witch Queen #208 Enchanted",
+          "Yen Sid – Powerful Sorcerer #209 Enchanted"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Ursula – Sea Witch Queen #208 Enchanted",
+          "Yen Sid – Powerful Sorcerer #209 Enchanted"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 88,
+        "items": [
+          "Ursula – Sea Witch Queen #208 Enchanted"
+        ]
+      }
+    },
+    "why_exciting": [
+      "8 boosterpaket med 12 kort",
+      "16 rare/super rare/legendary och 8 foil-kort av slumpmässig raritet"
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Enchanted saknar garanti per trove eller box. Kortgalleri: https://cards.disneylorcana.com/en-US/?cardId=899 och https://cards.disneylorcana.com/en-US/?cardId=900.",
+    "format_hits": [
+      {
+        "format": "illumineers trove",
+        "family": "rare/super rare/legendary",
+        "count": 16,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ]
+  },
+  "sp-yugioh-amazing-display": {
+    "source_name": "Konami, produktinnehåll och officiell kortdatabas",
+    "source_url": "https://www.yugioh-card.com/en/products/amde/",
+    "key_names": [
+      "Purrely",
+      "Ohime the Manifested Mikanko",
+      "Collector's Rare – slumpmässigt motiv"
+    ],
+    "headline_chases": [
+      {
+        "card": "Purrely",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Konamis setlista och produktbeskrivning bekräftar korten/raritetsfamiljen."
+      },
+      {
+        "card": "Ohime the Manifested Mikanko",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Konamis setlista och produktbeskrivning bekräftar korten/raritetsfamiljen."
+      },
+      {
+        "card": "Collector's Rare – slumpmässigt motiv",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifika odds saknas.",
+        "why": "Konamis setlista och produktbeskrivning bekräftar korten/raritetsfamiljen."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "24 boosterpaket med 7 kort",
+          "En foil och sex Rare per booster"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Purrely",
+          "Ohime the Manifested Mikanko"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Purrely",
+          "Ohime the Manifested Mikanko"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Purrely"
+        ]
+      }
+    },
+    "why_exciting": [
+      "24 boosterpaket med 7 kort",
+      "En foil och sex Rare per booster"
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Collector's Rare saknar boxgaranti. Setlista: https://www.db.yugioh-card.com/yugiohdb/card_search.action?ope=1&pid=2000001225000&request_locale=en&rp=99999.",
+    "format_hits": [
+      {
+        "format": "booster box",
+        "family": "foilkort",
+        "count": 24,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ]
+  },
+  "sp-yugioh-duelist-display": {
+    "source_name": "Konami, produktinnehåll och officiell kortdatabas",
+    "source_url": "https://www.yugioh-card.com/eu/product/duelists-advance/",
+    "key_names": [
+      "Number F0: Utopic Future Zexal – Starlight Rare"
+    ],
+    "headline_chases": [
+      {
+        "card": "Number F0: Utopic Future Zexal – Starlight Rare",
+        "tier": "MONSTER",
+        "odds": "Exakta Starlight- och kortspecifika odds saknas.",
+        "why": "DUAD-EN042 är bekräftad som Ultra Rare och Starlight Rare i Konamis kortdatabas."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "24 boosterpaket med 9 kort"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Number F0: Utopic Future Zexal – Starlight Rare"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Number F0: Utopic Future Zexal – Starlight Rare"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Number F0: Utopic Future Zexal – Starlight Rare"
+        ]
+      }
+    },
+    "why_exciting": [
+      "24 boosterpaket med 9 kort"
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Konami bekräftar återkomsten av Starlight; ingen Starlight garanteras. Kortdatabas: https://www.db.yugioh-card.com/yugiohdb/card_search.action?cid=21453&ope=2&request_locale=en.",
+    "format_hits": []
+  },
+  "sp-yugioh-rc5-display": {
+    "source_name": "Konami, produktinnehåll och officiell kortdatabas",
+    "source_url": "https://www.yugioh-card.com/eu/product/rarity-collection-5/",
+    "key_names": [
+      "Red-Eyes Dark Dragoon – extended art",
+      "Kurikara Divincarnate – extended art",
+      "Chaos Angel"
+    ],
+    "headline_chases": [
+      {
+        "card": "Red-Eyes Dark Dragoon – extended art",
+        "tier": "MYCKET BRA",
+        "odds": "Ett slumpmässigt variant art-kort per pack; kortspecifika odds saknas.",
+        "why": "Konami bekräftar korten och separat variant art-slot."
+      },
+      {
+        "card": "Kurikara Divincarnate – extended art",
+        "tier": "MYCKET BRA",
+        "odds": "Ett slumpmässigt variant art-kort per pack; kortspecifika odds saknas.",
+        "why": "Konami bekräftar korten och separat variant art-slot."
+      },
+      {
+        "card": "Chaos Angel",
+        "tier": "MYCKET BRA",
+        "odds": "Ett slumpmässigt variant art-kort per pack; kortspecifika odds saknas.",
+        "why": "Konami bekräftar korten och separat variant art-slot."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "24 boosterpaket med 5 kort",
+          "24 variant art-kort och 120 foilkort"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Red-Eyes Dark Dragoon – extended art",
+          "Kurikara Divincarnate – extended art"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Red-Eyes Dark Dragoon – extended art",
+          "Kurikara Divincarnate – extended art"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Red-Eyes Dark Dragoon – extended art"
+        ]
+      }
+    },
+    "why_exciting": [
+      "24 boosterpaket med 5 kort",
+      "24 variant art-kort och 120 foilkort"
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Variant art kan vara Ultra eller Starlight. 1:6 gäller uppgradering av vardera Ultra-slot, inte ett särskilt kort.",
+    "format_hits": [
+      {
+        "format": "booster box",
+        "family": "variant art-kort",
+        "count": 24,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ]
+  },
+  "sp-yugioh-rc5-pack": {
+    "source_name": "Konami, produktinnehåll och officiell kortdatabas",
+    "source_url": "https://www.yugioh-card.com/eu/product/rarity-collection-5/",
+    "key_names": [
+      "Red-Eyes Dark Dragoon – extended art",
+      "Kurikara Divincarnate – extended art",
+      "Chaos Angel"
+    ],
+    "headline_chases": [
+      {
+        "card": "Red-Eyes Dark Dragoon – extended art",
+        "tier": "MYCKET BRA",
+        "odds": "Ett slumpmässigt variant art-kort per pack; kortspecifika odds saknas.",
+        "why": "Konami bekräftar korten och separat variant art-slot."
+      },
+      {
+        "card": "Kurikara Divincarnate – extended art",
+        "tier": "MYCKET BRA",
+        "odds": "Ett slumpmässigt variant art-kort per pack; kortspecifika odds saknas.",
+        "why": "Konami bekräftar korten och separat variant art-slot."
+      },
+      {
+        "card": "Chaos Angel",
+        "tier": "MYCKET BRA",
+        "odds": "Ett slumpmässigt variant art-kort per pack; kortspecifika odds saknas.",
+        "why": "Konami bekräftar korten och separat variant art-slot."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 42,
+        "items": [
+          "1 boosterpaket med 5 kort",
+          "1 variant art-kort och 5 foilkort"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Red-Eyes Dark Dragoon – extended art",
+          "Kurikara Divincarnate – extended art"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Red-Eyes Dark Dragoon – extended art",
+          "Kurikara Divincarnate – extended art"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Red-Eyes Dark Dragoon – extended art"
+        ]
+      }
+    },
+    "why_exciting": [
+      "1 boosterpaket med 5 kort",
+      "1 variant art-kort och 5 foilkort"
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Variant art kan vara Ultra eller Starlight. 1:6 gäller uppgradering av vardera Ultra-slot, inte ett särskilt kort.",
+    "format_hits": [
+      {
+        "format": "single pack",
+        "family": "variant art-kort",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ]
+  },
+  "sp-yugioh-glorious-display": {
+    "source_name": "Konami, Battles of Legend: Glorious Gallery product page and card database",
+    "source_url": "https://www.yugioh-card.com/eu/product/battles-of-legend-glorious-gallery/",
+    "key_names": [
+      "Dragon Master Magia",
+      "Red Supernova Dragon",
+      "Dominus Impulse",
+      "Dark Magician Girl",
+      "Exodia the Forbidden One"
+    ],
+    "headline_chases": [
+      {
+        "card": "Dragon Master Magia – Starlight Rare extended art",
+        "tier": "JACKPOT",
+        "odds": "Kortspecifikt packodds ej publicerat",
+        "why": "Konami bekräftar extended-art Starlight-versionen i produkten."
+      },
+      {
+        "card": "Red Supernova Dragon – Starlight Rare extended art",
+        "tier": "MONSTER",
+        "odds": "Kortspecifikt packodds ej publicerat",
+        "why": "En andra namngiven Starlight-behandling."
+      },
+      {
+        "card": "Dominus Impulse – Ultra Rare extended art",
+        "tier": "BRA",
+        "odds": "Kortspecifikt packodds ej publicerat",
+        "why": "Konami bekräftar denna extended-art-version."
+      }
+    ],
+    "why_exciting": [
+      "24 boosterpaket med 5 kort",
+      "24 slumpmässiga kort i familjen Secret Rare"
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Verifierat formatinnehåll",
+        "score": 76,
+        "items": [
+          "24 boosterpaket med 5 kort",
+          "24 slumpmässiga kort i familjen Secret Rare"
+        ]
+      },
+      "good": {
+        "label": "Bra träff",
+        "score": 65,
+        "items": [
+          "namngiven extended-art Ultra Rare"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt behandling",
+        "score": 75,
+        "items": [
+          "Starlight Rare"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppkort",
+        "score": 82,
+        "items": [
+          "Dragon Master Magia Starlight Rare"
+        ]
+      }
+    },
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Tillverkarens raritetsgarantier gäller slumpmässiga kort; inga Enchanted eller Starlight garanteras.",
+    "format_hits": [
+      {
+        "format": "booster box",
+        "family": "Secret Rare",
+        "count": 24,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      },
+      {
+        "format": "booster box",
+        "family": "Ultra Rare",
+        "count": 96,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ]
+  },
+  "sp-pokemon-wild-display-jp": {
+    "source_name": "The Pokémon Company, japansk produkt och kortöversikt",
+    "source_url": "https://www.pokemon-card.com/products/sv/sv5.html",
+    "key_names": [
+      "Gouging Fire ex",
+      "Walking Wake ex",
+      "Raging Bolt ex"
+    ],
+    "headline_chases": [
+      {
+        "card": "Gouging Fire ex",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      },
+      {
+        "card": "Walking Wake ex",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      },
+      {
+        "card": "Raging Bolt ex",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "30 japanska boosterpaket med 5 kort"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Gouging Fire ex",
+          "Walking Wake ex"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Gouging Fire ex",
+          "Walking Wake ex"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Gouging Fire ex"
+        ]
+      }
+    },
+    "why_exciting": [
+      "30 japanska boosterpaket med 5 kort"
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Japanska kort. Engelska setodds används inte. Ingen SAR, SR eller viss Pokémon garanteras; officiell boxgaranti saknas.",
+    "format_hits": []
+  },
+  "sp-pokemon-cyber-display-jp": {
+    "source_name": "The Pokémon Company, japansk produkt och kortöversikt",
+    "source_url": "https://www.pokemon-card.com/products/sv/sv5.html",
+    "key_names": [
+      "Iron Leaves ex",
+      "Iron Crown ex",
+      "Iron Boulder ex"
+    ],
+    "headline_chases": [
+      {
+        "card": "Iron Leaves ex",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      },
+      {
+        "card": "Iron Crown ex",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      },
+      {
+        "card": "Iron Boulder ex",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "30 japanska boosterpaket med 5 kort"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Iron Leaves ex",
+          "Iron Crown ex"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Iron Leaves ex",
+          "Iron Crown ex"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Iron Leaves ex"
+        ]
+      }
+    },
+    "why_exciting": [
+      "30 japanska boosterpaket med 5 kort"
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Japanska kort. Engelska setodds används inte. Ingen SAR, SR eller viss Pokémon garanteras; officiell boxgaranti saknas.",
+    "format_hits": []
+  },
+  "sp-pokemon-mask-display-jp": {
+    "source_name": "The Pokémon Company, japansk produkt och kortöversikt",
+    "source_url": "https://www.pokemon-card.com/ex/sv6/index.html",
+    "key_names": [
+      "Teal Mask Ogerpon ex",
+      "Dragapult ex"
+    ],
+    "headline_chases": [
+      {
+        "card": "Teal Mask Ogerpon ex",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      },
+      {
+        "card": "Dragapult ex",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "30 japanska boosterpaket med 5 kort"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Teal Mask Ogerpon ex",
+          "Dragapult ex"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Teal Mask Ogerpon ex",
+          "Dragapult ex"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Teal Mask Ogerpon ex"
+        ]
+      }
+    },
+    "why_exciting": [
+      "30 japanska boosterpaket med 5 kort"
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Japanska kort. Engelska setodds används inte. Ingen SAR, SR eller viss Pokémon garanteras; officiell boxgaranti saknas.",
+    "format_hits": []
+  },
+  "sp-pokemon-mask-pack-jp": {
+    "source_name": "The Pokémon Company, japansk produkt och kortöversikt",
+    "source_url": "https://www.pokemon-card.com/ex/sv6/index.html",
+    "key_names": [
+      "Teal Mask Ogerpon ex",
+      "Dragapult ex"
+    ],
+    "headline_chases": [
+      {
+        "card": "Teal Mask Ogerpon ex",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      },
+      {
+        "card": "Dragapult ex",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 42,
+        "items": [
+          "1 japanska boosterpaket med 5 kort"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Teal Mask Ogerpon ex",
+          "Dragapult ex"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Teal Mask Ogerpon ex",
+          "Dragapult ex"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Teal Mask Ogerpon ex"
+        ]
+      }
+    },
+    "why_exciting": [
+      "1 japanska boosterpaket med 5 kort"
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Japanska kort. Engelska setodds används inte. Ingen SAR, SR eller viss Pokémon garanteras; officiell boxgaranti saknas.",
+    "format_hits": []
+  },
+  "sp-pokemon-brave-display-jp": {
+    "source_name": "The Pokémon Company, japansk produkt och kortöversikt",
+    "source_url": "https://www.pokemon-card.com/ex/m1/index.html",
+    "key_names": [
+      "Mega Lucario ex",
+      "Mega Venusaur ex",
+      "Lillie's Determination"
+    ],
+    "headline_chases": [
+      {
+        "card": "Mega Lucario ex",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      },
+      {
+        "card": "Mega Venusaur ex",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      },
+      {
+        "card": "Lillie's Determination",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "30 japanska boosterpaket med 5 kort"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Mega Lucario ex",
+          "Mega Venusaur ex"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Mega Lucario ex",
+          "Mega Venusaur ex"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Mega Lucario ex"
+        ]
+      }
+    },
+    "why_exciting": [
+      "30 japanska boosterpaket med 5 kort"
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Japanska kort. Engelska setodds används inte. Ingen SAR, SR eller viss Pokémon garanteras; officiell boxgaranti saknas.",
+    "format_hits": []
+  },
+  "sp-pokemon-symphonia-display-jp": {
+    "source_name": "The Pokémon Company, japansk produkt och kortöversikt",
+    "source_url": "https://www.pokemon-card.com/ex/m1/index.html",
+    "key_names": [
+      "Mega Gardevoir ex",
+      "Mega Latias ex",
+      "Wally's Compassion"
+    ],
+    "headline_chases": [
+      {
+        "card": "Mega Gardevoir ex",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      },
+      {
+        "card": "Mega Latias ex",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      },
+      {
+        "card": "Wally's Compassion",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "30 japanska boosterpaket med 5 kort"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Mega Gardevoir ex",
+          "Mega Latias ex"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Mega Gardevoir ex",
+          "Mega Latias ex"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Mega Gardevoir ex"
+        ]
+      }
+    },
+    "why_exciting": [
+      "30 japanska boosterpaket med 5 kort"
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Japanska kort. Engelska setodds används inte. Ingen SAR, SR eller viss Pokémon garanteras; officiell boxgaranti saknas.",
+    "format_hits": []
+  },
+  "sp-pokemon-heat-display-jp": {
+    "source_name": "The Pokémon Company, japansk produkt och kortöversikt",
+    "source_url": "https://www.pokemon-card.com/products/sv/sv9a.html",
+    "key_names": [
+      "Ethan's Ho-Oh ex – SAR",
+      "Cynthia's Garchomp ex"
+    ],
+    "headline_chases": [
+      {
+        "card": "Ethan's Ho-Oh ex – SAR",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      },
+      {
+        "card": "Cynthia's Garchomp ex",
+        "tier": "MYCKET BRA",
+        "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Förväntat basutbud",
+        "score": 76,
+        "items": [
+          "30 japanska boosterpaket med 5 kort"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Ethan's Ho-Oh ex – SAR",
+          "Cynthia's Garchomp ex"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Ethan's Ho-Oh ex – SAR",
+          "Cynthia's Garchomp ex"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Ethan's Ho-Oh ex – SAR"
+        ]
+      }
+    },
+    "why_exciting": [
+      "30 japanska boosterpaket med 5 kort"
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Japanska kort. Engelska setodds används inte. Ingen SAR, SR eller viss Pokémon garanteras; officiell boxgaranti saknas.",
+    "format_hits": []
+  }
+}

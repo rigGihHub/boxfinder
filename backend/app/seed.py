@@ -489,6 +489,16 @@ SPELTROLLET_BACKUP_OFFERS += SPELTROLLET_DEPTH_OFFERS
 REAL_SNAPSHOT += CARDLAND_DEPTH_OFFERS + SPELTROLLET_DEPTH_OFFERS
 OCTOBER_04_DEPTH_NEW_PROFILE_SLUGS = {"sp-mtg-bloomburrow-play-display", "sp-mtg-spiderman-bundle", "sp-mtg-tmnt-collector-display"}
 
+# Independently reviewed, new set/format/language identities. These are not
+# additional retailer offers for existing variants or unreviewed catalog leads.
+OCTOBER_04_PRODUCTS_VERIFIED_AT = datetime(2026, 10, 4, 6, 59, 0)
+OCTOBER_04_NEW_PRODUCTS = json.loads((Path(__file__).parent / "snapshots" / "catalog_2026_10_04_products.json").read_text())
+for _row in OCTOBER_04_NEW_PRODUCTS:
+    _row["observed_at"] = OCTOBER_04_PRODUCTS_VERIFIED_AT
+SPELTROLLET_BACKUP_OFFERS += OCTOBER_04_NEW_PRODUCTS
+REAL_SNAPSHOT += OCTOBER_04_NEW_PRODUCTS
+OCTOBER_04_PRODUCTS_PROFILE_SLUGS = {row["slug"] for row in OCTOBER_04_NEW_PRODUCTS}
+
 
 def seed_cardland_inventory():
     """Stage category listings for manual review; listing stock is untrusted."""
@@ -2770,6 +2780,8 @@ CHASE_PROFILES["sp-mtg-tmnt-collector-display"].update({
 })
 CHASE_PROFILES["sp-mtg-tmnt-collector-display"]["tiers"]["everyday"] = {"label":"Collector-display", "score":83, "items":["12 Collector Boosters", "180 kort", "12 slumpmässiga Source Material-kort"]}
 
+CHASE_PROFILES.update(json.loads((Path(__file__).parent / "snapshots" / "profiles_2026_10_04_products.json").read_text()))
+
 def seed_chase_profiles():
     db=SessionLocal()
     try:
@@ -2800,7 +2812,8 @@ def seed_chase_profiles():
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
             row.verified_at=(
-                OCTOBER_04_DEPTH_VERIFIED_AT if slug in OCTOBER_04_DEPTH_NEW_PROFILE_SLUGS
+                OCTOBER_04_PRODUCTS_VERIFIED_AT if slug in OCTOBER_04_PRODUCTS_PROFILE_SLUGS
+                else OCTOBER_04_DEPTH_VERIFIED_AT if slug in OCTOBER_04_DEPTH_NEW_PROFILE_SLUGS
                 else OCTOBER_04_OBSERVED_AT if slug in OCTOBER_04_NEW_PROFILE_SLUGS
                 else OCTOBER_03_OBSERVED_AT if slug in OCTOBER_03_NEW_PROFILE_SLUGS
                 else SEPTEMBER_30_OBSERVED_AT if slug in september_30_slugs

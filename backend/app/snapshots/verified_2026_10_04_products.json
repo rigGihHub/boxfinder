@@ -1,0 +1,1677 @@
+{
+  "observed_at": "2026-10-04T06:59:00Z",
+  "accepted": [
+    {
+      "canonical_slug": "sp-mtg-aetherdrift-bundle",
+      "product_id": 14904036786502,
+      "variant_id": 54100861256006,
+      "retailer_sku": "195166278834",
+      "url": "https://speltrollet.se/products/magic-the-gathering-aetherdrift-bundle",
+      "price_sek": 590.0,
+      "available": true,
+      "language": "English",
+      "format": "bundle",
+      "packs": 9,
+      "cards_per_pack": 14,
+      "source_key": "aetherdrift",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-aetherdrift",
+      "chase_examples": [
+        {
+          "card": "Chrome Mox – non-foil Special Guests",
+          "tier": "MYCKET BRA",
+          "odds": "Special Guests-familjen ersätter en common i 1,5 % av Play Boosters; inget Chrome Mox-specifikt odds.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Chandra, Spark Hunter – borderless",
+          "tier": "MYCKET BRA",
+          "odds": "Special Guests-familjen ersätter en common i 1,5 % av Play Boosters; inget Chrome Mox-specifikt odds.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "bundle",
+          "family": "rare/mythic",
+          "count": 9,
+          "basis": "guaranteed",
+          "quality": "base"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-aetherdrift-display",
+      "product_id": 14904013586758,
+      "variant_id": 54100758167878,
+      "retailer_sku": "195166278636",
+      "url": "https://speltrollet.se/products/magic-the-gathering-aetherdrift-play-booster-display-box",
+      "price_sek": 1479.0,
+      "available": true,
+      "language": "English",
+      "format": "booster box",
+      "packs": 30,
+      "cards_per_pack": 14,
+      "source_key": "aetherdrift",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-aetherdrift",
+      "chase_examples": [
+        {
+          "card": "Chrome Mox – non-foil Special Guests",
+          "tier": "MYCKET BRA",
+          "odds": "Special Guests-familjen ersätter en common i 1,5 % av Play Boosters; inget Chrome Mox-specifikt odds.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Chandra, Spark Hunter – borderless",
+          "tier": "MYCKET BRA",
+          "odds": "Special Guests-familjen ersätter en common i 1,5 % av Play Boosters; inget Chrome Mox-specifikt odds.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "booster box",
+          "family": "rare/mythic",
+          "count": 30,
+          "basis": "guaranteed",
+          "quality": "base"
+        },
+        {
+          "format": "booster box",
+          "family": "first-place foil Box Topper-kort",
+          "count": 2,
+          "basis": "guaranteed",
+          "quality": "collectible"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-aetherdrift-pack",
+      "product_id": 14904105402694,
+      "variant_id": 54101096726854,
+      "retailer_sku": "195166278629",
+      "url": "https://speltrollet.se/products/magic-the-gathering-aetherdrift-play-booster",
+      "price_sek": 59.0,
+      "available": true,
+      "language": "English",
+      "format": "single pack",
+      "packs": 1,
+      "cards_per_pack": 14,
+      "source_key": "aetherdrift",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-aetherdrift",
+      "chase_examples": [
+        {
+          "card": "Chrome Mox – non-foil Special Guests",
+          "tier": "MYCKET BRA",
+          "odds": "Special Guests-familjen ersätter en common i 1,5 % av Play Boosters; inget Chrome Mox-specifikt odds.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Chandra, Spark Hunter – borderless",
+          "tier": "MYCKET BRA",
+          "odds": "Special Guests-familjen ersätter en common i 1,5 % av Play Boosters; inget Chrome Mox-specifikt odds.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "single pack",
+          "family": "rare/mythic",
+          "count": 1,
+          "basis": "guaranteed",
+          "quality": "base"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-tarkir-display",
+      "product_id": 14924397347142,
+      "variant_id": 54177209516358,
+      "retailer_sku": "MAGD4273",
+      "url": "https://speltrollet.se/products/magic-the-gathering-tarkir-dragonstorm-play-booster-display-30-packs",
+      "price_sek": 1690.0,
+      "available": true,
+      "language": "English",
+      "format": "booster box",
+      "packs": 30,
+      "cards_per_pack": 14,
+      "source_key": "tarkir",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-tarkir-dragonstorm",
+      "chase_examples": [
+        {
+          "card": "Scalding Tarn – non-foil Special Guests",
+          "tier": "MYCKET BRA",
+          "odds": "Special Guests-familjen förekommer i 1,5 % av Play Boosters; inte odds för Scalding Tarn.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Elspeth, Storm Slayer – borderless",
+          "tier": "MYCKET BRA",
+          "odds": "Special Guests-familjen förekommer i 1,5 % av Play Boosters; inte odds för Scalding Tarn.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "booster box",
+          "family": "rare/mythic",
+          "count": 30,
+          "basis": "guaranteed",
+          "quality": "base"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-tarkir-pack",
+      "product_id": 14924405309766,
+      "variant_id": 54177227866438,
+      "retailer_sku": "MAGD4273-Booster",
+      "url": "https://speltrollet.se/products/magic-the-gathering-tarkir-dragonstorm-play-booster",
+      "price_sek": 69.0,
+      "available": true,
+      "language": "English",
+      "format": "single pack",
+      "packs": 1,
+      "cards_per_pack": 14,
+      "source_key": "tarkir",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-tarkir-dragonstorm",
+      "chase_examples": [
+        {
+          "card": "Scalding Tarn – non-foil Special Guests",
+          "tier": "MYCKET BRA",
+          "odds": "Special Guests-familjen förekommer i 1,5 % av Play Boosters; inte odds för Scalding Tarn.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Elspeth, Storm Slayer – borderless",
+          "tier": "MYCKET BRA",
+          "odds": "Special Guests-familjen förekommer i 1,5 % av Play Boosters; inte odds för Scalding Tarn.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "single pack",
+          "family": "rare/mythic",
+          "count": 1,
+          "basis": "guaranteed",
+          "quality": "base"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-karlov-display",
+      "product_id": 14950829621574,
+      "variant_id": 54260316373318,
+      "retailer_sku": "195166248905",
+      "url": "https://speltrollet.se/products/magic-the-gathering-murders-at-karlov-manor-play-booster-box-display-36-packs",
+      "price_sek": 1790.0,
+      "available": true,
+      "language": "English",
+      "format": "booster box",
+      "packs": 36,
+      "cards_per_pack": 14,
+      "source_key": "karlov",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-murders-at-karlov-manor",
+      "chase_examples": [
+        {
+          "card": "Show and Tell – non-foil Special Guests",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Hedge Maze – borderless",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "booster box",
+          "family": "rare/mythic",
+          "count": 36,
+          "basis": "guaranteed",
+          "quality": "base"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-karlov-pack",
+      "product_id": 15003580039494,
+      "variant_id": 54455689740614,
+      "retailer_sku": "195166248899",
+      "url": "https://speltrollet.se/products/magic-the-gathering-murders-at-karlov-manor-play-booster",
+      "price_sek": 59.0,
+      "available": true,
+      "language": "English",
+      "format": "single pack",
+      "packs": 1,
+      "cards_per_pack": 14,
+      "source_key": "karlov",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-murders-at-karlov-manor",
+      "chase_examples": [
+        {
+          "card": "Show and Tell – non-foil Special Guests",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Hedge Maze – borderless",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "single pack",
+          "family": "rare/mythic",
+          "count": 1,
+          "basis": "guaranteed",
+          "quality": "base"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-foundations-display",
+      "product_id": 15088031400262,
+      "variant_id": 54874810155334,
+      "retailer_sku": "MAGD3628-box",
+      "url": "https://speltrollet.se/products/magic-the-gathering-foundations-play-booster-display",
+      "price_sek": 1990.0,
+      "available": true,
+      "language": "English",
+      "format": "booster box",
+      "packs": 36,
+      "cards_per_pack": 14,
+      "source_key": "foundations",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-foundations",
+      "chase_examples": [
+        {
+          "card": "Niv-Mizzet, Visionary – borderless",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Temporal Manipulation – non-foil Special Guests",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "booster box",
+          "family": "rare/mythic",
+          "count": 36,
+          "basis": "guaranteed",
+          "quality": "base"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-foundations-pack",
+      "product_id": 15088034021702,
+      "variant_id": 54874820051270,
+      "retailer_sku": "MAGD3628",
+      "url": "https://speltrollet.se/products/magic-the-gathering-foundations-play-booster",
+      "price_sek": 69.0,
+      "available": true,
+      "language": "English",
+      "format": "single pack",
+      "packs": 1,
+      "cards_per_pack": 14,
+      "source_key": "foundations",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-foundations",
+      "chase_examples": [
+        {
+          "card": "Niv-Mizzet, Visionary – borderless",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Temporal Manipulation – non-foil Special Guests",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "single pack",
+          "family": "rare/mythic",
+          "count": 1,
+          "basis": "guaranteed",
+          "quality": "base"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-avatar-display",
+      "product_id": 15108712595782,
+      "variant_id": 54937121587526,
+      "retailer_sku": "195166290416",
+      "url": "https://speltrollet.se/products/magic-the-gathering-avatar-the-last-airbender-play-booster-box-display",
+      "price_sek": 1790.0,
+      "available": true,
+      "language": "English",
+      "format": "booster box",
+      "packs": 30,
+      "cards_per_pack": 14,
+      "source_key": "avatar",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-avatar-the-last-airbender",
+      "chase_examples": [
+        {
+          "card": "Force of Negation – non-foil Source Material",
+          "tier": "MYCKET BRA",
+          "odds": "Source Material-familjen förekommer i 1:26 Play Boosters; inte odds för Force of Negation.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Badgermole Cub – standard/foil",
+          "tier": "MYCKET BRA",
+          "odds": "Source Material-familjen förekommer i 1:26 Play Boosters; inte odds för Force of Negation.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "booster box",
+          "family": "rare/mythic",
+          "count": 30,
+          "basis": "guaranteed",
+          "quality": "base"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-avatar-pack",
+      "product_id": 15108709024070,
+      "variant_id": 54937104056646,
+      "retailer_sku": "195166290409",
+      "url": "https://speltrollet.se/products/magic-the-gathering-avatar-the-last-airbender-play-booster",
+      "price_sek": 79.0,
+      "available": true,
+      "language": "English",
+      "format": "single pack",
+      "packs": 1,
+      "cards_per_pack": 14,
+      "source_key": "avatar",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-avatar-the-last-airbender",
+      "chase_examples": [
+        {
+          "card": "Force of Negation – non-foil Source Material",
+          "tier": "MYCKET BRA",
+          "odds": "Source Material-familjen förekommer i 1:26 Play Boosters; inte odds för Force of Negation.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Badgermole Cub – standard/foil",
+          "tier": "MYCKET BRA",
+          "odds": "Source Material-familjen förekommer i 1:26 Play Boosters; inte odds för Force of Negation.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "single pack",
+          "family": "rare/mythic",
+          "count": 1,
+          "basis": "guaranteed",
+          "quality": "base"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-duskmourn-display",
+      "product_id": 15125384954182,
+      "variant_id": 54995124355398,
+      "retailer_sku": "195166258607",
+      "url": "https://speltrollet.se/products/magic-the-gathering-duskmourn-house-of-horror-play-booster-box-display-36-packs",
+      "price_sek": 1990.0,
+      "available": true,
+      "language": "English",
+      "format": "booster box",
+      "packs": 36,
+      "cards_per_pack": 14,
+      "source_key": "duskmourn",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-duskmourn",
+      "chase_examples": [
+        {
+          "card": "Valgavoth, Terror Eater – borderless",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Overlord of the Hauntwoods – standard/foil",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "booster box",
+          "family": "rare/mythic",
+          "count": 36,
+          "basis": "guaranteed",
+          "quality": "base"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-mh3-display",
+      "product_id": 9094435045702,
+      "variant_id": 50036969472326,
+      "retailer_sku": "195166253602",
+      "url": "https://speltrollet.se/products/magic-the-gathering-modern-horizons-3-play-booster-display-36-packs",
+      "price_sek": 3990.0,
+      "available": true,
+      "language": "English",
+      "format": "booster box",
+      "packs": 36,
+      "cards_per_pack": 14,
+      "source_key": "mh3",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-modern-horizons-3",
+      "chase_examples": [
+        {
+          "card": "Flooded Strand – borderless",
+          "tier": "MYCKET BRA",
+          "odds": "Special Guests-familjen förekommer i 1:64 Play Boosters; inte odds för Solitude.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Solitude – non-foil Special Guests",
+          "tier": "MYCKET BRA",
+          "odds": "Special Guests-familjen förekommer i 1:64 Play Boosters; inte odds för Solitude.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "booster box",
+          "family": "rare/mythic",
+          "count": 36,
+          "basis": "guaranteed",
+          "quality": "base"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-mh3-pack",
+      "product_id": 15125427290438,
+      "variant_id": 54995160826182,
+      "retailer_sku": "195166253596",
+      "url": "https://speltrollet.se/products/magic-the-gathering-modern-horizons-3-play-booster",
+      "price_sek": 129.0,
+      "available": true,
+      "language": "English",
+      "format": "single pack",
+      "packs": 1,
+      "cards_per_pack": 14,
+      "source_key": "mh3",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-modern-horizons-3",
+      "chase_examples": [
+        {
+          "card": "Flooded Strand – borderless",
+          "tier": "MYCKET BRA",
+          "odds": "Special Guests-familjen förekommer i 1:64 Play Boosters; inte odds för Solitude.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Solitude – non-foil Special Guests",
+          "tier": "MYCKET BRA",
+          "odds": "Special Guests-familjen förekommer i 1:64 Play Boosters; inte odds för Solitude.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "single pack",
+          "family": "rare/mythic",
+          "count": 1,
+          "basis": "guaranteed",
+          "quality": "base"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-spiderman-collector-display",
+      "product_id": 15133243375942,
+      "variant_id": 55019818811718,
+      "retailer_sku": "MAGD4527-box",
+      "url": "https://speltrollet.se/products/magic-the-gathering-marvels-spider-man-collectors-booster-display-12-packs",
+      "price_sek": 5990.0,
+      "available": true,
+      "language": "English",
+      "format": "collector booster box",
+      "packs": 12,
+      "cards_per_pack": 15,
+      "source_key": "spiderman",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-marvels-spider-man",
+      "chase_examples": [
+        {
+          "card": "The Soul Stone – cosmic foil, textless",
+          "tier": "JACKPOT",
+          "odds": "Extremt låg mängd enligt Wizards; exakt kortodds saknas.",
+          "why": "Collector Booster-exklusiv cosmic foil, alltid på engelska."
+        },
+        {
+          "card": "The Soul Stone – borderless Gauntlet",
+          "tier": "MONSTER",
+          "odds": "Under 1 % i Collector Boosterns foil Booster Fun-slot; inget boxodds.",
+          "why": "Collector Booster-exklusiv Gauntlet-behandling."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "collector booster box",
+          "family": "rare/mythic",
+          "count": 60,
+          "basis": "guaranteed",
+          "quality": "collectible"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-spiderman-prerelease",
+      "product_id": 15147480678726,
+      "variant_id": 55073372373318,
+      "retailer_sku": "MAGD4526",
+      "url": "https://speltrollet.se/products/magic-the-gathering-marvels-spider-man-prerelease-pack",
+      "price_sek": 499.0,
+      "available": true,
+      "language": "English",
+      "format": "prerelease kit",
+      "packs": 6,
+      "cards_per_pack": 14,
+      "source_key": "spiderman",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-marvels-spider-man",
+      "chase_examples": [
+        {
+          "card": "The Soul Stone – main-set version",
+          "tier": "MYCKET BRA",
+          "odds": "Kan dras non-foil eller traditional foil i Play Boosters; kortspecifikt odds ej publicerat",
+          "why": "Infinity Stone-versionen som faktiskt finns i Play Booster-formatet."
+        },
+        {
+          "card": "Peter Parker – Borderless Web-Slinger",
+          "tier": "MONSTER",
+          "odds": "Rare Web-Slinger 1,2% i rare/mythic-platsen; specifikt Peter Parker-odds lägre",
+          "why": "Namngiven alternativ behandling av huvudkaraktären."
+        },
+        {
+          "card": "Miles Morales – Borderless Scene",
+          "tier": "MONSTER",
+          "odds": "Scene rare 1% eller mythic <1% i rare/mythic-platsen över familjen",
+          "why": "Namngiven scen-chase på en central Spider-Man-karaktär."
+        },
+        {
+          "card": "Gwen Stacy – Borderless Scene",
+          "tier": "MYCKET BRA",
+          "odds": "Scene-familj; specifikt kortodds ej publicerat",
+          "why": "Officiellt verifierad Play Booster-träff."
+        },
+        {
+          "card": "Spectacular Spider-Man – borderless main-set version",
+          "tier": "MYCKET BRA",
+          "odds": "Finns non-foil och traditional foil i Play Boosters; specifikt odds ej publicerat",
+          "why": "Rätt Play Booster-version av Costume Change-spåret."
+        },
+        {
+          "card": "Borderless Source Material – en av 40",
+          "tier": "MYCKET BRA",
+          "odds": "1:24 Play Boosters för Source Material-familjen",
+          "why": "Officiellt publicerad familjefrekvens."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "prerelease kit",
+          "family": "rare/mythic",
+          "count": 6,
+          "basis": "guaranteed",
+          "quality": "base"
+        },
+        {
+          "format": "prerelease kit",
+          "family": "year-stamped foil rare/mythic promo",
+          "count": 1,
+          "basis": "guaranteed",
+          "quality": "collectible"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-thunder-display",
+      "product_id": 15446006628678,
+      "variant_id": 56050287837510,
+      "retailer_sku": "MAGD3260",
+      "url": "https://speltrollet.se/products/magic-the-gathering-outlaws-of-thunder-junction-play-display-36-boosters",
+      "price_sek": 1890.0,
+      "available": true,
+      "language": "English",
+      "format": "booster box",
+      "packs": 36,
+      "cards_per_pack": 14,
+      "source_key": "thunder",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-outlaws-of-thunder-junction",
+      "chase_examples": [
+        {
+          "card": "Mana Drain – Breaking News",
+          "tier": "MYCKET BRA",
+          "odds": "Ett slumpmässigt Breaking News-kort per Play Booster; namngivna odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Oko, Thief of Crowns – Breaking News",
+          "tier": "MYCKET BRA",
+          "odds": "Ett slumpmässigt Breaking News-kort per Play Booster; namngivna odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "booster box",
+          "family": "rare/mythic",
+          "count": 36,
+          "basis": "guaranteed",
+          "quality": "base"
+        },
+        {
+          "format": "booster box",
+          "family": "Breaking News-kort",
+          "count": 36,
+          "basis": "guaranteed",
+          "quality": "collectible"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-strx-bundle",
+      "product_id": 15506181128518,
+      "variant_id": 56333792182598,
+      "retailer_sku": "MAGD5340",
+      "url": "https://speltrollet.se/products/magic-the-gathering-secrets-of-strixhaven-bundle",
+      "price_sek": 649.0,
+      "available": true,
+      "language": "English",
+      "format": "bundle",
+      "packs": 9,
+      "cards_per_pack": 14,
+      "source_key": "strx",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-secrets-of-strixhaven",
+      "chase_examples": [
+        {
+          "card": "Force of Will – Mystical Archive",
+          "tier": "MYCKET BRA",
+          "odds": "Minst ett slumpmässigt Mystical Archive-kort per Play Booster; kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Vampiric Tutor – Mystical Archive",
+          "tier": "MYCKET BRA",
+          "odds": "Minst ett slumpmässigt Mystical Archive-kort per Play Booster; kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "bundle",
+          "family": "rare/mythic",
+          "count": 9,
+          "basis": "guaranteed",
+          "quality": "base"
+        },
+        {
+          "format": "bundle",
+          "family": "Mystical Archive-kort",
+          "count": 9,
+          "basis": "guaranteed",
+          "quality": "collectible"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-strx-display",
+      "product_id": 15506159501638,
+      "variant_id": 56333709640006,
+      "retailer_sku": "MAGD5334-DISPLAY",
+      "url": "https://speltrollet.se/products/magic-the-gathering-secrets-of-strixhaven-play-booster-display-30",
+      "price_sek": 1699.0,
+      "available": true,
+      "language": "English",
+      "format": "booster box",
+      "packs": 30,
+      "cards_per_pack": 14,
+      "source_key": "strx",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-secrets-of-strixhaven",
+      "chase_examples": [
+        {
+          "card": "Force of Will – Mystical Archive",
+          "tier": "MYCKET BRA",
+          "odds": "Minst ett slumpmässigt Mystical Archive-kort per Play Booster; kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Vampiric Tutor – Mystical Archive",
+          "tier": "MYCKET BRA",
+          "odds": "Minst ett slumpmässigt Mystical Archive-kort per Play Booster; kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "booster box",
+          "family": "rare/mythic",
+          "count": 30,
+          "basis": "guaranteed",
+          "quality": "base"
+        },
+        {
+          "format": "booster box",
+          "family": "Mystical Archive-kort",
+          "count": 30,
+          "basis": "guaranteed",
+          "quality": "collectible"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-strx-pack",
+      "product_id": 15506169135430,
+      "variant_id": 56333747257670,
+      "retailer_sku": "MAGD5334",
+      "url": "https://speltrollet.se/products/magic-the-gathering-secrets-of-strixhaven-play-booster",
+      "price_sek": 69.0,
+      "available": true,
+      "language": "English",
+      "format": "single pack",
+      "packs": 1,
+      "cards_per_pack": 14,
+      "source_key": "strx",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-secrets-of-strixhaven",
+      "chase_examples": [
+        {
+          "card": "Force of Will – Mystical Archive",
+          "tier": "MYCKET BRA",
+          "odds": "Minst ett slumpmässigt Mystical Archive-kort per Play Booster; kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Vampiric Tutor – Mystical Archive",
+          "tier": "MYCKET BRA",
+          "odds": "Minst ett slumpmässigt Mystical Archive-kort per Play Booster; kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "single pack",
+          "family": "rare/mythic",
+          "count": 1,
+          "basis": "guaranteed",
+          "quality": "base"
+        },
+        {
+          "format": "single pack",
+          "family": "Mystical Archive-kort",
+          "count": 1,
+          "basis": "guaranteed",
+          "quality": "collectible"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-marvel-collector-display",
+      "product_id": 15538034114886,
+      "variant_id": 56455230980422,
+      "retailer_sku": "MAGD5358-Box",
+      "url": "https://speltrollet.se/products/magic-the-gathering-marvel-super-heroes-collector-booster-display-12-boosters",
+      "price_sek": 4990.0,
+      "available": true,
+      "language": "English",
+      "format": "collector booster box",
+      "packs": 12,
+      "cards_per_pack": 15,
+      "source_key": "marvel",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-marvel-super-heroes",
+      "chase_examples": [
+        {
+          "card": "The Mind Stone – cosmic foil, textless",
+          "tier": "JACKPOT",
+          "odds": "Extremt låg mängd enligt Wizards; exakt kortodds saknas.",
+          "why": "Collector Booster-exklusiv cosmic foil, alltid på engelska."
+        },
+        {
+          "card": "The Mind Stone – borderless Gauntlet",
+          "tier": "MONSTER",
+          "odds": "Under 1 % i Collector Boosterns foil Booster Fun-slot; inget boxodds.",
+          "why": "Collector Booster-exklusiv Gauntlet-behandling."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "collector booster box",
+          "family": "rare/mythic",
+          "count": 60,
+          "basis": "guaranteed",
+          "quality": "collectible"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-reality-bundle",
+      "product_id": 15554766831942,
+      "variant_id": 56555806916934,
+      "retailer_sku": "195166337173",
+      "url": "https://speltrollet.se/products/magic-the-gathering-reality-fracture-bundle",
+      "price_sek": 599.0,
+      "available": true,
+      "language": "English",
+      "format": "bundle",
+      "packs": 9,
+      "cards_per_pack": 14,
+      "source_key": "reality",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-reality-fracture",
+      "chase_examples": [
+        {
+          "card": "The Theorist, Jace Beleren – standard/foil",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Necrodominance – non-foil Special Guests",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "bundle",
+          "family": "rare/mythic",
+          "count": 9,
+          "basis": "guaranteed",
+          "quality": "base"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-reality-display",
+      "product_id": 15554780430662,
+      "variant_id": 56555873468742,
+      "retailer_sku": "195166336800",
+      "url": "https://speltrollet.se/products/magic-the-gathering-reality-fracture-play-booster-display",
+      "price_sek": 1699.0,
+      "available": true,
+      "language": "English",
+      "format": "booster box",
+      "packs": 30,
+      "cards_per_pack": 14,
+      "source_key": "reality",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-reality-fracture",
+      "chase_examples": [
+        {
+          "card": "The Theorist, Jace Beleren – standard/foil",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Necrodominance – non-foil Special Guests",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "booster box",
+          "family": "rare/mythic",
+          "count": 30,
+          "basis": "guaranteed",
+          "quality": "base"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-mtg-hobbit-bundle",
+      "product_id": 15554920284486,
+      "variant_id": 56556519227718,
+      "retailer_sku": "195166321981",
+      "url": "https://speltrollet.se/products/magic-the-gathering-the-hobbit-bundle",
+      "price_sek": 749.0,
+      "available": true,
+      "language": "English",
+      "format": "bundle",
+      "packs": 9,
+      "cards_per_pack": 14,
+      "source_key": "hobbit",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://magic.wizards.com/en/news/feature/collecting-the-hobbit",
+      "chase_examples": [
+        {
+          "card": "Thorin Oakenshield – borderless scene",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        },
+        {
+          "card": "Sting, Bilbo's Sword – Dragon hoard",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Kort och behandling bekräftas av Wizards för Play Boosters."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "bundle",
+          "family": "rare/mythic",
+          "count": 9,
+          "basis": "guaranteed",
+          "quality": "base"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-lorcana-azurite-trove",
+      "product_id": 14770771362118,
+      "variant_id": 53601475952966,
+      "retailer_sku": "11098432",
+      "url": "https://speltrollet.se/products/disney-lorcana-tcg-azurite-sea-illumineers-trove",
+      "price_sek": 649.0,
+      "available": true,
+      "language": "English",
+      "format": "illumineers trove",
+      "packs": 8,
+      "cards_per_pack": 12,
+      "source_key": "lorcana-azurite",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://www.disneylorcana.com/en-US/product/azurite-sea",
+      "chase_examples": [
+        {
+          "card": "Tigger - In the Crow's Nest #215 Enchanted",
+          "tier": "JACKPOT",
+          "odds": "Enchanted; officiellt kortspecifikt packodds ej publicerat",
+          "why": "Namngiven Enchanted i den kompletta Azurite Sea-listan."
+        },
+        {
+          "card": "Baymax - Personal Healthcare Companion #218 Enchanted",
+          "tier": "JACKPOT",
+          "odds": "Enchanted; officiellt kortspecifikt packodds ej publicerat",
+          "why": "Big Hero 6-huvudkaraktär i setets premiumrarity."
+        },
+        {
+          "card": "You Came Back #213 Enchanted",
+          "tier": "MONSTER",
+          "odds": "Enchanted; officiellt kortspecifikt packodds ej publicerat",
+          "why": "Namngivet Enchanted action-kort."
+        },
+        {
+          "card": "Tiana - Restaurant Owner #206 Enchanted",
+          "tier": "MONSTER",
+          "odds": "Enchanted; officiellt kortspecifikt packodds ej publicerat",
+          "why": "Namngiven prinsesskaraktär i Enchanted-rarity."
+        },
+        {
+          "card": "Chip 'n' Dale - Recovery Rangers #205 Enchanted",
+          "tier": "MONSTER",
+          "odds": "Enchanted; officiellt kortspecifikt packodds ej publicerat",
+          "why": "Setets första numrerade Enchanted och centralt Rescue Rangers-spår."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "illumineers trove",
+          "family": "rare/super rare/legendary",
+          "count": 16,
+          "basis": "guaranteed",
+          "quality": "collectible"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-lorcana-jafar-display",
+      "product_id": 15028443513158,
+      "variant_id": 54552450826566,
+      "retailer_sku": "11098558",
+      "url": "https://speltrollet.se/products/disney-lorcana-tcg-reign-of-jafar-booster-box-display",
+      "price_sek": 1490.0,
+      "available": true,
+      "language": "English",
+      "format": "booster box",
+      "packs": 24,
+      "cards_per_pack": 12,
+      "source_key": "lorcana-jafar",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://www.disneylorcana.com/en-US/product/reign-of-jafar",
+      "chase_examples": [
+        {
+          "card": "Stitch – Experiment 626 Enchanted",
+          "tier": "MONSTER",
+          "odds": "Ravensburger publicerar inte kortspecifika packodds.",
+          "why": "Kortets set och Enchanted-raritet bekräftas i officiella kortgalleriet."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "booster box",
+          "family": "rare/super rare/legendary",
+          "count": 48,
+          "basis": "guaranteed",
+          "quality": "collectible"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-lorcana-first-display",
+      "product_id": 8744928248134,
+      "variant_id": 48997956747590,
+      "retailer_sku": "11098190",
+      "url": "https://speltrollet.se/products/disney-lorcana-tcg-the-first-chapter-booster-box-24-packs",
+      "price_sek": 5990.0,
+      "available": true,
+      "language": "English",
+      "format": "booster box",
+      "packs": 24,
+      "cards_per_pack": 12,
+      "source_key": "lorcana-first",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://www.disneylorcana.com/en-US/product/the-first-chapter",
+      "chase_examples": [
+        {
+          "card": "Elsa – Spirit of Winter #207 Enchanted",
+          "tier": "MONSTER",
+          "odds": "Ravensburger publicerar inte kortspecifika packodds.",
+          "why": "Kortets set och Enchanted-raritet bekräftas i officiella kortgalleriet."
+        },
+        {
+          "card": "Tinker Bell – Giant Fairy #216 Enchanted",
+          "tier": "MONSTER",
+          "odds": "Ravensburger publicerar inte kortspecifika packodds.",
+          "why": "Kortets set och Enchanted-raritet bekräftas i officiella kortgalleriet."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "booster box",
+          "family": "rare/super rare/legendary",
+          "count": 48,
+          "basis": "guaranteed",
+          "quality": "collectible"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-lorcana-ursula-trove",
+      "product_id": 8877439484230,
+      "variant_id": 49352587116870,
+      "retailer_sku": "11098352",
+      "url": "https://speltrollet.se/products/disney-lorcana-tcg-ursulas-return-illumineers-trove",
+      "price_sek": 599.0,
+      "available": true,
+      "language": "English",
+      "format": "illumineers trove",
+      "packs": 8,
+      "cards_per_pack": 12,
+      "source_key": "lorcana-ursula",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://www.disneylorcana.com/en-US/product/ursulas-return",
+      "chase_examples": [
+        {
+          "card": "Ursula – Sea Witch Queen #208 Enchanted",
+          "tier": "MONSTER",
+          "odds": "Ravensburger publicerar inte kortspecifika packodds.",
+          "why": "Kortets set och Enchanted-raritet bekräftas i officiella kortgalleriet."
+        },
+        {
+          "card": "Yen Sid – Powerful Sorcerer #209 Enchanted",
+          "tier": "MONSTER",
+          "odds": "Ravensburger publicerar inte kortspecifika packodds.",
+          "why": "Kortets set och Enchanted-raritet bekräftas i officiella kortgalleriet."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "illumineers trove",
+          "family": "rare/super rare/legendary",
+          "count": 16,
+          "basis": "guaranteed",
+          "quality": "collectible"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-yugioh-amazing-display",
+      "product_id": 15168173965638,
+      "variant_id": 55142606700870,
+      "retailer_sku": "4012927948286",
+      "url": "https://speltrollet.se/products/yu-gi-oh-amazing-defenders-1st-edition-booster-display-24-packs",
+      "price_sek": 599.0,
+      "available": true,
+      "language": "English",
+      "format": "booster box",
+      "packs": 24,
+      "cards_per_pack": 7,
+      "source_key": "yugioh-amazing",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://www.yugioh-card.com/en/products/amde/",
+      "chase_examples": [
+        {
+          "card": "Purrely",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Konamis setlista och produktbeskrivning bekräftar korten/raritetsfamiljen."
+        },
+        {
+          "card": "Ohime the Manifested Mikanko",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Konamis setlista och produktbeskrivning bekräftar korten/raritetsfamiljen."
+        },
+        {
+          "card": "Collector's Rare – slumpmässigt motiv",
+          "tier": "MYCKET BRA",
+          "odds": "Kortspecifika odds saknas.",
+          "why": "Konamis setlista och produktbeskrivning bekräftar korten/raritetsfamiljen."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "booster box",
+          "family": "foilkort",
+          "count": 24,
+          "basis": "guaranteed",
+          "quality": "collectible"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-yugioh-duelist-display",
+      "product_id": 15168190251334,
+      "variant_id": 55142619414854,
+      "retailer_sku": "4012927191422",
+      "url": "https://speltrollet.se/products/yu-gi-oh-duelists-advance-1st-edition-booster-display-24-packs",
+      "price_sek": 749.0,
+      "available": true,
+      "language": "English",
+      "format": "booster box",
+      "packs": 24,
+      "cards_per_pack": 9,
+      "source_key": "yugioh-duelist",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://www.yugioh-card.com/eu/product/duelists-advance/",
+      "chase_examples": [
+        {
+          "card": "Number F0: Utopic Future Zexal – Starlight Rare",
+          "tier": "MONSTER",
+          "odds": "Exakta Starlight- och kortspecifika odds saknas.",
+          "why": "DUAD-EN042 är bekräftad som Ultra Rare och Starlight Rare i Konamis kortdatabas."
+        }
+      ],
+      "format_hits": []
+    },
+    {
+      "canonical_slug": "sp-yugioh-rc5-display",
+      "product_id": 15549286023494,
+      "variant_id": 56525754597702,
+      "retailer_sku": "4012927194669",
+      "url": "https://speltrollet.se/products/yu-gi-oh-rarity-collection-v-booster-box-display-24-pack",
+      "price_sek": 1399.0,
+      "available": true,
+      "language": "English",
+      "format": "booster box",
+      "packs": 24,
+      "cards_per_pack": 5,
+      "source_key": "yugioh-rc5",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://www.yugioh-card.com/eu/product/rarity-collection-5/",
+      "chase_examples": [
+        {
+          "card": "Red-Eyes Dark Dragoon – extended art",
+          "tier": "MYCKET BRA",
+          "odds": "Ett slumpmässigt variant art-kort per pack; kortspecifika odds saknas.",
+          "why": "Konami bekräftar korten och separat variant art-slot."
+        },
+        {
+          "card": "Kurikara Divincarnate – extended art",
+          "tier": "MYCKET BRA",
+          "odds": "Ett slumpmässigt variant art-kort per pack; kortspecifika odds saknas.",
+          "why": "Konami bekräftar korten och separat variant art-slot."
+        },
+        {
+          "card": "Chaos Angel",
+          "tier": "MYCKET BRA",
+          "odds": "Ett slumpmässigt variant art-kort per pack; kortspecifika odds saknas.",
+          "why": "Konami bekräftar korten och separat variant art-slot."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "booster box",
+          "family": "variant art-kort",
+          "count": 24,
+          "basis": "guaranteed",
+          "quality": "collectible"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-yugioh-rc5-pack",
+      "product_id": 15549312631110,
+      "variant_id": 56525808697670,
+      "retailer_sku": "4012927194614",
+      "url": "https://speltrollet.se/products/yu-gi-oh-tcg-25th-anniversary-rarity-collection-5-booster",
+      "price_sek": 79.0,
+      "available": true,
+      "language": "English",
+      "format": "single pack",
+      "packs": 1,
+      "cards_per_pack": 5,
+      "source_key": "yugioh-rc5",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://www.yugioh-card.com/eu/product/rarity-collection-5/",
+      "chase_examples": [
+        {
+          "card": "Red-Eyes Dark Dragoon – extended art",
+          "tier": "MYCKET BRA",
+          "odds": "Ett slumpmässigt variant art-kort per pack; kortspecifika odds saknas.",
+          "why": "Konami bekräftar korten och separat variant art-slot."
+        },
+        {
+          "card": "Kurikara Divincarnate – extended art",
+          "tier": "MYCKET BRA",
+          "odds": "Ett slumpmässigt variant art-kort per pack; kortspecifika odds saknas.",
+          "why": "Konami bekräftar korten och separat variant art-slot."
+        },
+        {
+          "card": "Chaos Angel",
+          "tier": "MYCKET BRA",
+          "odds": "Ett slumpmässigt variant art-kort per pack; kortspecifika odds saknas.",
+          "why": "Konami bekräftar korten och separat variant art-slot."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "single pack",
+          "family": "variant art-kort",
+          "count": 1,
+          "basis": "guaranteed",
+          "quality": "collectible"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-yugioh-glorious-display",
+      "product_id": 15597833584966,
+      "variant_id": 56717267566918,
+      "retailer_sku": "4012927170304",
+      "url": "https://speltrollet.se/products/yu-gi-oh-tcg-battles-of-legend-glorious-gallery-booster-display-24-pack",
+      "price_sek": 899.0,
+      "available": true,
+      "language": "English",
+      "format": "booster box",
+      "packs": 24,
+      "cards_per_pack": 5,
+      "source_key": "yugioh-glorious",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://www.yugioh-card.com/eu/product/battles-of-legend-glorious-gallery/",
+      "chase_examples": [
+        {
+          "card": "Dragon Master Magia – Starlight Rare extended art",
+          "tier": "JACKPOT",
+          "odds": "Kortspecifikt packodds ej publicerat",
+          "why": "Konami bekräftar extended-art Starlight-versionen i produkten."
+        },
+        {
+          "card": "Red Supernova Dragon – Starlight Rare extended art",
+          "tier": "MONSTER",
+          "odds": "Kortspecifikt packodds ej publicerat",
+          "why": "En andra namngiven Starlight-behandling."
+        },
+        {
+          "card": "Dominus Impulse – Ultra Rare extended art",
+          "tier": "BRA",
+          "odds": "Kortspecifikt packodds ej publicerat",
+          "why": "Konami bekräftar denna extended-art-version."
+        }
+      ],
+      "format_hits": [
+        {
+          "format": "booster box",
+          "family": "Secret Rare",
+          "count": 24,
+          "basis": "guaranteed",
+          "quality": "collectible"
+        },
+        {
+          "format": "booster box",
+          "family": "Ultra Rare",
+          "count": 96,
+          "basis": "guaranteed",
+          "quality": "collectible"
+        }
+      ]
+    },
+    {
+      "canonical_slug": "sp-pokemon-wild-display-jp",
+      "product_id": 14887806337350,
+      "variant_id": 54039878238534,
+      "retailer_sku": "4521329394831",
+      "url": "https://speltrollet.se/products/pokemon-scarlet-violet-wild-force-booster-box-display-japansk",
+      "price_sek": 1090.0,
+      "available": true,
+      "language": "Japanese",
+      "format": "booster box",
+      "packs": 30,
+      "cards_per_pack": 5,
+      "source_key": "pokemon-wild",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://www.pokemon-card.com/products/sv/sv5.html",
+      "chase_examples": [
+        {
+          "card": "Gouging Fire ex",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        },
+        {
+          "card": "Walking Wake ex",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        },
+        {
+          "card": "Raging Bolt ex",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        }
+      ],
+      "format_hits": []
+    },
+    {
+      "canonical_slug": "sp-pokemon-cyber-display-jp",
+      "product_id": 14888022475078,
+      "variant_id": 54040636916038,
+      "retailer_sku": "4521329394848",
+      "url": "https://speltrollet.se/products/pokemon-scarlet-violet-cyber-judge-booster-box-display-japansk",
+      "price_sek": 1090.0,
+      "available": true,
+      "language": "Japanese",
+      "format": "booster box",
+      "packs": 30,
+      "cards_per_pack": 5,
+      "source_key": "pokemon-cyber",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://www.pokemon-card.com/products/sv/sv5.html",
+      "chase_examples": [
+        {
+          "card": "Iron Leaves ex",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        },
+        {
+          "card": "Iron Crown ex",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        },
+        {
+          "card": "Iron Boulder ex",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        }
+      ],
+      "format_hits": []
+    },
+    {
+      "canonical_slug": "sp-pokemon-mask-display-jp",
+      "product_id": 14887953826118,
+      "variant_id": 54040521965894,
+      "retailer_sku": "4521329362526",
+      "url": "https://speltrollet.se/products/pokemon-scarlet-violet-mask-of-change-booster-box-display-japansk",
+      "price_sek": 1290.0,
+      "available": true,
+      "language": "Japanese",
+      "format": "booster box",
+      "packs": 30,
+      "cards_per_pack": 5,
+      "source_key": "pokemon-mask",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://www.pokemon-card.com/ex/sv6/index.html",
+      "chase_examples": [
+        {
+          "card": "Teal Mask Ogerpon ex",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        },
+        {
+          "card": "Dragapult ex",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        }
+      ],
+      "format_hits": []
+    },
+    {
+      "canonical_slug": "sp-pokemon-mask-pack-jp",
+      "product_id": 14892693324102,
+      "variant_id": 54054958170438,
+      "retailer_sku": "4521329362526-B",
+      "url": "https://speltrollet.se/products/pokemon-scarlet-violet-mask-of-change-booster-japansk",
+      "price_sek": 49.0,
+      "available": true,
+      "language": "Japanese",
+      "format": "single pack",
+      "packs": 1,
+      "cards_per_pack": 5,
+      "source_key": "pokemon-mask",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://www.pokemon-card.com/ex/sv6/index.html",
+      "chase_examples": [
+        {
+          "card": "Teal Mask Ogerpon ex",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        },
+        {
+          "card": "Dragapult ex",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        }
+      ],
+      "format_hits": []
+    },
+    {
+      "canonical_slug": "sp-pokemon-brave-display-jp",
+      "product_id": 15104920387910,
+      "variant_id": 54925758005574,
+      "retailer_sku": "M1L",
+      "url": "https://speltrollet.se/products/pokemon-mega-brave-booster-box-display-japansk",
+      "price_sek": 1190.0,
+      "available": true,
+      "language": "Japanese",
+      "format": "booster box",
+      "packs": 30,
+      "cards_per_pack": 5,
+      "source_key": "pokemon-brave",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://www.pokemon-card.com/ex/m1/index.html",
+      "chase_examples": [
+        {
+          "card": "Mega Lucario ex",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        },
+        {
+          "card": "Mega Venusaur ex",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        },
+        {
+          "card": "Lillie's Determination",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        }
+      ],
+      "format_hits": [],
+      "review_note": "Retailer character examples conflict with manufacturer set assignments. Ranking uses official Japanese set: Lucario/Venusaur in Brave, Gardevoir/Latias in Symphonia."
+    },
+    {
+      "canonical_slug": "sp-pokemon-symphonia-display-jp",
+      "product_id": 15105058373958,
+      "variant_id": 54925999046982,
+      "retailer_sku": "M1S",
+      "url": "https://speltrollet.se/products/pokemon-mega-symphonia-booster-box-display-japansk",
+      "price_sek": 1090.0,
+      "available": true,
+      "language": "Japanese",
+      "format": "booster box",
+      "packs": 30,
+      "cards_per_pack": 5,
+      "source_key": "pokemon-symphonia",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://www.pokemon-card.com/ex/m1/index.html",
+      "chase_examples": [
+        {
+          "card": "Mega Gardevoir ex",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        },
+        {
+          "card": "Mega Latias ex",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        },
+        {
+          "card": "Wally's Compassion",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        }
+      ],
+      "format_hits": [],
+      "review_note": "Retailer character examples conflict with manufacturer set assignments. Ranking uses official Japanese set: Lucario/Venusaur in Brave, Gardevoir/Latias in Symphonia."
+    },
+    {
+      "canonical_slug": "sp-pokemon-heat-display-jp",
+      "product_id": 15108586701126,
+      "variant_id": 54936657854790,
+      "retailer_sku": "sv9a",
+      "url": "https://speltrollet.se/products/pokemon-heat-wave-arena-booster-box-display-japansk",
+      "price_sek": 1590.0,
+      "available": true,
+      "language": "Japanese",
+      "format": "booster box",
+      "packs": 30,
+      "cards_per_pack": 5,
+      "source_key": "pokemon-heat",
+      "description_note": "Product title determines single-pack versus display; duplicated display copy in pack descriptions is not promoted to a box guarantee.",
+      "manufacturer_url": "https://www.pokemon-card.com/products/sv/sv9a.html",
+      "chase_examples": [
+        {
+          "card": "Ethan's Ho-Oh ex – SAR",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        },
+        {
+          "card": "Cynthia's Garchomp ex",
+          "tier": "MYCKET BRA",
+          "odds": "Tillverkaren publicerar inte kortspecifika packodds.",
+          "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+        }
+      ],
+      "format_hits": []
+    }
+  ],
+  "excluded": [
+    {
+      "product_id": 15061840298310,
+      "title": "Star Wars: Unlimited - Legends of the Force Booster Display (24 boosters)",
+      "reason": "Star Wars format and chase review pending."
+    },
+    {
+      "product_id": 15484716613958,
+      "title": "Pokemon Mega Brave Booster Box Display (M1L) (Koreansk)",
+      "reason": "Korean print requires its own manufacturer checklist."
+    },
+    {
+      "product_id": 15484711141702,
+      "title": "Pokemon Mega Symphonia Booster Box Display (m1S) (Koreansk)",
+      "reason": "Korean print requires its own manufacturer checklist."
+    },
+    {
+      "product_id": 14927087960390,
+      "title": "Star Wars: Unlimited - Jump to Lightspeed Booster Display (24 boosters)",
+      "reason": "Star Wars format and chase review pending."
+    },
+    {
+      "product_id": 15223031431494,
+      "title": "Star Wars: Unlimited - Secrets of Power Booster Display (24 boosters)",
+      "reason": "Star Wars format and chase review pending."
+    },
+    {
+      "product_id": 15223034085702,
+      "title": "Star Wars: Unlimited - Secrets of Power Carbonite Booster Box",
+      "reason": "Star Wars format and chase review pending."
+    },
+    {
+      "product_id": 15637519139142,
+      "title": "Star Wars: Unlimited - Ashes of the Empire Carbonite Booster Display (12 boosters)",
+      "reason": "Star Wars format and chase review pending."
+    },
+    {
+      "product_id": 15637546959174,
+      "title": "Star Wars: Unlimited - Ashes of the Empire Booster Display (24 boosters)",
+      "reason": "Star Wars format and chase review pending."
+    },
+    {
+      "product_id": 14927138881862,
+      "title": "Star Wars: Unlimited - Jump to Lightspeed Carbonite Booster Display (12 boosters)",
+      "reason": "Star Wars format and chase review pending."
+    }
+  ]
+}

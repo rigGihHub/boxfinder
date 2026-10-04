@@ -52,7 +52,7 @@ def test_speltrollet_inventory_stays_in_review_and_verified_links_are_format_spe
     assert any(c.exclusion_reason=="outside_card_scope" for c in candidates)
     assert all(c.review_status=="new" for c in candidates)
     offers=db.scalars(select(Offer).where(Offer.store_id==store.id)).all()
-    assert len(offers)==len(seedmod.SPELTROLLET_BACKUP_OFFERS)==19
+    assert len(offers)==len(seedmod.SPELTROLLET_BACKUP_OFFERS)==59
     assert all(o.source_kind=="verified_snapshot" and o.stock_status=="in_stock" and not o.is_preorder for o in offers)
     assert all(o.variant for o in offers)
     for slug in ("cc-star-wars-unlimited-twilight-display", "ad-yugioh-glorious-gallery-pack"):

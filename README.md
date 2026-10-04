@@ -1,4 +1,11 @@
-# BoxFinder v0.54.0
+# BoxFinder v0.55.0
+
+## v0.55.0 – 40 nya produkter och format
+
+- 24 Magic, 7 japanska Pokémon, 5 Yu-Gi-Oh! och 4 Lorcana hos Speltrollet. Alla är nya set/format/språk-identiteter jämfört med den tidigare katalogen.
+- 137 rankbara produkter och 182 aktuella köpbara erbjudanden från 21 butiker efter expansionen.
+- Direkta butikssidor, Shopify-variantens lagerstatus och priser kontrollerade 4 oktober 2026. Tillverkarkällor styr möjliga kort och formatgarantier.
+- Play och Collector hålls åtskilda, liksom japanska och koreanska kort. Duplicerad displaytext i löspaket ger inte boxbonus; Aetherdrift Box Topper gäller endast förseglad display.
 
 ## v0.54.0 – Djupare butikstäckning
 
