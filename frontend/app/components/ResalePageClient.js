@@ -64,7 +64,7 @@ export default function ResalePageClient() {
     <header className="productNav">
       <Link className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></Link>
       <Link className="backLink" href="/">← STARTSIDAN</Link>
-      <span className="version">v0.58.0</span>
+      <span className="version">v0.59.0</span>
     </header>
 
     <section className="resaleHero">
@@ -80,7 +80,7 @@ export default function ResalePageClient() {
           {storeName && !stores.some(store => store.name === storeName) && <option value={storeName}>{storeName}</option>}
           {stores.map(store => <option value={store.name} key={store.name}>{store.name}</option>)}
         </select></label>
-        <label><span>KATEGORI · VALFRITT</span><select name="category" defaultValue={category}><option value="">Alla kategorier</option><option>Hockey</option><option>Fotboll</option><option>Basket</option><option>NFL</option><option>Baseboll</option><option>Tennis</option><option>F1</option><option>Racing</option><option>Golf</option><option>UFC</option><option>WWE</option><option>Pokémon</option><option>One Piece</option><option>Magic</option><option>Disney</option><option>Marvel</option><option>Star Wars</option><option>Yu-Gi-Oh</option></select></label>
+        <label><span>KATEGORI · VALFRITT</span><select name="category" defaultValue={category}><option value="">Alla kategorier</option><option>Hockey</option><option>Fotboll</option><option>Basket</option><option>NFL</option><option>Baseboll</option><option>Tennis</option><option>F1</option><option>Racing</option><option>Golf</option><option>UFC</option><option>WWE</option><option>Pokémon</option><option>One Piece</option><option>Magic</option><option>Lorcana</option><option>Disney</option><option>Marvel</option><option>Star Wars</option><option>Yu-Gi-Oh</option><option>Star Wars Unlimited</option><option>Dragon Ball</option><option>Digimon</option><option>Riftbound</option><option>Final Fantasy</option><option>Naruto</option><option>Universus</option><option>Gundam</option></select></label>
         <label><span>MAXPRIS EXKL. FRAKT · VALFRITT</span><select name="max_price" defaultValue={maxPrice}><option value="">Ingen gräns</option><option value="100">100 kr</option><option value="250">250 kr</option><option value="500">500 kr</option><option value="1000">1 000 kr</option><option value="2000">2 000 kr</option><option value="5000">5 000 kr</option><option value="10000">10 000 kr</option></select></label>
         <button type="submit">RANKA ALLT →</button>
       </form>

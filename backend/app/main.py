@@ -3,7 +3,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from .config import settings
 from .database import Base, engine, SessionLocal
-from .seed import seed_demo_data, seed_verified_snapshot, seed_chase_profiles, seed_chase_card_db, seed_speltrollet_inventory, seed_cardland_inventory, seed_kantovault_inventory
+from .seed import seed_demo_data, seed_verified_snapshot, seed_chase_profiles, seed_chase_card_db, seed_speltrollet_inventory, seed_cardland_inventory, seed_kantovault_inventory, seed_coolcard_inventory
 from .routers import products, matching, admin, deals, checklists, market, players, rankings, budget, compare, watchlist, discovery, system, chase_search
 from .services.update_manager import scheduler_loop
 from .services.shipping_snapshot import seed_shipping_policies
@@ -17,6 +17,7 @@ def startup():
     seed_demo_data()
     seed_verified_snapshot()
     seed_speltrollet_inventory()
+    seed_coolcard_inventory()
     seed_cardland_inventory()
     seed_kantovault_inventory()
     seed_shipping_policies()

@@ -244,13 +244,17 @@ def catalog_candidates(
     status: str | None = None,
     limit: int = 250,
     db: Session = Depends(get_db),
+    store_name: str | None = None,
+    offset: int = 0,
 ):
-    q = select(CatalogCandidate).order_by(CatalogCandidate.last_seen_at.desc())
+    q = select(CatalogCandidate).order_by(CatalogCandidate.last_seen_at.desc(), CatalogCandidate.id.asc())
     if sealed_only:
         q = q.where(CatalogCandidate.sealed_candidate.is_(True))
     if status:
         q = q.where(CatalogCandidate.review_status == status)
-    rows = db.scalars(q.limit(min(max(limit, 1), 1000))).all()
+    if store_name:
+        q = q.join(Store).where(Store.name == store_name)
+    rows = db.scalars(q.offset(max(offset, 0)).limit(min(max(limit, 1), 1000))).all()
     stores = {s.id: s.name for s in db.scalars(select(Store)).all()}
     return [{
         "id": c.id,

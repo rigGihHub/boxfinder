@@ -1,4 +1,14 @@
-# BoxFinder v0.58.0
+# BoxFinder v0.59.0
+
+## v0.59.0 – hela Speltrollets och Coolcards kataloger
+
+- Speltrollet: 4 389 produkter och 4 985 varianter från alla 19 feed-sidor, inklusive slutmarkören. 338 köpbara öppningsprodukters sidor kontrollerades separat.
+- Coolcard: alla 24 604 produktlänkar i butikens 25 svenska produkt-sitemaps. Katalogdata från 1 161 kategorier kompletterades med produktsidor för de 92 varor som saknades i kategorilistorna. Totalt 1 668 produktsidor kontrollerades för innehåll, lagerstatus eller katalogluckor.
+- Katalogen innehåller även löskort, tillbehör, fasta kortlekar och slutsålda varor. Inventering är skild från produktmatchning och rankning; ofullständigt innehåll ger inget rankingbetyg.
+- Befintliga erbjudanden uppdateras med samma butik/SKU. Språk, pack/box och specialformat hålls åtskilda. Kodkort och avdelare till en ETB får inte matchas till den förseglade boxen.
+- Nya profiler från butikernas kortfamiljer har lägre underlagskonfidens, inga härledda boxgarantier och inga påhittade kortodds. Tillverkarkontrollerade profiler bevaras för matchade produkter.
+- Ranking kan bläddras med ”Visa fler”. Hela produktkön kan hämtas per butik och sida. Kontrolltider bevaras vid omstart; manuella granskningsbeslut skrivs inte över.
+- Alla priser är fortsatt exklusive frakt och paketantal ger inga egna poäng.
 
 ## v0.58.0 – hela Kantovaults katalog
 

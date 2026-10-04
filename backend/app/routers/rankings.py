@@ -124,6 +124,7 @@ def resale_rankings(
     store_id: int | None = Query(None, ge=1),
     cost_basis: Literal["item", "total"] = "item",
     store_name: str | None = None,
+    offset: int = 0,
 ):
     strategy = strategy.lower().strip()
     if strategy not in STRATEGIES:
@@ -168,7 +169,7 @@ def resale_rankings(
         "category": category,
         "max_price": max_price,
         "count": len(ranked),
-        "items": ranked[:limit],
+        "items": ranked[max(offset, 0):max(offset, 0) + limit],
         "max_offer_age_days": MAX_OFFER_AGE_DAYS,
         "disclaimer": "Priser, budget och ranking är exklusive frakt. Betyget jämför bedömt innehåll med inköpspriset, inte förväntad vinst. Familjeodds och uppgifter om förpackningens innehåll är inte odds för ett namngivet kort.",
     }

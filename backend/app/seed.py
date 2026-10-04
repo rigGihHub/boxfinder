@@ -7,6 +7,7 @@ from .database import SessionLocal
 from .models import BoxAnalysis, Offer, PriceHistory, Product, ProductVariant, Store, ProductFact, ChaseCard, VariantChaseCard, ChaseProfile, CatalogCandidate
 from .services.matching import normalize_title
 from .services.kantovault_snapshot import OFFERS as KANTOVAULT_OFFERS, PROFILES as KANTOVAULT_PROFILES, seed_inventory as seed_kantovault_catalog, snapshot_datetime
+from .services.two_shops_snapshot import OFFERS as TWO_SHOPS_OFFERS, PROFILES as TWO_SHOPS_PROFILES, seed_inventory as seed_two_shops_catalog
 
 SEED = [
     ("2025-26 Upper Deck Series 1", "Hockey", "Upper Deck", "2025-26", "Series 1", "Hobby Box", 799, [560,780,86,80,84,48,92,78,82,72,"Medel-hög"]),
@@ -511,6 +512,17 @@ for kantovault_snapshot_row in KANTOVAULT_OFFERS:
     else:
         REAL_SNAPSHOT.append(kantovault_row)
 
+# Refresh stable store/SKU identities rather than appending duplicate offers.
+PRE_TWO_SHOPS_SNAPSHOT = [dict(row) for row in REAL_SNAPSHOT]
+for snapshot_row in TWO_SHOPS_OFFERS:
+    refreshed = dict(snapshot_row, observed_at=snapshot_datetime(snapshot_row['observed_at']), catalog_refresh=True)
+    existing_row = next((row for row in REAL_SNAPSHOT
+                         if row.get('store_name', 'Coolcard') == refreshed['store_name']
+                         and row['sku'] == refreshed['sku']), None)
+    if existing_row is None:
+        REAL_SNAPSHOT.append(refreshed)
+    else:
+        REAL_SNAPSHOT[REAL_SNAPSHOT.index(existing_row)] = refreshed
 
 def seed_kantovault_inventory():
     seed_kantovault_catalog(SessionLocal)
@@ -555,44 +567,13 @@ def seed_cardland_inventory():
 
 
 def seed_speltrollet_inventory():
-    """Stage every observed collection item for review; no item becomes buyable here."""
-    snapshot = json.loads((Path(__file__).parent / "snapshots" / "speltrollet_2026_09_30.json").read_text())
-    observed_at = datetime.fromisoformat(snapshot["observed_at"].replace("Z", "+00:00")).replace(tzinfo=None)
-    db = SessionLocal()
-    try:
-        store = db.scalar(select(Store).where(Store.name == "Speltrollet"))
-        if store is None:
-            store = Store(name="Speltrollet", country="SE", active=True, collection_method="manual", adapter_key="manual", policy_status="review_required", min_interval_seconds=120)
-            db.add(store)
-            db.flush()
-        store.homepage_url = "https://speltrollet.se/"
-        store.source_url = "https://speltrollet.se/collections/samlarkort"
-        existing = {c.external_id: c for c in db.scalars(select(CatalogCandidate).where(CatalogCandidate.store_id == store.id))}
-        for row in snapshot["products"]:
-            candidate = existing.get(row["id"])
-            if candidate and candidate.last_seen_at >= observed_at:
-                continue
-            if candidate is None:
-                candidate = CatalogCandidate(store_id=store.id, external_id=row["id"], source_title=row["title"], first_seen_at=observed_at)
-                db.add(candidate)
-            n = normalize_title(row["title"])
-            non_cards = row["type"].lower() in {"samlarkort tillbehör", "sällskapsspel", "biljett"}
-            candidate.source_title = row["title"]
-            candidate.url = "https://speltrollet.se/products/" + row["handle"]
-            candidate.price_sek = row["price_sek"]
-            # Shopify availability alone does not establish release or on-hand stock.
-            candidate.stock_status = "unknown" if row["preorder"] else ("in_stock" if row["available"] else "out_of_stock")
-            candidate.detected_format = n.format
-            candidate.category_hint = n.category_hint
-            candidate.language_hint = n.language
-            candidate.year_season_hint = n.year_season
-            candidate.sealed_candidate = n.sealed_candidate and not non_cards
-            candidate.randomized = n.randomized and not non_cards
-            candidate.exclusion_reason = "outside_card_scope" if non_cards else n.exclusion_reason
-            candidate.last_seen_at = observed_at
-        db.commit()
-    finally:
-        db.close()
+    """Stage the complete catalogue without promoting inventory into ranking."""
+    seed_two_shops_catalog(SessionLocal, 'Speltrollet')
+
+
+def seed_coolcard_inventory():
+    seed_two_shops_catalog(SessionLocal, 'Coolcard')
+
 
 DIRECT_BUY_URLS = {
     "cc-2025-26-opc-retail-blaster": "https://www.coolcard.se/product/hel-blaster-box-2025-26-o-pee-chee-hockey-retail-9-paket",
@@ -739,7 +720,7 @@ def seed_verified_snapshot():
             else:
                 source_url = pack_url if row["fmt"]=="single pack" else category_url
             source_url = row.get("buy_url") or DIRECT_BUY_URLS.get(row["slug"]) or buy_urls.get(row["slug"]) or source_url
-            stock_status = "out_of_stock" if row["slug"] in UNAVAILABLE_PURCHASE_SLUGS and row_store.id == coolcard.id else row.get("stock", "in_stock")
+            stock_status = "out_of_stock" if row["slug"] in UNAVAILABLE_PURCHASE_SLUGS and row_store.id == coolcard.id and not row.get('catalog_refresh') else row.get("stock", "in_stock")
             is_expansion = row in REAL_NONSPORT_EXPANSION or row in REAL_CROSS_CATEGORY_EXPANSION or row in REAL_RESEARCH_EXPANSION or row in REAL_STORE_EXPANSION or row in RETAILER_EXPANSION
             observed_at = row.get("observed_at", REAL_EXPANSION_OBSERVED_AT if is_expansion else REAL_SNAPSHOT_OBSERVED_AT)
             if offer is None:
@@ -2799,6 +2780,8 @@ CHASE_PROFILES["sp-mtg-tmnt-collector-display"]["tiers"]["everyday"] = {"label":
 
 CHASE_PROFILES.update(json.loads((Path(__file__).parent / "snapshots" / "profiles_2026_10_04_products.json").read_text()))
 CHASE_PROFILES.update(KANTOVAULT_PROFILES)
+PRE_TWO_SHOPS_PROFILES = dict(CHASE_PROFILES)
+CHASE_PROFILES.update(TWO_SHOPS_PROFILES)
 
 def seed_chase_profiles():
     db=SessionLocal()
@@ -2829,7 +2812,7 @@ def seed_chase_profiles():
             row.content_json=json.dumps({k:v for k,v in data.items() if k not in ("source_name","source_url")},ensure_ascii=False)
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
-            row.verified_at=(snapshot_datetime(data["verified_at"]) if slug in KANTOVAULT_PROFILES else
+            row.verified_at=(snapshot_datetime(data["verified_at"]) if slug in KANTOVAULT_PROFILES or slug in TWO_SHOPS_PROFILES else
                 OCTOBER_04_PRODUCTS_VERIFIED_AT if slug in OCTOBER_04_PRODUCTS_PROFILE_SLUGS
                 else OCTOBER_04_DEPTH_VERIFIED_AT if slug in OCTOBER_04_DEPTH_NEW_PROFILE_SLUGS
                 else OCTOBER_04_OBSERVED_AT if slug in OCTOBER_04_NEW_PROFILE_SLUGS

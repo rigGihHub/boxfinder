@@ -46,11 +46,11 @@ def test_speltrollet_inventory_stays_in_review_and_verified_links_are_format_spe
     db=Session()
     store=db.scalar(select(Store).where(Store.name=="Speltrollet"))
     candidates=db.scalars(select(CatalogCandidate).where(CatalogCandidate.store_id==store.id)).all()
-    assert len(candidates)==378
-    assert len({c.external_id for c in candidates})==378
+    assert len(candidates)==4985
+    assert len({c.external_id for c in candidates})==4985
     assert all(c.url.startswith("https://speltrollet.se/products/") for c in candidates)
     assert any(c.exclusion_reason=="outside_card_scope" for c in candidates)
-    assert all(c.review_status=="new" for c in candidates)
+    assert {c.review_status for c in candidates} <= {"new", "linked"}
     offers=db.scalars(select(Offer).where(Offer.store_id==store.id)).all()
     assert len(offers)==len(seedmod.SPELTROLLET_BACKUP_OFFERS)==59
     assert all(o.source_kind=="verified_snapshot" and o.stock_status=="in_stock" and not o.is_preorder for o in offers)
