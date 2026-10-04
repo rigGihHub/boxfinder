@@ -79,7 +79,7 @@ def test_cardland_listing_queue_is_not_a_buyable_offer(monkeypatch):
     assert all(c.stock_status=="unknown" and c.review_status=="new" for c in candidates)
     assert all(c.url.startswith("https://www.cardland.se/") for c in candidates)
     offers=db.scalars(select(Offer).where(Offer.store_id==store.id)).all()
-    assert len(offers)==1+len(seedmod.CARDLAND_BACKUP_OFFERS)
+    assert len(offers)==1+len(seedmod.CARDLAND_BACKUP_OFFERS)+len(seedmod.OCTOBER_04_EXPANSION)
     assert all(o.source_kind=="verified_snapshot" and not o.is_preorder for o in offers)
     assert all(o.variant and db.scalar(select(ChaseProfile).where(ChaseProfile.variant_id==o.variant_id)) for o in offers)
     assert not any("resurgence-football-blaster" in o.url for o in offers)
@@ -91,6 +91,29 @@ def test_cardland_listing_queue_is_not_a_buyable_offer(monkeypatch):
     assert any(p["slug"]=="ch-pokemon-pitch-black-etb" and p["price"]==848 and p["store"]=="Cardland" for p in etb["products"])
     pack=real_catalog(category="Pokémon",budget=100,format="single pack",limit=200,db=db)
     assert any(p["slug"]=="tcgs-pokemon-pitch-black-pack" and p["price"]==85 and p["store"]=="Cardland" for p in pack["products"])
+    db.close()
+
+def test_marvel_value_uses_verified_value_odds_and_direct_article(monkeypatch):
+    Session=session_factory()
+    monkeypatch.setattr(seedmod,"SessionLocal",Session)
+    seedmod.seed_verified_snapshot()
+    seedmod.seed_chase_profiles()
+    db=Session()
+    slug="cl-2026-topps-marvel-comics-chrome-value"
+    product=db.scalar(select(Product).where(Product.slug==slug))
+    assert product and product.category=="Marvel"
+    variant=db.scalar(select(ProductVariant).where(ProductVariant.product_id==product.id))
+    assert (variant.format,variant.packs,variant.cards_per_pack)==("value box",8,4)
+    offer=db.scalar(select(Offer).where(Offer.variant_id==variant.id))
+    assert offer.store.name=="Cardland" and offer.price_sek==599
+    assert offer.stock_status=="in_stock" and not offer.is_preorder
+    assert offer.url=="https://www.cardland.se/marvel/2026-topps-chrome-marvel-comics-value-box"
+    profile=db.scalar(select(ChaseProfile).where(ChaseProfile.variant_id==variant.id))
+    assert profile and profile.verified_at==seedmod.OCTOBER_04_OBSERVED_AT
+    assert "1:2 992 Value-pack" in profile.content_json
+    assert "Sketch Cards och Artist Originals är hobbyexklusiva" in profile.content_json
+    rows=real_catalog(category="Marvel",budget=600,format="value box",limit=200,db=db)
+    assert any(row["slug"]==slug and row["price"]==599 for row in rows["products"])
     db.close()
 
 def test_jollyroom_pitch_black_etb_is_a_distinct_backup_offer(monkeypatch):

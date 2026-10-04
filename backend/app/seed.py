@@ -434,6 +434,14 @@ OCTOBER_03_EXPANSION = [
 ]
 REAL_SNAPSHOT += OCTOBER_03_EXPANSION
 
+# Direct Cardland article, price and on-hand stock checked 2026-10-04 00:05 UTC.
+# Topps publishes separate Value odds; hobby-only sketches are excluded below.
+OCTOBER_04_OBSERVED_AT = datetime(2026, 10, 4, 0, 5, 0)
+OCTOBER_04_EXPANSION = [
+    dict(slug="cl-2026-topps-marvel-comics-chrome-value", name="2026 Topps Chrome Marvel Comics Value Box", category="Marvel", manufacturer="Topps", year="2026", series="Marvel Comics Chrome", fmt="value box", sku="CARDLAND-56495", price=599, packs=8, cards=4, stock="in_stock", language="English", store_name="Cardland", observed_at=OCTOBER_04_OBSERVED_AT, facts=["8 value-pack med 4 kort per paket, totalt 32 kort", "Topps Value-odds per pack: Fanfare 1:32 och RayWave Refractor 1:4 för hela respektive kortfamilj", "Authentic Marvel Comic Book Artist Autographs 1:2 992 value-pack för hela autograffamiljen; ingen signer garanteras", "Sketch Cards och Artist Originals har streck i Topps Value-kolumn och kan inte räknas som chase här"], buy_url="https://www.cardland.se/marvel/2026-topps-chrome-marvel-comics-value-box"),
+]
+REAL_SNAPSHOT += OCTOBER_04_EXPANSION
+
 
 def seed_cardland_inventory():
     """Stage category listings for manual review; listing stock is untrusted."""
@@ -2673,7 +2681,23 @@ CHASE_PROFILES["cc-2026-topps-chrome-tennis-pack"].update({
 CHASE_PROFILES["cc-2026-topps-chrome-tennis-pack"]["tiers"]["everyday"] = {"label":"Löst hobby-pack", "score":45, "items":["8 Chrome-kort", "Ingen autografgaranti"]}
 CHASE_PROFILES["cc-2026-topps-chrome-tennis-pack"]["tiers"]["good"]["score"] = 70
 
+CHASE_PROFILES["cl-2026-topps-marvel-comics-chrome-value"] = {
+    "source_name":"Topps, 2026 Marvel Comics Chrome official checklist and Value odds",
+    "source_url":"https://cdn.shopify.com/s/files/1/0662/9749/5709/files/26MACC_HobbyValueMega_Checklist.pdf?v=1780349890",
+    "key_names":["Spider-Man", "Doctor Doom", "Wolverine", "Frank Miller", "Kevin Eastman"],
+    "headline_chases":[
+        {"card":"Frank Miller Authentic Marvel Comic Book Artist Autograph AA-FM", "tier":"JACKPOT", "odds":"Autograffamiljen 1:2 992 Value-pack; Miller-specifikt odds saknas", "why":"Frank Miller finns på Topps officiella autografchecklista; ingen autograf garanteras."},
+        {"card":"Spider-Man Fanfare FF-39", "tier":"MYCKET BRA", "odds":"Fanfare-familjen 1:32 Value-pack; Spider-Man-specifikt odds saknas", "why":"Namngiven insert i Topps checklista med publicerade Value-odds för familjen."},
+        {"card":"Doctor Doom Fanfare FF-13", "tier":"MYCKET BRA", "odds":"Fanfare-familjen 1:32 Value-pack; Doctor Doom-specifikt odds saknas", "why":"Namngiven insert i samma familj; 1:32 gäller inte detta enskilda kort."},
+        {"card":"Wolverine Marvel Icons MI-20", "tier":"BRA", "odds":"Marvel Icons-familjen 1:32 Value-pack; Wolverine-specifikt odds saknas", "why":"Namngiven Marvel Icons-insert i Topps checklista."},
+    ],
+    "why_exciting":["32 kort i åtta Value-pack ger flera försök på numrerade paralleller och namngivna inserts.", "Topps har publicerat odds för just Value-formatet, inklusive äkta artistautografer."],
+    "tiers":{"everyday":{"label":"Value-innehåll", "score":58, "items":["8 pack med 4 kort", "RayWave Refractor-familjen 1:4 pack"]}, "good":{"label":"Namngivna inserts", "score":67, "items":["Spider-Man Fanfare", "Wolverine Marvel Icons"]}, "big":{"label":"Numrerad parallel", "score":77, "items":["Spider-Man eller Doctor Doom Refractor"]}, "jackpot":{"label":"Äkta artistautograf", "score":85, "items":["Frank Miller autograf möjlig, mycket sällsynt"]}},
+    "caveat":"Alla angivna odds gäller kortfamiljer per Value-pack enligt Topps Value CEE/EA/SE-kolumner, inte en namngiven karaktär eller signer. Se https://cdn.shopify.com/s/files/1/0662/9749/5709/files/2026_Marvel_Comics_Chrome_Odds.pdf?v=1780349881. Sketch Cards och Artist Originals är hobbyexklusiva i oddstabellen. Facsimile-signaturer är tryckta, inte äkta autografer. Inga toppkort, autografer eller ekonomisk avkastning garanteras."
+}
+
 OCTOBER_03_NEW_PROFILE_SLUGS = {"dl-mtg-tmnt-play-pack", "hk-mtg-tmnt-play-display", "dl-mtg-tmnt-collector-pack", "cc-2026-topps-chrome-tennis-pack"}
+OCTOBER_04_NEW_PROFILE_SLUGS = {"cl-2026-topps-marvel-comics-chrome-value"}
 
 def seed_chase_profiles():
     db=SessionLocal()
@@ -2705,7 +2729,8 @@ def seed_chase_profiles():
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
             row.verified_at=(
-                OCTOBER_03_OBSERVED_AT if slug in OCTOBER_03_NEW_PROFILE_SLUGS
+                OCTOBER_04_OBSERVED_AT if slug in OCTOBER_04_NEW_PROFILE_SLUGS
+                else OCTOBER_03_OBSERVED_AT if slug in OCTOBER_03_NEW_PROFILE_SLUGS
                 else SEPTEMBER_30_OBSERVED_AT if slug in september_30_slugs
                 else ARCADE_DREAMS_SECOND_SCAN_AT if slug in arcade_second_slugs
                 else SEPTEMBER_29_SECOND_SCAN_AT if slug in september_29_second_slugs
