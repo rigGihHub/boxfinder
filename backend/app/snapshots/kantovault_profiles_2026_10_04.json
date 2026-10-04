@@ -1,0 +1,4139 @@
+{
+  "kv-pokemon-scarlet-violet-prismatic-evolutions-elite-trainer-box": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-scarlet-violet-prismatic-evolutions-elite-trainer-box",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:58:23.071561+00:00",
+    "key_names": [
+      "Eevee",
+      "Umbreon",
+      "Sylveon",
+      "Espeon",
+      "Leafeon"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Eevee (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Umbreon (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Sylveon (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Espeon (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Leafeon (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [
+      {
+        "format": "elite trainer box",
+        "family": "Eevee full-art foil-promokort",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Eevee",
+          "Umbreon",
+          "Sylveon",
+          "Espeon",
+          "Leafeon"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-scarlet-violet-journey-together-booster-bundle": {
+    "source_name": "The Pokémon Company official Scarlet & Violet—Journey Together expansion page",
+    "source_url": "https://www.pokemon.com/us/pokemon-tcg/scarlet-violet-journey-together",
+    "key_names": [
+      "N's Zoroark ex",
+      "Lillie's Clefairy ex",
+      "Iono's Bellibolt ex",
+      "Hop's Zacian ex"
+    ],
+    "headline_chases": [
+      {
+        "card": "N's Zoroark ex",
+        "tier": "JACKPOT",
+        "odds": "Finns i setet; kortspecifikt packodds ej publicerat",
+        "why": "Ett av expansionens fyra officiellt framlyfta Trainer's Pokémon ex."
+      },
+      {
+        "card": "Lillie's Clefairy ex",
+        "tier": "MONSTER",
+        "odds": "Finns i setet; kortspecifikt packodds ej publicerat",
+        "why": "Namngiven Lillie-chase i Trainer's Pokémon-temat."
+      },
+      {
+        "card": "Iono's Bellibolt ex",
+        "tier": "MYCKET BRA",
+        "odds": "Finns i setet; kortspecifikt packodds ej publicerat",
+        "why": "Officiellt framlyft Trainer's Pokémon ex."
+      },
+      {
+        "card": "Hop's Zacian ex",
+        "tier": "MYCKET BRA",
+        "odds": "Finns i setet; kortspecifikt packodds ej publicerat",
+        "why": "Officiellt framlyft legendariskt Trainer's Pokémon ex."
+      }
+    ],
+    "why_exciting": [
+      "Kortpoolen gäller samma engelska expansion. Förpackningens fasta promokort visas separat."
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Ett löst boosterpaket",
+        "score": 47,
+        "items": [
+          "10 kort",
+          "1 Basic Energy"
+        ]
+      },
+      "good": {
+        "label": "Bra träff",
+        "score": 64,
+        "items": [
+          "Trainer's Pokémon ex eller illustration rare"
+        ]
+      },
+      "big": {
+        "label": "Riktigt bra",
+        "score": 75,
+        "items": [
+          "namngiven specialillustration"
+        ]
+      },
+      "jackpot": {
+        "label": "Setets toppnamn",
+        "score": 87,
+        "items": [
+          "N eller Lillie i hög rarity"
+        ]
+      }
+    },
+    "caveat": "Detta är ett löst engelskt boosterpaket. Inga specifika Trainer's Pokémon, specialillustrationer eller ex-kort är garanterade, och officiella kortspecifika packodds saknas.",
+    "format_hits": [],
+    "verified_at": "2026-09-25T16:36:00",
+    "confidence": 85
+  },
+  "kv-pokemon-scarlet-violet-paradox-rift-sleeved-booster-pack": {
+    "source_name": "Official Pokémon Paradox Rift card list",
+    "source_url": "https://assets.pokemon.com/assets/cms2/pdf/trading-card-game/checklist/par_web_cardlist_en.pdf",
+    "key_names": [
+      "Roaring Moon ex #251",
+      "Iron Valiant ex #249",
+      "Groudon #199",
+      "Garchomp ex #245",
+      "Professor Sada's Vitality #256"
+    ],
+    "headline_chases": [
+      {
+        "card": "Groudon #199 / Illustration Rare",
+        "tier": "BRA",
+        "odds": "Finns i Paradox Rift; officiella packodds ej publicerade",
+        "why": "Namngiven Illustration Rare med stark samlarefterfrågan."
+      },
+      {
+        "card": "Garchomp ex #245 / Special Illustration Rare",
+        "tier": "MYCKET BRA",
+        "odds": "Finns i Paradox Rift; officiella packodds ej publicerade",
+        "why": "Special Illustration Rare av en populär Pokémon."
+      },
+      {
+        "card": "Iron Valiant ex #249 / Special Illustration Rare",
+        "tier": "MONSTER",
+        "odds": "Finns i Paradox Rift; officiella packodds ej publicerade",
+        "why": "En av setets två centrala Paradox-chaser."
+      },
+      {
+        "card": "Roaring Moon ex #251 / Special Illustration Rare",
+        "tier": "JACKPOT",
+        "odds": "Finns i Paradox Rift; officiella packodds ej publicerade",
+        "why": "Setets tydligaste namngivna chase."
+      },
+      {
+        "card": "Roaring Moon ex #262 / Hyper Rare",
+        "tier": "MONSTER",
+        "odds": "Finns i Paradox Rift; officiella packodds ej publicerade",
+        "why": "Guldversionen av huvudkaraktären."
+      }
+    ],
+    "why_exciting": [
+      "Kortpoolen gäller samma engelska expansion. Förpackningens fasta promokort visas separat."
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Vanligt men intressant",
+        "score": 78,
+        "items": [
+          "18 boosterpaket"
+        ]
+      },
+      "good": {
+        "label": "Bra träff",
+        "score": 72,
+        "items": [
+          "Groudon #199",
+          "Garchomp ex #245"
+        ]
+      },
+      "big": {
+        "label": "Riktigt bra",
+        "score": 78,
+        "items": [
+          "Iron Valiant ex #249",
+          "Roaring Moon ex #262"
+        ]
+      },
+      "jackpot": {
+        "label": "Monsterhit",
+        "score": 84,
+        "items": [
+          "Roaring Moon ex #251 SIR"
+        ]
+      }
+    },
+    "caveat": "Kortens närvaro verifieras i den officiella checklistan. Pokémon publicerar inte kortspecifika packodds, så BoxFinder visar inga uppskattade odds som fakta.",
+    "format_hits": [],
+    "verified_at": "2026-09-12T19:30:00",
+    "confidence": 85
+  },
+  "kv-pokemon-scarlet-violet-prismatic-evolutions-booster-pack": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-scarlet-violet-prismatic-evolutions-booster-pack",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:58:22.969351+00:00",
+    "key_names": [
+      "Eevee",
+      "Umbreon",
+      "Sylveon",
+      "Espeon",
+      "Leafeon"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Eevee (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Umbreon (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Sylveon (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Espeon (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Leafeon (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Eevee",
+          "Umbreon",
+          "Sylveon",
+          "Espeon",
+          "Leafeon"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-rebel-clash-3-pack-blister-54721313800533": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-rebel-clash-3-pack-blister",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:58:31.821529+00:00",
+    "key_names": [
+      "Rayquaza"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Rayquaza (ingående promokort)",
+        "odds": "Ingår i vald blistervariant enligt butiken"
+      }
+    ],
+    "format_hits": [
+      {
+        "format": "blister",
+        "family": "Rayquaza promokort",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Rayquaza promokort"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Rayquaza promokort"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": [
+          "Rayquaza promokort"
+        ]
+      },
+      "jackpot": {
+        "score": 0,
+        "items": [
+          "Rayquaza promokort"
+        ]
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-rebel-clash-3-pack-blister-54721313833301": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-rebel-clash-3-pack-blister",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:58:31.821529+00:00",
+    "key_names": [
+      "Duraludon"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Duraludon (ingående promokort)",
+        "odds": "Ingår i vald blistervariant enligt butiken"
+      }
+    ],
+    "format_hits": [
+      {
+        "format": "blister",
+        "family": "Duraludon promokort",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Duraludon promokort"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Duraludon promokort"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": [
+          "Duraludon promokort"
+        ]
+      },
+      "jackpot": {
+        "score": 0,
+        "items": [
+          "Duraludon promokort"
+        ]
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-prismatic-evolutions-tech-sticker-collection-54721262387541": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-prismatic-evolutions-tech-sticker-collection",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:58:31.884925+00:00",
+    "key_names": [
+      "Eevee",
+      "Umbreon",
+      "Sylveon",
+      "Espeon",
+      "Leafeon"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Eevee (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Umbreon (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Sylveon (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Espeon (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Leafeon (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [
+      {
+        "format": "collection box",
+        "family": "Leafeon promokort",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Eevee",
+          "Umbreon",
+          "Sylveon",
+          "Espeon",
+          "Leafeon"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-ascended-heroes-tech-sticker-collection-54721251344725": {
+    "source_name": "The Pokémon Company official expansion card database and product contents",
+    "source_url": "https://www.pokemon.com/us/pokemon-tcg/mega-evolution-ascended-heroes",
+    "key_names": [
+      "Mega Dragonite ex #295/217",
+      "Chikorita promo",
+      "Tepig promo",
+      "Totodile promo"
+    ],
+    "headline_chases": [
+      {
+        "card": "Mega Dragonite ex #295/217 Mega Hyper Rare",
+        "tier": "JACKPOT",
+        "odds": "Kortspecifikt packodds ej publicerat",
+        "why": "Verifierat Mega Hyper Rare i expansionen."
+      },
+      {
+        "card": "Mega Dragonite ex",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifikt packodds ej publicerat",
+        "why": "Officiellt framlyft huvud-Pokémon i setet."
+      }
+    ],
+    "why_exciting": [
+      "Kortpoolen gäller samma engelska expansion. Förpackningens fasta promokort visas separat."
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Produktformatet",
+        "score": 65,
+        "items": [
+          "5 boosterpaket",
+          "Tre First Partners-promos och pin"
+        ]
+      },
+      "good": {
+        "label": "Bra träff",
+        "score": 62,
+        "items": [
+          "Mega Evolution ex eller illustration rare"
+        ]
+      },
+      "big": {
+        "label": "Riktigt bra",
+        "score": 77,
+        "items": [
+          "Mega Dragonite ex i hög rarity"
+        ]
+      },
+      "jackpot": {
+        "label": "Setets toppspår",
+        "score": 88,
+        "items": [
+          "Mega Dragonite ex Mega Hyper Rare"
+        ]
+      }
+    },
+    "caveat": "Tre promokort ingår; ingen boosterträff eller Mega Dragonite-variant garanteras. Pokémon publicerar inga kortspecifika packodds.",
+    "format_hits": [
+      {
+        "format": "collection box",
+        "family": "Charmander promokort",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ],
+    "verified_at": "2026-09-27T05:17:00",
+    "confidence": 85
+  },
+  "kv-pokemon-ascended-heroes-tech-sticker-collection-54721251377493": {
+    "source_name": "The Pokémon Company official expansion card database and product contents",
+    "source_url": "https://www.pokemon.com/us/pokemon-tcg/mega-evolution-ascended-heroes",
+    "key_names": [
+      "Mega Dragonite ex #295/217",
+      "Chikorita promo",
+      "Tepig promo",
+      "Totodile promo"
+    ],
+    "headline_chases": [
+      {
+        "card": "Mega Dragonite ex #295/217 Mega Hyper Rare",
+        "tier": "JACKPOT",
+        "odds": "Kortspecifikt packodds ej publicerat",
+        "why": "Verifierat Mega Hyper Rare i expansionen."
+      },
+      {
+        "card": "Mega Dragonite ex",
+        "tier": "MYCKET BRA",
+        "odds": "Kortspecifikt packodds ej publicerat",
+        "why": "Officiellt framlyft huvud-Pokémon i setet."
+      }
+    ],
+    "why_exciting": [
+      "Kortpoolen gäller samma engelska expansion. Förpackningens fasta promokort visas separat."
+    ],
+    "tiers": {
+      "everyday": {
+        "label": "Produktformatet",
+        "score": 65,
+        "items": [
+          "5 boosterpaket",
+          "Tre First Partners-promos och pin"
+        ]
+      },
+      "good": {
+        "label": "Bra träff",
+        "score": 62,
+        "items": [
+          "Mega Evolution ex eller illustration rare"
+        ]
+      },
+      "big": {
+        "label": "Riktigt bra",
+        "score": 77,
+        "items": [
+          "Mega Dragonite ex i hög rarity"
+        ]
+      },
+      "jackpot": {
+        "label": "Setets toppspår",
+        "score": 88,
+        "items": [
+          "Mega Dragonite ex Mega Hyper Rare"
+        ]
+      }
+    },
+    "caveat": "Tre promokort ingår; ingen boosterträff eller Mega Dragonite-variant garanteras. Pokémon publicerar inga kortspecifika packodds.",
+    "format_hits": [
+      {
+        "format": "collection box",
+        "family": "Gastly promokort",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ],
+    "verified_at": "2026-09-27T05:17:00",
+    "confidence": 85
+  },
+  "kv-pokemon-mega-evolution-perfect-order-booster-bundle": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-mega-evolution-perfect-order-booster-bundle",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:58:31.912630+00:00",
+    "key_names": [
+      "Mega Zygarde ex",
+      "Mega Clefable ex",
+      "Mega Starmie ex",
+      "Meowth ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Mega Zygarde ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Mega Clefable ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Mega Starmie ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Meowth ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Mega Zygarde ex",
+          "Mega Clefable ex",
+          "Mega Starmie ex",
+          "Meowth ex"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-towering-perfection-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.pokemon-card.com/products/s/s7.html",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Duraludon V",
+      "Duraludon VMAX"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Duraludon V (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Duraludon VMAX (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Duraludon V",
+          "Duraludon VMAX"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-towering-perfection-booster-box-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.pokemon-card.com/products/s/s7.html",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Duraludon V",
+      "Duraludon VMAX"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Duraludon V (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Duraludon VMAX (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Duraludon V",
+          "Duraludon VMAX"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-terastal-grand-gathering-eevee-friends-coin-set-54556909896021": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-terastal-grand-gathering-eevee-friends-coin-set",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:58:47.272049+00:00",
+    "key_names": [
+      "Eevee",
+      "Eeveelutions"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Eevee (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Eeveelutions (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Eevee",
+          "Eeveelutions"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-terastal-grand-gathering-eevee-friends-coin-set-54556909928789": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-terastal-grand-gathering-eevee-friends-coin-set",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:58:47.272049+00:00",
+    "key_names": [
+      "Eevee",
+      "Eeveelutions"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Eevee (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Eeveelutions (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Eevee",
+          "Eeveelutions"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-terastal-grand-gathering-eevee-friends-coin-set-54556910059861": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-terastal-grand-gathering-eevee-friends-coin-set",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:58:47.272049+00:00",
+    "key_names": [
+      "Eevee",
+      "Eeveelutions"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Eevee (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Eeveelutions (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Eevee",
+          "Eeveelutions"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-terastal-grand-gathering-eevee-friends-coin-set-54556910125397": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-terastal-grand-gathering-eevee-friends-coin-set",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:58:47.272049+00:00",
+    "key_names": [
+      "Eevee",
+      "Eeveelutions"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Eevee (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Eeveelutions (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Eevee",
+          "Eeveelutions"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-gem-pack-vol-6-booster-pack-kinesisk": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-gem-pack-vol-6-booster-pack-kinesisk",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:58:47.237464+00:00",
+    "key_names": [
+      "Applin"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Applin (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Applin"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-gem-pack-vol-6-booster-box-kinesisk": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-gem-pack-vol-6-booster-box-kinesisk",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:58:54.953251+00:00",
+    "key_names": [
+      "Applin"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Applin (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Applin"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-chasing-glory-together-slim-booster-pack-kinesisk": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-chasing-glory-together-slim-booster-pack-kinesisk",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:58:54.977621+00:00",
+    "key_names": [
+      "Team Rocket",
+      "Brook"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Team Rocket (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Brook (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Team Rocket",
+          "Brook"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-chasing-glory-together-slim-booster-box-kinesisk": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-chasing-glory-together-slim-booster-box-kinesisk",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:58:55.042057+00:00",
+    "key_names": [
+      "Team Rocket",
+      "Brook"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Team Rocket (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Brook (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Team Rocket",
+          "Brook"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-go-promo-pack-japansk": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-go-promo-pack-japansk",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:58:55.004712+00:00",
+    "key_names": [
+      "Bulbasaur #287/S-P",
+      "Alolan Exeggutor V #288/S-P",
+      "Charmander #289/S-P",
+      "Squirtle #290/S-P",
+      "Melmetal V #291/S-P",
+      "Dragonite V #292/S-P",
+      "Dragonite VSTAR #293/S-P"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Bulbasaur #287/S-P (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Alolan Exeggutor V #288/S-P (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Charmander #289/S-P (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Squirtle #290/S-P (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Melmetal V #291/S-P (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Dragonite V #292/S-P (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Dragonite VSTAR #293/S-P (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Bulbasaur #287/S-P",
+          "Alolan Exeggutor V #288/S-P",
+          "Charmander #289/S-P",
+          "Squirtle #290/S-P",
+          "Melmetal V #291/S-P",
+          "Dragonite V #292/S-P",
+          "Dragonite VSTAR #293/S-P"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-terastal-grand-gathering-eeveelution-card-display-keychain-gift-box": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-terastal-grand-gathering-eeveelution-card-display-keychain-gift-box",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:59:10.883070+00:00",
+    "key_names": [
+      "Eevee",
+      "Eeveelutions"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Eevee (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Eeveelutions (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Eevee",
+          "Eeveelutions"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-blade-awakening-slim-booster-pack-kinesisk": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-blade-awakening-slim-booster-pack-kinesisk",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:59:10.853820+00:00",
+    "key_names": [
+      "Greninja ex",
+      "Raging Bolt ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Greninja ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Raging Bolt ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Greninja ex",
+          "Raging Bolt ex"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-blade-awakening-slim-booster-box-kinesisk": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-blade-awakening-slim-booster-box-kinesisk",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:59:24.118899+00:00",
+    "key_names": [
+      "Greninja ex",
+      "Raging Bolt ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Greninja ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Raging Bolt ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Greninja ex",
+          "Raging Bolt ex"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-dark-crystal-blaze-slim-booster-pack-kinesisk": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-dark-crystal-blaze-slim-booster-pack-kinesisk",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:59:24.224694+00:00",
+    "key_names": [
+      "Charizard ex",
+      "Altaria ex",
+      "Larry"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Charizard ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Altaria ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Larry (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Charizard ex",
+          "Altaria ex",
+          "Larry"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-dark-crystal-blaze-slim-booster-box-kinesisk": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-dark-crystal-blaze-slim-booster-box-kinesisk",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:59:24.203667+00:00",
+    "key_names": [
+      "Charizard ex",
+      "Altaria ex",
+      "Larry"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Charizard ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Altaria ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Larry (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Charizard ex",
+          "Altaria ex",
+          "Larry"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-gem-pack-vol-5-booster-pack-kinesisk": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-gem-pack-vol-5-booster-pack-kinesisk",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:59:24.148935+00:00",
+    "key_names": [
+      "Captain Pikachu"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Captain Pikachu (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Captain Pikachu"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-gem-pack-vol-5-booster-box-kinesisk": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-gem-pack-vol-5-booster-box-kinesisk",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:59:32.967831+00:00",
+    "key_names": [
+      "Captain Pikachu"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Captain Pikachu (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Captain Pikachu"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-30th-anniversary-first-partner-illustration-collection-box-series-2-kinesisk": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-30th-anniversary-first-partner-illustration-collection-box-series-2-kinesisk",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:59:33.023262+00:00",
+    "key_names": [
+      "Johto-, Unova- och Galar-startpokémon"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Johto-, Unova- och Galar-startpokémon (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Johto-, Unova- och Galar-startpokémon"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-abyss-eye-booster-pack-japansk": {
+    "source_name": "Pokémon Card Game Japan official Abyss Eye product page and card list",
+    "source_url": "https://www.pokemon-card.com/ex/m5/",
+    "key_names": [
+      "Mega Darkrai ex",
+      "Mega Zeraora ex",
+      "Mega Chandelure ex SAR",
+      "Muku SAR",
+      "Malamar",
+      "Zarude"
+    ],
+    "headline_chases": [
+      {
+        "card": "Mega Chandelure ex SAR",
+        "tier": "JACKPOT",
+        "odds": "Kort i setet; individuella packodds är inte verifierade",
+        "why": "En av de två SAR-träffar som lyfts på Pokémons officiella setpresentation."
+      },
+      {
+        "card": "Muku SAR",
+        "tier": "MONSTER",
+        "odds": "Kort i setet; individuella packodds är inte verifierade",
+        "why": "Den andra officiellt namngivna SAR-träffen i setpresentationen."
+      },
+      {
+        "card": "Mega Darkrai ex",
+        "tier": "MYCKET BRA",
+        "odds": "Kort i setet; individuella packodds är inte verifierade",
+        "why": "Setets huvud-Pokémon och namngivna Mega Evolution ex."
+      },
+      {
+        "card": "Mega Zeraora ex",
+        "tier": "MYCKET BRA",
+        "odds": "Kort i setet; individuella packodds är inte verifierade",
+        "why": "Officiellt framlyft Mega Evolution ex i checklistan."
+      }
+    ],
+    "why_exciting": [
+      "Samma japanska kortpool; boxens eventuella innehållsgarantier gäller inte löspaket."
+    ],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur den japanska expansionen"
+        ]
+      },
+      "good": {
+        "label": "Bra träff",
+        "score": 70,
+        "items": [
+          "Mega Evolution ex eller illustration rare"
+        ]
+      },
+      "big": {
+        "label": "Riktigt bra",
+        "score": 82,
+        "items": [
+          "namngiven hög rarity"
+        ]
+      },
+      "jackpot": {
+        "label": "Setets toppspår",
+        "score": 91,
+        "items": [
+          "Mega Chandelure ex SAR eller Muku SAR"
+        ]
+      }
+    },
+    "caveat": "Pokémon anger 5 slumpmässiga kort per pack men publicerar inga kortspecifika pack- eller boxodds. En hel display garanterar inte ett visst SAR-kort.",
+    "format_hits": [],
+    "verified_at": "2026-09-25T16:36:00",
+    "confidence": 85
+  },
+  "kv-pokemon-plush-toy-card-display-gift-box": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-plush-toy-card-display-gift-box",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:59:47.006472+00:00",
+    "key_names": [
+      "Pikachu",
+      "Raichu",
+      "Plusle",
+      "Minun"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Pikachu (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Raichu (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Plusle (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Minun (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Pikachu",
+          "Raichu",
+          "Plusle",
+          "Minun"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-gem-pack-vol-4-booster-pack-kinesisk": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-gem-pack-vol-4-booster-pack-kinesisk",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:59:47.067715+00:00",
+    "key_names": [
+      "Ponyta",
+      "Eevee"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Ponyta (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Eevee (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Ponyta",
+          "Eevee"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-gem-pack-vol-4-booster-box-kinesisk": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-gem-pack-vol-4-booster-box-kinesisk",
+    "confidence": 70,
+    "verified_at": "2026-10-04T17:59:52.619256+00:00",
+    "key_names": [
+      "Ponyta",
+      "Eevee"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Ponyta (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Eevee (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Ponyta",
+          "Eevee"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-one-piece-eb-01-memorial-collection-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.onepiece-cardgame.com/products/boosters/eb01.php",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "Secret Rare-kort i One Piece [EB-01]: Memorial Collection",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "MYCKET BRA",
+        "card": "Super Rare-kort i One Piece [EB-01]: Memorial Collection",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Super Rare",
+          "Secret Rare"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "Super Rare / Secret Rare"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-scarlet-violet-prismatic-evolutions-booster-bundle": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-scarlet-violet-prismatic-evolutions-booster-bundle",
+    "confidence": 70,
+    "verified_at": "2026-10-04T18:00:01.576224+00:00",
+    "key_names": [
+      "Eevee",
+      "Umbreon",
+      "Sylveon",
+      "Espeon",
+      "Leafeon"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Eevee (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Umbreon (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Sylveon (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Espeon (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Leafeon (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Eevee",
+          "Umbreon",
+          "Sylveon",
+          "Espeon",
+          "Leafeon"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pokemon-scarlet-violet-151-booster-pack": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-scarlet-violet-151-booster-pack",
+    "confidence": 70,
+    "verified_at": "2026-10-04T18:00:09.586395+00:00",
+    "key_names": [
+      "Bulbasaur",
+      "Charmander",
+      "Squirtle",
+      "Charizard"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Bulbasaur (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Charmander (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Squirtle (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Charizard (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Bulbasaur",
+          "Charmander",
+          "Squirtle",
+          "Charizard"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "cc-one-piece-op15-jp-pack": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.onepiece-cardgame.com/products/boosters/op15.php",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare",
+      "Special-kort"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "Secret Rare-kort i Adventure on KAMI's Island OP-15",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "MYCKET BRA",
+        "card": "Super Rare-kort i Adventure on KAMI's Island OP-15",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Super Rare",
+          "Secret Rare",
+          "Special-kort"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "Super Rare / Secret Rare"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "cc-pokemon-nihil-zero-jp-display": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pokemon-nihil-zero-booster-box-japansk",
+    "confidence": 70,
+    "verified_at": "2026-10-04T18:00:09.505388+00:00",
+    "key_names": [
+      "Mega Zygarde ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Mega Zygarde ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Mega Zygarde ex"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-one-piece-op-02-paramount-war-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.onepiece-cardgame.com/products/boosters/op02.php",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "Secret Rare-kort i One Piece [OP-02]: Paramount War",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "MYCKET BRA",
+        "card": "Super Rare-kort i One Piece [OP-02]: Paramount War",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Super Rare",
+          "Secret Rare"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "Super Rare / Secret Rare"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-one-piece-op-03-pillars-of-strength-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.onepiece-cardgame.com/products/boosters/op03.php",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare",
+      "Special-kort"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "Secret Rare-kort i One Piece [OP-03]: Pillars of Strength",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "MYCKET BRA",
+        "card": "Super Rare-kort i One Piece [OP-03]: Pillars of Strength",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Super Rare",
+          "Secret Rare",
+          "Special-kort"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "Super Rare / Secret Rare"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-one-piece-op-04-kingdoms-of-intrigue-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.onepiece-cardgame.com/products/boosters/op04.php",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare",
+      "Special-kort"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "Secret Rare-kort i One Piece [OP-04]: Kingdoms of Intrigue",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "MYCKET BRA",
+        "card": "Super Rare-kort i One Piece [OP-04]: Kingdoms of Intrigue",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Super Rare",
+          "Secret Rare",
+          "Special-kort"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "Super Rare / Secret Rare"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-one-piece-prb-02-the-best-vol-2-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.onepiece-cardgame.com/products/boosters/prb02.php",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare",
+      "Special-kort"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "Secret Rare-kort i One Piece [PRB-02]: The Best Vol.2",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "MYCKET BRA",
+        "card": "Super Rare-kort i One Piece [PRB-02]: The Best Vol.2",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Super Rare",
+          "Secret Rare",
+          "Special-kort"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "Super Rare / Secret Rare"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-one-piece-prb-01-the-best-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.onepiece-cardgame.com/products/boosters/prb01.php",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "Secret Rare-kort i One Piece [PRB-01]: The Best",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "MYCKET BRA",
+        "card": "Super Rare-kort i One Piece [PRB-01]: The Best",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Super Rare",
+          "Secret Rare"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "Super Rare / Secret Rare"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-one-piece-op-06-wings-of-the-captain-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.onepiece-cardgame.com/products/boosters/op06.php",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare",
+      "Special-kort"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "Secret Rare-kort i One Piece [OP-06]: Wings of the Captain",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "MYCKET BRA",
+        "card": "Super Rare-kort i One Piece [OP-06]: Wings of the Captain",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Super Rare",
+          "Secret Rare",
+          "Special-kort"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "Super Rare / Secret Rare"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-one-piece-op-07-500-years-in-the-future-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.onepiece-cardgame.com/products/boosters/op07.php",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare",
+      "Special-kort"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "Secret Rare-kort i One Piece [OP-07]: 500 Years in the Future",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "MYCKET BRA",
+        "card": "Super Rare-kort i One Piece [OP-07]: 500 Years in the Future",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Super Rare",
+          "Secret Rare",
+          "Special-kort"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "Super Rare / Secret Rare"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "cc-one-piece-eb04-jp-display": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.onepiece-cardgame.com/products/boosters/eb04.php",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare",
+      "Special-kort"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "Secret Rare-kort i Egghead Crisis EB-04",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "MYCKET BRA",
+        "card": "Super Rare-kort i Egghead Crisis EB-04",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Super Rare",
+          "Secret Rare",
+          "Special-kort"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "Super Rare / Secret Rare"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-mega-dream-ex-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.pokemon-card.com/ex/m2a/index.html",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Mega Dragonite ex",
+      "Mega Gengar ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "AR / SAR – kortfamiljer i setet",
+        "odds": "Setinnehåll; individuella packodds är inte publicerade här"
+      },
+      {
+        "tier": "BRA",
+        "card": "Mega Dragonite ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Mega Gengar ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Mega Dragonite ex",
+          "Mega Gengar ex"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "AR / SAR"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-mega-dream-ex-booster-box-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.pokemon-card.com/ex/m2a/index.html",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Mega Dragonite ex",
+      "Mega Gengar ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "AR / SAR – kortfamiljer i setet",
+        "odds": "Setinnehåll; individuella packodds är inte publicerade här"
+      },
+      {
+        "tier": "BRA",
+        "card": "Mega Dragonite ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Mega Gengar ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Mega Dragonite ex",
+          "Mega Gengar ex"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "AR / SAR"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-one-piece-op-04-kingdoms-of-intrigue-booster-box-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.onepiece-cardgame.com/products/boosters/op04.php",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare",
+      "Special-kort"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "Secret Rare-kort i One Piece [OP-04]: Kingdoms of Intrigue",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "MYCKET BRA",
+        "card": "Super Rare-kort i One Piece [OP-04]: Kingdoms of Intrigue",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Super Rare",
+          "Secret Rare",
+          "Special-kort"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "Super Rare / Secret Rare"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-one-piece-op-02-paramount-war-booster-box-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.onepiece-cardgame.com/products/boosters/op02.php",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "Secret Rare-kort i One Piece [OP-02]: Paramount War",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "MYCKET BRA",
+        "card": "Super Rare-kort i One Piece [OP-02]: Paramount War",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Super Rare",
+          "Secret Rare"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "Super Rare / Secret Rare"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-one-piece-op-13-carrying-on-his-will-booster-box-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.onepiece-cardgame.com/products/boosters/op13.php",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare",
+      "Special-kort"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "Secret Rare-kort i One Piece [OP-13]: Carrying on His Will",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "MYCKET BRA",
+        "card": "Super Rare-kort i One Piece [OP-13]: Carrying on His Will",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Super Rare",
+          "Secret Rare",
+          "Special-kort"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "Super Rare / Secret Rare"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-one-piece-op-07-500-years-in-the-future-booster-box-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.onepiece-cardgame.com/products/boosters/op07.php",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare",
+      "Special-kort"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "Secret Rare-kort i One Piece [OP-07]: 500 Years in the Future",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "MYCKET BRA",
+        "card": "Super Rare-kort i One Piece [OP-07]: 500 Years in the Future",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Super Rare",
+          "Secret Rare",
+          "Special-kort"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "Super Rare / Secret Rare"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-inferno-x-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.pokemon-card.com/ex/m2/index.html",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Mega Charizard X ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Mega Charizard X ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Mega Charizard X ex"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-one-piece-prb-02-the-best-vol-2-booster-box-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.onepiece-cardgame.com/products/boosters/prb02.php",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare",
+      "Special-kort"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "Secret Rare-kort i One Piece [PRB-02]: The Best Vol.2",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "MYCKET BRA",
+        "card": "Super Rare-kort i One Piece [PRB-02]: The Best Vol.2",
+        "odds": "Kortfamilj i japanska setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Super Rare",
+          "Secret Rare",
+          "Special-kort"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "Super Rare / Secret Rare"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-pikachu-020-m-p-mcdonalds-promo-pack-2025": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/pikachu-020-m-p-mcdonalds-promo-pack-2025",
+    "confidence": 70,
+    "verified_at": "2026-10-04T18:00:56.254181+00:00",
+    "key_names": [
+      "Pikachu #020/M-P",
+      "Sprigatito",
+      "Fuecoco",
+      "Quaxly",
+      "Ralts",
+      "Riolu"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Pikachu #020/M-P (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Sprigatito (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Fuecoco (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Quaxly (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Ralts (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Riolu (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [
+      {
+        "format": "single pack",
+        "family": "Pikachu #020/M-P promokort",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Pikachu #020/M-P",
+          "Sprigatito",
+          "Fuecoco",
+          "Quaxly",
+          "Ralts",
+          "Riolu"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-mega-brave-booster-pack-japansk": {
+    "source_name": "The Pokémon Company, japansk produkt och kortöversikt",
+    "source_url": "https://www.pokemon-card.com/ex/m1/index.html",
+    "key_names": [
+      "Mega Lucario ex",
+      "Mega Venusaur ex",
+      "Lillie's Determination"
+    ],
+    "headline_chases": [
+      {
+        "card": "Mega Lucario ex",
+        "tier": "MYCKET BRA",
+        "odds": "Kort i setet; individuella packodds är inte verifierade",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      },
+      {
+        "card": "Mega Venusaur ex",
+        "tier": "MYCKET BRA",
+        "odds": "Kort i setet; individuella packodds är inte verifierade",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      },
+      {
+        "card": "Lillie's Determination",
+        "tier": "MYCKET BRA",
+        "odds": "Kort i setet; individuella packodds är inte verifierade",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur den japanska expansionen"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Mega Lucario ex",
+          "Mega Venusaur ex"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Mega Lucario ex",
+          "Mega Venusaur ex"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Mega Lucario ex"
+        ]
+      }
+    },
+    "why_exciting": [
+      "Samma japanska kortpool; boxens eventuella innehållsgarantier gäller inte löspaket."
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Japanska kort. Engelska setodds används inte. Ingen SAR, SR eller viss Pokémon garanteras; officiell boxgaranti saknas.",
+    "format_hits": [],
+    "verified_at": "2026-10-04T06:59:00",
+    "confidence": 85
+  },
+  "kv-mega-symphonia-booster-pack-japansk": {
+    "source_name": "The Pokémon Company, japansk produkt och kortöversikt",
+    "source_url": "https://www.pokemon-card.com/ex/m1/index.html",
+    "key_names": [
+      "Mega Gardevoir ex",
+      "Mega Latias ex",
+      "Wally's Compassion"
+    ],
+    "headline_chases": [
+      {
+        "card": "Mega Gardevoir ex",
+        "tier": "MYCKET BRA",
+        "odds": "Kort i setet; individuella packodds är inte verifierade",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      },
+      {
+        "card": "Mega Latias ex",
+        "tier": "MYCKET BRA",
+        "odds": "Kort i setet; individuella packodds är inte verifierade",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      },
+      {
+        "card": "Wally's Compassion",
+        "tier": "MYCKET BRA",
+        "odds": "Kort i setet; individuella packodds är inte verifierade",
+        "why": "Kortet bekräftas för detta japanska set; engelsk översättning av namnet visas."
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur den japanska expansionen"
+        ]
+      },
+      "good": {
+        "label": "Namngivna träffar",
+        "score": 71,
+        "items": [
+          "Mega Gardevoir ex",
+          "Mega Latias ex"
+        ]
+      },
+      "big": {
+        "label": "Sällsynt motiv/behandling",
+        "score": 82,
+        "items": [
+          "Mega Gardevoir ex",
+          "Mega Latias ex"
+        ]
+      },
+      "jackpot": {
+        "label": "Toppmotiv utan garanti",
+        "score": 82,
+        "items": [
+          "Mega Gardevoir ex"
+        ]
+      }
+    },
+    "why_exciting": [
+      "Samma japanska kortpool; boxens eventuella innehållsgarantier gäller inte löspaket."
+    ],
+    "caveat": "Ingen namngiven träff eller ekonomisk avkastning garanteras. Sålda kortpriser saknas. Japanska kort. Engelska setodds används inte. Ingen SAR, SR eller viss Pokémon garanteras; officiell boxgaranti saknas.",
+    "format_hits": [],
+    "verified_at": "2026-10-04T06:59:00",
+    "confidence": 85
+  },
+  "kv-disney-lorcana-rise-of-the-floodborn-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.takaratomy.co.jp/products/disneylorcana/product/rise-of-the-floodborn/booster-pack/",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Snow White",
+      "Pinocchio",
+      "Zootopia"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Snow White (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Pinocchio (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Zootopia (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Snow White",
+          "Pinocchio",
+          "Zootopia"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-disney-lorcana-rise-of-the-floodborn-booster-box-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.takaratomy.co.jp/products/disneylorcana/product/rise-of-the-floodborn/booster-pack/",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Snow White",
+      "Pinocchio",
+      "Zootopia"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Snow White (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Pinocchio (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Zootopia (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Snow White",
+          "Pinocchio",
+          "Zootopia"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-paradise-dragona-booster-pack-japansk": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/paradise-dragona-booster-pack-japansk",
+    "confidence": 70,
+    "verified_at": "2026-10-04T18:01:21.255574+00:00",
+    "key_names": [
+      "Dragon Pokémon ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Dragon Pokémon ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Dragon Pokémon ex"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-paradise-dragona-booster-box-japansk": {
+    "source_name": "Kantovaults produktinformation",
+    "source_url": "https://kantovault.se/products/paradise-dragona-booster-box-japansk",
+    "confidence": 70,
+    "verified_at": "2026-10-04T18:01:21.226091+00:00",
+    "key_names": [
+      "Dragon Pokémon ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "BRA",
+        "card": "Dragon Pokémon ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 50,
+        "items": [
+          "Dragon Pokémon ex"
+        ]
+      },
+      "big": {
+        "score": 40,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-battle-partners-booster-box-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.pokemon-card.com/ex/sv9/index.html",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "N’s Zoroark ex",
+      "Lillie’s Clefairy ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "AR / SAR – kortfamiljer i setet",
+        "odds": "Setinnehåll; individuella packodds är inte publicerade här"
+      },
+      {
+        "tier": "BRA",
+        "card": "N’s Zoroark ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Lillie’s Clefairy ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "N’s Zoroark ex",
+          "Lillie’s Clefairy ex"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "AR / SAR"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-terastal-festival-ex-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.pokemon-card.com/ex/sv8a/index.html",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Eevee ex",
+      "Umbreon ex",
+      "Sylveon ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "SAR – kortfamiljer i setet",
+        "odds": "Setinnehåll; individuella packodds är inte publicerade här"
+      },
+      {
+        "tier": "BRA",
+        "card": "Eevee ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Umbreon ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Sylveon ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [
+      {
+        "format": "single pack",
+        "family": "Pokémon ex",
+        "count": 1,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Eevee ex",
+          "Umbreon ex",
+          "Sylveon ex"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "SAR"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-terastal-festival-ex-booster-box-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.pokemon-card.com/ex/sv8a/index.html",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Eevee ex",
+      "Umbreon ex",
+      "Sylveon ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "SAR – kortfamiljer i setet",
+        "odds": "Setinnehåll; individuella packodds är inte publicerade här"
+      },
+      {
+        "tier": "BRA",
+        "card": "Eevee ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Umbreon ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Sylveon ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [
+      {
+        "format": "booster box",
+        "family": "Pokémon ex",
+        "count": 10,
+        "basis": "guaranteed",
+        "quality": "collectible"
+      }
+    ],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Eevee ex",
+          "Umbreon ex",
+          "Sylveon ex"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "SAR"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-super-electric-breaker-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.pokemon-card.com/ex/sv8/index.html",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Pikachu ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "AR / SR / SAR – kortfamiljer i setet",
+        "odds": "Setinnehåll; individuella packodds är inte publicerade här"
+      },
+      {
+        "tier": "BRA",
+        "card": "Pikachu ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Pikachu ex"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "AR / SR / SAR"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-super-electric-breaker-box-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.pokemon-card.com/ex/sv8/index.html",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Pikachu ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "AR / SR / SAR – kortfamiljer i setet",
+        "odds": "Setinnehåll; individuella packodds är inte publicerade här"
+      },
+      {
+        "tier": "BRA",
+        "card": "Pikachu ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Pikachu ex"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "AR / SR / SAR"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-violet-ex-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.pokemon-card.com/ex/sv1/index.html",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Miraidon ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "AR / SAR – kortfamiljer i setet",
+        "odds": "Setinnehåll; individuella packodds är inte publicerade här"
+      },
+      {
+        "tier": "BRA",
+        "card": "Miraidon ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Miraidon ex"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "AR / SAR"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-shiny-treasure-ex-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.pokemon-card.com/ex/sv4a/index.html",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Charizard ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "AR / SAR och shiny-kort – kortfamiljer i setet",
+        "odds": "Setinnehåll; individuella packodds är inte publicerade här"
+      },
+      {
+        "tier": "BRA",
+        "card": "Charizard ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Charizard ex"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "AR / SAR och shiny-kort"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-future-flash-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.pokemon-card.com/ex/sv4/index.html",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Iron Valiant ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "AR / SAR – kortfamiljer i setet",
+        "odds": "Setinnehåll; individuella packodds är inte publicerade här"
+      },
+      {
+        "tier": "BRA",
+        "card": "Iron Valiant ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Iron Valiant ex"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "AR / SAR"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-151-booster-pack-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.pokemon-card.com/ex/sv2a/index.html",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Charizard ex",
+      "Blastoise ex",
+      "Venusaur ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "AR / SAR – kortfamiljer i setet",
+        "odds": "Setinnehåll; individuella packodds är inte publicerade här"
+      },
+      {
+        "tier": "BRA",
+        "card": "Charizard ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Blastoise ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Venusaur ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Charizard ex",
+          "Blastoise ex",
+          "Venusaur ex"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "AR / SAR"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-future-flash-booster-box-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.pokemon-card.com/ex/sv4/index.html",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Iron Valiant ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "AR / SAR – kortfamiljer i setet",
+        "odds": "Setinnehåll; individuella packodds är inte publicerade här"
+      },
+      {
+        "tier": "BRA",
+        "card": "Iron Valiant ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Iron Valiant ex"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "AR / SAR"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-151-booster-box-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.pokemon-card.com/ex/sv2a/index.html",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Charizard ex",
+      "Blastoise ex",
+      "Venusaur ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "AR / SAR – kortfamiljer i setet",
+        "odds": "Setinnehåll; individuella packodds är inte publicerade här"
+      },
+      {
+        "tier": "BRA",
+        "card": "Charizard ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Blastoise ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      },
+      {
+        "tier": "BRA",
+        "card": "Venusaur ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Charizard ex",
+          "Blastoise ex",
+          "Venusaur ex"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "AR / SAR"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  },
+  "kv-shiny-treasure-ex-booster-box-japansk": {
+    "source_name": "Tillverkarens setinformation",
+    "source_url": "https://www.pokemon-card.com/ex/sv4a/index.html",
+    "confidence": 85,
+    "verified_at": "2026-10-04T17:56:36.409588+00:00",
+    "key_names": [
+      "Charizard ex"
+    ],
+    "headline_chases": [
+      {
+        "tier": "MONSTER",
+        "card": "AR / SAR och shiny-kort – kortfamiljer i setet",
+        "odds": "Setinnehåll; individuella packodds är inte publicerade här"
+      },
+      {
+        "tier": "BRA",
+        "card": "Charizard ex (kortfamilj)",
+        "odds": "Kort i setet; individuella packodds är inte verifierade"
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 45,
+        "items": [
+          "Slumpmässiga kort ur angivet set"
+        ]
+      },
+      "good": {
+        "score": 65,
+        "items": [
+          "Charizard ex"
+        ]
+      },
+      "big": {
+        "score": 78,
+        "items": [
+          "AR / SAR och shiny-kort"
+        ]
+      },
+      "jackpot": {
+        "score": 65,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Bedömningen gäller setets dokumenterade kortinnehåll; träffrekvens är inte uppmätt."
+    ],
+    "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
+  }
+}

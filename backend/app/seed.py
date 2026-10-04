@@ -6,6 +6,7 @@ from sqlalchemy import select
 from .database import SessionLocal
 from .models import BoxAnalysis, Offer, PriceHistory, Product, ProductVariant, Store, ProductFact, ChaseCard, VariantChaseCard, ChaseProfile, CatalogCandidate
 from .services.matching import normalize_title
+from .services.kantovault_snapshot import OFFERS as KANTOVAULT_OFFERS, PROFILES as KANTOVAULT_PROFILES, seed_inventory as seed_kantovault_catalog, snapshot_datetime
 
 SEED = [
     ("2025-26 Upper Deck Series 1", "Hockey", "Upper Deck", "2025-26", "Series 1", "Hobby Box", 799, [560,780,86,80,84,48,92,78,82,72,"Medel-hög"]),
@@ -497,6 +498,22 @@ for _row in OCTOBER_04_NEW_PRODUCTS:
     _row["observed_at"] = OCTOBER_04_PRODUCTS_VERIFIED_AT
 SPELTROLLET_BACKUP_OFFERS += OCTOBER_04_NEW_PRODUCTS
 REAL_SNAPSHOT += OCTOBER_04_NEW_PRODUCTS
+
+# Preserve the two existing offer identities when refreshing Kantovault.
+for kantovault_snapshot_row in KANTOVAULT_OFFERS:
+    kantovault_row = dict(kantovault_snapshot_row)
+    kantovault_row["observed_at"] = snapshot_datetime(kantovault_row["observed_at"])
+    existing_row = next((row for row in REAL_SNAPSHOT
+                         if row.get("store_name") == "Kantovault"
+                         and row["sku"] == kantovault_row["sku"]), None)
+    if existing_row is not None:
+        existing_row.update(kantovault_row)
+    else:
+        REAL_SNAPSHOT.append(kantovault_row)
+
+
+def seed_kantovault_inventory():
+    seed_kantovault_catalog(SessionLocal)
 OCTOBER_04_PRODUCTS_PROFILE_SLUGS = {row["slug"] for row in OCTOBER_04_NEW_PRODUCTS}
 
 
@@ -733,7 +750,7 @@ def seed_verified_snapshot():
                     source_kind="verified_snapshot", source_confidence=100,
                     match_confidence=1.0, match_status="manual_matched",
                     observed_at=observed_at, url=source_url,
-                    is_preorder=False,
+                    is_preorder=row.get("preorder", False),
                 )
                 db.add(offer); db.flush()
                 db.add(PriceHistory(
@@ -751,7 +768,7 @@ def seed_verified_snapshot():
                 offer.match_status="manual_matched"
                 offer.observed_at=observed_at
                 offer.url=source_url
-                offer.is_preorder=False
+                offer.is_preorder=row.get("preorder", False)
 
             facts=row.get("facts",[])
             if facts:
@@ -2781,6 +2798,7 @@ CHASE_PROFILES["sp-mtg-tmnt-collector-display"].update({
 CHASE_PROFILES["sp-mtg-tmnt-collector-display"]["tiers"]["everyday"] = {"label":"Collector-display", "score":83, "items":["12 Collector Boosters", "180 kort", "12 slumpmässiga Source Material-kort"]}
 
 CHASE_PROFILES.update(json.loads((Path(__file__).parent / "snapshots" / "profiles_2026_10_04_products.json").read_text()))
+CHASE_PROFILES.update(KANTOVAULT_PROFILES)
 
 def seed_chase_profiles():
     db=SessionLocal()
@@ -2811,7 +2829,7 @@ def seed_chase_profiles():
             row.content_json=json.dumps({k:v for k,v in data.items() if k not in ("source_name","source_url")},ensure_ascii=False)
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
-            row.verified_at=(
+            row.verified_at=(snapshot_datetime(data["verified_at"]) if slug in KANTOVAULT_PROFILES else
                 OCTOBER_04_PRODUCTS_VERIFIED_AT if slug in OCTOBER_04_PRODUCTS_PROFILE_SLUGS
                 else OCTOBER_04_DEPTH_VERIFIED_AT if slug in OCTOBER_04_DEPTH_NEW_PROFILE_SLUGS
                 else OCTOBER_04_OBSERVED_AT if slug in OCTOBER_04_NEW_PROFILE_SLUGS
@@ -2832,7 +2850,7 @@ def seed_chase_profiles():
                 else REAL_EXPANSION_OBSERVED_AT if slug in expansion_slugs
                 else REAL_SNAPSHOT_OBSERVED_AT
             )
-            row.confidence=95
+            row.confidence=data.get("confidence", 95)
         db.commit()
     finally:
         db.close()

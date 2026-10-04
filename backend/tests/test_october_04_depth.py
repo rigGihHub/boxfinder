@@ -72,7 +72,9 @@ def test_deeper_store_coverage_uses_all_offers_even_under_filter_and_page_limit(
             limit=1, db=db, store_id=None, cost_basis='item')
         stores = {s['name']: s for s in data['available_stores']}
         assert stores['Cardland']['product_count'] == stores['Cardland']['offer_count'] == 27
-        assert stores['Speltrollet']['product_count'] == stores['Speltrollet']['offer_count'] == 57
+        # Kantovault's shared Nihil Zero profile also makes the existing
+        # language-exact Speltrollet offer rankable.
+        assert stores['Speltrollet']['product_count'] == stores['Speltrollet']['offer_count'] == 58
         assert data['catalog_coverage']['current_store_offers'] == sum(s['offer_count'] for s in stores.values())
         assert data['catalog_coverage']['rankable_products'] < data['catalog_coverage']['current_store_offers']
         assert len(data['items']) == 1

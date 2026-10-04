@@ -31,7 +31,7 @@ export default function ResalePageClient() {
   if (!storeName && storeId) qs.set("store_id", storeId);
   if (category) qs.set("category", category);
   if (maxPrice) qs.set("max_price", maxPrice);
-  qs.set("limit", "40");
+  qs.set("limit", storeValue ? "100" : "40");
   const query = qs.toString();
 
   function runRanking(event) {
@@ -64,7 +64,7 @@ export default function ResalePageClient() {
     <header className="productNav">
       <Link className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></Link>
       <Link className="backLink" href="/">← STARTSIDAN</Link>
-      <span className="version">v0.57.0</span>
+      <span className="version">v0.58.0</span>
     </header>
 
     <section className="resaleHero">

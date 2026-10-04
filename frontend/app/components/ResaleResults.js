@@ -3,7 +3,7 @@
 import {useEffect} from "react";
 import ResaleResultCards from "./ResaleResultCards";
 
-const cacheKey = query => `boxfinder:resale:v6:${query}`;
+const cacheKey = query => `boxfinder:resale:v7:${query}`;
 const formatTime = value => value ? new Intl.DateTimeFormat("sv-SE", {
   dateStyle: "medium",
   timeStyle: "short",

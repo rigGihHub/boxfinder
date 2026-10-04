@@ -50,7 +50,7 @@ def test_forty_new_variants_migrate_existing_catalog_and_all_rank(monkeypatch):
         monkeypatch.setattr(rankings, '_resale_cache', dict(until=0, ranked=None, refreshing=False))
         data = rankings.resale_rankings(strategy='value', limit=200, db=db,
             category=None, max_price=None, store_id=None, cost_basis='item')
-        assert data['catalog_coverage'] == dict(rankable_products=137, current_store_offers=182, stores=21)
+        assert data['catalog_coverage'] == dict(rankable_products=210, current_store_offers=268, stores=21)
         assert seed.OCTOBER_04_PRODUCTS_PROFILE_SLUGS <= {item['slug'] for item in data['items']}
 
 

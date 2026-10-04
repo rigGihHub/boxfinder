@@ -1,4 +1,12 @@
-# BoxFinder v0.57.0
+# BoxFinder v0.58.0
+
+## v0.58.0 – hela Kantovaults katalog
+
+- Alla 457 publicerade produkter och 519 varianter är inlästa från butikens fullständigt paginerade katalog. Även slutsålda produkter, lösa kort, graderade kort, tillbehör och fasta kortlekar finns i katalogunderlaget.
+- 104 köpbara kortrelaterade produktsidor kontrollerades separat för innehåll och lokala förbeställningsmeddelanden. Shopify-köpbarhet räknas inte ensam som lagerstatus.
+- 240 erbjudanden på slumpmässiga kortprodukter, varav 84 har lagerstatus och dokumenterat innehåll för rankingen. 13 förbeställningsvarianter ingår inte i lagerförda resultat; 10 lagerförda varianter inväntar tillräckligt innehållsunderlag.
+- Befintliga set/format/språk matchas utan nya produktdubbletter. Japanska Lorcana-paket innehåller sex kort; kinesiska och japanska utgåvor hålls åtskilda. Underlag från butik har lägre profilkonfidens än kontrollerad tillverkarinformation.
+- Kontrolltider bevaras vid omstart. Fraktalternativ förblir borttagna och paketantal ger inga egna rankingpoäng.
 
 ## v0.57.0 – utan frakt och direkt butiksval
 

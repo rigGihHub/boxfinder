@@ -329,7 +329,8 @@ def test_new_pokemon_and_one_piece_products_have_named_checklists(monkeypatch):
     # Storm Emeralda and Ninja Spinner each have a second verified MaxGaming
     # offer in addition to their original Coolcard offer. Four further exact
     # Japanese-language offers are now reviewed at Cardland and Speltrollet.
-    assert len(offers)==14
+    # Eight language-exact Kantovault pack/box offers share these products.
+    assert len(offers)==22
     assert all(offer.url.startswith("https://") and offer.url.count("/") >= 4 for offer in offers)
     assert all("Japanese" in products[slug].canonical_name or products[slug].category=="One Piece" for slug in slugs)
     statements=[]
@@ -667,6 +668,9 @@ def test_additional_store_expansion_uses_exact_in_stock_article_links(monkeypatc
         .where(Product.slug.in_(slugs))
     ).all()
     assert {product.slug for product,_,_,_ in rows}==slugs
+    # Keep this historical expansion assertion scoped to its original stores;
+    # later inventory imports may add out-of-stock offers to the same products.
+    rows = [row for row in rows if row[3].name != "Kantovault"]
     assert {store.name for _,_,_,store in rows}=={"MaxGaming","Arcade Dreams","TCGStore","SpelOchSånt","Coolcard","Speltrollet"}
     assert all(offer.stock_status=="in_stock" and not offer.is_preorder for _,_,offer,_ in rows)
     assert all("/" in offer.url.removeprefix("https://").split("/",1)[-1] for _,_,offer,_ in rows)
@@ -680,8 +684,8 @@ def test_additional_store_expansion_uses_exact_in_stock_article_links(monkeypatc
     storm_offers=db.execute(
         select(Offer,Store).join(Store,Store.id==Offer.store_id).join(ProductVariant).where(ProductVariant.product_id==storm.id)
     ).all()
-    assert {store.name for _,store in storm_offers}=={"Coolcard","MaxGaming"}
-    assert {offer.price_sek for offer,_ in storm_offers}=={1499,1549}
+    assert {store.name for _,store in storm_offers}=={"Coolcard","MaxGaming","Kantovault"}
+    assert {offer.price_sek for offer,_ in storm_offers}=={1499,1549,1290}
     db.close()
 
 def test_new_loose_pokemon_packs_do_not_claim_published_odds():
