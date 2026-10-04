@@ -9,6 +9,7 @@ globalThis.__boxfinderResaleResponseCache = responseCache;
 
 export async function GET(request) {
   const url = new URL(request.url);
+  url.searchParams.delete("cost_basis");
   const cacheKey = url.search;
   try {
     const response = await fetch(`${API}/rankings/resale${url.search}`, {

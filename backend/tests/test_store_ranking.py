@@ -32,6 +32,20 @@ def test_store_uses_own_offer_and_reranks_before_budget_filter(monkeypatch):
     assert rankings._resale_items(None,'value',None,None)[0]['price'] == 50
 
 
+def test_store_name_matches_current_offer_without_assuming_database_ids(monkeypatch):
+    install_cache(monkeypatch)
+    by_name = rankings._resale_items(None, 'value', None, 500, store_name=' store 2 ')
+    by_id = rankings._resale_items(None, 'value', None, 500, store_id=2)
+    assert by_name == by_id
+    assert [x['id'] for x in by_name] == [2]
+    assert rankings._resale_items(None, 'value', None, None, store_name='missing') == []
+    result = rankings.resale_rankings(strategy='value', category=None, max_price=500,
+        limit=20, db=None, store_id=None, cost_basis='total', store_name='Store 2')
+    assert result['store_name'] == 'Store 2'
+    assert result['cost_basis'] == 'item'
+    assert result['items'] == by_id
+
+
 def test_expired_selected_offer_is_excluded_even_if_other_store_is_fresh(monkeypatch):
     install_cache(monkeypatch)
     for item in rankings._resale_cache['ranked']['value']:

@@ -1,4 +1,11 @@
-# BoxFinder v0.56.0
+# BoxFinder v0.57.0
+
+## v0.57.0 – utan frakt och direkt butiksval
+
+- Fraktvalet är borttaget. Pris, budget och ranking använder alltid varupris; gamla länkar med `cost_basis=total` räknas också utan frakt.
+- Butikslistan innehåller kartlagda butiksnamn redan från start och uppdateras med API-svaret. Valen kräver inga hårdkodade databas-ID:n.
+- Sökningen kan ändras under uppstart. Butiksmetadata från sparade serversvar används även medan aktuell ranking hämtas.
+- `store_name` stöds tillsammans med äldre länkar som använder `store_id`.
 
 ## v0.56.0 – tydligare prisjämförelse och innehåll
 

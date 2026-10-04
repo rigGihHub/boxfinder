@@ -11,7 +11,7 @@ const MAX_ATTEMPTS = 30;
 const MAX_RECOVERY_MS = 90000;
 const RETRY_DELAY_MS = 3000;
 
-export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChange, onStoresChange, onCoverageChange, onShippingCoverageChange}) {
+export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChange, onStoresChange, onCoverageChange}) {
   const [message, setMessage] = useState("Väcker analysmotorn…");
   const [result, setResult] = useState(null);
   const [cachedResult, setCachedResult] = useState(null);
@@ -29,7 +29,6 @@ export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChang
     setCachedResult(cached);
     if (cached?.data?.available_stores) onStoresChange?.(cached.data.available_stores);
     onCoverageChange?.(cached?.data?.catalog_coverage || null);
-    onShippingCoverageChange?.(cached?.data?.shipping_coverage || null);
     onLoadingChange?.(true);
     let timer;
 
@@ -54,10 +53,9 @@ export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChang
         if (response.ok) {
           const data = await response.json();
           if (cancelled) return;
+          if (Array.isArray(data.available_stores)) onStoresChange?.(data.available_stores);
+          if (data.catalog_coverage) onCoverageChange?.(data.catalog_coverage);
           if (Array.isArray(data.items) && !data.stale) {
-            if (data.available_stores) onStoresChange?.(data.available_stores);
-            onCoverageChange?.(data.catalog_coverage || null);
-            onShippingCoverageChange?.(data.shipping_coverage || null);
             saveResaleResult(query, data);
             setResult(data);
             onLoadingChange?.(false);
@@ -84,7 +82,7 @@ export default function ResaleApiRecovery({query, refreshKey = 0, onLoadingChang
       cancelled = true;
       if (timer) window.clearTimeout(timer);
     };
-  }, [query, refreshKey, retryKey, onLoadingChange, onStoresChange, onCoverageChange, onShippingCoverageChange]);
+  }, [query, refreshKey, retryKey, onLoadingChange, onStoresChange, onCoverageChange]);
 
   if (result) return <ResaleResults query={query} data={result}/>;
 

@@ -105,7 +105,7 @@ def test_shipping_snapshot_preserves_verification_date_and_newer_changes(monkeyp
         assert db.query(ShippingPolicy).one().base_shipping_sek==89
 
 
-def test_seeded_total_ranking_is_connected_to_store_shipping(monkeypatch):
+def test_legacy_total_request_returns_item_prices_and_all_stores(monkeypatch):
     from app import seed
     Session=session_factory()
     monkeypatch.setattr(seed,"SessionLocal",Session)
@@ -117,6 +117,7 @@ def test_seeded_total_ranking_is_connected_to_store_shipping(monkeypatch):
         result=rankings.resale_rankings(strategy="value",category=None,max_price=None,limit=100,
                                        db=db,store_id=None,cost_basis="total")
         assert result["items"]
-        assert all(x["store"]=="AlphaSpel" for x in result["items"])
-        assert all(x["ranking_price"]==x["price"]+x["shipping_sek"] for x in result["items"])
-        assert all(x["shipping_source_url"]=="https://alphaspel.se/kopvillkor/" for x in result["items"])
+        assert result["cost_basis"] == "item"
+        assert any(x["store"] != "AlphaSpel" for x in result["items"])
+        assert any(x["shipping_sek"] is None for x in result["items"])
+        assert all(x.get("ranking_price", x["price"]) == x["price"] for x in result["items"])

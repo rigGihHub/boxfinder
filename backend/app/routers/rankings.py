@@ -47,7 +47,7 @@ def _refresh_resale_rankings():
             _resale_cache["refreshing"] = False
 
 
-def _resale_items(db: Session, strategy: str, category: str | None, max_price: float | None, store_id: int | None = None, cost_basis: str = "item"):
+def _resale_items(db: Session, strategy: str, category: str | None, max_price: float | None, store_id: int | None = None, cost_basis: str = "item", store_name: str | None = None):
     if _resale_cache["ranked"] is None:
         prime_resale_rankings(db)
     elif monotonic() >= _resale_cache["until"]:
@@ -56,13 +56,14 @@ def _resale_items(db: Session, strategy: str, category: str | None, max_price: f
                 _resale_cache["refreshing"] = True
                 Thread(target=_refresh_resale_rankings, daemon=True).start()
     items = _resale_cache["ranked"][strategy]
-    if store_id is not None or cost_basis == "total":
+    if store_id is not None or store_name is not None or cost_basis == "total":
         # Select the store offer BEFORE price filtering and scoring. A product
         # must not disappear just because a different store is cheaper.
         selected = []
         for item in items:
             offers = [offer for offer in item.get("store_offers", [])
                       if (store_id is None or offer["store_id"] == store_id)
+                      and (store_name is None or offer["store"].casefold() == store_name.strip().casefold())
                       and is_recent_observation(offer.get("observed_at"))
                       and (cost_basis != "total" or (offer.get("total_price_sek") is not None
                            and is_recent_observation(offer.get("shipping_checked_at"))))]
@@ -122,11 +123,14 @@ def resale_rankings(
     db: Session = Depends(get_db),
     store_id: int | None = Query(None, ge=1),
     cost_basis: Literal["item", "total"] = "item",
+    store_name: str | None = None,
 ):
     strategy = strategy.lower().strip()
     if strategy not in STRATEGIES:
         return {"error": "unknown_strategy", "allowed_strategies": sorted(STRATEGIES)}
-    ranked = _resale_items(db, strategy, category, max_price, store_id, cost_basis)
+    # Temporarily compare item prices only, including legacy links requesting total.
+    cost_basis = "item"
+    ranked = _resale_items(db, strategy, category, max_price, store_id, cost_basis, store_name)
     # Coverage describes the whole rankable catalogue, independently of filters
     # and pagination. Count a shared product once globally and once per store.
     stores = {}
@@ -153,6 +157,7 @@ def resale_rankings(
         "searched_at": datetime.now(timezone.utc).isoformat(),
         "strategy": strategy,
         "store_id": store_id,
+        "store_name": store_name,
         "cost_basis": cost_basis,
         "available_stores": store_coverage,
         "catalog_coverage": {"rankable_products": len(products),
@@ -165,5 +170,5 @@ def resale_rankings(
         "count": len(ranked),
         "items": ranked[:limit],
         "max_offer_age_days": MAX_OFFER_AGE_DAYS,
-        "disclaimer": "Betyget jämför bedömt innehåll med vald priskostnad, inte förväntad vinst. Totalpris gäller köp av en produkt med standardfrakt inom Sverige och visas bara med verifierad fraktregel. Betalavgifter och samfrakt beräknas inte. B kan bygga på familjeodds eller uppgifter om förpackningens innehåll; inget av dem är odds för ett namngivet kort.",
+        "disclaimer": "Priser, budget och ranking är exklusive frakt. Betyget jämför bedömt innehåll med inköpspriset, inte förväntad vinst. Familjeodds och uppgifter om förpackningens innehåll är inte odds för ett namngivet kort.",
     }
