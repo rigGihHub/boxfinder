@@ -28,7 +28,7 @@ def test_many_packs_do_not_invent_frequency_or_multiply_value():
     one = resale_rank(resale_item(packs=1), 'value')
     many = resale_rank(resale_item(packs=36), 'value')
     assert one['opening_profile']['repeatable'] == many['opening_profile']['repeatable'] == 50
-    assert 0 < many['resale_score_precise'] - one['resale_score_precise'] <= 1.051
+    assert many['resale_score_precise'] == one['resale_score_precise']
 
 
 def test_documented_box_can_beat_cheap_weak_loose_pack():

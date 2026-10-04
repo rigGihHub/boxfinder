@@ -20,13 +20,6 @@ def _price_access(price: float | None) -> float:
     return clamp(100 - 14 * math.log2(max(price, 125) / 250))
 
 
-def _opportunities(packs: int | None) -> float:
-    # More packs mean more attempts, not a measured chance of a valuable card.
-    if not isinstance(packs, (int, float)) or packs < 1:
-        return 42
-    return clamp(42 + 7 * math.log2(packs), 42, 70)
-
-
 def _repeatable_evidence(profile: dict, hits: list[dict]) -> bool:
     """A format hit or published common-family odds support a frequency claim.
 
@@ -66,16 +59,11 @@ WEIGHTS = {
 }
 
 
-def _value_access(price: float | None, packs: int | None) -> float:
-    """A bounded cost/quantity heuristic, never an expected-return estimate.
-
-    Price dominates this signal. Extra packs add at most 1.05 final points; they
-    cannot multiply checklist quality or invent a chance of valuable hits.
-    """
+def _value_access(price: float | None) -> float:
+    """A bounded purchase-cost signal, never an expected-return estimate."""
     if not isinstance(price, (int, float)) or not math.isfinite(price) or price <= 0:
         return 0
-    quantity = min(3, .75 * math.log2(max(1, packs or 1)))
-    return clamp(100 - 20 * math.log2(1 + price / 250) + quantity)
+    return clamp(100 - 20 * math.log2(1 + price / 250))
 
 
 def _tier_rank(tier: str | None) -> int:
@@ -104,7 +92,7 @@ def resale_rank(item: dict, strategy: str = "balanced") -> dict:
     breadth, concentrated = _breadth(profile)
     price = item.get("ranking_price", item.get("price"))
     price_access = _price_access(price)
-    access = price_access * .75 + _opportunities(item.get("packs")) * .25
+    access = price_access
     data_quality = float(item.get("data_quality") or 0)
     ev_low = item.get("ev_low")
     ev_high = item.get("ev_high")
@@ -128,7 +116,7 @@ def resale_rank(item: dict, strategy: str = "balanced") -> dict:
     format_strength = max((quality[h["quality"]][0 if h["basis"] == "guaranteed" else 1]
                            + min(2, h["count"] - 1) * 3) for h in hits) if hits else 55
     if strategy == "value":
-        access = _value_access(price, item.get("packs"))
+        access = _value_access(price)
         if not hits:
             format_strength = 35
     profile_confidence = float(profile.get("confidence") or 0)
@@ -161,22 +149,20 @@ def resale_rank(item: dict, strategy: str = "balanced") -> dict:
         basis = "Marknadsvärden, odds, pris och verifierad chase-profil"
     elif has_exact and (has_odds or hits) and confidence >= 70:
         grade = "B · chase + formatdata" if hits and not has_odds else "B · chase + odds"
-        basis = "Verifierade chase-kort, formatträffar och pris; kortspecifika odds/marknads-EV saknas" if hits and not has_odds else "Verifierade chase-kort, produktodds och pris; fullständigt marknads-EV saknas"
+        basis = "Verifierade chase-kort, uppgivet innehåll i förpackningen och pris; kortspecifika odds/marknads-EV saknas" if hits and not has_odds else "Verifierade chase-kort, produktodds och pris; fullständigt marknads-EV saknas"
     else:
         grade = "C · chaseprofil"
         basis = "Verifierat innehåll och pris; fullständiga odds eller försäljningsvärden saknas"
 
     reasons = []
     if documented_frequency and repeatable >= 78:
-        reasons.append("Många dokumenterade chanser till attraktiva träffar")
+        reasons.append("Innehållsuppgifter eller familjeodds stöder bedömningen av återkommande innehåll")
     elif not documented_frequency and float(profile.get("tiers", {}).get("everyday", {}).get("score", 0)) >= 78:
         reasons.append("Starkt återkommande innehåll i checklistan; frekvens för bra träffar är okänd")
     if ceiling >= 85:
         reasons.append("Mycket högt tak med namngivna toppkort")
     if has_odds:
         reasons.append("Publicerade familje- eller produktodds visas vid chase-korten")
-    if hits:
-        reasons.append("Verifierat formatinnehåll: " + ", ".join(f"{h['count']:g} {h['family']} per {h['format']}" + (" i snitt" if h["basis"] == "average" else "") for h in hits[:2]))
     if has_market_ev:
         reasons.append("Marknads-EV kan jämföras med inköpspriset")
     if price_access >= 82:
@@ -190,9 +176,9 @@ def resale_rank(item: dict, strategy: str = "balanced") -> dict:
         else "Öppningspotential, inte förväntad vinst: fullständiga sålda priser och kortspecifika odds saknas."
     )
     if strategy == "value":
-        basis = "Bedömt innehåll för pengarna: inköpspris och dokumenterade formatträffar; antal paket ger en liten bonus. Ingen beräknad avkastning."
+        basis = "Bedömning av inköpspris, möjliga kort och uppgivet innehåll i just denna förpackning. Ingen beräknad avkastning."
         grade = "Innehåll/pris · bedömning"
-        reasons = ["Inköpspriset dominerar prisdelen på 35 %; extra paket ger högst 1,05 poäng av 100"] + [
+        reasons = ["Inköpspriset väger 35 %; antal paket ger inga egna poäng"] + [
             reason for reason in reasons if reason != "Relativt låg insats för den kartlagda chasen"
         ]
         warning = "Bedömd bang for the buck, inte förväntad vinst eller uppmätt träffsannolikhet. Sålda kortvärden och fullständiga odds saknas; jämförelsen använder varupriser utan frakt."
@@ -211,7 +197,7 @@ def resale_rank(item: dict, strategy: str = "balanced") -> dict:
         "resale_warning": warning,
         "has_market_ev": bool(has_market_ev),
         "opening_profile": pull,
-        "frequency_basis": "Publicerade familjeodds eller verifierade formatträffar" if documented_frequency else "Bedömd checklista; odds för bra träffar saknas",
+        "frequency_basis": ("Uppgivet innehåll i denna förpackning visas nedan; det garanterar inget specifikt toppkort" if hits else "Publicerade familjeodds stöder innehållsbedömningen; de gäller kortgrupper, inte ett specifikt kort") if documented_frequency else "Bedömd checklista; odds för bra träffar saknas",
         "ranking_factors": {key: round(value, 1) for key, value in signals.items()},
         "format_hits": hits,
         "strategy": strategy,

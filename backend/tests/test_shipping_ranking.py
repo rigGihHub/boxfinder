@@ -44,6 +44,21 @@ def test_score_uses_total_while_retaining_item_price():
     assert "utan frakt" not in result["resale_warning"]
 
 
+def test_shipping_coverage_is_global_and_requires_current_rules(monkeypatch):
+    install_offers(monkeypatch)
+    result = rankings.resale_rankings(strategy="value", category=None, max_price=1,
+        limit=1, db=None, store_id=None, cost_basis="total")
+    assert result["items"] == []
+    assert result["shipping_coverage"] == {"stores": 2, "store_names": ["Store 1", "Store 2"]}
+    for item in rankings._resale_cache["ranked"]["value"]:
+        for offer in item["store_offers"]:
+            if offer["store_id"] == 2:
+                offer["shipping_checked_at"] = (datetime.now(timezone.utc)-timedelta(days=15)).isoformat()
+    result = rankings.resale_rankings(strategy="value", category=None, max_price=None,
+        limit=1, db=None, store_id=None, cost_basis="item")
+    assert result["shipping_coverage"] == {"stores": 1, "store_names": ["Store 1"]}
+
+
 def test_duplicate_offers_produce_one_product_and_can_cross_free_shipping_threshold(monkeypatch):
     install_offers(monkeypatch)
     item=rankings._resale_cache["ranked"]["value"][0]

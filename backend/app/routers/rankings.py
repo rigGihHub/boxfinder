@@ -131,6 +131,7 @@ def resale_rankings(
     # and pagination. Count a shared product once globally and once per store.
     stores = {}
     products = set()
+    shipping_stores = {}
     for item in _resale_cache["ranked"][strategy]:
         for offer in item.get("store_offers", []):
             if not is_recent_observation(offer.get("observed_at")):
@@ -142,6 +143,8 @@ def resale_rankings(
             products.add(item["id"])
             store["products"].add(item["id"])
             store["offers"].add((item["id"], offer["url"]))
+            if offer.get("total_price_sek") is not None and is_recent_observation(offer.get("shipping_checked_at")):
+                shipping_stores[offer["store_id"]] = offer["store"]
     store_coverage = [{"id": store["id"], "name": store["name"],
                        "product_count": len(store["products"]),
                        "offer_count": len(store["offers"])}
@@ -155,10 +158,12 @@ def resale_rankings(
         "catalog_coverage": {"rankable_products": len(products),
                              "current_store_offers": sum(s["offer_count"] for s in store_coverage),
                              "stores": len(store_coverage)},
+        "shipping_coverage": {"stores": len(shipping_stores),
+                              "store_names": sorted(shipping_stores.values(), key=str.casefold)},
         "category": category,
         "max_price": max_price,
         "count": len(ranked),
         "items": ranked[:limit],
         "max_offer_age_days": MAX_OFFER_AGE_DAYS,
-        "disclaimer": "Betyget jämför bedömt innehåll med vald priskostnad, inte förväntad vinst. Totalpris gäller köp av en produkt med standardfrakt inom Sverige och visas bara med verifierad fraktregel. Betalavgifter och samfrakt beräknas inte. B kan bygga på familjeodds eller formatträffar; inget av dem är odds för ett namngivet kort.",
+        "disclaimer": "Betyget jämför bedömt innehåll med vald priskostnad, inte förväntad vinst. Totalpris gäller köp av en produkt med standardfrakt inom Sverige och visas bara med verifierad fraktregel. Betalavgifter och samfrakt beräknas inte. B kan bygga på familjeodds eller uppgifter om förpackningens innehåll; inget av dem är odds för ett namngivet kort.",
     }

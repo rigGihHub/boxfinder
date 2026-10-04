@@ -129,11 +129,20 @@ def test_guaranteed_base_card_is_not_treated_as_guaranteed_autograph():
     assert rank_resale([rare, auto], "frequent")[0]["id"] == 2
 
 
-def test_more_packs_help_sublinearly_without_becoming_hit_odds():
+def test_pack_count_has_no_independent_score_in_any_strategy():
+    for strategy in ('value', 'balanced', 'jackpot', 'frequent'):
+        single = resale_rank(resale_item(price=1000, packs=1, format="booster box"), strategy)
+        display = resale_rank(resale_item(price=1000, packs=24, format="booster box"), strategy)
+        assert display["ranking_factors"] == single["ranking_factors"]
+        assert display["resale_score_precise"] == single["resale_score_precise"]
+        assert display["has_market_ev"] is False
+
+
+def test_pack_count_cannot_create_format_evidence():
     single = resale_rank(resale_item(price=1000, packs=1, format="booster box"))
     display = resale_rank(resale_item(price=1000, packs=24, format="booster box"))
-    assert display["ranking_factors"]["access"] > single["ranking_factors"]["access"]
-    assert display["resale_score_precise"] > single["resale_score_precise"]
+    assert display["format_hits"] == single["format_hits"] == []
+    assert display["resale_confidence"] == single["resale_confidence"]
     assert display["has_market_ev"] is False
 
 
@@ -172,7 +181,7 @@ def test_more_packs_cannot_claim_measured_frequency():
     one = resale_rank(resale_item(format="booster box", packs=1), "frequent")
     many = resale_rank(resale_item(format="booster box", packs=36), "frequent")
     assert many["opening_profile"]["repeatable"] == one["opening_profile"]["repeatable"]
-    assert many["ranking_factors"]["access"] > one["ranking_factors"]["access"]
+    assert many["ranking_factors"]["access"] == one["ranking_factors"]["access"]
 
 
 def test_jackpot_price_does_not_outweigh_much_better_ceiling():

@@ -1,4 +1,11 @@
-# BoxFinder v0.55.0
+# BoxFinder v0.56.0
+
+## v0.56.0 – tydligare prisjämförelse och innehåll
+
+- Paketantal ger inga egna poäng i något av de fyra öppningslägena. Faktiska, källkontrollerade innehållsuppgifter gäller fortfarande bara rätt förpackningsformat.
+- Prisvalen heter ”Pris utan frakt” och ”Pris med frakt · färre butiker”. Hjälptexten förklarar köp av en produkt och visar vilka butiker som har aktuell verifierad frakt.
+- ”Formatträffar” ersätts i gränssnittet med konkreta innehållsuppgifter, åtskilda som garanti respektive genomsnitt, med källänk.
+- Ny webbläsarcachenyckel hindrar att gamla poäng och gamla förklaringar visas efter ändringen.
 
 ## v0.55.0 – 40 nya produkter och format
 

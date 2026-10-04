@@ -12,6 +12,12 @@ export default function ResaleResultCards({items}) {
     <div className="resaleNumbers"><span><small>{x.cost_basis === "total" ? "TOTALPRIS INKL. FRAKT" : "VARUPRIS"}</small><b>{money(x.cost_basis === "total" ? x.total_price_sek : x.price)}</b></span><span><small>ÅTERKOMMANDE INNEHÅLL</small><b>{x.opening_profile?.repeatable ?? "—"}/100</b></span><span><small>MAXTAK</small><b>{x.opening_profile?.ceiling ?? "—"}/100</b></span></div>
     <p className="resultFreshness">{x.shipping_sek == null ? "Frakt okänd – kontrollera butikens kassa." : <>Vara {money(x.price)} + frakt {money(x.shipping_sek)} = {money(x.total_price_sek)} för en produkt inom Sverige. {x.shipping_source_url && <a href={x.shipping_source_url} target="_blank" rel="noreferrer">Fraktvillkor ↗</a>}</>}</p>
     {x.frequency_basis && <p className="frequencyBasis">{x.frequency_basis}</p>}
+    {x.format_hits?.length > 0 && <div className="packageContents">
+      <strong>UPPGIVET INNEHÅLL I DENNA FÖRPACKNING</strong>
+      <ul>{x.format_hits.map((fact,j)=><li key={j}>{fact.basis === "guaranteed" ? "Garanterat" : "I genomsnitt"}: {fact.count.toLocaleString("sv-SE")} {fact.family}.</li>)}</ul>
+      <p>Genomsnitt är ingen garanti för en enskild öppning. Uppgifter för en hel box gäller inte ett löspaket. Korttyp eller raritet säger inte vad kortet är värt.</p>
+      {x.chase_profile?.source_url && <a href={x.chase_profile.source_url} target="_blank" rel="noreferrer">Källa: {x.chase_profile.source_name || "innehållsuppgift"} ↗</a>}
+    </div>}
     <div className="resaleChases"><small>MÖJLIGA TOPPTRÄFFAR</small>{x.sellable_chases?.slice(0,4).map((c,j)=><span key={j}><b>{c.tier}</b>{c.card}<em>{c.odds || "Exakt odds saknas"}</em></span>)}</div>
     <div className="resaleReasons">{x.resale_reasons?.map((r,j)=><span key={j}>✓ {r}</span>)}</div>
     <p className="resaleWarning">{x.resale_warning}</p>
