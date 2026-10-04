@@ -84,6 +84,10 @@ def test_language_specific_configuration_and_scoped_evidence():
     blister = next(r for r in OFFERS if 'rebel-clash-3-pack-blister' in r['slug'] and 'Rayquaza' in r['name'])
     assert PROFILES[blister['slug']]['key_names'] == ['Rayquaza']
     assert PROFILES[blister['slug']]['format_hits'][0]['family'] == 'Rayquaza promokort'
+    for slug, profile in PROFILES.items():
+        if 'ascended-heroes-tech-sticker' in slug:
+            assert profile['source_url'].startswith('https://kantovault.se/products/pokemon-ascended-heroes-tech-sticker-collection?variant=')
+            assert profile['additional_sources'][0]['url'].endswith('mega-evolution-ascended-heroes')
     china = [r for r in OFFERS if 'gem-pack-vol-6' in r['slug']]
     assert all(r['language'] == 'Chinese' and r['cards'] == 4 for r in china)
     for slug in ['kv-mega-brave-booster-pack-japansk', 'kv-mega-symphonia-booster-pack-japansk']:

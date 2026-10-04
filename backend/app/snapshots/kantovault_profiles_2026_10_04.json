@@ -495,8 +495,8 @@
     "caveat": "Kortfamiljer jämförs. Individuella packodds och sålda kortvärden är inte verifierade; ingen boxträff antas för löspaket."
   },
   "kv-pokemon-ascended-heroes-tech-sticker-collection-54721251344725": {
-    "source_name": "The Pokémon Company official expansion card database and product contents",
-    "source_url": "https://www.pokemon.com/us/pokemon-tcg/mega-evolution-ascended-heroes",
+    "source_name": "Kantovaults produktinnehåll / The Pokémon Company setinformation",
+    "source_url": "https://kantovault.se/products/pokemon-ascended-heroes-tech-sticker-collection?variant=54721251344725",
     "key_names": [
       "Mega Dragonite ex #295/217",
       "Chikorita promo",
@@ -562,11 +562,18 @@
       }
     ],
     "verified_at": "2026-09-27T05:17:00",
-    "confidence": 85
+    "confidence": 85,
+    "additional_sources": [
+      {
+        "name": "The Pokémon Company official expansion card database and product contents",
+        "url": "https://www.pokemon.com/us/pokemon-tcg/mega-evolution-ascended-heroes",
+        "verified_at": "2026-09-27T05:17:00"
+      }
+    ]
   },
   "kv-pokemon-ascended-heroes-tech-sticker-collection-54721251377493": {
-    "source_name": "The Pokémon Company official expansion card database and product contents",
-    "source_url": "https://www.pokemon.com/us/pokemon-tcg/mega-evolution-ascended-heroes",
+    "source_name": "Kantovaults produktinnehåll / The Pokémon Company setinformation",
+    "source_url": "https://kantovault.se/products/pokemon-ascended-heroes-tech-sticker-collection?variant=54721251377493",
     "key_names": [
       "Mega Dragonite ex #295/217",
       "Chikorita promo",
@@ -632,7 +639,14 @@
       }
     ],
     "verified_at": "2026-09-27T05:17:00",
-    "confidence": 85
+    "confidence": 85,
+    "additional_sources": [
+      {
+        "name": "The Pokémon Company official expansion card database and product contents",
+        "url": "https://www.pokemon.com/us/pokemon-tcg/mega-evolution-ascended-heroes",
+        "verified_at": "2026-09-27T05:17:00"
+      }
+    ]
   },
   "kv-pokemon-mega-evolution-perfect-order-booster-bundle": {
     "source_name": "Kantovaults produktinformation",
