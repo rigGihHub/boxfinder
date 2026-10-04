@@ -52,7 +52,7 @@ def test_speltrollet_inventory_stays_in_review_and_verified_links_are_format_spe
     assert any(c.exclusion_reason=="outside_card_scope" for c in candidates)
     assert all(c.review_status=="new" for c in candidates)
     offers=db.scalars(select(Offer).where(Offer.store_id==store.id)).all()
-    assert len(offers)==len(seedmod.SPELTROLLET_BACKUP_OFFERS)==4
+    assert len(offers)==len(seedmod.SPELTROLLET_BACKUP_OFFERS)==19
     assert all(o.source_kind=="verified_snapshot" and o.stock_status=="in_stock" and not o.is_preorder for o in offers)
     assert all(o.variant for o in offers)
     for slug in ("cc-star-wars-unlimited-twilight-display", "ad-yugioh-glorious-gallery-pack"):
@@ -327,8 +327,9 @@ def test_new_pokemon_and_one_piece_products_have_named_checklists(monkeypatch):
     assert all(seedmod.CHASE_PROFILES[slug]["headline_chases"] for slug in slugs)
     offers=db.scalars(select(Offer).join(ProductVariant).join(Product).where(Product.slug.in_(slugs))).all()
     # Storm Emeralda and Ninja Spinner each have a second verified MaxGaming
-    # offer in addition to their original Coolcard offer.
-    assert len(offers)==10
+    # offer in addition to their original Coolcard offer. Four further exact
+    # Japanese-language offers are now reviewed at Cardland and Speltrollet.
+    assert len(offers)==14
     assert all(offer.url.startswith("https://") and offer.url.count("/") >= 4 for offer in offers)
     assert all("Japanese" in products[slug].canonical_name or products[slug].category=="One Piece" for slug in slugs)
     statements=[]
@@ -613,8 +614,8 @@ def test_dragons_lair_magic_expansion_has_live_format_safe_offers(monkeypatch):
     display_offers=db.scalars(
         select(Offer).join(ProductVariant).where(ProductVariant.product_id==display.id)
     ).all()
-    assert len(display_offers)==2
-    assert {offer.price_sek for offer in display_offers}=={1899,2099}
+    assert len(display_offers)==3
+    assert {offer.price_sek for offer in display_offers}=={1899,1990,2099}
     db.close()
 
 def test_magic_play_booster_profiles_exclude_collector_only_headliners():
@@ -666,7 +667,7 @@ def test_additional_store_expansion_uses_exact_in_stock_article_links(monkeypatc
         .where(Product.slug.in_(slugs))
     ).all()
     assert {product.slug for product,_,_,_ in rows}==slugs
-    assert {store.name for _,_,_,store in rows}=={"MaxGaming","Arcade Dreams","TCGStore","SpelOchSånt","Coolcard"}
+    assert {store.name for _,_,_,store in rows}=={"MaxGaming","Arcade Dreams","TCGStore","SpelOchSånt","Coolcard","Speltrollet"}
     assert all(offer.stock_status=="in_stock" and not offer.is_preorder for _,_,offer,_ in rows)
     assert all("/" in offer.url.removeprefix("https://").split("/",1)[-1] for _,_,offer,_ in rows)
     assert all(slug in seedmod.CHASE_PROFILES for slug in slugs)

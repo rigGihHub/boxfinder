@@ -23,7 +23,7 @@ def test_competing_stores_share_variant_and_filter_selects_actual_offer(monkeypa
         catalog = rankings.resale_rankings(strategy="value", category="Magic", max_price=None, limit=100, db=db, store_id=None)
         box = next(x for x in catalog["items"] if x["slug"] == "hk-mtg-tmnt-play-display")
         assert box["price"] == 1695 and box["store"] == "Hobbykort"
-        assert {x["store"] for x in box["store_offers"]} == {"Hobbykort", "Mox Games"}
+        assert {x["store"] for x in box["store_offers"]} == {"Hobbykort", "Mox Games", "Speltrollet"}
         mox = db.scalar(select(Store).where(Store.name == "Mox Games"))
         result = rankings.resale_rankings(strategy="value", category="Magic", max_price=2000, limit=100, db=db, store_id=mox.id)
         assert len(result["items"]) == 1
@@ -75,7 +75,10 @@ def test_restart_keeps_original_verification_times_and_does_not_duplicate_offers
             product = db.scalar(select(Product).where(Product.slug == slug))
             variant = db.scalar(select(ProductVariant).where(ProductVariant.product_id == product.id))
             assert db.scalar(select(ChaseProfile).where(ChaseProfile.variant_id == variant.id)).verified_at == seed.OCTOBER_03_OBSERVED_AT
-            assert all(x.observed_at == seed.OCTOBER_03_OBSERVED_AT for x in variant.offers)
+            original_ids = {(row['store_name'], row['sku']) for row in seed.OCTOBER_03_EXPANSION if row['slug'] == slug}
+            original_offers = [x for x in variant.offers if (x.store.name, x.external_id) in original_ids]
+            assert len(original_offers) == len(original_ids)
+            assert all(x.observed_at == seed.OCTOBER_03_OBSERVED_AT for x in original_offers)
         urls = {x.url for x in db.scalars(select(Offer))}
         assert "https://nordicsportscards.se/products/2026-topps-chrome-tennis-hobby-box" not in urls
         assert "https://tcgstore.se/products/magic-the-gathering-teenage-mutant-ninja-turtles-play-booster-box" not in urls

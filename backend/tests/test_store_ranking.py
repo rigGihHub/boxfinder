@@ -46,7 +46,26 @@ def test_store_options_remain_available_when_budget_has_no_results(monkeypatch):
     result=rankings.resale_rankings(strategy='value',category=None,max_price=1,limit=20,db=None,store_id=2)
     assert result['items']==[]
     assert result['store_id']==2
-    assert result['available_stores']==[{'id':1,'name':'Store 1'},{'id':2,'name':'Store 2'}]
+    assert result['available_stores']==[
+        {'id':1,'name':'Store 1','product_count':3,'offer_count':3},
+        {'id':2,'name':'Store 2','product_count':2,'offer_count':2}]
+    assert result['catalog_coverage']=={'rankable_products':3,'current_store_offers':5,'stores':2}
+
+
+def test_coverage_deduplicates_products_and_ignores_expired_and_future_offers(monkeypatch):
+    install_cache(monkeypatch)
+    items=rankings._resale_cache['ranked']['value']
+    # Two rows for the same purchase URL should not inflate catalogue coverage.
+    items[0]['store_offers'].append(dict(items[0]['store_offers'][0]))
+    for item in items:
+        for offer in item['store_offers']:
+            if offer['store_id']==2:
+                offset=timedelta(days=-15 if item['id']==1 else 1)
+                offer['observed_at']=(datetime.now(timezone.utc)+offset).isoformat()
+    result=rankings.resale_rankings(strategy='value',category=None,max_price=None,limit=1,db=None,store_id=None,cost_basis='item')
+    assert len(result['items'])==1
+    assert result['catalog_coverage']=={'rankable_products':3,'current_store_offers':3,'stores':1}
+    assert result['available_stores']==[{'id':1,'name':'Store 1','product_count':3,'offer_count':3}]
 
 
 def test_seeded_cardland_backup_is_selectable_even_when_not_cheapest(monkeypatch):

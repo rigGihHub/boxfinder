@@ -1,4 +1,11 @@
-# BoxFinder v0.53.0
+# BoxFinder v0.54.0
+
+## v0.54.0 – Djupare butikstäckning
+
+- 35 direkt verifierade erbjudanden: 20 hos Cardland och 15 hos Speltrollet.
+- Tre nya formatprofiler: Bloomburrow Play-display, Spider-Man Bundle och TMNT Collector-display. Befintliga produkter matchas efter exakt format och språk.
+- Butikstäckning visar rankbara produkter, aktuella direktköpserbjudanden och antal per butik, oberoende av filter och sidgräns. Ogranskade katalogposter räknas inte.
+- Priser och lagerstatus kontrollerades 2026-10-04; tillverkarens packodds hålls åtskilda från upprepningsbart innehåll per display.
 
 ## v0.53.0 – Fler produkter och återförsäljare
 

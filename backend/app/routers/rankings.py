@@ -127,15 +127,34 @@ def resale_rankings(
     if strategy not in STRATEGIES:
         return {"error": "unknown_strategy", "allowed_strategies": sorted(STRATEGIES)}
     ranked = _resale_items(db, strategy, category, max_price, store_id, cost_basis)
-    stores = {o["store_id"]: o["store"]
-              for item in _resale_cache["ranked"][strategy]
-              for o in item.get("store_offers", []) if is_recent_observation(o.get("observed_at"))}
+    # Coverage describes the whole rankable catalogue, independently of filters
+    # and pagination. Count a shared product once globally and once per store.
+    stores = {}
+    products = set()
+    for item in _resale_cache["ranked"][strategy]:
+        for offer in item.get("store_offers", []):
+            if not is_recent_observation(offer.get("observed_at")):
+                continue
+            store = stores.setdefault(offer["store_id"], {
+                "id": offer["store_id"], "name": offer["store"],
+                "products": set(), "offers": set(),
+            })
+            products.add(item["id"])
+            store["products"].add(item["id"])
+            store["offers"].add((item["id"], offer["url"]))
+    store_coverage = [{"id": store["id"], "name": store["name"],
+                       "product_count": len(store["products"]),
+                       "offer_count": len(store["offers"])}
+                      for store in sorted(stores.values(), key=lambda s: s["name"].casefold())]
     return {
         "searched_at": datetime.now(timezone.utc).isoformat(),
         "strategy": strategy,
         "store_id": store_id,
         "cost_basis": cost_basis,
-        "available_stores": [{"id": key, "name": value} for key, value in sorted(stores.items(), key=lambda pair: pair[1].casefold())],
+        "available_stores": store_coverage,
+        "catalog_coverage": {"rankable_products": len(products),
+                             "current_store_offers": sum(s["offer_count"] for s in store_coverage),
+                             "stores": len(store_coverage)},
         "category": category,
         "max_price": max_price,
         "count": len(ranked),

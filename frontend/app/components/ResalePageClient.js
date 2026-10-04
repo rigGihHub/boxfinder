@@ -18,6 +18,7 @@ export default function ResalePageClient() {
   const [refreshKey, setRefreshKey] = useState(0);
   const [ranking, setRanking] = useState(false);
   const [stores, setStores] = useState([]);
+  const [coverage, setCoverage] = useState(null);
   const strategy = searchParams.get("strategy") || "value";
   const category = searchParams.get("category") || "";
   const storeId = searchParams.get("store_id") || "";
@@ -62,7 +63,7 @@ export default function ResalePageClient() {
     <header className="productNav">
       <Link className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></Link>
       <Link className="backLink" href="/">← STARTSIDAN</Link>
-      <span className="version">v0.53.0</span>
+      <span className="version">v0.54.0</span>
     </header>
 
     <section className="resaleHero">
@@ -82,11 +83,19 @@ export default function ResalePageClient() {
         <label><span>{costBasis === "total" ? "MAX TOTALPRIS" : "MAX VARUPRIS"} · VALFRITT</span><select name="max_price" defaultValue={maxPrice}><option value="">Ingen gräns</option><option value="100">100 kr</option><option value="250">250 kr</option><option value="500">500 kr</option><option value="1000">1 000 kr</option><option value="2000">2 000 kr</option><option value="5000">5 000 kr</option><option value="10000">10 000 kr</option></select></label>
         <button type="submit" disabled={ranking}>{ranking ? "RANKAR…" : "RANKA ALLT →"}</button>
       </form>
+      {coverage && <details className="storeCoverage">
+        <summary>Butikstäckning · {coverage.rankable_products} rankbara produkter · {coverage.current_store_offers} köpbara erbjudanden · {coverage.stores} butiker</summary>
+        <p>Hela den rankbara katalogen, oavsett valda filter. Samma produkt kan finnas hos flera butiker. Produkter skiljs åt efter format och språk. Endast erbjudanden med verifierad direktlänk, lagerstatus och pris kontrollerat under de senaste 14 dagarna räknas. Katalogen täcker ännu inte butikernas hela sortiment.</p>
+        <div className="storeCoverageTable"><table>
+          <thead><tr><th scope="col">Butik</th><th scope="col">Produkter</th><th scope="col">Erbjudanden</th></tr></thead>
+          <tbody>{stores.map(store => <tr key={store.id}><th scope="row">{store.name}</th><td>{store.product_count}</td><td>{store.offer_count}</td></tr>)}</tbody>
+        </table></div>
+      </details>}
     </section>
 
     <section className="resaleRanking" id="resale-ranking">
       <div className="sectionHead"><div><span className="kicker">BOXFINDERS RANKING</span><h2>{strategy === "value" ? "Mest innehåll för pengarna" : "Bäst öppningspotential just nu"}</h2></div><p>Senaste resultat visas direkt och uppdateras i bakgrunden</p></div>
-      <ResaleApiRecovery query={query} refreshKey={refreshKey} onLoadingChange={setRanking} onStoresChange={setStores}/>
+      <ResaleApiRecovery query={query} refreshKey={refreshKey} onLoadingChange={setRanking} onStoresChange={setStores} onCoverageChange={setCoverage}/>
     </section>
   </main>;
 }
