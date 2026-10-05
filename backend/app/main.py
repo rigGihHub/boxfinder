@@ -7,8 +7,10 @@ from .seed import seed_demo_data, seed_verified_snapshot, seed_chase_profiles, s
 from .routers import products, matching, admin, deals, checklists, market, players, rankings, budget, compare, watchlist, discovery, system, chase_search
 from .services.update_manager import scheduler_loop
 from .services.shipping_snapshot import seed_shipping_policies
+from .services.catalog_capacity import CatalogCapacityMiddleware
 
 app = FastAPI(title=settings.app_name, version=settings.version)
+app.add_middleware(CatalogCapacityMiddleware)
 app.add_middleware(CORSMiddleware, allow_origins=settings.cors_origin_list, allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
 
 @app.on_event("startup")

@@ -3,11 +3,11 @@ from fastapi import APIRouter, Depends, HTTPException, Query
 from sqlalchemy import select
 from sqlalchemy.orm import Session, joinedload
 from ..database import get_db
-from ..models import ChaseProfile, ProductVariant, Offer, ShippingPolicy
+from ..models import ChaseProfile, Product, ProductVariant, Offer, ShippingPolicy
 from ..services.ev import calculate_variant_ev
 from ..services.product_detail import chase_cards, make_summary, outcome_groups, price_history_summary
 from ..services.scoring import calculate_box_value_score
-from ..services.readiness import ranking_readiness
+from ..services.readiness import ranking_readiness_many
 from ..services.price_compare import comparison_for_variant, shipping_for
 from ..services.price_signals import recent_signals
 from ..services.product_explanation import explain_variant
@@ -76,24 +76,35 @@ def serialize_variant(v: ProductVariant, current_offers_only: bool = False, ship
 @router.get("")
 def list_products(category: str | None = None, max_price: float | None = Query(None, ge=0), db: Session = Depends(get_db), include_details: bool = True, current_offers_only: bool = False):
     q = select(ProductVariant).options(joinedload(ProductVariant.product), joinedload(ProductVariant.offers).joinedload(Offer.store), joinedload(ProductVariant.analysis))
+    if category:
+        # SQLite's lower() does not fold Swedish/accented characters.
+        categories = [name for name in db.scalars(select(Product.category).distinct())
+                      if name.lower() == category.lower()]
+        q = q.join(ProductVariant.product).where(Product.category.in_(categories))
     variants = db.execute(q).unique().scalars().all()
     shipping_policies = {p.store_id: p for p in db.scalars(select(ShippingPolicy)).all()}
     items = []
     profiles_by_variant = {}
-    if not include_details and variants:
+    if variants:
         ids = [v.id for v in variants]
         profiles_by_variant = {
             row.variant_id: profile_from_row(row)
             for row in db.scalars(select(ChaseProfile).where(ChaseProfile.variant_id.in_(ids))).all()
         }
+    # Apply price/stock filters before querying or building product details.
+    selected = []
     for v in variants:
         x = serialize_variant(v, current_offers_only=current_offers_only, shipping_policies=shipping_policies)
+        if x and (max_price is None or x["price"] <= max_price):
+            selected.append((v, x))
+    readiness = ranking_readiness_many(db, [v for v, _ in selected]) if include_details else {}
+    for v, x in selected:
         if x:
             if include_details:
-                x["ranking_readiness"] = ranking_readiness(db, v)
+                x["ranking_readiness"] = readiness[v.id]
                 x["explanation"] = explain_variant(db, v)
-                top_cards, _ = chase_cards(db, v.id, 3)
-                profile = get_profile(db, v.id)
+                top_cards = chase_cards(db, v.id, 3)[0] if readiness[v.id]["components"]["cards"] else []
+                profile = profiles_by_variant.get(v.id)
             else:
                 top_cards = []
                 profile = profiles_by_variant.get(v.id)

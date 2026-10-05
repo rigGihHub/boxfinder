@@ -3,7 +3,7 @@ from pydantic import BaseModel
 from sqlalchemy import func, select
 from sqlalchemy.orm import Session, joinedload
 from ..database import get_db
-from ..services.readiness import ranking_readiness
+from ..services.readiness import ranking_readiness_many
 from ..models import Card, CardMarketValue, CatalogCandidate, Checklist, IngestionRun, Odds, Offer, Product, ProductVariant, Sale, ShippingPolicy, Store, StoreIntakeProfile
 from ..services.ingestion import ingest_store
 from ..services.matching import normalize_title
@@ -373,7 +373,8 @@ def readiness_overview(db: Session = Depends(get_db)):
         )
     ).unique().scalars().all()
     rows = []
+    readiness = ranking_readiness_many(db, variants)
     for v in variants:
-        r = ranking_readiness(db, v)
+        r = readiness[v.id]
         rows.append({"variant_id": v.id, "name": f"{v.product.canonical_name} {v.format}", **r})
     return sorted(rows, key=lambda x: x["score"], reverse=True)

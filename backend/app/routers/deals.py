@@ -1,9 +1,9 @@
 from datetime import datetime, timedelta
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy import select
-from sqlalchemy.orm import Session, joinedload
+from sqlalchemy.orm import Session, joinedload, selectinload
 from ..database import get_db
-from ..models import Offer, ProductVariant
+from ..models import Offer, PriceHistory, ProductVariant
 from ..services.scoring import calculate_box_value_score
 from ..services.deal_scoring import robust_market_reference, deal_confidence, enhanced_deal_score, cross_store_discount, history_low_position, deal_label
 from ..services.price_signals import recent_signals, signal_summary
@@ -17,8 +17,8 @@ def list_deals(days: int = Query(90, ge=7, le=365), min_discount: float = Query(
     fresh_cutoff = now - timedelta(days=14)
     q = select(ProductVariant).options(
         joinedload(ProductVariant.product), joinedload(ProductVariant.analysis),
-        joinedload(ProductVariant.offers).joinedload(Offer.store),
-        joinedload(ProductVariant.offers).joinedload(Offer.history),
+        selectinload(ProductVariant.offers).joinedload(Offer.store),
+        selectinload(ProductVariant.offers).selectinload(Offer.history.and_(PriceHistory.observed_at >= cutoff)),
     )
     variants = db.execute(q).unique().scalars().all()
     result = []
