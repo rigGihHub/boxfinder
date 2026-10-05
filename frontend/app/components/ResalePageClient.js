@@ -64,7 +64,7 @@ export default function ResalePageClient() {
     <header className="productNav">
       <Link className="brand" href="/" prefetch={false}><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></Link>
       <Link className="backLink" href="/" prefetch={false}>← STARTSIDAN</Link>
-      <span className="version">v0.59.1</span>
+      <span className="version">v0.59.2</span>
     </header>
 
     <section className="resaleHero">

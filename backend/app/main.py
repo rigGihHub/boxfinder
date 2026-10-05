@@ -8,9 +8,11 @@ from .routers import products, matching, admin, deals, checklists, market, playe
 from .services.update_manager import scheduler_loop
 from .services.shipping_snapshot import seed_shipping_policies
 from .services.catalog_capacity import CatalogCapacityMiddleware
+from .services.catalog_snapshots import CatalogSnapshotMiddleware
 
 app = FastAPI(title=settings.app_name, version=settings.version)
 app.add_middleware(CatalogCapacityMiddleware)
+app.add_middleware(CatalogSnapshotMiddleware)
 app.add_middleware(CORSMiddleware, allow_origins=settings.cors_origin_list, allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
 
 @app.on_event("startup")
