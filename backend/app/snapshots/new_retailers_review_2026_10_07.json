@@ -1,0 +1,455 @@
+{
+  "observed_at": "2026-10-07T05:06:07.646942+00:00",
+  "inventories": {
+    "Hobbybutiken": "hobbybutiken_catalog_2026_10_07.json.gz",
+    "TheMinifigVault": "theminifigvault_catalog_2026_10_07.json.gz",
+    "The Sealed Poke Vault": "the_sealed_poke_vault_catalog_2026_10_07.json.gz"
+  },
+  "accepted": [
+    {
+      "store_name": "Hobbybutiken",
+      "product_id": 15839221121364,
+      "variant_id": 57416688009556,
+      "canonical_slug": "scan-pokemon-destined-rivals-etb",
+      "url": "https://hobbybutiken.com/products/destined-rivals-elite-trainer-box-pokemon-tcg?variant=57416688009556",
+      "observed_at": "2026-10-07T05:08:19.856716+00:00",
+      "price_sek": 1499.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "elite trainer box",
+      "content_evidence": {
+        "packs": 9,
+        "cards_per_pack": 10,
+        "retailer_family_terms": []
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "Hobbybutiken",
+      "product_id": 15806899814740,
+      "variant_id": 57318917931348,
+      "canonical_slug": "scan-pokemon-30th-celebration-en-pack",
+      "url": "https://hobbybutiken.com/products/30th-celebration-booster-pokemon-tcg?variant=57318917931348",
+      "observed_at": "2026-10-07T05:08:20.013443+00:00",
+      "price_sek": 179.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "single pack",
+      "content_evidence": {
+        "packs": 1,
+        "cards_per_pack": null,
+        "retailer_family_terms": []
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "TheMinifigVault",
+      "product_id": 11204849664338,
+      "variant_id": 54951592722770,
+      "canonical_slug": "scan-pokemon-30th-celebration-en-etb",
+      "url": "https://theminifigvault.com/products/pokemon-mega-30th-celebration-elite-trainer-box-etb-9-pack-eng?variant=54951592722770",
+      "observed_at": "2026-10-07T05:08:20.044418+00:00",
+      "price_sek": 2499.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "elite trainer box",
+      "content_evidence": {
+        "packs": 9,
+        "cards_per_pack": null,
+        "retailer_family_terms": []
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "TheMinifigVault",
+      "product_id": 11185509794130,
+      "variant_id": 54875008991570,
+      "canonical_slug": "catalog-pokemon-219eeb0479a9d8",
+      "url": "https://theminifigvault.com/products/pokemon-sword-shield-astral-radiance-booster-pack-10-kort-eng?variant=54875008991570",
+      "observed_at": "2026-10-07T05:08:20.090606+00:00",
+      "price_sek": 129.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "single pack",
+      "content_evidence": {
+        "packs": 1,
+        "cards_per_pack": 10,
+        "retailer_family_terms": []
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "TheMinifigVault",
+      "product_id": 11185473061202,
+      "variant_id": 54874870776146,
+      "canonical_slug": "as-one-piece-op14-en-pack",
+      "url": "https://theminifigvault.com/products/one-piece-op-14-the-azure-seas-seven-booster-pack-12-kort-eng?variant=54874870776146",
+      "observed_at": "2026-10-07T05:08:24.746772+00:00",
+      "price_sek": 129.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "single pack",
+      "content_evidence": {
+        "packs": 1,
+        "cards_per_pack": 12,
+        "retailer_family_terms": [
+          "alt-art"
+        ]
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "TheMinifigVault",
+      "product_id": 11182820065618,
+      "variant_id": 54862222885202,
+      "canonical_slug": "scan-pokemon-30th-celebration-en-poster",
+      "url": "https://theminifigvault.com/products/pokemon-mega-30th-celebration-poster-collection-box-zapdos-articuno-moltres-3-pack-eng?variant=54862222885202",
+      "observed_at": "2026-10-07T05:08:24.805471+00:00",
+      "price_sek": 799.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "collection box",
+      "content_evidence": {
+        "packs": 3,
+        "cards_per_pack": null,
+        "retailer_family_terms": []
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "TheMinifigVault",
+      "product_id": 11182798045522,
+      "variant_id": 54862140342610,
+      "canonical_slug": "ch-one-piece-op14-en-display",
+      "url": "https://theminifigvault.com/products/one-piece-op-14-the-azure-seas-seven-booster-display-24-pack-eng?variant=54862140342610",
+      "observed_at": "2026-10-07T05:08:24.904936+00:00",
+      "price_sek": 2799.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "booster box",
+      "content_evidence": {
+        "packs": 24,
+        "cards_per_pack": 12,
+        "retailer_family_terms": []
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "TheMinifigVault",
+      "product_id": 11182775304530,
+      "variant_id": 54862061338962,
+      "canonical_slug": "catalog-pokemon-c18b6da39a0432",
+      "url": "https://theminifigvault.com/products/pokemon-sword-shield-fusion-strike-booster-pack-10-kort-eng?variant=54862061338962",
+      "observed_at": "2026-10-07T05:08:24.868937+00:00",
+      "price_sek": 279.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "single pack",
+      "content_evidence": {
+        "packs": 1,
+        "cards_per_pack": 10,
+        "retailer_family_terms": []
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "TheMinifigVault",
+      "product_id": 11182760984914,
+      "variant_id": 54862027751762,
+      "canonical_slug": "scan-pokemon-mega-evolution-en-pack",
+      "url": "https://theminifigvault.com/products/pokemon-mega-evolution-mega-evolution-booster-pack-10-kort-eng?variant=54862027751762",
+      "observed_at": "2026-10-07T05:08:31.087221+00:00",
+      "price_sek": 129.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "single pack",
+      "content_evidence": {
+        "packs": 1,
+        "cards_per_pack": 10,
+        "retailer_family_terms": [
+          "Special Illustration Rare",
+          "Illustration Rare"
+        ]
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "TheMinifigVault",
+      "product_id": 11182754529618,
+      "variant_id": 54862010679634,
+      "canonical_slug": "tcgs-pokemon-pitch-black-pack",
+      "url": "https://theminifigvault.com/products/pokemon-mega-evolution-pitch-black-booster-pack-10-cards-eng?variant=54862010679634",
+      "observed_at": "2026-10-07T05:08:30.729041+00:00",
+      "price_sek": 99.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "single pack",
+      "content_evidence": {
+        "packs": 1,
+        "cards_per_pack": 10,
+        "retailer_family_terms": [
+          "Illustration Rare"
+        ]
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "TheMinifigVault",
+      "product_id": 11182751088978,
+      "variant_id": 54861973389650,
+      "canonical_slug": "catalog-one-piece-c561cbfe3cfe6a",
+      "url": "https://theminifigvault.com/products/one-piece-op-13-carrying-on-his-will-booster-pack-12-kort-eng?variant=54861973389650",
+      "observed_at": "2026-10-07T05:08:30.652956+00:00",
+      "price_sek": 189.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "single pack",
+      "content_evidence": {
+        "packs": 1,
+        "cards_per_pack": 12,
+        "retailer_family_terms": [
+          "Secret Rare",
+          "Super Rare"
+        ]
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "TheMinifigVault",
+      "product_id": 11172339188050,
+      "variant_id": 54820401545554,
+      "canonical_slug": "scan-pokemon-30th-celebration-en-eevee-blister",
+      "url": "https://theminifigvault.com/products/pokemon-mega-30th-celebration-2-pack-blister-eevee-eng?variant=54820401545554",
+      "observed_at": "2026-10-07T05:08:30.760888+00:00",
+      "price_sek": 399.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "blister",
+      "content_evidence": {
+        "packs": 2,
+        "cards_per_pack": null,
+        "retailer_family_terms": []
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "TheMinifigVault",
+      "product_id": 11109421285714,
+      "variant_id": 54543810527570,
+      "canonical_slug": "kv-pokemon-chasing-glory-together-slim-booster-box-kinesisk",
+      "url": "https://theminifigvault.com/products/pokemon-scarlet-violet-chasing-glory-together-csv10c-slim-booster-box-15-pack-cn?variant=54543810527570",
+      "observed_at": "2026-10-07T05:08:36.319540+00:00",
+      "price_sek": 599.0,
+      "stock_status": "in_stock",
+      "language": "Chinese",
+      "format": "booster box",
+      "content_evidence": {
+        "packs": 15,
+        "cards_per_pack": 5,
+        "retailer_family_terms": [
+          "holografiska"
+        ]
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "TheMinifigVault",
+      "product_id": 10889772564818,
+      "variant_id": 53818333823314,
+      "canonical_slug": "aq-one-piece-op15-eb04-en-pack",
+      "url": "https://theminifigvault.com/products/one-piece-op-15-eb04-adventure-on-kamis-island-booster-pack-12-kort-eng?variant=53818333823314",
+      "observed_at": "2026-10-07T05:08:36.358315+00:00",
+      "price_sek": 99.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "single pack",
+      "content_evidence": {
+        "packs": 1,
+        "cards_per_pack": 12,
+        "retailer_family_terms": []
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "TheMinifigVault",
+      "product_id": 10852783456594,
+      "variant_id": 53693139288402,
+      "canonical_slug": "kv-one-piece-op10-jp-pack",
+      "url": "https://theminifigvault.com/products/one-piece-op-10-royal-blood-booster-pack-6-kort-jp?variant=53693139288402",
+      "observed_at": "2026-10-07T05:08:36.240269+00:00",
+      "price_sek": 69.0,
+      "stock_status": "in_stock",
+      "language": "Japanese",
+      "format": "single pack",
+      "content_evidence": {
+        "packs": 1,
+        "cards_per_pack": 6,
+        "retailer_family_terms": []
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "TheMinifigVault",
+      "product_id": 10822561300818,
+      "variant_id": 53600219857234,
+      "canonical_slug": "kv-pokemon-scarlet-violet-destined-rivals-booster-bundle",
+      "url": "https://theminifigvault.com/products/pokemon-scarlet-violet-destined-rivals-booster-bundle-6-pack-eng?variant=53600219857234",
+      "observed_at": "2026-10-07T05:08:36.408880+00:00",
+      "price_sek": 949.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "booster bundle",
+      "content_evidence": {
+        "packs": 6,
+        "cards_per_pack": 10,
+        "retailer_family_terms": []
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "TheMinifigVault",
+      "product_id": 10620039692626,
+      "variant_id": 52838189859154,
+      "canonical_slug": "catalog-pokemon-76adeefa6baeef",
+      "url": "https://theminifigvault.com/products/pokemon-sword-shield-silver-tempest-booster-pack-10-kort-eng?variant=52838189859154",
+      "observed_at": "2026-10-07T05:08:41.269844+00:00",
+      "price_sek": 179.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "single pack",
+      "content_evidence": {
+        "packs": 1,
+        "cards_per_pack": 10,
+        "retailer_family_terms": []
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "TheMinifigVault",
+      "product_id": 10620038676818,
+      "variant_id": 52838185501010,
+      "canonical_slug": "scan-pokemon-ascended-heroes-en-pack",
+      "url": "https://theminifigvault.com/products/pokemon-mega-evolution-ascended-heroes-booster-pack-10-cards-eng?variant=52838185501010",
+      "observed_at": "2026-10-07T05:08:41.299895+00:00",
+      "price_sek": 169.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "single pack",
+      "content_evidence": {
+        "packs": 1,
+        "cards_per_pack": 10,
+        "retailer_family_terms": [
+          "Special Illustration Rare",
+          "Illustration Rare"
+        ]
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "The Sealed Poke Vault",
+      "product_id": 16053435072893,
+      "variant_id": 58804017430909,
+      "canonical_slug": "scan-pokemon-twilight-masquerade-en-sleeved",
+      "url": "https://www.tspvault.se/products/pokemon-scarlet-violet-twilight-masquerade-sleeved-booster-pack?variant=58804017430909",
+      "observed_at": "2026-10-07T05:08:39.611450+00:00",
+      "price_sek": 119.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "single pack",
+      "content_evidence": {
+        "packs": 1,
+        "cards_per_pack": 10,
+        "retailer_family_terms": [
+          "Special Illustration Rare",
+          "Illustration Rare",
+          "Hyper Rare"
+        ]
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "The Sealed Poke Vault",
+      "product_id": 16053431468413,
+      "variant_id": 58803997606269,
+      "canonical_slug": "scan-pokemon-chaos-rising-en-sleeved",
+      "url": "https://www.tspvault.se/products/pokemon-tcg-chaos-rising-sleeved-booster-pack?variant=58803997606269",
+      "observed_at": "2026-10-07T05:08:44.303674+00:00",
+      "price_sek": 75.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "single pack",
+      "content_evidence": {
+        "packs": 1,
+        "cards_per_pack": 10,
+        "retailer_family_terms": [
+          "Special Illustration Rare",
+          "Illustration Rare",
+          "Hyper Rare"
+        ]
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "The Sealed Poke Vault",
+      "product_id": 16053366948221,
+      "variant_id": 58803860734333,
+      "canonical_slug": "scan-pokemon-pitch-black-en-sleeved",
+      "url": "https://www.tspvault.se/products/pokemon-tcg-pitch-black-sleeved-booster-pack?variant=58803860734333",
+      "observed_at": "2026-10-07T05:08:44.327151+00:00",
+      "price_sek": 89.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "single pack",
+      "content_evidence": {
+        "packs": 1,
+        "cards_per_pack": 10,
+        "retailer_family_terms": [
+          "Special Illustration Rare",
+          "Illustration Rare",
+          "Hyper Rare"
+        ]
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    },
+    {
+      "store_name": "The Sealed Poke Vault",
+      "product_id": 15759437496701,
+      "variant_id": 57685009465725,
+      "canonical_slug": "catalog-pokemon-2abeb3be2b4e1b",
+      "url": "https://www.tspvault.se/products/phantasmal-flames-m02-elite-trainer-box?variant=57685009465725",
+      "observed_at": "2026-10-07T05:08:44.374104+00:00",
+      "price_sek": 1689.0,
+      "stock_status": "in_stock",
+      "language": "English",
+      "format": "elite trainer box",
+      "content_evidence": {
+        "packs": 9,
+        "cards_per_pack": 10,
+        "retailer_family_terms": [
+          "Special Illustration Rare",
+          "Illustration Rare"
+        ]
+      },
+      "review": "Explicit identity and contents review; no box odds inferred from pack counts."
+    }
+  ],
+  "new_product_slugs": [
+    "scan-pokemon-30th-celebration-en-eevee-blister",
+    "scan-pokemon-30th-celebration-en-etb",
+    "scan-pokemon-30th-celebration-en-pack",
+    "scan-pokemon-30th-celebration-en-poster",
+    "scan-pokemon-ascended-heroes-en-pack",
+    "scan-pokemon-chaos-rising-en-sleeved",
+    "scan-pokemon-destined-rivals-etb",
+    "scan-pokemon-mega-evolution-en-pack",
+    "scan-pokemon-pitch-black-en-sleeved",
+    "scan-pokemon-twilight-masquerade-en-sleeved"
+  ],
+  "discovered_only": [
+    {
+      "store_name": "Swepoke",
+      "source_url": "https://www.swepoke.se/",
+      "reason": "Product page could not independently confirm current stock; not promoted to buyable offers."
+    }
+  ]
+}

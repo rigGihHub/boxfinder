@@ -1,0 +1,892 @@
+{
+  "scan-pokemon-destined-rivals-etb": {
+    "source_name": "The Pokémon Company official Scarlet & Violet—Destined Rivals expansion gallery",
+    "source_url": "https://tcg.pokemon.com/en-us/expansions/destined-rivals/",
+    "key_names": [
+      "Team Rocket's Mewtwo ex",
+      "Cynthia's Garchomp ex",
+      "Ethan's Ho-Oh ex",
+      "Team Rocket's Crobat ex"
+    ],
+    "headline_chases": [
+      {
+        "card": "Team Rocket's Mewtwo ex",
+        "tier": "JACKPOT",
+        "odds": "Finns i det officiella setgalleriet; kortspecifikt packodds ej publicerat",
+        "why": "Setets centrala Team Rocket- och Mewtwo-träff."
+      },
+      {
+        "card": "Cynthia's Garchomp ex",
+        "tier": "MONSTER",
+        "odds": "Finns i det officiella setgalleriet; kortspecifikt packodds ej publicerat",
+        "why": "Namngiven Champion/Pokémon-kombination."
+      },
+      {
+        "card": "Ethan's Ho-Oh ex",
+        "tier": "MYCKET BRA",
+        "odds": "Finns i det officiella setgalleriet; kortspecifikt packodds ej publicerat",
+        "why": "Officiellt namngivet Trainer's Pokémon ex."
+      },
+      {
+        "card": "Team Rocket's Crobat ex",
+        "tier": "MYCKET BRA",
+        "odds": "Finns i det officiella setgalleriet; kortspecifikt packodds ej publicerat",
+        "why": "Ytterligare konkret Team Rocket-chase."
+      }
+    ],
+    "why_exciting": [
+      "Nio Destined Rivals-boosters och en Team Rocket’s Wobbuffet-promo enligt The Pokémon Company."
+    ],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "9 boosterpaket",
+          "Fast Team Rocket’s Wobbuffet-promo"
+        ]
+      },
+      "good": {
+        "label": "Bra träff",
+        "score": 65,
+        "items": [
+          "Trainer's Pokémon ex eller illustration rare"
+        ]
+      },
+      "big": {
+        "label": "Riktigt bra",
+        "score": 76,
+        "items": [
+          "namngiven specialillustration"
+        ]
+      },
+      "jackpot": {
+        "label": "Setets toppnamn",
+        "score": 88,
+        "items": [
+          "Team Rocket's Mewtwo ex i hög rarity"
+        ]
+      }
+    },
+    "caveat": "Nio boosterpaket och en fast Wobbuffet-promo. Slumpade Mewtwo-, Garchomp- och Ho-Oh-kort garanteras inte. Packantal ger inga egna rankningspoäng; kortspecifika odds och marknads-EV saknas.",
+    "verified_at": "2026-10-07T05:08:19.856716+00:00",
+    "confidence": 90,
+    "format_hits": [],
+    "content_source_url": "https://www.pokemon.com/uk/pokemon-tcg/product-gallery/scarlet-violet-destined-rivals-elite-trainer-box"
+  },
+  "scan-pokemon-30th-celebration-en-pack": {
+    "source_name": "The Pokémon Company · officiell setinformation",
+    "source_url": "https://www.pokemon.com/us/news/look-at-electrifying-pikachu-cards-from-pokemon-tcg-30th-celebration",
+    "verified_at": "2026-10-07T05:08:20.013443+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_named_cards",
+    "key_names": [
+      "Pikachu ex Special Illustration Rare (dag/natt)"
+    ],
+    "headline_chases": [
+      {
+        "card": "Pikachu ex Special Illustration Rare (dag/natt)",
+        "tier": "MYCKET BRA",
+        "odds": "Bekräftat setkort; kortspecifika packodds saknas."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpat innehåll"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Pikachu ex Special Illustration Rare (dag/natt)"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Officiell setinformation bekräftar de namngivna korten."
+    ],
+    "caveat": "Kortspecifika packodds och sålda kortvärden saknas. Namngivna slumpade kort garanteras inte. Förpackningsinnehåll verifieras separat hos återförsäljaren."
+  },
+  "scan-pokemon-30th-celebration-en-etb": {
+    "source_name": "The Pokémon Company · officiell setinformation",
+    "source_url": "https://www.pokemon.com/us/news/look-at-electrifying-pikachu-cards-from-pokemon-tcg-30th-celebration",
+    "verified_at": "2026-10-07T05:08:20.044418+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_named_cards",
+    "key_names": [
+      "Pikachu ex Special Illustration Rare (dag/natt)"
+    ],
+    "headline_chases": [
+      {
+        "card": "Pikachu ex Special Illustration Rare (dag/natt)",
+        "tier": "MYCKET BRA",
+        "odds": "Bekräftat setkort; kortspecifika packodds saknas."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpat innehåll"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Pikachu ex Special Illustration Rare (dag/natt)"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Officiell setinformation bekräftar de namngivna korten."
+    ],
+    "caveat": "Kortspecifika packodds och sålda kortvärden saknas. Namngivna slumpade kort garanteras inte. Förpackningsinnehåll verifieras separat hos återförsäljaren."
+  },
+  "catalog-pokemon-219eeb0479a9d8": {
+    "source_name": "The Pokémon Company · officiell setinformation",
+    "source_url": "https://www.pokemon.com/us/pokemon-tcg/pokemon-cards/series/swsh10/46",
+    "verified_at": "2026-10-07T05:08:20.090606+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_named_cards",
+    "key_names": [
+      "Radiant Greninja"
+    ],
+    "headline_chases": [
+      {
+        "card": "Radiant Greninja",
+        "tier": "MYCKET BRA",
+        "odds": "Bekräftat setkort; kortspecifika packodds saknas."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpat innehåll"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Radiant Greninja"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Officiell setinformation bekräftar de namngivna korten."
+    ],
+    "caveat": "Kortspecifika packodds och sålda kortvärden saknas. Namngivna slumpade kort garanteras inte. Förpackningsinnehåll verifieras separat hos återförsäljaren."
+  },
+  "scan-pokemon-30th-celebration-en-poster": {
+    "source_name": "The Pokémon Company · officiell setinformation",
+    "source_url": "https://www.pokemon.com/us/news/look-at-electrifying-pikachu-cards-from-pokemon-tcg-30th-celebration",
+    "verified_at": "2026-10-07T05:08:24.805471+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_named_cards",
+    "key_names": [
+      "Pikachu ex Special Illustration Rare (dag/natt)"
+    ],
+    "headline_chases": [
+      {
+        "card": "Pikachu ex Special Illustration Rare (dag/natt)",
+        "tier": "MYCKET BRA",
+        "odds": "Bekräftat setkort; kortspecifika packodds saknas."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpat innehåll"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Pikachu ex Special Illustration Rare (dag/natt)"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Officiell setinformation bekräftar de namngivna korten."
+    ],
+    "caveat": "Kortspecifika packodds och sålda kortvärden saknas. Namngivna slumpade kort garanteras inte. Förpackningsinnehåll verifieras separat hos återförsäljaren."
+  },
+  "catalog-pokemon-c18b6da39a0432": {
+    "source_name": "The Pokémon Company · officiell setinformation",
+    "source_url": "https://www.pokemon.com/uk/pokemon-news/mew-vmax-boltund-vmax-and-more-in-pokemon-tcg-sword-shield-fusion-strike",
+    "verified_at": "2026-10-07T05:08:24.868937+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_named_cards",
+    "key_names": [
+      "Mew VMAX",
+      "Boltund VMAX"
+    ],
+    "headline_chases": [
+      {
+        "card": "Mew VMAX",
+        "tier": "MYCKET BRA",
+        "odds": "Bekräftat setkort; kortspecifika packodds saknas."
+      },
+      {
+        "card": "Boltund VMAX",
+        "tier": "MYCKET BRA",
+        "odds": "Bekräftat setkort; kortspecifika packodds saknas."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpat innehåll"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Mew VMAX",
+          "Boltund VMAX"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Officiell setinformation bekräftar de namngivna korten."
+    ],
+    "caveat": "Kortspecifika packodds och sålda kortvärden saknas. Namngivna slumpade kort garanteras inte. Förpackningsinnehåll verifieras separat hos återförsäljaren."
+  },
+  "scan-pokemon-mega-evolution-en-pack": {
+    "source_name": "Återförsäljarens produktbeskrivning",
+    "source_url": "https://theminifigvault.com/products/pokemon-mega-evolution-mega-evolution-booster-pack-10-kort-eng?variant=54862027751762",
+    "verified_at": "2026-10-07T05:08:31.087221+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Special Illustration Rare",
+      "Illustration Rare"
+    ],
+    "headline_chases": [
+      {
+        "card": "Special Illustration Rare",
+        "tier": "MYCKET BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      },
+      {
+        "card": "Illustration Rare",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpat kortinnehåll; träfffrekvens okänd"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Special Illustration Rare",
+          "Illustration Rare"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Kortfamiljerna anges i butikens beskrivning av den här produkten."
+    ],
+    "caveat": "Underlaget är butikens produktbeskrivning. Namngivna toppkort, träffrekvens och sålda kortvärden är inte verifierade. Inga slumpade kort eller boxträffar garanteras."
+  },
+  "catalog-one-piece-c561cbfe3cfe6a": {
+    "source_name": "Återförsäljarens produktbeskrivning",
+    "source_url": "https://theminifigvault.com/products/one-piece-op-13-carrying-on-his-will-booster-pack-12-kort-eng?variant=54861973389650",
+    "verified_at": "2026-10-07T05:08:30.652956+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Secret Rare",
+      "Super Rare"
+    ],
+    "headline_chases": [
+      {
+        "card": "Secret Rare",
+        "tier": "MYCKET BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      },
+      {
+        "card": "Super Rare",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpat kortinnehåll; träfffrekvens okänd"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Secret Rare",
+          "Super Rare"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Kortfamiljerna anges i butikens beskrivning av den här produkten."
+    ],
+    "caveat": "Underlaget är butikens produktbeskrivning. Namngivna toppkort, träffrekvens och sålda kortvärden är inte verifierade. Inga slumpade kort eller boxträffar garanteras."
+  },
+  "scan-pokemon-30th-celebration-en-eevee-blister": {
+    "source_name": "The Pokémon Company · officiell setinformation",
+    "source_url": "https://www.pokemon.com/us/news/look-at-electrifying-pikachu-cards-from-pokemon-tcg-30th-celebration",
+    "verified_at": "2026-10-07T05:08:30.760888+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_named_cards",
+    "key_names": [
+      "Pikachu ex Special Illustration Rare (dag/natt)"
+    ],
+    "headline_chases": [
+      {
+        "card": "Pikachu ex Special Illustration Rare (dag/natt)",
+        "tier": "MYCKET BRA",
+        "odds": "Bekräftat setkort; kortspecifika packodds saknas."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpat innehåll"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Pikachu ex Special Illustration Rare (dag/natt)"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Officiell setinformation bekräftar de namngivna korten."
+    ],
+    "caveat": "Kortspecifika packodds och sålda kortvärden saknas. Namngivna slumpade kort garanteras inte. Förpackningsinnehåll verifieras separat hos återförsäljaren."
+  },
+  "kv-pokemon-chasing-glory-together-slim-booster-box-kinesisk": {
+    "source_name": "Återförsäljarens produktbeskrivning",
+    "source_url": "https://theminifigvault.com/products/pokemon-scarlet-violet-chasing-glory-together-csv10c-slim-booster-box-15-pack-cn?variant=54543810527570",
+    "verified_at": "2026-10-07T05:08:36.319540+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Holografiska kort"
+    ],
+    "headline_chases": [
+      {
+        "card": "Holografiska kort",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpat kortinnehåll; träfffrekvens okänd"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Holografiska kort"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Kortfamiljerna anges i butikens beskrivning av den här produkten."
+    ],
+    "caveat": "Underlaget är butikens produktbeskrivning. Namngivna toppkort, träffrekvens och sålda kortvärden är inte verifierade. Inga slumpade kort eller boxträffar garanteras."
+  },
+  "kv-pokemon-scarlet-violet-destined-rivals-booster-bundle": {
+    "source_name": "The Pokémon Company official Scarlet & Violet—Destined Rivals expansion gallery",
+    "source_url": "https://tcg.pokemon.com/en-us/expansions/destined-rivals/",
+    "key_names": [
+      "Team Rocket's Mewtwo ex",
+      "Cynthia's Garchomp ex",
+      "Ethan's Ho-Oh ex",
+      "Team Rocket's Crobat ex"
+    ],
+    "headline_chases": [
+      {
+        "card": "Team Rocket's Mewtwo ex",
+        "tier": "JACKPOT",
+        "odds": "Finns i det officiella setgalleriet; kortspecifikt packodds ej publicerat",
+        "why": "Setets centrala Team Rocket- och Mewtwo-träff."
+      },
+      {
+        "card": "Cynthia's Garchomp ex",
+        "tier": "MONSTER",
+        "odds": "Finns i det officiella setgalleriet; kortspecifikt packodds ej publicerat",
+        "why": "Namngiven Champion/Pokémon-kombination."
+      },
+      {
+        "card": "Ethan's Ho-Oh ex",
+        "tier": "MYCKET BRA",
+        "odds": "Finns i det officiella setgalleriet; kortspecifikt packodds ej publicerat",
+        "why": "Officiellt namngivet Trainer's Pokémon ex."
+      },
+      {
+        "card": "Team Rocket's Crobat ex",
+        "tier": "MYCKET BRA",
+        "odds": "Finns i det officiella setgalleriet; kortspecifikt packodds ej publicerat",
+        "why": "Ytterligare konkret Team Rocket-chase."
+      }
+    ],
+    "why_exciting": [
+      "Sex Destined Rivals-boosterpaket med tillgång till setets bekräftade kort."
+    ],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "6 boosterpaket"
+        ]
+      },
+      "good": {
+        "label": "Bra träff",
+        "score": 65,
+        "items": [
+          "Trainer's Pokémon ex eller illustration rare"
+        ]
+      },
+      "big": {
+        "label": "Riktigt bra",
+        "score": 76,
+        "items": [
+          "namngiven specialillustration"
+        ]
+      },
+      "jackpot": {
+        "label": "Setets toppnamn",
+        "score": 88,
+        "items": [
+          "Team Rocket's Mewtwo ex i hög rarity"
+        ]
+      }
+    },
+    "caveat": "Sex boosterpaket. Inga namngivna slumpade kort garanteras; kortspecifika odds och sålda värden saknas. Packantal ger inga egna rankningspoäng.",
+    "verified_at": "2026-10-07T05:08:36.408880+00:00",
+    "confidence": 90,
+    "format_hits": []
+  },
+  "catalog-pokemon-76adeefa6baeef": {
+    "source_name": "The Pokémon Company · officiell setinformation",
+    "source_url": "https://assets.pokemon.com/assets/cms2/pdf/trading-card-game/checklist/swsh12_web_cardlist_en.pdf",
+    "verified_at": "2026-10-07T05:08:41.269844+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_named_cards",
+    "key_names": [
+      "Lugia V #186",
+      "Regidrago VSTAR #136"
+    ],
+    "headline_chases": [
+      {
+        "card": "Lugia V #186",
+        "tier": "MYCKET BRA",
+        "odds": "Bekräftat setkort; kortspecifika packodds saknas."
+      },
+      {
+        "card": "Regidrago VSTAR #136",
+        "tier": "MYCKET BRA",
+        "odds": "Bekräftat setkort; kortspecifika packodds saknas."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpat innehåll"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Lugia V #186",
+          "Regidrago VSTAR #136"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Officiell setinformation bekräftar de namngivna korten."
+    ],
+    "caveat": "Kortspecifika packodds och sålda kortvärden saknas. Namngivna slumpade kort garanteras inte. Förpackningsinnehåll verifieras separat hos återförsäljaren."
+  },
+  "scan-pokemon-ascended-heroes-en-pack": {
+    "source_name": "Återförsäljarens produktbeskrivning",
+    "source_url": "https://theminifigvault.com/products/pokemon-mega-evolution-ascended-heroes-booster-pack-10-cards-eng?variant=52838185501010",
+    "verified_at": "2026-10-07T05:08:41.299895+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Special Illustration Rare",
+      "Illustration Rare"
+    ],
+    "headline_chases": [
+      {
+        "card": "Special Illustration Rare",
+        "tier": "MYCKET BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      },
+      {
+        "card": "Illustration Rare",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpat kortinnehåll; träfffrekvens okänd"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Special Illustration Rare",
+          "Illustration Rare"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Kortfamiljerna anges i butikens beskrivning av den här produkten."
+    ],
+    "caveat": "Underlaget är butikens produktbeskrivning. Namngivna toppkort, träffrekvens och sålda kortvärden är inte verifierade. Inga slumpade kort eller boxträffar garanteras."
+  },
+  "scan-pokemon-twilight-masquerade-en-sleeved": {
+    "source_name": "Återförsäljarens produktbeskrivning",
+    "source_url": "https://www.tspvault.se/products/pokemon-scarlet-violet-twilight-masquerade-sleeved-booster-pack?variant=58804017430909",
+    "verified_at": "2026-10-07T05:08:39.611450+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Special Illustration Rare",
+      "Illustration Rare",
+      "Hyper Rare"
+    ],
+    "headline_chases": [
+      {
+        "card": "Special Illustration Rare",
+        "tier": "MYCKET BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      },
+      {
+        "card": "Illustration Rare",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      },
+      {
+        "card": "Hyper Rare",
+        "tier": "MYCKET BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpat kortinnehåll; träfffrekvens okänd"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Special Illustration Rare",
+          "Illustration Rare",
+          "Hyper Rare"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Kortfamiljerna anges i butikens beskrivning av den här produkten."
+    ],
+    "caveat": "Underlaget är butikens produktbeskrivning. Namngivna toppkort, träffrekvens och sålda kortvärden är inte verifierade. Inga slumpade kort eller boxträffar garanteras."
+  },
+  "scan-pokemon-chaos-rising-en-sleeved": {
+    "source_name": "Återförsäljarens produktbeskrivning",
+    "source_url": "https://www.tspvault.se/products/pokemon-tcg-chaos-rising-sleeved-booster-pack?variant=58803997606269",
+    "verified_at": "2026-10-07T05:08:44.303674+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Special Illustration Rare",
+      "Illustration Rare",
+      "Hyper Rare"
+    ],
+    "headline_chases": [
+      {
+        "card": "Special Illustration Rare",
+        "tier": "MYCKET BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      },
+      {
+        "card": "Illustration Rare",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      },
+      {
+        "card": "Hyper Rare",
+        "tier": "MYCKET BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpat kortinnehåll; träfffrekvens okänd"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Special Illustration Rare",
+          "Illustration Rare",
+          "Hyper Rare"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Kortfamiljerna anges i butikens beskrivning av den här produkten."
+    ],
+    "caveat": "Underlaget är butikens produktbeskrivning. Namngivna toppkort, träffrekvens och sålda kortvärden är inte verifierade. Inga slumpade kort eller boxträffar garanteras."
+  },
+  "scan-pokemon-pitch-black-en-sleeved": {
+    "source_name": "Återförsäljarens produktbeskrivning",
+    "source_url": "https://www.tspvault.se/products/pokemon-tcg-pitch-black-sleeved-booster-pack?variant=58803860734333",
+    "verified_at": "2026-10-07T05:08:44.327151+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Special Illustration Rare",
+      "Illustration Rare",
+      "Hyper Rare"
+    ],
+    "headline_chases": [
+      {
+        "card": "Special Illustration Rare",
+        "tier": "MYCKET BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      },
+      {
+        "card": "Illustration Rare",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      },
+      {
+        "card": "Hyper Rare",
+        "tier": "MYCKET BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpat kortinnehåll; träfffrekvens okänd"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Special Illustration Rare",
+          "Illustration Rare",
+          "Hyper Rare"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Kortfamiljerna anges i butikens beskrivning av den här produkten."
+    ],
+    "caveat": "Underlaget är butikens produktbeskrivning. Namngivna toppkort, träffrekvens och sålda kortvärden är inte verifierade. Inga slumpade kort eller boxträffar garanteras."
+  },
+  "catalog-pokemon-2abeb3be2b4e1b": {
+    "source_name": "Återförsäljarens produktbeskrivning",
+    "source_url": "https://www.tspvault.se/products/phantasmal-flames-m02-elite-trainer-box?variant=57685009465725",
+    "verified_at": "2026-10-07T05:08:44.374104+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Special Illustration Rare",
+      "Illustration Rare"
+    ],
+    "headline_chases": [
+      {
+        "card": "Special Illustration Rare",
+        "tier": "MYCKET BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      },
+      {
+        "card": "Illustration Rare",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpat kortinnehåll; träfffrekvens okänd"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Special Illustration Rare",
+          "Illustration Rare"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Kortfamiljerna anges i butikens beskrivning av den här produkten."
+    ],
+    "caveat": "Underlaget är butikens produktbeskrivning. Namngivna toppkort, träffrekvens och sålda kortvärden är inte verifierade. Inga slumpade kort eller boxträffar garanteras."
+  }
+}

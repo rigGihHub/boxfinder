@@ -1,4 +1,13 @@
-# BoxFinder v0.59.0
+# BoxFinder v0.60.0
+
+## v0.60.0 – nya produkter och återförsäljare, 7 oktober
+
+- Tre nya verifierade återförsäljare: Hobbybutiken, TheMinifigVault och The Sealed Poke Vault. Samtliga publicerade katalogsidor lästes: 890 produkter och 890 varianter, inklusive löskort, LEGO och slutsålda varor i granskningsunderlaget.
+- 22 lagerförda erbjudanden matchades separat mot språk och förpackning. Tio produktidentiteter är nya, bland annat engelska 30th Celebration-format, Destined Rivals ETB, Mega Evolution- och Ascended Heroes-paket samt separata sleeved-paket.
+- Aktuella produktsidor kontrollerades för förbeställningsmeddelanden. Priser, variantlänkar och observationstider bevaras vid omstart. Varje butik kan väljas i rankingen med sitt eget pris och sin egen köplänk.
+- 17 nya eller kompletterade innehållsprofiler använder officiell Pokémon-information eller tydligt märkta kortfamiljer från butik. Inga individuella packodds, boxgarantier eller marknadsvärden antas. Okänt kortantal för engelska 30th Celebration förblir okänt.
+- Swepoke hittades som ytterligare butik, men osäker lagerinformation gav inga köpbara erbjudanden. Motstridiga setuppgifter, otydlig promoidentitet och produkter utan underlag stannar i granskningskön.
+- Priser och budgetfilter är fortsatt exklusive frakt; packantal ger inga egna rankingpoäng. Inga schemalagda insamlingar aktiveras av inventeringen.
 
 ## v0.59.0 – hela Speltrollets och Coolcards kataloger
 

@@ -8,6 +8,7 @@ from .models import BoxAnalysis, Offer, PriceHistory, Product, ProductVariant, S
 from .services.matching import normalize_title
 from .services.kantovault_snapshot import OFFERS as KANTOVAULT_OFFERS, PROFILES as KANTOVAULT_PROFILES, seed_inventory as seed_kantovault_catalog, snapshot_datetime
 from .services.two_shops_snapshot import OFFERS as TWO_SHOPS_OFFERS, PROFILES as TWO_SHOPS_PROFILES, seed_inventory as seed_two_shops_catalog
+from .services.new_retailers_snapshot import OFFERS as NEW_RETAILERS_OFFERS, PROFILES as NEW_RETAILERS_PROFILES, seed_inventory as seed_new_retailers_catalog
 
 SEED = [
     ("2025-26 Upper Deck Series 1", "Hockey", "Upper Deck", "2025-26", "Series 1", "Hobby Box", 799, [560,780,86,80,84,48,92,78,82,72,"Medel-hög"]),
@@ -16,6 +17,9 @@ SEED = [
 ]
 
 REAL_STORES = [
+    dict(name="Hobbybutiken", homepage_url="https://hobbybutiken.com/", source_url="https://hobbybutiken.com/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="TheMinifigVault", homepage_url="https://theminifigvault.com/", source_url="https://theminifigvault.com/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="The Sealed Poke Vault", homepage_url="https://www.tspvault.se/", source_url="https://www.tspvault.se/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Mox Games", homepage_url="https://moxgames.se/", source_url="https://moxgames.se/products/booster-boxes", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Alara Games", homepage_url="https://www.alaragames.se/", source_url="https://www.alaragames.se/collections/mtg-boosters", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Terratide", homepage_url="https://terratide.se/", source_url="https://terratide.se/sv-se/samlarkort", collection_method="manual", adapter_key="manual", policy_status="review_required"),
@@ -523,6 +527,20 @@ for snapshot_row in TWO_SHOPS_OFFERS:
         REAL_SNAPSHOT.append(refreshed)
     else:
         REAL_SNAPSHOT[REAL_SNAPSHOT.index(existing_row)] = refreshed
+
+PRE_NEW_RETAILERS_SNAPSHOT = [dict(row) for row in REAL_SNAPSHOT]
+for snapshot_row in NEW_RETAILERS_OFFERS:
+    refreshed = dict(snapshot_row, observed_at=snapshot_datetime(snapshot_row['observed_at']))
+    existing_row = next((row for row in REAL_SNAPSHOT
+                         if row.get('store_name', 'Coolcard') == refreshed['store_name']
+                         and row['sku'] == refreshed['sku']), None)
+    if existing_row is None:
+        REAL_SNAPSHOT.append(refreshed)
+    else:
+        REAL_SNAPSHOT[REAL_SNAPSHOT.index(existing_row)] = refreshed
+
+def seed_new_retailers_inventory():
+    seed_new_retailers_catalog(SessionLocal)
 
 def seed_kantovault_inventory():
     seed_kantovault_catalog(SessionLocal)
@@ -2782,6 +2800,8 @@ CHASE_PROFILES.update(json.loads((Path(__file__).parent / "snapshots" / "profile
 CHASE_PROFILES.update(KANTOVAULT_PROFILES)
 PRE_TWO_SHOPS_PROFILES = dict(CHASE_PROFILES)
 CHASE_PROFILES.update(TWO_SHOPS_PROFILES)
+PRE_NEW_RETAILERS_PROFILES = dict(CHASE_PROFILES)
+CHASE_PROFILES.update(NEW_RETAILERS_PROFILES)
 
 def seed_chase_profiles():
     db=SessionLocal()
@@ -2812,7 +2832,7 @@ def seed_chase_profiles():
             row.content_json=json.dumps({k:v for k,v in data.items() if k not in ("source_name","source_url")},ensure_ascii=False)
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
-            row.verified_at=(snapshot_datetime(data["verified_at"]) if slug in KANTOVAULT_PROFILES or slug in TWO_SHOPS_PROFILES else
+            row.verified_at=(snapshot_datetime(data["verified_at"]) if slug in KANTOVAULT_PROFILES or slug in TWO_SHOPS_PROFILES or slug in NEW_RETAILERS_PROFILES else
                 OCTOBER_04_PRODUCTS_VERIFIED_AT if slug in OCTOBER_04_PRODUCTS_PROFILE_SLUGS
                 else OCTOBER_04_DEPTH_VERIFIED_AT if slug in OCTOBER_04_DEPTH_NEW_PROFILE_SLUGS
                 else OCTOBER_04_OBSERVED_AT if slug in OCTOBER_04_NEW_PROFILE_SLUGS
