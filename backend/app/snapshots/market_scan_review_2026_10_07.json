@@ -1,0 +1,275 @@
+{
+  "inventories": {
+    "Hobbykort": "market_scan_hobbykort_2026_10_07.json.gz",
+    "Pardon My Kicks": "market_scan_pardon_my_kicks_2026_10_07.json.gz",
+    "RGB KingZ": "market_scan_rgb_kingz_2026_10_07.json.gz",
+    "MonMon": "market_scan_monmon_2026_10_07.json.gz"
+  },
+  "accepted": [
+    {
+      "store_name": "Pardon My Kicks",
+      "product_id": "15402497507651",
+      "variant_id": "54781853466947",
+      "sku": "SHOPIFY-54781853466947",
+      "slug": "scan-topps-pl-2026-27-mega-tin-yellow",
+      "url": "https://pardonmykicks.se/products/topps-flagship-premier-league-2026-27-mega-tin-yellow?variant=54781853466947",
+      "observed_at": "2026-10-07T09:28:24.270183+00:00",
+      "language_evidence": "Engelsk Flagship-utgåva, separat färgidentitet enligt titel och produktfoto.",
+      "format": "tin",
+      "packs": 4,
+      "cards_per_pack": 10,
+      "stock_evidence": "Tillgänglig Shopify-variant och aktuell produktsida utan lokal förbokningstext.",
+      "families": [
+        "Pink Voltage",
+        "On Fire",
+        "Numrerade paralleller",
+        "On Fire Autographs"
+      ]
+    },
+    {
+      "store_name": "Pardon My Kicks",
+      "product_id": "15402497474883",
+      "variant_id": "54781853434179",
+      "sku": "SHOPIFY-54781853434179",
+      "slug": "scan-topps-pl-2026-27-mega-tin-orange",
+      "url": "https://pardonmykicks.se/products/topps-flagship-premier-league-2026-27-mega-tin-orange?variant=54781853434179",
+      "observed_at": "2026-10-07T09:28:23.684891+00:00",
+      "language_evidence": "Engelsk Flagship-utgåva, separat färgidentitet enligt titel och produktfoto.",
+      "format": "tin",
+      "packs": 4,
+      "cards_per_pack": 10,
+      "stock_evidence": "Tillgänglig Shopify-variant och aktuell produktsida utan lokal förbokningstext.",
+      "families": [
+        "Pink Voltage",
+        "On Fire",
+        "Numrerade paralleller",
+        "On Fire Autographs"
+      ]
+    },
+    {
+      "store_name": "Pardon My Kicks",
+      "product_id": "15402497442115",
+      "variant_id": "54781853401411",
+      "sku": "SHOPIFY-54781853401411",
+      "slug": "scan-topps-pl-2026-27-mega-tin-pink",
+      "url": "https://pardonmykicks.se/products/topps-flagship-premier-league-2026-27-mega-tin-pink?variant=54781853401411",
+      "observed_at": "2026-10-07T09:28:24.150182+00:00",
+      "language_evidence": "Engelsk Flagship-utgåva, separat färgidentitet enligt titel och produktfoto.",
+      "format": "tin",
+      "packs": 4,
+      "cards_per_pack": 10,
+      "stock_evidence": "Tillgänglig Shopify-variant och aktuell produktsida utan lokal förbokningstext.",
+      "families": [
+        "Pink Voltage",
+        "On Fire",
+        "Numrerade paralleller",
+        "On Fire Autographs"
+      ]
+    },
+    {
+      "store_name": "Pardon My Kicks",
+      "product_id": "15401653764419",
+      "variant_id": "54776878793027",
+      "sku": "SHOPIFY-54776878793027",
+      "slug": "catalog-fotboll-aa52314dbfd22c",
+      "url": "https://pardonmykicks.se/products/topps-flagship-uefa-club-competitions-2025-26-hanger-pack?variant=54776878793027",
+      "observed_at": "2026-10-07T09:28:24.418185+00:00",
+      "language_evidence": "Engelsk UEFA Flagship-utgåva; ingen matchning till Chrome Hanger.",
+      "format": "hanger",
+      "packs": 1,
+      "cards_per_pack": 35,
+      "stock_evidence": "Tillgänglig Shopify-variant och aktuell produktsida utan lokal förbokningstext.",
+      "families": [
+        "Diamante Foil",
+        "Roots",
+        "Born Champ",
+        "8-Bit Shots"
+      ]
+    },
+    {
+      "store_name": "Pardon My Kicks",
+      "product_id": "15397637718339",
+      "variant_id": "54759109689667",
+      "sku": "SHOPIFY-54759109689667",
+      "slug": "catalog-fotboll-bd687d712794f5",
+      "url": "https://pardonmykicks.se/products/topps-flagship-premier-league-2026-27-booster-pack?variant=54759109689667",
+      "observed_at": "2026-10-07T09:28:23.946530+00:00",
+      "language_evidence": "Engelskt Flagship-paket enligt granskad produktbild (10 cards per pack).",
+      "format": "single pack",
+      "packs": 1,
+      "cards_per_pack": 10,
+      "stock_evidence": "Tillgänglig Shopify-variant och aktuell produktsida utan lokal förbokningstext.",
+      "families": [
+        "Numrerade paralleller",
+        "Autografkort"
+      ]
+    },
+    {
+      "store_name": "Pardon My Kicks",
+      "product_id": "15397637751107",
+      "variant_id": "54759109722435",
+      "sku": "SHOPIFY-54759109722435",
+      "slug": "scan-topps-pl-2026-27-eco-pack",
+      "url": "https://pardonmykicks.se/products/topps-flagship-premier-league-2026-27-eco-pack?variant=54759109722435",
+      "observed_at": "2026-10-07T09:28:24.471844+00:00",
+      "language_evidence": "Engelsk Flagship-utgåva enligt produktidentitet och förpackning.",
+      "format": "bundle",
+      "packs": 3,
+      "cards_per_pack": null,
+      "stock_evidence": "Tillgänglig Shopify-variant och aktuell produktsida utan lokal förbokningstext.",
+      "families": [
+        "Yellow Voltage",
+        "Perfect 10",
+        "Perfect 10 Autographs"
+      ]
+    },
+    {
+      "store_name": "Pardon My Kicks",
+      "product_id": "15397637849411",
+      "variant_id": "54759109853507",
+      "sku": "SHOPIFY-54759109853507",
+      "slug": "catalog-fotboll-045eb39760c32b",
+      "url": "https://pardonmykicks.se/products/topps-premier-league-flagship-2026-27-booster-box?variant=54759109853507",
+      "observed_at": "2026-10-07T09:28:27.703307+00:00",
+      "language_evidence": "Engelsk retail Flagship-display; hålls skild från Hobby Box.",
+      "format": "retail box",
+      "packs": 28,
+      "cards_per_pack": 10,
+      "stock_evidence": "Tillgänglig Shopify-variant och aktuell produktsida utan lokal förbokningstext.",
+      "families": [
+        "Mini-Diamond",
+        "Chrome Classics",
+        "Gold Lion"
+      ]
+    },
+    {
+      "store_name": "Pardon My Kicks",
+      "product_id": "15383938498883",
+      "variant_id": "54689234616643",
+      "sku": "SHOPIFY-54689234616643",
+      "slug": "catalog-fotboll-b2a339173f1c48",
+      "url": "https://pardonmykicks.se/products/topps-chrome-uefa-club-competitions-2025-26-hobby-box?variant=54689234616643",
+      "observed_at": "2026-10-07T09:28:27.910299+00:00",
+      "language_evidence": "Engelsk UEFA Chrome Hobby-utgåva, säsong 2025/26.",
+      "format": "hobby box",
+      "packs": 20,
+      "cards_per_pack": 4,
+      "stock_evidence": "Tillgänglig Shopify-variant och aktuell produktsida utan lokal förbokningstext.",
+      "families": [
+        "Refractors",
+        "Prism Refractors",
+        "Numrerade paralleller",
+        "Chrome Anime",
+        "Autografkort"
+      ]
+    },
+    {
+      "store_name": "RGB KingZ",
+      "product_id": "15979676762442",
+      "variant_id": "63006301520202",
+      "sku": "SHOPIFY-63006301520202",
+      "slug": "sp-mtg-reality-display",
+      "url": "https://rgbkingz.com/products/magic-the-gathering-reality-fracture-play-booster-box?variant=63006301520202",
+      "observed_at": "2026-10-07T09:28:16.046093+00:00",
+      "language_evidence": "Engelska kort uttryckligen i produktbeskrivningen; EN i bildfilens produktkod.",
+      "format": "booster box",
+      "packs": 30,
+      "cards_per_pack": 14,
+      "stock_evidence": "Tillgänglig Shopify-variant och aktuell produktsida utan lokal förbokningstext.",
+      "families": [
+        "Echoed Pairs"
+      ]
+    },
+    {
+      "store_name": "RGB KingZ",
+      "product_id": "15834178748746",
+      "variant_id": "62516676657482",
+      "sku": "SHOPIFY-62516676657482",
+      "slug": "catalog-yu-gi-oh-c5938c572a87c9",
+      "url": "https://rgbkingz.com/products/yu-gi-oh-cyberstorm-access-booster-pack?variant=62516676657482",
+      "observed_at": "2026-10-07T09:28:19.233643+00:00",
+      "language_evidence": "Butikens produkttagg Yu-Gi-Oh! Booster Pack (ENG). Ingen uppgift om 1st Edition antas.",
+      "format": "single pack",
+      "packs": 1,
+      "cards_per_pack": 9,
+      "stock_evidence": "Tillgänglig Shopify-variant och aktuell produktsida utan lokal förbokningstext.",
+      "families": [
+        "Super Rare",
+        "Ultra Rare",
+        "Secret Rare"
+      ]
+    },
+    {
+      "store_name": "RGB KingZ",
+      "product_id": "15656112881994",
+      "variant_id": "61825752531274",
+      "sku": "SHOPIFY-61825752531274",
+      "slug": "as-yugioh-phantom-revenge-pack",
+      "url": "https://rgbkingz.com/products/yu-gi-oh-phantom-revenge-booster-pack?variant=61825752531274",
+      "observed_at": "2026-10-07T09:28:22.302162+00:00",
+      "language_evidence": "Butikens produkttagg Yu-Gi-Oh! Booster Pack (ENG).",
+      "format": "single pack",
+      "packs": 1,
+      "cards_per_pack": 7,
+      "stock_evidence": "Tillgänglig Shopify-variant och aktuell produktsida utan lokal förbokningstext.",
+      "families": [
+        "Collector’s Rare",
+        "Starlight Rare"
+      ]
+    },
+    {
+      "store_name": "RGB KingZ",
+      "product_id": "15712481739082",
+      "variant_id": "62185371664714",
+      "sku": "SHOPIFY-62185371664714",
+      "slug": "catalog-lorcana-70cb1daeb58078",
+      "url": "https://rgbkingz.com/products/disney-lorcana-into-the-inklands-booster-pack?variant=62185371664714",
+      "observed_at": "2026-10-07T09:28:19.150826+00:00",
+      "language_evidence": "Engelskspråkig utgåva uttryckligen i produktbeskrivningen; hålls skild från japanska Inklands-paket.",
+      "format": "single pack",
+      "packs": 1,
+      "cards_per_pack": 12,
+      "stock_evidence": "Tillgänglig Shopify-variant och aktuell produktsida utan lokal förbokningstext.",
+      "families": [
+        "Foilkort"
+      ]
+    },
+    {
+      "store_name": "MonMon",
+      "sku": "RB04-BB24-EN-00171",
+      "slug": "catalog-riftbound-98e1fda35c6fbc",
+      "url": "https://monmon.se/produkt/riftbound-tcg-riftbound-2026-vendetta-booster-box-24",
+      "observed_at": "2026-10-07T09:28:28.492214+00:00",
+      "language_evidence": "Produktspecifikationen anger EN och Sealed; SKU RB04-BB24-EN-00171.",
+      "format": "booster box",
+      "packs": 24,
+      "cards_per_pack": 14,
+      "stock_evidence": "I lager och schema.org/InStock på den aktuella produktsidan.",
+      "families": [
+        "Epic",
+        "Showcase",
+        "Special alt-art"
+      ]
+    }
+  ],
+  "new_product_slugs": [
+    "scan-topps-pl-2026-27-eco-pack",
+    "scan-topps-pl-2026-27-mega-tin-orange",
+    "scan-topps-pl-2026-27-mega-tin-pink",
+    "scan-topps-pl-2026-27-mega-tin-yellow"
+  ],
+  "staged_notes": [
+    "Hobbykort: full inventering, inga nya erbjudanden utan separat innehållsgranskning.",
+    "RGB KingZ: Collector-display förhandsbokning; Digimon Time Stranger motstridigt kortantal; Duelists Advance specialedition ej verifierad; övriga språk inväntar belägg.",
+    "MonMon: endast Vendetta-produktsidan individuellt granskad. Webbplatsen är inte fullinventerad; allokeringsprodukter har inte godkänts.",
+    "Cardland: Kayou/DAKA-produktledtrådar inväntar verifierat språk och format.",
+    "TCG Center: inga nya erbjudanden, köpbarhet ej verifierad."
+  ],
+  "promotion_policy": "Manuell identitets-, innehålls- och lagergranskning. Inventering ger varken automatisk rankning eller tillstånd till schemalagd insamling.",
+  "identity_cross_checks": [
+    {
+      "source_url": "https://shop.premierleague.com/en/topps-2026%2F2027-flagship-edition-mega-tin/701246215001801.html",
+      "scope": "Official Premier League shop confirms three Mega Tin designs, 4x10-card packs and Pink Voltage/On Fire families. No inference of autograph or card-specific odds."
+    }
+  ]
+}

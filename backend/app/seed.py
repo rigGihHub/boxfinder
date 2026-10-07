@@ -10,6 +10,8 @@ from .services.kantovault_snapshot import OFFERS as KANTOVAULT_OFFERS, PROFILES 
 from .services.two_shops_snapshot import OFFERS as TWO_SHOPS_OFFERS, PROFILES as TWO_SHOPS_PROFILES, seed_inventory as seed_two_shops_catalog
 from .services.new_retailers_snapshot import OFFERS as NEW_RETAILERS_OFFERS, PROFILES as NEW_RETAILERS_PROFILES, seed_inventory as seed_new_retailers_catalog
 
+from .services.market_scan_snapshot import OFFERS as MARKET_SCAN_OFFERS, PROFILES as MARKET_SCAN_PROFILES, seed_inventory as seed_market_scan_catalog
+
 SEED = [
     ("2025-26 Upper Deck Series 1", "Hockey", "Upper Deck", "2025-26", "Series 1", "Hobby Box", 799, [560,780,86,80,84,48,92,78,82,72,"Medel-hög"]),
     ("Topps Chrome UEFA 2025", "Fotboll", "Topps", "2025", "Chrome UEFA", "Hobby Box", 1499, [850,1280,88,71,90,42,79,84,88,68,"Hög"]),
@@ -17,6 +19,8 @@ SEED = [
 ]
 
 REAL_STORES = [
+    dict(name="RGB KingZ", homepage_url="https://rgbkingz.com/", source_url="https://rgbkingz.com/pages/tcg", collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="MonMon", homepage_url="https://monmon.se/", source_url="https://monmon.se/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Hobbybutiken", homepage_url="https://hobbybutiken.com/", source_url="https://hobbybutiken.com/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="TheMinifigVault", homepage_url="https://theminifigvault.com/", source_url="https://theminifigvault.com/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="The Sealed Poke Vault", homepage_url="https://www.tspvault.se/", source_url="https://www.tspvault.se/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
@@ -29,7 +33,7 @@ REAL_STORES = [
     dict(name="Samlarhobby", homepage_url="https://www.samlarhobby.se/", source_url="https://www.samlarhobby.se/", collection_method="public_html", adapter_key="public_html_catalog", policy_status="review_required"),
     dict(name="Bangerpack", homepage_url="https://bangerpack.se/", source_url="https://bangerpack.se/", collection_method="public_html", adapter_key="public_html_catalog", policy_status="review_required"),
     dict(name="Kortlagret", homepage_url="https://kortlagret.se/", source_url="https://kortlagret.se/", collection_method="public_html", adapter_key="public_html_catalog", policy_status="review_required"),
-    dict(name="Pardon My Kicks", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
+    dict(name="Pardon My Kicks", homepage_url="https://pardonmykicks.se/", source_url="https://pardonmykicks.se/collections/fotbollskort", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="MajkiPoké", homepage_url=None, source_url=None, collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="TCGPoke", homepage_url="https://www.tcgpoke.se/", source_url="https://www.tcgpoke.se/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
     dict(name="Hatstore", homepage_url="https://hatstore.se/", source_url="https://hatstore.se/samlarkort/", collection_method="manual", adapter_key="manual", policy_status="review_required"),
@@ -538,6 +542,20 @@ for snapshot_row in NEW_RETAILERS_OFFERS:
         REAL_SNAPSHOT.append(refreshed)
     else:
         REAL_SNAPSHOT[REAL_SNAPSHOT.index(existing_row)] = refreshed
+
+PRE_MARKET_SCAN_SNAPSHOT = [dict(row) for row in REAL_SNAPSHOT]
+for snapshot_row in MARKET_SCAN_OFFERS:
+    refreshed = dict(snapshot_row, observed_at=snapshot_datetime(snapshot_row["observed_at"]))
+    existing_row = next((row for row in REAL_SNAPSHOT
+                         if row.get("store_name", "Coolcard") == refreshed["store_name"]
+                         and row["sku"] == refreshed["sku"]), None)
+    if existing_row is None:
+        REAL_SNAPSHOT.append(refreshed)
+    else:
+        REAL_SNAPSHOT[REAL_SNAPSHOT.index(existing_row)] = refreshed
+
+def seed_market_scan_inventory():
+    seed_market_scan_catalog(SessionLocal)
 
 def seed_new_retailers_inventory():
     seed_new_retailers_catalog(SessionLocal)
@@ -2802,6 +2820,8 @@ PRE_TWO_SHOPS_PROFILES = dict(CHASE_PROFILES)
 CHASE_PROFILES.update(TWO_SHOPS_PROFILES)
 PRE_NEW_RETAILERS_PROFILES = dict(CHASE_PROFILES)
 CHASE_PROFILES.update(NEW_RETAILERS_PROFILES)
+PRE_MARKET_SCAN_PROFILES = dict(CHASE_PROFILES)
+CHASE_PROFILES.update(MARKET_SCAN_PROFILES)
 
 def seed_chase_profiles():
     db=SessionLocal()
@@ -2832,7 +2852,7 @@ def seed_chase_profiles():
             row.content_json=json.dumps({k:v for k,v in data.items() if k not in ("source_name","source_url")},ensure_ascii=False)
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
-            row.verified_at=(snapshot_datetime(data["verified_at"]) if slug in KANTOVAULT_PROFILES or slug in TWO_SHOPS_PROFILES or slug in NEW_RETAILERS_PROFILES else
+            row.verified_at=(snapshot_datetime(data["verified_at"]) if slug in KANTOVAULT_PROFILES or slug in TWO_SHOPS_PROFILES or slug in NEW_RETAILERS_PROFILES or slug in MARKET_SCAN_PROFILES else
                 OCTOBER_04_PRODUCTS_VERIFIED_AT if slug in OCTOBER_04_PRODUCTS_PROFILE_SLUGS
                 else OCTOBER_04_DEPTH_VERIFIED_AT if slug in OCTOBER_04_DEPTH_NEW_PROFILE_SLUGS
                 else OCTOBER_04_OBSERVED_AT if slug in OCTOBER_04_NEW_PROFILE_SLUGS

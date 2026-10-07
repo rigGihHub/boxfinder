@@ -1,0 +1,538 @@
+{
+  "scan-topps-pl-2026-27-mega-tin-yellow": {
+    "source_name": "Pardon My Kicks · kortfamiljer på produktsidan",
+    "source_url": "https://pardonmykicks.se/products/topps-flagship-premier-league-2026-27-mega-tin-yellow?variant=54781853466947",
+    "verified_at": "2026-10-07T09:28:24.270183+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Pink Voltage",
+      "On Fire",
+      "Numrerade paralleller",
+      "On Fire Autographs"
+    ],
+    "headline_chases": [
+      {
+        "card": "Pink Voltage",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "On Fire",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "Numrerade paralleller",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "On Fire Autographs",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade kort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Pink Voltage",
+          "On Fire",
+          "Numrerade paralleller",
+          "On Fire Autographs"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Butiken anger dessa kortfamiljer för det granskade formatet."
+    ],
+    "caveat": "Butiksunderlag, inte verifierade kortspecifika odds eller marknadsvärden. Inga boxgarantier eller autografgarantier härleds. Packantal ger inga egna rankingpoäng."
+  },
+  "scan-topps-pl-2026-27-mega-tin-orange": {
+    "source_name": "Pardon My Kicks · kortfamiljer på produktsidan",
+    "source_url": "https://pardonmykicks.se/products/topps-flagship-premier-league-2026-27-mega-tin-orange?variant=54781853434179",
+    "verified_at": "2026-10-07T09:28:23.684891+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Pink Voltage",
+      "On Fire",
+      "Numrerade paralleller",
+      "On Fire Autographs"
+    ],
+    "headline_chases": [
+      {
+        "card": "Pink Voltage",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "On Fire",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "Numrerade paralleller",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "On Fire Autographs",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade kort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Pink Voltage",
+          "On Fire",
+          "Numrerade paralleller",
+          "On Fire Autographs"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Butiken anger dessa kortfamiljer för det granskade formatet."
+    ],
+    "caveat": "Butiksunderlag, inte verifierade kortspecifika odds eller marknadsvärden. Inga boxgarantier eller autografgarantier härleds. Packantal ger inga egna rankingpoäng."
+  },
+  "scan-topps-pl-2026-27-mega-tin-pink": {
+    "source_name": "Pardon My Kicks · kortfamiljer på produktsidan",
+    "source_url": "https://pardonmykicks.se/products/topps-flagship-premier-league-2026-27-mega-tin-pink?variant=54781853401411",
+    "verified_at": "2026-10-07T09:28:24.150182+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Pink Voltage",
+      "On Fire",
+      "Numrerade paralleller",
+      "On Fire Autographs"
+    ],
+    "headline_chases": [
+      {
+        "card": "Pink Voltage",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "On Fire",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "Numrerade paralleller",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "On Fire Autographs",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade kort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Pink Voltage",
+          "On Fire",
+          "Numrerade paralleller",
+          "On Fire Autographs"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Butiken anger dessa kortfamiljer för det granskade formatet."
+    ],
+    "caveat": "Butiksunderlag, inte verifierade kortspecifika odds eller marknadsvärden. Inga boxgarantier eller autografgarantier härleds. Packantal ger inga egna rankingpoäng."
+  },
+  "catalog-fotboll-aa52314dbfd22c": {
+    "source_name": "Pardon My Kicks · kortfamiljer på produktsidan",
+    "source_url": "https://pardonmykicks.se/products/topps-flagship-uefa-club-competitions-2025-26-hanger-pack?variant=54776878793027",
+    "verified_at": "2026-10-07T09:28:24.418185+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Diamante Foil",
+      "Roots",
+      "Born Champ",
+      "8-Bit Shots"
+    ],
+    "headline_chases": [
+      {
+        "card": "Diamante Foil",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "Roots",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "Born Champ",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "8-Bit Shots",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade kort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Diamante Foil",
+          "Roots",
+          "Born Champ",
+          "8-Bit Shots"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Butiken anger dessa kortfamiljer för det granskade formatet."
+    ],
+    "caveat": "Butiksunderlag, inte verifierade kortspecifika odds eller marknadsvärden. Inga boxgarantier eller autografgarantier härleds. Packantal ger inga egna rankingpoäng."
+  },
+  "scan-topps-pl-2026-27-eco-pack": {
+    "source_name": "Pardon My Kicks · kortfamiljer på produktsidan",
+    "source_url": "https://pardonmykicks.se/products/topps-flagship-premier-league-2026-27-eco-pack?variant=54759109722435",
+    "verified_at": "2026-10-07T09:28:24.471844+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Yellow Voltage",
+      "Perfect 10",
+      "Perfect 10 Autographs"
+    ],
+    "headline_chases": [
+      {
+        "card": "Yellow Voltage",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "Perfect 10",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "Perfect 10 Autographs",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade kort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Yellow Voltage",
+          "Perfect 10",
+          "Perfect 10 Autographs"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Butiken anger dessa kortfamiljer för det granskade formatet."
+    ],
+    "caveat": "Butiksunderlag, inte verifierade kortspecifika odds eller marknadsvärden. Inga boxgarantier eller autografgarantier härleds. Packantal ger inga egna rankingpoäng."
+  },
+  "catalog-fotboll-045eb39760c32b": {
+    "source_name": "Pardon My Kicks · kortfamiljer på produktsidan",
+    "source_url": "https://pardonmykicks.se/products/topps-premier-league-flagship-2026-27-booster-box?variant=54759109853507",
+    "verified_at": "2026-10-07T09:28:27.703307+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Mini-Diamond",
+      "Chrome Classics",
+      "Gold Lion"
+    ],
+    "headline_chases": [
+      {
+        "card": "Mini-Diamond",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "Chrome Classics",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "Gold Lion",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade kort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Mini-Diamond",
+          "Chrome Classics",
+          "Gold Lion"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Butiken anger dessa kortfamiljer för det granskade formatet."
+    ],
+    "caveat": "Butiksunderlag, inte verifierade kortspecifika odds eller marknadsvärden. Inga boxgarantier eller autografgarantier härleds. Packantal ger inga egna rankingpoäng."
+  },
+  "catalog-fotboll-b2a339173f1c48": {
+    "source_name": "Pardon My Kicks · kortfamiljer på produktsidan",
+    "source_url": "https://pardonmykicks.se/products/topps-chrome-uefa-club-competitions-2025-26-hobby-box?variant=54689234616643",
+    "verified_at": "2026-10-07T09:28:27.910299+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Refractors",
+      "Prism Refractors",
+      "Numrerade paralleller",
+      "Chrome Anime",
+      "Autografkort"
+    ],
+    "headline_chases": [
+      {
+        "card": "Refractors",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "Prism Refractors",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "Numrerade paralleller",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "Chrome Anime",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "Autografkort",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade kort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Refractors",
+          "Prism Refractors",
+          "Numrerade paralleller",
+          "Chrome Anime",
+          "Autografkort"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Butiken anger dessa kortfamiljer för det granskade formatet."
+    ],
+    "caveat": "Butiksunderlag, inte verifierade kortspecifika odds eller marknadsvärden. Inga boxgarantier eller autografgarantier härleds. Packantal ger inga egna rankingpoäng."
+  },
+  "catalog-riftbound-98e1fda35c6fbc": {
+    "source_name": "MonMon · kortfamiljer på produktsidan",
+    "source_url": "https://monmon.se/produkt/riftbound-tcg-riftbound-2026-vendetta-booster-box-24",
+    "verified_at": "2026-10-07T09:28:28.492214+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Epic",
+      "Showcase",
+      "Special alt-art"
+    ],
+    "headline_chases": [
+      {
+        "card": "Epic",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "Showcase",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      },
+      {
+        "card": "Special alt-art",
+        "tier": "BRA",
+        "odds": "Kortfamilj nämnd för produkten; kortspecifika odds och garanti saknas.",
+        "why": "Möjligt kortspår enligt butikens produktbeskrivning."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade kort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Epic",
+          "Showcase",
+          "Special alt-art"
+        ]
+      },
+      "big": {
+        "score": 60,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "Butiken anger dessa kortfamiljer för det granskade formatet."
+    ],
+    "caveat": "Butiksunderlag, inte verifierade kortspecifika odds eller marknadsvärden. Inga boxgarantier eller autografgarantier härleds. Packantal ger inga egna rankingpoäng."
+  }
+}

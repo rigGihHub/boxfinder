@@ -1,4 +1,12 @@
-# BoxFinder v0.60.0
+# BoxFinder v0.61.0
+
+## v0.61.0 – fortsatt sport- och TCG-sökning, 7 oktober
+
+- 13 individuellt granskade erbjudanden: åtta fotbollsprodukter hos Pardon My Kicks, fyra Magic/Yu-Gi-Oh!/Lorcana hos RGB KingZ och en Riftbound Vendetta-display hos MonMon. RGB KingZ och MonMon är nya återförsäljare; Pardon My Kicks får köpbara rankingresultat.
+- Fyra nya produktidentiteter: tre separata färger av Premier League 2026/27 Mega Tin och Eco Pack. Nio erbjudanden matchas till befintliga produkter, med åtta nya innehållsprofiler på försiktigt märkt butiksunderlag.
+- Fulla publicerade Shopify-inventeringar hos Hobbykort, Pardon My Kicks och RGB KingZ: 4 780 produkter och 4 872 varianter. MonMon omfattar endast den kontrollerade Vendetta-sidan, inte en full inventering.
+- Förbokningar, oklara bundle-uppgifter, obestyrkta språk och motstridigt kortantal för Digimon stannar i granskningskön. Eco Pack innehåller två tiokortspaket och ett femkortspaket; gemensamt kortantal per paket antas inte.
+- Befintliga observationstider och granskningsbeslut bevaras. Varje butik använder eget pris och egen köplänk före budget/ranking; frakt ingår inte och packantal ger inga egna poäng. Ingen schemalagd insamling aktiveras.
 
 ## v0.60.0 – nya produkter och återförsäljare, 7 oktober
 

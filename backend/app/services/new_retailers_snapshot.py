@@ -23,9 +23,10 @@ OFFERS = json.loads((ROOT / 'new_retailers_offers_2026_10_07.json').read_text())
 PROFILES = json.loads((ROOT / 'new_retailers_profiles_2026_10_07.json').read_text())
 
 
-def seed_inventory(session_factory):
+def seed_inventory(session_factory, inventories=None):
+    inventories = INVENTORIES if inventories is None else inventories
     with session_factory() as db:
-        for name, inventory in INVENTORIES.items():
+        for name, inventory in inventories.items():
             store = db.scalar(select(Store).where(Store.name == name))
             if store is None:
                 # Normally created by reviewed offers before this import.
