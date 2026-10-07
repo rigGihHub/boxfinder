@@ -11,6 +11,7 @@ from .services.two_shops_snapshot import OFFERS as TWO_SHOPS_OFFERS, PROFILES as
 from .services.new_retailers_snapshot import OFFERS as NEW_RETAILERS_OFFERS, PROFILES as NEW_RETAILERS_PROFILES, seed_inventory as seed_new_retailers_catalog
 
 from .services.market_scan_snapshot import OFFERS as MARKET_SCAN_OFFERS, PROFILES as MARKET_SCAN_PROFILES, seed_inventory as seed_market_scan_catalog
+from .services.arcade_dreams_snapshot import OFFERS as ARCADE_CATALOG_OFFERS, PROFILES as ARCADE_CATALOG_PROFILES, seed_inventory as seed_arcade_catalog
 
 SEED = [
     ("2025-26 Upper Deck Series 1", "Hockey", "Upper Deck", "2025-26", "Series 1", "Hobby Box", 799, [560,780,86,80,84,48,92,78,82,72,"Medel-hög"]),
@@ -553,6 +554,21 @@ for snapshot_row in MARKET_SCAN_OFFERS:
         REAL_SNAPSHOT.append(refreshed)
     else:
         REAL_SNAPSHOT[REAL_SNAPSHOT.index(existing_row)] = refreshed
+
+PRE_ARCADE_CATALOG_SNAPSHOT = [dict(row) for row in REAL_SNAPSHOT]
+for snapshot_row in ARCADE_CATALOG_OFFERS:
+    refreshed = dict(snapshot_row, observed_at=snapshot_datetime(snapshot_row['observed_at']))
+    existing_row = next((row for row in REAL_SNAPSHOT
+                         if row.get('store_name', 'Coolcard') == refreshed['store_name']
+                         and row['sku'] == refreshed['sku']), None)
+    if existing_row is None:
+        REAL_SNAPSHOT.append(refreshed)
+    else:
+        REAL_SNAPSHOT[REAL_SNAPSHOT.index(existing_row)] = refreshed
+
+
+def seed_arcade_dreams_inventory():
+    seed_arcade_catalog(SessionLocal)
 
 def seed_market_scan_inventory():
     seed_market_scan_catalog(SessionLocal)
@@ -2822,6 +2838,8 @@ PRE_NEW_RETAILERS_PROFILES = dict(CHASE_PROFILES)
 CHASE_PROFILES.update(NEW_RETAILERS_PROFILES)
 PRE_MARKET_SCAN_PROFILES = dict(CHASE_PROFILES)
 CHASE_PROFILES.update(MARKET_SCAN_PROFILES)
+PRE_ARCADE_CATALOG_PROFILES = dict(CHASE_PROFILES)
+CHASE_PROFILES.update(ARCADE_CATALOG_PROFILES)
 
 def seed_chase_profiles():
     db=SessionLocal()
@@ -2852,7 +2870,7 @@ def seed_chase_profiles():
             row.content_json=json.dumps({k:v for k,v in data.items() if k not in ("source_name","source_url")},ensure_ascii=False)
             row.source_name=data["source_name"]
             row.source_url=data["source_url"]
-            row.verified_at=(snapshot_datetime(data["verified_at"]) if slug in KANTOVAULT_PROFILES or slug in TWO_SHOPS_PROFILES or slug in NEW_RETAILERS_PROFILES or slug in MARKET_SCAN_PROFILES else
+            row.verified_at=(snapshot_datetime(data["verified_at"]) if slug in KANTOVAULT_PROFILES or slug in TWO_SHOPS_PROFILES or slug in NEW_RETAILERS_PROFILES or slug in MARKET_SCAN_PROFILES or slug in ARCADE_CATALOG_PROFILES else
                 OCTOBER_04_PRODUCTS_VERIFIED_AT if slug in OCTOBER_04_PRODUCTS_PROFILE_SLUGS
                 else OCTOBER_04_DEPTH_VERIFIED_AT if slug in OCTOBER_04_DEPTH_NEW_PROFILE_SLUGS
                 else OCTOBER_04_OBSERVED_AT if slug in OCTOBER_04_NEW_PROFILE_SLUGS

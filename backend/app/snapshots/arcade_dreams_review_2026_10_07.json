@@ -1,0 +1,871 @@
+{
+  "store_name": "Arcade Dreams",
+  "inventories": {
+    "Arcade Dreams": "arcade_dreams_inventory_2026_10_07.json.gz"
+  },
+  "record_scope": "all_public_navigation_categories",
+  "pagination_complete": true,
+  "product_count": 5862,
+  "tcg_product_count": 434,
+  "product_page_checks": 78,
+  "product_page_attempts": 81,
+  "page_errors": {
+    "33505": "HTTP Error 500: Internal Server Error",
+    "32192": "HTTP Error 500: Internal Server Error",
+    "943": "HTTP Error 500: Internal Server Error"
+  },
+  "accepted": [
+    {
+      "id": "37250",
+      "slug": "ad-pokemon-abyss-eye-m5-display",
+      "offer_sku": "37250",
+      "language": "Japanese",
+      "format": "booster box",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.pokemon-card.com/ex/m5/",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-abyss-eye-booster-box-jp-m5-37250-17804898021.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:26:39.281286+00:00"
+    },
+    {
+      "id": "37249",
+      "slug": "kv-pokemon-abyss-eye-booster-pack-japansk",
+      "offer_sku": "AD-37249",
+      "language": "Japanese",
+      "format": "single pack",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.pokemon-card.com/ex/m5/",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-abyss-eye-booster-pack-1-jp-m5-37249-17804898241.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:32:25.399004+00:00"
+    },
+    {
+      "id": "38548",
+      "slug": "cc-pokemon-storm-emeralda-m6-display",
+      "offer_sku": "AD-38548",
+      "language": "Japanese",
+      "format": "booster box",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.fujicardshop.com/card-lists/storm-emeralda/",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-storm-emeralda-booster-box-1-jp-sv5k-38548-17861113251.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:31:47.866773+00:00"
+    },
+    {
+      "id": "38706",
+      "slug": "cc-pokemon-storm-emeralda-m6-pack",
+      "offer_sku": "AD-38706",
+      "language": "Japanese",
+      "format": "single pack",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.fujicardshop.com/card-lists/storm-emeralda/",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-storm-emeralda-booster-pack-1-jp-m6-38706-17865340391.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:31:38.588559+00:00"
+    },
+    {
+      "id": "26569",
+      "slug": "kv-mega-symphonia-booster-pack-japansk",
+      "offer_sku": "AD-26569",
+      "language": "Japanese",
+      "format": "single pack",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.pokemon-card.com/ex/m1/index.html",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-mega-symphonia-booster-pack-1-jp-m1s-26569-17562073131.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:32:25.387791+00:00"
+    },
+    {
+      "id": "26570",
+      "slug": "sp-pokemon-symphonia-display-jp",
+      "offer_sku": "AD-26570",
+      "language": "Japanese",
+      "format": "booster box",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.pokemon-card.com/ex/m1/index.html",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-mega-symphonia-booster-box-jp-m1s-26570-17884345891.png"
+      ],
+      "gtin": "4521329431185",
+      "observed_at": "2026-10-07T18:32:21.144128+00:00"
+    },
+    {
+      "id": "26571",
+      "slug": "kv-mega-brave-booster-pack-japansk",
+      "offer_sku": "AD-26571",
+      "language": "Japanese",
+      "format": "single pack",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.pokemon-card.com/ex/m1/index.html",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-mega-brave-booster-pack-1-jp-m1l-26571-17562070801.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:32:16.898139+00:00"
+    },
+    {
+      "id": "30253",
+      "slug": "kv-mega-dream-ex-booster-pack-japansk",
+      "offer_sku": "AD-30253",
+      "language": "Japanese",
+      "format": "single pack",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.pokemon-card.com/ex/m2a/index.html",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-mega-dream-ex-booster-pack-1-jp-m2a-30253-17641573811.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:31:47.292784+00:00"
+    },
+    {
+      "id": "32217",
+      "slug": "cc-pokemon-nihil-zero-jp-display",
+      "offer_sku": "AD-32217",
+      "language": "Japanese",
+      "format": "booster box",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://kantovault.se/products/pokemon-nihil-zero-booster-box-japansk",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-nihil-zero-munikis-zero-booster-box-jp-m3-32217-17678830081.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:32:21.156871+00:00"
+    },
+    {
+      "id": "33067",
+      "slug": "cc-pokemon-nihil-zero-jp-pack",
+      "offer_sku": "AD-33067",
+      "language": "Japanese",
+      "format": "single pack",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://speltrollet.se/products/pokemon-mega-nihil-zero-booster-m3japansk",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-nihil-zero-munikis-zero-booster-pack-jp-m3-33067-17696094661.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:32:21.052823+00:00"
+    },
+    {
+      "id": "34252",
+      "slug": "cc-pokemon-ninja-spinner-m4-display",
+      "offer_sku": "AD-34252",
+      "language": "Japanese",
+      "format": "booster box",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.serebii.net/card/ninjaspinner/",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-ninja-spinner-booster-box-jp-m4-34252-17722018811.png"
+      ],
+      "gtin": "4521329432786",
+      "observed_at": "2026-10-07T18:32:25.395009+00:00"
+    },
+    {
+      "id": "36741",
+      "slug": "cc-pokemon-ninja-spinner-m4-pack",
+      "offer_sku": "AD-36741",
+      "language": "Japanese",
+      "format": "single pack",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.serebii.net/card/ninjaspinner/",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-ninja-spinner-booster-pack-1-jp-m4-36741-17778004721.png"
+      ],
+      "gtin": "4521329432304",
+      "observed_at": "2026-10-07T18:32:12.145843+00:00"
+    },
+    {
+      "id": "19946",
+      "slug": "kv-cyber-judge-booster-pack-japansk",
+      "offer_sku": "AD-19946",
+      "language": "Japanese",
+      "format": "single pack",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.pokemon-card.com/ex/sv5/",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-cyber-judge-booster-pack-1-jp-sv5m-19946-17441165981.png"
+      ],
+      "gtin": "4521329394763",
+      "observed_at": "2026-10-07T18:33:39.312747+00:00"
+    },
+    {
+      "id": "30175",
+      "slug": "kv-scarlet-ex-booster-pack-japansk",
+      "offer_sku": "AD-30175",
+      "language": "Japanese",
+      "format": "single pack",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://arcadedreams.se/shop/tcg/pokemon-scarlet-ex-booster-pack-1-jp-sv1s",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-scarlet-booster-pack-1-jp-sv1s-30175-17647655431.png"
+      ],
+      "gtin": "4521329373508",
+      "observed_at": "2026-10-07T18:33:39.033145+00:00"
+    },
+    {
+      "id": "39099",
+      "slug": "kv-pokemon-30th-celebration-booster-box-japansk",
+      "offer_sku": "AD-39099",
+      "language": "Japanese",
+      "format": "booster box",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.30th.pokemon-card.com/product/m6a",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-30th-anniversary-booster-box-jp-m6a-39099-17871486811.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:32:32.399180+00:00"
+    },
+    {
+      "id": "40755",
+      "slug": "kv-pokemon-30th-celebration-booster-pack-japansk",
+      "offer_sku": "AD-40755",
+      "language": "Japanese",
+      "format": "single pack",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.30th.pokemon-card.com/product/m6a",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-30th-anniversary-booster-pack-jp-m6a-40755-17906648251.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:31:30.157387+00:00"
+    },
+    {
+      "id": "11997",
+      "slug": "catalog-pokemon-195f7c73a64c9d",
+      "offer_sku": "AD-11997",
+      "language": "English",
+      "format": "single pack",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.pokemon.com/static-assets/content-assets/cms2-en-uk/pdf/trading-card-game/checklist/pal_web_cardlist_en.pdf",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-scarlet-violet-paldea-evolved-booster-pack-1-11997-17465308611.png"
+      ],
+      "gtin": "820650853494",
+      "observed_at": "2026-10-07T18:26:39.545895+00:00"
+    },
+    {
+      "id": "20026",
+      "slug": "catalog-pokemon-7acc9e4e206c3d",
+      "offer_sku": "AD-20026",
+      "language": "English",
+      "format": "single pack",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.pokemon.com/uk/pokemon-tcg/scarlet-violet-surging-sparks?section=overview",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-scarlet-violet-surging-sparks-booster-pack-1-20026-17442339161.png"
+      ],
+      "gtin": "820650413124",
+      "observed_at": "2026-10-07T18:31:29.936981+00:00"
+    },
+    {
+      "id": "19178",
+      "slug": "catalog-pokemon-ad8c46da759cbd",
+      "offer_sku": "AD-19178",
+      "language": "English",
+      "format": "single pack",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.coolcard.se/product/pokmon-sv7-stellar-crown-1-booster",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-scarlet-violet-7-stellar-crown-booster-pack-1-19178-17468061711.png"
+      ],
+      "gtin": "820650858970",
+      "observed_at": "2026-10-07T18:32:12.417530+00:00"
+    },
+    {
+      "id": "24599",
+      "slug": "tcgs-pokemon-destined-rivals-pack",
+      "offer_sku": "AD-24599",
+      "language": "English",
+      "format": "single pack",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://tcg.pokemon.com/en-us/expansions/destined-rivals/",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-tcg-scarlet-violet-destined-rivals-booster-pack-24599-17768532831.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:31:47.874170+00:00"
+    },
+    {
+      "id": "1187",
+      "slug": "ad-pokemon-brilliant-stars-pack-en",
+      "offer_sku": "AD-1187",
+      "language": "English",
+      "format": "single pack",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://arcadedreams.se/shop/tcg/pokemon-sword-shield-9-brilliant-star-booster-pack-1-pack",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-pokemon-sword-shield-brilliant-stars-booster-pack-1-1187-17441194111.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:31:38.595891+00:00"
+    },
+    {
+      "id": "38720",
+      "slug": "catalog-pokemon-711a5a5f1c0bef",
+      "offer_sku": "AD-38720",
+      "language": "Chinese",
+      "format": "booster box",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://speltrollet.se/products/pokemon-terastal-gathering-csv9-5c-booster-box-kinesisk",
+      "image_urls": [],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:33:50.271771+00:00"
+    },
+    {
+      "id": "39320",
+      "slug": "catalog-pokemon-cef814310afebb",
+      "offer_sku": "AD-39320",
+      "language": "Chinese",
+      "format": "single pack",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://speltrollet.se/products/pokemon-terastal-gathering-csv9-5c-booster-kinesisk",
+      "image_urls": [],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:32:32.504099+00:00"
+    },
+    {
+      "id": "33408",
+      "slug": "catalog-magic-0162c6f0a2fec6",
+      "offer_sku": "AD-33408",
+      "language": "English",
+      "format": "single pack",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://magic.wizards.com/en/news/feature/collecting-avatar-the-last-airbender",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-magic-the-gathering-avatar-the-last-airbender-collector-booster-33408-17706426271.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:33:27.216813+00:00"
+    },
+    {
+      "id": "33412",
+      "slug": "ad-mtg-avatar-collector-display",
+      "offer_sku": "AD-33412",
+      "language": "English",
+      "format": "collector booster box",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://magic.wizards.com/en/news/feature/collecting-avatar-the-last-airbender",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-magic-the-gathering-avatar-the-last-airbender-collector-booster-display-12-33412-17706430431.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:33:27.238831+00:00"
+    },
+    {
+      "id": "30432",
+      "slug": "dl-mtg-spiderman-play-pack",
+      "offer_sku": "AD-30432",
+      "language": "English",
+      "format": "single pack",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://magic.wizards.com/en/news/feature/collecting-marvels-spider-man",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-magic-the-gathering-marvel-spiderman-booster-pack-1-30432-17649506661.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:33:11.811563+00:00"
+    },
+    {
+      "id": "37751",
+      "slug": "dl-mtg-marvel-superheroes-play-pack",
+      "offer_sku": "AD-37751",
+      "language": "English",
+      "format": "single pack",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://magic.wizards.com/en/news/feature/collecting-marvel-super-heroes",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-magic-the-gathering-marvel-superheroes-booster-pack-1-37751-17822308011.png"
+      ],
+      "gtin": "195166313597",
+      "observed_at": "2026-10-07T18:32:39.464303+00:00"
+    },
+    {
+      "id": "37750",
+      "slug": "cc-mtg-marvel-superheroes-play-display",
+      "offer_sku": "AD-37750",
+      "language": "English",
+      "format": "booster box",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://magic.wizards.com/en/news/feature/collecting-marvel-super-heroes",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-magic-the-gathering-marvel-superheroes-play-booster-display-box-30-packs-37750-17822307961.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:33:39.045288+00:00"
+    },
+    {
+      "id": "37749",
+      "slug": "ad-mtg-marvel-superheroes-draft-night-en",
+      "offer_sku": "AD-37749",
+      "language": "English",
+      "format": "bundle",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://wpn.wizards.com/en/products/marvel-super-heroes",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-magic-the-gathering-marvel-superheroes-draft-night-37749-17822307921.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:37:37.912271+00:00"
+    },
+    {
+      "id": "33479",
+      "slug": "ad-mtg-tmnt-team-up-en",
+      "offer_sku": "AD-33479",
+      "language": "English",
+      "format": "collection box",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://arcadedreams.se/shop/tcg/magic-the-gathering-teenage-mutant-ninja-turtles-team-up",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-magic-the-gathering-teenage-mutant-ninja-turtles-team-up-33479-17708164931.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:33:34.145737+00:00"
+    },
+    {
+      "id": "34436",
+      "slug": "sp-mtg-tmnt-collector-display",
+      "offer_sku": "AD-34436",
+      "language": "English",
+      "format": "collector booster box",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://magic.wizards.com/en/news/feature/collecting-teenage-mutant-ninja-turtles",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-magic-the-gathering-teenage-mutant-ninja-turtles-collectors-booster-display-34436-17734143571.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:33:34.261140+00:00"
+    },
+    {
+      "id": "35750",
+      "slug": "ad-mtg-tmnt-pizza-bundle",
+      "offer_sku": "AD-35750",
+      "language": "English",
+      "format": "bundle",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "Ej i lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://magic.wizards.com/en/news/feature/collecting-teenage-mutant-ninja-turtles",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-magic-the-gathering-teenage-mutant-ninja-turtles-pizza-bundle-35750-17750508551.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:26:39.658139+00:00"
+    },
+    {
+      "id": "30442",
+      "slug": "catalog-magic-bcccb238a85063",
+      "offer_sku": "AD-30442",
+      "language": "English",
+      "format": "collection box",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.coolcard.se/product/magic-final-fantasy-scene-box-children-of-fate-viii",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-magic-the-gathering-final-fantasy-scene-box-children-of-fate-30442-17652132401.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:37:37.920297+00:00"
+    },
+    {
+      "id": "33711",
+      "slug": "ad-mtg-ff-camp-comrades-scene-jp",
+      "offer_sku": "AD-33711",
+      "language": "Japanese",
+      "format": "collection box",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://magic.wizards.com/en/news/feature/collecting-final-fantasy",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-mtg-final-fantasy-scene-box-camp-comrades-japanese-33711-17712389881.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:37:47.770189+00:00"
+    },
+    {
+      "id": "33712",
+      "slug": "ad-mtg-ff-children-of-fate-scene-jp",
+      "offer_sku": "AD-33712",
+      "language": "Japanese",
+      "format": "collection box",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://magic.wizards.com/en/news/feature/collecting-final-fantasy",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-mtg-final-fantasy-scene-box-children-of-fate-japanese-33712-17712389131.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:37:37.779624+00:00"
+    },
+    {
+      "id": "33713",
+      "slug": "ad-mtg-ff-siege-of-alexandria-scene-jp",
+      "offer_sku": "AD-33713",
+      "language": "Japanese",
+      "format": "collection box",
+      "language_evidence": "Explicit språk och setkod i artikelrubrik/beskrivning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://magic.wizards.com/en/news/feature/collecting-final-fantasy",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-mtg-final-fantasy-scene-box-the-siege-of-alexandria-japanese-33713-17712389991.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:37:47.650346+00:00"
+    },
+    {
+      "id": "19201",
+      "slug": "ad-altered-beyond-the-gates-display-en",
+      "offer_sku": "AD-19201",
+      "language": "English",
+      "format": "booster box",
+      "language_evidence": "Produktfoto anger ENGLISH; vanlig retaildisplay med 36 boosters, utan Kickstarter-märkning.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.altered.gg/en-us/news/designing-uniques-one-year-after/",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-altered-tcg-beyond-the-gates-booster-display-box-36-19201-17279458291.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:33:23.041566+00:00"
+    },
+    {
+      "id": "33495",
+      "slug": "ad-fab-compendium-of-rathe-display-en",
+      "offer_sku": "AD-33495",
+      "language": "English",
+      "format": "booster box",
+      "language_evidence": "Produktfoto har EN-markering på två ställen.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://arcadedreams.se/shop/tcg/flesh-blood-tcg-compendium-of-rathe-booster-display-24-packs",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-flesh-blood-tcg-compendium-of-rathe-booster-display-24-packs-33495-17708286951.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:33:23.033255+00:00"
+    },
+    {
+      "id": "40962",
+      "slug": "catalog-dragon-ball-011328d7de60f0",
+      "offer_sku": "AD-40962",
+      "language": "English",
+      "format": "single pack",
+      "language_evidence": "Produktfoto anger English ver. och 12 cards; displayen anger 24 packs per box.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.dbs-cardgame.com/fw/en/products/02_48.html",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-dragon-ball-super-card-game-fusion-world-ultra-limit-booster-40962-17910266731.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:31:47.874170+00:00"
+    },
+    {
+      "id": "40944",
+      "slug": "catalog-dragon-ball-06126ab8ea53f7",
+      "offer_sku": "AD-40944",
+      "language": "English",
+      "format": "booster box",
+      "language_evidence": "Produktfoto anger English ver. och 12 cards; displayen anger 24 packs per box.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.dbs-cardgame.com/fw/en/products/02_48.html",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-dragon-ball-super-card-game-fusion-world-ultra-limit-booster-box-40944-17909355591.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:33:22.691702+00:00"
+    },
+    {
+      "id": "40942",
+      "slug": "catalog-dragon-ball-24e8f55b583950",
+      "offer_sku": "AD-40942",
+      "language": "English",
+      "format": "booster box",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://arcadedreams.se/shop/tcg/dragon-ball-super-card-game-mythic-booster-box",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-dragon-ball-super-card-game-mythic-booster-box-40942-17909376341.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:31:55.524666+00:00"
+    },
+    {
+      "id": "40943",
+      "slug": "catalog-dragon-ball-ac47491ba4ba14",
+      "offer_sku": "AD-40943",
+      "language": "English",
+      "format": "booster box",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://speltrollet.se/products/dragon-ball-super-tcg-b17-ultimate-squad-booster-box-24-pack",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-dragon-ball-super-card-game-ultimate-squad-booster-box-40943-17909362461.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:32:12.372536+00:00"
+    },
+    {
+      "id": "37243",
+      "slug": "sp-yugioh-glorious-display",
+      "offer_sku": "AD-37243",
+      "language": "English",
+      "format": "booster box",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.yugioh-card.com/eu/product/battles-of-legend-glorious-gallery/",
+      "image_urls": [],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:33:46.332736+00:00"
+    },
+    {
+      "id": "37242",
+      "slug": "ad-yugioh-glorious-gallery-pack",
+      "offer_sku": "AD-37242",
+      "language": "English",
+      "format": "single pack",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://www.yugioh-card.com/eu/product/battles-of-legend-glorious-gallery/",
+      "image_urls": [],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:33:50.383265+00:00"
+    },
+    {
+      "id": "35896",
+      "slug": "ad-naruto-konoha-shido-2nd-display-en",
+      "offer_sku": "AD-35896",
+      "language": "English",
+      "format": "booster box",
+      "language_evidence": "37956 anger English-language edition; samma Konoha Shido 2nd Edition på 35896:s foto.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://arcadedreams.se/shop/tcg/naruto-tcg-konoha-shido-2nd-edition-booster-display-24",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-naruto-tcg-konoha-shido-2nd-edition-booster-display-24-35896-17754682101.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:33:34.157584+00:00"
+    },
+    {
+      "id": "37956",
+      "slug": "ad-naruto-konoha-shido-2nd-pack-en",
+      "offer_sku": "AD-37956",
+      "language": "English",
+      "format": "single pack",
+      "language_evidence": "37956 anger English-language edition; samma Konoha Shido 2nd Edition på 35896:s foto.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://arcadedreams.se/shop/tcg/naruto-tcg-konoha-shido-2nd-edition-booster-pack-1",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-naruto-tcg-konoha-shido-2nd-edition-booster-pack-1-37956-17830809851.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:33:39.133772+00:00"
+    },
+    {
+      "id": "38432",
+      "slug": "ad-riftbound-vendetta-zed-shen-showdown-en",
+      "offer_sku": "AD-38432",
+      "language": "English",
+      "format": "collection box",
+      "language_evidence": "Produktfoto med engelska förpackningsetiketter; artikelns set och format stämmer.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://monmon.se/produkt/riftbound-tcg-riftbound-2026-vendetta-booster-box-24",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-riftbound-lol-tcg-vendetta-zed-vs-shen-showdown-decks-38432-17884277021.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:32:39.457832+00:00"
+    },
+    {
+      "id": "35900",
+      "slug": "ad-naruto-konoha-shido-2nd-itachi-special-en",
+      "offer_sku": "AD-35900",
+      "language": "English",
+      "format": "collection box",
+      "language_evidence": "37956 anger English-language edition; samma Konoha Shido 2nd Edition på 35896:s foto.",
+      "stock_evidence": "I lager; köpknapp separat kontrollerad på artikelsidan.",
+      "content_source": "https://arcadedreams.se/shop/tcg/naruto-tcg-konoha-shido-2nd-edition-booster-display-24",
+      "image_urls": [
+        "https://arcadedreams.se/img/media/m_arcade-dreams-naruto-tcg-konoha-shido-2nd-edition-special-pack-itachi-35900-17754701781.png"
+      ],
+      "gtin": null,
+      "observed_at": "2026-10-07T18:59:01.990854+00:00"
+    }
+  ],
+  "new_product_slugs": [
+    "ad-altered-beyond-the-gates-display-en",
+    "ad-fab-compendium-of-rathe-display-en",
+    "ad-mtg-ff-camp-comrades-scene-jp",
+    "ad-mtg-ff-children-of-fate-scene-jp",
+    "ad-mtg-ff-siege-of-alexandria-scene-jp",
+    "ad-mtg-marvel-superheroes-draft-night-en",
+    "ad-mtg-tmnt-team-up-en",
+    "ad-naruto-konoha-shido-2nd-display-en",
+    "ad-naruto-konoha-shido-2nd-itachi-special-en",
+    "ad-naruto-konoha-shido-2nd-pack-en",
+    "ad-pokemon-brilliant-stars-pack-en",
+    "ad-riftbound-vendetta-zed-shen-showdown-en"
+  ],
+  "new_profile_slugs": [
+    "ad-altered-beyond-the-gates-display-en",
+    "ad-fab-compendium-of-rathe-display-en",
+    "ad-mtg-ff-camp-comrades-scene-jp",
+    "ad-mtg-ff-children-of-fate-scene-jp",
+    "ad-mtg-ff-siege-of-alexandria-scene-jp",
+    "ad-mtg-marvel-superheroes-draft-night-en",
+    "ad-mtg-tmnt-team-up-en",
+    "ad-naruto-konoha-shido-2nd-display-en",
+    "ad-naruto-konoha-shido-2nd-itachi-special-en",
+    "ad-naruto-konoha-shido-2nd-pack-en",
+    "ad-pokemon-brilliant-stars-pack-en",
+    "ad-riftbound-vendetta-zed-shen-showdown-en",
+    "catalog-dragon-ball-011328d7de60f0",
+    "catalog-dragon-ball-06126ab8ea53f7",
+    "catalog-dragon-ball-24e8f55b583950",
+    "catalog-magic-0162c6f0a2fec6",
+    "catalog-pokemon-195f7c73a64c9d",
+    "catalog-pokemon-7acc9e4e206c3d",
+    "kv-cyber-judge-booster-pack-japansk",
+    "kv-pokemon-30th-celebration-booster-box-japansk",
+    "kv-pokemon-30th-celebration-booster-pack-japansk",
+    "kv-scarlet-ex-booster-pack-japansk"
+  ],
+  "offers_count": 48,
+  "in_stock_offers": 47,
+  "staged": [
+    {
+      "id": "37245",
+      "reason": "Motstridigt set: rubrik/foto Shadows of the Galaxy, beskrivning Spark of Rebellion."
+    },
+    {
+      "id": "34241",
+      "reason": "Kortutgåvans språk behöver verifieras."
+    },
+    {
+      "id": "34242",
+      "reason": "Kortutgåvans språk behöver verifieras."
+    },
+    {
+      "id": "27241",
+      "reason": "Språk och exakt samlingsutgåva behöver verifieras."
+    },
+    {
+      "id": "34973",
+      "reason": "Språk och exakt samlingsutgåva behöver verifieras."
+    },
+    {
+      "id": "32189",
+      "reason": "Språk och exakt samlingsutgåva behöver verifieras."
+    },
+    {
+      "id": "33521",
+      "reason": "Paketet innehåller en booster från set 18; setnamn och kortfamiljer behöver verifieras innan ranking."
+    },
+    {
+      "id": "33520",
+      "reason": "Paketet innehåller en booster från set 18; setnamn och kortfamiljer behöver verifieras innan ranking."
+    },
+    {
+      "id": "33522",
+      "reason": "Paketet innehåller en booster från set 18; setnamn och kortfamiljer behöver verifieras innan ranking."
+    },
+    {
+      "id": "33523",
+      "reason": "Paketet innehåller en booster från set 18; setnamn och kortfamiljer behöver verifieras innan ranking."
+    },
+    {
+      "id": "33497",
+      "reason": "Paketet innehåller en booster från set 18; setnamn och kortfamiljer behöver verifieras innan ranking."
+    },
+    {
+      "id": "21275",
+      "reason": "Slumpad kortprodukt med otillräckligt underlag om språk, utgåva eller kortfamiljer."
+    },
+    {
+      "id": "27338",
+      "reason": "Slumpad kortprodukt med otillräckligt underlag om språk, utgåva eller kortfamiljer."
+    },
+    {
+      "id": "38131",
+      "reason": "Slumpad kortprodukt med otillräckligt underlag om språk, utgåva eller kortfamiljer."
+    },
+    {
+      "id": "38132",
+      "reason": "Slumpad kortprodukt med otillräckligt underlag om språk, utgåva eller kortfamiljer."
+    },
+    {
+      "id": "32191",
+      "reason": "Slumpad kortprodukt med otillräckligt underlag om språk, utgåva eller kortfamiljer."
+    },
+    {
+      "id": "39868",
+      "reason": "Slumpad kortprodukt med otillräckligt underlag om språk, utgåva eller kortfamiljer."
+    },
+    {
+      "id": "39867",
+      "reason": "Slumpad kortprodukt med otillräckligt underlag om språk, utgåva eller kortfamiljer."
+    },
+    {
+      "id": "39869",
+      "reason": "Slumpad kortprodukt med otillräckligt underlag om språk, utgåva eller kortfamiljer."
+    },
+    {
+      "id": "34992",
+      "reason": "Engelsk FS11-lek med ett bonuspaket; bonuspaketets slumpade innehåll behöver verifieras separat från den fasta kortleken."
+    },
+    {
+      "id": "33505",
+      "reason": "Artikelsidan svarade HTTP 500; innehåll och aktuell lagerstatus kunde inte verifieras."
+    },
+    {
+      "id": "32192",
+      "reason": "Artikelsidan svarade HTTP 500; innehåll och aktuell lagerstatus kunde inte verifieras."
+    },
+    {
+      "id": "943",
+      "reason": "Artikelsidan svarade HTTP 500; innehåll och aktuell lagerstatus kunde inte verifieras."
+    }
+  ],
+  "notes": [
+    "Alla 19 publicerade navigationskategorier är lästa till tom slutsida och avduplicerade med artikel-ID. Detta styrker navigationskatalogen, inte opublicerade eller föräldralösa backendprodukter.",
+    "Inventory promotes no offers automatically. Guest sort preference and public products_load are one-time read-only catalogue operations; no scheduled collection permission.",
+    "Japanska M6a-fakta överförs inte till kinesiska eller engelska jubileumsutgåvor.",
+    "Befintliga tillverkarprofiler bevaras; nya profiler saknar härledda boxodds eller värdegarantier."
+  ]
+}

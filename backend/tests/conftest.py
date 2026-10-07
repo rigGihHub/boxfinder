@@ -30,3 +30,8 @@ test_two_shops_inventory; old imports still verify their own historical facts.
         from app import seed
         monkeypatch.setattr(seed, "REAL_SNAPSHOT", seed.PRE_MARKET_SCAN_SNAPSHOT)
         monkeypatch.setattr(seed, "CHASE_PROFILES", seed.PRE_MARKET_SCAN_PROFILES)
+
+    if request.path.name == 'test_october_07_market_scan.py':
+        from app import seed
+        monkeypatch.setattr(seed, 'REAL_SNAPSHOT', seed.PRE_ARCADE_CATALOG_SNAPSHOT)
+        monkeypatch.setattr(seed, 'CHASE_PROFILES', seed.PRE_ARCADE_CATALOG_PROFILES)

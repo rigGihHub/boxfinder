@@ -1,0 +1,1304 @@
+{
+  "kv-cyber-judge-booster-pack-japansk": {
+    "source_name": "Pokémon Japan · Cyber Judge",
+    "source_url": "https://www.pokemon-card.com/ex/sv5/",
+    "verified_at": "2026-10-07T18:33:39.312747+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_product_families",
+    "key_names": [
+      "Iron Leaves ex",
+      "Iron Crown ex",
+      "Iron Boulder ex"
+    ],
+    "headline_chases": [
+      {
+        "card": "Iron Leaves ex",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Iron Crown ex",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Iron Boulder ex",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Iron Leaves ex",
+          "Iron Crown ex",
+          "Iron Boulder ex"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Tillverkarunderlag för kortspåren. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "kv-scarlet-ex-booster-pack-japansk": {
+    "source_name": "Arcade Dreams · kortfamiljer på produktsidan",
+    "source_url": "https://arcadedreams.se/shop/tcg/pokemon-scarlet-ex-booster-pack-1-jp-sv1s",
+    "verified_at": "2026-10-07T18:33:39.033145+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Gyarados ex",
+      "Gardevoir ex",
+      "Koraidon ex"
+    ],
+    "headline_chases": [
+      {
+        "card": "Gyarados ex",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Gardevoir ex",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Koraidon ex",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Gyarados ex",
+          "Gardevoir ex",
+          "Koraidon ex"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Kortfamiljer enligt butiksunderlag. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "kv-pokemon-30th-celebration-booster-box-japansk": {
+    "source_name": "Pokémon Japan · 30th CELEBRATION M6a",
+    "source_url": "https://www.30th.pokemon-card.com/product/m6a",
+    "verified_at": "2026-10-07T18:32:32.399180+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_product_families",
+    "key_names": [
+      "Mew ex FUR",
+      "Mewtwo ex FUR",
+      "Pikachu"
+    ],
+    "headline_chases": [
+      {
+        "card": "Mew ex FUR",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Mewtwo ex FUR",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Pikachu",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Mew ex FUR",
+          "Mewtwo ex FUR",
+          "Pikachu"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Tillverkarunderlag för kortspåren. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "kv-pokemon-30th-celebration-booster-pack-japansk": {
+    "source_name": "Pokémon Japan · 30th CELEBRATION M6a",
+    "source_url": "https://www.30th.pokemon-card.com/product/m6a",
+    "verified_at": "2026-10-07T18:31:30.157387+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_product_families",
+    "key_names": [
+      "Mew ex FUR",
+      "Mewtwo ex FUR",
+      "Pikachu"
+    ],
+    "headline_chases": [
+      {
+        "card": "Mew ex FUR",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Mewtwo ex FUR",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Pikachu",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Mew ex FUR",
+          "Mewtwo ex FUR",
+          "Pikachu"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Tillverkarunderlag för kortspåren. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "catalog-pokemon-195f7c73a64c9d": {
+    "source_name": "Pokémon · Paldea Evolved checklista",
+    "source_url": "https://www.pokemon.com/static-assets/content-assets/cms2-en-uk/pdf/trading-card-game/checklist/pal_web_cardlist_en.pdf",
+    "verified_at": "2026-10-07T18:26:39.545895+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_product_families",
+    "key_names": [
+      "Meowscarada ex",
+      "Chien-Pao ex"
+    ],
+    "headline_chases": [
+      {
+        "card": "Meowscarada ex",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Chien-Pao ex",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Meowscarada ex",
+          "Chien-Pao ex"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Tillverkarunderlag för kortspåren. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "catalog-pokemon-7acc9e4e206c3d": {
+    "source_name": "Pokémon · Surging Sparks",
+    "source_url": "https://www.pokemon.com/uk/pokemon-tcg/scarlet-violet-surging-sparks?section=overview",
+    "verified_at": "2026-10-07T18:31:29.936981+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_product_families",
+    "key_names": [
+      "Pikachu ex",
+      "Latias ex",
+      "ACE SPEC"
+    ],
+    "headline_chases": [
+      {
+        "card": "Pikachu ex",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Latias ex",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "ACE SPEC",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Pikachu ex",
+          "Latias ex",
+          "ACE SPEC"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Tillverkarunderlag för kortspåren. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "ad-pokemon-brilliant-stars-pack-en": {
+    "source_name": "Arcade Dreams · kortfamiljer på produktsidan",
+    "source_url": "https://arcadedreams.se/shop/tcg/pokemon-sword-shield-9-brilliant-star-booster-pack-1-pack",
+    "verified_at": "2026-10-07T18:31:38.595891+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Arceus VSTAR",
+      "Charizard VSTAR",
+      "Mimikyu VMAX"
+    ],
+    "headline_chases": [
+      {
+        "card": "Arceus VSTAR",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Charizard VSTAR",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Mimikyu VMAX",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Arceus VSTAR",
+          "Charizard VSTAR",
+          "Mimikyu VMAX"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Kortfamiljer enligt butiksunderlag. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "catalog-magic-0162c6f0a2fec6": {
+    "source_name": "Wizards · Avatar Collector Boosters",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-avatar-the-last-airbender",
+    "verified_at": "2026-10-07T18:33:27.216813+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_product_families",
+    "key_names": [
+      "Avatar Aang · raised foil",
+      "Neon ink battle pose",
+      "Source Material"
+    ],
+    "headline_chases": [
+      {
+        "card": "Avatar Aang · raised foil",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Neon ink battle pose",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Source Material",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Avatar Aang · raised foil",
+          "Neon ink battle pose",
+          "Source Material"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Tillverkarunderlag för kortspåren. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "ad-mtg-marvel-superheroes-draft-night-en": {
+    "source_name": "Wizards · Marvel Super Heroes booster-innehåll",
+    "source_url": "https://wpn.wizards.com/en/products/marvel-super-heroes",
+    "verified_at": "2026-10-07T18:37:37.912271+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_product_families",
+    "key_names": [
+      "Rare",
+      "Mythic Rare",
+      "Traditional foil"
+    ],
+    "headline_chases": [
+      {
+        "card": "Rare",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Mythic Rare",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Traditional foil",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Rare",
+          "Mythic Rare",
+          "Traditional foil"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Tillverkarunderlag för kortspåren. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "ad-mtg-tmnt-team-up-en": {
+    "source_name": "Arcade Dreams · kortfamiljer på produktsidan",
+    "source_url": "https://arcadedreams.se/shop/tcg/magic-the-gathering-teenage-mutant-ninja-turtles-team-up",
+    "verified_at": "2026-10-07T18:33:34.145737+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Rare",
+      "Mythic Rare",
+      "Traditional foil"
+    ],
+    "headline_chases": [
+      {
+        "card": "Rare",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Mythic Rare",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Traditional foil",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Rare",
+          "Mythic Rare",
+          "Traditional foil"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Kortfamiljer enligt butiksunderlag. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "ad-mtg-ff-camp-comrades-scene-jp": {
+    "source_name": "Wizards · Final Fantasy Play Boosters",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-final-fantasy",
+    "verified_at": "2026-10-07T18:37:47.770189+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_product_families",
+    "key_names": [
+      "Borderless character cards",
+      "Borderless woodblock cards",
+      "Through the Ages"
+    ],
+    "headline_chases": [
+      {
+        "card": "Borderless character cards",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Borderless woodblock cards",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Through the Ages",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Borderless character cards",
+          "Borderless woodblock cards",
+          "Through the Ages"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Tillverkarunderlag för kortspåren. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "ad-mtg-ff-children-of-fate-scene-jp": {
+    "source_name": "Wizards · Final Fantasy Play Boosters",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-final-fantasy",
+    "verified_at": "2026-10-07T18:37:37.779624+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_product_families",
+    "key_names": [
+      "Borderless character cards",
+      "Borderless woodblock cards",
+      "Through the Ages"
+    ],
+    "headline_chases": [
+      {
+        "card": "Borderless character cards",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Borderless woodblock cards",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Through the Ages",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Borderless character cards",
+          "Borderless woodblock cards",
+          "Through the Ages"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Tillverkarunderlag för kortspåren. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "ad-mtg-ff-siege-of-alexandria-scene-jp": {
+    "source_name": "Wizards · Final Fantasy Play Boosters",
+    "source_url": "https://magic.wizards.com/en/news/feature/collecting-final-fantasy",
+    "verified_at": "2026-10-07T18:37:47.650346+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_product_families",
+    "key_names": [
+      "Borderless character cards",
+      "Borderless woodblock cards",
+      "Through the Ages"
+    ],
+    "headline_chases": [
+      {
+        "card": "Borderless character cards",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Borderless woodblock cards",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Through the Ages",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Borderless character cards",
+          "Borderless woodblock cards",
+          "Through the Ages"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Tillverkarunderlag för kortspåren. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "ad-altered-beyond-the-gates-display-en": {
+    "source_name": "Equinox · Beyond the Gates kortfamiljer",
+    "source_url": "https://www.altered.gg/en-us/news/designing-uniques-one-year-after/",
+    "verified_at": "2026-10-07T18:33:23.041566+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_product_families",
+    "key_names": [
+      "Rare",
+      "Unique"
+    ],
+    "headline_chases": [
+      {
+        "card": "Rare",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Unique",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Rare",
+          "Unique"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Tillverkarunderlag för kortspåren. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "ad-fab-compendium-of-rathe-display-en": {
+    "source_name": "Arcade Dreams · kortfamiljer på produktsidan",
+    "source_url": "https://arcadedreams.se/shop/tcg/flesh-blood-tcg-compendium-of-rathe-booster-display-24-packs",
+    "verified_at": "2026-10-07T18:33:23.033255+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Marvel",
+      "Legendary",
+      "Majestic"
+    ],
+    "headline_chases": [
+      {
+        "card": "Marvel",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Legendary",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Majestic",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Marvel",
+          "Legendary",
+          "Majestic"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Kortfamiljer enligt butiksunderlag. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "catalog-dragon-ball-011328d7de60f0": {
+    "source_name": "Bandai · Ultra Limit FB04 English",
+    "source_url": "https://www.dbs-cardgame.com/fw/en/products/02_48.html",
+    "verified_at": "2026-10-07T18:31:47.874170+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_product_families",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare",
+      "Alt-Art"
+    ],
+    "headline_chases": [
+      {
+        "card": "Super Rare",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Secret Rare",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Alt-Art",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Super Rare",
+          "Secret Rare",
+          "Alt-Art"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Tillverkarunderlag för kortspåren. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "catalog-dragon-ball-06126ab8ea53f7": {
+    "source_name": "Bandai · Ultra Limit FB04 English",
+    "source_url": "https://www.dbs-cardgame.com/fw/en/products/02_48.html",
+    "verified_at": "2026-10-07T18:33:22.691702+00:00",
+    "confidence": 90,
+    "evidence_scope": "manufacturer_product_families",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare",
+      "Alt-Art"
+    ],
+    "headline_chases": [
+      {
+        "card": "Super Rare",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Secret Rare",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Alt-Art",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Super Rare",
+          "Secret Rare",
+          "Alt-Art"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Tillverkarunderlag för kortspåren. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "catalog-dragon-ball-24e8f55b583950": {
+    "source_name": "Arcade Dreams · kortfamiljer på produktsidan",
+    "source_url": "https://arcadedreams.se/shop/tcg/dragon-ball-super-card-game-mythic-booster-box",
+    "verified_at": "2026-10-07T18:31:55.524666+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Super Rare",
+      "Secret Rare"
+    ],
+    "headline_chases": [
+      {
+        "card": "Super Rare",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Secret Rare",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Super Rare",
+          "Secret Rare"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Kortfamiljer enligt butiksunderlag. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "ad-naruto-konoha-shido-2nd-display-en": {
+    "source_name": "Arcade Dreams · kortfamiljer på produktsidan",
+    "source_url": "https://arcadedreams.se/shop/tcg/naruto-tcg-konoha-shido-2nd-edition-booster-display-24",
+    "verified_at": "2026-10-07T18:33:34.157584+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Rare",
+      "Secret Rare",
+      "Gold cards"
+    ],
+    "headline_chases": [
+      {
+        "card": "Rare",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Secret Rare",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Gold cards",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Rare",
+          "Secret Rare",
+          "Gold cards"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Kortfamiljer enligt butiksunderlag. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "ad-naruto-konoha-shido-2nd-pack-en": {
+    "source_name": "Arcade Dreams · kortfamiljer på produktsidan",
+    "source_url": "https://arcadedreams.se/shop/tcg/naruto-tcg-konoha-shido-2nd-edition-booster-pack-1",
+    "verified_at": "2026-10-07T18:33:39.133772+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Rare",
+      "Special cards"
+    ],
+    "headline_chases": [
+      {
+        "card": "Rare",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Special cards",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Rare",
+          "Special cards"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Kortfamiljer enligt butiksunderlag. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "ad-naruto-konoha-shido-2nd-itachi-special-en": {
+    "source_name": "Arcade Dreams · Konoha Shido 2nd Edition boosters",
+    "source_url": "https://arcadedreams.se/shop/tcg/naruto-tcg-konoha-shido-2nd-edition-booster-display-24",
+    "verified_at": "2026-10-07T18:33:34.157584+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Rare",
+      "Secret Rare"
+    ],
+    "headline_chases": [
+      {
+        "card": "Rare",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Secret Rare",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Rare",
+          "Secret Rare"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Kortfamiljer enligt butiksunderlag. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  },
+  "ad-riftbound-vendetta-zed-shen-showdown-en": {
+    "source_name": "MonMon · kortfamiljer på produktsidan",
+    "source_url": "https://monmon.se/produkt/riftbound-tcg-riftbound-2026-vendetta-booster-box-24",
+    "verified_at": "2026-10-07T09:28:28.492214+00:00",
+    "confidence": 70,
+    "evidence_scope": "retailer_product_families",
+    "key_names": [
+      "Epic",
+      "Showcase",
+      "Special alt-art"
+    ],
+    "headline_chases": [
+      {
+        "card": "Epic",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Showcase",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      },
+      {
+        "card": "Special alt-art",
+        "tier": "BRA",
+        "odds": "Kort eller kortfamilj finns i setunderlaget; kortspecifik träfffrekvens saknas.",
+        "why": "Möjligt innehåll i de slumpade boosterkorten."
+      }
+    ],
+    "format_hits": [],
+    "tiers": {
+      "everyday": {
+        "score": 40,
+        "items": [
+          "Slumpade boosterkort från angivet set"
+        ]
+      },
+      "good": {
+        "score": 58,
+        "items": [
+          "Epic",
+          "Showcase",
+          "Special alt-art"
+        ]
+      },
+      "big": {
+        "score": 50,
+        "items": []
+      },
+      "jackpot": {
+        "score": 0,
+        "items": []
+      }
+    },
+    "why_exciting": [
+      "De angivna kortspåren gäller slumpade boosters i den granskade produkten."
+    ],
+    "caveat": "Kortfamiljer enligt butiksunderlag. Individuella odds och sålda kortvärden är inte verifierade. Inga namngivna kort eller boxträffar garanteras. Fasta kort, promos och tillbehör räknas separat; packantal ger inga egna poäng."
+  }
+}

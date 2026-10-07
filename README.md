@@ -1,4 +1,12 @@
-# BoxFinder v0.61.0
+# BoxFinder v0.62.0
+
+## v0.62.0 – hela Arcade Dreams navigationskatalog
+
+- Alla 19 publicerade kategorier lästes till tom slutsida: 5 862 unika artikel-ID:n, varav 434 i TCG. Även spel, figurer, tillbehör, fasta kortlekar, förbokningar och slutsålda varor finns i granskningsunderlaget. Omfattningen är den publicerade navigationskatalogen.
+- 81 relevanta artikelsidor kontrollerades, varav tre svarade HTTP 500. 48 erbjudanden matchades med rätt set, språk och format; 47 är lagerförda. Fyra tidigare Arcade-erbjudanden uppdateras med samma SKU, inklusive Pizza Bundle som nu är slutsåld.
+- Tolv nya produktidentiteter och 22 nya innehållsprofiler. Tillverkarunderlag används där det verifierats; övriga kortfamiljer märks som butiksunderlag. Befintliga starka profiler bevaras och ingen boxgaranti härleds från packantal.
+- Japanska M6a, engelska Pokémon och kinesiska CSV9.5C hålls isär. 23 oklara paket stannar i kön, inklusive Labubu, Brawl Stars, Wednesday, Animal Crossing, kortlekar med obestyrkta boosteruppgifter samt Star Wars med motstridiga setuppgifter. Blandade Magic-paket får inget antaget gemensamt kortantal; fasta scenekort och kortlekar räknas separat.
+- Butikens eget pris och köplänk gäller före budget/ranking, utan frakt. Övriga butikers observationstider och manuella granskningsbeslut bevaras. Den engångskörda insamlingen aktiverar ingen schemalagd uppdatering.
 
 ## v0.61.0 – fortsatt sport- och TCG-sökning, 7 oktober
 

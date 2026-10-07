@@ -10,6 +10,10 @@ SEPARATE_BOX_CARDS = {
 
 
 def total_sealed_cards(variant):
+    # Current mixed-pack evidence has no common cards_per_pack value.
+    if (variant.product.slug == "ad-mtg-tmnt-pizza-bundle"
+            and variant.packs == 10 and variant.cards_per_pack is None):
+        return 141  # 9 × 14 Play + 1 × 15 Collector, excluding promos/lands.
     if variant.packs is None or variant.cards_per_pack is None:
         return None
     return variant.packs * variant.cards_per_pack + SEPARATE_BOX_CARDS.get(variant.product.slug, 0)
