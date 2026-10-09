@@ -21,12 +21,31 @@ def recommendations(
     budget: float | None = Query(None, ge=1),
     goal: str = Query("balanced"),
     format: str | None = None,
+    store_name: str | None = None,
     db: Session = Depends(get_db),
 ):
     goal=goal.lower().strip()
     if goal not in GOALS:
         return {"error":"unknown_goal","allowed_goals":sorted(GOALS)}
-    items=list_products(category=category,max_price=budget,db=db)
+    # Select the chosen store before applying the budget. The cheapest offer
+    # at another shop must not determine a store-specific recommendation.
+    items=list_products(category=category,max_price=None if store_name else budget,
+                        db=db,current_offers_only=bool(store_name))
+    if store_name:
+        wanted_store=store_name.strip().casefold()
+        selected=[]
+        for item in items:
+            offers=[offer for offer in item.get("store_offers", [])
+                    if offer["store"].casefold()==wanted_store]
+            if not offers:
+                continue
+            offer=min(offers,key=lambda x:x["price"])
+            if budget is not None and offer["price"]>budget:
+                continue
+            selected.append({**item, **offer, "store_id":offer["store_id"],
+                             "price":offer["price"], "store":offer["store"],
+                             "url":offer["url"], "observed_at":offer["observed_at"]})
+        items=selected
     if format:
         wanted=format.strip().lower()
         items=[x for x in items if wanted in (x.get("format") or "").lower()]
@@ -34,6 +53,7 @@ def recommendations(
     result["category"]=category
     result["budget"]=budget
     result["format"]=format
+    result["store_name"]=store_name
     result["searched_at"]=datetime.now(timezone.utc).isoformat()
     return result
 
@@ -43,6 +63,7 @@ def real_catalog(
     category: str | None = None,
     budget: float | None = Query(None, ge=1),
     format: str | None = None,
+    store_name: str | None = None,
     limit: int = Query(60, ge=1, le=200),
     db: Session = Depends(get_db),
 ):
@@ -68,6 +89,7 @@ def real_catalog(
             if o.source_kind=="verified_snapshot"
             and is_current_real_offer(o)
             and is_direct_purchase_url(o.url)
+            and (not store_name or o.store.name.casefold()==store_name.strip().casefold())
         ]
         if not real:
             continue
@@ -122,6 +144,7 @@ def real_catalog(
         "category":category,
         "budget":budget,
         "format":format,
+        "store_name":store_name,
         "products":rows[:limit],
         "note":"Detta är verifierade svenska butikssnapshots, inte live-feed. Tidsstämpeln visas per produkt och uppdateras inte förrän källan verifieras igen.",
     }
