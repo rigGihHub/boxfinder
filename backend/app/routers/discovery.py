@@ -42,9 +42,12 @@ def recommendations(
             offer=min(offers,key=lambda x:x["price"])
             if budget is not None and offer["price"]>budget:
                 continue
+            median=item.get("market_median")
+            discount=round((median-offer["price"])/median*100) if median else None
             selected.append({**item, **offer, "store_id":offer["store_id"],
                              "price":offer["price"], "store":offer["store"],
-                             "url":offer["url"], "observed_at":offer["observed_at"]})
+                             "url":offer["url"], "observed_at":offer["observed_at"],
+                             "discount_pct":discount})
         items=selected
     if format:
         wanted=format.strip().lower()
@@ -104,7 +107,7 @@ def real_catalog(
         try: facts=[str(x) for x in json.loads(fact.facts_json or "[]") if x] if fact else []
         except Exception: facts=[]
         age_days=max(0,(now-best.observed_at).days) if best.observed_at else None
-        explanation=explain_variant(db,v,facts_override=facts)
+        explanation=explain_variant(db,v,facts_override=facts,selected_price=best.price_sek)
         chase_profile=profile_from_row(profiles_by_variant.get(v.id))
         content_rating=content_summary(chase_profile)
         ladder=chase_ladder(chase_profile)
