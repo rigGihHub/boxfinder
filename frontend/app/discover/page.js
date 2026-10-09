@@ -1,5 +1,6 @@
 import FreshDataButton from "../components/FreshDataButton";
 import knownStores from "../data/ranking-stores.json";
+import {buildLabel} from "../lib/build";
 const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 async function getJson(path,fallback){
@@ -43,7 +44,7 @@ export default async function DiscoverPage({searchParams}){
     <header className="productNav">
       <a className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a>
       <a className="backLink" href="/">← STARTSIDAN</a>
-      <span className="version">v0.62.1</span>
+      <span className="version">{buildLabel()}</span>
     </header>
 
     <section className="discoverHero">
