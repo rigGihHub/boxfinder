@@ -1,4 +1,5 @@
 import FreshDataButton from "../components/FreshDataButton";
+import knownStores from "../data/ranking-stores.json";
 const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 async function getJson(path,fallback){
@@ -24,10 +25,12 @@ export default async function DiscoverPage({searchParams}){
   const budget=searchParams?.budget||"750";
   const goal=searchParams?.goal||"balanced";
   const format=searchParams?.format||"";
+  const storeName=searchParams?.store_name||"";
   const qs=new URLSearchParams();
   if(category)qs.set("category",category);
   if(budget)qs.set("budget",budget);
   if(format)qs.set("format",format);
+  if(storeName)qs.set("store_name",storeName);
   qs.set("goal",goal);
   const [data, realCatalog]=await Promise.all([
     getJson(`/discovery/recommendations?${qs.toString()}`,{recommendations:[],considered:0,rankable:0,note:""}),
@@ -40,13 +43,14 @@ export default async function DiscoverPage({searchParams}){
     <header className="productNav">
       <a className="brand" href="/"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a>
       <a className="backLink" href="/">← STARTSIDAN</a>
-      <span className="version">v0.46.1</span>
+      <span className="version">v0.62.1</span>
     </header>
 
     <section className="discoverHero">
       <span className="kicker">COLLECTOR DISCOVERY</span>
       <h1>Jag vill öppna något.</h1>
-      <p>Kategori är valfri. Börja med målet och budgeten så får hockey, fotboll, Pokémon och övriga produkter konkurrera på samma villkor.</p>
+      <p>Välj butik, kategori, mål och budget. Priset och köplänken hämtas från den butik du valt.</p>
+      <p><a className="backLink" href="/resale">Till huvudrankingen med butiksväljare →</a></p>
 
       <div className="discoverQuick"><small>SNABBSÖKNINGAR</small><div>
         <a href="/resale?strategy=balanced">BÄST ATT ÖPPNA</a>
@@ -63,6 +67,11 @@ export default async function DiscoverPage({searchParams}){
       </div></div>
 
       <form className="discoverForm" method="get">
+        <div><label htmlFor="discover-store">BUTIK · VALFRITT</label><select id="discover-store" name="store_name" defaultValue={storeName}>
+          <option value="">Alla butiker</option>
+          {storeName&&!knownStores.includes(storeName)&&<option value={storeName}>{storeName}</option>}
+          {knownStores.map(name=><option key={name} value={name}>{name}</option>)}
+        </select></div>
         <div><label>VAD SAMLAR DU?</label><select name="category" defaultValue={category}>
           <option value="">Allt</option><option>Hockey</option><option>Fotboll</option><option>Basket</option><option>NFL</option><option>Baseboll</option><option>Tennis</option><option>F1</option><option>Racing</option><option>Golf</option><option>UFC</option><option>WWE</option><option>Pokémon</option><option>One Piece</option><option>Magic</option><option>Disney</option><option>Marvel</option><option>Star Wars</option><option>Yu-Gi-Oh</option>
         </select></div>
@@ -81,6 +90,7 @@ export default async function DiscoverPage({searchParams}){
 
     <section className="realCatalogSection">
       <div className="sectionHead"><div><span className="kicker">RIKTIG SVENSK BUTIKSDATA</span><h2>Vilken box har bäst innehåll?</h2></div><p>{realCatalog.count||0} verifierade produkter matchar filtret · chase-data rankas först.</p></div>
+      {storeName&&<p className="searchFreshness">Vald butik: {storeName}. Visar endast färska erbjudanden därifrån.</p>}
       {realCatalog.searched_at&&<p className="searchFreshness">Sökning genomförd {searched(realCatalog.searched_at)}</p>}
       {realProducts.length ? <div className="realCatalogGrid">{realProducts.map(x=><article className="realProductCard clickableCard" key={x.id}>
         <a className="cardClickTarget" href={`/product/${x.id}`} aria-label={`Öppna ${x.name}`}></a>
@@ -99,7 +109,7 @@ export default async function DiscoverPage({searchParams}){
         {x.chase_profile?.key_names?.length ? <div className="quickSearches"><small>SÖK ETT NAMN DIREKT</small><div>{x.chase_profile.key_names.slice(0,4).map((name,i)=><a className="aboveOverlay" href={`/chase?q=${encodeURIComponent(name.replace(/\s+#.*$/,''))}`} key={i}>Sök {name} →</a>)}</div></div> : null}
         <div className="realWhy"><small>VARFÖR BRA / FYND?</small>{(x.explanation?.why_good||[]).slice(0,2).map((r,i)=><span key={i}>✓ {r}</span>)}<b>{x.explanation?.deal?.label||"Fyndstatus ej verifierad"}</b><p>{x.explanation?.deal?.reason}</p></div>
         <div className="realSource"><span>Butiksuppgift kontrollerad {checked(x.observed_at)}</span>{x.url?<a className="aboveOverlay buyDirect" href={x.url} target="_blank" rel="noreferrer">KÖP HOS {x.store?.toUpperCase()} ↗</a>:null}</div>
-      </article>)}</div> : <div className="discoveryEmpty"><b>Ingen verifierad produkt matchar just detta filter.</b><p>Höj budgeten eller välj “Allt”. Riktig butikssnapshot visas här separat från testdata och analysförslag.</p></div>}
+      </article>)}</div> : <div className="discoveryEmpty"><b>Ingen verifierad produkt matchar just detta filter.</b><p>Höj budgeten eller välj “Alla butiker”. Butikens utbud kan ännu sakna verifierade, aktuella produkter.</p></div>}
       <p className="discoveryDisclaimer">{realCatalog.note}</p>
     </section>
 
