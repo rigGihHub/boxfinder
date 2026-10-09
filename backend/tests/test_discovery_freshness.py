@@ -16,13 +16,14 @@ def test_discovery_excludes_expired_store_offers_and_restores_fresh_ones():
     with Session() as db:
         from app.models import Product, ProductVariant, Store
 
-        store = Store(name="Example Store", url="https://example.test")
+        store = Store(name="Example Store", homepage_url="https://example.test")
         product = Product(slug="freshness-example", canonical_name="Freshness Example", category="Hockey", manufacturer="Example")
         variant = ProductVariant(product=product, format="hobby box")
         db.add_all([store, variant])
         db.flush()
         offer = Offer(
-            variant_id=variant.id, store_id=store.id, source_kind="verified_snapshot",
+            variant_id=variant.id, store_id=store.id, external_id="freshness-example",
+            source_title="Freshness Example", source_kind="verified_snapshot",
             match_status="manual_matched", stock_status="in_stock", is_preorder=False,
             price_sek=100, url="https://example.test/product/freshness-example",
             observed_at=datetime.now(timezone.utc) - timedelta(days=MAX_OFFER_AGE_DAYS + 1),
