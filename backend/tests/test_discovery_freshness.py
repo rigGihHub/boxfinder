@@ -33,7 +33,15 @@ def test_discovery_excludes_expired_store_offers_and_restores_fresh_ones():
 
         assert real_catalog(db=db)["products"] == []
         offer.observed_at = datetime.now(timezone.utc).replace(tzinfo=None)
+        db.add(Offer(
+            variant_id=variant.id, store_id=store.id, external_id="expired-cheap",
+            source_title="Old cheap listing", source_kind="verified_snapshot",
+            match_status="manual_matched", stock_status="in_stock", is_preorder=False,
+            price_sek=10, url="https://example.test/product/expired-cheap",
+            observed_at=datetime.now(timezone.utc) - timedelta(days=MAX_OFFER_AGE_DAYS + 1),
+        ))
         db.commit()
         products = real_catalog(db=db)["products"]
         assert len(products) == 1
         assert products[0]["price"] == 100
+        assert products[0]["explanation"]["deal"]["status"] == "not_verified"
