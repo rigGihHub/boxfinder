@@ -5,6 +5,7 @@ from sqlalchemy import select
 from sqlalchemy.orm import Session
 
 from ..models import Offer, ProductFact, ProductVariant
+from .offer_freshness import is_current_real_offer
 
 TRUSTED_MATCH={"auto_matched","manual_matched"}
 
@@ -49,8 +50,7 @@ def explain_variant(db: Session, v: ProductVariant, facts_override: list[str] | 
     facts=_facts(db,v.id) if facts_override is None else facts_override
     eligible=[
         o for o in v.offers
-        if o.stock_status=="in_stock" and not o.is_preorder
-        and (o.match_status in TRUSTED_MATCH or o.source_kind=="verified_snapshot")
+        if is_current_real_offer(o)
     ]
     prices=[float(o.price_sek) for o in eligible if o.price_sek and o.price_sek>0]
     best=min(prices) if prices else None
