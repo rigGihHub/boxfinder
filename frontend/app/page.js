@@ -1,5 +1,6 @@
 import FreshDataButton from "./components/FreshDataButton";
 import {API, getJson} from "./lib/api";
+import {buildLabel} from "./lib/build";
 
 // Read live catalogue data on page requests, never during deployment builds.
 export const dynamic = "force-dynamic";
@@ -72,7 +73,7 @@ export default async function Home({ searchParams }) {
       <header className="nav">
         <a className="brand" href="#top"><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></a>
         <nav><a href="/resale">Bäst att öppna</a><a href="/chase">Chase Finder</a><a href="/discover">Filtrera</a><a href="#ranking">EV-ranking</a><a href="#budget">Budget</a><a href="#signals">Prisradar</a><a href="/watchlist">Bevakningar</a></nav>
-        <span className="version">v0.62.0</span>
+        <span className="version">{buildLabel()}</span>
       </header>
 
       <section className="hero" id="top">
