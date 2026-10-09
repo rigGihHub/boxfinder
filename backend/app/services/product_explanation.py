@@ -46,14 +46,14 @@ def _appeal_reasons(v: ProductVariant, facts: list[str], price: float | None) ->
         reasons.append("Produkten har verifierat förpackningsinnehåll och kan jämföras utan att BoxFinder behöver gissa.")
     return reasons[:4]
 
-def explain_variant(db: Session, v: ProductVariant, facts_override: list[str] | None = None) -> dict:
+def explain_variant(db: Session, v: ProductVariant, facts_override: list[str] | None = None, selected_price: float | None = None) -> dict:
     facts=_facts(db,v.id) if facts_override is None else facts_override
     eligible=[
         o for o in v.offers
         if is_current_real_offer(o)
     ]
     prices=[float(o.price_sek) for o in eligible if o.price_sek and o.price_sek>0]
-    best=min(prices) if prices else None
+    best=selected_price if selected_price is not None else (min(prices) if prices else None)
     market_median=median(prices) if len(prices)>=2 else None
     discount_pct=None
     if best is not None and market_median:
