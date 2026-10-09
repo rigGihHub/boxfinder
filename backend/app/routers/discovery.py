@@ -10,6 +10,7 @@ from ..services.discovery import GOALS, discover
 from ..services.product_explanation import explain_variant
 from ..services.chase_content import profile_from_row, content_summary, chase_ladder, chase_coverage, pull_profile
 from ..services.purchase_links import is_direct_purchase_url
+from ..services.offer_freshness import is_current_real_offer
 from ..services.product_format import total_sealed_cards
 
 router=APIRouter(prefix="/discovery",tags=["discovery"])
@@ -65,8 +66,7 @@ def real_catalog(
         real=[
             o for o in v.offers
             if o.source_kind=="verified_snapshot"
-            and o.stock_status=="in_stock"
-            and not o.is_preorder
+            and is_current_real_offer(o)
             and is_direct_purchase_url(o.url)
         ]
         if not real:
