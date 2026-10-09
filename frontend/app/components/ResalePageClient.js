@@ -13,7 +13,7 @@ const strategies = [
   ["frequent", "Bra träff oftare"],
 ];
 
-export default function ResalePageClient() {
+export default function ResalePageClient({version}) {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [refreshKey, setRefreshKey] = useState(0);
@@ -64,7 +64,7 @@ export default function ResalePageClient() {
     <header className="productNav">
       <Link className="brand" href="/" prefetch={false}><span className="brandMark">BF</span><span>BOXFINDER<small>CHASE SMARTER</small></span></Link>
       <Link className="backLink" href="/" prefetch={false}>← STARTSIDAN</Link>
-      <span className="version">v0.62.0</span>
+      <span className="version">{version}</span>
     </header>
 
     <section className="resaleHero">
@@ -96,7 +96,7 @@ export default function ResalePageClient() {
     </section>
 
     <section className="resaleRanking" id="resale-ranking">
-      <div className="sectionHead"><div><span className="kicker">BOXFINDERS RANKING</span><h2>{strategy === "value" ? "Mest innehåll för pengarna" : "Bäst öppningspotential just nu"}</h2></div><p>Senaste resultat visas direkt och uppdateras i bakgrunden</p></div>
+      <div className="sectionHead"><div><span className="kicker">BOXFINDERS RANKING</span><h2>{strategy === "value" ? "Mest innehåll för pengarna" : "Bäst öppningspotential just nu"}</h2>{storeValue&&<p>Butik: {storeName || stores.find(store => String(store.id) === storeId)?.name || "Vald butik"}</p>}</div><p>Senaste resultat visas direkt och uppdateras i bakgrunden</p></div>
       <ResaleApiRecovery query={query} refreshKey={refreshKey} onLoadingChange={setRanking} onStoresChange={setStores} onCoverageChange={setCoverage}/>
     </section>
   </main>;
