@@ -20,7 +20,7 @@ SOURCE_PROFILES = {
     "Webhallen": {"priority":2,"coverage":["Pokémon","Magic","One Piece","Lorcana","Övrig TCG"],"strength":"Stor svensk återförsäljare med bred tillgänglighet","recommended_ingest":"Kartlägg produktsidor/feed; håll samlarkort separerat från tillbehör"},
     "RA Card": {"priority":2,"coverage":["Pokémon","Magic","Yu-Gi-Oh!"],"strength":"Svensk TCG-butik","recommended_ingest":"Kartlägg sealed-kategorier och feed/API"},
     "SpelOchSånt": {"priority":2,"coverage":["Pokémon","Magic"],"strength":"Svensk spelbutik med TCG","recommended_ingest":"Kartlägg sealed-kategorier och feed/API"},
-    "DrakenDavids": {"priority":2,"coverage":["Fotboll"],"strength":"Fotbollskort och boxar","recommended_ingest":"Kartlägg kompletta sealed fotbollssortimentet"},
+    "DrakenDavids": {"priority":1,"coverage":["Fotboll","Hockey","Basket","Baseboll","NFL","F1","Golf","UFC","WWE","Marvel","Disney","Lorcana","Star Wars"],"strength":"Komplett katalog med separat granskning av sealed, singelkort, breakplatser och tillbehör","recommended_ingest":"Förnya komplett Shopify-katalog och granska innehåll för nya format"},
     "Poketalk": {"priority":2,"coverage":["Pokémon"],"strength":"Pokémon-fokuserad svensk butik","recommended_ingest":"Kartlägg sealed-kategorier och feed/API"},
     "Samlartorget": {"priority":2,"coverage":["Pokémon"],"strength":"Pokémon och samlarprodukter","recommended_ingest":"Kartlägg sealed-kategorier och feed/API"},
     "EllieCollectables": {"priority":2,"coverage":["Pokémon"],"strength":"Svensk butik med fokus på sealed Pokémon","recommended_ingest":"Kartlägg feed/API och sealed-sortiment"},

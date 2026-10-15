@@ -85,6 +85,7 @@ export default function ResalePageClient({version}) {
         <button type="submit">RANKA ALLT →</button>
       </form>
       <p className="costBasisHelp">Alla priser, budgetgränser och rankingpoäng är exklusive frakt.</p>
+      {storeName && <p className="costBasisHelp"><Link href={`/discover?store_name=${encodeURIComponent(storeName)}&budget=`}>Visa butikens hela köpbara kortsortiment →</Link> · Även produkter som saknar underlag för ranking.</p>}
       {coverage && <details className="storeCoverage">
         <summary>Butikstäckning · {coverage.rankable_products} rankbara produkter · {coverage.current_store_offers} köpbara erbjudanden · {coverage.stores} butiker</summary>
         <p>Hela den rankbara katalogen, oavsett valda filter. Samma produkt kan finnas hos flera butiker. Produkter skiljs åt efter format och språk. Endast erbjudanden med verifierad direktlänk, lagerstatus och pris kontrollerat under de senaste 14 dagarna räknas. Katalogen täcker ännu inte butikernas hela sortiment.</p>
