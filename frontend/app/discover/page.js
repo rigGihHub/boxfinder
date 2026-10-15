@@ -23,7 +23,7 @@ function checked(v){return v?new Intl.DateTimeFormat("sv-SE",{dateStyle:"short",
 
 export default async function DiscoverPage({searchParams}){
   const category=searchParams?.category||"";
-  const budget=searchParams?.budget||"750";
+  const budget=searchParams?.budget??"750";
   const goal=searchParams?.goal||"balanced";
   const format=searchParams?.format||"";
   const storeName=searchParams?.store_name||"";
@@ -35,7 +35,7 @@ export default async function DiscoverPage({searchParams}){
   qs.set("goal",goal);
   const [data, realCatalog]=await Promise.all([
     getJson(`/discovery/recommendations?${qs.toString()}`,{recommendations:[],considered:0,rankable:0,note:""}),
-    getJson(`/discovery/real-catalog?${qs.toString()}&limit=60`,{products:[],count:0,note:""}),
+    getJson(`/discovery/real-catalog?${qs.toString()}&limit=${storeName?200:60}`,{products:[],count:0,note:""}),
   ]);
   const recs=data.recommendations||[];
   const realProducts=realCatalog.products||[];

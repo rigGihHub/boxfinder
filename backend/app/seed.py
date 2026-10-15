@@ -567,6 +567,24 @@ for snapshot_row in ARCADE_CATALOG_OFFERS:
         REAL_SNAPSHOT[REAL_SNAPSHOT.index(existing_row)] = refreshed
 
 
+from .services.drakendavids_snapshot import RAW as DRAKENDAVIDS_RAW, build_catalog as build_drakendavids_catalog, seed_inventory as import_drakendavids_inventory
+
+PRE_DRAKENDAVIDS_SNAPSHOT = [dict(row) for row in REAL_SNAPSHOT]
+DRAKENDAVIDS_INVENTORY, DRAKENDAVIDS_OFFERS = build_drakendavids_catalog(DRAKENDAVIDS_RAW, REAL_SNAPSHOT)
+for snapshot_row in DRAKENDAVIDS_OFFERS:
+    existing_row = next((row for row in REAL_SNAPSHOT
+                         if row.get('store_name') == 'DrakenDavids'
+                         and row['sku'] == snapshot_row['sku']), None)
+    if existing_row is None:
+        REAL_SNAPSHOT.append(snapshot_row)
+    else:
+        REAL_SNAPSHOT[REAL_SNAPSHOT.index(existing_row)] = snapshot_row
+
+
+def seed_drakendavids_inventory():
+    import_drakendavids_inventory(SessionLocal, DRAKENDAVIDS_INVENTORY)
+
+
 def seed_arcade_dreams_inventory():
     seed_arcade_catalog(SessionLocal)
 

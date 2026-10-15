@@ -9,6 +9,7 @@ from .services.update_manager import scheduler_loop
 from .services.shipping_snapshot import seed_shipping_policies
 from .services.catalog_capacity import CatalogCapacityMiddleware
 from .services.catalog_snapshots import CatalogSnapshotMiddleware
+from .seed import seed_drakendavids_inventory
 
 app = FastAPI(title=settings.app_name, version=settings.version)
 app.add_middleware(CatalogCapacityMiddleware)
@@ -27,6 +28,7 @@ def startup():
     seed_new_retailers_inventory()
     seed_market_scan_inventory()
     seed_arcade_dreams_inventory()
+    seed_drakendavids_inventory()
     seed_shipping_policies()
     seed_chase_profiles()
     seed_chase_card_db()
