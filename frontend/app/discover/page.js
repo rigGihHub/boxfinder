@@ -5,9 +5,9 @@ const API = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
 
 async function getJson(path,fallback){
   try{
-    const res=await fetch(`${API}${path}`,{cache:"no-store"});
+    const res=await fetch(`${API}${path}`,{cache:"no-store",signal:AbortSignal.timeout(20000)});
     if(!res.ok)return fallback;
-    return res.json();
+    return await res.json();
   }catch{return fallback;}
 }
 
@@ -23,20 +23,31 @@ function checked(v){return v?new Intl.DateTimeFormat("sv-SE",{dateStyle:"short",
 
 export default async function DiscoverPage({searchParams}){
   const category=searchParams?.category||"";
-  const budget=searchParams?.budget??"750";
+  const budget=searchParams?.budget??"";
   const goal=searchParams?.goal||"balanced";
   const format=searchParams?.format||"";
   const storeName=searchParams?.store_name||"";
+  const query=(searchParams?.q||"").slice(0,160);
+  const parsedPage=Number(searchParams?.page);
+  const page=Number.isSafeInteger(parsedPage)&&parsedPage>0?parsedPage:1;
+  const pageSize=60;
   const qs=new URLSearchParams();
   if(category)qs.set("category",category);
   if(budget)qs.set("budget",budget);
   if(format)qs.set("format",format);
   if(storeName)qs.set("store_name",storeName);
   qs.set("goal",goal);
-  const [data, realCatalog]=await Promise.all([
+  const catalogQs=new URLSearchParams(qs);
+  if(query)catalogQs.set("q",query);
+  catalogQs.set("limit",String(pageSize));
+  catalogQs.set("offset",String((page-1)*pageSize));
+  const pageUrl=number=>{const params=new URLSearchParams(qs);if(query)params.set("q",query);params.set("page",String(number));return `?${params}`;};
+  const [data, catalogResponse]=await Promise.all([
     getJson(`/discovery/recommendations?${qs.toString()}`,{recommendations:[],considered:0,rankable:0,note:""}),
-    getJson(`/discovery/real-catalog?${qs.toString()}&limit=${storeName?200:60}`,{products:[],count:0,note:""}),
+    getJson(`/discovery/real-catalog?${catalogQs}`,null),
   ]);
+  const catalogUnavailable=catalogResponse==null;
+  const realCatalog=catalogResponse||{products:[],count:0,note:""};
   const recs=data.recommendations||[];
   const realProducts=realCatalog.products||[];
 
@@ -68,6 +79,7 @@ export default async function DiscoverPage({searchParams}){
       </div></div>
 
       <form className="discoverForm" method="get">
+        <div><label htmlFor="catalog-search">SÖK I BUTIKSKATALOGEN</label><input id="catalog-search" name="q" type="search" maxLength={160} defaultValue={query} placeholder="Produkt eller serie" /></div>
         <div><label htmlFor="discover-store">BUTIK · VALFRITT</label><select id="discover-store" name="store_name" defaultValue={storeName}>
           <option value="">Alla butiker</option>
           {storeName&&!knownStores.includes(storeName)&&<option value={storeName}>{storeName}</option>}
@@ -77,6 +89,7 @@ export default async function DiscoverPage({searchParams}){
           <option value="">Allt</option><option>Hockey</option><option>Fotboll</option><option>Basket</option><option>NFL</option><option>Baseboll</option><option>Tennis</option><option>F1</option><option>Racing</option><option>Golf</option><option>UFC</option><option>WWE</option><option>Pokémon</option><option>One Piece</option><option>Magic</option><option>Disney</option><option>Marvel</option><option>Star Wars</option><option>Yu-Gi-Oh</option>
         </select></div>
         <div><label>MAXBUDGET</label><select name="budget" defaultValue={String(budget)}>
+          <option value="">Ingen prisgräns</option>
           <option value="100">100 kr</option><option value="250">250 kr</option><option value="500">500 kr</option><option value="750">750 kr</option><option value="1000">1 000 kr</option><option value="1500">1 500 kr</option><option value="2500">2 500 kr</option><option value="5000">5 000 kr</option>
         </select></div>
         <div><label>FORMAT</label><select name="format" defaultValue={format}>
@@ -90,9 +103,11 @@ export default async function DiscoverPage({searchParams}){
     <FreshDataButton />
 
     <section className="realCatalogSection">
-      <div className="sectionHead"><div><span className="kicker">RIKTIG SVENSK BUTIKSDATA</span><h2>Vilken box har bäst innehåll?</h2></div><p>{realCatalog.count||0} verifierade produkter matchar filtret · chase-data rankas först.</p></div>
+      <div className="sectionHead"><div><span className="kicker">RIKTIG SVENSK BUTIKSDATA</span><h2>Vilken box har bäst innehåll?</h2></div>{!catalogUnavailable&&<p>{realCatalog.count||0} verifierade produkter matchar filtret · chase-data rankas först.</p>}</div>
       {storeName&&<p className="searchFreshness">Vald butik: {storeName}. Visar endast färska erbjudanden därifrån.</p>}
       {realCatalog.searched_at&&<p className="searchFreshness">Sökning genomförd {searched(realCatalog.searched_at)}</p>}
+      {realCatalog.expired_count>0&&<div className="discoveryEmpty" role="status"><b>{realCatalog.expired_count} ytterligare produkter behöver en ny butikskontroll.</b><p>Deras pris- och lageruppgifter är äldre än 14 dagar. De visas igen när uppgifterna har kontrollerats på nytt.</p>{realCatalog.latest_observed_at&&<p>Senaste butikskontroll för urvalet: {checked(realCatalog.latest_observed_at)}. En sökning här uppdaterar inte butikens uppgifter.</p>}</div>}
+      {realProducts.length>0&&<p className="searchFreshness">Visar {(page-1)*pageSize+1}–{(page-1)*pageSize+realProducts.length} av {realCatalog.count} · priser exklusive frakt.</p>}
       {realProducts.length ? <div className="realCatalogGrid">{realProducts.map(x=><article className="realProductCard clickableCard" key={x.id}>
         <a className="cardClickTarget" href={`/product/${x.id}`} aria-label={`Öppna ${x.name}`}></a>
         <div className="realProductTop"><span>VERIFIERAD SNAPSHOT</span><small>{x.store}</small></div>
@@ -110,7 +125,8 @@ export default async function DiscoverPage({searchParams}){
         {x.chase_profile?.key_names?.length ? <div className="quickSearches"><small>SÖK ETT NAMN DIREKT</small><div>{x.chase_profile.key_names.slice(0,4).map((name,i)=><a className="aboveOverlay" href={`/chase?q=${encodeURIComponent(name.replace(/\s+#.*$/,''))}`} key={i}>Sök {name} →</a>)}</div></div> : null}
         <div className="realWhy"><small>VARFÖR BRA / FYND?</small>{(x.explanation?.why_good||[]).slice(0,2).map((r,i)=><span key={i}>✓ {r}</span>)}<b>{x.explanation?.deal?.label||"Fyndstatus ej verifierad"}</b><p>{x.explanation?.deal?.reason}</p></div>
         <div className="realSource"><span>Butiksuppgift kontrollerad {checked(x.observed_at)}</span>{x.url?<a className="aboveOverlay buyDirect" href={x.url} target="_blank" rel="noreferrer">KÖP HOS {x.store?.toUpperCase()} ↗</a>:null}</div>
-      </article>)}</div> : <div className="discoveryEmpty"><b>Ingen verifierad produkt matchar just detta filter.</b><p>Höj budgeten eller välj “Alla butiker”. Butikens utbud kan ännu sakna verifierade, aktuella produkter.</p></div>}
+      </article>)}</div> : catalogUnavailable ? <div className="discoveryEmpty" role="alert"><b>Butikskatalogen kunde inte hämtas.</b><p>Det går därför inte att avgöra hur många produkter som matchar. <a href={pageUrl(page)}>Försök igen →</a></p></div> : page>1 ? <div className="discoveryEmpty"><b>Inga fler produkter på den här sidan.</b><p><a href={pageUrl(1)}>Visa första sidan →</a></p></div> : <div className="discoveryEmpty"><b>Ingen aktuell, verifierad produkt matchar just detta filter.</b><p>Prova utan prisgräns eller välj “Alla butiker”. Äldre butikskontroller och slutsålda produkter visas inte som köpbara.</p></div>}
+      {!catalogUnavailable&&(page>1||realCatalog.has_more)&&<nav className="discoverQuick" aria-label="Sidor i butikskatalogen"><div>{page>1&&<a href={pageUrl(page-1)}>← Föregående</a>}<span aria-current="page">Sida {page}</span>{realCatalog.has_more&&<a href={pageUrl(page+1)}>Nästa →</a>}</div></nav>}
       <p className="discoveryDisclaimer">{realCatalog.note}</p>
     </section>
 
@@ -138,7 +154,7 @@ export default async function DiscoverPage({searchParams}){
         <div className="discoveryChases"><small>CHASE-KORT</small>{r.chase_cards?.length?r.chase_cards.slice(0,3).map((c,j)=><div key={j}><b>{c.name}</b><span>{c.parallel||c.outcome||"Verifierad checklistträff"}{c.market_value_raw!=null?` · ca ${money(c.market_value_raw)}`:""}</span></div>):<p>Verifierad chase-data saknas ännu.</p>}</div>
 
         <div className="discoveryFoot"><span>Datasäkerhet {r.discovery_confidence}/100</span>{r.url&&<a className="buyDirect" href={r.url} target="_blank" rel="noreferrer">KÖP HOS {r.store?.toUpperCase()} ↗</a>}<a href={`/product/${r.id}`}>SE BOXEN →</a></div>
-      </article>)}</div>:<div className="discoveryEmpty"><b>Inte tillräckligt med verifierad data ännu.</b><p>BoxFinder fick inget användbart svar från backend. Kontrollera DATASTATUS ovan. Om frontend och backend har olika version behöver backend startas om.</p></div>}
+      </article>)}</div>:<div className="discoveryEmpty"><b>Ingen rekommendation kunde tas fram.</b><p>Det kan saknas aktuella butiksuppgifter eller tillräckligt med analysunderlag för ditt urval.</p></div>}
       <p className="discoveryDisclaimer">{data.note}</p>
     </section>
   </main>

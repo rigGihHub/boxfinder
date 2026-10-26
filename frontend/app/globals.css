@@ -182,3 +182,7 @@
 @media (min-width: 801px){.discoverForm{grid-template-columns:repeat(4,minmax(0,1fr))}.discoverForm .goalField,.discoverForm>button{grid-column:1/-1}}
 @media (max-width: 800px){.discoverForm{grid-template-columns:1fr 1fr}.discoverForm .goalField,.discoverForm>button{grid-column:1/-1}}
 @media (max-width: 560px){.discoverForm{grid-template-columns:1fr}.discoverForm .goalField,.discoverForm>button{grid-column:auto}}
+
+.discoverForm input[type="search"]{width:100%;min-width:0;box-sizing:border-box;background:#090d12;border:1px solid #37404b;color:#e1e6eb;padding:11px;font:inherit;font-size:12px}
+.discoverForm input[type="search"]:focus-visible{outline:2px solid var(--acid);outline-offset:2px}
+nav.discoverQuick [aria-current="page"]{align-self:center;padding:10px 12px;font-size:12px;color:#a9b0b9}

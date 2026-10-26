@@ -1,4 +1,11 @@
-# BoxFinder v0.62.0
+# BoxFinder v0.64.0
+
+## v0.64.0 – bläddra i hela butikskatalogen
+
+- Ingen dold prisgräns i Discovery. Sök på produkt/serie och bläddra mellan sidor; butik, kategori, format och budget följer med.
+- Äldre butikskontroller redovisas separat som produkter som behöver kontrolleras på nytt. De visas aldrig som aktuella köperbjudanden.
+- Anslutningsfel visas som anslutningsfel, inte som noll produkter. Priser är fortsatt exklusive frakt.
+- Versionsrutan och datakontrollens versionsjämförelse läser samma frontendversion. Det gamla hårdkodade värdet 0.51.2 kunde blockera datakontrollen.
 
 ## v0.62.0 – hela Arcade Dreams navigationskatalog
 
