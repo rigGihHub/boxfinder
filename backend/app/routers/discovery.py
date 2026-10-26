@@ -1,5 +1,6 @@
 import json
 from datetime import datetime, timezone
+from typing import Annotated
 from fastapi import APIRouter, Depends, Query
 from sqlalchemy import select
 from sqlalchemy.orm import Session, joinedload
@@ -10,7 +11,7 @@ from ..services.discovery import GOALS, discover
 from ..services.product_explanation import explain_variant
 from ..services.chase_content import profile_from_row, content_summary, chase_ladder, chase_coverage, pull_profile
 from ..services.purchase_links import is_direct_purchase_url
-from ..services.offer_freshness import is_current_real_offer
+from ..services.offer_freshness import is_current_real_offer, is_recent_observation, TRUSTED_MATCH_STATUSES
 from ..services.product_format import total_sealed_cards
 
 router=APIRouter(prefix="/discovery",tags=["discovery"])
@@ -69,15 +70,17 @@ def real_catalog(
     store_name: str | None = None,
     limit: int = Query(60, ge=1, le=200),
     db: Session = Depends(get_db),
+    offset: Annotated[int, Query(ge=0)] = 0,
+    q: Annotated[str, Query(max_length=160)] = "",
 ):
-    q = (
+    statement = (
         select(ProductVariant)
         .options(
             joinedload(ProductVariant.product),
             joinedload(ProductVariant.offers).joinedload(Offer.store),
         )
     )
-    variants=db.execute(q).unique().scalars().all()
+    variants=db.execute(statement).unique().scalars().all()
     variant_ids=[v.id for v in variants]
     fact_rows_by_variant={}
     profiles_by_variant={}
@@ -85,28 +88,47 @@ def real_catalog(
         fact_rows_by_variant={f.variant_id:f for f in db.scalars(select(ProductFact).where(ProductFact.variant_id.in_(variant_ids))).all()}
         profiles_by_variant={p.variant_id:p for p in db.scalars(select(ChaseProfile).where(ChaseProfile.variant_id.in_(variant_ids))).all()}
     rows=[]
-    now=datetime.utcnow()
+    now=datetime.now(timezone.utc)
+    expired_count=0
+    latest_observed_at=None
+    terms=q.casefold().split()
     for v in variants:
-        real=[
-            o for o in v.offers
-            if o.source_kind=="verified_snapshot"
-            and is_current_real_offer(o)
-            and is_direct_purchase_url(o.url)
-            and (not store_name or o.store.name.casefold()==store_name.strip().casefold())
-        ]
-        if not real:
-            continue
-        best=min(real,key=lambda o:o.price_sek)
-        if category and v.product.category.lower()!=category.lower():
-            continue
-        if budget is not None and best.price_sek>budget:
+        if category and v.product.category.casefold()!=category.casefold():
             continue
         if format and format.strip().lower() not in (v.format or "").lower():
             continue
+        searchable=f"{v.product.canonical_name} {v.product.category} {v.format or ''}".casefold()
+        if not all(term in searchable for term in terms):
+            continue
+        eligible=[
+            o for o in v.offers
+            if o.source_kind=="verified_snapshot"
+            and o.match_status in TRUSTED_MATCH_STATUSES
+            and o.stock_status=="in_stock" and not o.is_preorder
+            and o.price_sek is not None and o.price_sek>0
+            and is_direct_purchase_url(o.url)
+            and (not store_name or o.store.name.casefold()==store_name.strip().casefold())
+            and (budget is None or o.price_sek<=budget)
+        ]
+        for offer in eligible:
+            observed=offer.observed_at
+            if observed is not None:
+                observed=observed.replace(tzinfo=timezone.utc) if observed.tzinfo is None else observed
+                if observed<=now and (latest_observed_at is None or observed>latest_observed_at):
+                    latest_observed_at=observed
+        real=[o for o in eligible if is_current_real_offer(o, now)]
+        if not real:
+            if any(o.observed_at and not is_recent_observation(o.observed_at, now)
+                   and (o.observed_at.replace(tzinfo=timezone.utc) if o.observed_at.tzinfo is None else o.observed_at)<=now
+                   for o in eligible):
+                expired_count+=1
+            continue
+        best=min(real,key=lambda o:o.price_sek)
         fact=fact_rows_by_variant.get(v.id)
         try: facts=[str(x) for x in json.loads(fact.facts_json or "[]") if x] if fact else []
         except Exception: facts=[]
-        age_days=max(0,(now-best.observed_at).days) if best.observed_at else None
+        observed=best.observed_at.replace(tzinfo=timezone.utc) if best.observed_at.tzinfo is None else best.observed_at
+        age_days=max(0,(now-observed).days)
         explanation=explain_variant(db,v,facts_override=facts,selected_price=best.price_sek)
         chase_profile=profile_from_row(profiles_by_variant.get(v.id))
         content_rating=content_summary(chase_profile)
@@ -140,14 +162,19 @@ def real_catalog(
             "fact_source_url":fact.source_url if fact else None,
             "data_scope":"Verifierat butikserbjudande. Ingen Box Value/EV-poäng utan separat analysunderlag.",
         })
-    rows.sort(key=lambda x:(0 if x["chase_coverage"]["status"]=="card_level" else 1 if x["chase_coverage"]["status"]=="product_level" else 2,-(x["content_rating"]["score"] or -1),x["price"],x["name"]))
+    rows.sort(key=lambda x:(0 if x["chase_coverage"]["status"]=="card_level" else 1 if x["chase_coverage"]["status"]=="product_level" else 2,-(x["content_rating"]["score"] or -1),x["price"],x["name"],x["id"]))
     return {
         "searched_at":datetime.now(timezone.utc).isoformat(),
         "count":len(rows),
+        "offset":offset,
+        "has_more":offset+limit<len(rows),
+        "expired_count":expired_count,
+        "latest_observed_at":latest_observed_at.isoformat() if latest_observed_at else None,
+        "q":q,
         "category":category,
         "budget":budget,
         "format":format,
         "store_name":store_name,
-        "products":rows[:limit],
+        "products":rows[offset:offset+limit],
         "note":"Detta är verifierade svenska butikssnapshots, inte live-feed. Tidsstämpeln visas per produkt och uppdateras inte förrän källan verifieras igen.",
     }

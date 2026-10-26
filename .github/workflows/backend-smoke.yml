@@ -13,5 +13,5 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r backend/requirements.txt
-      - run: pytest -q tests/test_discovery_store.py tests/test_discovery_freshness.py
+      - run: pytest -q tests/test_discovery_store.py tests/test_discovery_freshness.py tests/test_catalog_browsing.py
         working-directory: backend
